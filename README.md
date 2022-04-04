@@ -134,8 +134,7 @@ This information is also reflected in [CODEOWNERS](CODEOWNERS).
 <!-- Please list any publications, websites, or work related to
      your project. -->
 
-Some advice and links for producing FAIR software and data can be
-found in [`fair-software.md`](fair-software.md).
+Some advice and links for producing FAIR software and data can be found in [`opensource-repo/fair-software.md`](https://github.com/usnistgov/opensource-repo/blob/main/fair-software.md).
 
 ## Cite This Work
 
