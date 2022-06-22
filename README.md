@@ -1,181 +1,80 @@
-# NIST Open-Source Software Repository Template
+# CASE-Corpora
 
-<!-- Text within tags like these are comments, and will not
-     appear online. Feel free to delete them from your copy. -->
+**(Note: This repository is currently private while undergoing NIST review.)**
+
+
+## Disclaimer<a id="disclaimer"></a>
+
+Participation by NIST in the creation of the documentation of mentioned software is not intended to imply a recommendation or endorsement by the National Institute of Standards and Technology, nor is it intended to imply that any specific software is necessarily the best available for the purpose.
+
 
 ## Description
 
-<!-- Required. Please replace the text in this section with a
-     summary of the work this repository represents, or intends
-     to. Sub-sections describing file contents can/should be
-     removed, or replaced with a file format or folder hierarchy
-     description. -->
 
-Use of GitHub by NIST employees for government work is subject to
-the [Rules of Behavior for GitHub][gh-rob]. This is the
-recommended template for NIST employees, since it contains
-required files with approved text. For details, please consult
-the Office of Data & Informatics' [Quickstart Guide to GitHub at
-NIST][gh-odi].
+### Statements of purpose and maturity
 
-Please click on the green **Use this template** button above to
-create a new repository under the [usnistgov][gh-nst]
-organization for your own open-source work. Please do not "fork"
-the repository directly, and do not create the templated
-repository under your individual account.
+This repository houses a knowledge base graph of publicly available data sets that represent various aspects of cyberspace investigations.  Datasets currently recorded are listed in the [`catalog/`](catalog/#readme) directory.
 
-The key files contained in this repository -- which will also
-appear in templated copies -- are listed below, with some things
-to know about each.
+The primary benefits of the data in this repository are:
+* To provide an index of known data sets with downloadable artifacts.
+* To provide aggregatable descriptions of public data sets that are not necessarily captured in a machine-readable manner within the dataset artifacts, such as what devices may have been data sources, and what intra-object relationships should be discoverable.  Where possible, from dataset documentation and/or collaboration with dataset authors, ground truth will also be encoded.
+* To provide cross-confirmation of chain of custody for dataset artifacts, e.g. so hashes can be confirmed for downloaded artifacts as well as derived artifacts submitted into tools.
+* To exercise the expressive abilities of various graph-based ontology languages.
 
-### README
+As a project of the [CASE Ontology community](https://caseontology.org/), the primary ontology basis used to annotate data in this repository is CASE.  Because CASE and [UCO](https://unifiedcyberontology.org) do not currently have a focus on representation of datasets, [DCAT 2](https://www.w3.org/TR/vocab-dcat-2/) is used to provide the base structure of a collection of indexes.
 
-Each repository will contain a [README file][wk-rdm], preferably
-formatted using [GitHub-flavored Markdown][gh-mdn] and named
-`README.md` (this file). It must contain:
+This repository provides a "root" entity, a `dcat:Catalog` representing the datasets indexed in CASE-Corpora.  Each dataset known is characterized as a `dcat:Dataset` (or a specialized subclass, `case-corpora:Dataset`, that includes additional integrity checks).  Artifacts within the datasets (such as documentation PDFs and disk images) are each instantiated as a `dcat:Distribution` (similarly, `case-corpora:Distribution`), providing a download URL.  This repository's data set can be "Walked" to look for all download URLs of all distributions within all datasets within the "root" catalog, with this SPARQL query:
 
-1. Software or Data description
-   - Statements of purpose and maturity
-   - Technical installation instructions
-1. Contact information
-   - PI name, NIST OU, Division, and Group names
-   - Contact email address at NIST
-   - Details of mailing lists, chatrooms, and discussion forums,
-     where applicable
-1. Related Material
-   - URL for associated project on <nist.gov> or other Department of
-     Commerce site, if available
-   - References to user guides if stored outside of GitHub
-1. Directions on appropriate citation with example text
-1. References to any included non-public domain software modules, and
-   additional license language if needed, *e.g.* [BSD][li-bsd],
-   [GPL][li-gpl], or [MIT][li-mit]
+```sparql
+SELECT ?nDownloadURL
+WHERE {
+  ?nCatalog
+    a dcat:Catalog ;
+    dcat:dataset /
+      (case-corpora:hasDistribution|dcat:distribution) /
+        (case-corpora:hasDownloadURL|dcat:downloadURL) ?nDownloadURL .
+}
+```
 
-### Terms of Use: `LICENSE.md`
+CASE is then used to enrich the knowledge of each `dcat:Distribution`.  A typical distribution file would be a zip, housing files pooled together as a digital forensic training dataset.  CASE is used to characterize these files, and look "backward" and "forward" in their provenance history as they would be used in an investigative workflow.
 
-Each repository will contain a file named `LICENSE.md` that is
-phrased in compliance with the Public Access to NIST Research
-[*Copyright, Fair Use, and Licensing Statement for SRD, Data, and
-Software*][nist-open].
+- *Backward* - From documentation, the provenance of those files back to the data sources (such as an imaged computer) is represented, including reconstructions of investigative actions and times as best attainable from what was described.
+- *Forward* - Some files, such as disk images, are extracted and processed up to where they might be used as input to a forensic tool.  An independent analyst reproducing the investigative actions would be able to use these records to cross-verify the hashes since the download action within their chain of custody.
 
-- The version of [LICENSE.md](LICENSE.md) included in this
-  repository is approved for use.
-- When in doubt, copy and include the contents of the relevant
-  statement inside a "blue box" in its entirety
-- As subsections of [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md),
-  include copyright and licensing statements of any third-party
-  software that are legally bundled with the code in compliance with
-  the conditions of those licenses. If this does not apply, you may
-  delete that file.
+This repository is a community effort.  Contributions are welcome and encouraged, to help the community at large discover what data is available.  Please see [`CONTRIBUTE.md`](CONTRIBUTE.md) if you are interested in contributing.
 
-### CODEOWNERS
 
-This template repository includes a file named
-[CODEOWNERS](CODEOWNERS), which visitors can view to discover
-which GitHub users are "in charge" of the repository. More
-crucially, GitHub uses it to assign reviewers on pull requests.
-GitHub documents the file (and how to write one) [here][gh-cdo].
+### Technical installation instructions
 
-***Please update this file*** to point to your own account or
-team, so that the [Open-Source Team][gh-ost] doesn't get spammed
-with spurious review requests. *Thanks!*
+This repository is primarily a data repository, and thus has no "Installation" beyond downloading.
 
-### Repository Metadata: `CODEMETA.yaml`
+All of the datasets' graphs in this repository are aggregated into a "Total knowledge base" file, [`catalog/kb-all.ttl`](catalog/kb-all.ttl).  (A JSON-LD render of this file will be provided in the future.)  This file can be exported to a graph store or queried by itself.
 
-This repository includes a file named `CODEMETA.yaml`, used by
-the NIST Software Portal to sort your work under the appropriate
-thematic homepage. ***Please update this file*** with the
-appropriate "theme" and "category" for your code/data/software.
-The Tier 1 themes are:
+Source code SHACL constraints, and unit tests written in this repository are orchestrated with `make`.  Running `make check` will regenerate aggregation files in the repository, validate content against the used SHACL shapes, and run unit tests.  See [`CONTRIBUTE.md`](contribute.md#Testing) for more details.
 
-- [Advanced communications](https://www.nist.gov/advanced-communications)
-- [Bioscience](https://www.nist.gov/bioscience)
-- [Buildings and Construction](https://www.nist.gov/buildings-construction)
-- [Chemistry](https://www.nist.gov/chemistry)
-- [Electronics](https://www.nist.gov/electronics)
-- [Energy](https://www.nist.gov/energy)
-- [Environment](https://www.nist.gov/environment)
-- [Fire](https://www.nist.gov/fire)
-- [Forensic Science](https://www.nist.gov/forensic-science)
-- [Health](https://www.nist.gov/health)
-- [Information Technology](https://www.nist.gov/information-technology)
-- [Infrastructure](https://www.nist.gov/infrastructure)
-- [Manufacturing](https://www.nist.gov/manufacturing)
-- [Materials](https://www.nist.gov/materials)
-- [Mathematics and Statistics](https://www.nist.gov/mathematics-statistics)
-- [Metrology](https://www.nist.gov/metrology)
-- [Nanotechnology](https://www.nist.gov/nanotechnology)
-- [Neutron research](https://www.nist.gov/neutron-research)
-- [Performance excellence](https://www.nist.gov/performance-excellence)
-- [Physics](https://www.nist.gov/physics)
-- [Public safety](https://www.nist.gov/public-safety)
-- [Resilience](https://www.nist.gov/resilience)
-- [Standards](https://www.nist.gov/standards)
-- [Transportation](https://www.nist.gov/transportation)
 
-## Contact Information
+## Contact information
 
-<!-- Required section. Please list your project's developers
-     instead of the opensource-repo team. Note that NIST
-     employees are required to list their email address in their
-     GitHub profile, so the general public can get in touch. -->
+[casework/CASE-Corpora](https://github.com/casework/CASE-Corpora/) is developed and maintained by the [case-corpora-maintainers](https://github.com/orgs/casework/teams/case-corpora-maintainers) team and the CASE Adoption Committee.  Please visit [this page](https://caseontology.org/contact.html) if you are interested in joining the committee and/or the CASE community.
 
-[usnistgov/opensource-repo][gh-osr] is developed and maintained
-by the [opensource-team][gh-ost], principally:
+Please use [Github Issues](https://github.com/casework/CASE-Corpora/issues) to suggest other data sources, raise concerns, or ask other questions.
 
-- Gretchen Greene, @GRG2
-- Yannick Congo, @faical-yannick-congo
-- Trevor Keller, @tkphd
-
-This information is also reflected in [CODEOWNERS](CODEOWNERS).
 
 ## Related Material
 
-<!-- Please list any publications, websites, or work related to
-     your project. -->
+* The [CASE-Examples](https://github.com/casework/CASE-Examples/) repository houses other focused CASE illustrations.
+* The [CASE website](https://caseontology.org) houses an [examples gallery](https://caseontology.org/examples/) and [description of covered topics](https://caseontology.org/examples/topics.html).
 
-Some advice and links for producing FAIR software and data can be found in [`opensource-repo/fair-software.md`](https://github.com/usnistgov/opensource-repo/blob/main/fair-software.md).
 
 ## Cite This Work
 
-<!-- Please provide a DOI, URL, and suggested citation. -->
+Please cite this repository as:
 
-While this template repository has not been published, you can
-cite it as follows:
+> CASE Community.  *CASE-Corpora* [Data]. Online: <https://github.com/casework/CASE-Corpora> (accessed 2022-04-04).  [https://doi.org/TODO](#TODO)
 
-> F. Congo, G. Greene, T. Keller, and A. Morey. *NIST Open-Source
-> Software Repository Template* [Source Code]. Online:
-> <https://github.com/usnistgov/opensource-repo> (accessed 15
-> March 2022).
 
-Other software developed at NIST can be found in the [Open-Source
-Software Repository][nist-code].
+## Terms of Use
 
-## Third-Party Dependencies
+Portions of this repository contributed by NIST are subject to the [NIST Disclaimer of Warranty](LICENSE.md).
 
-<!-- If your project includes source code from third parties, note
-     those dependencies below and link to their sub-sections in
-     [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md). If those
-     terms of use prohibit you from including the third-party work
-     directly, make note of how to obtain it, and make sure it is not
-     checked in to this repository. -->
-
-This repository does not include any third-party software: it is
-only subject to the [NIST Disclaimer of Warranty](LICENSE.md).
-
-<!-- References -->
-
-[gh-cdo]: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
-[gh-mdn]: https://github.github.com/gfm/
-[gh-nst]: https://github.com/usnistgov
-[gh-odi]: https://odiwiki.nist.gov/ODI/GitHub.html
-[gh-osr]: https://github.com/usnistgov/opensource-repo/
-[gh-ost]: https://github.com/orgs/usnistgov/teams/opensource-team
-[gh-rob]: https://odiwiki.nist.gov/pub/ODI/GitHub/GHROB.pdf
-[gh-tpl]: https://github.com/usnistgov/carpentries-development/discussions/3
-[li-bsd]: https://opensource.org/licenses/bsd-license
-[li-gpl]: https://opensource.org/licenses/gpl-license
-[li-mit]: https://opensource.org/licenses/mit-license
-[nist-code]: https://code.nist.gov
-[nist-open]: https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications
-[wk-rdm]: https://en.wikipedia.org/wiki/README
+Per CASE community practice, software in this repository that is neither contributed by NIST nor imported as a dependency is contributed under the [Apache 2 license](THIRD_PARTY_LICENSES.md).
