@@ -1,0 +1,5 @@
+*.done.log
+*.swp
+dependencies.ttl
+kb*.ttl
+venv
