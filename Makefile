@@ -18,6 +18,8 @@ all: \
   .venv-pre-commit/var/.pre-commit-built.log
 	$(MAKE) \
 	  --directory catalog
+	$(MAKE) \
+	  --directory reports
 
 .dependencies.done.log: \
   .venv.done.log
@@ -112,8 +114,14 @@ check: \
 	$(MAKE) \
 	  --directory catalog \
 	  check
+	$(MAKE) \
+	  --directory reports \
+	  check
 
 clean:
+	@$(MAKE) \
+	  --directory reports \
+	  clean
 	@$(MAKE) \
 	  --directory catalog \
 	  clean

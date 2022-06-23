@@ -1,0 +1,50 @@
+PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+PREFIX uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/>
+SELECT ?lManufacturerName ?lModel ?lDeviceClassLabels ?lDeviceType ?nDevice
+WHERE {
+  SELECT ?lManufacturerName ?lModel ?lDeviceType ?nDevice (GROUP_CONCAT(?lDeviceClassLabel ; separator=", ") AS ?lDeviceClassLabels)
+  WHERE {
+    ?nDevice
+      a ?nDeviceClass ;
+      uco-core:hasFacet ?nDeviceFacet ;
+      .
+
+    ?nDeviceClass
+      rdfs:subClassOf* uco-observable:Device ;
+      .
+
+    ?nDeviceFacet
+      a uco-observable:DeviceFacet ;
+      .
+
+    OPTIONAL {
+      ?nDeviceClass
+        rdfs:label ?lDeviceClassLabel ;
+        .
+    }
+
+    OPTIONAL {
+      ?nDeviceFacet
+        uco-observable:deviceType ?lDeviceType ;
+        .
+    }
+
+    OPTIONAL {
+      ?nDeviceFacet
+        uco-observable:model ?lModel ;
+        .
+    }
+
+    OPTIONAL {
+      ?nDeviceFacet
+        uco-observable:manufacturer ?nManufacturer ;
+        .
+      ?nManufacturer
+        uco-core:name ?lManufacturerName ;
+        .
+    }
+  }
+  GROUP BY ?nDevice
+  ORDER BY ?lDeviceClassLabel
+}
+ORDER BY ?lManufacturerName ?lModel ?lDeviceClassLabels ?lDeviceType ?nDevice

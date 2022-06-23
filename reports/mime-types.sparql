@@ -1,0 +1,9 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/>
+SELECT DISTINCT ?lMimeType
+WHERE {
+  { ?s dcat:mediaType / skos:prefLabel ?lMimeType . }
+  UNION
+  { ?s uco-observable:mimeType ?lMimeType . }
+}
+ORDER BY ?lMimeType

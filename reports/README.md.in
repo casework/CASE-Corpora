@@ -1,0 +1,14 @@
+<!--
+WARNING - The README.md file is generated from README.md.in and various data sources.  If you want to modify narrative text, modify README.md.in.  If results in tables need to be updated, please revise, or request revision to, the appropriate data files.
+-->
+
+
+## MIME Types
+
+@MIME_TYPES_MD@
+
+
+
+## Devices
+
+@DEVICES_MD@
