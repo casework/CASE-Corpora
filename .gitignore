@@ -1,5 +1,7 @@
 *.done.log
 *.swp
+.venv-pre-commit
+__pycache__
 dependencies.ttl
 kb*.ttl
 venv
