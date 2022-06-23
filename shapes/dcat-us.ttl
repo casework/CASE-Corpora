@@ -1,0 +1,240 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[]
+	a sh:NodeShape ;
+	sh:property
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso
+				<https://dublincore.org/specifications/dublin-core/dcmi-terms/#format> ,
+				<https://resources.data.gov/resources/dcat-us/#distribution-mediaType>
+				;
+			skos:editorialNote "There appears to be an error in the DCAT-US specification.  dcat:mediaType's range inherits from dct:format, which has range of dct:MediaType or dct:Extent.  DCAT-US declares a string range, which is a conflicting property-type definition."@en ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:nodeKind sh:IRI ;
+			sh:path dcat:mediaType ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#distribution-downloadURL> ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:nodeKind sh:IRI ;
+			sh:path dcat:downloadURL ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#issued> ;
+			sh:datatype xsd:date ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path dct:issued ;
+		]
+		;
+	sh:targetClass dcat:Distribution ;
+	.
+
+[]
+	a sh:NodeShape ;
+	sh:property
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#accessLevel> ;
+			sh:datatype xsd:string ;
+			sh:in (
+				"public"
+				"restricted public"
+				"non-public"
+			) ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path pod:accessLevel ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#accrualPeriodicity> ;
+			sh:datatype xsd:string ;
+			sh:in (
+				"R/P10Y"
+				"R/P4Y"
+				"R/P1Y"
+				"R/P2M"
+				"R/P0.5M"
+				"R/P3.5D"
+				"R/P1D"
+				"R/P2W"
+				"R/P0.5W"
+				"R/P6M"
+				"R/P2Y"
+				"R/P3Y"
+				"R/P0.33W"
+				"R/P0.33M"
+				"R/PT1S"
+				"R/P1M"
+				"R/P3M"
+				"R/P0.5M"
+				"R/P4M"
+				"R/P1W"
+				"R/PT1H"
+				"irregular"
+			) ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path dct:accrualPeriodicity ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#contactPoint> ;
+			sh:class vcard:Contact ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:path dcat:contactPoint ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#description> ;
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path dct:description ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#identifier> ;
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path dct:identifier ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#keyword> ;
+			sh:datatype xsd:string ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path dcat:keyword ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#language> ;
+			sh:nodeKind sh:Literal ;
+			sh:path dct:language ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#modified> ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path dct:modified ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#publisher> ;
+			sh:class org:Organization ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:path dct:publisher ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#title> ;
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path dct:title ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page> ;
+			sh:class foaf:Document ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:path dcat:landingPage ;
+		]
+		;
+	sh:targetClass dcat:Dataset ;
+	.
+
+[]
+	a sh:NodeShape ;
+	sh:property
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#conformsTo> ;
+			sh:class dct:Standard ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:IRI ;
+			sh:path dct:conformsTo ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#dataset> ;
+			sh:class dcat:Dataset ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:path dcat:dataset ;
+		]
+		;
+	sh:targetClass dcat:Catalog ;
+	.
+
+[]
+	a sh:NodeShape ;
+	sh:property
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#contactPoint-fn> ;
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path vcard:fn ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#contactPoint-hasEmail> ;
+			sh:class vcard:Email ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:IRI ;
+			sh:path vcard:hasEmail ;
+		]
+		;
+	sh:targetObjectsOf dcat:contactPoint ;
+	.
+
+[]
+	a sh:NodeShape ;
+	sh:property [
+		a sh:PropertyShape ;
+		rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#publisher-name> ;
+		sh:datatype xsd:string ;
+		sh:maxCount "1"^^xsd:integer ;
+		sh:minCount "1"^^xsd:integer ;
+		sh:nodeKind sh:Literal ;
+		sh:path skos:prefLabel ;
+	] ;
+	sh:targetObjectsOf dct:publisher ;
+	.
+

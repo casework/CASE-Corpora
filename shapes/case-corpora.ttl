@@ -1,0 +1,241 @@
+# imports: http://www.w3.org/ns/dcat
+# imports: https://ontology.unifiedcyberontology.org/uco/core
+# imports: https://ontology.unifiedcyberontology.org/uco/observable
+
+@prefix case-corpora: <http://example.org/ontology/case/corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix mime: <https://www.iana.org/assignments/media-types/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology/case/corpora>
+	a owl:Ontology ;
+	rdfs:comment "This ontology serves to join the versions of CASE and DCAT used to populate CASE-Corpora, bringing analogous properties and classes together and defining SHACL shapes to maintain data quality-control rules."@en ;
+	owl:imports
+		<http://www.w3.org/ns/dcat> ,
+		<https://ontology.unifiedcyberontology.org/uco/core> ,
+		<https://ontology.unifiedcyberontology.org/uco/observable>
+		;
+	sh:declare
+		[
+			sh:namespace "http://example.org/ontology/case/corpora/"^^xsd:anyURI ;
+			sh:prefix "case-corpora" ;
+		] ,
+		[
+			sh:namespace "http://www.w3.org/ns/dcat#"^^xsd:anyURI ;
+			sh:prefix "dcat" ;
+		] ,
+		[
+			sh:namespace "https://ontology.unifiedcyberontology.org/uco/core/"^^xsd:anyURI ;
+			sh:prefix "uco-core" ;
+		]
+		;
+	.
+
+case-corpora:Dataset
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf
+		dcat:Dataset ,
+		uco-core:ContextualCompilation ,
+		[
+			a owl:Class ;
+			owl:inverseOf dcat:Catalog ;
+		]
+		;
+	owl:disjointWith dcat:Catalog ;
+	skos:editorialNote "Note that by subclassing a uco-core:ContextualCompilation, a case-corpora:Dataset must have at least one distribution associated, due to a uco-core:ContextualCompilation requiring at least one member."@en ;
+	sh:property
+		[
+			a sh:PropertyShape ;
+			sh:class case-corpora:Distribution ;
+			sh:description "This property shape is meant to encourage usage of the case-corpora:hasDistribution property, rather than its two super-properties dcat:distribution or uco-core:object.  The cardinality restriction matches what is required by the ContextualCompilation."@en ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path case-corpora:hasDistribution ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			sh:description "A case-corpora:Dataset requires a dataset have the accessLevel 'public'.  If a non-public dataset is to be indexed, it should be classified as a dcat:Dataset instead of a case-corpora:Dataset."@en ;
+			sh:hasValue "public" ;
+			sh:path pod:accessLevel ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			sh:description "CASE-Corpora requires a dataset have a landing page."@en ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:IRI ;
+			sh:path dcat:landingPage ;
+		]
+		;
+	sh:sparql
+		[
+			a sh:SPARQLConstraint ;
+			rdfs:comment "This constraint is meant to encourage usage of the case-corpora:hasDistribution property."@en ;
+			sh:message "Each dcat:distribution assignment must have a uco-core:object assignment."@en ;
+			sh:prefixes
+				<http://www.w3.org/ns/dcat#> ,
+				<https://ontology.unifiedcyberontology.org/uco/core/>
+				;
+			sh:select """
+				SELECT $this (dcat:distribution AS ?path) ?value
+				WHERE {
+					$this dcat:distribution ?value .
+					FILTER NOT EXISTS {
+						$this uco-core:object ?value .
+					}
+				}
+				""" ;
+		] ,
+		[
+			a sh:SPARQLConstraint ;
+			rdfs:comment "This constraint is meant to encourage usage of the case-corpora:hasDistribution property."@en ;
+			sh:message "Each uco-core:object assignment must have a dcat:distribution assignment."@en ;
+			sh:prefixes
+				<http://www.w3.org/ns/dcat#> ,
+				<https://ontology.unifiedcyberontology.org/uco/core/>
+				;
+			sh:select """
+				SELECT $this (uco-core:object AS ?path) ?value
+				WHERE {
+					$this uco-core:object ?value .
+					FILTER NOT EXISTS {
+						$this dcat:distribution ?value .
+					}
+				}
+			""" ;
+		]
+		;
+	sh:targetClass case-corpora:Dataset ;
+	.
+
+case-corpora:Distribution
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf
+		dcat:Distribution ,
+		uco-observable:ObservableObject
+		;
+	sh:property
+		[
+			a sh:PropertyShape ;
+			sh:class uco-observable:URL ;
+			sh:description "CASE-Corpora requires any referenced Distribution have a downloadable URL, stored in the fullValue of a URLFacet."@en ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:IRI ;
+			sh:path case-corpora:hasDownloadURL ;
+			sh:qualifiedMinCount "1"^^xsd:integer ;
+			sh:qualifiedValueShape [
+				sh:datatype xsd:string ;
+				sh:nodeKind sh:Literal ;
+				sh:path (
+					uco-core:hasFacet
+					uco-observable:fullValue
+				) ;
+			] ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			sh:description "CASE-Corpora requests any referenced Distribution include one or more media types.  If none are known, use mime:application/octet-stream."@en ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:IRI ;
+			sh:path dcat:mediaType ;
+			sh:severity sh:Warning ;
+		]
+		;
+	sh:targetClass case-corpora:Distribution ;
+	.
+
+case-corpora:contact-00000000-0000-0000-0000-000000000000
+	a vcard:Contact ;
+	rdfs:comment "This named individual is provided as a stand-in to make explict that no point of contact is available, linked, or otherwise represented for a dataset."@en ;
+	vcard:fn "NOT ENCODED" ;
+	vcard:hasEmail <mailto:null@example.org> ;
+	.
+
+case-corpora:hasDatasetDirectory
+	a owl:DatatypeProperty ;
+	rdfs:comment "This property provides an identifier for a dcat:Dataset that is unique within the scope of CASE-Corpora.  Its technical purpose is to keep directory names distinct across the datasets.  Its value is the basename of the directory directly under /catalog/datasets housing the graph source files for the dataset."@en ;
+	rdfs:domain dcat:Dataset ;
+	rdfs:range xsd:string ;
+	.
+
+case-corpora:hasDistribution
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf
+		dcat:distribution ,
+		uco-core:object
+		;
+	rdfs:domain case-corpora:Dataset ;
+	rdfs:range case-corpora:Distribution ;
+	.
+
+case-corpora:hasDownloadURL
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf dcat:downloadURL ;
+	rdfs:domain case-corpora:Distribution ;
+	rdfs:range uco-observable:URL ;
+	.
+
+<http://purl.org/dc/aboutdcmi#DCMI>
+	rdfs:comment "TODO - This is to work around a bug where pyshacl reviewed ontology content instead of data content.  Need to report a test case."@en ;
+	skos:prefLabel "" ;
+	.
+
+dcat:Dataset
+	rdfs:comment "Within CASE-Corpora, the property hasDatasetDirectory is a unique identifier for a Dataset."@en ;
+	owl:hasKey case-corpora:hasDatasetDirectory ;
+	.
+
+<mailto:null@example.org>
+	a vcard:Email ;
+	rdfs:comment "This individual is defined to satisfy a DCAT-US constraint."@en ;
+	.
+
+[]
+	a sh:NodeShape ;
+	sh:property [
+		sh:datatype xsd:string ;
+		sh:description "The pattern for dataset directory names is lowercase alphanumeric ASCII characters, and hyphens.  The name should not start or end with a hyphen."@en ;
+		sh:nodeKind sh:Literal ;
+		sh:path case-corpora:hasDatasetDirectory ;
+		sh:pattern "^[^-][0-9a-z-]+[^-]$" ;
+	] ;
+	sh:targetSubjectsOf case-corpora:hasDatasetDirectory ;
+	.
+
+[]
+	a sh:NodeShape ;
+	sh:sparql [
+		a sh:SPARQLConstraint ;
+		sh:message "Each dcat:Dataset (except the dcat:Catalog) in CASE-Corpora must have case-corpora:hasDatasetDirectory populated."@en ;
+		sh:prefixes
+			<http://example.org/ontology/case/corpora/> ,
+			<http://www.w3.org/ns/dcat#>
+			;
+		sh:select """
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this a dcat:Catalog .
+				}
+				FILTER NOT EXISTS {
+					$this case-corpora:hasDatasetDirectory ?value .
+				}
+			}
+		""" ;
+	] ;
+	sh:targetClass dcat:Dataset ;
+	.
+

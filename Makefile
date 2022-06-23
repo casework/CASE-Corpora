@@ -16,6 +16,8 @@ SHELL := /bin/bash
 all: \
   .dependencies.done.log \
   .venv-pre-commit/var/.pre-commit-built.log
+	$(MAKE) \
+	  --directory reports
 
 .dependencies.done.log: \
   .venv.done.log
@@ -104,6 +106,9 @@ all: \
 check: \
   .dependencies.done.log \
   .venv-pre-commit/var/.pre-commit-built.log
+	$(MAKE) \
+	  --directory shapes \
+	  check
 
 clean:
 	@$(MAKE) \

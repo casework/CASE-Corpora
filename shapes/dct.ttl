@@ -1,0 +1,60 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+[]
+	a sh:NodeShape ;
+	rdfs:comment "This enforces a domain assertion."@en ;
+	rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/accrualPeriodicity> ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:hasValue dctype:Collection ;
+		sh:path rdf:type ;
+	] ;
+	sh:targetSubjectsOf dct:accrualPeriodicity ;
+	.
+
+[]
+	a sh:NodeShape ;
+	rdfs:seeAlso <https://dublincore.org/specifications/dublin-core/dcmi-terms/#format> ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:nodeKind sh:BlankNodeOrIRI ;
+		sh:or (
+			[
+				sh:class dct:Extent ;
+			]
+			[
+				sh:class dct:MediaType ;
+			]
+		) ;
+		sh:path dct:format ;
+	] ;
+	sh:targetSubjectsOf dct:format ;
+	.
+
+[]
+	a sh:NodeShape ;
+	rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language> ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:nodeKind sh:IRIOrLiteral ;
+		sh:path dct:language ;
+	] ;
+	sh:targetSubjectsOf dct:language ;
+	.
+
+[]
+	a sh:NodeShape ;
+	rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified> ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:nodeKind sh:Literal ;
+		sh:path dct:modified ;
+	] ;
+	sh:targetSubjectsOf dct:modified ;
+	.
+
