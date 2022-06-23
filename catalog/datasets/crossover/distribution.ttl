@@ -1,0 +1,76 @@
+@prefix case-corpora: <http://example.org/ontology/case/corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:dataset-484508e3-9572-485b-864e-f1de8a5c460b
+	case-corpora:hasDistribution
+		kb:distribution-1a71a743-1c42-47ec-88fa-80baa3db1483 ,
+		kb:distribution-2295be10-681f-4b76-8882-b8b1806ca1a9 ,
+		kb:distribution-4bf62d17-9188-498a-933b-37fa4ba0ac82 ,
+		kb:distribution-5dafb339-fb41-4e8e-b5fc-1c9bc165363a ,
+		kb:distribution-b0ceac60-76b6-4e99-9c7f-a75203ed6a7d ,
+		kb:distribution-b3163d71-7425-44bd-9c54-2238dc405ba2 ,
+		kb:distribution-c03d346e-8d01-4b8b-b1af-bf65bc8df98b ,
+		kb:distribution-f57001ea-293d-409b-88bd-6fbbeef13c79 ,
+		kb:distribution-fe4d1373-7610-400f-a90e-1d3837f0ee93
+		;
+	.
+
+kb:distribution-1a71a743-1c42-47ec-88fa-80baa3db1483
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.md5> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
+kb:distribution-2295be10-681f-4b76-8882-b8b1806ca1a9
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.sha256> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
+kb:distribution-4bf62d17-9188-498a-933b-37fa4ba0ac82
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.zip> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+	.
+
+kb:distribution-5dafb339-fb41-4e8e-b5fc-1c9bc165363a
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.md5> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
+kb:distribution-b0ceac60-76b6-4e99-9c7f-a75203ed6a7d
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.sha256> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
+kb:distribution-b3163d71-7425-44bd-9c54-2238dc405ba2
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.zip> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+	.
+
+kb:distribution-c03d346e-8d01-4b8b-b1af-bf65bc8df98b
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.md5> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
+kb:distribution-f57001ea-293d-409b-88bd-6fbbeef13c79
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.sha256> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
+kb:distribution-fe4d1373-7610-400f-a90e-1d3837f0ee93
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.zip> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+	.
+

@@ -1,0 +1,58 @@
+# imports: http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf
+# imports: http://www.w3.org/ns/dcat
+# imports: https://ontology.caseontology.org/case/case
+
+@prefix case-corpora: <http://example.org/ontology/case/corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/kb>
+	a owl:Ontology ;
+	owl:imports
+		<http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf> ,
+		<http://www.w3.org/ns/dcat> ,
+		<https://ontology.caseontology.org/case/case>
+		;
+	owl:ontologyIRI <http://example.org/kb> ;
+	.
+
+kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
+	a dcat:Catalog ;
+	dcterms:conformsTo <https://project-open-data.cio.gov/v1.1/schema> ;
+	dcterms:description "CASE Corpora is a catalog of cyber-relevant training and reference data sets." ;
+	dcterms:identifier "http://example.org/kb/catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752" ;
+	dcterms:modified "2021-10-06"^^xsd:date ;
+	dcterms:publisher kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e ;
+	dcterms:title "CASE Corpora" ;
+	skos:editorialNote "The dcterms:identifier property in this data element is NOT yet stable and may change in the future."@en ;
+	dcat:contactPoint case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+	dcat:keyword
+		"cyber investigation" ,
+		"digital forensics"
+		;
+	dcat:landingPage <https://github.com/casework/CASE-Corpora/> ;
+	pod:accessLevel "public" ;
+	.
+
+kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e
+	a org:Organization ;
+	skos:prefLabel "The CASE Community" ;
+	.
+
+<https://github.com/casework/CASE-Corpora/>
+	a foaf:Document ;
+	.
+
+<https://project-open-data.cio.gov/v1.1/schema>
+	a dcterms:Standard ;
+	.
+

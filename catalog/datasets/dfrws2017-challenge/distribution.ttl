@@ -1,0 +1,75 @@
+@prefix case-corpora: <http://example.org/ontology/case/corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:dataset-9918b989-913c-42a8-ba9b-14bc73e318ac
+	case-corpora:hasDistribution
+		kb:distribution-3ad744db-b926-40c1-8edf-2d5f46deb806 ,
+		kb:distribution-88c14fff-8304-4409-bfd5-db8217461e9b ,
+		kb:distribution-94647caa-b9d8-4294-8867-7784ede43b8c ,
+		kb:distribution-dd871377-7b49-46d7-90ae-564dae8398f7
+		;
+	.
+
+kb:distribution-3ad744db-b926-40c1-8edf-2d5f46deb806
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+	.
+
+kb:distribution-88c14fff-8304-4409-bfd5-db8217461e9b
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream> ;
+	.
+
+kb:distribution-94647caa-b9d8-4294-8867-7784ede43b8c
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+	.
+
+kb:distribution-dd871377-7b49-46d7-90ae-564dae8398f7
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+	.
+
+<https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report>
+	a uco-observable:URL ;
+	uco-core:hasFacet [
+		a uco-observable:URLFacet ;
+		uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report" ;
+	] ;
+	.
+
+<https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip>
+	a uco-observable:URL ;
+	uco-core:hasFacet [
+		a uco-observable:URLFacet ;
+		uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip" ;
+	] ;
+	.
+
+<https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip>
+	a uco-observable:URL ;
+	uco-core:hasFacet [
+		a uco-observable:URLFacet ;
+		uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip" ;
+	] ;
+	.
+
+<https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0>
+	a uco-observable:URL ;
+	uco-core:hasFacet [
+		a uco-observable:URLFacet ;
+		uco-observable:fullValue "https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0" ;
+	] ;
+	.
+

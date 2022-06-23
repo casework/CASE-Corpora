@@ -1,0 +1,21 @@
+@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:samsung-device-2b5e3fe8-09a7-4c36-859a-5f669e7a1610
+	a drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e ;
+	uco-core:hasFacet [
+		a uco-observable:DeviceFacet ;
+		uco-observable:manufacturer wd:Q20716 ;
+		uco-observable:model "SM-G925F" ;
+		uco-observable:serialNumber "RF8H31GS5SF" ;
+	] ;
+	.
+

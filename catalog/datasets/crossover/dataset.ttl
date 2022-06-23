@@ -1,0 +1,33 @@
+@prefix case-corpora: <http://example.org/ontology/case/corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
+	dcat:dataset kb:dataset-484508e3-9572-485b-864e-f1de8a5c460b ;
+	.
+
+kb:dataset-484508e3-9572-485b-864e-f1de8a5c460b
+	a case-corpora:Dataset ;
+	case-corpora:hasDatasetDirectory "crossover" ;
+	dcterms:description '"This document uses CASE to represent digital evidence extracted from an Android device using Cellebrite, with Autopsy to fill in gaps. ..."' ;
+	dcterms:identifier "http://example.org/kb/datset-484508e3-9572-485b-864e-f1de8a5c460b" ;
+	dcterms:modified "2022-03-24"^^xsd:date ;
+	dcterms:publisher kb:organization-6ee3224c-c27c-4a8c-8a64-27bcff396e53 ;
+	dcterms:title "Crossover CASE" ;
+	dcat:contactPoint case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+	dcat:keyword "correlation" ;
+	dcat:landingPage <https://caseontology.org/examples/crossover/> ;
+	pod:accessLevel "public" ;
+	.
+
+<https://caseontology.org/examples/crossover/>
+	a foaf:Document ;
+	.
+

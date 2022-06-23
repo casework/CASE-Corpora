@@ -1,0 +1,34 @@
+@prefix case-corpora: <http://example.org/ontology/case/corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
+	dcat:dataset kb:dataset-9918b989-913c-42a8-ba9b-14bc73e318ac ;
+	.
+
+kb:dataset-9918b989-913c-42a8-ba9b-14bc73e318ac
+	a case-corpora:Dataset ;
+	case-corpora:hasDatasetDirectory "dfrws2017-challenge" ;
+	dcterms:description '"The DFRWS 2017 challenge is about Internet of Things (IoT)..."' ;
+	dcterms:identifier "http://example.org/kb/datset-9918b989-913c-42a8-ba9b-14bc73e318ac" ;
+	dcterms:modified "2022-02-10"^^xsd:date ;
+	dcterms:publisher kb:organization-6ee3224c-c27c-4a8c-8a64-27bcff396e53 ;
+	dcterms:title "dfrws2017-challenge" ;
+	dcat:contactPoint case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+	dcat:keyword "IoT" ;
+	dcat:landingPage <https://github.com/dfrws/dfrws2017-challenge> ;
+	pod:accessLevel "public" ;
+	.
+
+<https://github.com/dfrws/dfrws2017-challenge>
+	a foaf:Document ;
+	.
+

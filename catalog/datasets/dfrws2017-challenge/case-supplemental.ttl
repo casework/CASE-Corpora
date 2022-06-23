@@ -1,0 +1,175 @@
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix uco-location: <https://ontology.unifiedcyberontology.org/uco/location/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:device-2b8f67c5-789a-406e-a63a-b7c248a952f3
+	a uco-observable:Device ;
+	uco-core:description "Door sensors at the main door" ;
+	.
+
+kb:device-30dd4289-20ce-4f9e-8e6a-b386f90521b0
+	a uco-observable:Device ;
+	uco-core:description "Motion sensor on the shelf" ;
+	.
+
+kb:device-487df0ea-484f-41c3-ae85-2ebd084c9492
+	a uco-observable:Device ;
+	uco-core:description "Wristband on the floor where the victims' (Betty Hallym) body was found" ;
+	uco-core:hasFacet [
+		a uco-observable:DeviceFacet ;
+		uco-observable:deviceType "Mi step monitor" ;
+		uco-observable:manufacturer wd:Q1636958 ;
+	] ;
+	.
+
+kb:device-58af5aff-b1c7-4eee-bede-3475611e4805
+	a uco-observable:Device ;
+	uco-core:description "Mobile Phone on the floor where the victims' (Betty Hallym) body was found" ;
+	uco-core:hasFacet [
+		a uco-observable:DeviceFacet ;
+		uco-observable:manufacturer wd:Q20716 ;
+	] ;
+	.
+
+kb:device-5c26c912-5f44-44f8-9b97-d6a07c28897e
+	a uco-observable:Device ;
+	uco-core:description "Amazon Echo device" ;
+	uco-core:hasFacet [
+		a uco-observable:DeviceFacet ;
+		uco-observable:deviceType "Echo" ;
+		uco-observable:manufacturer wd:Q3884 ;
+	] ;
+	.
+
+kb:device-892c7437-75a6-446a-8596-854dd1ea9a21
+	a uco-observable:Device ;
+	uco-core:hasFacet [
+		a uco-observable:DeviceFacet ;
+		uco-observable:deviceType "IPTime Switch OnHub (6)" ;
+		uco-observable:manufacturer wd:Q22974369 ;
+	] ;
+	.
+
+kb:device-8aad625a-64fc-437e-8534-72efa99eb055
+	a uco-observable:Device ;
+	uco-core:description "Modem (ISP)" ;
+	uco-core:hasFacet [
+		a uco-observable:DeviceFacet ;
+		uco-observable:deviceType "Modem" ;
+	] ;
+	.
+
+kb:device-ac331066-961b-4f6f-88b7-89759991a39e
+	a uco-observable:Device ;
+	uco-core:description "Bluetooth headphone" ;
+	.
+
+kb:device-d62badf8-ed74-43e3-967e-253ef619352a
+	a uco-observable:Device ;
+	uco-core:description "Door sensor at the bedroom door" ;
+	.
+
+kb:device-ea47672b-f4f4-4c58-b81b-477ab799edb5
+	a uco-observable:Device ;
+	uco-core:description "Husband's (Simon Hallym) mobile phone" ;
+	uco-core:hasFacet [
+		a uco-observable:DeviceFacet ;
+		uco-observable:manufacturer wd:Q20716 ;
+	] ;
+	.
+
+kb:investigative-action-e08e2c53-7d3e-4faf-ba37-024443ee809b
+	a case-investigation:InvestigativeAction ;
+	uco-action:endTime "2017-07-17T15:40+09:00"^^xsd:dateTime ;
+	uco-action:result
+		kb:provenance-record-027f0f60-70b3-4963-85b5-e407514df932 ,
+		kb:relationship-05be48ed-ab11-4f2a-a2ac-be87dd64a3e5 ,
+		kb:relationship-0a477a21-95c8-4730-9718-cc096bb6ed8b
+		;
+	uco-core:description "Police arrive on-scene, and find the husband (Simon HALLYM) and apartment manager (KIM Kil Whan) outside of the apartment." ;
+	.
+
+kb:location-719f562e-439d-4130-b41e-aeb2588f1f47
+	a uco-location:Location ;
+	uco-core:description "A location outside of the apartment." ;
+	.
+
+kb:organization-ed368ca6-0b5d-4b05-8c1d-9b55e6f51774
+	a uco-identity:Organization ;
+	uco-core:description "Chuncheon Emergency Services" ;
+	.
+
+kb:person-6d349f20-282b-4d7b-bdbd-1e3ba38f2a5d
+	a uco-identity:Person ;
+	uco-core:description "Betty HALLYM" ;
+	uco-core:hasFacet [
+		a uco-identity:SimpleNameFacet ;
+		uco-identity:familyName "Hallym" ;
+		uco-identity:givenName "Betty" ;
+	] ;
+	.
+
+kb:person-ab27f8f9-c0dd-4519-950c-bf24482fbdf3
+	a uco-identity:Person ;
+	uco-core:description "Simon HALLYM" ;
+	uco-core:hasFacet [
+		a uco-identity:SimpleNameFacet ;
+		uco-identity:familyName "Hallym" ;
+		uco-identity:givenName "Simon" ;
+	] ;
+	.
+
+kb:person-d584fb88-e3ea-4e79-8842-35981ead4c26
+	a uco-identity:Person ;
+	uco-core:description "KIM Kil Whan" ;
+	uco-core:hasFacet [
+		a uco-identity:SimpleNameFacet ;
+		uco-identity:familyName "Kim" ;
+	] ;
+	.
+
+kb:phone-call-17df9c38-c552-42c6-8b8c-7ca8b45f5461
+	a uco-observable:PhoneCall ;
+	rdfs:comment "Note - observable:from only describes that the call was made from the person Simon.  The narrative description did not specify the telephony mechanism by which Chuncheon E.S. was called."@en ;
+	uco-core:description "Chuncheon Emergency Services received a phone call from a local apartment building manager. A man that lived in the apartment building claimed that his wife was attacked inside their apartment. Police responded." ;
+	uco-core:hasFacet [
+		a uco-observable:PhoneCallFacet ;
+		uco-observable:from kb:person-ab27f8f9-c0dd-4519-950c-bf24482fbdf3 ;
+		uco-observable:startTime "2017-07-17T15:31+09:00"^^xsd:dateTime ;
+		uco-observable:to kb:organization-ed368ca6-0b5d-4b05-8c1d-9b55e6f51774 ;
+	] ;
+	.
+
+kb:provenance-record-027f0f60-70b3-4963-85b5-e407514df932
+	a case-investigation:ProvenanceRecord ;
+	uco-core:object
+		kb:relationship-05be48ed-ab11-4f2a-a2ac-be87dd64a3e5 ,
+		kb:relationship-0a477a21-95c8-4730-9718-cc096bb6ed8b
+		;
+	.
+
+kb:relationship-05be48ed-ab11-4f2a-a2ac-be87dd64a3e5
+	a uco-core:Relationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Located_At" ;
+	uco-core:source kb:person-d584fb88-e3ea-4e79-8842-35981ead4c26 ;
+	uco-core:target kb:location-719f562e-439d-4130-b41e-aeb2588f1f47 ;
+	.
+
+kb:relationship-0a477a21-95c8-4730-9718-cc096bb6ed8b
+	a uco-core:Relationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Located_At" ;
+	uco-core:source kb:person-ab27f8f9-c0dd-4519-950c-bf24482fbdf3 ;
+	uco-core:target kb:location-719f562e-439d-4130-b41e-aeb2588f1f47 ;
+	.
+

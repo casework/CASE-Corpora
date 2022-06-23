@@ -17,7 +17,7 @@ all: \
   .dependencies.done.log \
   .venv-pre-commit/var/.pre-commit-built.log
 	$(MAKE) \
-	  --directory reports
+	  --directory catalog
 
 .dependencies.done.log: \
   .venv.done.log
@@ -109,8 +109,14 @@ check: \
 	$(MAKE) \
 	  --directory shapes \
 	  check
+	$(MAKE) \
+	  --directory catalog \
+	  check
 
 clean:
+	@$(MAKE) \
+	  --directory catalog \
+	  clean
 	@$(MAKE) \
 	  --directory dependencies \
 	  clean

@@ -1,0 +1,34 @@
+@prefix case-corpora: <http://example.org/ontology/case/corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
+	dcat:dataset kb:dataset-61bf11a9-e564-48e4-a4f3-81a7d246a6ed ;
+	.
+
+kb:dataset-61bf11a9-e564-48e4-a4f3-81a7d246a6ed
+	a dcat:Dataset ;
+	case-corpora:hasDatasetDirectory "real-data-corpus" ;
+	dcterms:description '"The Real Data Corpus (RDC) is a collection of raw data extracted from data-carrying devices that were purchased on the secondary market around the world."' ;
+	dcterms:identifier "http://example.org/kb/datset-61bf11a9-e564-48e4-a4f3-81a7d246a6ed" ;
+	dcterms:modified "2011-02-21"^^xsd:date ;
+	dcterms:publisher kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	dcterms:title "Real Data Corpus" ;
+	dcat:contactPoint case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+	dcat:keyword "disk images" ;
+	dcat:landingPage <https://digitalcorpora.org/corpora/disk-images/real-data-corpus> ;
+	pod:accessLevel "restricted public" ;
+	.
+
+<https://digitalcorpora.org/corpora/disk-images/real-data-corpus>
+	a foaf:Document ;
+	.
+

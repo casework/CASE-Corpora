@@ -1,0 +1,26 @@
+@prefix case-corpora: <http://example.org/ontology/case/corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
+	dcat:dataset [
+		a dcat:Dataset ;
+		rdfs:comment "This anonymous dataset is defined to satisfy testing the CASE-Corpora Catalog object as alone as possible.  DCAT-US requires a Catalog have at least one Dataset associated."@en ;
+		case-corpora:hasDatasetDirectory "null" ;
+		dct:description "" ;
+		dct:identifier "" ;
+		dct:modified "2022-04-06"^^xsd:date ;
+		dct:publisher kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e ;
+		dct:title "" ;
+		dcat:contactPoint case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+		dcat:keyword "test" ;
+		pod:accessLevel "public" ;
+	] ;
+	.
+

@@ -1,0 +1,11 @@
+SELECT ?lDatasetDirectory ?lDatasetTitle ?lAccessLevel ?nLandingPage
+WHERE {
+  ?nDataset
+    a/rdfs:subClassOf* dcat:Dataset ;
+    case-corpora:hasDatasetDirectory ?lDatasetDirectory ;
+    dcat:landingPage ?nLandingPage ;
+    dcterms:title ?lDatasetTitle ;
+    pod:accessLevel ?lAccessLevel ;
+    .
+}
+ORDER BY ?lDatasetDirectory ?lDatasetTitle ?nLandingPage
