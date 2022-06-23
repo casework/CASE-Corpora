@@ -1,0 +1,331 @@
+# imports: http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf
+# imports: http://www.w3.org/ns/dcat
+# imports: https://ontology.caseontology.org/case/case
+
+@prefix case-corpora: <http://example.org/ontology/case/corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/kb>
+	a owl:Ontology ;
+	owl:imports
+		<http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf> ,
+		<http://www.w3.org/ns/dcat> ,
+		<https://ontology.caseontology.org/case/case>
+		;
+	owl:ontologyIRI <http://example.org/kb> ;
+	.
+
+kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
+	a dcat:Catalog ;
+	dcterms:conformsTo <https://project-open-data.cio.gov/v1.1/schema> ;
+	dcterms:description "CASE Corpora is a catalog of cyber-relevant training and reference data sets." ;
+	dcterms:identifier "http://example.org/kb/catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752" ;
+	dcterms:modified "2021-10-06"^^xsd:date ;
+	dcterms:publisher kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e ;
+	dcterms:title "CASE Corpora" ;
+	skos:editorialNote "The dcterms:identifier property in this data element is NOT yet stable and may change in the future."@en ;
+	dcat:contactPoint case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+	dcat:dataset
+		kb:dataset-484508e3-9572-485b-864e-f1de8a5c460b ,
+		kb:dataset-61bf11a9-e564-48e4-a4f3-81a7d246a6ed ,
+		kb:dataset-9918b989-913c-42a8-ba9b-14bc73e318ac
+		;
+	dcat:keyword
+		"cyber investigation" ,
+		"digital forensics"
+		;
+	dcat:landingPage <https://github.com/casework/CASE-Corpora/> ;
+	pod:accessLevel "public" ;
+	.
+
+kb:dataset-484508e3-9572-485b-864e-f1de8a5c460b
+	a case-corpora:Dataset ;
+	case-corpora:hasDatasetDirectory "crossover" ;
+	case-corpora:hasDistribution
+		kb:distribution-1a71a743-1c42-47ec-88fa-80baa3db1483 ,
+		kb:distribution-2295be10-681f-4b76-8882-b8b1806ca1a9 ,
+		kb:distribution-4bf62d17-9188-498a-933b-37fa4ba0ac82 ,
+		kb:distribution-5dafb339-fb41-4e8e-b5fc-1c9bc165363a ,
+		kb:distribution-b0ceac60-76b6-4e99-9c7f-a75203ed6a7d ,
+		kb:distribution-b3163d71-7425-44bd-9c54-2238dc405ba2 ,
+		kb:distribution-c03d346e-8d01-4b8b-b1af-bf65bc8df98b ,
+		kb:distribution-f57001ea-293d-409b-88bd-6fbbeef13c79 ,
+		kb:distribution-fe4d1373-7610-400f-a90e-1d3837f0ee93
+		;
+	dcterms:description '"This document uses CASE to represent digital evidence extracted from an Android device using Cellebrite, with Autopsy to fill in gaps. ..."' ;
+	dcterms:identifier "http://example.org/kb/datset-484508e3-9572-485b-864e-f1de8a5c460b" ;
+	dcterms:modified "2022-03-24"^^xsd:date ;
+	dcterms:publisher kb:organization-6ee3224c-c27c-4a8c-8a64-27bcff396e53 ;
+	dcterms:title "Crossover CASE" ;
+	dcat:contactPoint case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+	dcat:keyword "correlation" ;
+	dcat:landingPage <https://caseontology.org/examples/crossover/> ;
+	pod:accessLevel "public" ;
+	.
+
+kb:dataset-61bf11a9-e564-48e4-a4f3-81a7d246a6ed
+	a dcat:Dataset ;
+	case-corpora:hasDatasetDirectory "real-data-corpus" ;
+	dcterms:description '"The Real Data Corpus (RDC) is a collection of raw data extracted from data-carrying devices that were purchased on the secondary market around the world."' ;
+	dcterms:identifier "http://example.org/kb/datset-61bf11a9-e564-48e4-a4f3-81a7d246a6ed" ;
+	dcterms:modified "2011-02-21"^^xsd:date ;
+	dcterms:publisher kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	dcterms:title "Real Data Corpus" ;
+	dcat:contactPoint case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+	dcat:keyword "disk images" ;
+	dcat:landingPage <https://digitalcorpora.org/corpora/disk-images/real-data-corpus> ;
+	pod:accessLevel "restricted public" ;
+	.
+
+kb:dataset-9918b989-913c-42a8-ba9b-14bc73e318ac
+	a case-corpora:Dataset ;
+	case-corpora:hasDatasetDirectory "dfrws2017-challenge" ;
+	case-corpora:hasDistribution
+		kb:distribution-3ad744db-b926-40c1-8edf-2d5f46deb806 ,
+		kb:distribution-88c14fff-8304-4409-bfd5-db8217461e9b ,
+		kb:distribution-94647caa-b9d8-4294-8867-7784ede43b8c ,
+		kb:distribution-dd871377-7b49-46d7-90ae-564dae8398f7
+		;
+	dcterms:description '"The DFRWS 2017 challenge is about Internet of Things (IoT)..."' ;
+	dcterms:identifier "http://example.org/kb/datset-9918b989-913c-42a8-ba9b-14bc73e318ac" ;
+	dcterms:modified "2022-02-10"^^xsd:date ;
+	dcterms:publisher kb:organization-6ee3224c-c27c-4a8c-8a64-27bcff396e53 ;
+	dcterms:title "dfrws2017-challenge" ;
+	dcat:contactPoint case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+	dcat:keyword "IoT" ;
+	dcat:landingPage <https://github.com/dfrws/dfrws2017-challenge> ;
+	pod:accessLevel "public" ;
+	.
+
+kb:device-650599c6-701f-4f2e-becb-74398b366ba3
+	a uco-observable:Device ;
+	uco-core:description "Google OnHub wifi router connected to SmartThings Hub and IPTime switch" ;
+	uco-core:hasFacet [
+		a uco-observable:DeviceFacet ;
+		uco-observable:deviceType "OnHub wifi router" ;
+		uco-observable:manufacturer wd:Q95 ;
+	] ;
+	.
+
+kb:device-6e718fd4-d876-4f81-8d58-10c21a741a70
+	a uco-observable:Device ;
+	rdfs:seeAlso <https://www.samsung.com/us/smart-home/smartthings/hubs/samsung-smartthings-hub-f-hub-us-2/> ;
+	uco-core:description "Samsung Smart things hub" ;
+	uco-core:hasFacet [
+		a uco-observable:DeviceFacet ;
+		uco-observable:deviceType "Smart things hub" ;
+		uco-observable:manufacturer wd:Q20716 ;
+	] ;
+	.
+
+kb:device-8fe70491-26c5-4226-a735-ccda10e1a73a
+	a uco-observable:Device ;
+	uco-core:description "Raspberry Pi connected via HDMI to TV" ;
+	uco-core:hasFacet [
+		a uco-observable:DeviceFacet ;
+		uco-observable:deviceType "Raspberry Pi" ;
+		uco-observable:manufacturer wd:Q7295195 ;
+	] ;
+	.
+
+kb:distribution-1a71a743-1c42-47ec-88fa-80baa3db1483
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.md5> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
+kb:distribution-2295be10-681f-4b76-8882-b8b1806ca1a9
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.sha256> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
+kb:distribution-3ad744db-b926-40c1-8edf-2d5f46deb806
+	a case-corpora:Distribution ;
+	rdfs:comment "TODO - Write InvestigativeActions to generate this."@en ;
+	case-corpora:hasDownloadURL <https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+	prov:wasDerivedFrom kb:device-8fe70491-26c5-4226-a735-ccda10e1a73a ;
+	.
+
+kb:distribution-4bf62d17-9188-498a-933b-37fa4ba0ac82
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.zip> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+	.
+
+kb:distribution-5dafb339-fb41-4e8e-b5fc-1c9bc165363a
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.md5> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
+kb:distribution-88c14fff-8304-4409-bfd5-db8217461e9b
+	a case-corpora:Distribution ;
+	rdfs:comment "TODO - Write InvestigativeActions to generate this."@en ;
+	case-corpora:hasDownloadURL <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream> ;
+	prov:wasDerivedFrom kb:device-650599c6-701f-4f2e-becb-74398b366ba3 ;
+	.
+
+kb:distribution-94647caa-b9d8-4294-8867-7784ede43b8c
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+	.
+
+kb:distribution-b0ceac60-76b6-4e99-9c7f-a75203ed6a7d
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.sha256> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
+kb:distribution-b3163d71-7425-44bd-9c54-2238dc405ba2
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.zip> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+	.
+
+kb:distribution-c03d346e-8d01-4b8b-b1af-bf65bc8df98b
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.md5> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
+kb:distribution-dd871377-7b49-46d7-90ae-564dae8398f7
+	a case-corpora:Distribution ;
+	rdfs:comment
+		"TODO - PROV-O needs to be reviewed to show how to represent the smart devices' influence on the derivation."@en ,
+		"TODO - Write InvestigativeActions to generate this."@en ,
+		"WARNING - Unverified connection.  Light review of notes did not indicate how this traffic was captured."@en
+		;
+	case-corpora:hasDownloadURL <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+	prov:wasDerivedFrom kb:device-6e718fd4-d876-4f81-8d58-10c21a741a70 ;
+	.
+
+kb:distribution-f57001ea-293d-409b-88bd-6fbbeef13c79
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.sha256> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
+kb:distribution-fe4d1373-7610-400f-a90e-1d3837f0ee93
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.zip> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+	.
+
+kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e
+	a org:Organization ;
+	skos:prefLabel "The CASE Community" ;
+	.
+
+kb:organization-6ee3224c-c27c-4a8c-8a64-27bcff396e53
+	a org:Organization ;
+	skos:prefLabel "DFRWS" ;
+	.
+
+kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5
+	a org:Organization ;
+	skos:prefLabel "Digital Corpora" ;
+	.
+
+kb:samsung-device-2b5e3fe8-09a7-4c36-859a-5f669e7a1610
+	a drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e ;
+	uco-core:hasFacet [
+		a uco-observable:DeviceFacet ;
+		uco-observable:manufacturer wd:Q20716 ;
+		uco-observable:model "SM-G925F" ;
+		uco-observable:serialNumber "RF8H31GS5SF" ;
+	] ;
+	.
+
+<https://caseontology.org/examples/crossover/>
+	a foaf:Document ;
+	.
+
+<https://digitalcorpora.org/corpora/disk-images/real-data-corpus>
+	a foaf:Document ;
+	.
+
+<https://github.com/casework/CASE-Corpora/>
+	a foaf:Document ;
+	.
+
+<https://github.com/dfrws/dfrws2017-challenge>
+	a foaf:Document ;
+	.
+
+<https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report>
+	a uco-observable:URL ;
+	uco-core:hasFacet [
+		a uco-observable:URLFacet ;
+		uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report" ;
+	] ;
+	.
+
+<https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip>
+	a uco-observable:URL ;
+	uco-core:hasFacet [
+		a uco-observable:URLFacet ;
+		uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip" ;
+	] ;
+	.
+
+<https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip>
+	a uco-observable:URL ;
+	uco-core:hasFacet [
+		a uco-observable:URLFacet ;
+		uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip" ;
+	] ;
+	.
+
+<https://project-open-data.cio.gov/v1.1/schema>
+	a dcterms:Standard ;
+	.
+
+<https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0>
+	a uco-observable:URL ;
+	uco-core:hasFacet [
+		a uco-observable:URLFacet ;
+		uco-observable:fullValue "https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0" ;
+	] ;
+	.
+
+<https://www.iana.org/assignments/media-types/application/pdf>
+	rdfs:label "pdf" ;
+	skos:prefLabel "application/pdf" ;
+	.
+
+<https://www.iana.org/assignments/media-types/application/vnd.ms-excel>
+	rdfs:label "vnd.ms-excel" ;
+	skos:prefLabel "application/vnd.ms-excel" ;
+	.
+
+<https://www.iana.org/assignments/media-types/application/zip>
+	rdfs:label "zip" ;
+	skos:prefLabel "application/zip" ;
+	.
+
+<https://www.iana.org/assignments/media-types/text/plain>
+	rdfs:label "plain" ;
+	rdfs:comment "This URL is known to not resolve." ;
+	skos:prefLabel "text/plain" ;
+	.
+
