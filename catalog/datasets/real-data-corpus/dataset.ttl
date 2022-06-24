@@ -18,7 +18,7 @@ kb:dataset-61bf11a9-e564-48e4-a4f3-81a7d246a6ed
 	a dcat:Dataset ;
 	case-corpora:hasDatasetDirectory "real-data-corpus" ;
 	dcterms:description '"The Real Data Corpus (RDC) is a collection of raw data extracted from data-carrying devices that were purchased on the secondary market around the world."' ;
-	dcterms:identifier "http://example.org/kb/datset-61bf11a9-e564-48e4-a4f3-81a7d246a6ed" ;
+	dcterms:identifier "http://example.org/kb/dataset-61bf11a9-e564-48e4-a4f3-81a7d246a6ed" ;
 	dcterms:modified "2011-02-21"^^xsd:date ;
 	dcterms:publisher kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
 	dcterms:title "Real Data Corpus" ;

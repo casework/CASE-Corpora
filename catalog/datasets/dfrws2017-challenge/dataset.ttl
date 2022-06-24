@@ -18,7 +18,7 @@ kb:dataset-9918b989-913c-42a8-ba9b-14bc73e318ac
 	a case-corpora:Dataset ;
 	case-corpora:hasDatasetDirectory "dfrws2017-challenge" ;
 	dcterms:description '"The DFRWS 2017 challenge is about Internet of Things (IoT)..."' ;
-	dcterms:identifier "http://example.org/kb/datset-9918b989-913c-42a8-ba9b-14bc73e318ac" ;
+	dcterms:identifier "http://example.org/kb/dataset-9918b989-913c-42a8-ba9b-14bc73e318ac" ;
 	dcterms:modified "2022-02-10"^^xsd:date ;
 	dcterms:publisher kb:organization-6ee3224c-c27c-4a8c-8a64-27bcff396e53 ;
 	dcterms:title "dfrws2017-challenge" ;
