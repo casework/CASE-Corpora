@@ -1,1 +1,1 @@
-case-utils < 0.7.0
+case-prov < 0.4.0
