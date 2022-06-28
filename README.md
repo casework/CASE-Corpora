@@ -1,7 +1,5 @@
 # CASE-Corpora
 
-**(Note: This repository is currently private while undergoing NIST review.)**
-
 
 ## Disclaimer<a id="disclaimer"></a>
 
