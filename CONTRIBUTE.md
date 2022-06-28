@@ -47,14 +47,24 @@ When excerpting original text from documentation, e.g. for the `dcterms:descript
 ### References of identities
 
 
-#### References of points of contact
-
-DCAT-US requires a point of contact be specified for any `dcat:Dataset`.  Unfortunately, this is frequently unavailable.  If a `dcat:Dataset`'s point of contact is not publicy documented, use CASE-Corpora's "null" contact `case-corpora:contact-00000000-0000-0000-0000-000000000000`.
-
-
 #### References of real people
 
-When referencing a real person, **TODO - describe policy here and on Issue and Pull Request templates**.
+When referencing a real person, it is acceptable as a matter of pooling authorship and publication metadata to take person names and email addresses *exactly as they are presented in dataset documentation*.  Graph identifiers for people may be shared between datasets when documented names and emails match.  To do any further graph linking of a person (e.g., to an [ORCID](https://orcid.org/), or if the person is known to have changed institutions and/or email addresses), that person must provide consent on a Github Issue or Pull Request.
+
+When a submitted dataset might contain human---that is, real person---data, the dataset provider must attest that they have permission and appropriate consent to share a person's data.  The consent could be a photo release, privacy consent, research informed consent -- whatever is appropriate for the situation.
+
+This repository uses this definition of "human subject", from [45 CFR 46.102(e)(1)](https://www.hhs.gov/ohrp/regulations-and-policy/regulations/45-cfr-46/revised-common-rule-regulatory-text/index.html):
+
+> *Human subject* means a living individual about whom an investigator (whether professional or student) conducting research:
+>
+> (i) Obtains information or biospecimens through intervention or interaction with the individual, and uses, studies, or analyzes the information or biospecimens; or
+>
+> (ii) Obtains, uses, studies, analyzes, or generates identifiable private information or identifiable biospecimens.
+
+
+##### References of points of contact
+
+DCAT-US [requires](https://resources.data.gov/resources/dcat-us/#contactPoint) a point of contact be specified for any `dcat:Dataset`.  Unfortunately, this is frequently unavailable.  If a `dcat:Dataset`'s point of contact is not publicy documented, use CASE-Corpora's "null" contact, `case-corpora:contact-00000000-0000-0000-0000-000000000000`.
 
 
 #### References of real organizations

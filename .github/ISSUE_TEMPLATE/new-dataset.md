@@ -14,6 +14,9 @@ If you do not feel ready to write the dataset description in CASE and DCAT, the 
 -->
 
 * *Access level* ([definition](https://resources.data.gov/resources/dcat-us/#accessLevel)): <!--If this can't be listed as "public", CASE-Corpora will index this dataset, but is likely to provide significantly less detail.-->
+* *Human subjects data* ([practices](https://github.com/casework/CASE-Corpora/blob/main/CONTRIBUTE.md#references-of-real-people)): Please check one of the following boxes.
+   - [ ] For each real person that appears in this dataset, I attest that I have permission and appropriate consent to share the person's data when this dataset may contain human subject data.
+   - [ ] I do not believe this dataset contains human subject data.
 * *Landing page* ([definition](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page)): <!--This should be a URL-->
 * *Distribution download URL(s)* ([definition](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url)):
    - [ ] https://example.org/distribution-url-1
