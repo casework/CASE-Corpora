@@ -75,7 +75,7 @@ When referencing a real organization (e.g. for `dcterms:publisher`), CASE-Corpor
 
 This IRI is used in CASE-Corpora with the prefix `wd`, appearing as `wd:Q176691`.
 
-If a WikiData IRI does not exist, please define the organization IRI as a general CASE-Corpora knowledge base member in [`catalog/shared/dcat-minimal.ttl`](catalog/shared/dcat-minimal.ttl) so other datasets may reuse it.
+If a WikiData IRI does not exist, please define the organization IRI as a general CASE-Corpora knowledge base member in [`catalog/shared.ttl`](catalog/shared.ttl) so other datasets may reuse it.
 
 *Usage of Wikidata is not a normative practice or requirement of the CASE community, and is only selected as a demonstration of usage of externally-maintained identifiers.  See also the general [disclaimer](README.md#disclaimer).*
 
