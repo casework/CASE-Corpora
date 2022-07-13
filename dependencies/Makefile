@@ -94,8 +94,7 @@ dependencies.ttl: \
 	    $(dependent_ontology_files) \
 	    > __$@
 	java -jar $(rdf_toolkit_jar) \
-	  -ibi \
-	  -ibn \
+	  --inline-blank-nodes \
 	  --source-format turtle \
 	  --source __$@ \
 	  --target-format turtle \
