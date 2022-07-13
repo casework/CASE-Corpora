@@ -15,6 +15,16 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd .. ; pwd)
 
+case_develop_ttls := \
+  $(wildcard CASE-develop/ontology/*/*.ttl) \
+  $(wildcard UCO-develop/ontology/*/*.ttl) \
+  $(wildcard UCO-develop/ontology/uco/*/*.ttl)
+
+case_unstable_ttls := \
+  $(wildcard CASE-unstable/ontology/*/*.ttl) \
+  $(wildcard UCO-unstable/ontology/*/*.ttl) \
+  $(wildcard UCO-unstable/ontology/uco/*/*.ttl)
+
 dependent_ontology_files := \
   dcat.ttl \
   dcterms.ttl \
@@ -25,8 +35,31 @@ dependent_ontology_files := \
 rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar
 
 all: \
+  CASE-develop.ttl \
+  CASE-unstable.ttl \
   dcat-us.jsonld \
   dependencies.ttl
+
+CASE-develop.ttl: \
+  $(top_srcdir)/.venv.done.log \
+  $(case_develop_ttls)
+	rm -f _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && rdfpipe \
+	    --output-format turtle \
+	    $(case_develop_ttls) \
+	    > _$@
+	mv _$@ $@
+
+CASE-unstable.ttl: \
+  $(top_srcdir)/.venv.done.log \
+  $(case_unstable_ttls)
+	rm -f _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && rdfpipe \
+	    $(case_unstable_ttls) \
+	    > _$@
+	mv _$@ $@
 
 clean:
 	@rm -f \
