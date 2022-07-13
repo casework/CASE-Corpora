@@ -14,18 +14,20 @@
 SHELL := /bin/bash
 
 all: \
-  .dependencies.done.log \
-  .venv-pre-commit/var/.pre-commit-built.log
+  .venv-pre-commit/var/.pre-commit-built.log \
+  all-dependencies
 	$(MAKE) \
 	  --directory catalog
 	$(MAKE) \
 	  --directory reports
 
-.dependencies.done.log: \
+.PHONY: \
+  all-dependencies
+
+all-dependencies: \
   .venv.done.log
 	$(MAKE) \
 	  --directory dependencies
-	touch $@
 
 .git_submodule_init.done.log: \
   .gitmodules
@@ -110,8 +112,8 @@ all: \
 	touch $@
 
 check: \
-  .dependencies.done.log \
-  .venv-pre-commit/var/.pre-commit-built.log
+  .venv-pre-commit/var/.pre-commit-built.log \
+  all-dependencies
 	$(MAKE) \
 	  --directory shapes \
 	  check
