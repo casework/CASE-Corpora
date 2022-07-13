@@ -30,6 +30,7 @@ kb_datasets_dependencies := \
 
 kb_all_dependencies := \
   kb-datasets.ttl \
+  $(top_srcdir)/taxonomy/devices/drafting.ttl \
   $(wildcard datasets/*/generated-*.ttl) \
   $(wildcard datasets/*/supplemental.ttl)
 
