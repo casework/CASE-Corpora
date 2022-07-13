@@ -14,18 +14,20 @@
 SHELL := /bin/bash
 
 all: \
-  .dependencies.done.log \
-  .venv-pre-commit/var/.pre-commit-built.log
+  .venv-pre-commit/var/.pre-commit-built.log \
+  all-dependencies
 	$(MAKE) \
 	  --directory catalog
 	$(MAKE) \
 	  --directory reports
 
-.dependencies.done.log: \
+.PHONY: \
+  all-dependencies
+
+all-dependencies: \
   .venv.done.log
 	$(MAKE) \
 	  --directory dependencies
-	touch $@
 
 .git_submodule_init.done.log: \
   .gitmodules
@@ -34,6 +36,26 @@ all: \
 	  || git submodule update \
 	    --init \
 	    dependencies/CASE
+	# CASE-develop
+	test -r dependencies/CASE-develop/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/CASE-develop
+	# CASE-unstable
+	test -r dependencies/CASE-unstable/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/CASE-unstable
+	# UCO-develop
+	test -r dependencies/UCO-develop/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/UCO-develop
+	# UCO-unstable
+	test -r dependencies/CASE-unstable/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/CASE-unstable
 	$(MAKE) \
 	  --directory dependencies/CASE \
 	  .lib.done.log
@@ -90,8 +112,8 @@ all: \
 	touch $@
 
 check: \
-  .dependencies.done.log \
-  .venv-pre-commit/var/.pre-commit-built.log
+  .venv-pre-commit/var/.pre-commit-built.log \
+  all-dependencies
 	$(MAKE) \
 	  --directory shapes \
 	  check

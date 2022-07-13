@@ -3,5 +3,5 @@
 .venv-pre-commit
 __pycache__
 dependencies.ttl
-kb*.ttl
+kb.ttl
 venv
