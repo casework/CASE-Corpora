@@ -56,9 +56,21 @@ kb.ttl: \
 	rm __$@
 	mv _$@ $@
 
+# Review order is:
+# 1. Is the CASE graph conformat?
+# 2. Does the overall PROV-O graph (hand-coded and generated) having any errors?
+# 3. Do review tests written in Python pass?
 check: \
   check-case_validate \
+  check-case_prov_check \
   check-pytest
+
+check-case_prov_check: \
+  kb.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_prov_check \
+	    --allow-warnings \
+	    kb.ttl
 
 check-case_validate: \
   $(top_srcdir)/taxonomy/devices/drafting.ttl \
