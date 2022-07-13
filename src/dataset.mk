@@ -61,6 +61,7 @@ check: \
   check-pytest
 
 check-case_validate: \
+  $(top_srcdir)/taxonomy/devices/drafting.ttl \
   kb.ttl
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
@@ -70,6 +71,7 @@ check-case_validate: \
 	    --ontology-graph $(top_srcdir)/shapes/dcat.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/dcat-us.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/dct.ttl \
+	    --ontology-graph $(top_srcdir)/taxonomy/devices/drafting.ttl \
 	    kb.ttl
 
 check-pytest: \

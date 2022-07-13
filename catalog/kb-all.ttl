@@ -256,6 +256,53 @@ kb:samsung-device-2b5e3fe8-09a7-4c36-859a-5f669e7a1610
 	] ;
 	.
 
+drafting:AndroidPhone
+	a owl:Class ;
+	rdfs:subClassOf
+		drafting:SmartPhone ,
+		uco-observable:AndroidDevice
+		;
+	rdfs:label "AndroidPhone"@en ;
+	.
+
+drafting:CellPhone
+	a owl:Class ;
+	rdfs:subClassOf drafting:MobilePhone ;
+	rdfs:label "Cell_Phone"@en ;
+	.
+
+drafting:MobilePhone
+	a owl:Class ;
+	rdfs:subClassOf uco-observable:MobileDevice ;
+	rdfs:label "MobilePhone"@en ;
+	.
+
+drafting:SmartDevice
+	a owl:Class ;
+	rdfs:subClassOf uco-observable:Device ;
+	rdfs:label "SmartDevice"@en ;
+	.
+
+drafting:SmartPhone
+	rdfs:subClassOf
+		drafting:MobilePhone ,
+		drafting:SmartDevice
+		;
+	rdfs:label "SmartPhone"@en ;
+	.
+
+drafting:device-class-266d2faf-2e06-413f-92e9-d94fcc57619a
+	a owl:Class ;
+	rdfs:subClassOf drafting:AndroidPhone ;
+	rdfs:label "Fairphone-4" ;
+	.
+
+drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
+	a owl:Class ;
+	rdfs:subClassOf drafting:AndroidPhone ;
+	rdfs:label "Samsung SM-G925F"@en ;
+	.
+
 <https://caseontology.org/examples/crossover/>
 	a foaf:Document ;
 	.
