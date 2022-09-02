@@ -1,6 +1,6 @@
 # imports: http://www.w3.org/ns/dcat
-# imports: https://ontology.unifiedcyberontology.org/uco/core
-# imports: https://ontology.unifiedcyberontology.org/uco/observable
+# imports: https://ontology.unifiedcyberontology.org/uco/core/1.0.0
+# imports: https://ontology.unifiedcyberontology.org/uco/observable/1.0.0
 
 @prefix case-corpora: <http://example.org/ontology/case/corpora/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -21,8 +21,8 @@
 	rdfs:comment "This ontology serves to join the versions of CASE and DCAT used to populate CASE-Corpora, bringing analogous properties and classes together and defining SHACL shapes to maintain data quality-control rules."@en ;
 	owl:imports
 		<http://www.w3.org/ns/dcat> ,
-		<https://ontology.unifiedcyberontology.org/uco/core> ,
-		<https://ontology.unifiedcyberontology.org/uco/observable>
+		<https://ontology.unifiedcyberontology.org/uco/core/1.0.0> ,
+		<https://ontology.unifiedcyberontology.org/uco/observable/1.0.0>
 		;
 	sh:declare
 		[
@@ -128,23 +128,7 @@ case-corpora:Distribution
 		uco-observable:ObservableObject
 		;
 	sh:property
-		[
-			a sh:PropertyShape ;
-			sh:class uco-observable:URL ;
-			sh:description "CASE-Corpora requires any referenced Distribution have a downloadable URL, stored in the fullValue of a URLFacet."@en ;
-			sh:minCount "1"^^xsd:integer ;
-			sh:nodeKind sh:IRI ;
-			sh:path case-corpora:hasDownloadURL ;
-			sh:qualifiedMinCount "1"^^xsd:integer ;
-			sh:qualifiedValueShape [
-				sh:datatype xsd:string ;
-				sh:nodeKind sh:Literal ;
-				sh:path (
-					uco-core:hasFacet
-					uco-observable:fullValue
-				) ;
-			] ;
-		] ,
+		case-corpora:Distribution-URL-hasFacet-fullValue-shape ,
 		[
 			a sh:PropertyShape ;
 			sh:description "CASE-Corpora requests any referenced Distribution include one or more media types.  If none are known, use mime:application/octet-stream."@en ;
@@ -155,6 +139,24 @@ case-corpora:Distribution
 		]
 		;
 	sh:targetClass case-corpora:Distribution ;
+	.
+
+case-corpora:Distribution-URL-hasFacet-fullValue-shape
+	a sh:PropertyShape ;
+	sh:class uco-observable:URL ;
+	sh:description "CASE-Corpora requires any referenced Distribution have a downloadable URL, stored in the fullValue of a URLFacet."@en ;
+	sh:minCount "1"^^xsd:integer ;
+	sh:nodeKind sh:IRI ;
+	sh:path case-corpora:hasDownloadURL ;
+	sh:qualifiedMinCount "1"^^xsd:integer ;
+	sh:qualifiedValueShape [
+		sh:datatype xsd:string ;
+		sh:nodeKind sh:Literal ;
+		sh:path (
+			uco-core:hasFacet
+			uco-observable:fullValue
+		) ;
+	] ;
 	.
 
 case-corpora:contact-00000000-0000-0000-0000-000000000000

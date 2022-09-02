@@ -1,6 +1,6 @@
 # imports: http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf
 # imports: http://www.w3.org/ns/dcat
-# imports: https://ontology.caseontology.org/case/case
+# imports: https://ontology.caseontology.org/case/case/1.0.0
 
 @prefix case-corpora: <http://example.org/ontology/case/corpora/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -25,7 +25,7 @@
 	owl:imports
 		<http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf> ,
 		<http://www.w3.org/ns/dcat> ,
-		<https://ontology.caseontology.org/case/case>
+		<https://ontology.caseontology.org/case/case/1.0.0>
 		;
 	owl:ontologyIRI <http://example.org/kb> ;
 	.
@@ -115,32 +115,45 @@ kb:dataset-9918b989-913c-42a8-ba9b-14bc73e318ac
 kb:device-650599c6-701f-4f2e-becb-74398b366ba3
 	a uco-observable:Device ;
 	uco-core:description "Google OnHub wifi router connected to SmartThings Hub and IPTime switch" ;
-	uco-core:hasFacet [
-		a uco-observable:DeviceFacet ;
-		uco-observable:deviceType "OnHub wifi router" ;
-		uco-observable:manufacturer wd:Q95 ;
-	] ;
+	uco-core:hasFacet kb:device-facet-87b3668c-53ad-4a40-bcd3-eb64e426afaf ;
 	.
 
 kb:device-6e718fd4-d876-4f81-8d58-10c21a741a70
 	a uco-observable:Device ;
 	rdfs:seeAlso <https://www.samsung.com/us/smart-home/smartthings/hubs/samsung-smartthings-hub-f-hub-us-2/> ;
 	uco-core:description "Samsung Smart things hub" ;
-	uco-core:hasFacet [
-		a uco-observable:DeviceFacet ;
-		uco-observable:deviceType "Smart things hub" ;
-		uco-observable:manufacturer wd:Q20716 ;
-	] ;
+	uco-core:hasFacet kb:device-facet-cc2f6193-85cc-47f1-b5cb-f2f8338daf03 ;
 	.
 
 kb:device-8fe70491-26c5-4226-a735-ccda10e1a73a
 	a uco-observable:Device ;
 	uco-core:description "Raspberry Pi connected via HDMI to TV" ;
-	uco-core:hasFacet [
-		a uco-observable:DeviceFacet ;
-		uco-observable:deviceType "Raspberry Pi" ;
-		uco-observable:manufacturer wd:Q7295195 ;
-	] ;
+	uco-core:hasFacet kb:device-facet-f2390184-741a-4c0f-8187-0264ed056da0 ;
+	.
+
+kb:device-facet-1ee161fc-5b41-48e0-bbdc-69ffa8c03230
+	a uco-observable:DeviceFacet ;
+	uco-observable:manufacturer wd:Q20716 ;
+	uco-observable:model "SM-G925F" ;
+	uco-observable:serialNumber "RF8H31GS5SF" ;
+	.
+
+kb:device-facet-87b3668c-53ad-4a40-bcd3-eb64e426afaf
+	a uco-observable:DeviceFacet ;
+	uco-observable:deviceType "OnHub wifi router" ;
+	uco-observable:manufacturer wd:Q95 ;
+	.
+
+kb:device-facet-cc2f6193-85cc-47f1-b5cb-f2f8338daf03
+	a uco-observable:DeviceFacet ;
+	uco-observable:deviceType "Smart things hub" ;
+	uco-observable:manufacturer wd:Q20716 ;
+	.
+
+kb:device-facet-f2390184-741a-4c0f-8187-0264ed056da0
+	a uco-observable:DeviceFacet ;
+	uco-observable:deviceType "Raspberry Pi" ;
+	uco-observable:manufacturer wd:Q7295195 ;
 	.
 
 kb:distribution-1a71a743-1c42-47ec-88fa-80baa3db1483
@@ -248,12 +261,27 @@ kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5
 
 kb:samsung-device-2b5e3fe8-09a7-4c36-859a-5f669e7a1610
 	a drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e ;
-	uco-core:hasFacet [
-		a uco-observable:DeviceFacet ;
-		uco-observable:manufacturer wd:Q20716 ;
-		uco-observable:model "SM-G925F" ;
-		uco-observable:serialNumber "RF8H31GS5SF" ;
-	] ;
+	uco-core:hasFacet kb:device-facet-1ee161fc-5b41-48e0-bbdc-69ffa8c03230 ;
+	.
+
+kb:url-facet-2f2958a3-7e9d-4d14-b31f-4148d35ab52c
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report" ;
+	.
+
+kb:url-facet-785c662e-8261-4a17-8031-114f86f99af1
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip" ;
+	.
+
+kb:url-facet-9b9d4a1a-059e-47f8-aee0-d93edf61b5f2
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip" ;
+	.
+
+kb:url-facet-d9e4bbae-4b47-4d8c-b547-9e524d3a4ca0
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0" ;
 	.
 
 drafting:AndroidPhone
@@ -321,26 +349,17 @@ drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 
 <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report>
 	a uco-observable:URL ;
-	uco-core:hasFacet [
-		a uco-observable:URLFacet ;
-		uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report" ;
-	] ;
+	uco-core:hasFacet kb:url-facet-2f2958a3-7e9d-4d14-b31f-4148d35ab52c ;
 	.
 
 <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip>
 	a uco-observable:URL ;
-	uco-core:hasFacet [
-		a uco-observable:URLFacet ;
-		uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip" ;
-	] ;
+	uco-core:hasFacet kb:url-facet-785c662e-8261-4a17-8031-114f86f99af1 ;
 	.
 
 <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip>
 	a uco-observable:URL ;
-	uco-core:hasFacet [
-		a uco-observable:URLFacet ;
-		uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip" ;
-	] ;
+	uco-core:hasFacet kb:url-facet-9b9d4a1a-059e-47f8-aee0-d93edf61b5f2 ;
 	.
 
 <https://project-open-data.cio.gov/v1.1/schema>
@@ -349,10 +368,7 @@ drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 
 <https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0>
 	a uco-observable:URL ;
-	uco-core:hasFacet [
-		a uco-observable:URLFacet ;
-		uco-observable:fullValue "https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0" ;
-	] ;
+	uco-core:hasFacet kb:url-facet-d9e4bbae-4b47-4d8c-b547-9e524d3a4ca0 ;
 	.
 
 <https://www.iana.org/assignments/media-types/application/pdf>

@@ -11,32 +11,38 @@
 kb:device-650599c6-701f-4f2e-becb-74398b366ba3
 	a uco-observable:Device ;
 	uco-core:description "Google OnHub wifi router connected to SmartThings Hub and IPTime switch" ;
-	uco-core:hasFacet [
-		a uco-observable:DeviceFacet ;
-		uco-observable:deviceType "OnHub wifi router" ;
-		uco-observable:manufacturer wd:Q95 ;
-	] ;
+	uco-core:hasFacet kb:device-facet-87b3668c-53ad-4a40-bcd3-eb64e426afaf ;
 	.
 
 kb:device-6e718fd4-d876-4f81-8d58-10c21a741a70
 	a uco-observable:Device ;
 	rdfs:seeAlso <https://www.samsung.com/us/smart-home/smartthings/hubs/samsung-smartthings-hub-f-hub-us-2/> ;
 	uco-core:description "Samsung Smart things hub" ;
-	uco-core:hasFacet [
-		a uco-observable:DeviceFacet ;
-		uco-observable:deviceType "Smart things hub" ;
-		uco-observable:manufacturer wd:Q20716 ;
-	] ;
+	uco-core:hasFacet kb:device-facet-cc2f6193-85cc-47f1-b5cb-f2f8338daf03 ;
 	.
 
 kb:device-8fe70491-26c5-4226-a735-ccda10e1a73a
 	a uco-observable:Device ;
 	uco-core:description "Raspberry Pi connected via HDMI to TV" ;
-	uco-core:hasFacet [
-		a uco-observable:DeviceFacet ;
-		uco-observable:deviceType "Raspberry Pi" ;
-		uco-observable:manufacturer wd:Q7295195 ;
-	] ;
+	uco-core:hasFacet kb:device-facet-f2390184-741a-4c0f-8187-0264ed056da0 ;
+	.
+
+kb:device-facet-87b3668c-53ad-4a40-bcd3-eb64e426afaf
+	a uco-observable:DeviceFacet ;
+	uco-observable:deviceType "OnHub wifi router" ;
+	uco-observable:manufacturer wd:Q95 ;
+	.
+
+kb:device-facet-cc2f6193-85cc-47f1-b5cb-f2f8338daf03
+	a uco-observable:DeviceFacet ;
+	uco-observable:deviceType "Smart things hub" ;
+	uco-observable:manufacturer wd:Q20716 ;
+	.
+
+kb:device-facet-f2390184-741a-4c0f-8187-0264ed056da0
+	a uco-observable:DeviceFacet ;
+	uco-observable:deviceType "Raspberry Pi" ;
+	uco-observable:manufacturer wd:Q7295195 ;
 	.
 
 kb:distribution-3ad744db-b926-40c1-8edf-2d5f46deb806

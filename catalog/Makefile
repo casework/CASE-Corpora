@@ -43,6 +43,7 @@ validate-catalog.ttl: \
   $(top_srcdir)/shapes/dcat.ttl \
   $(top_srcdir)/shapes/dcat-us.ttl \
   $(top_srcdir)/shapes/dct.ttl \
+  $(top_srcdir)/shapes/debug.ttl \
   .catalog-example-dataset.ttl \
   catalog.ttl
 	rm -f _$@
@@ -55,6 +56,7 @@ validate-catalog.ttl: \
 	    --ontology-graph $(top_srcdir)/shapes/dcat.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/dcat-us.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/dct.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/debug.ttl \
 	    --output _$@ \
 	    catalog.ttl \
 	    .catalog-example-dataset.ttl \
