@@ -1,5 +1,6 @@
 *.done.log
 *.swp
+.DS_Store
 .venv-pre-commit
 __pycache__
 dependencies.ttl
