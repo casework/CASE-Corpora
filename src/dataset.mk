@@ -73,17 +73,21 @@ check-case_prov_check: \
 	    --allow-warnings \
 	    kb.ttl
 
+# TODO: Use --allow-infos after resolution of case-utils Issue 70.
+# https://github.com/casework/CASE-Utilities-Python/issues/70
 check-case_validate: \
   $(top_srcdir)/taxonomy/devices/drafting.ttl \
   kb.ttl
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
+	    --allow-warnings \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/case-corpora.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/dcat.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/dcat-us.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/dct.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/debug.ttl \
 	    --ontology-graph $(top_srcdir)/taxonomy/devices/drafting.ttl \
 	    kb.ttl
 
@@ -131,6 +135,8 @@ generated-prov.ttl: \
 	rm __$@
 	mv _$@ $@
 
+# TODO: Use --allow-infos after resolution of case-utils Issue 70.
+# https://github.com/casework/CASE-Utilities-Python/issues/70
 kb_validation-CASE-develop.ttl: \
   $(top_srcdir)/dependencies/CASE-develop.ttl \
   $(top_srcdir)/taxonomy/devices/drafting.ttl \
@@ -138,6 +144,7 @@ kb_validation-CASE-develop.ttl: \
 	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
+	    --allow-warnings \
 	    --built-version none \
 	    --format turtle \
 	    --inference rdfs \
@@ -159,6 +166,8 @@ kb_validation-CASE-develop.ttl: \
 	rm __$@
 	mv _$@ $@
 
+# TODO: Use --allow-infos after resolution of case-utils Issue 70.
+# https://github.com/casework/CASE-Utilities-Python/issues/70
 kb_validation-CASE-unstable.ttl: \
   $(top_srcdir)/dependencies/CASE-unstable.ttl \
   $(top_srcdir)/taxonomy/devices/drafting.ttl \
@@ -166,6 +175,7 @@ kb_validation-CASE-unstable.ttl: \
 	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
+	    --allow-warnings \
 	    --built-version none \
 	    --format turtle \
 	    --inference rdfs \

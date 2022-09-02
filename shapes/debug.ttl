@@ -1,0 +1,20 @@
+@prefix case-corpora: <http://example.org/ontology/case/corpora/> .
+@prefix case-corpora-debug: <urn:example:case-corpora:debug/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix uco-owl: <https://ontology.unifiedcyberontology.org/owl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:example:case-corpora:debug>
+	a owl:Ontology ;
+	rdfs:comment "This ontology is provided to hold stopgap fixes."@en ;
+	.
+
+uco-owl:ObjectProperty-shacl-constraints-shape
+	rdfs:comment "This may be erroneous in light of a shape thought to be correctly implemented."@en ;
+	rdfs:seeAlso case-corpora:Distribution-URL-hasFacet-fullValue-shape ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
