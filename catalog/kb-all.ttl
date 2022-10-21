@@ -284,50 +284,21 @@ kb:url-facet-d9e4bbae-4b47-4d8c-b547-9e524d3a4ca0
 	uco-observable:fullValue "https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0" ;
 	.
 
-drafting:AndroidPhone
-	a owl:Class ;
-	rdfs:subClassOf
-		drafting:SmartPhone ,
-		uco-observable:AndroidDevice
-		;
-	rdfs:label "AndroidPhone"@en ;
-	.
-
 drafting:CellPhone
 	a owl:Class ;
-	rdfs:subClassOf drafting:MobilePhone ;
+	rdfs:subClassOf uco-observable:MobilePhone ;
 	rdfs:label "Cell_Phone"@en ;
-	.
-
-drafting:MobilePhone
-	a owl:Class ;
-	rdfs:subClassOf uco-observable:MobileDevice ;
-	rdfs:label "MobilePhone"@en ;
-	.
-
-drafting:SmartDevice
-	a owl:Class ;
-	rdfs:subClassOf uco-observable:Device ;
-	rdfs:label "SmartDevice"@en ;
-	.
-
-drafting:SmartPhone
-	rdfs:subClassOf
-		drafting:MobilePhone ,
-		drafting:SmartDevice
-		;
-	rdfs:label "SmartPhone"@en ;
 	.
 
 drafting:device-class-266d2faf-2e06-413f-92e9-d94fcc57619a
 	a owl:Class ;
-	rdfs:subClassOf drafting:AndroidPhone ;
-	rdfs:label "Fairphone-4" ;
+	rdfs:subClassOf uco-observable:AndroidPhone ;
+	rdfs:label "Fairphone-4"@en ;
 	.
 
 drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 	a owl:Class ;
-	rdfs:subClassOf drafting:AndroidPhone ;
+	rdfs:subClassOf uco-observable:AndroidPhone ;
 	rdfs:label "Samsung SM-G925F"@en ;
 	.
 
