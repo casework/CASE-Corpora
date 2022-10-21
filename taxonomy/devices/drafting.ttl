@@ -5,50 +5,21 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
-drafting:AndroidPhone
-	a owl:Class ;
-	rdfs:subClassOf
-		drafting:SmartPhone ,
-		observable:AndroidDevice
-		;
-	rdfs:label "AndroidPhone"@en ;
-	.
-
 drafting:CellPhone
 	a owl:Class ;
-	rdfs:subClassOf drafting:MobilePhone ;
+	rdfs:subClassOf observable:MobilePhone ;
 	rdfs:label "Cell_Phone"@en ;
-	.
-
-drafting:MobilePhone
-	a owl:Class ;
-	rdfs:subClassOf observable:MobileDevice ;
-	rdfs:label "MobilePhone"@en ;
-	.
-
-drafting:SmartDevice
-	a owl:Class ;
-	rdfs:subClassOf observable:Device ;
-	rdfs:label "SmartDevice"@en ;
-	.
-
-drafting:SmartPhone
-	rdfs:subClassOf
-		drafting:MobilePhone ,
-		drafting:SmartDevice
-		;
-	rdfs:label "SmartPhone"@en ;
 	.
 
 drafting:device-class-266d2faf-2e06-413f-92e9-d94fcc57619a
 	a owl:Class ;
-	rdfs:subClassOf drafting:AndroidPhone ;
-	rdfs:label "Fairphone-4" ;
+	rdfs:subClassOf observable:AndroidPhone ;
+	rdfs:label "Fairphone-4"@en ;
 	.
 
 drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 	a owl:Class ;
-	rdfs:subClassOf drafting:AndroidPhone ;
+	rdfs:subClassOf observable:AndroidPhone ;
 	rdfs:label "Samsung SM-G925F"@en ;
 	.
 
