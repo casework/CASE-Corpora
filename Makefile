@@ -52,10 +52,10 @@ all-dependencies: \
 	    --init \
 	    dependencies/UCO-develop
 	# UCO-unstable
-	test -r dependencies/CASE-unstable/README.md \
+	test -r dependencies/UCO-unstable/README.md \
 	  || git submodule update \
 	    --init \
-	    dependencies/CASE-unstable
+	    dependencies/UCO-unstable
 	$(MAKE) \
 	  --directory dependencies/CASE \
 	  .lib.done.log
