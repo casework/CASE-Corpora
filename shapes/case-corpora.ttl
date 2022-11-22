@@ -1,6 +1,5 @@
 # imports: http://www.w3.org/ns/dcat
-# imports: https://ontology.unifiedcyberontology.org/uco/core/1.0.0
-# imports: https://ontology.unifiedcyberontology.org/uco/observable/1.0.0
+# imports: https://ontology.caseontology.org/case/case/1.0.0
 
 @prefix case-corpora: <http://example.org/ontology/case/corpora/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -21,8 +20,7 @@
 	rdfs:comment "This ontology serves to join the versions of CASE and DCAT used to populate CASE-Corpora, bringing analogous properties and classes together and defining SHACL shapes to maintain data quality-control rules."@en ;
 	owl:imports
 		<http://www.w3.org/ns/dcat> ,
-		<https://ontology.unifiedcyberontology.org/uco/core/1.0.0> ,
-		<https://ontology.unifiedcyberontology.org/uco/observable/1.0.0>
+		<https://ontology.caseontology.org/case/case/1.0.0>
 		;
 	sh:declare
 		[
