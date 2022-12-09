@@ -101,15 +101,13 @@ kb-datasets.ttl: \
 	rm __$@
 	mv _$@ $@
 
-# TODO: Use --allow-infos after resolution of case-utils Issue 70.
-# https://github.com/casework/CASE-Utilities-Python/issues/70
 validate-kb-all.ttl: \
   kb-all.ttl \
   validate-kb-datasets.ttl
 	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
-	    --allow-warnings \
+	    --allow-infos \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
@@ -123,15 +121,13 @@ validate-kb-all.ttl: \
 	    || (cat _$@ ; exit 1)
 	mv _$@ $@
 
-# TODO: Use --allow-infos after resolution of case-utils Issue 70.
-# https://github.com/casework/CASE-Utilities-Python/issues/70
 validate-kb-datasets.ttl: \
   kb-datasets.ttl \
   validate-catalog.ttl
 	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
-	    --allow-warnings \
+	    --allow-infos \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \

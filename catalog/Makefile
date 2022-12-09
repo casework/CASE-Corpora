@@ -49,6 +49,7 @@ validate-catalog.ttl: \
 	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
+	    --allow-infos \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
