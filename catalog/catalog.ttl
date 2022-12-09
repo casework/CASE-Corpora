@@ -22,7 +22,6 @@
 		<http://www.w3.org/ns/dcat> ,
 		<https://ontology.caseontology.org/case/case/1.0.0>
 		;
-	owl:ontologyIRI <http://example.org/kb> ;
 	.
 
 kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
