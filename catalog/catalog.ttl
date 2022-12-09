@@ -1,6 +1,6 @@
+# imports: http://example.org/ontology/case/corpora
 # imports: http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf
 # imports: http://www.w3.org/ns/dcat
-# imports: https://ontology.caseontology.org/case/case/1.0.0
 
 @prefix case-corpora: <http://example.org/ontology/case/corpora/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -18,9 +18,9 @@
 <http://example.org/kb>
 	a owl:Ontology ;
 	owl:imports
+		<http://example.org/ontology/case/corpora> ,
 		<http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf> ,
-		<http://www.w3.org/ns/dcat> ,
-		<https://ontology.caseontology.org/case/case/1.0.0>
+		<http://www.w3.org/ns/dcat>
 		;
 	.
 
