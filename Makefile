@@ -80,9 +80,6 @@ all-dependencies: \
 	source venv/bin/activate \
 	  && pip install \
 	    dependencies/CASE/dependencies/UCO/dependencies/CASE-Utility-SHACL-Inheritance-Reviewer
-	# TODO Cut this step after the 0.3.0 release.
-	rm -r \
-	  dependencies/CASE/dependencies/UCO/dependencies/CASE-Utility-SHACL-Inheritance-Reviewer/build
 	source venv/bin/activate \
 	  && pip install \
 	    --requirement dependencies/CASE/dependencies/UCO/tests/requirements.txt
