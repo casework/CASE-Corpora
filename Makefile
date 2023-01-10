@@ -46,16 +46,14 @@ all-dependencies: \
 	  || git submodule update \
 	    --init \
 	    dependencies/CASE-unstable
+	$(MAKE) \
+	  --directory dependencies/CASE-unstable \
+	  .git_submodule_init.done.log
 	# UCO-develop
 	test -r dependencies/UCO-develop/README.md \
 	  || git submodule update \
 	    --init \
 	    dependencies/UCO-develop
-	# UCO-unstable
-	test -r dependencies/UCO-unstable/README.md \
-	  || git submodule update \
-	    --init \
-	    dependencies/UCO-unstable
 	$(MAKE) \
 	  --directory dependencies/CASE \
 	  .lib.done.log
