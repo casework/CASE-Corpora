@@ -28,11 +28,17 @@ all: \
   kb_validation-CASE-unstable.ttl
 
 .PHONY: \
-  check-case_validate \
   check-pytest \
   format
 
 kb.ttl: \
+  $(top_srcdir)/dependencies/dependencies.ttl \
+  $(top_srcdir)/shapes/case-corpora.ttl \
+  $(top_srcdir)/shapes/dcat.ttl \
+  $(top_srcdir)/shapes/dcat-us.ttl \
+  $(top_srcdir)/shapes/dct.ttl \
+  $(top_srcdir)/shapes/debug.ttl \
+  $(top_srcdir)/taxonomy/devices/drafting.ttl \
   dataset.ttl \
   generated-ground-truth-prov.ttl \
   generated-prov.ttl
@@ -48,34 +54,6 @@ kb.ttl: \
 	    $(maybe_ground_truth_graph) \
 	    generated-*.ttl \
 	    > __$@
-	java -jar $(rdf_toolkit_jar) \
-	  --inline-blank-nodes \
-	  --source-format turtle \
-	  --source __$@ \
-	  --target-format turtle \
-	  --target _$@
-	rm __$@
-	mv _$@ $@
-
-# Review order is:
-# 1. Is the CASE graph conformat?
-# 2. Does the overall PROV-O graph (hand-coded and generated) having any errors?
-# 3. Do review tests written in Python pass?
-check: \
-  check-case_validate \
-  check-case_prov_check \
-  check-pytest
-
-check-case_prov_check: \
-  kb.ttl
-	source $(top_srcdir)/venv/bin/activate \
-	  && case_prov_check \
-	    --allow-warnings \
-	    kb.ttl
-
-check-case_validate: \
-  $(top_srcdir)/taxonomy/devices/drafting.ttl \
-  kb.ttl
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
 	    --allow-infos \
@@ -87,6 +65,29 @@ check-case_validate: \
 	    --ontology-graph $(top_srcdir)/shapes/dct.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/debug.ttl \
 	    --ontology-graph $(top_srcdir)/taxonomy/devices/drafting.ttl \
+	    __$@
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+# Review order is:
+# 1. Is the CASE graph conformat?  (Necessary for kb.ttl to build.)
+# 2. Does the overall PROV-O graph (hand-coded and generated) having any errors?
+# 3. Do review tests written in Python pass?
+check: \
+  check-case_prov_check \
+  check-pytest
+
+check-case_prov_check: \
+  kb.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_prov_check \
+	    --allow-warnings \
 	    kb.ttl
 
 check-pytest: \
