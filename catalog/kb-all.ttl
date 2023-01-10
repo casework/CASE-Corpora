@@ -302,11 +302,11 @@ drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 	.
 
 <https://caseontology.org/examples/crossover/>
-	a foaf:Document ;
+	a case-corpora:WebPage ;
 	.
 
 <https://digitalcorpora.org/corpora/disk-images/real-data-corpus>
-	a foaf:Document ;
+	a case-corpora:WebPage ;
 	.
 
 <https://github.com/casework/CASE-Corpora/>
@@ -314,7 +314,7 @@ drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 	.
 
 <https://github.com/dfrws/dfrws2017-challenge>
-	a foaf:Document ;
+	a case-corpora:WebPage ;
 	.
 
 <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report>
