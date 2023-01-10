@@ -1,7 +1,6 @@
 @prefix case-corpora: <http://example.org/ontology/case/corpora/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
@@ -29,6 +28,6 @@ kb:dataset-61bf11a9-e564-48e4-a4f3-81a7d246a6ed
 	.
 
 <https://digitalcorpora.org/corpora/disk-images/real-data-corpus>
-	a foaf:Document ;
+	a case-corpora:WebPage ;
 	.
 
