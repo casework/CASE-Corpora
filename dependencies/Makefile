@@ -26,9 +26,9 @@ case_unstable_ttls := \
   $(wildcard UCO-unstable/ontology/uco/*/*.ttl)
 
 dependent_ontology_files := \
+  dc.ttl \
   dcat.ttl \
   dcterms.ttl \
-  dublin_core_elements.ttl \
   dublin_core_type.ttl \
   vcard.ttl
 
@@ -65,17 +65,25 @@ clean:
 	@rm -f \
 	  dependencies.ttl
 
-# https://resources.data.gov/resources/dcat-us/#context
-dcat-us.jsonld:
+# http://purl.org/dc/elements/1.1
+#   via https://www.dublincore.org/schemas/rdfs/
+dc.ttl:
 	wget \
 	  --output-document=_$@ \
-	  https://project-open-data.cio.gov/v1.1/schema/catalog.jsonld
+	  https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_elements.ttl
 	mv _$@ $@
 
 dcat.ttl:
 	wget \
 	  --output-document=_$@ \
 	  https://www.w3.org/ns/dcat.ttl
+	mv _$@ $@
+
+# https://resources.data.gov/resources/dcat-us/#context
+dcat-us.jsonld:
+	wget \
+	  --output-document=_$@ \
+	  https://project-open-data.cio.gov/v1.1/schema/catalog.jsonld
 	mv _$@ $@
 
 dcterms.ttl:
@@ -100,14 +108,6 @@ dependencies.ttl: \
 	  --target-format turtle \
 	  --target _$@
 	rm __$@
-	mv _$@ $@
-
-# http://purl.org/dc/elements/1.1
-#   via https://www.dublincore.org/schemas/rdfs/
-dublin_core_elements.ttl:
-	wget \
-	  --output-document=_$@ \
-	  https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_elements.ttl
 	mv _$@ $@
 
 # http://purl.org/dc/dcmitype/
