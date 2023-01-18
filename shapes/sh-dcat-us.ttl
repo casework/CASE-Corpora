@@ -14,6 +14,7 @@
 
 <http://example.org/shapes/dcat-us>
 	a owl:Ontology ;
+	owl:imports <http://example.org/shapes/vcard> ;
 	.
 
 []
@@ -210,19 +211,14 @@
 		[
 			a sh:PropertyShape ;
 			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#contactPoint-fn> ;
-			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "1"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
 			sh:path vcard:fn ;
 		] ,
 		[
 			a sh:PropertyShape ;
 			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#contactPoint-hasEmail> ;
-			sh:class vcard:Email ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
-			sh:nodeKind sh:IRI ;
 			sh:path vcard:hasEmail ;
 		]
 		;
