@@ -22,11 +22,7 @@
 sh-dcterms:accrualPeriodicity-domain-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/accrualPeriodicity> ;
-	sh:property [
-		a sh:PropertyShape ;
-		sh:hasValue dctype:Collection ;
-		sh:path rdf:type ;
-	] ;
+	sh:class dctype:Collection ;
 	sh:targetSubjectsOf dcterms:accrualPeriodicity ;
 	.
 
