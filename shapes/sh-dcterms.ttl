@@ -74,6 +74,16 @@ sh-dcterms:modified-shape
 	sh:targetSubjectsOf dcterms:modified ;
 	.
 
+sh-dcterms:publisher-suggested-range-shape
+	a sh:NodeShape ;
+	rdfs:comment "Deactivated due to requiring RDFS inferencing enabled to work with metadata attached to several upstream ontologies."@en ;
+	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
+	sh:class dcterms:Agent ;
+	sh:deactivated "true"^^xs:boolean ;
+	sh:severity sh:Info ;
+	sh:targetObjectsOf dcterms:publisher ;
+	.
+
 sh-dcterms:title-range-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:Literal ;

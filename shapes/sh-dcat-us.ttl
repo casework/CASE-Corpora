@@ -155,6 +155,18 @@ sh-dcat-us:Dataset-shape
 			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:BlankNodeOrIRI ;
 			sh:path dcterms:publisher ;
+			sh:qualifiedMaxCount "1"^^xsd:integer ;
+			sh:qualifiedMinCount "1"^^xsd:integer ;
+			sh:qualifiedValueShape [
+				a sh:NodeShape ;
+				rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#publisher-name> ;
+				sh:property [
+					a sh:PropertyShape ;
+					sh:maxCount "1"^^xsd:integer ;
+					sh:minCount "1"^^xsd:integer ;
+					sh:path skos:prefLabel ;
+				] ;
+			] ;
 		] ,
 		[
 			a sh:PropertyShape ;
@@ -229,18 +241,5 @@ sh-dcat-us:contactPoint-range-shape
 		]
 		;
 	sh:targetObjectsOf dcat:contactPoint ;
-	.
-
-sh-dcat-us:publisher-range-shape
-	a sh:NodeShape ;
-	sh:property [
-		a sh:PropertyShape ;
-		rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#publisher-name> ;
-		sh:datatype xsd:string ;
-		sh:maxCount "1"^^xsd:integer ;
-		sh:minCount "1"^^xsd:integer ;
-		sh:path skos:prefLabel ;
-	] ;
-	sh:targetObjectsOf dcterms:publisher ;
 	.
 
