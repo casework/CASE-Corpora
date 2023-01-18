@@ -30,6 +30,7 @@ dependent_ontology_files := \
   dcat.ttl \
   dcterms.ttl \
   dublin_core_type.ttl \
+  foaf.ttl \
   vcard.ttl
 
 rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar
@@ -140,6 +141,19 @@ dublin_core_type.ttl:
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+foaf.ttl:
+	wget \
+	  --output-document=__$@ \
+	  https://web.archive.org/web/20220614105937if_/http://xmlns.com/foaf/spec/20140114.rdf
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format rdf-xml \
 	  --source __$@ \
 	  --target-format turtle \
 	  --target _$@
