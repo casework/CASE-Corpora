@@ -31,6 +31,7 @@ dependent_ontology_files := \
   dcterms.ttl \
   dublin_core_type.ttl \
   foaf.ttl \
+  skos.ttl \
   vcard.ttl
 
 rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar
@@ -151,6 +152,19 @@ foaf.ttl:
 	wget \
 	  --output-document=__$@ \
 	  https://web.archive.org/web/20220614105937if_/http://xmlns.com/foaf/spec/20140114.rdf
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format rdf-xml \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+skos.ttl:
+	wget \
+	  --output-document=__$@ \
+	  http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format rdf-xml \
