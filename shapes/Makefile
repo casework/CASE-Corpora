@@ -16,12 +16,34 @@ SHELL := /bin/bash
 top_srcdir := $(shell cd .. ; pwd)
 
 shape_files := $(wildcard sh-*.ttl)
+check_shape_files := $(foreach shape_file,$(shape_files),.check-$(shape_file))
+check_shape_targets := $(foreach shape_file,$(shape_files),check-$(shape_file))
 
 all: \
   shapes.ttl
 
+.PRECIOUS: \
+  .check-%.ttl
+
+.check-%.ttl: \
+  %.ttl
+	java -jar $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar \
+	  --inline-blank-nodes \
+	  --source $< \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	mv _$@ $@
+
 check: \
+  $(check_shape_targets) \
   validate_inheritance.ttl
+
+check-%.ttl: \
+  %.ttl \
+  .check-%.ttl
+	diff $^	\
+	  || (echo "ERROR:Makefile:The local $< does not match the normalized version. If the above reported changes look fine, run 'cp .check-$< $<' while in the sub-folder shapes/ to get a file ready to commit to Git." >&2 ; exit 1)
 
 shapes.ttl: \
   $(top_srcdir)/.venv.done.log \
