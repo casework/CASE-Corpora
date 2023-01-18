@@ -1,3 +1,5 @@
+# imports: http://purl.org/dc/terms/
+
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -9,6 +11,7 @@
 
 <http://example.org/shapes/dcterms>
 	a owl:Ontology ;
+	owl:imports <http://purl.org/dc/terms/> ;
 	.
 
 sh-dcterms:accrualPeriodicity-domain-shape
