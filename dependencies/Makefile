@@ -69,14 +69,28 @@ clean:
 #   via https://www.dublincore.org/schemas/rdfs/
 dc.ttl:
 	wget \
-	  --output-document=_$@ \
+	  --output-document=__$@ \
 	  https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_elements.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
 	mv _$@ $@
 
 dcat.ttl:
 	wget \
-	  --output-document=_$@ \
+	  --output-document=__$@ \
 	  https://www.w3.org/ns/dcat.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
 	mv _$@ $@
 
 # https://resources.data.gov/resources/dcat-us/#context
@@ -89,8 +103,15 @@ dcat-us.jsonld:
 dcterms.ttl:
 	wget \
 	  --header 'Accept: text/turtle' \
-	  --output-document=_$@ \
+	  --output-document=__$@ \
 	  http://purl.org/dc/terms/
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
 	mv _$@ $@
 
 dependencies.ttl: \
@@ -114,12 +135,26 @@ dependencies.ttl: \
 #   via https://www.dublincore.org/schemas/rdfs/
 dublin_core_type.ttl:
 	wget \
-	  --output-document=_$@ \
+	  --output-document=__$@ \
 	  https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_type.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
 	mv _$@ $@
 
 vcard.ttl:
 	wget \
-	  --output-document=_$@ \
+	  --output-document=__$@ \
 	  https://www.w3.org/2006/vcard/ns
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
 	mv _$@ $@
