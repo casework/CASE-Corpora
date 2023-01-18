@@ -10,9 +10,8 @@
 	a owl:Ontology ;
 	.
 
-[]
+sh-dcterms:accrualPeriodicity-domain-shape
 	a sh:NodeShape ;
-	rdfs:comment "This enforces a domain assertion."@en ;
 	rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/accrualPeriodicity> ;
 	sh:property [
 		a sh:PropertyShape ;
@@ -22,7 +21,7 @@
 	sh:targetSubjectsOf dcterms:accrualPeriodicity ;
 	.
 
-[]
+sh-dcterms:format-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso <https://dublincore.org/specifications/dublin-core/dcmi-terms/#format> ;
 	sh:property [
@@ -41,7 +40,7 @@
 	sh:targetSubjectsOf dcterms:format ;
 	.
 
-[]
+sh-dcterms:language-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language> ;
 	sh:property [
@@ -52,7 +51,7 @@
 	sh:targetSubjectsOf dcterms:language ;
 	.
 
-[]
+sh-dcterms:modified-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified> ;
 	sh:property [

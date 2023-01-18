@@ -197,7 +197,7 @@ dcat:Dataset
 	rdfs:comment "This individual is defined to satisfy a DCAT-US constraint."@en ;
 	.
 
-[]
+sh-case-corpora:hasDatasetDirectory-range-pattern-shape
 	a sh:NodeShape ;
 	sh:property [
 		sh:datatype xsd:string ;
@@ -209,7 +209,7 @@ dcat:Dataset
 	sh:targetSubjectsOf case-corpora:hasDatasetDirectory ;
 	.
 
-[]
+sh-case-corpora:CaseCorporaCatalog-Dataset-hasDatasetDirectory-shape
 	a sh:NodeShape ;
 	sh:sparql [
 		a sh:SPARQLConstraint ;
