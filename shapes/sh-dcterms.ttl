@@ -1,3 +1,4 @@
+# imports: http://example.org/shapes/dcam
 # imports: http://purl.org/dc/terms/
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -6,12 +7,16 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-dcam: <http://example.org/shapes/dcam/> .
 @prefix sh-dcterms: <http://example.org/shapes/dcterms/> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/shapes/dcterms>
 	a owl:Ontology ;
-	owl:imports <http://purl.org/dc/terms/> ;
+	owl:imports
+		<http://example.org/shapes/dcam> ,
+		<http://purl.org/dc/terms/>
+		;
 	.
 
 sh-dcterms:accrualPeriodicity-domain-shape
@@ -25,34 +30,41 @@ sh-dcterms:accrualPeriodicity-domain-shape
 	sh:targetSubjectsOf dcterms:accrualPeriodicity ;
 	.
 
-sh-dcterms:format-shape
+sh-dcterms:format-suggested-range-shape
 	a sh:NodeShape ;
-	rdfs:seeAlso <https://dublincore.org/specifications/dublin-core/dcmi-terms/#format> ;
-	sh:property [
-		a sh:PropertyShape ;
-		sh:nodeKind sh:BlankNodeOrIRI ;
-		sh:or (
-			[
-				sh:class dcterms:Extent ;
-			]
-			[
-				sh:class dcterms:MediaType ;
-			]
-		) ;
-		sh:path dcterms:format ;
-	] ;
-	sh:targetSubjectsOf dcterms:format ;
+	rdfs:seeAlso
+		sh-dcam:rangeincludes-shape ,
+		<https://dublincore.org/specifications/dublin-core/dcmi-terms/#format>
+		;
+	sh:or (
+		[
+			a sh:NodeShape ;
+			sh:class dcterms:Extent ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:class dcterms:MediaType ;
+		]
+	) ;
+	sh:severity sh:Info ;
+	sh:targetObjectsOf dcterms:format ;
 	.
 
-sh-dcterms:language-shape
+sh-dcterms:language-suggested-range-shape
 	a sh:NodeShape ;
-	rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language> ;
-	sh:property [
-		a sh:PropertyShape ;
-		sh:nodeKind sh:IRIOrLiteral ;
-		sh:path dcterms:language ;
-	] ;
-	sh:targetSubjectsOf dcterms:language ;
+	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
+	sh:or (
+		[
+			a sh:NodeShape ;
+			sh:class dcterms:LinguisticSystem ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:nodeKind sh:Literal ;
+		]
+	) ;
+	sh:severity sh:Info ;
+	sh:targetObjectsOf dcterms:language ;
 	.
 
 sh-dcterms:modified-shape

@@ -1,0 +1,29 @@
+# imports: http://purl.org/dc/dcam/
+
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-dcam: <http://example.org/shapes/dcam/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/shapes/dcam>
+	a owl:Ontology ;
+	owl:imports <http://purl.org/dc/dcam/> ;
+	.
+
+sh-dcam:domainIncludes-shape
+	a sh:Shape ;
+	rdfs:comment "dcam:domainIncludes 'suggests' one or more Resources as the domain for a property.  This is not being treated as a domain encoded with rdfs:domain, and is not currently being used to encode SHACL constraints of severity level sh:Violation."@en ;
+	rdfs:seeAlso dcam:domainIncludes ;
+	sh:description "This shape's functionality left intentionally blank."@en ;
+	.
+
+sh-dcam:rangeIncludes-shape
+	a sh:Shape ;
+	rdfs:comment "dcam:rangeIncludes 'suggests' one or more Resources as the range for a property.  This is not being treated as a range encoded with rdfs:range, and is not currently being used to encode SHACL constraints of severity level sh:Violation."@en ;
+	rdfs:seeAlso dcam:rangeIncludes ;
+	sh:description "This shape's functionality left intentionally blank."@en ;
+	.
+
