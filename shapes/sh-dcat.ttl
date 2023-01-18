@@ -1,3 +1,5 @@
+# imports: http://example.org/shapes/foaf
+
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -25,6 +27,19 @@ sh-dcat:Catalog-shape
 	sh:targetClass dcat:Catalog ;
 	.
 
+sh-dcat:CatalogRecord-shape
+	a sh:NodeShape ;
+	sh:property [
+		a sh:PropertyShape ;
+		rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:record_primary_topic> ;
+		sh:class dcat:Resource ;
+		sh:maxCount "1"^^xsd:integer ;
+		sh:minCount "1"^^xsd:integer ;
+		sh:path foaf:primaryTopic ;
+	] ;
+	sh:targetClass dcat:CatalogRecord ;
+	.
+
 sh-dcat:Distribution-shape
 	a sh:NodeShape ;
 	sh:property
@@ -50,18 +65,5 @@ sh-dcat:Distribution-shape
 		]
 		;
 	sh:targetClass dcat:Distribution ;
-	.
-
-sh-dcat:CatalogRecord-shape
-	a sh:NodeShape ;
-	sh:property [
-		a sh:PropertyShape ;
-		rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:record_primary_topic> ;
-		sh:class dcat:Resource ;
-		sh:maxCount "1"^^xsd:integer ;
-		sh:minCount "1"^^xsd:integer ;
-		sh:path foaf:primaryTopic ;
-	] ;
-	sh:targetClass dcat:CatalogRecord ;
 	.
 

@@ -51,17 +51,17 @@ case-corpora:Dataset
 		] ,
 		[
 			a sh:PropertyShape ;
-			sh:description "A case-corpora:Dataset requires a dataset have the accessLevel 'public'.  If a non-public dataset is to be indexed, it should be classified as a dcat:Dataset instead of a case-corpora:Dataset."@en ;
-			sh:hasValue "public" ;
-			sh:path pod:accessLevel ;
-		] ,
-		[
-			a sh:PropertyShape ;
 			sh:class case-corpora:WebPage ;
 			sh:description "CASE-Corpora requires a dataset have a landing page."@en ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:IRI ;
 			sh:path dcat:landingPage ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			sh:description "A case-corpora:Dataset requires a dataset have the accessLevel 'public'.  If a non-public dataset is to be indexed, it should be classified as a dcat:Dataset instead of a case-corpora:Dataset."@en ;
+			sh:hasValue "public" ;
+			sh:path pod:accessLevel ;
 		]
 		;
 	sh:sparql
@@ -182,33 +182,6 @@ case-corpora:hasDownloadURL
 	rdfs:range uco-observable:URL ;
 	.
 
-<http://purl.org/dc/aboutdcmi#DCMI>
-	rdfs:comment "TODO - This is to work around a bug where pyshacl reviewed ontology content instead of data content.  Need to report a test case."@en ;
-	skos:prefLabel "" ;
-	.
-
-dcat:Dataset
-	rdfs:comment "Within CASE-Corpora, the property hasDatasetDirectory is a unique identifier for a Dataset."@en ;
-	owl:hasKey case-corpora:hasDatasetDirectory ;
-	.
-
-<mailto:null@example.org>
-	a vcard:Email ;
-	rdfs:comment "This individual is defined to satisfy a DCAT-US constraint."@en ;
-	.
-
-sh-case-corpora:hasDatasetDirectory-range-pattern-shape
-	a sh:NodeShape ;
-	sh:property [
-		sh:datatype xsd:string ;
-		sh:description "The pattern for dataset directory names is lowercase alphanumeric ASCII characters, and hyphens.  The name should not start or end with a hyphen."@en ;
-		sh:nodeKind sh:Literal ;
-		sh:path case-corpora:hasDatasetDirectory ;
-		sh:pattern "^[^-][0-9a-z-]+[^-]$" ;
-	] ;
-	sh:targetSubjectsOf case-corpora:hasDatasetDirectory ;
-	.
-
 sh-case-corpora:CaseCorporaCatalog-Dataset-hasDatasetDirectory-shape
 	a sh:NodeShape ;
 	sh:sparql [
@@ -229,5 +202,32 @@ sh-case-corpora:CaseCorporaCatalog-Dataset-hasDatasetDirectory-shape
 		""" ;
 	] ;
 	sh:targetClass dcat:Dataset ;
+	.
+
+sh-case-corpora:hasDatasetDirectory-range-pattern-shape
+	a sh:NodeShape ;
+	sh:property [
+		sh:datatype xsd:string ;
+		sh:description "The pattern for dataset directory names is lowercase alphanumeric ASCII characters, and hyphens.  The name should not start or end with a hyphen."@en ;
+		sh:nodeKind sh:Literal ;
+		sh:path case-corpora:hasDatasetDirectory ;
+		sh:pattern "^[^-][0-9a-z-]+[^-]$" ;
+	] ;
+	sh:targetSubjectsOf case-corpora:hasDatasetDirectory ;
+	.
+
+<http://purl.org/dc/aboutdcmi#DCMI>
+	rdfs:comment "TODO - This is to work around a bug where pyshacl reviewed ontology content instead of data content.  Need to report a test case."@en ;
+	skos:prefLabel "" ;
+	.
+
+dcat:Dataset
+	rdfs:comment "Within CASE-Corpora, the property hasDatasetDirectory is a unique identifier for a Dataset."@en ;
+	owl:hasKey case-corpora:hasDatasetDirectory ;
+	.
+
+<mailto:null@example.org>
+	a vcard:Email ;
+	rdfs:comment "This individual is defined to satisfy a DCAT-US constraint."@en ;
 	.
 

@@ -5,6 +5,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sh-dcterms: <http://example.org/shapes/dcterms/> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/shapes/dcterms>
 	a owl:Ontology ;

@@ -1,3 +1,6 @@
+# imports: http://example.org/shapes/skos
+# imports: http://example.org/shapes/vcard
+
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -20,40 +23,28 @@
 		;
 	.
 
-sh-dcat-us:Distribution-shape
+sh-dcat-us:Catalog-shape
 	a sh:NodeShape ;
 	sh:property
 		[
 			a sh:PropertyShape ;
-			rdfs:seeAlso
-				<https://dublincore.org/specifications/dublin-core/dcmi-terms/#format> ,
-				<https://resources.data.gov/resources/dcat-us/#distribution-mediaType>
-				;
-			skos:editorialNote "There appears to be an error in the DCAT-US specification.  dcat:mediaType's range inherits from dcterms:format, which has range of dcterms:MediaType or dcterms:Extent.  DCAT-US declares a string range, which is a conflicting property-type definition."@en ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#conformsTo> ;
+			sh:class dcterms:Standard ;
 			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "0"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:IRI ;
-			sh:path dcat:mediaType ;
+			sh:path dcterms:conformsTo ;
 		] ,
 		[
 			a sh:PropertyShape ;
-			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#distribution-downloadURL> ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "0"^^xsd:integer ;
-			sh:nodeKind sh:IRI ;
-			sh:path dcat:downloadURL ;
-		] ,
-		[
-			a sh:PropertyShape ;
-			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#issued> ;
-			sh:datatype xsd:date ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "0"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
-			sh:path dcterms:issued ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#dataset> ;
+			sh:class dcat:Dataset ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:path dcat:dataset ;
 		]
 		;
-	sh:targetClass dcat:Distribution ;
+	sh:targetClass dcat:Catalog ;
 	.
 
 sh-dcat-us:Dataset-shape
@@ -184,28 +175,40 @@ sh-dcat-us:Dataset-shape
 	sh:targetClass dcat:Dataset ;
 	.
 
-sh-dcat-us:Catalog-shape
+sh-dcat-us:Distribution-shape
 	a sh:NodeShape ;
 	sh:property
 		[
 			a sh:PropertyShape ;
-			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#conformsTo> ;
-			sh:class dcterms:Standard ;
+			rdfs:seeAlso
+				<https://dublincore.org/specifications/dublin-core/dcmi-terms/#format> ,
+				<https://resources.data.gov/resources/dcat-us/#distribution-mediaType>
+				;
+			skos:editorialNote "There appears to be an error in the DCAT-US specification.  dcat:mediaType's range inherits from dcterms:format, which has range of dcterms:MediaType or dcterms:Extent.  DCAT-US declares a string range, which is a conflicting property-type definition."@en ;
 			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "1"^^xsd:integer ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:nodeKind sh:IRI ;
-			sh:path dcterms:conformsTo ;
+			sh:path dcat:mediaType ;
 		] ,
 		[
 			a sh:PropertyShape ;
-			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#dataset> ;
-			sh:class dcat:Dataset ;
-			sh:minCount "1"^^xsd:integer ;
-			sh:nodeKind sh:BlankNodeOrIRI ;
-			sh:path dcat:dataset ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#distribution-downloadURL> ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:nodeKind sh:IRI ;
+			sh:path dcat:downloadURL ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#issued> ;
+			sh:datatype xsd:date ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path dcterms:issued ;
 		]
 		;
-	sh:targetClass dcat:Catalog ;
+	sh:targetClass dcat:Distribution ;
 	.
 
 sh-dcat-us:contactPoint-range-shape
