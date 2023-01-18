@@ -10,6 +10,7 @@
 
 <http://example.org/shapes/dcat>
 	a owl:Ontology ;
+	owl:imports <http://example.org/shapes/foaf> ;
 	.
 
 []
@@ -59,7 +60,6 @@
 		sh:class dcat:Resource ;
 		sh:maxCount "1"^^xsd:integer ;
 		sh:minCount "1"^^xsd:integer ;
-		sh:nodeKind sh:BlankNodeOrIRI ;
 		sh:path foaf:primaryTopic ;
 	] ;
 	sh:targetClass dcat:CatalogRecord ;
