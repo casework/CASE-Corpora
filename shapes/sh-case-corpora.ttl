@@ -10,13 +10,14 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-case-corpora: <http://example.org/shapes/case-corpora/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/ontology/case/corpora>
+<http://example.org/shapes/case-corpora>
 	a owl:Ontology ;
 	rdfs:comment "This ontology serves to join the versions of CASE and DCAT used to populate CASE-Corpora, bringing analogous properties and classes together and defining SHACL shapes to maintain data quality-control rules."@en ;
 	owl:imports
