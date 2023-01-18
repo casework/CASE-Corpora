@@ -9,7 +9,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sh-dcam: <http://example.org/shapes/dcam/> .
 @prefix sh-dcterms: <http://example.org/shapes/dcterms/> .
-@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/shapes/dcterms>
 	a owl:Ontology ;
@@ -85,7 +85,7 @@ sh-dcterms:publisher-suggested-range-shape
 	rdfs:comment "Deactivated due to requiring RDFS inferencing enabled to work with metadata attached to several upstream ontologies."@en ;
 	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
 	sh:class dcterms:Agent ;
-	sh:deactivated "true"^^xs:boolean ;
+	sh:deactivated "true"^^xsd:boolean ;
 	sh:severity sh:Info ;
 	sh:targetObjectsOf dcterms:publisher ;
 	.
