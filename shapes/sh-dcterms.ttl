@@ -46,6 +46,12 @@ sh-dcterms:format-suggested-range-shape
 	sh:targetObjectsOf dcterms:format ;
 	.
 
+sh-dcterms:identifier-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:Literal ;
+	sh:targetObjectsOf dcterms:identifier ;
+	.
+
 sh-dcterms:language-suggested-range-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso sh-dcam:rangeincludes-shape ;

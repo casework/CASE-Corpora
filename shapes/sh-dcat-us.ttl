@@ -122,7 +122,6 @@ sh-dcat-us:Dataset-shape
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
 			sh:path dcterms:identifier ;
 		] ,
 		[
