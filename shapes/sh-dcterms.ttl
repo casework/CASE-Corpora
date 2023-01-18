@@ -74,3 +74,9 @@ sh-dcterms:modified-shape
 	sh:targetSubjectsOf dcterms:modified ;
 	.
 
+sh-dcterms:title-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:Literal ;
+	sh:targetObjectsOf dcterms:title ;
+	.
+
