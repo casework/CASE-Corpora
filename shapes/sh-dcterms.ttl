@@ -1,4 +1,4 @@
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -19,7 +19,7 @@
 		sh:hasValue dctype:Collection ;
 		sh:path rdf:type ;
 	] ;
-	sh:targetSubjectsOf dct:accrualPeriodicity ;
+	sh:targetSubjectsOf dcterms:accrualPeriodicity ;
 	.
 
 []
@@ -30,15 +30,15 @@
 		sh:nodeKind sh:BlankNodeOrIRI ;
 		sh:or (
 			[
-				sh:class dct:Extent ;
+				sh:class dcterms:Extent ;
 			]
 			[
-				sh:class dct:MediaType ;
+				sh:class dcterms:MediaType ;
 			]
 		) ;
-		sh:path dct:format ;
+		sh:path dcterms:format ;
 	] ;
-	sh:targetSubjectsOf dct:format ;
+	sh:targetSubjectsOf dcterms:format ;
 	.
 
 []
@@ -47,9 +47,9 @@
 	sh:property [
 		a sh:PropertyShape ;
 		sh:nodeKind sh:IRIOrLiteral ;
-		sh:path dct:language ;
+		sh:path dcterms:language ;
 	] ;
-	sh:targetSubjectsOf dct:language ;
+	sh:targetSubjectsOf dcterms:language ;
 	.
 
 []
@@ -58,8 +58,8 @@
 	sh:property [
 		a sh:PropertyShape ;
 		sh:nodeKind sh:Literal ;
-		sh:path dct:modified ;
+		sh:path dcterms:modified ;
 	] ;
-	sh:targetSubjectsOf dct:modified ;
+	sh:targetSubjectsOf dcterms:modified ;
 	.
 

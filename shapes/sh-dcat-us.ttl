@@ -1,5 +1,5 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -25,7 +25,7 @@
 				<https://dublincore.org/specifications/dublin-core/dcmi-terms/#format> ,
 				<https://resources.data.gov/resources/dcat-us/#distribution-mediaType>
 				;
-			skos:editorialNote "There appears to be an error in the DCAT-US specification.  dcat:mediaType's range inherits from dct:format, which has range of dct:MediaType or dct:Extent.  DCAT-US declares a string range, which is a conflicting property-type definition."@en ;
+			skos:editorialNote "There appears to be an error in the DCAT-US specification.  dcat:mediaType's range inherits from dcterms:format, which has range of dcterms:MediaType or dcterms:Extent.  DCAT-US declares a string range, which is a conflicting property-type definition."@en ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "0"^^xsd:integer ;
 			sh:nodeKind sh:IRI ;
@@ -46,7 +46,7 @@
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "0"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path dct:issued ;
+			sh:path dcterms:issued ;
 		]
 		;
 	sh:targetClass dcat:Distribution ;
@@ -100,7 +100,7 @@
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "0"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path dct:accrualPeriodicity ;
+			sh:path dcterms:accrualPeriodicity ;
 		] ,
 		[
 			a sh:PropertyShape ;
@@ -118,7 +118,7 @@
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path dct:description ;
+			sh:path dcterms:description ;
 		] ,
 		[
 			a sh:PropertyShape ;
@@ -127,7 +127,7 @@
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path dct:identifier ;
+			sh:path dcterms:identifier ;
 		] ,
 		[
 			a sh:PropertyShape ;
@@ -141,7 +141,7 @@
 			a sh:PropertyShape ;
 			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#language> ;
 			sh:nodeKind sh:Literal ;
-			sh:path dct:language ;
+			sh:path dcterms:language ;
 		] ,
 		[
 			a sh:PropertyShape ;
@@ -149,7 +149,7 @@
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path dct:modified ;
+			sh:path dcterms:modified ;
 		] ,
 		[
 			a sh:PropertyShape ;
@@ -158,7 +158,7 @@
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:BlankNodeOrIRI ;
-			sh:path dct:publisher ;
+			sh:path dcterms:publisher ;
 		] ,
 		[
 			a sh:PropertyShape ;
@@ -167,7 +167,7 @@
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path dct:title ;
+			sh:path dcterms:title ;
 		] ,
 		[
 			a sh:PropertyShape ;
@@ -186,11 +186,11 @@
 		[
 			a sh:PropertyShape ;
 			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#conformsTo> ;
-			sh:class dct:Standard ;
+			sh:class dcterms:Standard ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:IRI ;
-			sh:path dct:conformsTo ;
+			sh:path dcterms:conformsTo ;
 		] ,
 		[
 			a sh:PropertyShape ;
@@ -240,6 +240,6 @@
 		sh:nodeKind sh:Literal ;
 		sh:path skos:prefLabel ;
 	] ;
-	sh:targetObjectsOf dct:publisher ;
+	sh:targetObjectsOf dcterms:publisher ;
 	.
 

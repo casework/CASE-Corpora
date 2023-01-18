@@ -1,5 +1,5 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -30,7 +30,7 @@
 		[
 			a sh:PropertyShape ;
 			rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_compression_format> ;
-			sh:class dct:MediaType ;
+			sh:class dcterms:MediaType ;
 			sh:nodeKind sh:BlankNodeOrIRI ;
 			sh:path dcat:compressFormat ;
 		] ,
@@ -43,7 +43,7 @@
 		[
 			a sh:PropertyShape ;
 			rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format> ;
-			sh:class dct:MediaType ;
+			sh:class dcterms:MediaType ;
 			sh:nodeKind sh:BlankNodeOrIRI ;
 			sh:path dcat:packageFormat ;
 		]
