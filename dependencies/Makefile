@@ -27,6 +27,7 @@ case_unstable_ttls := \
 
 dependent_ontology_files := \
   dc.ttl \
+  dcam.ttl \
   dcat.ttl \
   dcterms.ttl \
   dublin_core_type.ttl \
@@ -73,6 +74,20 @@ dc.ttl:
 	wget \
 	  --output-document=__$@ \
 	  https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_elements.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+dcam.ttl:
+	wget \
+	  --header 'Accept: text/turtle' \
+	  --output-document=__$@ \
+	  http://purl.org/dc/dcam/
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \
