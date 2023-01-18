@@ -15,24 +15,38 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd .. ; pwd)
 
-dependent_shape_files := \
-  case-corpora.ttl \
-  dcat-us.ttl \
-  dcat.ttl \
-  dct.ttl
+shape_files := $(wildcard sh-*.ttl)
 
-all:
+all: \
+  shapes.ttl
 
 check: \
   validate_inheritance.ttl
 
+shapes.ttl: \
+  $(top_srcdir)/.venv.done.log \
+  $(shape_files)
+	source $(top_srcdir)/venv/bin/activate \
+	  && rdfpipe \
+	    --output-format turtle \
+	    $(shape_files) \
+	    > __$@
+	java -jar $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
 validate_inheritance.ttl: \
-  $(dependent_shape_files) \
-  $(top_srcdir)/.venv.done.log
+  $(top_srcdir)/.venv.done.log \
+  shapes.ttl
 	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_shacl_inheritance_reviewer \
 	    --debug \
 	    _$@ \
-	    $(dependent_shape_files)
+	    shapes.ttl
 	mv _$@ $@

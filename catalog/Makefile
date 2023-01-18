@@ -39,11 +39,8 @@ clean:
 validate-catalog.ttl: \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/dependencies/dependencies.ttl \
-  $(top_srcdir)/shapes/case-corpora.ttl \
-  $(top_srcdir)/shapes/dcat.ttl \
-  $(top_srcdir)/shapes/dcat-us.ttl \
-  $(top_srcdir)/shapes/dct.ttl \
   $(top_srcdir)/shapes/debug.ttl \
+  $(top_srcdir)/shapes/shapes.ttl \
   .catalog-example-dataset.ttl \
   catalog.ttl
 	rm -f _$@
@@ -53,11 +50,8 @@ validate-catalog.ttl: \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dcat.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dcat-us.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dct.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/debug.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output _$@ \
 	    catalog.ttl \
 	    .catalog-example-dataset.ttl \

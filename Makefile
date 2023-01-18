@@ -15,19 +15,25 @@ SHELL := /bin/bash
 
 all: \
   .venv-pre-commit/var/.pre-commit-built.log \
-  all-dependencies
+  all-shapes
 	$(MAKE) \
 	  --directory catalog
 	$(MAKE) \
 	  --directory reports
 
 .PHONY: \
-  all-dependencies
+  all-dependencies \
+  all-shapes
 
 all-dependencies: \
   .venv.done.log
 	$(MAKE) \
 	  --directory dependencies
+
+all-shapes: \
+  all-dependencies
+	$(MAKE) \
+	  --directory shapes
 
 .git_submodule_init.done.log: \
   .gitmodules
@@ -110,7 +116,7 @@ all-dependencies: \
 
 check: \
   .venv-pre-commit/var/.pre-commit-built.log \
-  all-dependencies
+  all-shapes
 	$(MAKE) \
 	  --directory shapes \
 	  check

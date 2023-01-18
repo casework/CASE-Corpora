@@ -52,14 +52,14 @@ check: \
   validate-kb-all.ttl
 
 datasets.md: \
-  $(top_srcdir)/shapes/case-corpora.ttl \
+  $(top_srcdir)/shapes/shapes.ttl \
   datasets.sparql \
   kb-all.ttl
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_sparql_select \
 	    _$@ \
 	    datasets.sparql \
-	    $(top_srcdir)/shapes/case-corpora.ttl \
+	    $(top_srcdir)/shapes/shapes.ttl \
 	    kb-all.ttl
 	mv _$@ $@
 
@@ -111,11 +111,8 @@ validate-kb-all.ttl: \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dcat.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dcat-us.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dct.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/debug.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output _$@ \
 	    kb-all.ttl \
 	    || (cat _$@ ; exit 1)
@@ -131,11 +128,8 @@ validate-kb-datasets.ttl: \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dcat.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dcat-us.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dct.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/debug.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output _$@ \
 	    kb-datasets.ttl \
 	    || (cat _$@ ; exit 1)
