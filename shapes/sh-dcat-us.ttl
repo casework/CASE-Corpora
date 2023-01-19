@@ -169,13 +169,6 @@ sh-dcat-us:Dataset-shape
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:path dcterms:title ;
-		] ,
-		[
-			a sh:PropertyShape ;
-			rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page> ;
-			sh:class foaf:Document ;
-			sh:nodeKind sh:BlankNodeOrIRI ;
-			sh:path dcat:landingPage ;
 		]
 		;
 	sh:targetClass dcat:Dataset ;

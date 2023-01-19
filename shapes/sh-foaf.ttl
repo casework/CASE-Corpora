@@ -13,6 +13,13 @@
 	owl:imports <http://xmlns.com/foaf/0.1/> ;
 	.
 
+sh-foaf:page-range-shape
+	a sh:NodeShape ;
+	sh:class foaf:Document ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf foaf:page ;
+	.
+
 sh-foaf:primaryTopic-domain-shape
 	a sh:NodeShape ;
 	sh:class foaf:Document ;
@@ -23,5 +30,12 @@ sh-foaf:primaryTopic-range-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf foaf:primaryTopic ;
+	.
+
+sh-foaf:topic-domain-shape
+	a sh:NodeShape ;
+	sh:class foaf:Document ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetSubjectsOf foaf:topic ;
 	.
 

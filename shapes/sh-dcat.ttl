@@ -98,6 +98,14 @@ sh-dcat:keyword-range-shape
 	sh:targetObjectsOf dcat:keyword ;
 	.
 
+sh-dcat:landingPage-range-shape
+	a sh:NodeShape ;
+	rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page> ;
+	sh:class foaf:Document ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf dcat:landingPage ;
+	.
+
 sh-dcat:packageFormat-domain-shape
 	a sh:NodeShape ;
 	sh:class dcat:Distribution ;
