@@ -69,15 +69,11 @@ sh-dcterms:language-suggested-range-shape
 	sh:targetObjectsOf dcterms:language ;
 	.
 
-sh-dcterms:modified-shape
+sh-dcterms:modified-range-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified> ;
-	sh:property [
-		a sh:PropertyShape ;
-		sh:nodeKind sh:Literal ;
-		sh:path dcterms:modified ;
-	] ;
-	sh:targetSubjectsOf dcterms:modified ;
+	sh:nodeKind sh:Literal ;
+	sh:targetObjectsOf dcterms:modified ;
 	.
 
 sh-dcterms:publisher-suggested-range-shape
