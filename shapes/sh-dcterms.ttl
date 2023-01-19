@@ -1,3 +1,4 @@
+# imports: http://example.org/shapes/dc
 # imports: http://example.org/shapes/dcam
 # imports: http://purl.org/dc/terms/
 
@@ -14,6 +15,7 @@
 <http://example.org/shapes/dcterms>
 	a owl:Ontology ;
 	owl:imports
+		<http://example.org/shapes/dc> ,
 		<http://example.org/shapes/dcam> ,
 		<http://purl.org/dc/terms/>
 		;
@@ -84,6 +86,12 @@ sh-dcterms:publisher-suggested-range-shape
 	sh:deactivated "true"^^xsd:boolean ;
 	sh:severity sh:Info ;
 	sh:targetObjectsOf dcterms:publisher ;
+	.
+
+sh-dcterms:subject-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dcterms:subject ;
 	.
 
 sh-dcterms:title-range-shape

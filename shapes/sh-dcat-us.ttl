@@ -129,7 +129,6 @@ sh-dcat-us:Dataset-shape
 			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#keyword> ;
 			sh:datatype xsd:string ;
 			sh:minCount "1"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
 			sh:path dcat:keyword ;
 		] ,
 		[

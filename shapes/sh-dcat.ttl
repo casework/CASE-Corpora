@@ -1,4 +1,6 @@
+# imports: http://example.org/shapes/dcterms
 # imports: http://example.org/shapes/foaf
+# imports: http://www.w3.org/ns/dcat
 
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -12,7 +14,11 @@
 
 <http://example.org/shapes/dcat>
 	a owl:Ontology ;
-	owl:imports <http://example.org/shapes/foaf> ;
+	owl:imports
+		<http://example.org/shapes/dcterms> ,
+		<http://example.org/shapes/foaf> ,
+		<http://www.w3.org/ns/dcat>
+		;
 	.
 
 sh-dcat:Catalog-shape
@@ -65,5 +71,11 @@ sh-dcat:Distribution-shape
 		]
 		;
 	sh:targetClass dcat:Distribution ;
+	.
+
+sh-dcat:keyword-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:Literal ;
+	sh:targetObjectsOf dcat:keyword ;
 	.
 
