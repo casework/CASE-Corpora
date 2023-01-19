@@ -28,6 +28,14 @@ sh-dcterms:accrualPeriodicity-domain-shape
 	sh:targetSubjectsOf dcterms:accrualPeriodicity ;
 	.
 
+sh-dcterms:conformsTo-suggested-range-shape
+	a sh:NodeShape ;
+	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
+	sh:class dcterms:Standard ;
+	sh:severity sh:Info ;
+	sh:targetObjectsOf dcterms:conformsTo ;
+	.
+
 sh-dcterms:date-range-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:Literal ;

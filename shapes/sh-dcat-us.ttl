@@ -31,7 +31,6 @@ sh-dcat-us:Catalog-shape
 		[
 			a sh:PropertyShape ;
 			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#conformsTo> ;
-			sh:class dcterms:Standard ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:IRI ;
