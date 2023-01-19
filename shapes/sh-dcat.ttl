@@ -37,18 +37,6 @@ sh-dcat:CatalogRecord-shape
 	sh:targetClass dcat:CatalogRecord ;
 	.
 
-sh-dcat:Distribution-shape
-	a sh:NodeShape ;
-	sh:property [
-		a sh:PropertyShape ;
-		rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format> ;
-		sh:class dcterms:MediaType ;
-		sh:nodeKind sh:BlankNodeOrIRI ;
-		sh:path dcat:packageFormat ;
-	] ;
-	sh:targetClass dcat:Distribution ;
-	.
-
 sh-dcat:compressFormat-domain-shape
 	a sh:NodeShape ;
 	sh:class dcat:Distribution ;
@@ -95,6 +83,20 @@ sh-dcat:keyword-range-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:Literal ;
 	sh:targetObjectsOf dcat:keyword ;
+	.
+
+sh-dcat:packageFormat-domain-shape
+	a sh:NodeShape ;
+	sh:class dcat:Distribution ;
+	sh:targetSubjectsOf dcat:packageFormat ;
+	.
+
+sh-dcat:packageFormat-range-shape
+	a sh:NodeShape ;
+	rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format> ;
+	sh:class dcterms:MediaType ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf dcat:packageFormat ;
 	.
 
 sh-dcat:record-domain-shape
