@@ -39,21 +39,13 @@ sh-dcat:CatalogRecord-shape
 
 sh-dcat:Distribution-shape
 	a sh:NodeShape ;
-	sh:property
-		[
-			a sh:PropertyShape ;
-			rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url> ;
-			sh:nodeKind sh:BlankNodeOrIRI ;
-			sh:path dcat:downloadURL ;
-		] ,
-		[
-			a sh:PropertyShape ;
-			rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format> ;
-			sh:class dcterms:MediaType ;
-			sh:nodeKind sh:BlankNodeOrIRI ;
-			sh:path dcat:packageFormat ;
-		]
-		;
+	sh:property [
+		a sh:PropertyShape ;
+		rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format> ;
+		sh:class dcterms:MediaType ;
+		sh:nodeKind sh:BlankNodeOrIRI ;
+		sh:path dcat:packageFormat ;
+	] ;
 	sh:targetClass dcat:Distribution ;
 	.
 
@@ -76,6 +68,27 @@ sh-dcat:contactPoint-range-shape
 	sh:class vcard:Kind ;
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf dcat:contactPoint ;
+	.
+
+sh-dcat:downloadURL-domain-shape
+	a sh:NodeShape ;
+	sh:class dcat:Distribution ;
+	sh:targetSubjectsOf dcat:downloadURL ;
+	.
+
+sh-dcat:downloadURL-range-shape
+	a sh:NodeShape ;
+	rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url> ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf dcat:downloadURL ;
+	.
+
+sh-dcat:downloadURL-suggested-range-shape
+	a sh:NodeShape ;
+	sh:message "Per scope note on dcat:downloadURL: 'dcat:downloadURL SHOULD be used for the address at which this distribution is available directly, typically through a HTTP Get request.'"@en ;
+	sh:nodeKind sh:IRI ;
+	sh:severity sh:Warning ;
+	sh:targetObjectsOf dcat:downloadURL ;
 	.
 
 sh-dcat:keyword-range-shape

@@ -202,7 +202,7 @@ sh-dcat-us:Distribution-shape
 			a sh:PropertyShape ;
 			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#distribution-downloadURL> ;
 			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "0"^^xsd:integer ;
+			sh:message "Per usage note in DCAT-US: 'This must be the direct download URL'."@en ;
 			sh:nodeKind sh:IRI ;
 			sh:path dcat:downloadURL ;
 		] ,
