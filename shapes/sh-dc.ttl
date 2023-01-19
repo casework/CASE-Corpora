@@ -19,6 +19,12 @@ sh-dc:date-shape
 	sh:targetSubjectsOf dc:date ;
 	.
 
+sh-dc:description-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:description ;
+	.
+
 sh-dc:format-shape
 	a sh:NodeShape ;
 	rdfs:comment "This property has no implemented restrictions."@en ;

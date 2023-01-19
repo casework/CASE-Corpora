@@ -34,6 +34,12 @@ sh-dcterms:date-range-shape
 	sh:targetObjectsOf dcterms:date ;
 	.
 
+sh-dcterms:description-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dcterms:description ;
+	.
+
 sh-dcterms:format-suggested-range-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso
