@@ -24,18 +24,6 @@
 		;
 	.
 
-sh-dcat:Catalog-shape
-	a sh:NodeShape ;
-	sh:property [
-		a sh:PropertyShape ;
-		rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog_record> ;
-		sh:class dcat:CatalogRecord ;
-		sh:nodeKind sh:BlankNodeOrIRI ;
-		sh:path dcat:record ;
-	] ;
-	sh:targetClass dcat:Catalog ;
-	.
-
 sh-dcat:CatalogRecord-shape
 	a sh:NodeShape ;
 	sh:property [
@@ -94,5 +82,19 @@ sh-dcat:keyword-range-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:Literal ;
 	sh:targetObjectsOf dcat:keyword ;
+	.
+
+sh-dcat:record-domain-shape
+	a sh:NodeShape ;
+	sh:class dcat:Catalog ;
+	sh:targetSubjectsOf dcat:record ;
+	.
+
+sh-dcat:record-range-shape
+	a sh:NodeShape ;
+	rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog_record> ;
+	sh:class dcat:CatalogRecord ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf dcat:record ;
 	.
 
