@@ -179,23 +179,19 @@ sh-dcat-us:Distribution-shape
 	sh:property
 		[
 			a sh:PropertyShape ;
-			rdfs:seeAlso
-				<https://dublincore.org/specifications/dublin-core/dcmi-terms/#format> ,
-				<https://resources.data.gov/resources/dcat-us/#distribution-mediaType>
-				;
-			skos:editorialNote "There appears to be an error in the DCAT-US specification.  dcat:mediaType's range inherits from dcterms:format, which has range of dcterms:MediaType or dcterms:Extent.  DCAT-US declares a string range, which is a conflicting property-type definition."@en ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "0"^^xsd:integer ;
-			sh:nodeKind sh:IRI ;
-			sh:path dcat:mediaType ;
-		] ,
-		[
-			a sh:PropertyShape ;
 			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#distribution-downloadURL> ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:message "Per usage note in DCAT-US: 'This must be the direct download URL'."@en ;
 			sh:nodeKind sh:IRI ;
 			sh:path dcat:downloadURL ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#distribution-mediaType> ;
+			skos:editorialNote "There is a type error in the DCAT-US specification's documentation.  dcat:mediaType is an owl:ObjectProperty.  DCAT-US declares and demonstrates a string range for this property, without aliasing (or any reference to mediaType) from the DCAT-US JSON-LD context to support conversion of the string value into an IRI reference."@en ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:IRI ;
+			sh:path dcat:mediaType ;
 		] ,
 		[
 			a sh:PropertyShape ;

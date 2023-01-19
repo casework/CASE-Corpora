@@ -106,6 +106,19 @@ sh-dcat:landingPage-range-shape
 	sh:targetObjectsOf dcat:landingPage ;
 	.
 
+sh-dcat:mediaType-domain-shape
+	a sh:NodeShape ;
+	sh:class dcat:Distribution ;
+	sh:targetSubjectsOf dcat:mediaType ;
+	.
+
+sh-dcat:mediaType-range-shape
+	a sh:NodeShape ;
+	sh:class dcterms:MediaType ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf dcat:mediaType ;
+	.
+
 sh-dcat:packageFormat-domain-shape
 	a sh:NodeShape ;
 	sh:class dcat:Distribution ;
