@@ -98,10 +98,29 @@ sh-dcat-us:Dataset-shape
 		[
 			a sh:PropertyShape ;
 			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#contactPoint> ;
-			sh:class vcard:Contact ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:path dcat:contactPoint ;
+			sh:qualifiedMaxCount "1"^^xsd:integer ;
+			sh:qualifiedMinCount "1"^^xsd:integer ;
+			sh:qualifiedValueShape [
+				a sh:NodeShape ;
+				skos:editorialNote "This shape is prescribed to have either 0 or 1 assignments of a class-membership, with documentation suggesting vcard:Contact.  However, this assignment is incompatible with the vcard class hierarchy and DCAT's existing class constraint of 'Kind' for contactPoint.   'Contact' is a subclass of the top vcard class 'Relation Type', and 'Kind' is not in that class hierarchy.  Hence, this shape drops the maximum-cardinality requirement on rdf:type."@en ;
+				sh:class vcard:Contact ;
+				sh:property
+					[
+						a sh:PropertyShape ;
+						sh:maxCount "1"^^xsd:integer ;
+						sh:minCount "1"^^xsd:integer ;
+						sh:path vcard:hasEmail ;
+					] ,
+					[
+						a sh:PropertyShape ;
+						sh:maxCount "1"^^xsd:integer ;
+						sh:path vcard:fn ;
+					]
+					;
+			] ;
 		] ,
 		[
 			a sh:PropertyShape ;
@@ -201,25 +220,5 @@ sh-dcat-us:Distribution-shape
 		]
 		;
 	sh:targetClass dcat:Distribution ;
-	.
-
-sh-dcat-us:contactPoint-range-shape
-	a sh:NodeShape ;
-	sh:property
-		[
-			a sh:PropertyShape ;
-			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#contactPoint-fn> ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:path vcard:fn ;
-		] ,
-		[
-			a sh:PropertyShape ;
-			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#contactPoint-hasEmail> ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "1"^^xsd:integer ;
-			sh:path vcard:hasEmail ;
-		]
-		;
-	sh:targetObjectsOf dcat:contactPoint ;
 	.
 
