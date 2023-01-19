@@ -51,13 +51,6 @@ sh-dcat:Distribution-shape
 	sh:property
 		[
 			a sh:PropertyShape ;
-			rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_compression_format> ;
-			sh:class dcterms:MediaType ;
-			sh:nodeKind sh:BlankNodeOrIRI ;
-			sh:path dcat:compressFormat ;
-		] ,
-		[
-			a sh:PropertyShape ;
 			rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url> ;
 			sh:nodeKind sh:BlankNodeOrIRI ;
 			sh:path dcat:downloadURL ;
@@ -71,6 +64,20 @@ sh-dcat:Distribution-shape
 		]
 		;
 	sh:targetClass dcat:Distribution ;
+	.
+
+sh-dcat:compressFormat-domain-shape
+	a sh:NodeShape ;
+	sh:class dcat:Distribution ;
+	sh:targetSubjectsOf dcat:compressFormat ;
+	.
+
+sh-dcat:compressFormat-range-shape
+	a sh:NodeShape ;
+	rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_compression_format> ;
+	sh:class dcterms:MediaType ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf dcat:compressFormat ;
 	.
 
 sh-dcat:keyword-range-shape
