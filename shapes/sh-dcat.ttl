@@ -1,5 +1,6 @@
 # imports: http://example.org/shapes/dcterms
 # imports: http://example.org/shapes/foaf
+# imports: http://example.org/shapes/vcard
 # imports: http://www.w3.org/ns/dcat
 
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -10,6 +11,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sh-dcat: <http://example.org/shapes/dcat/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/shapes/dcat>
@@ -17,6 +19,7 @@
 	owl:imports
 		<http://example.org/shapes/dcterms> ,
 		<http://example.org/shapes/foaf> ,
+		<http://example.org/shapes/vcard> ,
 		<http://www.w3.org/ns/dcat>
 		;
 	.
@@ -78,6 +81,13 @@ sh-dcat:compressFormat-range-shape
 	sh:class dcterms:MediaType ;
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf dcat:compressFormat ;
+	.
+
+sh-dcat:contactPoint-range-shape
+	a sh:NodeShape ;
+	sh:class vcard:Kind ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf dcat:contactPoint ;
 	.
 
 sh-dcat:keyword-range-shape

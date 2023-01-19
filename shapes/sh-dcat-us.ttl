@@ -1,6 +1,6 @@
+# imports: http://example.org/shapes/dcat
 # imports: http://example.org/shapes/pod
 # imports: http://example.org/shapes/skos
-# imports: http://example.org/shapes/vcard
 
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -19,9 +19,9 @@
 <http://example.org/shapes/dcat-us>
 	a owl:Ontology ;
 	owl:imports
+		<http://example.org/shapes/dcat> ,
 		<http://example.org/shapes/pod> ,
-		<http://example.org/shapes/skos> ,
-		<http://example.org/shapes/vcard>
+		<http://example.org/shapes/skos>
 		;
 	.
 
@@ -104,7 +104,6 @@ sh-dcat-us:Dataset-shape
 			sh:class vcard:Contact ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
-			sh:nodeKind sh:BlankNodeOrIRI ;
 			sh:path dcat:contactPoint ;
 		] ,
 		[
