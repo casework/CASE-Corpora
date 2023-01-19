@@ -198,8 +198,6 @@ sh-dcat-us:Distribution-shape
 			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#issued> ;
 			sh:datatype xsd:date ;
 			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "0"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
 			sh:path dcterms:issued ;
 		]
 		;
