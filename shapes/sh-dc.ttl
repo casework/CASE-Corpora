@@ -13,9 +13,45 @@
 	owl:imports <http://purl.org/dc/elements/1.1/> ;
 	.
 
+sh-dc:date-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:date ;
+	.
+
+sh-dc:format-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:format ;
+	.
+
+sh-dc:identifier-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:identifier ;
+	.
+
+sh-dc:language-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:language ;
+	.
+
+sh-dc:publisher-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:publisher ;
+	.
+
 sh-dc:subject-shape
 	a sh:NodeShape ;
 	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
 	sh:targetSubjectsOf dc:subject ;
+	.
+
+sh-dc:title-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:title ;
 	.
 
