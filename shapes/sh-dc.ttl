@@ -43,6 +43,12 @@ sh-dc:publisher-shape
 	sh:targetSubjectsOf dc:publisher ;
 	.
 
+sh-dc:relation-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:relation ;
+	.
+
 sh-dc:subject-shape
 	a sh:NodeShape ;
 	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;

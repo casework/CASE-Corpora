@@ -40,9 +40,7 @@ sh-dcat-us:Catalog-shape
 		[
 			a sh:PropertyShape ;
 			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#dataset> ;
-			sh:class dcat:Dataset ;
 			sh:minCount "1"^^xsd:integer ;
-			sh:nodeKind sh:BlankNodeOrIRI ;
 			sh:path dcat:dataset ;
 		]
 		;

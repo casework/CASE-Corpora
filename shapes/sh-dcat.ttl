@@ -58,6 +58,19 @@ sh-dcat:contactPoint-range-shape
 	sh:targetObjectsOf dcat:contactPoint ;
 	.
 
+sh-dcat:dataset-domain-shape
+	a sh:NodeShape ;
+	sh:class dcat:Catalog ;
+	sh:targetSubjectsOf dcat:dataset ;
+	.
+
+sh-dcat:dataset-range-shape
+	a sh:NodeShape ;
+	sh:class dcat:Dataset ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf dcat:dataset ;
+	.
+
 sh-dcat:downloadURL-domain-shape
 	a sh:NodeShape ;
 	sh:class dcat:Distribution ;

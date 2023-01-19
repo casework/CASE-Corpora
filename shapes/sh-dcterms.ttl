@@ -54,6 +54,14 @@ sh-dcterms:format-suggested-range-shape
 	sh:targetObjectsOf dcterms:format ;
 	.
 
+sh-dcterms:hasPart-suggested-range-shape
+	a sh:NodeShape ;
+	rdfs:comment "This shape is drawn from the intended usage in the property's dcterms:description.  The property has no implemented rdfs:range restrictions."@en ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:severity sh:Warning ;
+	sh:targetObjectsOf dcterms:hasPart ;
+	.
+
 sh-dcterms:identifier-range-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:Literal ;
@@ -92,6 +100,12 @@ sh-dcterms:publisher-suggested-range-shape
 	sh:deactivated "true"^^xsd:boolean ;
 	sh:severity sh:Info ;
 	sh:targetObjectsOf dcterms:publisher ;
+	.
+
+sh-dcterms:relation-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dcterms:relation ;
 	.
 
 sh-dcterms:subject-shape
