@@ -27,17 +27,20 @@
 		;
 	.
 
+case-corpora:Catalog
+	a owl:Class ;
+	rdfs:subClassOf
+		case-corpora:Dataset ,
+		dcat:Catalog
+		;
+	.
+
 case-corpora:Dataset
 	a owl:Class ;
 	rdfs:subClassOf
 		dcat:Dataset ,
-		uco-core:ContextualCompilation ,
-		[
-			a owl:Class ;
-			owl:inverseOf dcat:Catalog ;
-		]
+		uco-core:ContextualCompilation
 		;
-	owl:disjointWith dcat:Catalog ;
 	skos:editorialNote "Note that by subclassing a uco-core:ContextualCompilation, a case-corpora:Dataset must have at least one distribution associated, due to a uco-core:ContextualCompilation requiring at least one member."@en ;
 	.
 

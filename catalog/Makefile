@@ -43,7 +43,8 @@ validate-catalog.ttl: \
   $(top_srcdir)/shapes/debug.ttl \
   $(top_srcdir)/shapes/shapes.ttl \
   .catalog-example-dataset.ttl \
-  catalog.ttl
+  catalog.ttl \
+  shared.ttl
 	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
@@ -56,6 +57,7 @@ validate-catalog.ttl: \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output _$@ \
 	    catalog.ttl \
+	    shared.ttl \
 	    .catalog-example-dataset.ttl \
 	    || (cat _$@ ; exit 1)
 	mv _$@ $@

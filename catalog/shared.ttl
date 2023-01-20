@@ -48,3 +48,9 @@ kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5
 	skos:prefLabel "text/plain" ;
 	.
 
+<https://www.iana.org/assignments/media-types/text/turtle>
+	a case-corpora:IANAMediaType ;
+	rdfs:label "turtle" ;
+	skos:prefLabel "text/turtle" ;
+	.
+
