@@ -23,17 +23,8 @@ all: \
 
 .PHONY: \
   all-dependencies \
-  all-shapes
-
-all-dependencies: \
-  .venv.done.log
-	$(MAKE) \
-	  --directory dependencies
-
-all-shapes: \
-  all-dependencies
-	$(MAKE) \
-	  --directory shapes
+  all-shapes \
+  all-taxonomy
 
 .git_submodule_init.done.log: \
   .gitmodules
@@ -114,14 +105,36 @@ all-shapes: \
 	  .venv-pre-commit/var
 	touch $@
 
+all-dependencies: \
+  .venv.done.log
+	$(MAKE) \
+	  --directory dependencies
+
+all-shapes: \
+  all-dependencies
+	$(MAKE) \
+	  --directory shapes
+
+all-taxonomy: \
+  all-dependencies
+	$(MAKE) \
+	  --directory taxonomy/devices
+
 check: \
   .venv-pre-commit/var/.pre-commit-built.log \
-  all-shapes
+  all-shapes \
+  all-taxonomy
+	$(MAKE) \
+	  --directory dependencies \
+	  check
 	$(MAKE) \
 	  --directory ontology \
 	  check
 	$(MAKE) \
 	  --directory shapes \
+	  check
+	$(MAKE) \
+	  --directory taxonomy/devices \
 	  check
 	$(MAKE) \
 	  --directory catalog \
@@ -133,6 +146,15 @@ check: \
 clean:
 	@$(MAKE) \
 	  --directory reports \
+	  clean
+	@$(MAKE) \
+	  --directory taxonomy/devices \
+	  clean
+	@$(MAKE) \
+	  --directory shapes \
+	  clean
+	@$(MAKE) \
+	  --directory ontology \
 	  clean
 	@$(MAKE) \
 	  --directory catalog \

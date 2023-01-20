@@ -44,6 +44,11 @@ check-%.ttl: \
 	diff $^	\
 	  || (echo "ERROR:Makefile:The local $< does not match the normalized version. If the above reported changes look fine, run 'cp .check-$< $<' while in the sub-folder ontology/ to get a file ready to commit to Git." >&2 ; exit 1)
 
+clean:
+	@rm -f \
+	  $(check_ontology_files) \
+	  uco_owl_review.ttl
+
 uco_owl_review.ttl: \
   $(top_srcdir)/dependencies/dependencies.ttl \
   $(top_srcdir)/.venv.done.log \

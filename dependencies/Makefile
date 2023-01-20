@@ -64,8 +64,14 @@ CASE-unstable.ttl: \
 	    > _$@
 	mv _$@ $@
 
+# Construction of dependencies.ttl includes UCO OWL review.
+check: \
+  dependencies.ttl
+
 clean:
 	@rm -f \
+	  CASE-develop.ttl \
+	  CASE-unstable.ttl \
 	  dependencies.ttl
 
 # http://purl.org/dc/elements/1.1
@@ -139,6 +145,10 @@ dependencies.ttl: \
 	    --output-format turtle \
 	    $(dependent_ontology_files) \
 	    > __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && pyshacl \
+	    --shacl CASE/dependencies/UCO/ontology/owl/owl.ttl \
+	    __$@
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \

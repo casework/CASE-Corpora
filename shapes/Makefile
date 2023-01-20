@@ -37,6 +37,7 @@ all: \
 
 check: \
   $(check_shape_targets) \
+  uco_owl_review.ttl \
   validate_inheritance.ttl
 
 check-%.ttl: \
@@ -44,6 +45,13 @@ check-%.ttl: \
   .check-%.ttl
 	diff $^	\
 	  || (echo "ERROR:Makefile:The local $< does not match the normalized version. If the above reported changes look fine, run 'cp .check-$< $<' while in the sub-folder shapes/ to get a file ready to commit to Git." >&2 ; exit 1)
+
+clean:
+	@rm -f \
+	  $(check_shape_files) \
+	  shapes.ttl \
+	  uco_owl_review.ttl \
+	  validate_inheritance.ttl
 
 shapes.ttl: \
   $(top_srcdir)/.venv.done.log \
@@ -62,10 +70,27 @@ shapes.ttl: \
 	rm __$@
 	mv _$@ $@
 
-validate_inheritance.ttl: \
-  $(top_srcdir)/.venv.done.log \
+uco_owl_review.ttl: \
   $(top_srcdir)/dependencies/dependencies.ttl \
   $(top_srcdir)/ontology/case-corpora.ttl \
+  $(top_srcdir)/.venv.done.log \
+  shapes.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    --format turtle \
+	    --metashacl \
+	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph shapes.ttl \
+	    $(top_srcdir)/dependencies/CASE/dependencies/UCO/tests/thing.ttl \
+	    > _$@
+	mv _$@ $@
+
+validate_inheritance.ttl: \
+  $(top_srcdir)/dependencies/dependencies.ttl \
+  $(top_srcdir)/ontology/case-corpora.ttl \
+  $(top_srcdir)/.venv.done.log \
   shapes.ttl
 	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
