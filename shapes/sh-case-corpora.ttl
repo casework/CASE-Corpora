@@ -206,14 +206,11 @@ sh-case-corpora:CaseCorporaCatalog-Dataset-hasDatasetDirectory-shape
 
 sh-case-corpora:hasDatasetDirectory-range-pattern-shape
 	a sh:NodeShape ;
-	sh:property [
-		sh:datatype xsd:string ;
-		sh:description "The pattern for dataset directory names is lowercase alphanumeric ASCII characters, and hyphens.  The name should not start or end with a hyphen."@en ;
-		sh:nodeKind sh:Literal ;
-		sh:path case-corpora:hasDatasetDirectory ;
-		sh:pattern "^[^-][0-9a-z-]+[^-]$" ;
-	] ;
-	sh:targetSubjectsOf case-corpora:hasDatasetDirectory ;
+	sh:datatype xsd:string ;
+	sh:description "The pattern for dataset directory names is lowercase alphanumeric ASCII characters, and hyphens.  The name should not start or end with a hyphen."@en ;
+	sh:nodeKind sh:Literal ;
+	sh:pattern "^[^-][0-9a-z-]+[^-]$" ;
+	sh:targetObjectsOf case-corpora:hasDatasetDirectory ;
 	.
 
 <http://purl.org/dc/aboutdcmi#DCMI>
