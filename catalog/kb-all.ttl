@@ -1,8 +1,6 @@
-# imports: http://example.org/ontology/case/corpora
-# imports: http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf
-# imports: http://www.w3.org/ns/dcat
+# imports: http://example.org/shapes/case-corpora
 
-@prefix case-corpora: <http://example.org/ontology/case/corpora/> .
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
@@ -22,11 +20,7 @@
 
 <http://example.org/kb>
 	a owl:Ontology ;
-	owl:imports
-		<http://example.org/ontology/case/corpora> ,
-		<http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf> ,
-		<http://www.w3.org/ns/dcat>
-		;
+	owl:imports <http://example.org/shapes/case-corpora> ;
 	.
 
 kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
