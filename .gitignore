@@ -1,8 +1,10 @@
 *.done.log
 *.swp
 .DS_Store
+.check-*
 .venv-pre-commit
 __pycache__
 dependencies.ttl
 kb.ttl
+uco_owl_review.ttl
 venv

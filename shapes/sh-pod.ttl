@@ -1,0 +1,20 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-pod: <http://example.org/shapes/pod/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/shapes/pod>
+	a owl:Ontology ;
+	rdfs:comment "No OWL ontology or RDFS Schema file was found for input into these shapes."@en ;
+	.
+
+sh-pod:accessLevel-range-shape
+	a sh:NodeShape ;
+	rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#accessLevel> ;
+	sh:nodeKind sh:Literal ;
+	sh:targetObjectsOf pod:accessLevel ;
+	.
+

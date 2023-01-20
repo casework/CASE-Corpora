@@ -1,3 +1,4 @@
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -17,23 +18,39 @@ kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5
 	.
 
 <https://www.iana.org/assignments/media-types/application/pdf>
+	a case-corpora:IANAMediaType ;
 	rdfs:label "pdf" ;
 	skos:prefLabel "application/pdf" ;
 	.
 
+<https://www.iana.org/assignments/media-types/application/octet-stream>
+	a case-corpora:IANAMediaType ;
+	rdfs:label "octet-stream" ;
+	skos:prefLabel "application/octet-stream" ;
+	.
+
 <https://www.iana.org/assignments/media-types/application/vnd.ms-excel>
+	a case-corpora:IANAMediaType ;
 	rdfs:label "vnd.ms-excel" ;
 	skos:prefLabel "application/vnd.ms-excel" ;
 	.
 
 <https://www.iana.org/assignments/media-types/application/zip>
+	a case-corpora:IANAMediaType ;
 	rdfs:label "zip" ;
 	skos:prefLabel "application/zip" ;
 	.
 
 <https://www.iana.org/assignments/media-types/text/plain>
+	a case-corpora:IANAMediaType ;
 	rdfs:label "plain" ;
 	rdfs:comment "This URL is known to not resolve." ;
 	skos:prefLabel "text/plain" ;
+	.
+
+<https://www.iana.org/assignments/media-types/text/turtle>
+	a case-corpora:IANAMediaType ;
+	rdfs:label "turtle" ;
+	skos:prefLabel "text/turtle" ;
 	.
 

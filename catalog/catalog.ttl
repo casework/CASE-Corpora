@@ -1,8 +1,6 @@
-# imports: http://example.org/ontology/case/corpora
-# imports: http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf
-# imports: http://www.w3.org/ns/dcat
+# imports: http://example.org/shapes/case-corpora
 
-@prefix case-corpora: <http://example.org/ontology/case/corpora/> .
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -17,19 +15,15 @@
 
 <http://example.org/kb>
 	a owl:Ontology ;
-	owl:imports
-		<http://example.org/ontology/case/corpora> ,
-		<http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf> ,
-		<http://www.w3.org/ns/dcat>
-		;
+	owl:imports <http://example.org/shapes/case-corpora> ;
 	.
 
 kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
-	a dcat:Catalog ;
+	a case-corpora:Catalog ;
 	dcterms:conformsTo <https://project-open-data.cio.gov/v1.1/schema> ;
 	dcterms:description "CASE Corpora is a catalog of cyber-relevant training and reference data sets." ;
 	dcterms:identifier "http://example.org/kb/catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752" ;
-	dcterms:modified "2021-10-06"^^xsd:date ;
+	dcterms:modified "2023-01-20"^^xsd:date ;
 	dcterms:publisher kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e ;
 	dcterms:title "CASE Corpora" ;
 	skos:editorialNote "The dcterms:identifier property in this data element is NOT yet stable and may change in the future."@en ;
@@ -40,6 +34,13 @@ kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
 		;
 	dcat:landingPage <https://github.com/casework/CASE-Corpora/> ;
 	pod:accessLevel "public" ;
+	case-corpora:hasDistribution kb:distribution-adc5fd35-e9fa-4d1b-8598-f5ce3bba3e9c ;
+	.
+
+kb:distribution-adc5fd35-e9fa-4d1b-8598-f5ce3bba3e9c
+	a case-corpora:Distribution ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ;
+	case-corpora:hasDownloadURL <https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl> ;
 	.
 
 kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e
@@ -48,7 +49,7 @@ kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e
 	.
 
 <https://github.com/casework/CASE-Corpora/>
-	a foaf:Document ;
+	a case-corpora:WebPage ;
 	.
 
 <https://project-open-data.cio.gov/v1.1/schema>

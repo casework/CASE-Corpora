@@ -15,19 +15,16 @@ SHELL := /bin/bash
 
 all: \
   .venv-pre-commit/var/.pre-commit-built.log \
-  all-dependencies
+  all-shapes
 	$(MAKE) \
 	  --directory catalog
 	$(MAKE) \
 	  --directory reports
 
 .PHONY: \
-  all-dependencies
-
-all-dependencies: \
-  .venv.done.log
-	$(MAKE) \
-	  --directory dependencies
+  all-dependencies \
+  all-shapes \
+  all-taxonomy
 
 .git_submodule_init.done.log: \
   .gitmodules
@@ -106,11 +103,36 @@ all-dependencies: \
 	  .venv-pre-commit/var
 	touch $@
 
-check: \
-  .venv-pre-commit/var/.pre-commit-built.log \
+all-dependencies: \
+  .venv.done.log
+	$(MAKE) \
+	  --directory dependencies
+
+all-shapes: \
   all-dependencies
 	$(MAKE) \
+	  --directory shapes
+
+all-taxonomy: \
+  all-dependencies
+	$(MAKE) \
+	  --directory taxonomy/devices
+
+check: \
+  .venv-pre-commit/var/.pre-commit-built.log \
+  all-shapes \
+  all-taxonomy
+	$(MAKE) \
+	  --directory dependencies \
+	  check
+	$(MAKE) \
+	  --directory ontology \
+	  check
+	$(MAKE) \
 	  --directory shapes \
+	  check
+	$(MAKE) \
+	  --directory taxonomy/devices \
 	  check
 	$(MAKE) \
 	  --directory catalog \
@@ -122,6 +144,15 @@ check: \
 clean:
 	@$(MAKE) \
 	  --directory reports \
+	  clean
+	@$(MAKE) \
+	  --directory taxonomy/devices \
+	  clean
+	@$(MAKE) \
+	  --directory shapes \
+	  clean
+	@$(MAKE) \
+	  --directory ontology \
 	  clean
 	@$(MAKE) \
 	  --directory catalog \

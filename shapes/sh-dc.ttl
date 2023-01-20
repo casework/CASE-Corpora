@@ -1,0 +1,69 @@
+# imports: http://purl.org/dc/elements/1.1/
+
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-dc: <http://example.org/shapes/dc/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/shapes/dc>
+	a owl:Ontology ;
+	owl:imports <http://purl.org/dc/elements/1.1/> ;
+	.
+
+sh-dc:date-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:date ;
+	.
+
+sh-dc:description-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:description ;
+	.
+
+sh-dc:format-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:format ;
+	.
+
+sh-dc:identifier-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:identifier ;
+	.
+
+sh-dc:language-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:language ;
+	.
+
+sh-dc:publisher-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:publisher ;
+	.
+
+sh-dc:relation-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:relation ;
+	.
+
+sh-dc:subject-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:subject ;
+	.
+
+sh-dc:title-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:title ;
+	.
+

@@ -1,0 +1,43 @@
+# imports: http://www.w3.org/2006/vcard/ns
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-vcard: <http://example.org/shapes/vcard/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/shapes/vcard>
+	a owl:Ontology ;
+	owl:imports <http://www.w3.org/2006/vcard/ns> ;
+	.
+
+sh-vcard:Kind-shape
+	a sh:NodeShape ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:path vcard:fn ;
+		sh:qualifiedMinCount "1"^^xsd:integer ;
+		sh:qualifiedValueShape [
+			a sh:NodeShape ;
+			sh:datatype xsd:string ;
+		] ;
+	] ;
+	sh:targetClass vcard:Kind ;
+	.
+
+sh-vcard:fn-range-shape
+	a sh:NodeShape ;
+	sh:datatype xsd:string ;
+	sh:nodeKind sh:Literal ;
+	sh:targetObjectsOf vcard:fn ;
+	.
+
+sh-vcard:hasEmail-range-shape
+	a sh:NodeShape ;
+	sh:class vcard:Email ;
+	sh:nodeKind sh:IRI ;
+	sh:targetObjectsOf vcard:hasEmail ;
+	.
+

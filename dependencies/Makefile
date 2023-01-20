@@ -26,10 +26,13 @@ case_unstable_ttls := \
   $(wildcard CASE-unstable/dependencies/UCO/ontology/uco/*/*.ttl)
 
 dependent_ontology_files := \
+  dc.ttl \
+  dcam.ttl \
   dcat.ttl \
   dcterms.ttl \
-  dublin_core_elements.ttl \
   dublin_core_type.ttl \
+  foaf.ttl \
+  skos.ttl \
   vcard.ttl
 
 rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar
@@ -61,9 +64,57 @@ CASE-unstable.ttl: \
 	    > _$@
 	mv _$@ $@
 
+# Construction of dependencies.ttl includes UCO OWL review.
+check: \
+  dependencies.ttl
+
 clean:
 	@rm -f \
+	  CASE-develop.ttl \
+	  CASE-unstable.ttl \
 	  dependencies.ttl
+
+# http://purl.org/dc/elements/1.1
+#   via https://www.dublincore.org/schemas/rdfs/
+dc.ttl:
+	wget \
+	  --output-document=__$@ \
+	  https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_elements.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+dcam.ttl:
+	wget \
+	  --header 'Accept: text/turtle' \
+	  --output-document=__$@ \
+	  http://purl.org/dc/dcam/
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+dcat.ttl:
+	wget \
+	  --output-document=__$@ \
+	  https://www.w3.org/ns/dcat.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
 
 # https://resources.data.gov/resources/dcat-us/#context
 dcat-us.jsonld:
@@ -72,17 +123,18 @@ dcat-us.jsonld:
 	  https://project-open-data.cio.gov/v1.1/schema/catalog.jsonld
 	mv _$@ $@
 
-dcat.ttl:
-	wget \
-	  --output-document=_$@ \
-	  https://www.w3.org/ns/dcat.ttl
-	mv _$@ $@
-
 dcterms.ttl:
 	wget \
 	  --header 'Accept: text/turtle' \
-	  --output-document=_$@ \
+	  --output-document=__$@ \
 	  http://purl.org/dc/terms/
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
 	mv _$@ $@
 
 dependencies.ttl: \
@@ -93,6 +145,10 @@ dependencies.ttl: \
 	    --output-format turtle \
 	    $(dependent_ontology_files) \
 	    > __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && pyshacl \
+	    --shacl CASE/dependencies/UCO/ontology/owl/owl.ttl \
+	    __$@
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \
@@ -102,24 +158,56 @@ dependencies.ttl: \
 	rm __$@
 	mv _$@ $@
 
-# http://purl.org/dc/elements/1.1
-#   via https://www.dublincore.org/schemas/rdfs/
-dublin_core_elements.ttl:
-	wget \
-	  --output-document=_$@ \
-	  https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_elements.ttl
-	mv _$@ $@
-
 # http://purl.org/dc/dcmitype/
 #   via https://www.dublincore.org/schemas/rdfs/
 dublin_core_type.ttl:
 	wget \
-	  --output-document=_$@ \
+	  --output-document=__$@ \
 	  https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_type.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+foaf.ttl:
+	wget \
+	  --output-document=__$@ \
+	  https://web.archive.org/web/20220614105937if_/http://xmlns.com/foaf/spec/20140114.rdf
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format rdf-xml \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+skos.ttl:
+	wget \
+	  --output-document=__$@ \
+	  http://www.w3.org/2004/02/skos/core
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format rdf-xml \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
 	mv _$@ $@
 
 vcard.ttl:
 	wget \
-	  --output-document=_$@ \
+	  --output-document=__$@ \
 	  https://www.w3.org/2006/vcard/ns
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
 	mv _$@ $@

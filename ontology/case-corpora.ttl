@@ -1,0 +1,119 @@
+# imports: http://www.w3.org/2006/vcard/ns
+# imports: http://www.w3.org/ns/dcat
+# imports: http://xmlns.com/foaf/0.1/
+# imports: https://ontology.caseontology.org/case/case/1.1.0
+
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology/case-corpora>
+	a owl:Ontology ;
+	rdfs:comment "This ontology serves to join the versions of CASE and DCAT used to populate CASE-Corpora, bringing analogous properties and classes together."@en ;
+	owl:imports
+		<http://www.w3.org/2006/vcard/ns> ,
+		<http://www.w3.org/ns/dcat> ,
+		<http://xmlns.com/foaf/0.1/> ,
+		<https://ontology.caseontology.org/case/case/1.1.0>
+		;
+	.
+
+case-corpora:Catalog
+	a owl:Class ;
+	rdfs:subClassOf
+		case-corpora:Dataset ,
+		dcat:Catalog
+		;
+	.
+
+case-corpora:Dataset
+	a owl:Class ;
+	rdfs:subClassOf
+		dcat:Dataset ,
+		uco-core:ContextualCompilation
+		;
+	skos:editorialNote "Note that by subclassing a uco-core:ContextualCompilation, a case-corpora:Dataset must have at least one distribution associated, due to a uco-core:ContextualCompilation requiring at least one member."@en ;
+	.
+
+case-corpora:Distribution
+	a owl:Class ;
+	rdfs:subClassOf
+		dcat:Distribution ,
+		uco-observable:ObservableObject
+		;
+	.
+
+case-corpora:IANAMediaType
+	a owl:Class ;
+	rdfs:subClassOf dcterms:MediaType ;
+	rdfs:comment "This class is provided to satisfy the DCAT requirement that dcat:mediaType's range be 'The media type of the distribution as defined by IANA'.  A dcterms:MediaType is not necessarily a media type defined by IANA; dcterms:format suggests IANA Media Types are one potential media type set."@en ;
+	rdfs:seeAlso
+		dcterms:format ,
+		<https://github.com/ucoProject/UCO/issues/363>
+		;
+	.
+
+case-corpora:WebPage
+	a owl:Class ;
+	rdfs:subClassOf
+		foaf:Document ,
+		uco-observable:WebPage
+		;
+	rdfs:comment "This class is provided to unify DCAT's range requirement of dcat:landingPage with an appropriate UCO class."@en ;
+	.
+
+case-corpora:contact-00000000-0000-0000-0000-000000000000
+	a vcard:Contact ;
+	rdfs:comment "This named individual is provided as a stand-in to make explict that no point of contact is available, linked, or otherwise represented for a dataset."@en ;
+	vcard:fn "NOT ENCODED" ;
+	vcard:hasEmail <mailto:null@example.org> ;
+	.
+
+case-corpora:hasDatasetDirectory
+	a owl:DatatypeProperty ;
+	rdfs:comment "This property provides an identifier for a dcat:Dataset that is unique within the scope of CASE-Corpora.  Its technical purpose is to keep directory names distinct across the datasets.  Its value is the basename of the directory directly under /catalog/datasets housing the graph source files for the dataset."@en ;
+	rdfs:domain dcat:Dataset ;
+	rdfs:range xsd:string ;
+	.
+
+case-corpora:hasDistribution
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf
+		dcat:distribution ,
+		uco-core:object
+		;
+	rdfs:domain case-corpora:Dataset ;
+	rdfs:range case-corpora:Distribution ;
+	.
+
+case-corpora:hasDownloadURL
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf dcat:downloadURL ;
+	rdfs:domain case-corpora:Distribution ;
+	rdfs:range uco-observable:URL ;
+	.
+
+<http://purl.org/dc/aboutdcmi#DCMI>
+	rdfs:comment "TODO - This is to work around a bug where pyshacl reviewed ontology content instead of data content.  Need to report a test case."@en ;
+	skos:prefLabel "" ;
+	.
+
+dcat:Dataset
+	rdfs:comment "Within CASE-Corpora, the property hasDatasetDirectory is a unique identifier for a Dataset."@en ;
+	owl:hasKey case-corpora:hasDatasetDirectory ;
+	.
+
+<mailto:null@example.org>
+	a vcard:Email ;
+	rdfs:comment "This individual is defined to satisfy a DCAT-US constraint."@en ;
+	.
+

@@ -1,0 +1,41 @@
+# imports: http://xmlns.com/foaf/0.1/
+
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-foaf: <http://example.org/shapes/foaf/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/shapes/foaf>
+	a owl:Ontology ;
+	owl:imports <http://xmlns.com/foaf/0.1/> ;
+	.
+
+sh-foaf:page-range-shape
+	a sh:NodeShape ;
+	sh:class foaf:Document ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf foaf:page ;
+	.
+
+sh-foaf:primaryTopic-domain-shape
+	a sh:NodeShape ;
+	sh:class foaf:Document ;
+	sh:targetSubjectsOf foaf:primaryTopic ;
+	.
+
+sh-foaf:primaryTopic-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf foaf:primaryTopic ;
+	.
+
+sh-foaf:topic-domain-shape
+	a sh:NodeShape ;
+	sh:class foaf:Document ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetSubjectsOf foaf:topic ;
+	.
+
