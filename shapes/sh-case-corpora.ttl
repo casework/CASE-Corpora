@@ -93,11 +93,17 @@ case-corpora:Distribution
 		sh-case-corpora:Distribution-URL-hasFacet-fullValue-shape ,
 		[
 			a sh:PropertyShape ;
+			rdfs:seeAlso <https://www.iana.org/assignments/media-types/application/octet-stream> ;
 			sh:description "CASE-Corpora requests any referenced Distribution include one or more media types.  If none are known, use mime:application/octet-stream."@en ;
 			sh:minCount "1"^^xsd:integer ;
-			sh:nodeKind sh:IRI ;
 			sh:path dcat:mediaType ;
 			sh:severity sh:Warning ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			sh:class case-corpora:IANAMediaType ;
+			sh:description "When used, dcat:mediaType is constrained to members of the IANA Media Types registry."@en ;
+			sh:path dcat:mediaType ;
 		]
 		;
 	sh:targetClass case-corpora:Distribution ;
@@ -143,6 +149,14 @@ sh-case-corpora:Distribution-URL-hasFacet-fullValue-shape
 	] ;
 	.
 
+sh-case-corpora:compressFormat-suggested-range-shape
+	a sh:NodeShape ;
+	sh:class case-corpora:IANAMediaType ;
+	sh:message "Per the scope note on dcat:compressFormat, 'The format SHOULD be expressed using a media type as defined by IANA media types registry https://www.iana.org/assignments/media-types/, if available.'"@en ;
+	sh:severity sh:Info ;
+	sh:targetObjectsOf dcat:compressFormat ;
+	.
+
 sh-case-corpora:hasDatasetDirectory-range-pattern-shape
 	a sh:NodeShape ;
 	sh:datatype xsd:string ;
@@ -150,5 +164,13 @@ sh-case-corpora:hasDatasetDirectory-range-pattern-shape
 	sh:nodeKind sh:Literal ;
 	sh:pattern "^[^-][0-9a-z-]+[^-]$" ;
 	sh:targetObjectsOf case-corpora:hasDatasetDirectory ;
+	.
+
+sh-case-corpora:packageFormat-suggested-range-shape
+	a sh:NodeShape ;
+	sh:class case-corpora:IANAMediaType ;
+	sh:message "Per the scope note on dcat:packageFormat, 'The format SHOULD be expressed using a media type as defined by IANA media types registry https://www.iana.org/assignments/media-types/, if available.'"@en ;
+	sh:severity sh:Info ;
+	sh:targetObjectsOf dcat:packageFormat ;
 	.
 

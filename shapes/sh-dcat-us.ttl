@@ -208,7 +208,6 @@ sh-dcat-us:Distribution-shape
 			rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#distribution-mediaType> ;
 			skos:editorialNote "There is a type error in the DCAT-US specification's documentation.  dcat:mediaType is an owl:ObjectProperty.  DCAT-US declares and demonstrates a string range for this property, without aliasing (or any reference to mediaType) from the DCAT-US JSON-LD context to support conversion of the string value into an IRI reference."@en ;
 			sh:maxCount "1"^^xsd:integer ;
-			sh:nodeKind sh:IRI ;
 			sh:path dcat:mediaType ;
 		] ,
 		[
