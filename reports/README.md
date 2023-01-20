@@ -5,10 +5,11 @@ WARNING - The README.md file is generated from README.md.in and various data sou
 
 ## MIME Types
 
-|    | ?lMimeType      |
-|----|-----------------|
-|  0 | application/zip |
-|  1 | text/plain      |
+|    | ?lMimeType               |
+|----|--------------------------|
+|  0 | application/octet-stream |
+|  1 | application/zip          |
+|  2 | text/plain               |
 
 
 ## Devices
