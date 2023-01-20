@@ -189,7 +189,7 @@ foaf.ttl:
 skos.ttl:
 	wget \
 	  --output-document=__$@ \
-	  http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf
+	  http://www.w3.org/2004/02/skos/core
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format rdf-xml \
