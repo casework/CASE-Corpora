@@ -6,4 +6,5 @@
 __pycache__
 dependencies.ttl
 kb.ttl
+uco_owl_review.ttl
 venv

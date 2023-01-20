@@ -1,9 +1,8 @@
+# imports: http://example.org/ontology/case-corpora
 # imports: http://example.org/shapes/dcat-us
-# imports: https://ontology.caseontology.org/case/case/1.1.0
 
-@prefix case-corpora: <http://example.org/ontology/case/corpora/> .
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix mime: <https://www.iana.org/assignments/media-types/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
@@ -19,28 +18,15 @@
 
 <http://example.org/shapes/case-corpora>
 	a owl:Ontology ;
-	rdfs:comment "This ontology serves to join the versions of CASE and DCAT used to populate CASE-Corpora, bringing analogous properties and classes together and defining SHACL shapes to maintain data quality-control rules."@en ;
+	rdfs:comment "This ontology defines SHACL shapes to maintain data quality-control rules."@en ;
 	owl:imports
-		<http://example.org/shapes/dcat-us> ,
-		<https://ontology.caseontology.org/case/case/1.1.0>
+		<http://example.org/ontology/case-corpora> ,
+		<http://example.org/shapes/dcat-us>
 		;
 	.
 
 case-corpora:Dataset
-	a
-		owl:Class ,
-		sh:NodeShape
-		;
-	rdfs:subClassOf
-		dcat:Dataset ,
-		uco-core:ContextualCompilation ,
-		[
-			a owl:Class ;
-			owl:inverseOf dcat:Catalog ;
-		]
-		;
-	owl:disjointWith dcat:Catalog ;
-	skos:editorialNote "Note that by subclassing a uco-core:ContextualCompilation, a case-corpora:Dataset must have at least one distribution associated, due to a uco-core:ContextualCompilation requiring at least one member."@en ;
+	a sh:NodeShape ;
 	sh:property
 		[
 			a sh:PropertyShape ;
@@ -102,16 +88,9 @@ case-corpora:Dataset
 	.
 
 case-corpora:Distribution
-	a
-		owl:Class ,
-		sh:NodeShape
-		;
-	rdfs:subClassOf
-		dcat:Distribution ,
-		uco-observable:ObservableObject
-		;
+	a sh:NodeShape ;
 	sh:property
-		case-corpora:Distribution-URL-hasFacet-fullValue-shape ,
+		sh-case-corpora:Distribution-URL-hasFacet-fullValue-shape ,
 		[
 			a sh:PropertyShape ;
 			sh:description "CASE-Corpora requests any referenced Distribution include one or more media types.  If none are known, use mime:application/octet-stream."@en ;
@@ -124,7 +103,29 @@ case-corpora:Distribution
 	sh:targetClass case-corpora:Distribution ;
 	.
 
-case-corpora:Distribution-URL-hasFacet-fullValue-shape
+sh-case-corpora:CaseCorporaCatalog-Dataset-hasDatasetDirectory-shape
+	a sh:NodeShape ;
+	sh:sparql [
+		a sh:SPARQLConstraint ;
+		sh:message "Each dcat:Dataset (except the dcat:Catalog) in CASE-Corpora must have case-corpora:hasDatasetDirectory populated."@en ;
+		sh:select """
+			PREFIX case-corpora: <http://example.org/ontology/case-corpora/>
+			PREFIX dcat: <http://www.w3.org/ns/dcat#>
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this a dcat:Catalog .
+				}
+				FILTER NOT EXISTS {
+					$this case-corpora:hasDatasetDirectory ?value .
+				}
+			}
+		""" ;
+	] ;
+	sh:targetClass dcat:Dataset ;
+	.
+
+sh-case-corpora:Distribution-URL-hasFacet-fullValue-shape
 	a sh:PropertyShape ;
 	sh:class uco-observable:URL ;
 	sh:description "CASE-Corpora requires any referenced Distribution have a downloadable URL, stored in the fullValue of a URLFacet."@en ;
@@ -142,68 +143,6 @@ case-corpora:Distribution-URL-hasFacet-fullValue-shape
 	] ;
 	.
 
-case-corpora:WebPage
-	a owl:Class ;
-	rdfs:subClassOf
-		foaf:Document ,
-		uco-observable:WebPage
-		;
-	rdfs:comment "This class is provided to unify DCAT's range requirement of dcat:landingPage with an appropriate UCO class."@en ;
-	.
-
-case-corpora:contact-00000000-0000-0000-0000-000000000000
-	a vcard:Contact ;
-	rdfs:comment "This named individual is provided as a stand-in to make explict that no point of contact is available, linked, or otherwise represented for a dataset."@en ;
-	vcard:fn "NOT ENCODED" ;
-	vcard:hasEmail <mailto:null@example.org> ;
-	.
-
-case-corpora:hasDatasetDirectory
-	a owl:DatatypeProperty ;
-	rdfs:comment "This property provides an identifier for a dcat:Dataset that is unique within the scope of CASE-Corpora.  Its technical purpose is to keep directory names distinct across the datasets.  Its value is the basename of the directory directly under /catalog/datasets housing the graph source files for the dataset."@en ;
-	rdfs:domain dcat:Dataset ;
-	rdfs:range xsd:string ;
-	.
-
-case-corpora:hasDistribution
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf
-		dcat:distribution ,
-		uco-core:object
-		;
-	rdfs:domain case-corpora:Dataset ;
-	rdfs:range case-corpora:Distribution ;
-	.
-
-case-corpora:hasDownloadURL
-	a owl:ObjectProperty ;
-	rdfs:subPropertyOf dcat:downloadURL ;
-	rdfs:domain case-corpora:Distribution ;
-	rdfs:range uco-observable:URL ;
-	.
-
-sh-case-corpora:CaseCorporaCatalog-Dataset-hasDatasetDirectory-shape
-	a sh:NodeShape ;
-	sh:sparql [
-		a sh:SPARQLConstraint ;
-		sh:message "Each dcat:Dataset (except the dcat:Catalog) in CASE-Corpora must have case-corpora:hasDatasetDirectory populated."@en ;
-		sh:select """
-			PREFIX case-corpora: <http://example.org/ontology/case/corpora/>
-			PREFIX dcat: <http://www.w3.org/ns/dcat#>
-			SELECT $this
-			WHERE {
-				FILTER NOT EXISTS {
-					$this a dcat:Catalog .
-				}
-				FILTER NOT EXISTS {
-					$this case-corpora:hasDatasetDirectory ?value .
-				}
-			}
-		""" ;
-	] ;
-	sh:targetClass dcat:Dataset ;
-	.
-
 sh-case-corpora:hasDatasetDirectory-range-pattern-shape
 	a sh:NodeShape ;
 	sh:datatype xsd:string ;
@@ -211,20 +150,5 @@ sh-case-corpora:hasDatasetDirectory-range-pattern-shape
 	sh:nodeKind sh:Literal ;
 	sh:pattern "^[^-][0-9a-z-]+[^-]$" ;
 	sh:targetObjectsOf case-corpora:hasDatasetDirectory ;
-	.
-
-<http://purl.org/dc/aboutdcmi#DCMI>
-	rdfs:comment "TODO - This is to work around a bug where pyshacl reviewed ontology content instead of data content.  Need to report a test case."@en ;
-	skos:prefLabel "" ;
-	.
-
-dcat:Dataset
-	rdfs:comment "Within CASE-Corpora, the property hasDatasetDirectory is a unique identifier for a Dataset."@en ;
-	owl:hasKey case-corpora:hasDatasetDirectory ;
-	.
-
-<mailto:null@example.org>
-	a vcard:Email ;
-	rdfs:comment "This individual is defined to satisfy a DCAT-US constraint."@en ;
 	.
 

@@ -1,0 +1,60 @@
+#!/usr/bin/make -f
+
+# This software was developed at the National Institute of Standards
+# and Technology by employees of the Federal Government in the course
+# of their official duties. Pursuant to title 17 Section 105 of the
+# United States Code this software is not subject to copyright
+# protection and is in the public domain. NIST assumes no
+# responsibility whatsoever for its use by other parties, and makes
+# no guarantees, expressed or implied, about its quality,
+# reliability, or any other characteristic.
+#
+# We would appreciate acknowledgement if the software is used.
+
+SHELL := /bin/bash
+
+top_srcdir := $(shell cd .. ; pwd)
+
+ontology_files := case-corpora.ttl
+check_ontology_files := $(foreach ontology_file,$(ontology_files),.check-$(ontology_file))
+check_ontology_targets := $(foreach ontology_file,$(ontology_files),check-$(ontology_file))
+
+all:
+
+.PRECIOUS: \
+  .check-%.ttl
+
+.check-%.ttl: \
+  %.ttl
+	java -jar $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar \
+	  --inline-blank-nodes \
+	  --source $< \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	mv _$@ $@
+
+check: \
+  $(check_ontology_targets) \
+  uco_owl_review.ttl
+
+check-%.ttl: \
+  %.ttl \
+  .check-%.ttl
+	diff $^	\
+	  || (echo "ERROR:Makefile:The local $< does not match the normalized version. If the above reported changes look fine, run 'cp .check-$< $<' while in the sub-folder ontology/ to get a file ready to commit to Git." >&2 ; exit 1)
+
+uco_owl_review.ttl: \
+  $(top_srcdir)/dependencies/dependencies.ttl \
+  $(top_srcdir)/.venv.done.log \
+  case-corpora.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    --format turtle \
+	    --metashacl \
+	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
+	    --ontology-graph case-corpora.ttl \
+	    $(top_srcdir)/dependencies/CASE/dependencies/UCO/tests/thing.ttl \
+	    > _$@
+	mv _$@ $@

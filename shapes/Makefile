@@ -64,11 +64,15 @@ shapes.ttl: \
 
 validate_inheritance.ttl: \
   $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/dependencies/dependencies.ttl \
+  $(top_srcdir)/ontology/case-corpora.ttl \
   shapes.ttl
 	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_shacl_inheritance_reviewer \
 	    --debug \
 	    _$@ \
+	    $(top_srcdir)/dependencies/dependencies.ttl \
+	    $(top_srcdir)/ontology/case-corpora.ttl \
 	    shapes.ttl
 	mv _$@ $@

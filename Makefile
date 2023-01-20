@@ -118,6 +118,9 @@ check: \
   .venv-pre-commit/var/.pre-commit-built.log \
   all-shapes
 	$(MAKE) \
+	  --directory ontology \
+	  check
+	$(MAKE) \
 	  --directory shapes \
 	  check
 	$(MAKE) \
