@@ -4,7 +4,6 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -24,11 +23,12 @@
 	.
 
 kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
-	a dcat:Catalog ;
+	a case-corpora:Catalog ;
+	case-corpora:hasDistribution kb:distribution-adc5fd35-e9fa-4d1b-8598-f5ce3bba3e9c ;
 	dcterms:conformsTo <https://project-open-data.cio.gov/v1.1/schema> ;
 	dcterms:description "CASE Corpora is a catalog of cyber-relevant training and reference data sets." ;
 	dcterms:identifier "http://example.org/kb/catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752" ;
-	dcterms:modified "2021-10-06"^^xsd:date ;
+	dcterms:modified "2023-01-20"^^xsd:date ;
 	dcterms:publisher kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e ;
 	dcterms:title "CASE Corpora" ;
 	skos:editorialNote "The dcterms:identifier property in this data element is NOT yet stable and may change in the future."@en ;
@@ -195,6 +195,12 @@ kb:distribution-94647caa-b9d8-4294-8867-7784ede43b8c
 	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
 	.
 
+kb:distribution-adc5fd35-e9fa-4d1b-8598-f5ce3bba3e9c
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ;
+	.
+
 kb:distribution-b0ceac60-76b6-4e99-9c7f-a75203ed6a7d
 	a case-corpora:Distribution ;
 	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.sha256> ;
@@ -304,7 +310,7 @@ drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 	.
 
 <https://github.com/casework/CASE-Corpora/>
-	a foaf:Document ;
+	a case-corpora:WebPage ;
 	.
 
 <https://github.com/dfrws/dfrws2017-challenge>
@@ -364,5 +370,11 @@ drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 	rdfs:label "plain" ;
 	rdfs:comment "This URL is known to not resolve." ;
 	skos:prefLabel "text/plain" ;
+	.
+
+<https://www.iana.org/assignments/media-types/text/turtle>
+	a case-corpora:IANAMediaType ;
+	rdfs:label "turtle" ;
+	skos:prefLabel "text/turtle" ;
 	.
 

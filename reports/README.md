@@ -10,6 +10,7 @@ WARNING - The README.md file is generated from README.md.in and various data sou
 |  0 | application/octet-stream |
 |  1 | application/zip          |
 |  2 | text/plain               |
+|  3 | text/turtle              |
 
 
 ## Devices
