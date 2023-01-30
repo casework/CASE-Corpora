@@ -24,8 +24,7 @@ maybe_ground_truth_graph := $(wildcard ground-truth.*)
 rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar
 
 all: \
-  kb_validation-CASE-develop.ttl \
-  kb_validation-CASE-unstable.ttl
+  kb.ttl
 
 .PHONY: \
   check-pytest \
@@ -52,16 +51,20 @@ kb.ttl: \
 	    $(maybe_ground_truth_graph) \
 	    generated-*.ttl \
 	    > __$@
-	source $(top_srcdir)/venv/bin/activate \
-	  && case_validate \
-	    --allow-infos \
-	    --inference rdfs \
-	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/debug.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
-	    --ontology-graph $(top_srcdir)/taxonomy/devices/drafting.ttl \
-	    __$@
+	# Skip per-dataset validation when this file is called in a GitHub action.
+	test ! -z "$${GITHUB_ACTIONS+x}" \
+	  || ( \
+	    source $(top_srcdir)/venv/bin/activate \
+	      && case_validate \
+	        --allow-infos \
+	        --inference rdfs \
+	        --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
+	        --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	        --ontology-graph $(top_srcdir)/shapes/debug.ttl \
+	        --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
+	        --ontology-graph $(top_srcdir)/taxonomy/devices/drafting.ttl \
+	        __$@ \
+	    )
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \
@@ -121,60 +124,6 @@ generated-prov.ttl: \
 	    $(top_srcdir)/catalog/shared.ttl \
 	    distribution.ttl \
 	    $(supplemental_graph)
-	java -jar $(rdf_toolkit_jar) \
-	  --inline-blank-nodes \
-	  --source-format turtle \
-	  --source __$@ \
-	  --target-format turtle \
-	  --target _$@
-	rm __$@
-	mv _$@ $@
-
-kb_validation-CASE-develop.ttl: \
-  $(top_srcdir)/dependencies/CASE-develop.ttl \
-  $(top_srcdir)/taxonomy/devices/drafting.ttl \
-  kb.ttl
-	rm -f __$@ _$@
-	source $(top_srcdir)/venv/bin/activate \
-	  && case_validate \
-	    --allow-infos \
-	    --built-version none \
-	    --format turtle \
-	    --inference rdfs \
-	    --ontology-graph $(top_srcdir)/dependencies/CASE-develop.ttl \
-	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
-	    --ontology-graph $(top_srcdir)/taxonomy/devices/drafting.ttl \
-	    --output __$@ \
-	    kb.ttl
-	java -jar $(rdf_toolkit_jar) \
-	  --inline-blank-nodes \
-	  --source-format turtle \
-	  --source __$@ \
-	  --target-format turtle \
-	  --target _$@
-	rm __$@
-	mv _$@ $@
-
-kb_validation-CASE-unstable.ttl: \
-  $(top_srcdir)/dependencies/CASE-unstable.ttl \
-  $(top_srcdir)/taxonomy/devices/drafting.ttl \
-  kb.ttl
-	rm -f __$@ _$@
-	source $(top_srcdir)/venv/bin/activate \
-	  && case_validate \
-	    --allow-infos \
-	    --built-version none \
-	    --format turtle \
-	    --inference rdfs \
-	    --ontology-graph $(top_srcdir)/dependencies/CASE-unstable.ttl \
-	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
-	    --ontology-graph $(top_srcdir)/taxonomy/devices/drafting.ttl \
-	    --output __$@ \
-	    kb.ttl
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \

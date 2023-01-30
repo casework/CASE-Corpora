@@ -22,7 +22,7 @@ all:
 	  --file postvisit.mk
 
 check: \
-  validate-catalog.ttl \
+  catalog_validation.ttl \
   all
 	$(MAKE) \
 	  --directory datasets \
@@ -33,10 +33,10 @@ check: \
 
 clean:
 	@rm -f \
-	  kb-*.ttl \
-	  validate-*.ttl
+	  *_validation*.ttl \
+	  kb-*.ttl
 
-validate-catalog.ttl: \
+catalog_validation.ttl: \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/dependencies/dependencies.ttl \
   $(top_srcdir)/ontology/case-corpora.ttl \
