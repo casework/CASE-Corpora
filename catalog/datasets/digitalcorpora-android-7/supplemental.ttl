@@ -1,0 +1,55 @@
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix uco-types: <https://ontology.unifiedcyberontology.org/uco/types/> .
+@prefix uco-vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:content-data-facet-5aa2c06d-a95d-4713-8e16-5463bad44705
+	a uco-observable:ContentDataFacet ;
+	uco-observable:hash
+		kb:hash-06903043-3b24-57e8-997d-6e5acd63ad8f ,
+		kb:hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
+		;
+	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
+	.
+
+kb:file-facet-2703a4c4-6157-4d95-887b-03055f664cb6
+	a uco-observable:FileFacet ;
+	uco-observable:fileName "android_7.tar.gz" ;
+	uco-observable:modifiedTime "2020-11-22T03:14:59Z"^^xsd:dateTime ;
+	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
+	.
+
+kb:hash-06903043-3b24-57e8-997d-6e5acd63ad8f
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "563d71762b48f14ffd2663fcf85870f21c939441de614a1175a54b41c6373369"^^xsd:hexBinary ;
+	.
+
+kb:hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashValue "50a015b0c65c61feb81e77e0d2adcbf84d2f8352b2e1c46f27fb5f4816546751"^^xsd:hexBinary ;
+	.
+
+kb:url-facet-e0b73186-52e8-49d3-a079-3b48066bc3b9
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz" ;
+	.
+
+<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
+	a
+		uco-observable:File ,
+		uco-observable:URL
+		;
+	uco-core:hasFacet
+		kb:content-data-facet-5aa2c06d-a95d-4713-8e16-5463bad44705 ,
+		kb:file-facet-2703a4c4-6157-4d95-887b-03055f664cb6 ,
+		kb:url-facet-e0b73186-52e8-49d3-a079-3b48066bc3b9
+		;
+	.
+

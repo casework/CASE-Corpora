@@ -35,6 +35,12 @@ wd:Q95
 	uco-core:name "Google LLC" ;
 	.
 
+<https://www.iana.org/assignments/media-types/application/gzip>
+	a case-corpora:IANAMediaType ;
+	rdfs:label "gzip" ;
+	skos:prefLabel "application/gzip" ;
+	.
+
 <https://www.iana.org/assignments/media-types/application/octet-stream>
 	a case-corpora:IANAMediaType ;
 	rdfs:label "octet-stream" ;
