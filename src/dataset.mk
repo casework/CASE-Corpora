@@ -28,6 +28,7 @@ all: \
 
 .PHONY: \
   check-pytest \
+  figures \
   format
 
 kb.ttl: \
@@ -104,11 +105,41 @@ clean:
 	  kb.ttl \
 	  kb_validation-*.ttl
 
+figures: \
+  generated-prov.png \
+  generated-prov.svg
+
 generated-ground-truth-prov.ttl: \
   $(maybe_ground_truth_graph) \
   generated-prov.ttl
 	#TODO - Write 'subtracter' script to distill generated prov from generated ground truth prov.
 	touch $@
+
+generated-prov.dot: \
+  generated-prov.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_prov_dot \
+	    --dash-unqualified \
+	    _$@ \
+	    generated-prov.ttl \
+	    supplemental.ttl
+	mv _$@ $@
+
+generated-prov.png: \
+  generated-prov.dot
+	dot \
+	  -T png \
+	  -o _$@ \
+	  $<
+	mv _$@ $@
+
+generated-prov.svg: \
+  generated-prov.dot
+	dot \
+	  -T svg \
+	  -o _$@ \
+	  $<
+	mv _$@ $@
 
 generated-prov.ttl: \
   $(top_srcdir)/.venv.done.log \
