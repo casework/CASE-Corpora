@@ -10,6 +10,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh-dcat: <http://example.org/shapes/dcat/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
@@ -72,8 +73,16 @@ case-corpora:WebPage
 	.
 
 case-corpora:contact-00000000-0000-0000-0000-000000000000
-	a vcard:Contact ;
+	a
+		vcard:Contact ,
+		vcard:Individual
+		;
 	rdfs:comment "This named individual is provided as a stand-in to make explict that no point of contact is available, linked, or otherwise represented for a dataset."@en ;
+	rdfs:seeAlso
+		sh-dcat:contactPoint-range-shape ,
+		dcat:contactPoint ,
+		<https://resources.data.gov/resources/dcat-us/#contactPoint>
+		;
 	vcard:fn "NOT ENCODED" ;
 	vcard:hasEmail <mailto:null@example.org> ;
 	.
