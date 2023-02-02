@@ -25,12 +25,14 @@ all: \
   all-dependencies \
   all-shapes \
   all-taxonomy \
+  all-tests \
   check-catalog \
   check-dependencies \
   check-ontology \
   check-reports \
   check-shapes \
-  check-taxonomy
+  check-taxonomy \
+  check-tests
 
 .git_submodule_init.done.log: \
   .gitmodules
@@ -124,10 +126,15 @@ all-taxonomy: \
 	$(MAKE) \
 	  --directory taxonomy/devices
 
+all-tests: \
+  all-shapes
+	$(MAKE) \
+	  --directory tests
+
 check: \
   .venv-pre-commit/var/.pre-commit-built.log \
   check-reports \
-  check-shapes
+  check-tests
 
 check-catalog: \
   check-shapes \
@@ -166,6 +173,13 @@ check-taxonomy: \
   check-shapes
 	$(MAKE) \
 	  --directory taxonomy/devices \
+	  check
+
+check-tests: \
+  all-tests \
+  check-shapes
+	$(MAKE) \
+	  --directory tests \
 	  check
 
 clean:
