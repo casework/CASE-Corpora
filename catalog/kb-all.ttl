@@ -13,6 +13,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -263,9 +264,24 @@ kb:samsung-device-2b5e3fe8-09a7-4c36-859a-5f669e7a1610
 	uco-core:hasFacet kb:device-facet-1ee161fc-5b41-48e0-bbdc-69ffa8c03230 ;
 	.
 
+kb:url-facet-0fa77d25-7669-4486-bc57-02b9f2fe5a6f
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.md5" ;
+	.
+
+kb:url-facet-2645d00d-1b22-44c6-bd39-82550044a50f
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.sha256" ;
+	.
+
 kb:url-facet-2f2958a3-7e9d-4d14-b31f-4148d35ab52c
 	a uco-observable:URLFacet ;
 	uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report" ;
+	.
+
+kb:url-facet-74e92a95-d670-454f-b606-4ad7135dbb73
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.zip" ;
 	.
 
 kb:url-facet-785c662e-8261-4a17-8031-114f86f99af1
@@ -273,9 +289,44 @@ kb:url-facet-785c662e-8261-4a17-8031-114f86f99af1
 	uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip" ;
 	.
 
+kb:url-facet-88fc82c0-3994-434c-8ec7-8e2261060d71
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.md5" ;
+	.
+
+kb:url-facet-92bc17e0-745c-48bb-acc0-ea634746711a
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.sha256" ;
+	.
+
+kb:url-facet-9aa3ffbf-0251-4d56-b22e-dbe6f9cbda2d
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.zip" ;
+	.
+
+kb:url-facet-9b081add-c597-4bf4-80d6-2a391eba3a50
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl" ;
+	.
+
 kb:url-facet-9b9d4a1a-059e-47f8-aee0-d93edf61b5f2
 	a uco-observable:URLFacet ;
 	uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip" ;
+	.
+
+kb:url-facet-a1647374-f59d-48c1-b763-b93b37d32536
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.md5" ;
+	.
+
+kb:url-facet-abc1e0e4-c4b3-42f6-b83d-e0f6567c2903
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.sha256" ;
+	.
+
+kb:url-facet-bc8514bd-3852-4c91-a45f-5e587b0062e9
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.zip" ;
 	.
 
 kb:url-facet-d9e4bbae-4b47-4d8c-b547-9e524d3a4ca0
@@ -301,12 +352,72 @@ drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 	rdfs:label "Samsung SM-G925F"@en ;
 	.
 
+wd:Q20716
+	a uco-identity:Organization ;
+	uco-core:name "Samsung" ;
+	.
+
+wd:Q7295195
+	a uco-identity:Organization ;
+	uco-core:name "Raspberry Pi Foundation" ;
+	.
+
+wd:Q95
+	a uco-identity:Organization ;
+	uco-core:name "Google LLC" ;
+	.
+
 <https://caseontology.org/examples/crossover/>
 	a case-corpora:WebPage ;
 	.
 
 <https://digitalcorpora.org/corpora/disk-images/real-data-corpus>
 	a case-corpora:WebPage ;
+	.
+
+<https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.md5>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-0fa77d25-7669-4486-bc57-02b9f2fe5a6f ;
+	.
+
+<https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.sha256>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-2645d00d-1b22-44c6-bd39-82550044a50f ;
+	.
+
+<https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.zip>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-74e92a95-d670-454f-b606-4ad7135dbb73 ;
+	.
+
+<https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.md5>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-88fc82c0-3994-434c-8ec7-8e2261060d71 ;
+	.
+
+<https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.sha256>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-92bc17e0-745c-48bb-acc0-ea634746711a ;
+	.
+
+<https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.zip>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-9aa3ffbf-0251-4d56-b22e-dbe6f9cbda2d ;
+	.
+
+<https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.md5>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-a1647374-f59d-48c1-b763-b93b37d32536 ;
+	.
+
+<https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.sha256>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-abc1e0e4-c4b3-42f6-b83d-e0f6567c2903 ;
+	.
+
+<https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.zip>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-bc8514bd-3852-4c91-a45f-5e587b0062e9 ;
 	.
 
 <https://github.com/casework/CASE-Corpora/>
@@ -334,6 +445,11 @@ drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 
 <https://project-open-data.cio.gov/v1.1/schema>
 	a dcterms:Standard ;
+	.
+
+<https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-9b081add-c597-4bf4-80d6-2a391eba3a50 ;
 	.
 
 <https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0>

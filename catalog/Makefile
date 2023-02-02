@@ -34,7 +34,8 @@ check: \
 clean:
 	@rm -f \
 	  *_validation*.ttl \
-	  kb-*.ttl
+	  kb-all.ttl \
+	  kb-datasets.ttl
 
 catalog_validation.ttl: \
   $(top_srcdir)/.venv.done.log \

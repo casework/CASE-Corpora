@@ -11,6 +11,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/kb>
@@ -20,6 +22,7 @@
 
 kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
 	a case-corpora:Catalog ;
+	case-corpora:hasDistribution kb:distribution-adc5fd35-e9fa-4d1b-8598-f5ce3bba3e9c ;
 	dcterms:conformsTo <https://project-open-data.cio.gov/v1.1/schema> ;
 	dcterms:description "CASE Corpora is a catalog of cyber-relevant training and reference data sets." ;
 	dcterms:identifier "http://example.org/kb/catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752" ;
@@ -34,13 +37,12 @@ kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
 		;
 	dcat:landingPage <https://github.com/casework/CASE-Corpora/> ;
 	pod:accessLevel "public" ;
-	case-corpora:hasDistribution kb:distribution-adc5fd35-e9fa-4d1b-8598-f5ce3bba3e9c ;
 	.
 
 kb:distribution-adc5fd35-e9fa-4d1b-8598-f5ce3bba3e9c
 	a case-corpora:Distribution ;
-	dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ;
 	case-corpora:hasDownloadURL <https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ;
 	.
 
 kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e
@@ -54,5 +56,15 @@ kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e
 
 <https://project-open-data.cio.gov/v1.1/schema>
 	a dcterms:Standard ;
+	.
+
+<https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-9b081add-c597-4bf4-80d6-2a391eba3a50 ;
+	.
+
+kb:url-facet-9b081add-c597-4bf4-80d6-2a391eba3a50
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl" ;
 	.
 
