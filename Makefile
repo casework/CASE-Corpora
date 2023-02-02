@@ -24,7 +24,13 @@ all: \
 .PHONY: \
   all-dependencies \
   all-shapes \
-  all-taxonomy
+  all-taxonomy \
+  check-catalog \
+  check-dependencies \
+  check-ontology \
+  check-reports \
+  check-shapes \
+  check-taxonomy
 
 .git_submodule_init.done.log: \
   .gitmodules
@@ -120,25 +126,46 @@ all-taxonomy: \
 
 check: \
   .venv-pre-commit/var/.pre-commit-built.log \
-  all-shapes \
-  all-taxonomy
-	$(MAKE) \
-	  --directory dependencies \
-	  check
-	$(MAKE) \
-	  --directory ontology \
-	  check
-	$(MAKE) \
-	  --directory shapes \
-	  check
-	$(MAKE) \
-	  --directory taxonomy/devices \
-	  check
+  check-reports \
+  check-shapes
+
+check-catalog: \
+  check-shapes \
+  check-taxonomy
 	$(MAKE) \
 	  --directory catalog \
 	  check
+
+check-dependencies: \
+  all-dependencies
+	$(MAKE) \
+	  --directory dependencies \
+	  check
+
+check-ontology: \
+  check-dependencies
+	$(MAKE) \
+	  --directory ontology \
+	  check
+
+check-reports: \
+  check-catalog
 	$(MAKE) \
 	  --directory reports \
+	  check
+
+check-shapes: \
+  all-shapes \
+  check-ontology
+	$(MAKE) \
+	  --directory shapes \
+	  check
+
+check-taxonomy: \
+  all-taxonomy \
+  check-shapes
+	$(MAKE) \
+	  --directory taxonomy/devices \
 	  check
 
 clean:
