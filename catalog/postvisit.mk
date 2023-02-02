@@ -182,7 +182,8 @@ kb-datasets.ttl: \
 
 kb-datasets_validation.ttl: \
   catalog_validation.ttl \
-  kb-datasets.ttl
+  kb-datasets.ttl \
+  kb-datasets-shapes.ttl
 	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
@@ -193,6 +194,7 @@ kb-datasets_validation.ttl: \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/debug.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
+	    --ontology-graph kb-datasets-shapes.ttl \
 	    --output __$@ \
 	    kb-datasets.ttl \
 	    || (cat __$@ ; exit 1)
