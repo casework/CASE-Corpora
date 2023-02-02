@@ -95,6 +95,7 @@ kb-all_validation.ttl: \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/debug.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
 	    kb-all.ttl \
@@ -121,6 +122,7 @@ kb-all_validation-develop.ttl: \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-develop.ttl \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
 	    kb-all.ttl
@@ -146,6 +148,7 @@ kb-all_validation-unstable.ttl: \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-unstable.ttl \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
 	    kb-all.ttl
@@ -163,6 +166,7 @@ kb-datasets.ttl: \
   $(rdf_toolkit_jar) \
   $(top_srcdir)/dependencies/dependencies.ttl \
   $(top_srcdir)/ontology/case-corpora.ttl \
+  $(top_srcdir)/shapes/local.ttl \
   $(top_srcdir)/shapes/shapes.ttl \
   $(top_srcdir)/.venv.done.log
 	rm -f __$@ _$@
@@ -193,6 +197,7 @@ kb-datasets_validation.ttl: \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/debug.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --ontology-graph kb-datasets-shapes.ttl \
 	    --output __$@ \

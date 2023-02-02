@@ -1,0 +1,17 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/shapes/case-corpora-local>
+	a owl:Ontology ;
+	rdfs:comment "This file contains adjustments to upstream shapes graphs for CASE-Corpora.  This graph is not intended be re-used outside of CASE-Corpora.  Those interested in re-consuming CASE-Corpora shapes can generate and import the shapes.ttl file in this directory."@en ;
+	.
+
+uco-core:UcoThing-identifier-regex-shape
+	sh:deactivated "true"^^xsd:boolean ;
+	sh:description "This shape is deactivated for CASE-Corpora due to a data management decision to extend external IRIs as UCO concepts." ;
+	.
+

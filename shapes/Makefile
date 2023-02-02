@@ -16,8 +16,12 @@ SHELL := /bin/bash
 top_srcdir := $(shell cd .. ; pwd)
 
 shape_files := $(wildcard sh-*.ttl)
-check_shape_files := $(foreach shape_file,$(shape_files),.check-$(shape_file))
-check_shape_targets := $(foreach shape_file,$(shape_files),check-$(shape_file))
+check_shape_files := \
+  $(foreach shape_file,$(shape_files),.check-$(shape_file)) \
+  .check-local.ttl
+check_shape_targets := \
+  $(foreach shape_file,$(shape_files),check-$(shape_file)) \
+  check-local.ttl
 
 all: \
   shapes.ttl
