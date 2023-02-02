@@ -13,6 +13,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -349,6 +350,21 @@ drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 	a owl:Class ;
 	rdfs:subClassOf uco-observable:AndroidPhone ;
 	rdfs:label "Samsung SM-G925F"@en ;
+	.
+
+wd:Q20716
+	a uco-identity:Organization ;
+	uco-core:name "Samsung" ;
+	.
+
+wd:Q7295195
+	a uco-identity:Organization ;
+	uco-core:name "Raspberry Pi Foundation" ;
+	.
+
+wd:Q95
+	a uco-identity:Organization ;
+	uco-core:name "Google LLC" ;
 	.
 
 <https://caseontology.org/examples/crossover/>
