@@ -1,7 +1,9 @@
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix uco-types: <https://ontology.unifiedcyberontology.org/uco/types/> .
@@ -34,6 +36,21 @@ kb:hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
 	a uco-types:Hash ;
 	uco-types:hashMethod "SHA3-256" ;
 	uco-types:hashValue "50a015b0c65c61feb81e77e0d2adcbf84d2f8352b2e1c46f27fb5f4816546751"^^xsd:hexBinary ;
+	.
+
+kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f
+	a case-investigation:InvestigativeAction ;
+	uco-action:performer kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	uco-action:result
+		kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566 ,
+		<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
+		;
+	uco-core:description "Upload to Digital Corpora" ;
+	.
+
+kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566
+	a case-investigation:ProvenanceRecord ;
+	uco-core:object <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
 	.
 
 kb:url-facet-e0b73186-52e8-49d3-a079-3b48066bc3b9
