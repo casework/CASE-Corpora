@@ -17,16 +17,16 @@ kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5
 	skos:prefLabel "Digital Corpora" ;
 	.
 
-<https://www.iana.org/assignments/media-types/application/pdf>
-	a case-corpora:IANAMediaType ;
-	rdfs:label "pdf" ;
-	skos:prefLabel "application/pdf" ;
-	.
-
 <https://www.iana.org/assignments/media-types/application/octet-stream>
 	a case-corpora:IANAMediaType ;
 	rdfs:label "octet-stream" ;
 	skos:prefLabel "application/octet-stream" ;
+	.
+
+<https://www.iana.org/assignments/media-types/application/pdf>
+	a case-corpora:IANAMediaType ;
+	rdfs:label "pdf" ;
+	skos:prefLabel "application/pdf" ;
 	.
 
 <https://www.iana.org/assignments/media-types/application/vnd.ms-excel>
