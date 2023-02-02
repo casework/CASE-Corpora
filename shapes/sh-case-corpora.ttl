@@ -108,7 +108,6 @@ case-corpora:Dataset
 case-corpora:Distribution
 	a sh:NodeShape ;
 	sh:property
-		sh-case-corpora:Distribution-URL-hasFacet-fullValue-shape ,
 		[
 			a sh:PropertyShape ;
 			rdfs:seeAlso <https://www.iana.org/assignments/media-types/application/octet-stream> ;
@@ -125,25 +124,6 @@ case-corpora:Distribution
 		]
 		;
 	sh:targetClass case-corpora:Distribution ;
-	.
-
-sh-case-corpora:Distribution-URL-hasFacet-fullValue-shape
-	a sh:PropertyShape ;
-	sh:class uco-observable:URL ;
-	sh:message "CASE-Corpora requires any referenced Distribution have a downloadable URL, stored in the fullValue of a URLFacet."@en ;
-	sh:minCount "1"^^xsd:integer ;
-	sh:path case-corpora:hasDownloadURL ;
-	sh:property [
-		a sh:PropertyShape ;
-		sh:class uco-observable:URLFacet ;
-		sh:minCount "1"^^xsd:integer ;
-		sh:path uco-core:hasFacet ;
-		sh:property [
-			a sh:PropertyShape ;
-			sh:minCount "1"^^xsd:integer ;
-			sh:path uco-observable:fullValue ;
-		] ;
-	] ;
 	.
 
 sh-case-corpora:hasDatasetDirectory-domain-shape
@@ -182,6 +162,21 @@ sh-case-corpora:hasDownloadURL-domain-shape
 sh-case-corpora:hasDownloadURL-range-shape
 	a sh:NodeShape ;
 	sh:class uco-observable:URL ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:message "CASE-Corpora requires any referenced Distribution have a downloadable URL, stored in the fullValue of a URLFacet."@en ;
+		sh:path uco-core:hasFacet ;
+		sh:qualifiedMinCount "1"^^xsd:integer ;
+		sh:qualifiedValueShape [
+			a sh:NodeShape ;
+			sh:class uco-observable:URLFacet ;
+			sh:property [
+				a sh:PropertyShape ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:path uco-observable:fullValue ;
+			] ;
+		] ;
+	] ;
 	sh:targetObjectsOf case-corpora:hasDownloadURL ;
 	.
 

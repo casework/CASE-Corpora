@@ -10,7 +10,7 @@
 	rdfs:comment "This file contains adjustments to make solely for validating kb-datasets.ttl."@en ;
 	.
 
-sh-case-corpora:Distribution-URL-hasFacet-fullValue-shape
+sh-case-corpora:hasDownloadURL-range-shape
 	sh:deactivated "true"^^xsd:boolean ;
 	sh:description "This shape is deactivated for kb-datasets.ttl, so each distribution.ttl can make references to download URLs without needing to fully specify the URLs." ;
 	.

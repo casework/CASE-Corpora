@@ -1,0 +1,51 @@
+
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:content-data-facet-2d69d86e-fb28-44bc-9615-f8dbb9f8a6de
+	a uco-observable:ContentDataFacet ;
+	uco-observable:sizeInBytes "0"^^xsd:integer ;
+	.
+
+kb:distribution-cadeb8fb-06ff-4b1e-8a45-921921d80ba6
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <http://example.org/dataset.dat> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream> ;
+	.
+
+kb:file-facet-446a4dcc-5eb8-4df7-941a-d0552c2c354c
+	a uco-observable:FileFacet ;
+	uco-observable:fileName "dataset.dat"
+	.
+
+kb:url-facet-6e2f1463-d1c2-4281-ab6f-b31256f71715
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "http://example.org/dataset.dat" ;
+	.
+
+<http://example.org/dataset.dat>
+	a
+		uco-observable:File ,
+		uco-observable:URL
+		;
+	uco-core:hasFacet
+		kb:content-data-facet-2d69d86e-fb28-44bc-9615-f8dbb9f8a6de ,
+		kb:file-facet-446a4dcc-5eb8-4df7-941a-d0552c2c354c ,
+		kb:url-facet-6e2f1463-d1c2-4281-ab6f-b31256f71715
+		;
+	.
+
+<https://www.iana.org/assignments/media-types/application/octet-stream>
+	a case-corpora:IANAMediaType ;
+	rdfs:label "octet-stream" ;
+	skos:prefLabel "application/octet-stream" ;
+	.
+
