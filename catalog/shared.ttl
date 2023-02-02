@@ -5,6 +5,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 kb:organization-6ee3224c-c27c-4a8c-8a64-27bcff396e53
@@ -15,6 +18,21 @@ kb:organization-6ee3224c-c27c-4a8c-8a64-27bcff396e53
 kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5
 	a org:Organization ;
 	skos:prefLabel "Digital Corpora" ;
+	.
+
+wd:Q20716
+	a uco-identity:Organization ;
+	uco-core:name "Samsung" ;
+	.
+
+wd:Q7295195
+	a uco-identity:Organization ;
+	uco-core:name "Raspberry Pi Foundation" ;
+	.
+
+wd:Q95
+	a uco-identity:Organization ;
+	uco-core:name "Google LLC" ;
 	.
 
 <https://www.iana.org/assignments/media-types/application/octet-stream>
