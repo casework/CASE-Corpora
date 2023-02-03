@@ -42,6 +42,7 @@ catalog_validation.ttl: \
   $(top_srcdir)/dependencies/dependencies.ttl \
   $(top_srcdir)/ontology/case-corpora.ttl \
   $(top_srcdir)/shapes/debug.ttl \
+  $(top_srcdir)/shapes/local.ttl \
   $(top_srcdir)/shapes/shapes.ttl \
   .catalog-example-dataset.ttl \
   catalog.ttl \
@@ -55,6 +56,7 @@ catalog_validation.ttl: \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/debug.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output _$@ \
 	    catalog.ttl \

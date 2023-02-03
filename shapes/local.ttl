@@ -1,13 +1,43 @@
+# imports: http://example.org/shapes/case-corpora
+
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-case-corpora-local: <http://example.org/shapes/case-corpora-local/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix uco-types: <https://ontology.unifiedcyberontology.org/uco/types/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/shapes/case-corpora-local>
 	a owl:Ontology ;
 	rdfs:comment "This file contains adjustments to upstream shapes graphs for CASE-Corpora.  This graph is not intended be re-used outside of CASE-Corpora.  Those interested in re-consuming CASE-Corpora shapes can generate and import the shapes.ttl file in this directory."@en ;
+	owl:imports <http://example.org/shapes/case-corpora> ;
+	.
+
+sh-case-corpora-local:Facet-inherence-shape
+	a sh:NodeShape ;
+	sh:message "In CASE-Corpora, Facets must be linked to at least one UcoObject."@en ;
+	sh:property [
+		sh:minCount "1"^^xsd:integer ;
+		sh:path [
+			sh:inversePath uco-core:hasFacet ;
+		] ;
+	] ;
+	sh:targetClass uco-core:Facet ;
+	.
+
+sh-case-corpora-local:Hash-inherence-shape
+	a sh:NodeShape ;
+	sh:message "In CASE-Corpora, Hashes must be linked to at least one Facet."@en ;
+	sh:property [
+		sh:minCount "1"^^xsd:integer ;
+		sh:path [
+			sh:inversePath uco-observable:hash ;
+		] ;
+	] ;
+	sh:targetClass uco-types:Hash ;
 	.
 
 uco-core:UcoThing-identifier-regex-shape

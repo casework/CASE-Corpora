@@ -1,4 +1,4 @@
-# imports: http://example.org/shapes/case-corpora
+# imports: http://example.org/shapes/case-corpora-local
 
 @prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -17,7 +17,7 @@
 
 <http://example.org/kb>
 	a owl:Ontology ;
-	owl:imports <http://example.org/shapes/case-corpora> ;
+	owl:imports <http://example.org/shapes/case-corpora-local> ;
 	.
 
 kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
