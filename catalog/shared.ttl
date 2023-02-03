@@ -26,6 +26,11 @@ wd:Q20716
 	uco-core:name "Samsung" ;
 	.
 
+wd:Q5058279
+	a uco-identity:Organization ;
+	uco-core:name "Cellebrite" ;
+	.
+
 wd:Q7295195
 	a uco-identity:Organization ;
 	uco-core:name "Raspberry Pi Foundation" ;
