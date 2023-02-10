@@ -1,4 +1,5 @@
 *.done.log
+*.dot
 *.swp
 .DS_Store
 .check-*

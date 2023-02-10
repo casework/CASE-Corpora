@@ -11,3 +11,12 @@ WARNING - The README.md file is generated from README.md.in and various data sou
 ## Devices
 
 @DEVICES_MD@
+
+
+## Ontology import closure
+
+CASE-Corpora imports multiple ontologies and other RDF schemata developed outside of the Cyber Domain Ontology.  The following illustration (click to see navigable SVG) shows how the various ontologies (/schemata) are imported.
+
+The root of the imports is the CASE-Corpora knowledge base, which imports a shapes graph.  The imports then onward generally follow the pattern of shape graphs importing ontology (/schemata) graphs.
+
+![Transitive import closure](import_closure.svg)
