@@ -94,7 +94,6 @@ kb-all_validation.ttl: \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/debug.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
@@ -196,7 +195,6 @@ kb-datasets_validation.ttl: \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/debug.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --ontology-graph kb-datasets-shapes.ttl \
