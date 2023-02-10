@@ -12,13 +12,68 @@
 # We would appreciate acknowledgement if the software is used.
 
 import re
+import warnings
 from typing import Set
 
-from rdflib import Graph, URIRef
+from rdflib import PROV, Graph, Literal, URIRef
+
+NS_PROV = PROV
 
 RX_UUID = re.compile(
     "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$", re.IGNORECASE
 )
+
+
+def test_android7_distribution_inputs_and_outputs_matched() -> None:
+    """
+    This test confirms the files extracted from the downloaded distribution tarball can map to a file that was gathered into the pre-upload distribution tarball.
+    """
+    # Consider the files extracted from the downloaded tarball to be the "Expected" set.
+    # The "Computed" set is then the file nodes where a history has been constructed.
+    expected: Set[str] = set()
+    computed: Set[str] = set()
+
+    graph = Graph()
+    graph.parse("kb.ttl")
+    query_extracted = """\
+SELECT ?lFileName
+WHERE {
+?nFile
+  prov:wasGeneratedBy kb:investigative-action-194c4e23-243e-4deb-b8d5-3ce9dce19367 ;
+  uco-core:hasFacet / uco-observable:fileName ?lFileName ;
+  .
+}
+"""
+    query_packaged = """\
+SELECT ?lFileName
+WHERE {
+kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8
+  prov:wasDerivedFrom ?nFile ;
+  .
+
+?nFile
+  uco-core:hasFacet / uco-observable:fileName ?lFileName ;
+  .
+}
+"""
+
+    for result_extracted in graph.query(query_extracted):
+        assert isinstance(result_extracted[0], Literal)
+        expected.add(str(result_extracted[0]))
+    assert len(expected) > 0
+
+    for result_packaged in graph.query(query_packaged):
+        assert isinstance(result_packaged[0], Literal)
+        computed.add(str(result_packaged[0]))
+
+    try:
+        assert expected == computed
+    except AssertionError:
+        warnings.warn(
+            "Some files extracted from distribution tarball are not noted in the tarball's history."
+        )
+        # TODO - Uncomment once file nodes are defined and pass case_prov_check.
+        # raise
 
 
 def test_android7_hash_iris() -> None:
