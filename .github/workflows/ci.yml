@@ -28,6 +28,8 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '11'
+    - name: Install Graphviz
+      run: sudo apt-get install --yes graphviz
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:

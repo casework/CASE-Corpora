@@ -22,6 +22,7 @@ README.md: \
   README.md.in \
   README.md.sed \
   devices.md \
+  import_closure.svg \
   mime-types.md
 	sed \
 	  -f README.md.sed \
@@ -35,7 +36,9 @@ check:
 clean:
 	@rm -f \
 	  _* \
-	  *.md
+	  *.dot \
+	  *.md \
+	  *.svg
 
 devices.md: \
   $(top_srcdir)/catalog/kb-all.ttl \
@@ -47,6 +50,29 @@ devices.md: \
 	    devices.sparql \
 	    $(top_srcdir)/catalog/kb-all.ttl \
 	    $(top_srcdir)/taxonomy/devices/drafting.ttl
+	mv _$@ $@
+
+import_closure.dot: \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/catalog/catalog.ttl \
+  $(top_srcdir)/dependencies/dependencies.ttl \
+  $(top_srcdir)/ontology/case-corpora.ttl \
+  $(top_srcdir)/shapes/local.ttl \
+  $(top_srcdir)/shapes/shapes.ttl \
+  $(top_srcdir)/src/import_closure.py
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/import_closure.py \
+	    $(top_srcdir)/catalog/catalog.ttl \
+	    $(top_srcdir)/dependencies/dependencies.ttl \
+	    $(top_srcdir)/ontology/case-corpora.ttl \
+	    $(top_srcdir)/shapes/local.ttl \
+	    $(top_srcdir)/shapes/shapes.ttl \
+	    > _$@
+	mv _$@ $@
+
+import_closure.svg: \
+  import_closure.dot
+	dot -T svg -o _$@ $<
 	mv _$@ $@
 
 mime-types.md: \
