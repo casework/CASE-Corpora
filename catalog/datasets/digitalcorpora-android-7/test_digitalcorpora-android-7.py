@@ -11,9 +11,10 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
+import binascii
 import re
 import warnings
-from typing import Set
+from typing import Set, Tuple
 
 from rdflib import PROV, Graph, Literal, URIRef
 
@@ -76,6 +77,124 @@ kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8
         # raise
 
 
+def test_android7_hash_documented_sources() -> None:
+    expected: Set[Tuple[str, str, str, str]] = {
+        (
+            "Android7-ImageCreationDocumentation.pdf",
+            "blk32_mmcblk0rpmb.bin",
+            "MD5",
+            "a26f0b56848b1bdbb350f70141b58098",
+        ),
+        (
+            "Android7-ImageCreationDocumentation.pdf",
+            "blk32_mmcblk0rpmb.bin",
+            "SHA1",
+            "d24c21c9e7d8fedc072c367d0f6620909c2f91e6",
+        ),
+        (
+            "Android7-ImageCreationDocumentation.pdf",
+            "blk32_mmcblk0rpmb.bin",
+            "SHA256",
+            "b77b5ac1e87dae8050ac63614c22070ab608ac8732fc182f275501050db92ebf",
+        ),
+        (
+            "Android7-ImageCreationDocumentation.pdf",
+            "procdata.zip",
+            "MD5",
+            "7f19ff80cc7faa8643e85dbb6fb08715",
+        ),
+        (
+            "Android7-ImageCreationDocumentation.pdf",
+            "procdata.zip",
+            "SHA1",
+            "6c576f77616d3b8955b9af7fbcfee0f23d9a1298",
+        ),
+        (
+            "Android7-ImageCreationDocumentation.pdf",
+            "procdata.zip",
+            "SHA256",
+            "9d3a582eedfbef8f1572f203d635e318734417f062adfe16fb4adef72ddd9b05",
+        ),
+        (
+            "blk32_mmcblk0rpmb.bin",
+            "blk32_mmcblk0rpmb.bin",
+            "MD5",
+            "a26f0b56848b1bdbb350f70141b58098",
+        ),
+        (
+            "blk32_mmcblk0rpmb.bin",
+            "blk32_mmcblk0rpmb.bin",
+            "SHA1",
+            "d24c21c9e7d8fedc072c367d0f6620909c2f91e6",
+        ),
+        (
+            "blk32_mmcblk0rpmb.bin",
+            "blk32_mmcblk0rpmb.bin",
+            "SHA256",
+            "b77b5ac1e87dae8050ac63614c22070ab608ac8732fc182f275501050db92ebf",
+        ),
+        (
+            "procdata.zip",
+            "procdata.zip",
+            "MD5",
+            "7f19ff80cc7faa8643e85dbb6fb08715",
+        ),
+        (
+            "procdata.zip",
+            "procdata.zip",
+            "SHA1",
+            "6c576f77616d3b8955b9af7fbcfee0f23d9a1298",
+        ),
+        (
+            "procdata.zip",
+            "procdata.zip",
+            "SHA256",
+            "9d3a582eedfbef8f1572f203d635e318734417f062adfe16fb4adef72ddd9b05",
+        ),
+    }
+    computed: Set[Tuple[str, str, str, str]] = set()
+
+    graph = Graph()
+    graph.parse("kb.ttl")
+
+    query = """\
+SELECT ?lDocumentingFileName ?lHashedFileName ?lHashMethod ?lHashValue
+WHERE {
+  ?nDocumentingFile
+    cito:documents ?nHashingObservation ;
+    prov:wasDerivedFrom+ ?nHashingProvenanceRecord ;
+    uco-core:hasFacet / uco-observable:fileName ?lDocumentingFileName ;
+    .
+  ?nHashedFile
+    uco-core:hasFacet / uco-observable:fileName ?lHashedFileName ;
+    .
+  ?nHashingProvenanceRecord
+    uco-core:object ?nHashedFile ;
+    .
+  ?nHashingObservation
+    sosa:hasFeatureOfInterest ?nHashedFile ;
+    sosa:hasResult ?nHash ;
+    uco-action:object ?nHashedFile ;
+    uco-action:result ?nHashingProvenanceRecord ;
+    .
+  ?nHash
+    uco-types:hashMethod ?lHashMethod ;
+    uco-types:hashValue ?lHashValue ;
+    .
+}
+"""
+    for result in graph.query(query):
+        computed.add(
+            (
+                str(result[0]),
+                str(result[1]),
+                str(result[2]),
+                binascii.hexlify(result[3].toPython()).decode(),
+            )
+        )
+    assert expected == computed
+
+
 def test_android7_hash_iris() -> None:
     """
     To consolidate Hash object references, this script was used to generate UUIDv5s for the Hash IRIs:
@@ -107,5 +226,4 @@ WHERE {
         else:
             if hash_iri[-22] != "5":
                 computed.add(hash_iri)
-
     assert expected == computed
