@@ -128,6 +128,46 @@ sh-case-corpora-local:InvestigativeAction-shape
 	sh:targetClass case-investigation:InvestigativeAction ;
 	.
 
+sh-case-corpora-local:rdf-Statement-shape
+	a sh:NodeShape ;
+	rdfs:comment "A citation of any portion of the OWL 2 specification on the appropriateness or inappropriateness of rdf:Statement in OWL would be welcome.  At the time of this writing, a reference was believed to exist, but could not be found.  The sh:description of this node houses an independent opinion on applicability."@en ;
+	sh:description """This (no-op) shape serves as an anchor for describing that rdf:Statements are disallowed in CASE-Corpora due to a believed incompatibility with OWL 2 DL.  The belief stems in the property definition of rdf:object, as well as a scope of definition responsibility.
+
+First, assuming authority to cast the property into OWL, that property cannot be either an owl:ObjectProperty or owl:DatatypeProperty, due to being general enough to support Identified Nodes (IRIs and BNodes) and Literals.  An AnnotationProperty would be most appropriate.  But then, for symmetry, rdf:subject and rdf:predicate should also be an AnnotationProperty.  This leaves the inferential value of rdf:Statement in question - neither a Statement, nor any subclass (for example, some ex:ContradictionStatement), could apply reasoning across the rdf: properties.
+
+Second, if casting authority is not assumed, for maximal compatibility it would be the responsibility of the OWL specification to interpret the property types of rdf:object et al.  Otherwise, use of a base RDF property would become an OWL-level incompatibility if two knowledge bases were merged with different OWL property type assignments.
+
+For all these reasons, CASE-Corpora disallows rdf:Statement."""@en ;
+	sh:targetClass rdf:Statement ;
+	.
+
+sh-case-corpora-local:rdf-object-shape
+	a sh:PropertyShape ;
+	rdfs:seeAlso sh-case-corpora-local:rdf-Statement-shape ;
+	sh:maxCount "0"^^xsd:integer ;
+	sh:message "rdf:Statements are believed not compatible with OWL 2 DL."@en ;
+	sh:path rdf:object ;
+	sh:targetSubjectsOf rdf:object ;
+	.
+
+sh-case-corpora-local:rdf-predicate-shape
+	a sh:PropertyShape ;
+	rdfs:seeAlso sh-case-corpora-local:rdf-Statement-shape ;
+	sh:maxCount "0"^^xsd:integer ;
+	sh:message "rdf:Statements are believed not compatible with OWL 2 DL."@en ;
+	sh:path rdf:predicate ;
+	sh:targetSubjectsOf rdf:predicate ;
+	.
+
+sh-case-corpora-local:rdf-subject-shape
+	a sh:PropertyShape ;
+	rdfs:seeAlso sh-case-corpora-local:rdf-Statement-shape ;
+	sh:maxCount "0"^^xsd:integer ;
+	sh:message "rdf:Statements are believed not compatible with OWL 2 DL."@en ;
+	sh:path rdf:subject ;
+	sh:targetSubjectsOf rdf:subject ;
+	.
+
 uco-core:UcoThing-identifier-regex-shape
 	sh:deactivated "true"^^xsd:boolean ;
 	sh:description "This shape is deactivated for CASE-Corpora due to a data management decision to extend external IRIs as UCO concepts." ;
