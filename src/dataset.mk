@@ -34,7 +34,6 @@ all: \
 kb.ttl: \
   $(top_srcdir)/dependencies/dependencies.ttl \
   $(top_srcdir)/ontology/case-corpora.ttl \
-  $(top_srcdir)/shapes/debug.ttl \
   $(top_srcdir)/shapes/local.ttl \
   $(top_srcdir)/shapes/shapes.ttl \
   $(top_srcdir)/taxonomy/devices/drafting.ttl \
@@ -62,7 +61,6 @@ kb.ttl: \
 	        --inference rdfs \
 	        --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	        --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	        --ontology-graph $(top_srcdir)/shapes/debug.ttl \
 	        --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	        --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	        --ontology-graph $(top_srcdir)/taxonomy/devices/drafting.ttl \
