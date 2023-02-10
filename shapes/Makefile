@@ -15,13 +15,12 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd .. ; pwd)
 
-shape_files := $(wildcard sh-*.ttl)
-check_shape_files := \
-  $(foreach shape_file,$(shape_files),.check-$(shape_file)) \
-  .check-local.ttl
-check_shape_targets := \
-  $(foreach shape_file,$(shape_files),check-$(shape_file)) \
-  check-local.ttl
+shapes_ttl_sources := $(wildcard sh-*.ttl)
+shape_files := \
+  $(shapes_ttl_sources) \
+  local.ttl
+check_shape_files := $(foreach shape_file,$(shape_files),.check-$(shape_file))
+check_shape_targets := $(foreach shape_file,$(shape_files),check-$(shape_file))
 
 all: \
   shapes.ttl
@@ -59,11 +58,11 @@ clean:
 
 shapes.ttl: \
   $(top_srcdir)/.venv.done.log \
-  $(shape_files)
+  $(shapes_ttl_sources)
 	source $(top_srcdir)/venv/bin/activate \
 	  && rdfpipe \
 	    --output-format turtle \
-	    $(shape_files) \
+	    $(shapes_ttl_sources) \
 	    > __$@
 	java -jar $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar \
 	  --inline-blank-nodes \
@@ -78,6 +77,7 @@ uco_owl_review.ttl: \
   $(top_srcdir)/dependencies/dependencies.ttl \
   $(top_srcdir)/ontology/case-corpora.ttl \
   $(top_srcdir)/.venv.done.log \
+  local.ttl \
   shapes.ttl
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
@@ -86,6 +86,7 @@ uco_owl_review.ttl: \
 	    --metashacl \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph local.ttl \
 	    --ontology-graph shapes.ttl \
 	    $(top_srcdir)/dependencies/CASE/dependencies/UCO/tests/thing.ttl \
 	    > _$@
@@ -95,6 +96,7 @@ validate_inheritance.ttl: \
   $(top_srcdir)/dependencies/dependencies.ttl \
   $(top_srcdir)/ontology/case-corpora.ttl \
   $(top_srcdir)/.venv.done.log \
+  local.ttl \
   shapes.ttl
 	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
@@ -103,5 +105,6 @@ validate_inheritance.ttl: \
 	    _$@ \
 	    $(top_srcdir)/dependencies/dependencies.ttl \
 	    $(top_srcdir)/ontology/case-corpora.ttl \
+	    local.ttl \
 	    shapes.ttl
 	mv _$@ $@
