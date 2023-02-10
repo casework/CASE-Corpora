@@ -1,10 +1,12 @@
 # imports: http://example.org/shapes/case-corpora
 
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sh-case-corpora-local: <http://example.org/shapes/case-corpora-local/> .
+@prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix uco-types: <https://ontology.unifiedcyberontology.org/uco/types/> .
@@ -38,6 +40,92 @@ sh-case-corpora-local:Hash-inherence-shape
 		] ;
 	] ;
 	sh:targetClass uco-types:Hash ;
+	.
+
+sh-case-corpora-local:InvestigativeAction-Provenance-accompaniment-shape
+	a sh:NodeShape ;
+	sh:description "This shape defines and implements a CASE-Corpora requirement that when an InvestigativeAction uses an object, the object must be accompanied by a corresponding ProvenanceRecord."@en ;
+	sh:sparql [
+		sh:message "Input to investigative action does not include accompanying provenance record." ;
+		sh:select """
+		PREFIX case-investigation: <https://ontology.caseontology.org/case/investigation/>
+		PREFIX uco-action: <https://ontology.unifiedcyberontology.org/uco/action/>
+		PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+		SELECT $this ?value
+		WHERE {
+			$this uco-action:object ?value .
+			FILTER NOT EXISTS {
+				?value
+					a case-investigation:ProvenanceRecord ;
+					.
+			}
+			FILTER NOT EXISTS {
+				$this
+					uco-action:object ?nProvenanceRecord ;
+					.
+				?nProvenanceRecord
+					a case-investigation:ProvenanceRecord ;
+					uco-core:object ?value ;
+					.
+			}
+		}
+		""" ;
+	] ;
+	sh:targetClass case-investigation:InvestigativeAction ;
+	.
+
+sh-case-corpora-local:InvestigativeAction-latest-ProvenanceRecord-usage-shape
+	a sh:NodeShape ;
+	sh:description "This shape defines and implements a CASE-Corpora requirement that when an InvestigativeAction uses multiple provenance records containing the same object that is also input to the action, only the latest provenance record shall be linked if the earlier one contains no descriptive value of other objects that are also inputs to the action."@en ;
+	sh:sparql [
+		sh:message "Focus node uses value node, but value node contributes no additional provenance information over provenance record {$nLatterProvenanceRecord}."@en ;
+		sh:select """
+			SELECT $this ?value ?nLatterProvenanceRecord
+			WHERE {
+				$this
+					prov:used
+						?nObject1 ,
+						?value ,
+						?nLatterProvenanceRecord
+						;
+					.
+				?value
+					a case-investigation:ProvenanceRecord ;
+					prov:hadMember ?nObject1 ;
+					.
+				?nLatterProvenanceRecord
+					prov:wasDerivedFrom+ ?value ;
+					prov:hadMember ?nObject1 ;
+					.
+				FILTER NOT EXISTS {
+					$this prov:used ?nObject2 .
+					?value prov:hadMember ?nObject2 .
+					FILTER ( ?nObject1 != ?nObject2 )
+					FILTER NOT EXISTS {
+						?nLatterProvenanceRecord
+							prov:hadMember ?nObject2 ;
+							.
+					}
+				}
+			}
+		""" ;
+	] ;
+	sh:targetClass case-investigation:InvestigativeAction ;
+	.
+
+sh-case-corpora-local:InvestigativeAction-shape
+	a sh:NodeShape ;
+	sh:description "This shape defines and implements a CASE-Corpora requirement that any InvestigativeAction must generate a ProvenanceRecord."@en ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:path uco-action:result ;
+		sh:qualifiedMinCount "1"^^xsd:integer ;
+		sh:qualifiedValueShape [
+			a sh:NodeShape ;
+			sh:class case-investigation:ProvenanceRecord ;
+		] ;
+	] ;
+	sh:targetClass case-investigation:InvestigativeAction ;
 	.
 
 uco-core:UcoThing-identifier-regex-shape
