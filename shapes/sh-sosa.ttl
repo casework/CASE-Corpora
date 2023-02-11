@@ -1,0 +1,215 @@
+# imports: http://example.org/shapes/foaf
+# imports: https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/sosa.ttl
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-sosa: <http://example.org/shapes/sosa/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/shapes/sosa>
+	a owl:Ontology ;
+	owl:imports
+		<http://example.org/shapes/foaf> ,
+		<https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/sosa.ttl>
+		;
+	.
+
+sh-sosa:actsOnProperty-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf sosa:actsOnProperty ;
+	.
+
+sh-sosa:actsOnProperty-suggested-domain-shape
+	a sh:NodeShape ;
+	sh:class sosa:Actuation ;
+	sh:severity sh:Warning ;
+	sh:targetSubjectsOf sosa:actsOnProperty ;
+	.
+
+sh-sosa:actsOnProperty-suggested-range-shape
+	a sh:NodeShape ;
+	sh:class sosa:ActuatableProperty ;
+	sh:severity sh:Warning ;
+	sh:targetObjectsOf sosa:actsOnProperty ;
+	.
+
+sh-sosa:hasFeatureOfInterest-suggested-domain-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:or (
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Actuation ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Observation ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Sampling ;
+		]
+	) ;
+	sh:severity sh:Warning ;
+	sh:targetSubjectsOf sosa:hasFeatureOfInterest ;
+	.
+
+sh-sosa:hasFeatureOfInterest-suggested-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:or (
+		[
+			a sh:NodeShape ;
+			sh:class sosa:FeatureOfInterest ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Sample ;
+		]
+	) ;
+	sh:severity sh:Warning ;
+	sh:targetObjectsOf sosa:hasFeatureOfInterest ;
+	.
+
+sh-sosa:hasResult-domain-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:or (
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Actuation ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Observation ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Sampling ;
+		]
+	) ;
+	sh:severity sh:Warning ;
+	sh:targetSubjectsOf sosa:hasResult ;
+	.
+
+sh-sosa:hasResult-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:or (
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Result ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Sample ;
+		]
+	) ;
+	sh:severity sh:Warning ;
+	sh:targetObjectsOf sosa:hasResult ;
+	.
+
+sh-sosa:isActedOnBy-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf sosa:isActedOnBy ;
+	.
+
+sh-sosa:isActedOnBy-suggested-domain-shape
+	a sh:NodeShape ;
+	sh:class sosa:ActuatableProperty ;
+	sh:severity sh:Warning ;
+	sh:targetObjectsOf sosa:isActedOnBy ;
+	.
+
+sh-sosa:isActedOnBy-suggested-range-shape
+	a sh:NodeShape ;
+	sh:class sosa:Actuation ;
+	sh:severity sh:Warning ;
+	sh:targetSubjectsOf sosa:isActedOnBy ;
+	.
+
+sh-sosa:isFeatureOfInterestOf-domain-shape
+	a sh:NodeShape ;
+	sh:class sosa:FeatureOfInterest ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:severity sh:Warning ;
+	sh:targetSujectsOf sosa:isFeatureOfInterestOf ;
+	.
+
+sh-sosa:isFeatureOfInterestOf-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:or (
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Actuation ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Observation ;
+		]
+	) ;
+	sh:severity sh:Warning ;
+	sh:targetObjectsOf sosa:isFeatureOfInterestOf ;
+	.
+
+sh-sosa:isResultOf-domain-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:or (
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Result ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Sample ;
+		]
+	) ;
+	sh:severity sh:Warning ;
+	sh:targetSubjectsOf sosa:isResultOf ;
+	.
+
+sh-sosa:isResultOf-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:or (
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Actuation ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Observation ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:class sosa:Sampling ;
+		]
+	) ;
+	sh:severity sh:Warning ;
+	sh:targetObjectsOf sosa:isResultOf ;
+	.
+
+sh-sosa:observedProperty-domain-shape
+	a sh:NodeShape ;
+	sh:class sosa:Observation ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:severity sh:Warning ;
+	sh:targetSubjectsOf sosa:observedProperty ;
+	.
+
+sh-sosa:observedProperty-range-shape
+	a sh:NodeShape ;
+	sh:class sosa:ObservableProperty ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:severity sh:Warning ;
+	sh:targetObjectsOf sosa:observedProperty ;
+	.
+

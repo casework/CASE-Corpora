@@ -1,0 +1,61 @@
+# imports: http://example.org/shapes/case-corpora-local
+
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
+@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/kb>
+	a owl:Ontology ;
+	owl:imports <http://example.org/shapes/case-corpora-local> ;
+	.
+
+kb:file-33a68697-349f-44b4-b28e-d7fa81804719
+	a uco-observable:File ;
+	drafting:hasQuality kb:quality-93f8a3b6-eb78-4fe3-82c8-d6553ab7f872 ;
+	.
+
+kb:file-fbab55e8-7a8a-40ee-aaa5-f24dac74b6b4
+	a uco-observable:File ;
+	.
+
+kb:file-hash-quality-005f0fbf-bd36-4a95-827b-abfb837d48b5
+	a drafting:FileHashQuality ;
+	drafting:isQualityOf kb:file-fbab55e8-7a8a-40ee-aaa5-f24dac74b6b4 ;
+	.
+
+kb:iana-media-type-adec718d-d9e6-415d-b1e0-8cc0d6bce330
+	a case-corpora:IANAMediaType ;
+	.
+
+kb:quality-462dcfab-4027-486c-a601-64d956307784
+	a drafting:Quality ;
+	drafting:isQualityOf kb:uco-object-ae24f67c-8cf4-481a-8dfa-7d2a612bd40e ;
+	.
+
+kb:quality-53bde277-0594-47de-a59f-111844736bf6
+	a drafting:Quality ;
+	.
+
+kb:quality-93f8a3b6-eb78-4fe3-82c8-d6553ab7f872
+	a drafting:Quality ;
+	.
+
+kb:uco-object-2ec8e0c4-a25b-4119-98ae-07006f792370
+	a uco-core:UcoObject ;
+	drafting:hasQuality kb:quality-53bde277-0594-47de-a59f-111844736bf6 ;
+	.
+
+kb:uco-object-ae24f67c-8cf4-481a-8dfa-7d2a612bd40e
+	a uco-core:UcoObject ;
+	.
+
+kb:web-page-ee1be614-2bbd-4255-a813-f7b56dbc455f
+	a case-corpora:WebPage ;
+	.
+
