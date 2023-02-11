@@ -16,6 +16,7 @@
 		voaf:Vocabulary ,
 		owl:Ontology
 		;
+	rdfs:comment "NOTE - this file is an unofficial adaptation of the W3C SOSA file.  It is only expected to persist until the publication of a new version of SOSA incorporating a fix for sdw Issue #1395."@en ;
 	dcterms:created "2017-04-17"^^xsd:date ;
 	dcterms:creator [
 		a foaf:Agent ;
@@ -30,6 +31,8 @@
 	dcterms:title "Sensor, Observation, Sample, and Actuator (SOSA) Ontology"@en ;
 	vann:preferredNamespacePrefix "sosa" ;
 	vann:preferredNamespaceUri "http://www.w3.org/ns/sosa/" ;
+	rdfs:seeAlso <https://github.com/w3c/sdw/issues/1395> ;
+	owl:versionIRI <https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/sosa.ttl> ;
 	.
 
 dcterms:created
@@ -582,6 +585,6 @@ foaf:Agent
 	.
 
 foaf:name
-	a owl:AnnotationProperty ;
+	a owl:DatatypeProperty ;
 	.
 
