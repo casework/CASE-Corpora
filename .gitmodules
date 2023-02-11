@@ -10,3 +10,6 @@
 [submodule "dependencies/UCO-develop"]
 	path = dependencies/UCO-develop
 	url = https://github.com/ucoProject/UCO.git
+[submodule "dependencies/sdw"]
+	path = dependencies/sdw
+	url = https://github.com/w3c/sdw.git

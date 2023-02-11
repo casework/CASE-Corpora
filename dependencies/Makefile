@@ -198,6 +198,26 @@ skos.ttl:
 	  --target _$@
 	rm __$@
 	mv _$@ $@
+ 
+sosa.ttl: \
+  sdw/ssn/integrated/sosa.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source $< \
+	  --target-format turtle \
+	  --target _$@
+	mv _$@ $@
+
+ssn.ttl: \
+  sdw/ssn/integrated/ssn.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source $< \
+	  --target-format turtle \
+	  --target _$@
+	mv _$@ $@
 
 vcard.ttl:
 	wget \

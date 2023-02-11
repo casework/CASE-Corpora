@@ -59,6 +59,11 @@ all: \
 	  || git submodule update \
 	    --init \
 	    dependencies/UCO-develop
+	# sdw
+	test -r dependencies/sdw/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/sdw
 	$(MAKE) \
 	  --directory dependencies/CASE \
 	  .lib.done.log
