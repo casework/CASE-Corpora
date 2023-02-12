@@ -1,4 +1,5 @@
 # imports: http://example.org/ontology/case-corpora
+# imports: http://example.org/shapes/cito
 # imports: http://example.org/shapes/dcat-us
 # imports: http://example.org/shapes/owl-abox
 
@@ -22,6 +23,7 @@
 	rdfs:comment "This ontology defines SHACL shapes to maintain data quality-control rules."@en ;
 	owl:imports
 		<http://example.org/ontology/case-corpora> ,
+		<http://example.org/shapes/cito> ,
 		<http://example.org/shapes/dcat-us> ,
 		<http://example.org/shapes/owl-abox>
 		;

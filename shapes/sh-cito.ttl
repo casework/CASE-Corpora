@@ -1,0 +1,43 @@
+# imports: http://example.org/shapes/dc
+# imports: http://example.org/shapes/discourse-relationships
+# imports: http://example.org/shapes/situation
+# imports: http://purl.org/spar/cito/2018-02-16
+
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-cito: <http://example.org/shapes/cito/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/shapes/cito>
+	a owl:Ontology ;
+	owl:imports
+		<http://example.org/shapes/dc> ,
+		<http://example.org/shapes/discourse-relationships> ,
+		<http://example.org/shapes/situation> ,
+		cito:2018-02-16
+		;
+	.
+
+sh-cito:cites-range-shape
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf cito:cites ;
+	.
+
+sh-cito:documents-range-shape
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf cito:documents ;
+	.
+
+sh-cito:isCitedBy-range-shape
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf cito:isCitedBy ;
+	.
+
+sh-cito:isDocumentedBy-range-shape
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf cito:isDocumentedBy ;
+	.
+
