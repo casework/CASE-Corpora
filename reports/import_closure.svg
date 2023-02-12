@@ -12,21 +12,21 @@
 <!-- http___example_org_kb -->
 <g id="node1" class="node">
 <title>http___example_org_kb</title>
-<ellipse fill="none" stroke="black" cx="774.88" cy="-648" rx="106.68" ry="18"/>
-<text text-anchor="middle" x="774.88" y="-644.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://example.org/kb</text>
+<ellipse fill="none" stroke="black" cx="1231.88" cy="-648" rx="106.68" ry="18"/>
+<text text-anchor="middle" x="1231.88" y="-644.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://example.org/kb</text>
 </g>
 <!-- http___example_org_shapes_case_corpora_local -->
 <g id="node7" class="node">
 <title>http___example_org_shapes_case_corpora_local</title>
-<ellipse fill="none" stroke="black" cx="774.88" cy="-561" rx="188.47" ry="18"/>
-<text text-anchor="middle" x="774.88" y="-557.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://example.org/shapes/case&#45;corpora&#45;local</text>
+<ellipse fill="none" stroke="black" cx="1231.88" cy="-561" rx="188.47" ry="18"/>
+<text text-anchor="middle" x="1231.88" y="-557.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://example.org/shapes/case&#45;corpora&#45;local</text>
 </g>
 <!-- http___example_org_kb&#45;&gt;http___example_org_shapes_case_corpora_local -->
 <g id="edge1" class="edge">
 <title>http___example_org_kb&#45;&gt;http___example_org_shapes_case_corpora_local</title>
-<path fill="none" stroke="black" d="M774.88,-629.8C774.88,-618.58 774.88,-603.67 774.88,-590.69"/>
-<polygon fill="black" stroke="black" points="778.38,-590.98 774.88,-580.98 771.38,-590.98 778.38,-590.98"/>
-<text text-anchor="middle" x="796.38" y="-600.8" font-family="Times,serif" font-size="14.00">imports</text>
+<path fill="none" stroke="black" d="M1231.88,-629.8C1231.88,-618.58 1231.88,-603.67 1231.88,-590.69"/>
+<polygon fill="black" stroke="black" points="1235.38,-590.98 1231.88,-580.98 1228.38,-590.98 1235.38,-590.98"/>
+<text text-anchor="middle" x="1253.38" y="-600.8" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___www_w3_org_2004_02_skos_core -->
 <g id="node2" class="node">
@@ -54,7 +54,7 @@
 <text text-anchor="middle" x="1409.38" y="-144.8" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___purl_org_dc_terms_ -->
-<g id="node18" class="node">
+<g id="node19" class="node">
 <title>http___purl_org_dc_terms_</title>
 <ellipse fill="none" stroke="black" cx="1288.88" cy="-105" rx="115.08" ry="18"/>
 <text text-anchor="middle" x="1288.88" y="-101.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://purl.org/dc/terms/</text>
@@ -67,7 +67,7 @@
 <text text-anchor="middle" x="1310.38" y="-144.8" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___www_w3_org_ns_prov_o_ -->
-<g id="node19" class="node">
+<g id="node20" class="node">
 <title>http___www_w3_org_ns_prov_o_</title>
 <ellipse fill="none" stroke="black" cx="1017.88" cy="-105" rx="137.58" ry="18"/>
 <text text-anchor="middle" x="1017.88" y="-101.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://www.w3.org/ns/prov&#45;o#</text>
@@ -77,7 +77,7 @@
 <title>http___www_w3_org_ns_dcat&#45;&gt;http___www_w3_org_ns_prov_o_</title>
 <path fill="none" stroke="black" d="M1238.23,-175.11C1193.46,-161.07 1128.01,-140.54 1080.07,-125.51"/>
 <polygon fill="black" stroke="black" points="1081.24,-122.21 1070.65,-122.55 1079.15,-128.88 1081.24,-122.21"/>
-<text text-anchor="middle" x="1190.38" y="-144.8" font-family="Times,serif" font-size="14.00">imports</text>
+<text text-anchor="middle" x="1191.38" y="-144.8" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___xmlns_com_foaf_0_1_ -->
 <g id="node5" class="node">
@@ -101,19 +101,19 @@
 <!-- http___example_org_ontology_case_corpora&#45;&gt;http___www_w3_org_ns_dcat -->
 <g id="edge9" class="edge">
 <title>http___example_org_ontology_case_corpora&#45;&gt;http___www_w3_org_ns_dcat</title>
-<path fill="none" stroke="black" d="M663.64,-291.81C733.76,-286.79 816.89,-278.3 890.88,-264 945.55,-253.43 956.39,-239.47 1010.88,-228 1074.43,-214.62 1091.45,-218.12 1155.88,-210 1165.89,-208.74 1176.32,-207.42 1186.74,-206.09"/>
-<polygon fill="black" stroke="black" points="1187.05,-209.58 1196.52,-204.85 1186.16,-202.64 1187.05,-209.58"/>
-<text text-anchor="middle" x="1032.38" y="-242.3" font-family="Times,serif" font-size="14.00">imports</text>
+<path fill="none" stroke="black" d="M663.16,-291.77C733.37,-286.73 816.71,-278.25 890.88,-264 945.98,-253.41 956.97,-239.52 1011.88,-228 1075.01,-214.76 1091.89,-218.09 1155.88,-210 1165.89,-208.74 1176.32,-207.41 1186.74,-206.09"/>
+<polygon fill="black" stroke="black" points="1187.05,-209.57 1196.52,-204.84 1186.16,-202.63 1187.05,-209.57"/>
+<text text-anchor="middle" x="1033.38" y="-242.3" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_ontology_case_corpora&#45;&gt;http___xmlns_com_foaf_0_1_ -->
 <g id="edge11" class="edge">
 <title>http___example_org_ontology_case_corpora&#45;&gt;http___xmlns_com_foaf_0_1_</title>
 <path fill="none" stroke="black" d="M500.67,-281.68C494.02,-249.82 485.1,-181.49 518.88,-141 524.2,-134.63 530.74,-129.41 537.91,-125.14"/>
 <polygon fill="black" stroke="black" points="539.42,-128.3 546.69,-120.59 536.2,-122.09 539.42,-128.3"/>
-<text text-anchor="middle" x="521.38" y="-188.3" font-family="Times,serif" font-size="14.00">imports</text>
+<text text-anchor="middle" x="522.38" y="-188.3" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- https___ontology_caseontology_org_case_case_1_1_0 -->
-<g id="node20" class="node">
+<g id="node21" class="node">
 <title>https___ontology_caseontology_org_case_case_1_1_0</title>
 <ellipse fill="none" stroke="black" cx="265.88" cy="-192" rx="203.36" ry="18"/>
 <text text-anchor="middle" x="265.88" y="-188.3" font-family="Times,serif" font-size="14.00">IRI &#45; https://ontology.caseontology.org/case/case/1.1.0</text>
@@ -123,27 +123,27 @@
 <title>http___example_org_ontology_case_corpora&#45;&gt;https___ontology_caseontology_org_case_case_1_1_0</title>
 <path fill="none" stroke="black" d="M466.48,-281.97C425.19,-263.66 359.44,-234.5 314.56,-214.59"/>
 <polygon fill="black" stroke="black" points="316.13,-211.46 305.57,-210.6 313.29,-217.86 316.13,-211.46"/>
-<text text-anchor="middle" x="441.38" y="-242.3" font-family="Times,serif" font-size="14.00">imports</text>
+<text text-anchor="middle" x="442.38" y="-242.3" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_shapes_case_corpora -->
 <g id="node8" class="node">
 <title>http___example_org_shapes_case_corpora</title>
-<ellipse fill="none" stroke="black" cx="774.88" cy="-474" rx="168.97" ry="18"/>
-<text text-anchor="middle" x="774.88" y="-470.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://example.org/shapes/case&#45;corpora</text>
+<ellipse fill="none" stroke="black" cx="1231.88" cy="-474" rx="168.97" ry="18"/>
+<text text-anchor="middle" x="1231.88" y="-470.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://example.org/shapes/case&#45;corpora</text>
 </g>
 <!-- http___example_org_shapes_case_corpora_local&#45;&gt;http___example_org_shapes_case_corpora -->
 <g id="edge14" class="edge">
 <title>http___example_org_shapes_case_corpora_local&#45;&gt;http___example_org_shapes_case_corpora</title>
-<path fill="none" stroke="black" d="M774.88,-542.8C774.88,-531.58 774.88,-516.67 774.88,-503.69"/>
-<polygon fill="black" stroke="black" points="778.38,-503.98 774.88,-493.98 771.38,-503.98 778.38,-503.98"/>
-<text text-anchor="middle" x="796.38" y="-513.8" font-family="Times,serif" font-size="14.00">imports</text>
+<path fill="none" stroke="black" d="M1231.88,-542.8C1231.88,-531.58 1231.88,-516.67 1231.88,-503.69"/>
+<polygon fill="black" stroke="black" points="1235.38,-503.98 1231.88,-493.98 1228.38,-503.98 1235.38,-503.98"/>
+<text text-anchor="middle" x="1253.38" y="-513.8" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_shapes_case_corpora&#45;&gt;http___example_org_ontology_case_corpora -->
 <g id="edge15" class="edge">
 <title>http___example_org_shapes_case_corpora&#45;&gt;http___example_org_ontology_case_corpora</title>
-<path fill="none" stroke="black" d="M748.01,-455.88C699.28,-424.84 596.34,-359.26 541.34,-324.22"/>
-<polygon fill="black" stroke="black" points="543.24,-321.29 532.92,-318.86 539.48,-327.19 543.24,-321.29"/>
-<text text-anchor="middle" x="687.38" y="-383.3" font-family="Times,serif" font-size="14.00">imports</text>
+<path fill="none" stroke="black" d="M1164.47,-457.05C1029.64,-425.15 727.41,-353.65 583.7,-319.65"/>
+<polygon fill="black" stroke="black" points="584.8,-316.31 574.26,-317.42 583.19,-323.12 584.8,-316.31"/>
+<text text-anchor="middle" x="962.38" y="-383.3" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_shapes_dcat_us -->
 <g id="node12" class="node">
@@ -154,9 +154,22 @@
 <!-- http___example_org_shapes_case_corpora&#45;&gt;http___example_org_shapes_dcat_us -->
 <g id="edge16" class="edge">
 <title>http___example_org_shapes_case_corpora&#45;&gt;http___example_org_shapes_dcat_us</title>
-<path fill="none" stroke="black" d="M856.58,-457.8C936.72,-442.9 1058.64,-420.22 1141.61,-404.79"/>
-<polygon fill="black" stroke="black" points="1142.12,-408.26 1151.31,-402.99 1140.84,-401.37 1142.12,-408.26"/>
-<text text-anchor="middle" x="1051.38" y="-426.8" font-family="Times,serif" font-size="14.00">imports</text>
+<path fill="none" stroke="black" d="M1231.88,-455.8C1231.88,-444.58 1231.88,-429.67 1231.88,-416.69"/>
+<polygon fill="black" stroke="black" points="1235.38,-416.98 1231.88,-406.98 1228.38,-416.98 1235.38,-416.98"/>
+<text text-anchor="middle" x="1253.38" y="-426.8" font-family="Times,serif" font-size="14.00">imports</text>
+</g>
+<!-- http___example_org_shapes_owl_abox -->
+<g id="node15" class="node">
+<title>http___example_org_shapes_owl_abox</title>
+<ellipse fill="none" stroke="black" cx="1556.88" cy="-387" rx="157.07" ry="18"/>
+<text text-anchor="middle" x="1556.88" y="-383.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://example.org/shapes/owl&#45;abox</text>
+</g>
+<!-- http___example_org_shapes_case_corpora&#45;&gt;http___example_org_shapes_owl_abox -->
+<g id="edge17" class="edge">
+<title>http___example_org_shapes_case_corpora&#45;&gt;http___example_org_shapes_owl_abox</title>
+<path fill="none" stroke="black" d="M1293.78,-456.81C1348.28,-442.56 1427.67,-421.79 1484.98,-406.81"/>
+<polygon fill="black" stroke="black" points="1485.51,-410.28 1494.3,-404.37 1483.74,-403.51 1485.51,-410.28"/>
+<text text-anchor="middle" x="1435.38" y="-426.8" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_shapes_dc -->
 <g id="node9" class="node">
@@ -165,13 +178,13 @@
 <text text-anchor="middle" x="1553.88" y="-101.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://example.org/shapes/dc</text>
 </g>
 <!-- http___purl_org_dc_elements_1_1_ -->
-<g id="node21" class="node">
+<g id="node22" class="node">
 <title>http___purl_org_dc_elements_1_1_</title>
 <ellipse fill="none" stroke="black" cx="1553.88" cy="-18" rx="140.28" ry="18"/>
 <text text-anchor="middle" x="1553.88" y="-14.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://purl.org/dc/elements/1.1/</text>
 </g>
 <!-- http___example_org_shapes_dc&#45;&gt;http___purl_org_dc_elements_1_1_ -->
-<g id="edge17" class="edge">
+<g id="edge18" class="edge">
 <title>http___example_org_shapes_dc&#45;&gt;http___purl_org_dc_elements_1_1_</title>
 <path fill="none" stroke="black" d="M1553.88,-86.8C1553.88,-75.58 1553.88,-60.67 1553.88,-47.69"/>
 <polygon fill="black" stroke="black" points="1557.38,-47.98 1553.88,-37.98 1550.38,-47.98 1557.38,-47.98"/>
@@ -184,13 +197,13 @@
 <text text-anchor="middle" x="1847.88" y="-101.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://example.org/shapes/dcam</text>
 </g>
 <!-- http___purl_org_dc_dcam_ -->
-<g id="node22" class="node">
+<g id="node23" class="node">
 <title>http___purl_org_dc_dcam_</title>
 <ellipse fill="none" stroke="black" cx="1847.88" cy="-18" rx="114.28" ry="18"/>
 <text text-anchor="middle" x="1847.88" y="-14.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://purl.org/dc/dcam/</text>
 </g>
 <!-- http___example_org_shapes_dcam&#45;&gt;http___purl_org_dc_dcam_ -->
-<g id="edge18" class="edge">
+<g id="edge19" class="edge">
 <title>http___example_org_shapes_dcam&#45;&gt;http___purl_org_dc_dcam_</title>
 <path fill="none" stroke="black" d="M1847.88,-86.8C1847.88,-75.58 1847.88,-60.67 1847.88,-47.69"/>
 <polygon fill="black" stroke="black" points="1851.38,-47.98 1847.88,-37.98 1844.38,-47.98 1851.38,-47.98"/>
@@ -207,7 +220,7 @@
 <title>http___example_org_shapes_dcat&#45;&gt;http___www_w3_org_ns_dcat</title>
 <path fill="none" stroke="black" d="M1171.37,-281.97C1194.64,-264.35 1231.17,-236.7 1257.32,-216.89"/>
 <polygon fill="black" stroke="black" points="1259.38,-219.73 1265.24,-210.9 1255.15,-214.15 1259.38,-219.73"/>
-<text text-anchor="middle" x="1260.38" y="-242.3" font-family="Times,serif" font-size="14.00">imports</text>
+<text text-anchor="middle" x="1261.38" y="-242.3" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_shapes_dcterms -->
 <g id="node13" class="node">
@@ -216,11 +229,11 @@
 <text text-anchor="middle" x="1582.88" y="-188.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://example.org/shapes/dcterms</text>
 </g>
 <!-- http___example_org_shapes_dcat&#45;&gt;http___example_org_shapes_dcterms -->
-<g id="edge19" class="edge">
+<g id="edge20" class="edge">
 <title>http___example_org_shapes_dcat&#45;&gt;http___example_org_shapes_dcterms</title>
 <path fill="none" stroke="black" d="M1211.99,-283.59C1290.4,-264.44 1424.04,-231.8 1507.68,-211.37"/>
 <polygon fill="black" stroke="black" points="1508.28,-214.82 1517.17,-209.05 1506.62,-208.02 1508.28,-214.82"/>
-<text text-anchor="middle" x="1451.38" y="-242.3" font-family="Times,serif" font-size="14.00">imports</text>
+<text text-anchor="middle" x="1452.38" y="-242.3" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_shapes_foaf -->
 <g id="node14" class="node">
@@ -229,67 +242,67 @@
 <text text-anchor="middle" x="1008.88" y="-188.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://example.org/shapes/foaf</text>
 </g>
 <!-- http___example_org_shapes_dcat&#45;&gt;http___example_org_shapes_foaf -->
-<g id="edge20" class="edge">
+<g id="edge21" class="edge">
 <title>http___example_org_shapes_dcat&#45;&gt;http___example_org_shapes_foaf</title>
 <path fill="none" stroke="black" d="M1126.39,-281.97C1103.12,-264.35 1066.59,-236.7 1040.44,-216.89"/>
 <polygon fill="black" stroke="black" points="1042.61,-214.15 1032.53,-210.9 1038.39,-219.73 1042.61,-214.15"/>
-<text text-anchor="middle" x="1120.38" y="-242.3" font-family="Times,serif" font-size="14.00">imports</text>
+<text text-anchor="middle" x="1121.38" y="-242.3" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_shapes_vcard -->
-<g id="node17" class="node">
+<g id="node18" class="node">
 <title>http___example_org_shapes_vcard</title>
 <ellipse fill="none" stroke="black" cx="709.88" cy="-192" rx="143.77" ry="18"/>
 <text text-anchor="middle" x="709.88" y="-188.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://example.org/shapes/vcard</text>
 </g>
 <!-- http___example_org_shapes_dcat&#45;&gt;http___example_org_shapes_vcard -->
-<g id="edge21" class="edge">
+<g id="edge22" class="edge">
 <title>http___example_org_shapes_dcat&#45;&gt;http___example_org_shapes_vcard</title>
 <path fill="none" stroke="black" d="M1017.9,-294.02C964.3,-289.36 902.24,-280.54 847.88,-264 811.31,-252.87 772.89,-232.27 745.9,-216.11"/>
 <polygon fill="black" stroke="black" points="747.8,-213.17 737.44,-210.96 744.16,-219.15 747.8,-213.17"/>
 <text text-anchor="middle" x="869.38" y="-242.3" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_shapes_dcat_us&#45;&gt;http___example_org_shapes_dcat -->
-<g id="edge22" class="edge">
+<g id="edge23" class="edge">
 <title>http___example_org_shapes_dcat_us&#45;&gt;http___example_org_shapes_dcat</title>
 <path fill="none" stroke="black" d="M1215.08,-368.8C1203.16,-356.59 1186.96,-339.99 1173.56,-326.28"/>
 <polygon fill="black" stroke="black" points="1176.2,-323.97 1166.71,-319.26 1171.19,-328.86 1176.2,-323.97"/>
-<text text-anchor="middle" x="1216.38" y="-339.8" font-family="Times,serif" font-size="14.00">imports</text>
+<text text-anchor="middle" x="1217.38" y="-339.8" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_shapes_pod -->
-<g id="node15" class="node">
+<g id="node16" class="node">
 <title>http___example_org_shapes_pod</title>
 <ellipse fill="none" stroke="black" cx="1479.88" cy="-300" rx="137.28" ry="18"/>
 <text text-anchor="middle" x="1479.88" y="-296.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://example.org/shapes/pod</text>
 </g>
 <!-- http___example_org_shapes_dcat_us&#45;&gt;http___example_org_shapes_pod -->
-<g id="edge23" class="edge">
+<g id="edge24" class="edge">
 <title>http___example_org_shapes_dcat_us&#45;&gt;http___example_org_shapes_pod</title>
 <path fill="none" stroke="black" d="M1296.88,-370.38C1317.82,-364.85 1341,-358.2 1361.88,-351 1385.9,-342.72 1411.98,-331.88 1433.49,-322.41"/>
 <polygon fill="black" stroke="black" points="1434.88,-325.62 1442.59,-318.36 1432.03,-319.22 1434.88,-325.62"/>
-<text text-anchor="middle" x="1422.38" y="-339.8" font-family="Times,serif" font-size="14.00">imports</text>
+<text text-anchor="middle" x="1423.38" y="-339.8" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_shapes_skos -->
-<g id="node16" class="node">
+<g id="node17" class="node">
 <title>http___example_org_shapes_skos</title>
 <ellipse fill="none" stroke="black" cx="1739.88" cy="-246" rx="139.98" ry="18"/>
 <text text-anchor="middle" x="1739.88" y="-242.3" font-family="Times,serif" font-size="14.00">IRI &#45; http://example.org/shapes/skos</text>
 </g>
 <!-- http___example_org_shapes_dcat_us&#45;&gt;http___example_org_shapes_skos -->
-<g id="edge24" class="edge">
+<g id="edge25" class="edge">
 <title>http___example_org_shapes_dcat_us&#45;&gt;http___example_org_shapes_skos</title>
 <path fill="none" stroke="black" d="M1248.07,-368.88C1275.46,-340.02 1328.48,-284.55 1333.88,-282 1346.34,-276.12 1494.04,-264.44 1607.73,-256.19"/>
 <polygon fill="black" stroke="black" points="1607.73,-259.69 1617.46,-255.48 1607.23,-252.71 1607.73,-259.69"/>
-<text text-anchor="middle" x="1299.38" y="-339.8" font-family="Times,serif" font-size="14.00">imports</text>
+<text text-anchor="middle" x="1300.38" y="-339.8" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_shapes_dcterms&#45;&gt;http___example_org_shapes_dc -->
-<g id="edge25" class="edge">
+<g id="edge26" class="edge">
 <title>http___example_org_shapes_dcterms&#45;&gt;http___example_org_shapes_dc</title>
 <path fill="none" stroke="black" d="M1577.01,-173.8C1573.15,-162.47 1567.99,-147.36 1563.53,-134.29"/>
 <polygon fill="black" stroke="black" points="1566.87,-133.23 1560.33,-124.9 1560.25,-135.49 1566.87,-133.23"/>
 <text text-anchor="middle" x="1591.38" y="-144.8" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_shapes_dcterms&#45;&gt;http___example_org_shapes_dcam -->
-<g id="edge26" class="edge">
+<g id="edge27" class="edge">
 <title>http___example_org_shapes_dcterms&#45;&gt;http___example_org_shapes_dcam</title>
 <path fill="none" stroke="black" d="M1633.98,-174.61C1677.56,-160.63 1740.32,-140.5 1786.6,-125.66"/>
 <polygon fill="black" stroke="black" points="1787.5,-129.04 1795.95,-122.66 1785.36,-122.38 1787.5,-129.04"/>
@@ -300,14 +313,14 @@
 <title>http___example_org_shapes_dcterms&#45;&gt;http___purl_org_dc_terms_</title>
 <path fill="none" stroke="black" d="M1537.22,-174.38C1508.14,-164.09 1469.54,-150.99 1434.88,-141 1412.28,-134.49 1387.47,-128.22 1364.82,-122.83"/>
 <polygon fill="black" stroke="black" points="1365.91,-119.49 1355.37,-120.6 1364.3,-126.3 1365.91,-119.49"/>
-<text text-anchor="middle" x="1501.38" y="-144.8" font-family="Times,serif" font-size="14.00">imports</text>
+<text text-anchor="middle" x="1502.38" y="-144.8" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_shapes_foaf&#45;&gt;http___xmlns_com_foaf_0_1_ -->
 <g id="edge12" class="edge">
 <title>http___example_org_shapes_foaf&#45;&gt;http___xmlns_com_foaf_0_1_</title>
 <path fill="none" stroke="black" d="M940.41,-176C872.67,-161.16 769.16,-138.48 698.43,-122.99"/>
 <polygon fill="black" stroke="black" points="699.37,-119.61 688.85,-120.89 697.87,-126.45 699.37,-119.61"/>
-<text text-anchor="middle" x="859.38" y="-144.8" font-family="Times,serif" font-size="14.00">imports</text>
+<text text-anchor="middle" x="860.38" y="-144.8" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 <!-- http___example_org_shapes_skos&#45;&gt;http___www_w3_org_2004_02_skos_core -->
 <g id="edge5" class="edge">
@@ -321,7 +334,7 @@
 <title>http___example_org_shapes_vcard&#45;&gt;http___www_w3_org_2006_vcard_ns</title>
 <path fill="none" stroke="black" d="M628.54,-176.77C542.76,-161.77 407.81,-138.17 317.62,-122.4"/>
 <polygon fill="black" stroke="black" points="318.25,-118.95 307.8,-120.68 317.04,-125.85 318.25,-118.95"/>
-<text text-anchor="middle" x="517.38" y="-144.8" font-family="Times,serif" font-size="14.00">imports</text>
+<text text-anchor="middle" x="518.38" y="-144.8" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
 </g>
 </svg>
