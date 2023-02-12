@@ -46,6 +46,7 @@ devices.md: \
   devices.sparql
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_sparql_select \
+	    --no-index \
 	    _$@ \
 	    devices.sparql \
 	    $(top_srcdir)/catalog/kb-all.ttl \
@@ -80,6 +81,7 @@ mime-types.md: \
   mime-types.sparql
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_sparql_select \
+	    --no-index \
 	    _$@ \
 	    mime-types.sparql \
 	    $(top_srcdir)/catalog/kb-all.ttl

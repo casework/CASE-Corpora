@@ -58,6 +58,7 @@ datasets.md: \
   kb-all.ttl
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_sparql_select \
+	    --no-index \
 	    _$@ \
 	    datasets.sparql \
 	    $(top_srcdir)/ontology/case-corpora.ttl \
