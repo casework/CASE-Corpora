@@ -1,3 +1,4 @@
+# imports: http://example.org/shapes/dcterms
 # imports: http://www.w3.org/2004/02/skos/core
 
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -10,7 +11,10 @@
 
 <http://example.org/shapes/skos>
 	a owl:Ontology ;
-	owl:imports <http://www.w3.org/2004/02/skos/core> ;
+	owl:imports
+		<http://example.org/shapes/dcterms> ,
+		<http://www.w3.org/2004/02/skos/core>
+		;
 	.
 
 sh-skos:prefLabel-range-shape
