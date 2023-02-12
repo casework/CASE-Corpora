@@ -7,7 +7,10 @@
 <http://purl.org/swan/2.0/discourse-relationships/>
 	a owl:Ontology ;
 	rdfs:label "Discourse relationships vocabulary v. 3.0" ;
-	rdfs:comment "These relationships don't have range and domains defined as they are meant to be reused in different contexts" ;
+	rdfs:comment
+		"NOTE - this file is an unofficial adaptation of the SWAN discourse-relationships file.  It is only expected to persist until the publication of a new version with a Dublin Core Terms issue resolved."@en ,
+		"These relationships don't have range and domains defined as they are meant to be reused in different contexts"
+		;
 	dct:contributor
 		"David Shotton" ,
 		"Elizabeth Wu" ,
@@ -19,10 +22,10 @@
 		;
 	dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
 	dct:date "October 12, 2010" ;
-	dct:format "rdf/xml" ;
 	dct:language "en" ;
 	dct:publisher "Massachusetts General Hospital" ;
 	dct:title "Discourse relationships vocabulary"@en ;
+	owl:versionIRI <https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/discourse-relationships.ttl> ;
 	owl:versionInfo "3.0" ;
 	.
 

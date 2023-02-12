@@ -26,12 +26,16 @@ case_unstable_ttls := \
   $(wildcard CASE-unstable/dependencies/UCO/ontology/uco/*/*.ttl)
 
 dependent_ontology_files := \
+  cito.ttl \
+  cpannotationschema.ttl \
   dc.ttl \
   dcam.ttl \
   dcat.ttl \
   dcterms.ttl \
+  discourse-relationships.ttl \
   dublin_core_type.ttl \
   foaf.ttl \
+  situation.ttl \
   skos.ttl \
   vcard.ttl
 
@@ -181,12 +185,12 @@ dependencies.ttl: \
 	rm __$@
 	mv _$@ $@
 
-discourse-relationships.ttl: \
-  swan-ontology/discourse-relationships.owl
+# TODO - This does not regenerate with Make while a correction for a term issue is waiting to be published.
+discourse-relationships.ttl:
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format rdf-xml \
-	  --source $< \
+	  --source swan-ontology/discourse-relationships.owl \
 	  --target-format turtle \
 	  --target _$@
 	mv _$@ $@
