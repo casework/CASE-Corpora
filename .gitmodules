@@ -10,3 +10,9 @@
 [submodule "dependencies/UCO-develop"]
 	path = dependencies/UCO-develop
 	url = https://github.com/ucoProject/UCO.git
+[submodule "dependencies/cito"]
+	path = dependencies/cito
+	url = https://github.com/SPAROntologies/cito.git
+[submodule "dependencies/swan-ontology"]
+	path = dependencies/swan-ontology
+	url = https://github.com/pav-ontology/swan-ontology.git

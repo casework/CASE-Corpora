@@ -59,6 +59,16 @@ all: \
 	  || git submodule update \
 	    --init \
 	    dependencies/UCO-develop
+	# cito
+	test -r dependencies/cito/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/cito
+	# swan-ontology
+	test -r dependencies/swan-ontology/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/swan-ontology
 	$(MAKE) \
 	  --directory dependencies/CASE \
 	  .lib.done.log

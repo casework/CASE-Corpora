@@ -68,11 +68,34 @@ CASE-unstable.ttl: \
 check: \
   dependencies.ttl
 
+cito.ttl: \
+  cito/docs/current/cito.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source $< \
+	  --target-format turtle \
+	  --target _$@
+	mv _$@ $@
+
 clean:
 	@rm -f \
 	  CASE-develop.ttl \
 	  CASE-unstable.ttl \
 	  dependencies.ttl
+
+cpannotationschema.ttl:
+	wget \
+	  --output-document=__$@ \
+	  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format rdf-xml \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
 
 # http://purl.org/dc/elements/1.1
 #   via https://www.dublincore.org/schemas/rdfs/
@@ -158,6 +181,16 @@ dependencies.ttl: \
 	rm __$@
 	mv _$@ $@
 
+discourse-relationships.ttl: \
+  swan-ontology/discourse-relationships.owl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format rdf-xml \
+	  --source $< \
+	  --target-format turtle \
+	  --target _$@
+	mv _$@ $@
+
 # http://purl.org/dc/dcmitype/
 #   via https://www.dublincore.org/schemas/rdfs/
 dublin_core_type.ttl:
@@ -177,6 +210,19 @@ foaf.ttl:
 	wget \
 	  --output-document=__$@ \
 	  https://web.archive.org/web/20220614105937if_/http://xmlns.com/foaf/spec/20140114.rdf
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format rdf-xml \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+situation.ttl:
+	wget \
+	  --output-document=__$@ \
+	  http://www.ontologydesignpatterns.org/cp/owl/situation.owl
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format rdf-xml \
