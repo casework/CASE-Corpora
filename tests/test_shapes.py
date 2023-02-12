@@ -13,7 +13,9 @@
 
 from typing import Set
 
-from rdflib import Graph, URIRef
+from rdflib import SH, Graph, URIRef
+
+NS_SH = SH
 
 
 def test_qualified_url_shape() -> None:
@@ -39,3 +41,44 @@ WHERE {
         assert isinstance(result[0], URIRef)
         computed.add(result[0])
     assert expected == computed
+
+
+def _test_owl_abox_XFAIL(inferencing: str, expected: Set[URIRef]) -> None:
+    computed: Set[URIRef] = set()
+
+    assert inferencing in {"none", "owlrl", "rdfs"}
+
+    graph = Graph()
+    graph.parse("owl_abox_XFAIL_inferencing_%s_validation.ttl" % inferencing)
+    for triple in graph.triples((None, NS_SH.focusNode, None)):
+        assert isinstance(triple[2], URIRef)
+        computed.add(triple[2])
+    assert expected == computed
+
+
+def test_owl_abox_XFAIL_inferencing_none() -> None:
+    expected: Set[URIRef] = {
+        URIRef("http://example.org/kb/thing-a-nota"),
+        URIRef("http://example.org/kb/thing-b-notb"),
+    }
+    _test_owl_abox_XFAIL("none", expected)
+
+
+def test_owl_abox_XFAIL_inferencing_owlrl() -> None:
+    expected: Set[URIRef] = {
+        URIRef("http://example.org/kb/thing-a-nota"),
+        URIRef("http://example.org/kb/thing-b-notb"),
+        URIRef("http://example.org/kb/thing-nota-suba"),
+        URIRef("http://example.org/kb/thing-notb-subb"),
+    }
+    _test_owl_abox_XFAIL("owlrl", expected)
+
+
+def test_owl_abox_XFAIL_inferencing_rdfs() -> None:
+    expected: Set[URIRef] = {
+        URIRef("http://example.org/kb/thing-a-nota"),
+        URIRef("http://example.org/kb/thing-b-notb"),
+        URIRef("http://example.org/kb/thing-nota-suba"),
+        URIRef("http://example.org/kb/thing-notb-subb"),
+    }
+    _test_owl_abox_XFAIL("rdfs", expected)

@@ -19,7 +19,10 @@ rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-tool
 
 validation_files := \
   distribution_PASS_validation.ttl \
-  distribution_XFAIL_validation.ttl
+  distribution_XFAIL_validation.ttl \
+  owl_abox_XFAIL_inferencing_none_validation.ttl \
+  owl_abox_XFAIL_inferencing_owlrl_validation.ttl \
+  owl_abox_XFAIL_inferencing_rdfs_validation.ttl
 
 all: \
   $(validation_files)
@@ -80,6 +83,74 @@ distribution_XFAIL_validation.ttl: \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
 	    distribution_XFAIL.ttl \
+	    ; rc=$$? ; test 1 -eq $$rc
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+owl_abox_XFAIL_inferencing_none_validation.ttl: \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/shapes/sh-owl-abox.ttl \
+  owl_abox_XFAIL.ttl
+	rm -f __$@ _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && pyshacl \
+	    --format turtle \
+	    --metashacl \
+	    --output __$@ \
+	    --shacl $(top_srcdir)/shapes/sh-owl-abox.ttl \
+	    owl_abox_XFAIL.ttl \
+	    ; rc=$$? ; test 1 -eq $$rc
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+owl_abox_XFAIL_inferencing_owlrl_validation.ttl: \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/shapes/sh-owl-abox.ttl \
+  owl_abox_XFAIL.ttl
+	rm -f __$@ _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && pyshacl \
+	    --format turtle \
+	    --inference owlrl \
+	    --metashacl \
+	    --output __$@ \
+	    --shacl $(top_srcdir)/shapes/sh-owl-abox.ttl \
+	    owl_abox_XFAIL.ttl \
+	    ; rc=$$? ; test 1 -eq $$rc
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+owl_abox_XFAIL_inferencing_rdfs_validation.ttl: \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/shapes/sh-owl-abox.ttl \
+  owl_abox_XFAIL.ttl
+	rm -f __$@ _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && pyshacl \
+	    --format turtle \
+	    --inference rdfs \
+	    --metashacl \
+	    --output __$@ \
+	    --shacl $(top_srcdir)/shapes/sh-owl-abox.ttl \
+	    owl_abox_XFAIL.ttl \
 	    ; rc=$$? ; test 1 -eq $$rc
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \

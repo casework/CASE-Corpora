@@ -1,0 +1,85 @@
+# imports: http://example.org/shapes/owl-abox
+
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/kb>
+	a owl:Ontology ;
+	owl:imports <http://example.org/shapes/owl-abox> ;
+	.
+
+kb:ClassA
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	.
+
+kb:ClassB
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	.
+
+kb:ClassNotA
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	owl:disjointWith kb:ClassA ;
+	.
+
+kb:ClassNotB
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:comment "This class is declared disjoint with kb:ClassB using an owl:AllDisjointClasses individual."@en ;
+	.
+
+kb:ClassSubA
+	a owl:Class ;
+	rdfs:subClassOf kb:ClassA ;
+	.
+
+kb:ClassSubB
+	a owl:Class ;
+	rdfs:subClassOf kb:ClassB ;
+	.
+
+kb:thing-a-nota
+	a
+		kb:ClassA ,
+		kb:ClassNotA
+		;
+	rdfs:comment "This will trigger an error from the declared type kb:ClassA conflicting with kb:ClassNotA."@en ;
+	.
+
+kb:thing-b-notb
+	a
+		kb:ClassB ,
+		kb:ClassNotB
+		;
+	rdfs:comment "This will trigger an error from the declared type kb:ClassB conflicting with kb:ClassNotB."@en ;
+	.
+
+kb:thing-nota-suba
+	a
+		kb:ClassNotA ,
+		kb:ClassSubA
+		;
+	rdfs:comment "This will trigger an error from the inferred type kb:ClassA conflicting with kb:ClassNotA."@en ;
+	.
+
+kb:thing-notb-subb
+	a
+		kb:ClassNotB ,
+		kb:ClassSubB
+		;
+	rdfs:comment "This will trigger an error from the inferred type kb:ClassB conflicting with kb:ClassNotB."@en ;
+	.
+
+[]
+	a owl:AllDisjointClasses ;
+	owl:members (
+		kb:ClassB
+		kb:ClassNotB
+	) ;
+	.
+

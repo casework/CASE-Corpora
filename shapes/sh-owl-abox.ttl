@@ -1,0 +1,56 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-owl-abox: <http://example.org/shapes/owl-abox/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/shapes/owl-abox>
+	a owl:Ontology ;
+	.
+
+sh-owl-abox:disjoint-constraint
+	a sh:SPARQLConstraint ;
+	rdfs:comment
+		"This constraint is given an IRI for the cosmetic benefit of compacting SHACL validation results."@en ,
+		"This constraint was intentionally not written to review subclass hierarchies (e.g. by querying for 'nClassA' being a subclass, possibly transitively, of 'nClassNotA,' using 'a/rdfs:subClassOf*'.  RDFS inferencing may be required to have this shape fully review a graph.  RDFS inferencing is not encoded as a requirement, though it is possible to do so with 'sh:entailment' (see SHACL Specification Section 1.5)."@en
+		;
+	rdfs:seeAlso
+		<http://www.w3.org/ns/entailment/RDFS> ,
+		sh:entailment ,
+		<https://www.w3.org/TR/shacl/#shacl-rdfs>
+		;
+	sh:message "Focus node is a member of two classes that are disjoint with one another: the value node, and {?nNotValue}."@en ;
+	sh:select """
+		PREFIX owl: <http://www.w3.org/2002/07/owl#>
+		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+		SELECT $this ?value ?nNotValue
+		WHERE {
+			$this
+				a
+					?value ,
+					?nNotValue
+					;
+				.
+			{
+				?nNotValue owl:disjointWith ?value .
+			}
+			UNION
+			{
+				?nDisjointedness
+					a owl:AllDisjointClasses ;
+					owl:members/rdf:rest*/rdf:first ?value ;
+					owl:members/rdf:rest+/rdf:first ?nNotValue ;
+					.
+				FILTER ( ?value != ?nNotValue )
+			}
+		}
+	""" ;
+	.
+
+sh-owl-abox:disjoint-shape
+	a sh:NodeShape ;
+	sh:sparql sh-owl-abox:disjoint-constraint ;
+	sh:targetClass owl:Thing ;
+	.
+
