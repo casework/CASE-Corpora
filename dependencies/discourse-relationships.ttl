@@ -1,0 +1,181 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/swan/2.0/discourse-relationships/>
+	a owl:Ontology ;
+	rdfs:label "Discourse relationships vocabulary v. 3.0" ;
+	rdfs:comment "These relationships don't have range and domains defined as they are meant to be reused in different contexts" ;
+	dct:contributor
+		"David Shotton" ,
+		"Elizabeth Wu" ,
+		"Gwen Wong" ,
+		"June Kinoshita" ,
+		"Marco Ocana" ,
+		"Paolo Ciccarese" ,
+		"Tim Clark"
+		;
+	dct:creator <http://www.hcklab.org/foaf.rdf#me> ;
+	dct:date "October 12, 2010" ;
+	dct:format "rdf/xml" ;
+	dct:language "en" ;
+	dct:publisher "Massachusetts General Hospital" ;
+	dct:title "Discourse relationships vocabulary"@en ;
+	owl:versionInfo "3.0" ;
+	.
+
+dct:contributor
+	a owl:AnnotationProperty ;
+	.
+
+dct:creator
+	a owl:AnnotationProperty ;
+	.
+
+dct:date
+	a owl:AnnotationProperty ;
+	.
+
+dct:format
+	a owl:AnnotationProperty ;
+	.
+
+dct:language
+	a owl:AnnotationProperty ;
+	.
+
+dct:publisher
+	a owl:AnnotationProperty ;
+	.
+
+dct:title
+	a owl:AnnotationProperty ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/alternativeTo>
+	a
+		owl:ObjectProperty ,
+		owl:SymmetricProperty
+		;
+	rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/relatesTo> ;
+	rdfs:label "alternativeTo" ;
+	rdfs:comment """It connects two different resources that can be 
+	    		considered alternative interpretations of the same experimental results""" ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/arisesFrom>
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/refersTo> ;
+	rdfs:label "arisesFrom" ;
+	rdfs:comment "Something (question, doubt...) that arises because of something else" ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/consistentWith>
+	a
+		owl:ObjectProperty ,
+		owl:SymmetricProperty
+		;
+	rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/relatesTo> ;
+	rdfs:label "consistentWith" ;
+	rdfs:comment """It expresses consistency between two resources. 
+	    		It is a bidirectional relationship""" ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/inconsistentWith>
+	a
+		owl:ObjectProperty ,
+		owl:SymmetricProperty
+		;
+	rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/relatesTo> ;
+	rdfs:label "inconsistentWith" ;
+	rdfs:comment """It expresses inconsistency between two resources. 
+	    		It is a bidirectional relationship""" ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/motivates>
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/refersTo> ;
+	rdfs:label "motivates" ;
+	rdfs:comment "Something (hypothesis, doubt...) that motivates something else like an experiment" ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsInconsistentEvidence>
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/refersTo> ;
+	rdfs:label "referencesAsInconsistentEvidence" ;
+	rdfs:comment "" ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsRelevantEvidence>
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/refersTo> ;
+	rdfs:label "referencesAsRelevantEvidence" ;
+	rdfs:comment "" ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsSupportiveEvidence>
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/refersTo> ;
+	rdfs:label "referencesAsSupportiveEvidence" ;
+	rdfs:comment "" ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/refersTo>
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/relatesTo> ;
+	rdfs:label "refersTo" ;
+	rdfs:comment """It connects an entity with another entity in an 
+				unidirectional way""" ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/relatesTo>
+	a owl:ObjectProperty ;
+	rdfs:label "relatesTo" ;
+	rdfs:comment """The most generic relationship: it expresses connection 
+			between two resources without specifying the nature of such connection""" ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/relevantTo>
+	a
+		owl:ObjectProperty ,
+		owl:SymmetricProperty
+		;
+	rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/relatesTo> ;
+	rdfs:label "relevantTo" ;
+	rdfs:comment """It expresses the fact that a resource is 
+	    		relevant for another one and vice-versa""" ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/respondsNegativelyTo>
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/respondsTo> ;
+	rdfs:label "respondsNegativelyTo" ;
+	rdfs:comment """It expresses the fact that one entity is talking 
+				    		about another one expressing disagreement""" ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/respondsNeutrallyTo>
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/respondsTo> ;
+	rdfs:label "respondsNeutrallyTo" ;
+	rdfs:comment """It expresses the fact that one entity is 
+				    		talking about another one without expressing agreement or disagreement""" ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/respondsPositivelyTo>
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/respondsTo> ;
+	rdfs:label "respondsPositivelyTo" ;
+	rdfs:comment """It expresses the fact that one entity is talking 
+				    		about another one expressing agreement""" ;
+	.
+
+<http://purl.org/swan/2.0/discourse-relationships/respondsTo>
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/refersTo> ;
+	rdfs:label "respondsTo" ;
+	rdfs:comment "" ;
+	.
+
