@@ -5,10 +5,14 @@ WARNING - The README.md file is generated from README.md.in and various data sou
 
 ## MIME Types
 
+The following device MIME types were found in indexed datasets.
+
 @MIME_TYPES_MD@
 
 
 ## Devices
+
+The following device instances were found in indexed datasets.
 
 @DEVICES_MD@
 
