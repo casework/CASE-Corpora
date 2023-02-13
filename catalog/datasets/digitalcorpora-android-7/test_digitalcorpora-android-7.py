@@ -81,6 +81,24 @@ def test_android7_hash_documented_sources() -> None:
     expected: Set[Tuple[str, str, str, str]] = {
         (
             "Android7-ImageCreationDocumentation.pdf",
+            "blk0_mmcblk0.bin",
+            "MD5",
+            "12a9399bc084d024de2c583031cf836a",
+        ),
+        (
+            "Android7-ImageCreationDocumentation.pdf",
+            "blk0_mmcblk0.bin",
+            "SHA1",
+            "b31f1630816535e769d9886719184a3d96decb27",
+        ),
+        (
+            "Android7-ImageCreationDocumentation.pdf",
+            "blk0_mmcblk0.bin",
+            "SHA256",
+            "6fedd6cd7ca05efbf291ca5b12e1c563322f389b6e6e7a2817e817f01ace78d0",
+        ),
+        (
+            "Android7-ImageCreationDocumentation.pdf",
             "blk32_mmcblk0rpmb.bin",
             "MD5",
             "a26f0b56848b1bdbb350f70141b58098",
@@ -114,6 +132,30 @@ def test_android7_hash_documented_sources() -> None:
             "procdata.zip",
             "SHA256",
             "9d3a582eedfbef8f1572f203d635e318734417f062adfe16fb4adef72ddd9b05",
+        ),
+        (
+            "blk0_mmcblk0.bin",
+            "blk0_mmcblk0.bin",
+            "MD5",
+            "5dafc6668c2c0e6bb3a928f35676d3bd",
+        ),
+        (
+            "blk0_mmcblk0.bin",
+            "blk0_mmcblk0.bin",
+            "SHA1",
+            "a1412779fe63c84c3ae582976d5f052d7bde5928",
+        ),
+        (
+            "blk0_mmcblk0.bin",
+            "blk0_mmcblk0.bin",
+            "SHA256",
+            "50186bce5071ff82b3e4fed1328a4c200b55b6a49e1acce2e6c0aa79544991c4",
+        ),
+        (
+            "blk0_mmcblk0.bin",
+            "blk0_mmcblk0.bin",
+            "SHA512",
+            "d83a2d90e2b17d8f0b74718d1e6ba8a0549576338d81e304caf8c79b9ea3cb734a56b1ad85594a1566703d258516a8fc427127fa30edcd62550430271a9e51f1",
         ),
         (
             "blk32_mmcblk0rpmb.bin",
