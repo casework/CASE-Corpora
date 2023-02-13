@@ -76,6 +76,9 @@ sh-case-corpora-local:InvestigativeAction-Provenance-accompaniment-shape
 
 sh-case-corpora-local:InvestigativeAction-latest-ProvenanceRecord-usage-shape
 	a sh:NodeShape ;
+	rdfs:comment "This shape is deactivated, pending resolution of RDFLib Issue 709."@en ;
+	rdfs:seeAlso <https://github.com/RDFLib/rdflib/issues/709> ;
+	sh:deactivated "true"^^xsd:boolean ;
 	sh:description "This shape defines and implements a CASE-Corpora requirement that when an InvestigativeAction uses multiple provenance records containing the same object that is also input to the action, only the latest provenance record shall be linked if the earlier one contains no descriptive value of other objects that are also inputs to the action."@en ;
 	sh:sparql [
 		sh:message "Focus node uses value node, but value node contributes no additional provenance information over provenance record {$nLatterProvenanceRecord}."@en ;
