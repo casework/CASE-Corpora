@@ -26,6 +26,22 @@ rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-tool
 all: \
   kb.ttl
 
+%.png: \
+  %.dot
+	dot \
+	  -T png \
+	  -o _$@ \
+	  $<
+	mv _$@ $@
+
+%.svg: \
+  %.dot
+	dot \
+	  -T svg \
+	  -o _$@ \
+	  $<
+	mv _$@ $@
+
 .PHONY: \
   check-case_prov_check \
   check-pytest \
@@ -82,22 +98,6 @@ generated-prov.dot: \
 	    _$@ \
 	    generated-prov.ttl \
 	    supplemental.ttl
-	mv _$@ $@
-
-generated-prov.png: \
-  generated-prov.dot
-	dot \
-	  -T png \
-	  -o _$@ \
-	  $<
-	mv _$@ $@
-
-generated-prov.svg: \
-  generated-prov.dot
-	dot \
-	  -T svg \
-	  -o _$@ \
-	  $<
 	mv _$@ $@
 
 generated-prov.ttl: \

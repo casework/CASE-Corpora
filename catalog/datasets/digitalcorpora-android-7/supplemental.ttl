@@ -313,7 +313,7 @@ kb:file-537a55d8-6b4f-441b-a738-f2ee6a0e9136
 
 kb:file-5aad2637-ebad-46dc-8fdb-58a5078f760a
 	a uco-observable:File ;
-	uco-core:description "blk0_mmcblk0.bin" ;
+	uco-core:description "blk0_mmcblk0.bin, as extracted from distribution tarball" ;
 	uco-core:hasFacet
 		kb:content-data-facet-8b3fc9fa-a5d7-4fc9-b26d-66de8a1071e8 ,
 		kb:file-facet-2d6e02e7-6788-4626-918f-1fdbdb8f6241
