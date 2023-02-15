@@ -20,6 +20,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix time: <http://www.w3.org/2006/time#> .
+@prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix uco-time: <https://ontology.unifiedcyberontology.org/uco/time/> .
@@ -168,6 +169,13 @@ drafting:hasQuality
 	rdfs:domain uco-core:UcoObject ;
 	rdfs:range drafting:Quality ;
 	owl:inverseOf drafting:isQualityOf ;
+	.
+
+drafting:isAutomated
+	a owl:DatatypeProperty ;
+	rdfs:domain uco-action:Action ;
+	rdfs:range xsd:boolean ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/448> ;
 	.
 
 drafting:isQualityOf

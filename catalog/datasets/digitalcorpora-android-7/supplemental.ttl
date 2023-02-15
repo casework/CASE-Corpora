@@ -4,10 +4,12 @@
 @prefix kb: <http://example.org/kb/> .
 @prefix orcid: <https://orcid.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
@@ -17,6 +19,45 @@
 @prefix uco-vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:action-541265d6-2a57-476e-bff0-45f512f22bd5
+	a
+		time:ProperInterval ,
+		case-investigation:InvestigativeAction ,
+		uco-observable:ObservableAction
+		;
+	drafting:isAutomated "true"^^xsd:boolean ;
+	prov:wasInformedBy kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	uco-action:instrument kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	uco-action:result
+		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
+		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
+		kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
+		;
+	uco-core:description "Phone images generated" ;
+	.
+
+kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
+	a
+		time:ProperInterval ,
+		case-investigation:InvestigativeAction ,
+		uco-observable:ObservableAction
+		;
+	drafting:isAutomated "true"^^xsd:boolean ;
+	uco-action:instrument kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	uco-action:object
+		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
+		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
+		kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
+		;
+	uco-action:result
+		kb:file-736c63b5-5e15-4a48-b948-13757bae0aae ,
+		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
+		;
+	uco-core:description "Assemble phone imaging log" ;
+	.
 
 kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8
 	a
@@ -345,6 +386,12 @@ kb:file-726a2529-4ea6-413d-80c3-9d137116599f
 		;
 	.
 
+kb:file-736c63b5-5e15-4a48-b948-13757bae0aae
+	a uco-observable:File ;
+	uco-core:description "LG GSM_H790 Nexus 5X.ufd" ;
+	uco-core:hasFacet kb:file-facet-7a709348-6a13-4125-b3b4-59876cdf6848 ;
+	.
+
 kb:file-7eaa3cdc-b603-4d4e-993e-4c1fee76f4eb
 	a uco-observable:File ;
 	uco-core:description "access.html" ;
@@ -506,6 +553,11 @@ kb:file-facet-65c90c48-5c9c-4196-8329-63ccda9157dd
 kb:file-facet-757088eb-9af8-4326-8f13-e8e181e50780
 	a uco-observable:FileFacet ;
 	uco-observable:fileName "thisisdfir_20181204.zip" ;
+	.
+
+kb:file-facet-7a709348-6a13-4125-b3b4-59876cdf6848
+	a uco-observable:FileFacet ;
+	uco-observable:fileName "LG GSM_H790 Nexus 5X.ufd" ;
 	.
 
 kb:file-facet-893984a9-1c45-4a71-84ea-5fca8db4ad9f
@@ -1068,17 +1120,22 @@ kb:investigative-action-6417193e-68e9-4abb-800d-5957bf1126d4
 	.
 
 kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214
-	a case-investigation:InvestigativeAction ;
+	a
+		time:ProperInterval ,
+		case-investigation:InvestigativeAction
+		;
+	time:intervalContains
+		kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ,
+		kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
+		;
 	uco-action:environment kb:operating-system-12dd8ee9-c818-4232-ac8c-1bc7f45bd2ab ;
 	uco-action:instrument kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
-	uco-action:result
-		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
-		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
-		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
-		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
-		;
 	uco-action:startTime "2018-12-06T21:20-05:00"^^xsd:dateTime ;
+	uco-action:subaction
+		kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ,
+		kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
+		;
 	uco-core:description "Phone imaged" ;
 	.
 
@@ -1151,6 +1208,7 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		kb:file-3af91026-4c09-4047-a914-15e75a711ff0 ,
 		kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2 ,
 		kb:file-6bdb403e-f524-48bb-9f5e-4f3d3aaf3f58 ,
+		kb:file-736c63b5-5e15-4a48-b948-13757bae0aae ,
 		kb:file-b4e89da8-dac1-4b4a-b147-63ccf6ee0359 ,
 		kb:file-cf3be54a-2454-42ba-b28f-e17e191cf428 ,
 		kb:file-ffa64022-0e6c-4aec-a5f6-7534e93f2767 ,
@@ -1164,6 +1222,7 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		kb:provenance-record-529f9bf1-c9ca-450c-8311-98c8a800fac5 ,
 		kb:provenance-record-6817102d-d01d-4e4f-899f-63c2590129f3 ,
 		kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97 ,
+		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ,
 		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ,
 		kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30
 		;
@@ -1384,9 +1443,10 @@ kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97
 
 kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
 	a case-investigation:ProvenanceRecord ;
-	uco-core:description "Record of phone imaging process being completed" ;
+	uco-core:description "Record of phone imaging process being completed, including log" ;
 	uco-core:object
 		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
+		kb:file-736c63b5-5e15-4a48-b948-13757bae0aae ,
 		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e
 		;
@@ -1408,6 +1468,16 @@ kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
 kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30
 	a case-investigation:ProvenanceRecord ;
 	uco-core:object kb:file-391f9cc2-5947-4598-a5dc-289fb8bdf170 ;
+	.
+
+kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
+	a case-investigation:ProvenanceRecord ;
+	uco-core:description "Record of phone images being generated" ;
+	uco-core:object
+		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
+		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e
+		;
 	.
 
 kb:provenance-record-ed951e2b-fb93-4cc9-899c-f8d88ec80619

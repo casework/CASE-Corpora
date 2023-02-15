@@ -16,6 +16,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sh-case-corpora: <http://example.org/shapes/case-corpora/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
@@ -168,6 +169,20 @@ drafting:hasQuality-range-shape
 	sh:targetObjectsOf drafting:hasQuality ;
 	.
 
+drafting:isAutomated-domain-shape
+	a sh:NodeShape ;
+	sh:class uco-action:Action ;
+	sh:nodeKind sh:IRI ;
+	sh:targetSubjectsOf drafting:isAutomated ;
+	.
+
+drafting:isAutomated-range-shape
+	a sh:NodeShape ;
+	sh:datatype xsd:boolean ;
+	sh:nodeKind sh:Literal ;
+	sh:targetObjectsOf drafting:isAutomated ;
+	.
+
 drafting:isQualityOf-domain-shape
 	a sh:NodeShape ;
 	sh:class drafting:Quality ;
@@ -241,6 +256,14 @@ sh-case-corpora:hasDownloadURL-range-shape
 		] ;
 	] ;
 	sh:targetObjectsOf case-corpora:hasDownloadURL ;
+	.
+
+uco-action:Action
+	sh:property [
+		a sh:PropertyShape ;
+		sh:maxCount "1"^^xsd:integer ;
+		sh:path drafting:isAutomated ;
+	] ;
 	.
 
 uco-observable:File
