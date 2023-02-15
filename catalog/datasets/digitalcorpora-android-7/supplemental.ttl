@@ -50,7 +50,9 @@ kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
 		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
 		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
-		kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
+		kb:provenance-record-37290c6d-3dc2-4519-a80f-136e73981d8b ,
+		kb:provenance-record-40677878-25d7-48de-b3bc-e8441c632e90 ,
+		kb:provenance-record-9dbe529e-7c04-47e8-ace3-4f3fbbda80e9
 		;
 	uco-action:result
 		kb:file-736c63b5-5e15-4a48-b948-13757bae0aae ,
@@ -281,7 +283,10 @@ kb:file-07e6ff4a-6ca9-43b0-afcf-21c2534755b6
 
 kb:file-0be2be3a-59d3-4452-810b-eefb42e609f2
 	a uco-observable:File ;
-	cito:documents kb:observation-e5c108e4-c0a5-4658-95ed-99171828fcf1 ;
+	cito:documents
+		kb:observation-e5c108e4-c0a5-4658-95ed-99171828fcf1 ,
+		kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a
+		;
 	uco-core:description "blk32_mmcblk0rpmb.bin" ;
 	uco-core:hasFacet
 		kb:content-data-facet-cf9bf525-aeae-489e-823a-5d5cf5db8721 ,
@@ -306,9 +311,11 @@ kb:file-248b96b6-c87d-49da-ab72-b139f43c0b47
 kb:file-2c16fd64-befe-441f-abe4-73a99b4cf154
 	a uco-observable:File ;
 	cito:documents
+		kb:observation-61f71e4d-fa2a-4e76-8c2b-bf2755aab72f ,
 		kb:observation-6c0553fe-84f9-4133-8be1-67d6e3c80d61 ,
 		kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e ,
-		kb:observation-e5c108e4-c0a5-4658-95ed-99171828fcf1
+		kb:observation-e5c108e4-c0a5-4658-95ed-99171828fcf1 ,
+		kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a
 		;
 	uco-core:description "Android7-ImageCreationDocumentation.pdf" ;
 	uco-core:hasFacet
@@ -412,6 +419,11 @@ kb:file-8485852e-8332-4d15-bdb0-e66c7c2d0a30
 
 kb:file-b0fd0b2d-2412-41f2-a624-b42b8e59ddfe
 	a uco-observable:File ;
+	cito:documents
+		kb:observation-46c720c8-5346-4262-800e-5e3780517a92 ,
+		kb:observation-61f71e4d-fa2a-4e76-8c2b-bf2755aab72f ,
+		kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a
+		;
 	uco-core:description "LG GSM_H790 Nexus 5X.ufd" ;
 	uco-core:hasFacet
 		kb:content-data-facet-03f2058f-8178-4a6a-9a78-fdf1d2a116f0 ,
@@ -433,7 +445,10 @@ kb:file-cf3be54a-2454-42ba-b28f-e17e191cf428
 
 kb:file-e18e54c4-3e1a-4a9f-aa42-0dfc300abb57
 	a uco-observable:File ;
-	cito:documents kb:observation-6c0553fe-84f9-4133-8be1-67d6e3c80d61 ;
+	cito:documents
+		kb:observation-61f71e4d-fa2a-4e76-8c2b-bf2755aab72f ,
+		kb:observation-6c0553fe-84f9-4133-8be1-67d6e3c80d61
+		;
 	uco-core:description "procdata.zip" ;
 	uco-core:hasFacet
 		kb:content-data-facet-7382ee80-66a4-42d8-8b98-3d9f8556f63a ,
@@ -867,6 +882,15 @@ kb:hash-916ee388-1f3f-53aa-808c-94a57e969714
 	uco-types:hashValue "0f3a327289dd4e9c5be2da92b4703ea7e33cd311ad5f900f97f618bdb606e0cf"^^xsd:hexBinary ;
 	.
 
+kb:hash-98ef3afe-d295-5e30-9313-8b10af5d3871
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "5a13ae720925e7a8d1367d1cecec1cea5f5ad5753e291887b89e68ae83f49ec7"^^xsd:hexBinary ;
+	.
+
 kb:hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
 	a uco-types:Hash ;
 	uco-types:hashMethod "SHA3-256" ;
@@ -1058,6 +1082,12 @@ kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e
 		;
 	.
 
+kb:instant-000a2775-fa35-411c-af3a-5f53c3e90dd8
+	a time:Instant ;
+	rdfs:comment "This Instant is the time noted in Android7-ImageCreationDocumentation.pdf as when the imaging process was running."@en ;
+	time:inXSDDateTimeStamp "2018-12-06T21:20-05:00"^^xsd:dateTimeStamp ;
+	.
+
 kb:investigative-action-194c4e23-243e-4deb-b8d5-3ce9dce19367
 	a case-investigation:InvestigativeAction ;
 	uco-action:object
@@ -1124,17 +1154,25 @@ kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214
 		time:ProperInterval ,
 		case-investigation:InvestigativeAction
 		;
+	time:inside kb:instant-000a2775-fa35-411c-af3a-5f53c3e90dd8 ;
 	time:intervalContains
 		kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ,
-		kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
+		kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ,
+		kb:observation-46c720c8-5346-4262-800e-5e3780517a92 ,
+		kb:observation-61f71e4d-fa2a-4e76-8c2b-bf2755aab72f ,
+		kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a
 		;
+	uco-action:endTime "2018-12-06T22:45:58-05:00"^^xsd:dateTime ;
 	uco-action:environment kb:operating-system-12dd8ee9-c818-4232-ac8c-1bc7f45bd2ab ;
 	uco-action:instrument kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
-	uco-action:startTime "2018-12-06T21:20-05:00"^^xsd:dateTime ;
+	uco-action:startTime "2018-12-06T21:14:50-05:00"^^xsd:dateTime ;
 	uco-action:subaction
 		kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ,
-		kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
+		kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ,
+		kb:observation-46c720c8-5346-4262-800e-5e3780517a92 ,
+		kb:observation-61f71e4d-fa2a-4e76-8c2b-bf2755aab72f ,
+		kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a
 		;
 	uco-core:description "Phone imaged" ;
 	.
@@ -1272,6 +1310,48 @@ kb:observable-relationship-e1fd52e1-517e-49ee-83c8-8cb007bf8931
 	uco-core:target kb:operating-system-12dd8ee9-c818-4232-ac8c-1bc7f45bd2ab ;
 	.
 
+kb:observation-46c720c8-5346-4262-800e-5e3780517a92
+	a
+		time:ProperInterval ,
+		sosa:Observation ,
+		case-investigation:InvestigativeAction ,
+		uco-observable:Observation
+		;
+	drafting:isAutomated "true"^^xsd:boolean ;
+	sosa:hasFeatureOfInterest kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+	sosa:hasResult kb:hash-98ef3afe-d295-5e30-9313-8b10af5d3871 ;
+	sosa:observedProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
+	uco-action:instrument kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	uco-action:object
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
+		kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
+		;
+	uco-action:result kb:provenance-record-9dbe529e-7c04-47e8-ace3-4f3fbbda80e9 ;
+	uco-core:description "Hash (SHA2-256) blk0_mmcblk0.bin" ;
+	uco-core:name "observe" ;
+	.
+
+kb:observation-61f71e4d-fa2a-4e76-8c2b-bf2755aab72f
+	a
+		time:ProperInterval ,
+		sosa:Observation ,
+		case-investigation:InvestigativeAction ,
+		uco-observable:Observation
+		;
+	drafting:isAutomated "true"^^xsd:boolean ;
+	sosa:hasFeatureOfInterest kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ;
+	sosa:hasResult kb:hash-ee59ab94-5862-5e29-bca5-20a36ee48bf9 ;
+	sosa:observedProperty kb:file-hash-quality-524af4fd-813c-4f8a-aeae-f312f3a13b1d ;
+	uco-action:instrument kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	uco-action:object
+		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
+		kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
+		;
+	uco-action:result kb:provenance-record-40677878-25d7-48de-b3bc-e8441c632e90 ;
+	uco-core:description "Hash (SHA2-256) procdata.zip" ;
+	uco-core:name "observe" ;
+	.
+
 kb:observation-66e7f5a6-b29d-4ca9-9e3f-6d2413daf070
 	a
 		sosa:Observation ,
@@ -1365,6 +1445,27 @@ kb:observation-e5c108e4-c0a5-4658-95ed-99171828fcf1
 	uco-core:name "observe" ;
 	.
 
+kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a
+	a
+		time:ProperInterval ,
+		sosa:Observation ,
+		case-investigation:InvestigativeAction ,
+		uco-observable:Observation
+		;
+	drafting:isAutomated "true"^^xsd:boolean ;
+	sosa:hasFeatureOfInterest kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ;
+	sosa:hasResult kb:hash-ec44c3f3-b6c2-545a-b49d-7e841379de05 ;
+	sosa:observedProperty kb:file-hash-quality-7dd02ccc-19b8-442a-ae4b-daf56f0f2f7b ;
+	uco-action:instrument kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	uco-action:object
+		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
+		kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
+		;
+	uco-action:result kb:provenance-record-37290c6d-3dc2-4519-a80f-136e73981d8b ;
+	uco-core:description "Hash (SHA2-256) blk32_mmcblk0rpmb.bin" ;
+	uco-core:name "observe" ;
+	.
+
 kb:operating-system-12dd8ee9-c818-4232-ac8c-1bc7f45bd2ab
 	a uco-observable:OperatingSystem ;
 	uco-core:hasFacet kb:operating-system-facet-78cb5086-9aea-4c6e-9571-03d98b2e06a5 ;
@@ -1409,9 +1510,21 @@ kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79
 	uco-core:object kb:file-3af91026-4c09-4047-a914-15e75a711ff0 ;
 	.
 
+kb:provenance-record-37290c6d-3dc2-4519-a80f-136e73981d8b
+	a case-investigation:ProvenanceRecord ;
+	uco-core:description "Record of blk32_mmcblk0rpmb.bin being hashed" ;
+	uco-core:object kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ;
+	.
+
 kb:provenance-record-3ec2e8d4-8833-4257-97c2-ba17c6041287
 	a case-investigation:ProvenanceRecord ;
 	uco-core:object kb:file-cf3be54a-2454-42ba-b28f-e17e191cf428 ;
+	.
+
+kb:provenance-record-40677878-25d7-48de-b3bc-e8441c632e90
+	a case-investigation:ProvenanceRecord ;
+	uco-core:description "Record of procdata.zip being hashed" ;
+	uco-core:object kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ;
 	.
 
 kb:provenance-record-529f9bf1-c9ca-450c-8311-98c8a800fac5
@@ -1463,6 +1576,12 @@ kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96
 kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
 	a case-investigation:ProvenanceRecord ;
 	uco-core:object kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8 ;
+	.
+
+kb:provenance-record-9dbe529e-7c04-47e8-ace3-4f3fbbda80e9
+	a case-investigation:ProvenanceRecord ;
+	uco-core:description "Record of blk0_mmcblk0.bin being hashed" ;
+	uco-core:object kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	.
 
 kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30

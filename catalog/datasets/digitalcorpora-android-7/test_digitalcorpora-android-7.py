@@ -134,6 +134,24 @@ def test_android7_hash_documented_sources() -> None:
             "9d3a582eedfbef8f1572f203d635e318734417f062adfe16fb4adef72ddd9b05",
         ),
         (
+            "LG GSM_H790 Nexus 5X.ufd",
+            "blk0_mmcblk0.bin",
+            "SHA256",
+            "5a13ae720925e7a8d1367d1cecec1cea5f5ad5753e291887b89e68ae83f49ec7",
+        ),
+        (
+            "LG GSM_H790 Nexus 5X.ufd",
+            "blk32_mmcblk0rpmb.bin",
+            "SHA256",
+            "b77b5ac1e87dae8050ac63614c22070ab608ac8732fc182f275501050db92ebf",
+        ),
+        (
+            "LG GSM_H790 Nexus 5X.ufd",
+            "procdata.zip",
+            "SHA256",
+            "9d3a582eedfbef8f1572f203d635e318734417f062adfe16fb4adef72ddd9b05",
+        ),
+        (
             "blk0_mmcblk0.bin",
             "blk0_mmcblk0.bin",
             "MD5",
