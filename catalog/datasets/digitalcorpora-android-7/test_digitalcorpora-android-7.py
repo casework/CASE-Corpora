@@ -73,12 +73,83 @@ kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8
         warnings.warn(
             "Some files extracted from distribution tarball are not noted in the tarball's history."
         )
-        # TODO - Uncomment once file nodes are defined and pass case_prov_check.
-        # raise
+        raise
 
 
 def test_android7_hash_documented_sources() -> None:
     expected: Set[Tuple[str, str, str, str]] = {
+        (
+            "Android 7 Hashes.pdf",
+            "LG GSM_H790 Nexus 5X.ufd",
+            "MD5",
+            "632286b2d1c6792ea0c83f59e3e12593",
+        ),
+        (
+            "Android 7 Hashes.pdf",
+            "LG GSM_H790 Nexus 5X.ufd",
+            "SHA1",
+            "28679cfa58e1bba24b44b69ae5d10f67b8fd238a",
+        ),
+        (
+            "Android 7 Hashes.pdf",
+            "LG GSM_H790 Nexus 5X.ufd",
+            "SHA256",
+            "6ed61a9271271203c1dd2fea595776db7ea5a625aed3a389e2213f9369175d51",
+        ),
+        (
+            "Android 7 Hashes.pdf",
+            "blk0_mmcblk0.bin",
+            "MD5",
+            "27b7f7389bb2b99ab1b9be04e3bfbbc0",
+        ),
+        (
+            "Android 7 Hashes.pdf",
+            "blk0_mmcblk0.bin",
+            "SHA1",
+            "d5c32aff637c7cf6a0e3132c7e16302b87c8905f",
+        ),
+        (
+            "Android 7 Hashes.pdf",
+            "blk0_mmcblk0.bin",
+            "SHA256",
+            "5a13ae720925e7a8d1367d1cecec1cea5f5ad5753e291887b89e68ae83f49ec7",
+        ),
+        (
+            "Android 7 Hashes.pdf",
+            "blk32_mmcblk0rpmb.bin",
+            "MD5",
+            "a26f0b56848b1bdbb350f70141b58098",
+        ),
+        (
+            "Android 7 Hashes.pdf",
+            "blk32_mmcblk0rpmb.bin",
+            "SHA1",
+            "d24c21c9e7d8fedc072c367d0f6620909c2f91e6",
+        ),
+        (
+            "Android 7 Hashes.pdf",
+            "blk32_mmcblk0rpmb.bin",
+            "SHA256",
+            "b77b5ac1e87dae8050ac63614c22070ab608ac8732fc182f275501050db92ebf",
+        ),
+        (
+            "Android 7 Hashes.pdf",
+            "procdata.zip",
+            "MD5",
+            "7f19ff80cc7faa8643e85dbb6fb08715",
+        ),
+        (
+            "Android 7 Hashes.pdf",
+            "procdata.zip",
+            "SHA1",
+            "6c576f77616d3b8955b9af7fbcfee0f23d9a1298",
+        ),
+        (
+            "Android 7 Hashes.pdf",
+            "procdata.zip",
+            "SHA256",
+            "9d3a582eedfbef8f1572f203d635e318734417f062adfe16fb4adef72ddd9b05",
+        ),
         (
             "Android7-ImageCreationDocumentation.pdf",
             "blk0_mmcblk0.bin",

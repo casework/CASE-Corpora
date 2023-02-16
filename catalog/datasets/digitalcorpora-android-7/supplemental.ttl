@@ -378,6 +378,14 @@ kb:file-6bdb403e-f524-48bb-9f5e-4f3d3aaf3f58
 
 kb:file-720a0b83-2de7-466d-99f5-9c4cc458c635
 	a uco-observable:File ;
+	cito:documents
+		kb:observation-42f418fa-08d7-47e1-a009-cc1d2d43091a ,
+		kb:observation-61f71e4d-fa2a-4e76-8c2b-bf2755aab72f ,
+		kb:observation-6c0553fe-84f9-4133-8be1-67d6e3c80d61 ,
+		kb:observation-b1ea91ee-5e9a-4b75-979e-e41a56171b66 ,
+		kb:observation-e5c108e4-c0a5-4658-95ed-99171828fcf1 ,
+		kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a
+		;
 	uco-core:description "Android 7 Hashes.pdf" ;
 	uco-core:hasFacet
 		kb:content-data-facet-0f09e882-d74f-40d1-b511-2ced8cae421e ,
@@ -394,7 +402,11 @@ kb:file-726a2529-4ea6-413d-80c3-9d137116599f
 	.
 
 kb:file-736c63b5-5e15-4a48-b948-13757bae0aae
-	a uco-observable:File ;
+	a
+		sosa:FeatureOfInterest ,
+		uco-observable:File
+		;
+	drafting:hasQuality kb:file-hash-quality-3c9e77da-3dc0-41e8-a537-428f8a873a9b ;
 	uco-core:description "LG GSM_H790 Nexus 5X.ufd" ;
 	uco-core:hasFacet kb:file-facet-7a709348-6a13-4125-b3b4-59876cdf6848 ;
 	.
@@ -435,6 +447,12 @@ kb:file-b4e89da8-dac1-4b4a-b147-63ccf6ee0359
 	a uco-observable:File ;
 	uco-core:description "mydata~1543946597209.zip" ;
 	uco-core:hasFacet kb:file-facet-544da1c6-61f3-4ccb-91ea-96f1d6fd676f ;
+	.
+
+kb:file-cee5a02b-56a7-4ad6-9e78-d297e6b92517
+	a uco-observable:File ;
+	uco-core:description "Android 7 Hashes.pdf" ;
+	uco-core:hasFacet kb:file-facet-8218caa0-e855-4436-adf4-46cd0b66548c ;
 	.
 
 kb:file-cf3be54a-2454-42ba-b28f-e17e191cf428
@@ -575,6 +593,11 @@ kb:file-facet-7a709348-6a13-4125-b3b4-59876cdf6848
 	uco-observable:fileName "LG GSM_H790 Nexus 5X.ufd" ;
 	.
 
+kb:file-facet-8218caa0-e855-4436-adf4-46cd0b66548c
+	a uco-observable:FileFacet ;
+	uco-observable:fileName "Android 7 Hashes.pdf" ;
+	.
+
 kb:file-facet-893984a9-1c45-4a71-84ea-5fca8db4ad9f
 	a uco-observable:FileFacet ;
 	uco-observable:fileName "Android 7 Hashes.pdf" ;
@@ -636,6 +659,10 @@ kb:file-ffa64022-0e6c-4aec-a5f6-7534e93f2767
 	uco-core:hasFacet kb:file-facet-3edb4ab4-5e95-410e-ab17-43d50def642d ;
 	.
 
+kb:file-hash-quality-3c9e77da-3dc0-41e8-a537-428f8a873a9b
+	a drafting:FileHashQuality ;
+	.
+
 kb:file-hash-quality-524af4fd-813c-4f8a-aeae-f312f3a13b1d
 	a drafting:FileHashQuality ;
 	.
@@ -666,6 +693,15 @@ kb:hash-01abf01d-8653-5b08-a09d-0256aaeacd6f
 	uco-types:hashValue "d24c21c9e7d8fedc072c367d0f6620909c2f91e6"^^xsd:hexBinary ;
 	.
 
+kb:hash-03762732-e6d2-5087-91dc-fd4a8f1bfae7
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "d5c32aff637c7cf6a0e3132c7e16302b87c8905f"^^xsd:hexBinary ;
+	.
+
 kb:hash-06903043-3b24-57e8-997d-6e5acd63ad8f
 	a uco-types:Hash ;
 	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
@@ -673,7 +709,10 @@ kb:hash-06903043-3b24-57e8-997d-6e5acd63ad8f
 	.
 
 kb:hash-0f7f93b0-52c9-57d0-862a-a3da6d2cd31c
-	a uco-types:Hash ;
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
 	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "28679cfa58e1bba24b44b69ae5d10f67b8fd238a"^^xsd:hexBinary ;
 	.
@@ -790,7 +829,10 @@ kb:hash-5ff19192-624f-5404-b514-b1131fe40eda
 	.
 
 kb:hash-6259f211-75b2-55ec-bd0d-1038bedc8636
-	a uco-types:Hash ;
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
 	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "6ed61a9271271203c1dd2fea595776db7ea5a625aed3a389e2213f9369175d51"^^xsd:hexBinary ;
 	.
@@ -952,7 +994,10 @@ kb:hash-bf470f1b-c322-57d3-980a-090a94243496
 	.
 
 kb:hash-d2a3eb04-ccbf-597a-b118-7adf77b452a1
-	a uco-types:Hash ;
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
 	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "632286b2d1c6792ea0c83f59e3e12593"^^xsd:hexBinary ;
 	.
@@ -1000,6 +1045,15 @@ kb:hash-e415c67c-8d3d-5881-9728-660a9cda44d8
 		;
 	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "a26f0b56848b1bdbb350f70141b58098"^^xsd:hexBinary ;
+	.
+
+kb:hash-e4536c43-bea6-55e6-ae89-5c4216397633
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "27b7f7389bb2b99ab1b9be04e3bfbbc0"^^xsd:hexBinary ;
 	.
 
 kb:hash-e920bd30-c487-5520-97bb-9924767cd60d
@@ -1086,6 +1140,30 @@ kb:instant-000a2775-fa35-411c-af3a-5f53c3e90dd8
 	a time:Instant ;
 	rdfs:comment "This Instant is the time noted in Android7-ImageCreationDocumentation.pdf as when the imaging process was running."@en ;
 	time:inXSDDateTimeStamp "2018-12-06T21:20-05:00"^^xsd:dateTimeStamp ;
+	.
+
+kb:investigative-action-0254e206-045c-48aa-b7e3-41c71685400a
+	a
+		case-investigation:InvestigativeAction ,
+		uco-observable:Observation
+		;
+	uco-action:object
+		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
+		kb:file-736c63b5-5e15-4a48-b948-13757bae0aae ,
+		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
+		kb:provenance-record-1fd441e5-e7c6-4610-aeaa-3530aa37873c ,
+		kb:provenance-record-27610dc7-3dc7-4d57-8143-629c72fb6be7 ,
+		kb:provenance-record-8cc02f8e-66be-4166-9055-9cc96635e5a8 ,
+		kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8
+		;
+	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:result
+		kb:file-cee5a02b-56a7-4ad6-9e78-d297e6b92517 ,
+		kb:provenance-record-5bd7940a-0618-4f0e-b641-d24d683f704b
+		;
+	uco-core:description "Document phone imaging process's file hashes" ;
+	uco-core:name "observe" ;
 	.
 
 kb:investigative-action-194c4e23-243e-4deb-b8d5-3ce9dce19367
@@ -1248,6 +1326,7 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		kb:file-6bdb403e-f524-48bb-9f5e-4f3d3aaf3f58 ,
 		kb:file-736c63b5-5e15-4a48-b948-13757bae0aae ,
 		kb:file-b4e89da8-dac1-4b4a-b147-63ccf6ee0359 ,
+		kb:file-cee5a02b-56a7-4ad6-9e78-d297e6b92517 ,
 		kb:file-cf3be54a-2454-42ba-b28f-e17e191cf428 ,
 		kb:file-ffa64022-0e6c-4aec-a5f6-7534e93f2767 ,
 		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
@@ -1258,9 +1337,10 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79 ,
 		kb:provenance-record-3ec2e8d4-8833-4257-97c2-ba17c6041287 ,
 		kb:provenance-record-529f9bf1-c9ca-450c-8311-98c8a800fac5 ,
+		kb:provenance-record-5bd7940a-0618-4f0e-b641-d24d683f704b ,
 		kb:provenance-record-6817102d-d01d-4e4f-899f-63c2590129f3 ,
 		kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97 ,
-		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ,
+		kb:provenance-record-8cc02f8e-66be-4166-9055-9cc96635e5a8 ,
 		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ,
 		kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30
 		;
@@ -1308,6 +1388,29 @@ kb:observable-relationship-e1fd52e1-517e-49ee-83c8-8cb007bf8931
 	uco-core:kindOfRelationship "Used_Operating_System" ;
 	uco-core:source kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	uco-core:target kb:operating-system-12dd8ee9-c818-4232-ac8c-1bc7f45bd2ab ;
+	.
+
+kb:observation-42f418fa-08d7-47e1-a009-cc1d2d43091a
+	a
+		sosa:Observation ,
+		case-investigation:InvestigativeAction ,
+		uco-observable:Observation
+		;
+	sosa:hasFeatureOfInterest kb:file-736c63b5-5e15-4a48-b948-13757bae0aae ;
+	sosa:hasResult
+		kb:hash-0f7f93b0-52c9-57d0-862a-a3da6d2cd31c ,
+		kb:hash-6259f211-75b2-55ec-bd0d-1038bedc8636 ,
+		kb:hash-d2a3eb04-ccbf-597a-b118-7adf77b452a1
+		;
+	sosa:observedProperty kb:file-hash-quality-3c9e77da-3dc0-41e8-a537-428f8a873a9b ;
+	uco-action:object
+		kb:file-736c63b5-5e15-4a48-b948-13757bae0aae ,
+		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
+		;
+	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:result kb:provenance-record-8cc02f8e-66be-4166-9055-9cc96635e5a8 ;
+	uco-core:description "Hash LG GSM_H790 Nexus 5X.ufd" ;
+	uco-core:name "observe" ;
 	.
 
 kb:observation-46c720c8-5346-4262-800e-5e3780517a92
@@ -1418,6 +1521,29 @@ kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e
 		;
 	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	uco-action:result kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39 ;
+	uco-core:description "Hash blk0_mmcblk0.bin" ;
+	uco-core:name "observe" ;
+	.
+
+kb:observation-b1ea91ee-5e9a-4b75-979e-e41a56171b66
+	a
+		sosa:Observation ,
+		case-investigation:InvestigativeAction ,
+		uco-observable:Observation
+		;
+	sosa:hasFeatureOfInterest kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+	sosa:hasResult
+		kb:hash-03762732-e6d2-5087-91dc-fd4a8f1bfae7 ,
+		kb:hash-98ef3afe-d295-5e30-9313-8b10af5d3871 ,
+		kb:hash-e4536c43-bea6-55e6-ae89-5c4216397633
+		;
+	sosa:observedProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
+	uco-action:object
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
+		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
+		;
+	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:result kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8 ;
 	uco-core:description "Hash blk0_mmcblk0.bin" ;
 	uco-core:name "observe" ;
 	.
@@ -1533,6 +1659,11 @@ kb:provenance-record-529f9bf1-c9ca-450c-8311-98c8a800fac5
 	uco-core:object kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	.
 
+kb:provenance-record-5bd7940a-0618-4f0e-b641-d24d683f704b
+	a case-investigation:ProvenanceRecord ;
+	uco-core:object kb:file-cee5a02b-56a7-4ad6-9e78-d297e6b92517 ;
+	.
+
 kb:provenance-record-6817102d-d01d-4e4f-899f-63c2590129f3
 	a case-investigation:ProvenanceRecord ;
 	uco-core:object kb:file-6bdb403e-f524-48bb-9f5e-4f3d3aaf3f58 ;
@@ -1563,6 +1694,12 @@ kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
 		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e
 		;
+	.
+
+kb:provenance-record-8cc02f8e-66be-4166-9055-9cc96635e5a8
+	a case-investigation:ProvenanceRecord ;
+	uco-core:description "Record of LG GSM_H790 Nexus 5X.ufd being hashed" ;
+	uco-core:object kb:file-736c63b5-5e15-4a48-b948-13757bae0aae ;
 	.
 
 kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96
@@ -1597,6 +1734,12 @@ kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
 		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e
 		;
+	.
+
+kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8
+	a case-investigation:ProvenanceRecord ;
+	uco-core:description "Record of blk0_mmcblk0.bin being hashed" ;
+	uco-core:object kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	.
 
 kb:provenance-record-ed951e2b-fb93-4cc9-899c-f8d88ec80619
