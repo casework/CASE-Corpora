@@ -61,6 +61,40 @@ kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
 	uco-core:description "Assemble phone imaging log" ;
 	.
 
+kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853
+	a
+		sosa:Actuation ,
+		case-investigation:InvestigativeAction ,
+		uco-observable:ObservableAction
+		;
+	sosa:actsOnProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
+	sosa:hasFeatureOfInterest kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+	uco-action:object
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
+		kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
+		;
+	uco-action:performer kb:contact-00000000-0000-0000-0000-000000000000 ;
+	uco-action:result kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772 ;
+	uco-core:description "TODO - undocumented modification to contents of blk0_mmcblk0.bin" ;
+	.
+
+kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f
+	a
+		sosa:Actuation ,
+		case-investigation:InvestigativeAction ,
+		uco-observable:ObservableAction
+		;
+	sosa:actsOnProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
+	sosa:hasFeatureOfInterest kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+	uco-action:object
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
+		kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8
+		;
+	uco-action:performer kb:contact-00000000-0000-0000-0000-000000000000 ;
+	uco-action:result kb:provenance-record-949cf353-d9c9-4513-a4b8-6a1c95243688 ;
+	uco-core:description "TODO - undocumented modification to contents of blk0_mmcblk0.bin" ;
+	.
+
 kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8
 	a
 		sosa:FeatureOfInterest ,
@@ -1471,7 +1505,7 @@ kb:observation-66e7f5a6-b29d-4ca9-9e3f-6d2413daf070
 	sosa:observedProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
 	uco-action:object
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
-		kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
+		kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772
 		;
 	uco-action:performer orcid:0000-0002-3771-570X ;
 	uco-action:result kb:provenance-record-529f9bf1-c9ca-450c-8311-98c8a800fac5 ;
@@ -1517,7 +1551,7 @@ kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e
 	sosa:observedProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
 	uco-action:object
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
-		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
+		kb:provenance-record-949cf353-d9c9-4513-a4b8-6a1c95243688
 		;
 	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	uco-action:result kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39 ;
@@ -1710,6 +1744,12 @@ kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96
 		;
 	.
 
+kb:provenance-record-949cf353-d9c9-4513-a4b8-6a1c95243688
+	a case-investigation:ProvenanceRecord ;
+	uco-core:description "Record of undocumented modification to blk0_mmcblk0.bin" ;
+	uco-core:object kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+	.
+
 kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
 	a case-investigation:ProvenanceRecord ;
 	uco-core:object kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8 ;
@@ -1724,6 +1764,12 @@ kb:provenance-record-9dbe529e-7c04-47e8-ace3-4f3fbbda80e9
 kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30
 	a case-investigation:ProvenanceRecord ;
 	uco-core:object kb:file-391f9cc2-5947-4598-a5dc-289fb8bdf170 ;
+	.
+
+kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772
+	a case-investigation:ProvenanceRecord ;
+	uco-core:description "Record of undocumented modification to blk0_mmcblk0.bin" ;
+	uco-core:object kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	.
 
 kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
