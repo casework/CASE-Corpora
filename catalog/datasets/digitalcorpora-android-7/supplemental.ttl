@@ -294,10 +294,23 @@ kb:content-data-facet-ecd90088-8a21-4727-b9e1-b0080d4672b6
 	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
 	.
 
+kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+	a drafting:device-class-8ccd9a51-6106-4afa-a127-24803ed58631 ;
+	uco-core:hasFacet kb:device-facet-da4dcc36-e24c-487e-8b76-2026b3938320 ;
+	.
+
 kb:device-facet-7142ef6d-cf42-4b70-9798-2ea96414169d
 	a uco-observable:DeviceFacet ;
 	uco-observable:manufacturer wd:Q5058279 ;
 	uco-observable:model "Cellebrite UFED 4PC" ;
+	.
+
+kb:device-facet-da4dcc36-e24c-487e-8b76-2026b3938320
+	a uco-observable:DeviceFacet ;
+	uco-observable:deviceType "LG Nexus 5X" ;
+	uco-observable:manufacturer wd:Q162345 ;
+	uco-observable:model "LG-H790" ;
+	uco-observable:serialNumber "007289511f431f6d" ;
 	.
 
 kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee
@@ -402,6 +415,11 @@ kb:file-5aad2637-ebad-46dc-8fdb-58a5078f760a
 		kb:content-data-facet-8b3fc9fa-a5d7-4fc9-b26d-66de8a1071e8 ,
 		kb:file-facet-2d6e02e7-6788-4626-918f-1fdbdb8f6241
 		;
+	.
+
+kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b
+	a uco-observable:File ;
+	uco-core:description "Stock Android image from Google" ;
 	.
 
 kb:file-6bdb403e-f524-48bb-9f5e-4f3d3aaf3f58
@@ -1303,6 +1321,17 @@ kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f
 	uco-core:description "Upload to Digital Corpora" ;
 	.
 
+kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25
+	a case-investigation:InvestigativeAction ;
+	uco-action:object
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b
+		;
+	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:result kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+	uco-core:description "Wipe device and restore phone to factory default" ;
+	.
+
 kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d
 	a
 		case-investigation:InvestigativeAction ,
@@ -1396,6 +1425,16 @@ kb:investigative-action-aa5026fa-a651-4cfd-9ff0-a6354aa70ec5
 	uco-core:description "Download Google Takeout data for Instagram" ;
 	.
 
+kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429
+	a case-investigation:InvestigativeAction ;
+	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:result
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b
+		;
+	uco-core:description "Phone entered into chain of custody" ;
+	.
+
 kb:investigative-action-b8273ac6-f091-40b0-8346-1544df69f093
 	a case-investigation:InvestigativeAction ;
 	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
@@ -1414,6 +1453,16 @@ kb:investigative-action-d254e096-3f87-4a04-97e6-e1e6b52c6766
 		kb:provenance-record-3ec2e8d4-8833-4257-97c2-ba17c6041287
 		;
 	uco-core:description "Download Google Takeout data for Twitter" ;
+	.
+
+kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228
+	a case-investigation:InvestigativeAction ;
+	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:result
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe
+		;
+	uco-core:description "Retrieve Android image from Google" ;
 	.
 
 kb:observable-relationship-e1fd52e1-517e-49ee-83c8-8cb007bf8931
@@ -1632,10 +1681,22 @@ kb:operating-system-12dd8ee9-c818-4232-ac8c-1bc7f45bd2ab
 	uco-core:name "Cellebrite UFED 4PC" ;
 	.
 
+kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4
+	a uco-observable:OperatingSystem ;
+	uco-core:hasFacet kb:operating-system-facet-d79d75c8-7740-4c29-b173-2b94d012637c ;
+	uco-core:name "Android Nougat" ;
+	.
+
 kb:operating-system-facet-78cb5086-9aea-4c6e-9571-03d98b2e06a5
 	a uco-observable:OperatingSystemFacet ;
 	uco-observable:manufacturer wd:Q5058279 ;
 	uco-observable:version "7.10.1.1080" ;
+	.
+
+kb:operating-system-facet-d79d75c8-7740-4c29-b173-2b94d012637c
+	a uco-observable:OperatingSystemFacet ;
+	uco-observable:manufacturer wd:Q95 ;
+	uco-observable:version "7.1.2" ;
 	.
 
 kb:person-eab92237-467b-4977-959f-db67afdddee5
@@ -1663,6 +1724,11 @@ kb:provenance-record-27610dc7-3dc7-4d57-8143-629c72fb6be7
 	a case-investigation:ProvenanceRecord ;
 	uco-core:description "Record of procdata.zip being hashed" ;
 	uco-core:object kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ;
+	.
+
+kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe
+	a case-investigation:ProvenanceRecord ;
+	uco-core:object kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
 	.
 
 kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79
@@ -1772,6 +1838,17 @@ kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772
 	uco-core:object kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	.
 
+kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b
+	a case-investigation:ProvenanceRecord ;
+	uco-core:object kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+	.
+
+kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+	a case-investigation:ProvenanceRecord ;
+	uco-core:description "Record of phone having been wiped and restored to factory default" ;
+	uco-core:object kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+	.
+
 kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
 	a case-investigation:ProvenanceRecord ;
 	uco-core:description "Record of phone images being generated" ;
@@ -1779,6 +1856,14 @@ kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
 		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
 		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e
+		;
+	.
+
+kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+	a case-investigation:ProvenanceRecord ;
+	uco-core:object
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4
 		;
 	.
 
@@ -1805,6 +1890,22 @@ kb:provenance-record-ed951e2b-fb93-4cc9-899c-f8d88ec80619
 		kb:file-e18e54c4-3e1a-4a9f-aa42-0dfc300abb57 ,
 		kb:file-e79f9e87-db71-460f-8638-5164dba05e3c
 		;
+	.
+
+kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b
+	a case-investigation:InvestigativeAction ;
+	uco-action:object
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:result
+		kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4 ,
+		kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+		;
+	uco-core:description "Install Android" ;
 	.
 
 kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879

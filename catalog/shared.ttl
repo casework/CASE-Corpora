@@ -21,6 +21,11 @@ kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5
 	skos:prefLabel "Digital Corpora" ;
 	.
 
+wd:Q162345
+	a uco-identity:Organization ;
+	uco-core:name "LG Electronics" ;
+	.
+
 wd:Q20716
 	a uco-identity:Organization ;
 	uco-core:name "Samsung" ;
