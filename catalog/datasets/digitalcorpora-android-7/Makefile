@@ -31,6 +31,15 @@ README.md: \
 	  > _$@
 	mv _$@ $@
 
+# This file is not retained, instead being manually integrated into supplemental.ttl.
+apps.ttl: \
+  apps.tsv \
+  apps_ttl.py
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 apps_ttl.py \
+	    _$@
+	mv _$@ $@
+
 # Augment generic target
 figures: \
   filtered-blk0_mmcblk0.bin.activities-entities.svg \
