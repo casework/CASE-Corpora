@@ -33,6 +33,7 @@ dependent_ontology_files := \
   dublin_core_type.ttl \
   foaf.ttl \
   skos.ttl \
+  time.ttl \
   vcard.ttl
 
 rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar
@@ -193,6 +194,19 @@ skos.ttl:
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format rdf-xml \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+time.ttl:
+	wget \
+	  --output-document=__$@ \
+	  http://www.w3.org/2006/time
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
 	  --source __$@ \
 	  --target-format turtle \
 	  --target _$@
