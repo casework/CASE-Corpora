@@ -1,3 +1,4 @@
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix cito: <http://purl.org/spar/cito/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
@@ -2057,7 +2058,7 @@ kb:provenance-record-ed951e2b-fb93-4cc9-899c-f8d88ec80619
 	.
 
 kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b
-	a case-investigation:InvestigativeAction ;
+	a case-corpora:SeedingAction ;
 	uco-action:object
 		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
 		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,

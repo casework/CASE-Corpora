@@ -7,6 +7,7 @@
 # imports: https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl
 
 @prefix case-corpora: <http://example.org/ontology/case-corpora/> .
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix cito: <http://purl.org/spar/cito/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -74,6 +75,15 @@ case-corpora:IANAMediaType
 		dcterms:format ,
 		<https://github.com/ucoProject/UCO/issues/363>
 		;
+	.
+
+case-corpora:SeedingAction
+	a owl:Class ;
+	rdfs:subClassOf
+		case-investigation:InvestigativeAction ,
+		uco-observable:ObservableAction
+		;
+	rdfs:comment "A seeding action is an action taken during data set population with intention to create observable artifacts and record their derivation chain."@en ;
 	.
 
 case-corpora:WebPage
