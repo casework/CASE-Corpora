@@ -44,6 +44,12 @@ sh-dcterms:contributor-suggested-range-shape
 	sh:targetObjectsOf dcterms:contributor ;
 	.
 
+sh-dcterms:created-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:Literal ;
+	sh:targetObjectsOf dcterms:created ;
+	.
+
 sh-dcterms:creator-suggested-range-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
@@ -121,6 +127,14 @@ sh-dcterms:language-suggested-range-shape
 	sh:targetObjectsOf dcterms:language ;
 	.
 
+sh-dcterms:license-suggested-range-shape
+	a sh:NodeShape ;
+	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
+	sh:class dcterms:LicenseDocument ;
+	sh:severity sh:Info ;
+	sh:targetObjectsOf dcterms:license ;
+	.
+
 sh-dcterms:modified-range-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified> ;
@@ -140,6 +154,14 @@ sh-dcterms:relation-shape
 	a sh:NodeShape ;
 	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
 	sh:targetSubjectsOf dcterms:relation ;
+	.
+
+sh-dcterms:rights-suggested-range-shape
+	a sh:NodeShape ;
+	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
+	sh:class dcterms:RightsStatement ;
+	sh:severity sh:Info ;
+	sh:targetObjectsOf dcterms:rights ;
 	.
 
 sh-dcterms:subject-shape
