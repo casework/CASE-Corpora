@@ -7,6 +7,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sh-case-corpora-local: <http://example.org/shapes/case-corpora-local/> .
+@prefix sh-dcterms: <http://example.org/shapes/dcterms/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
@@ -146,6 +147,9 @@ sh-case-corpora-local:InvestigativeAction-Provenance-accompaniment-shape
 
 sh-case-corpora-local:InvestigativeAction-latest-ProvenanceRecord-usage-shape
 	a sh:NodeShape ;
+	rdfs:comment "This shape is deactivated, pending resolution of RDFLib Issue 709."@en ;
+	rdfs:seeAlso <https://github.com/RDFLib/rdflib/issues/709> ;
+	sh:deactivated "true"^^xsd:boolean ;
 	sh:description "This shape defines and implements a CASE-Corpora requirement that when an InvestigativeAction uses multiple provenance records containing the same object that is also input to the action, only the latest provenance record shall be linked if the earlier one contains no descriptive value of other objects that are also inputs to the action."@en ;
 	sh:sparql [
 		sh:message "Focus node uses value node, but value node contributes no additional provenance information over provenance record {$nLatterProvenanceRecord}."@en ;
@@ -288,6 +292,21 @@ sh-case-corpora-local:rdf-subject-shape
 	sh:message "rdf:Statements are believed not compatible with OWL 2 DL."@en ;
 	sh:path rdf:subject ;
 	sh:targetSubjectsOf rdf:subject ;
+	.
+
+sh-dcterms:contributor-suggested-range-shape
+	rdfs:comment "Deactivated due to requiring RDFS inferencing enabled to work with metadata attached to several upstream ontologies."@en ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-dcterms:creator-suggested-range-shape
+	rdfs:comment "Deactivated due to requiring RDFS inferencing enabled to work with metadata attached to several upstream ontologies."@en ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-dcterms:publisher-suggested-range-shape
+	rdfs:comment "Deactivated due to requiring RDFS inferencing enabled to work with metadata attached to several upstream ontologies."@en ;
+	sh:deactivated "true"^^xsd:boolean ;
 	.
 
 uco-core:UcoThing-identifier-regex-shape

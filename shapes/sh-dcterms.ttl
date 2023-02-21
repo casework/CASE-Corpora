@@ -36,6 +36,22 @@ sh-dcterms:conformsTo-suggested-range-shape
 	sh:targetObjectsOf dcterms:conformsTo ;
 	.
 
+sh-dcterms:contributor-suggested-range-shape
+	a sh:NodeShape ;
+	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
+	sh:class dcterms:Agent ;
+	sh:severity sh:Info ;
+	sh:targetObjectsOf dcterms:contributor ;
+	.
+
+sh-dcterms:creator-suggested-range-shape
+	a sh:NodeShape ;
+	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
+	sh:class dcterms:Agent ;
+	sh:severity sh:Info ;
+	sh:targetObjectsOf dcterms:creator ;
+	.
+
 sh-dcterms:date-range-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:Literal ;
@@ -114,10 +130,8 @@ sh-dcterms:modified-range-shape
 
 sh-dcterms:publisher-suggested-range-shape
 	a sh:NodeShape ;
-	rdfs:comment "Deactivated due to requiring RDFS inferencing enabled to work with metadata attached to several upstream ontologies."@en ;
 	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
 	sh:class dcterms:Agent ;
-	sh:deactivated "true"^^xsd:boolean ;
 	sh:severity sh:Info ;
 	sh:targetObjectsOf dcterms:publisher ;
 	.
