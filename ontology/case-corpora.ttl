@@ -1,9 +1,11 @@
+# imports: http://purl.org/spar/cito/2018-02-16
 # imports: http://www.w3.org/2006/vcard/ns
 # imports: http://www.w3.org/ns/dcat
 # imports: http://xmlns.com/foaf/0.1/
 # imports: https://ontology.caseontology.org/case/case/1.1.0
 
 @prefix case-corpora: <http://example.org/ontology/case-corpora/> .
+@prefix cito: <http://purl.org/spar/cito/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -21,6 +23,7 @@
 	a owl:Ontology ;
 	rdfs:comment "This ontology serves to join the versions of CASE and DCAT used to populate CASE-Corpora, bringing analogous properties and classes together."@en ;
 	owl:imports
+		cito:2018-02-16 ,
 		<http://www.w3.org/2006/vcard/ns> ,
 		<http://www.w3.org/ns/dcat> ,
 		<http://xmlns.com/foaf/0.1/> ,
