@@ -6,6 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sh-case-corpora-local: <http://example.org/shapes/case-corpora-local/> .
+@prefix sh-dcterms: <http://example.org/shapes/dcterms/> .
 @prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
@@ -169,6 +170,21 @@ sh-case-corpora-local:rdf-subject-shape
 	sh:message "rdf:Statements are believed not compatible with OWL 2 DL."@en ;
 	sh:path rdf:subject ;
 	sh:targetSubjectsOf rdf:subject ;
+	.
+
+sh-dcterms:contributor-suggested-range-shape
+	rdfs:comment "Deactivated due to requiring RDFS inferencing enabled to work with metadata attached to several upstream ontologies."@en ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-dcterms:creator-suggested-range-shape
+	rdfs:comment "Deactivated due to requiring RDFS inferencing enabled to work with metadata attached to several upstream ontologies."@en ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-dcterms:publisher-suggested-range-shape
+	rdfs:comment "Deactivated due to requiring RDFS inferencing enabled to work with metadata attached to several upstream ontologies."@en ;
+	sh:deactivated "true"^^xsd:boolean ;
 	.
 
 uco-core:UcoThing-identifier-regex-shape
