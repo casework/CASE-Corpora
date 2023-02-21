@@ -13,6 +13,18 @@
 	owl:imports <http://purl.org/dc/elements/1.1/> ;
 	.
 
+sh-dc:contributor-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:contributor ;
+	.
+
+sh-dc:creator-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:creator ;
+	.
+
 sh-dc:date-shape
 	a sh:NodeShape ;
 	rdfs:comment "This property has no implemented restrictions."@en ;
@@ -53,6 +65,12 @@ sh-dc:relation-shape
 	a sh:NodeShape ;
 	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
 	sh:targetSubjectsOf dc:relation ;
+	.
+
+sh-dc:rights-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:rights ;
 	.
 
 sh-dc:subject-shape
