@@ -304,8 +304,18 @@ sh-dcterms:creator-suggested-range-shape
 	sh:deactivated "true"^^xsd:boolean ;
 	.
 
+sh-dcterms:license-suggested-range-shape
+	rdfs:comment "Deactivated due to usage pattern of property in upstream ontologies."@en ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
 sh-dcterms:publisher-suggested-range-shape
 	rdfs:comment "Deactivated due to requiring RDFS inferencing enabled to work with metadata attached to several upstream ontologies."@en ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-dcterms:rights-suggested-range-shape
+	rdfs:comment "Deactivated due to usage pattern of property in upstream ontologies."@en ;
 	sh:deactivated "true"^^xsd:boolean ;
 	.
 

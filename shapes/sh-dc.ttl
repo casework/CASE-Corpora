@@ -55,6 +55,12 @@ sh-dc:relation-shape
 	sh:targetSubjectsOf dc:relation ;
 	.
 
+sh-dc:rights-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dc:rights ;
+	.
+
 sh-dc:subject-shape
 	a sh:NodeShape ;
 	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
