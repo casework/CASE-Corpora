@@ -1,5 +1,70 @@
+@prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f
+	a prov:Activity ;
+	rdfs:comment "Upload to Digital Corpora" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	.
+
+kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5
+	a prov:Agent ;
+	.
+
+kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+	] ;
+	prov:wasAttributedTo kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+	.
+
+<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+	] ;
+	prov:wasAttributedTo kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+	.
 

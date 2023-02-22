@@ -1,6 +1,7 @@
 # imports: http://example.org/shapes/case-corpora-local
 
 @prefix case-corpora: <http://example.org/ontology/case-corpora/> .
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
@@ -12,6 +13,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
@@ -296,6 +298,30 @@ kb:hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
 	uco-types:hashValue "50a015b0c65c61feb81e77e0d2adcbf84d2f8352b2e1c46f27fb5f4816546751"^^xsd:hexBinary ;
 	.
 
+kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f
+	a
+		prov:Activity ,
+		case-investigation:InvestigativeAction
+		;
+	rdfs:comment "Upload to Digital Corpora" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	uco-action:performer kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	uco-action:result
+		kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566 ,
+		<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
+		;
+	uco-core:description "Upload to Digital Corpora" ;
+	.
+
 kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e
 	a org:Organization ;
 	skos:prefLabel "The CASE Community" ;
@@ -307,8 +333,37 @@ kb:organization-6ee3224c-c27c-4a8c-8a64-27bcff396e53
 	.
 
 kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5
-	a org:Organization ;
+	a
+		org:Organization ,
+		prov:Agent
+		;
 	skos:prefLabel "Digital Corpora" ;
+	.
+
+kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566
+	a
+		prov:Collection ,
+		prov:Entity ,
+		case-investigation:ProvenanceRecord
+		;
+	prov:hadMember <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+	] ;
+	prov:wasAttributedTo kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+	uco-core:object <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
 	.
 
 kb:samsung-device-2b5e3fe8-09a7-4c36-859a-5f669e7a1610
@@ -438,9 +493,26 @@ wd:Q95
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
 	a
+		prov:Entity ,
 		uco-observable:File ,
 		uco-observable:URL
 		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+	] ;
+	prov:wasAttributedTo kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
 	uco-core:hasFacet
 		kb:content-data-facet-5aa2c06d-a95d-4713-8e16-5463bad44705 ,
 		kb:file-facet-2703a4c4-6157-4d95-887b-03055f664cb6 ,
