@@ -9,6 +9,7 @@ The following device MIME types were found in indexed datasets.
 
 | ?lMimeType               |
 |--------------------------|
+| application/gzip         |
 | application/octet-stream |
 | application/zip          |
 | text/plain               |

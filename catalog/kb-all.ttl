@@ -15,6 +15,8 @@
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix uco-types: <https://ontology.unifiedcyberontology.org/uco/types/> .
+@prefix uco-vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -37,7 +39,8 @@ kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
 	dcat:dataset
 		kb:dataset-484508e3-9572-485b-864e-f1de8a5c460b ,
 		kb:dataset-61bf11a9-e564-48e4-a4f3-81a7d246a6ed ,
-		kb:dataset-9918b989-913c-42a8-ba9b-14bc73e318ac
+		kb:dataset-9918b989-913c-42a8-ba9b-14bc73e318ac ,
+		kb:dataset-f6cc5209-29d5-4b76-a531-b03cd3a9a6db
 		;
 	dcat:keyword
 		"cyber investigation" ,
@@ -45,6 +48,15 @@ kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
 		;
 	dcat:landingPage <https://github.com/casework/CASE-Corpora/> ;
 	pod:accessLevel "public" ;
+	.
+
+kb:content-data-facet-5aa2c06d-a95d-4713-8e16-5463bad44705
+	a uco-observable:ContentDataFacet ;
+	uco-observable:hash
+		kb:hash-06903043-3b24-57e8-997d-6e5acd63ad8f ,
+		kb:hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
+		;
+	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
 	.
 
 kb:dataset-484508e3-9572-485b-864e-f1de8a5c460b
@@ -106,6 +118,21 @@ kb:dataset-9918b989-913c-42a8-ba9b-14bc73e318ac
 	pod:accessLevel "public" ;
 	.
 
+kb:dataset-f6cc5209-29d5-4b76-a531-b03cd3a9a6db
+	a case-corpora:Dataset ;
+	case-corpora:hasDatasetDirectory "digitalcorpora-android-7" ;
+	case-corpora:hasDistribution kb:distribution-17439dd8-19da-48b8-be5c-f2251023d3bd ;
+	dcterms:description '"Android 7 is the contents of a LG GSM H790 Nexus 5X phone. ..."' ;
+	dcterms:identifier "http://example.org/kb/dataset-f6cc5209-29d5-4b76-a531-b03cd3a9a6db" ;
+	dcterms:modified "2020-11-22"^^xsd:date ;
+	dcterms:publisher kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	dcterms:title "Android 7" ;
+	dcat:contactPoint case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+	dcat:keyword "android" ;
+	dcat:landingPage <https://digitalcorpora.org/corpora/cell-phones/android-7/> ;
+	pod:accessLevel "public" ;
+	.
+
 kb:device-650599c6-701f-4f2e-becb-74398b366ba3
 	a uco-observable:Device ;
 	uco-core:description "Google OnHub wifi router connected to SmartThings Hub and IPTime switch" ;
@@ -148,6 +175,12 @@ kb:device-facet-f2390184-741a-4c0f-8187-0264ed056da0
 	a uco-observable:DeviceFacet ;
 	uco-observable:deviceType "Raspberry Pi" ;
 	uco-observable:manufacturer wd:Q7295195 ;
+	.
+
+kb:distribution-17439dd8-19da-48b8-be5c-f2251023d3bd
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/gzip> ;
 	.
 
 kb:distribution-1a71a743-1c42-47ec-88fa-80baa3db1483
@@ -244,6 +277,25 @@ kb:distribution-fe4d1373-7610-400f-a90e-1d3837f0ee93
 	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
 	.
 
+kb:file-facet-2703a4c4-6157-4d95-887b-03055f664cb6
+	a uco-observable:FileFacet ;
+	uco-observable:fileName "android_7.tar.gz" ;
+	uco-observable:modifiedTime "2020-11-22T03:14:59+00:00"^^xsd:dateTime ;
+	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
+	.
+
+kb:hash-06903043-3b24-57e8-997d-6e5acd63ad8f
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "563d71762b48f14ffd2663fcf85870f21c939441de614a1175a54b41c6373369"^^xsd:hexBinary ;
+	.
+
+kb:hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashValue "50a015b0c65c61feb81e77e0d2adcbf84d2f8352b2e1c46f27fb5f4816546751"^^xsd:hexBinary ;
+	.
+
 kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e
 	a org:Organization ;
 	skos:prefLabel "The CASE Community" ;
@@ -334,6 +386,11 @@ kb:url-facet-d9e4bbae-4b47-4d8c-b547-9e524d3a4ca0
 	uco-observable:fullValue "https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0" ;
 	.
 
+kb:url-facet-e0b73186-52e8-49d3-a079-3b48066bc3b9
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz" ;
+	.
+
 drafting:CellPhone
 	a owl:Class ;
 	rdfs:subClassOf uco-observable:MobilePhone ;
@@ -371,8 +428,24 @@ wd:Q95
 	a case-corpora:WebPage ;
 	.
 
+<https://digitalcorpora.org/corpora/cell-phones/android-7/>
+	a case-corpora:WebPage ;
+	.
+
 <https://digitalcorpora.org/corpora/disk-images/real-data-corpus>
 	a case-corpora:WebPage ;
+	.
+
+<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
+	a
+		uco-observable:File ,
+		uco-observable:URL
+		;
+	uco-core:hasFacet
+		kb:content-data-facet-5aa2c06d-a95d-4713-8e16-5463bad44705 ,
+		kb:file-facet-2703a4c4-6157-4d95-887b-03055f664cb6 ,
+		kb:url-facet-e0b73186-52e8-49d3-a079-3b48066bc3b9
+		;
 	.
 
 <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.md5>
@@ -455,6 +528,12 @@ wd:Q95
 <https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0>
 	a uco-observable:URL ;
 	uco-core:hasFacet kb:url-facet-d9e4bbae-4b47-4d8c-b547-9e524d3a4ca0 ;
+	.
+
+<https://www.iana.org/assignments/media-types/application/gzip>
+	a case-corpora:IANAMediaType ;
+	rdfs:label "gzip" ;
+	skos:prefLabel "application/gzip" ;
 	.
 
 <https://www.iana.org/assignments/media-types/application/octet-stream>
