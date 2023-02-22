@@ -21,6 +21,7 @@ all: \
 README.md: \
   README.md.in \
   README.md.sed \
+  apps.md \
   devices.md \
   import_closure.svg \
   mime-types.md
@@ -39,6 +40,16 @@ clean:
 	  *.dot \
 	  *.md \
 	  *.svg
+
+apps.md: \
+  $(top_srcdir)/catalog/kb-all.ttl \
+  apps.sparql
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_sparql_select \
+	    _$@ \
+	    apps.sparql \
+	    $(top_srcdir)/catalog/kb-all.ttl
+	mv _$@ $@
 
 devices.md: \
   $(top_srcdir)/catalog/kb-all.ttl \
