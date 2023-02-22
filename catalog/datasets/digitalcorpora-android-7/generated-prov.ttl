@@ -6,6 +6,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
+kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee
+	a prov:Entity ;
+	rdfs:comment "portability.json" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ;
+	.
+
 kb:file-07e6ff4a-6ca9-43b0-afcf-21c2534755b6
 	a prov:Entity ;
 	rdfs:comment "portability.json" ;
@@ -78,12 +99,27 @@ kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
+			prov:entity kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ;
+			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+		] ,
+		[
+			a prov:Derivation ;
 			prov:entity kb:file-3af91026-4c09-4047-a914-15e75a711ff0 ;
 			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 		] ,
 		[
 			a prov:Derivation ;
+			prov:entity kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2 ;
+			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+		] ,
+		[
+			a prov:Derivation ;
 			prov:entity kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79 ;
+			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ;
 			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 		]
 		;
@@ -93,8 +129,11 @@ kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8
 	] ;
 	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	prov:wasDerivedFrom
+		kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ,
 		kb:file-3af91026-4c09-4047-a914-15e75a711ff0 ,
-		kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79
+		kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2 ,
+		kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79 ,
+		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96
 		;
 	prov:wasGeneratedBy kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 	.
@@ -168,17 +207,33 @@ kb:file-3af91026-4c09-4047-a914-15e75a711ff0
 		a prov:Attribution ;
 		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ;
+			prov:hadActivity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2 ;
+			prov:hadActivity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ;
+			prov:hadActivity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
 	] ;
 	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasDerivedFrom
+		kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ,
+		kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2 ,
+		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96
+		;
 	prov:wasGeneratedBy kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
 	.
 
@@ -211,6 +266,27 @@ kb:file-41bb0fb7-458c-4a0c-802f-c913bda89544
 		kb:provenance-record-721dc0d0-e5b7-4352-9d00-9ad33b5194ae
 		;
 	prov:wasGeneratedBy kb:investigative-action-194c4e23-243e-4deb-b8d5-3ce9dce19367 ;
+	.
+
+kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2
+	a prov:Entity ;
+	rdfs:comment "access.html" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ;
 	.
 
 kb:file-537a55d8-6b4f-441b-a738-f2ee6a0e9136
@@ -520,6 +596,21 @@ kb:investigative-action-194c4e23-243e-4deb-b8d5-3ce9dce19367
 	prov:wasInformedBy kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877 ;
 	.
 
+kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde
+	a prov:Activity ;
+	rdfs:comment "Download Google Takeout data for WhatsApp" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	.
+
 kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877
 	a prov:Activity ;
 	rdfs:comment "Download distribution" ;
@@ -585,12 +676,31 @@ kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d
 		a prov:Association ;
 		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:entity prov:EmptyCollection ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ;
 	] ;
-	prov:used prov:EmptyCollection ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ;
+		]
+		;
+	prov:used
+		kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ,
+		kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2 ,
+		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96
+		;
 	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasInformedBy kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ;
 	.
 
 kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
@@ -600,26 +710,50 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		a prov:Association ;
 		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	] ;
-	prov:qualifiedCommunication [
-		a prov:Communication ;
-		prov:activity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
-	] ;
+	prov:qualifiedCommunication
+		[
+			a prov:Communication ;
+			prov:activity kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ;
+		] ,
+		[
+			a prov:Communication ;
+			prov:activity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
+		]
+		;
 	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ;
+		] ,
 		[
 			a prov:Usage ;
 			prov:entity kb:file-3af91026-4c09-4047-a914-15e75a711ff0 ;
 		] ,
 		[
 			a prov:Usage ;
+			prov:entity kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2 ;
+		] ,
+		[
+			a prov:Usage ;
 			prov:entity kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ;
 		]
 		;
 	prov:used
+		kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ,
 		kb:file-3af91026-4c09-4047-a914-15e75a711ff0 ,
-		kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79
+		kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2 ,
+		kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79 ,
+		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96
 		;
 	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
-	prov:wasInformedBy kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
+	prov:wasInformedBy
+		kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ,
+		kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d
+		;
 	.
 
 kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5
@@ -675,17 +809,33 @@ kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79
 		a prov:Attribution ;
 		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ;
+			prov:hadActivity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2 ;
+			prov:hadActivity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ;
+			prov:hadActivity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
 	] ;
 	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasDerivedFrom
+		kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ,
+		kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2 ,
+		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96
+		;
 	prov:wasGeneratedBy kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
 	.
 
@@ -723,6 +873,33 @@ kb:provenance-record-721dc0d0-e5b7-4352-9d00-9ad33b5194ae
 	prov:wasGeneratedBy kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877 ;
 	.
 
+kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ,
+		kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ;
+	.
+
 kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
 	a
 		prov:Collection ,
@@ -736,12 +913,27 @@ kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
+			prov:entity kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ;
+			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+		] ,
+		[
+			a prov:Derivation ;
 			prov:entity kb:file-3af91026-4c09-4047-a914-15e75a711ff0 ;
 			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 		] ,
 		[
 			a prov:Derivation ;
+			prov:entity kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2 ;
+			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+		] ,
+		[
+			a prov:Derivation ;
 			prov:entity kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79 ;
+			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ;
 			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 		]
 		;
@@ -751,8 +943,11 @@ kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
 	] ;
 	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	prov:wasDerivedFrom
+		kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ,
 		kb:file-3af91026-4c09-4047-a914-15e75a711ff0 ,
-		kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79
+		kb:file-50d99548-0f6c-48c8-b555-cb1623b541c2 ,
+		kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79 ,
+		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96
 		;
 	prov:wasGeneratedBy kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 	.
