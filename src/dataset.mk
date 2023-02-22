@@ -101,6 +101,9 @@ check-pytest: \
 
 clean:
 	@rm -f \
+	  *.dot \
+	  *.png \
+	  *.svg \
 	  generated-*.ttl \
 	  kb.ttl \
 	  kb_validation-*.ttl
