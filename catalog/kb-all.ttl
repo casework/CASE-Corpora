@@ -18,6 +18,7 @@
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix uco-tool: <https://ontology.unifiedcyberontology.org/uco/tool/> .
 @prefix uco-types: <https://ontology.unifiedcyberontology.org/uco/types/> .
 @prefix uco-vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -26,6 +27,35 @@
 <http://example.org/kb>
 	a owl:Ontology ;
 	owl:imports <http://example.org/shapes/case-corpora-local> ;
+	.
+
+kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8
+	a
+		prov:Entity ,
+		uco-observable:ArchiveFile
+		;
+	rdfs:comment "procdata.zip" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	] ;
+	prov:wasAttributedTo kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	uco-core:description "procdata.zip" ;
+	uco-core:hasFacet
+		kb:content-data-facet-052becfe-204a-4b9c-be16-c5542e4aed06 ,
+		kb:file-facet-ab2e1758-1c52-4a5f-803e-9b1608f713e1
+		;
 	.
 
 kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
@@ -62,6 +92,15 @@ kb:content-data-facet-03f2058f-8178-4a6a-9a78-fdf1d2a116f0
 		kb:hash-d2a3eb04-ccbf-597a-b118-7adf77b452a1
 		;
 	uco-observable:sizeInBytes "1077"^^xsd:integer ;
+	.
+
+kb:content-data-facet-052becfe-204a-4b9c-be16-c5542e4aed06
+	a uco-observable:ContentDataFacet ;
+	uco-observable:hash
+		kb:hash-10af6ae9-0a15-54be-a83e-21e40fbf009c ,
+		kb:hash-b49e5b37-6d56-5358-b783-3b0cd1c08f32 ,
+		kb:hash-ee59ab94-5862-5e29-bca5-20a36ee48bf9
+		;
 	.
 
 kb:content-data-facet-0f09e882-d74f-40d1-b511-2ced8cae421e
@@ -172,6 +211,15 @@ kb:content-data-facet-afd6a29c-4888-4b24-b023-91f5b3933b14
 	uco-observable:sizeInBytes "17580"^^xsd:integer ;
 	.
 
+kb:content-data-facet-b27b8dc9-7adf-4e7c-b719-5722900445f0
+	a uco-observable:ContentDataFacet ;
+	uco-observable:hash
+		kb:hash-01abf01d-8653-5b08-a09d-0256aaeacd6f ,
+		kb:hash-e415c67c-8d3d-5881-9728-660a9cda44d8 ,
+		kb:hash-ec44c3f3-b6c2-545a-b49d-7e841379de05
+		;
+	.
+
 kb:content-data-facet-bf01b13c-4e8f-411b-9286-3cee873e6a31
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
@@ -203,6 +251,11 @@ kb:content-data-facet-e0e6ef51-b5e5-482e-9b79-2ac3496f33ba
 		kb:hash-dbe3caf5-15ec-5e5c-9465-9e506f0a4ffe
 		;
 	uco-observable:sizeInBytes "244453"^^xsd:integer ;
+	.
+
+kb:content-data-facet-e20f23b5-9370-4863-9b07-5b5b157ba9a1
+	a uco-observable:ContentDataFacet ;
+	uco-observable:sizeInBytes "31268536320"^^xsd:integer ;
 	.
 
 kb:content-data-facet-ecd90088-8a21-4727-b9e1-b0080d4672b6
@@ -314,6 +367,12 @@ kb:device-facet-1ee161fc-5b41-48e0-bbdc-69ffa8c03230
 	uco-observable:manufacturer wd:Q20716 ;
 	uco-observable:model "SM-G925F" ;
 	uco-observable:serialNumber "RF8H31GS5SF" ;
+	.
+
+kb:device-facet-7142ef6d-cf42-4b70-9798-2ea96414169d
+	a uco-observable:DeviceFacet ;
+	uco-observable:manufacturer wd:Q5058279 ;
+	uco-observable:model "Cellebrite UFED 4PC" ;
 	.
 
 kb:device-facet-87b3668c-53ad-4a40-bcd3-eb64e426afaf
@@ -551,6 +610,11 @@ kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
+			prov:entity kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ;
+			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+		] ,
+		[
+			a prov:Derivation ;
 			prov:entity kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ;
 			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 		] ,
@@ -591,6 +655,16 @@ kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8
 		] ,
 		[
 			a prov:Derivation ;
+			prov:entity kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ;
+			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+		] ,
+		[
+			a prov:Derivation ;
 			prov:entity kb:provenance-record-1e6cee70-43f3-4692-bac0-6e07d1438dbd ;
 			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 		] ,
@@ -616,6 +690,11 @@ kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8
 		] ,
 		[
 			a prov:Derivation ;
+			prov:entity kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ;
+			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+		] ,
+		[
+			a prov:Derivation ;
 			prov:entity kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ;
 			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 		] ,
@@ -631,6 +710,7 @@ kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8
 	] ;
 	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	prov:wasDerivedFrom
+		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
 		kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ,
 		kb:file-391f9cc2-5947-4598-a5dc-289fb8bdf170 ,
 		kb:file-3af91026-4c09-4047-a914-15e75a711ff0 ,
@@ -639,11 +719,14 @@ kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8
 		kb:file-b4e89da8-dac1-4b4a-b147-63ccf6ee0359 ,
 		kb:file-cf3be54a-2454-42ba-b28f-e17e191cf428 ,
 		kb:file-ffa64022-0e6c-4aec-a5f6-7534e93f2767 ,
+		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-1e6cee70-43f3-4692-bac0-6e07d1438dbd ,
 		kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79 ,
 		kb:provenance-record-3ec2e8d4-8833-4257-97c2-ba17c6041287 ,
 		kb:provenance-record-6817102d-d01d-4e4f-899f-63c2590129f3 ,
 		kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97 ,
+		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ,
 		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ,
 		kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30
 		;
@@ -1444,6 +1527,11 @@ kb:file-facet-544da1c6-61f3-4ccb-91ea-96f1d6fd676f
 	uco-observable:fileName "mydata~1543946597209.zip" ;
 	.
 
+kb:file-facet-65c90c48-5c9c-4196-8329-63ccda9157dd
+	a uco-observable:FileFacet ;
+	uco-observable:fileName "blk0_mmcblk0.bin" ;
+	.
+
 kb:file-facet-757088eb-9af8-4326-8f13-e8e181e50780
 	a uco-observable:FileFacet ;
 	uco-observable:fileName "thisisdfir_20181204.zip" ;
@@ -1463,6 +1551,11 @@ kb:file-facet-8b32098c-2c22-4506-a140-ae5d4b889b5b
 	uco-observable:sizeInBytes "17580"^^xsd:integer ;
 	.
 
+kb:file-facet-926300e9-998b-4a0c-a2ec-ea67dcbffab9
+	a uco-observable:FileFacet ;
+	uco-observable:fileName "blk32_mmcblk0rpmb.bin" ;
+	.
+
 kb:file-facet-9656b1ad-71d0-48a2-af21-89c79142fce8
 	a uco-observable:FileFacet ;
 	uco-observable:fileName "android_7.tar.gz" ;
@@ -1473,6 +1566,11 @@ kb:file-facet-9656b1ad-71d0-48a2-af21-89c79142fce8
 kb:file-facet-9c8c3ff9-0ae8-4bd1-b6bb-010047b747a3
 	a uco-observable:FileFacet ;
 	uco-observable:fileName "twitter-2018-12-04-1fbea4f27668f929a907214ff59b0709576b2bae541a44c9b4ad2fa15062dfaf.zip" ;
+	.
+
+kb:file-facet-ab2e1758-1c52-4a5f-803e-9b1608f713e1
+	a uco-observable:FileFacet ;
+	uco-observable:fileName "procdata.zip" ;
 	.
 
 kb:file-facet-c0d3b7d2-f080-45db-836a-204be6275e36
@@ -1862,6 +1960,64 @@ kb:hash-ffbaee45-f413-558d-92ff-d6d51ecf0433
 	uco-types:hashValue "de6b07d9dd6a4a4c856e73a9ef0030e05641cf4e3a9c7062f38baf17a050a0949606a198e2bc3323b1ee9dcda5532a95b8f2697f7eb20ad1771cd112e915ee8e"^^xsd:hexBinary ;
 	.
 
+kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6
+	a
+		prov:Entity ,
+		uco-observable:Image
+		;
+	rdfs:comment "blk32_mmcblk0rpmb.bin" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	] ;
+	prov:wasAttributedTo kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	uco-core:description "blk32_mmcblk0rpmb.bin" ;
+	uco-core:hasFacet
+		kb:content-data-facet-b27b8dc9-7adf-4e7c-b719-5722900445f0 ,
+		kb:file-facet-926300e9-998b-4a0c-a2ec-ea67dcbffab9
+		;
+	.
+
+kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e
+	a
+		prov:Entity ,
+		uco-observable:Image
+		;
+	rdfs:comment "blk0_mmcblk0.bin, as generated by imaging process" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	] ;
+	prov:wasAttributedTo kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	uco-core:description "blk0_mmcblk0.bin, as generated by imaging process" ;
+	uco-core:hasFacet
+		kb:content-data-facet-e20f23b5-9370-4863-9b07-5b5b157ba9a1 ,
+		kb:file-facet-65c90c48-5c9c-4196-8329-63ccda9157dd
+		;
+	.
+
 kb:investigative-action-194c4e23-243e-4deb-b8d5-3ce9dce19367
 	a
 		prov:Activity ,
@@ -2005,6 +2161,37 @@ kb:investigative-action-6417193e-68e9-4abb-800d-5957bf1126d4
 		kb:provenance-record-1e6cee70-43f3-4692-bac0-6e07d1438dbd
 		;
 	uco-core:description "Download Google Takeout data for Google" ;
+	.
+
+kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214
+	a
+		prov:Activity ,
+		case-investigation:InvestigativeAction
+		;
+	rdfs:comment "Phone imaged" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:atTime "2018-12-06T21:20:00-05:00"^^xsd:dateTime ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:startedAtTime "2018-12-06T21:20:00-05:00"^^xsd:dateTime ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	uco-action:environment kb:operating-system-12dd8ee9-c818-4232-ac8c-1bc7f45bd2ab ;
+	uco-action:instrument kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:result
+		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
+		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
+		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
+		;
+	uco-action:startTime "2018-12-06T21:20:00-05:00"^^xsd:dateTime ;
+	uco-core:description "Phone imaged" ;
 	.
 
 kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f
@@ -2233,6 +2420,10 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		] ,
 		[
 			a prov:Communication ;
+			prov:activity kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+		] ,
+		[
+			a prov:Communication ;
 			prov:activity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
 		] ,
 		[
@@ -2253,6 +2444,10 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		]
 		;
 	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ;
+		] ,
 		[
 			a prov:Usage ;
 			prov:entity kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ;
@@ -2287,6 +2482,14 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		] ,
 		[
 			a prov:Usage ;
+			prov:entity kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+		] ,
+		[
+			a prov:Usage ;
 			prov:entity kb:provenance-record-1e6cee70-43f3-4692-bac0-6e07d1438dbd ;
 		] ,
 		[
@@ -2307,6 +2510,10 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		] ,
 		[
 			a prov:Usage ;
+			prov:entity kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ;
+		] ,
+		[
+			a prov:Usage ;
 			prov:entity kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ;
 		] ,
 		[
@@ -2315,6 +2522,7 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		]
 		;
 	prov:used
+		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
 		kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ,
 		kb:file-391f9cc2-5947-4598-a5dc-289fb8bdf170 ,
 		kb:file-3af91026-4c09-4047-a914-15e75a711ff0 ,
@@ -2323,11 +2531,14 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		kb:file-b4e89da8-dac1-4b4a-b147-63ccf6ee0359 ,
 		kb:file-cf3be54a-2454-42ba-b28f-e17e191cf428 ,
 		kb:file-ffa64022-0e6c-4aec-a5f6-7534e93f2767 ,
+		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-1e6cee70-43f3-4692-bac0-6e07d1438dbd ,
 		kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79 ,
 		kb:provenance-record-3ec2e8d4-8833-4257-97c2-ba17c6041287 ,
 		kb:provenance-record-6817102d-d01d-4e4f-899f-63c2590129f3 ,
 		kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97 ,
+		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ,
 		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ,
 		kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30
 		;
@@ -2335,6 +2546,7 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 	prov:wasInformedBy
 		kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ,
 		kb:investigative-action-6417193e-68e9-4abb-800d-5957bf1126d4 ,
+		kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ,
 		kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ,
 		kb:investigative-action-960da72e-127f-4596-addf-b3c5bc92ecc7 ,
 		kb:investigative-action-aa5026fa-a651-4cfd-9ff0-a6354aa70ec5 ,
@@ -2342,6 +2554,7 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		kb:investigative-action-d254e096-3f87-4a04-97e6-e1e6b52c6766
 		;
 	uco-action:object
+		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
 		kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ,
 		kb:file-391f9cc2-5947-4598-a5dc-289fb8bdf170 ,
 		kb:file-3af91026-4c09-4047-a914-15e75a711ff0 ,
@@ -2350,11 +2563,14 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		kb:file-b4e89da8-dac1-4b4a-b147-63ccf6ee0359 ,
 		kb:file-cf3be54a-2454-42ba-b28f-e17e191cf428 ,
 		kb:file-ffa64022-0e6c-4aec-a5f6-7534e93f2767 ,
+		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-1e6cee70-43f3-4692-bac0-6e07d1438dbd ,
 		kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79 ,
 		kb:provenance-record-3ec2e8d4-8833-4257-97c2-ba17c6041287 ,
 		kb:provenance-record-6817102d-d01d-4e4f-899f-63c2590129f3 ,
 		kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97 ,
+		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ,
 		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ,
 		kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30
 		;
@@ -2436,6 +2652,26 @@ kb:investigative-action-d254e096-3f87-4a04-97e6-e1e6b52c6766
 		kb:provenance-record-3ec2e8d4-8833-4257-97c2-ba17c6041287
 		;
 	uco-core:description "Download Google Takeout data for Twitter" ;
+	.
+
+kb:observable-relationship-e1fd52e1-517e-49ee-83c8-8cb007bf8931
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Used_Operating_System" ;
+	uco-core:source kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	uco-core:target kb:operating-system-12dd8ee9-c818-4232-ac8c-1bc7f45bd2ab ;
+	.
+
+kb:operating-system-12dd8ee9-c818-4232-ac8c-1bc7f45bd2ab
+	a uco-observable:OperatingSystem ;
+	uco-core:hasFacet kb:operating-system-facet-78cb5086-9aea-4c6e-9571-03d98b2e06a5 ;
+	uco-core:name "Cellebrite UFED 4PC" ;
+	.
+
+kb:operating-system-facet-78cb5086-9aea-4c6e-9571-03d98b2e06a5
+	a uco-observable:OperatingSystemFacet ;
+	uco-observable:manufacturer wd:Q5058279 ;
+	uco-observable:version "7.10.1.1080" ;
 	.
 
 kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e
@@ -2743,6 +2979,40 @@ kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97
 	uco-core:object kb:file-b4e89da8-dac1-4b4a-b147-63ccf6ee0359 ;
 	.
 
+kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
+	a
+		prov:Collection ,
+		prov:Entity ,
+		case-investigation:ProvenanceRecord
+		;
+	prov:hadMember
+		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
+		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	] ;
+	prov:wasAttributedTo kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	uco-core:object
+		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
+		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e
+		;
+	.
+
 kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96
 	a
 		prov:Collection ,
@@ -2789,6 +3059,11 @@ kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
 	prov:qualifiedDerivation
 		[
 			a prov:Derivation ;
+			prov:entity kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ;
+			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+		] ,
+		[
+			a prov:Derivation ;
 			prov:entity kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ;
 			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 		] ,
@@ -2829,6 +3104,16 @@ kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
 		] ,
 		[
 			a prov:Derivation ;
+			prov:entity kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ;
+			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+		] ,
+		[
+			a prov:Derivation ;
 			prov:entity kb:provenance-record-1e6cee70-43f3-4692-bac0-6e07d1438dbd ;
 			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 		] ,
@@ -2854,6 +3139,11 @@ kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
 		] ,
 		[
 			a prov:Derivation ;
+			prov:entity kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ;
+			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+		] ,
+		[
+			a prov:Derivation ;
 			prov:entity kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ;
 			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 		] ,
@@ -2869,6 +3159,7 @@ kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
 	] ;
 	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	prov:wasDerivedFrom
+		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
 		kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee ,
 		kb:file-391f9cc2-5947-4598-a5dc-289fb8bdf170 ,
 		kb:file-3af91026-4c09-4047-a914-15e75a711ff0 ,
@@ -2877,11 +3168,14 @@ kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
 		kb:file-b4e89da8-dac1-4b4a-b147-63ccf6ee0359 ,
 		kb:file-cf3be54a-2454-42ba-b28f-e17e191cf428 ,
 		kb:file-ffa64022-0e6c-4aec-a5f6-7534e93f2767 ,
+		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-1e6cee70-43f3-4692-bac0-6e07d1438dbd ,
 		kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79 ,
 		kb:provenance-record-3ec2e8d4-8833-4257-97c2-ba17c6041287 ,
 		kb:provenance-record-6817102d-d01d-4e4f-899f-63c2590129f3 ,
 		kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97 ,
+		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ,
 		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ,
 		kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30
 		;
@@ -2984,6 +3278,24 @@ kb:samsung-device-2b5e3fe8-09a7-4c36-859a-5f669e7a1610
 	uco-core:hasFacet kb:device-facet-1ee161fc-5b41-48e0-bbdc-69ffa8c03230 ;
 	.
 
+kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879
+	a
+		prov:Agent ,
+		prov:SoftwareAgent ,
+		uco-observable:Device ,
+		uco-tool:AnalyticTool
+		;
+	rdfs:comment "Cellebrite UFED 4PC" ;
+	prov:actedOnBehalfOf kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+		prov:hadActivity kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	] ;
+	uco-core:description "Cellebrite UFED 4PC" ;
+	uco-core:hasFacet kb:device-facet-7142ef6d-cf42-4b70-9798-2ea96414169d ;
+	.
+
 kb:url-facet-0fa77d25-7669-4486-bc57-02b9f2fe5a6f
 	a uco-observable:URLFacet ;
 	uco-observable:fullValue "https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.md5" ;
@@ -3080,6 +3392,11 @@ drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 wd:Q20716
 	a uco-identity:Organization ;
 	uco-core:name "Samsung" ;
+	.
+
+wd:Q5058279
+	a uco-identity:Organization ;
+	uco-core:name "Cellebrite" ;
 	.
 
 wd:Q7295195
