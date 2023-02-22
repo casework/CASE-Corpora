@@ -28,8 +28,7 @@ all: \
 
 .PHONY: \
   check-pytest \
-  figures \
-  format
+  figures
 
 kb.ttl: \
   $(top_srcdir)/dependencies/dependencies.ttl \
