@@ -68,6 +68,27 @@ kb:file-0be2be3a-59d3-4452-810b-eefb42e609f2
 	prov:wasGeneratedBy kb:investigative-action-194c4e23-243e-4deb-b8d5-3ce9dce19367 ;
 	.
 
+kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8
+	a prov:Entity ;
+	rdfs:comment "android_7.tar.gz" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+	.
+
 kb:file-248b96b6-c87d-49da-ab72-b139f43c0b47
 	a prov:Entity ;
 	rdfs:comment "takeout-20181204T161119Z-001.zip" ;
@@ -504,16 +525,50 @@ kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f
 		a prov:Association ;
 		prov:agent kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
 	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea ;
+		]
+		;
+	prov:used
+		kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8 ,
+		kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
+		;
+	prov:wasAssociatedWith kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	prov:wasInformedBy kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+	.
+
+kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
+	a prov:Activity ;
+	rdfs:comment "Compile dataset tarball" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
 	prov:qualifiedUsage [
 		a prov:Usage ;
 		prov:entity prov:EmptyCollection ;
 	] ;
 	prov:used prov:EmptyCollection ;
-	prov:wasAssociatedWith kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	.
 
 kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5
 	a prov:Agent ;
+	.
+
+kb:person-eab92237-467b-4977-959f-db67afdddee5
+	a prov:Agent ;
+	rdfs:comment "Dataset producer" ;
 	.
 
 kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566
@@ -526,17 +581,27 @@ kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566
 		a prov:Attribution ;
 		prov:agent kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8 ;
+			prov:hadActivity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea ;
+			prov:hadActivity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
 	] ;
 	prov:wasAttributedTo kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasDerivedFrom
+		kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8 ,
+		kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
+		;
 	prov:wasGeneratedBy kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
 	.
 
@@ -572,6 +637,30 @@ kb:provenance-record-721dc0d0-e5b7-4352-9d00-9ad33b5194ae
 		<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
 		;
 	prov:wasGeneratedBy kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877 ;
+	.
+
+kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 	.
 
 kb:provenance-record-ed951e2b-fb93-4cc9-899c-f8d88ec80619
@@ -628,17 +717,27 @@ kb:provenance-record-ed951e2b-fb93-4cc9-899c-f8d88ec80619
 		a prov:Attribution ;
 		prov:agent kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8 ;
+			prov:hadActivity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea ;
+			prov:hadActivity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
 	] ;
 	prov:wasAttributedTo kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasDerivedFrom
+		kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8 ,
+		kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
+		;
 	prov:wasGeneratedBy kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
 	.
 
