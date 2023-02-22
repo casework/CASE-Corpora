@@ -13,8 +13,10 @@ Note: This dataset has some documentation to complete to explain some hashes fou
 
 The file named `blk0_mmcblk0.bin` has several hashes (focusing on SHA-256 for this explanation) recorded in the documentary files.  These hashes are noted with the following "witnessing" files:
 
-| ?lSHA256   | ?nWitnessObject   | ?lWitnessObjectDescription   |
-|------------|-------------------|------------------------------|
+| ?lSHA256   | ?nWitnessObject                              | ?lWitnessObjectDescription                               |
+|------------|----------------------------------------------|----------------------------------------------------------|
+| 50186bc... | kb:file-5aad2637-ebad-46dc-8fdb-58a5078f760a | blk0_mmcblk0.bin, as extracted from distribution tarball |
+| 6fedd6c... | kb:file-2c16fd64-befe-441f-abe4-73a99b4cf154 | Android7-ImageCreationDocumentation.pdf                  |
 
 To understand where changes appear to have occurred in the provenance chain, the following figures illustrate the provenance, including observation and modification activities (typed as [SOSA Observations](https://www.w3.org/TR/vocab-ssn/#SOSAObservation) and [Actuations](https://www.w3.org/TR/vocab-ssn/#SOSAActuation), respectively).
 
