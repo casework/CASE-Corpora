@@ -556,7 +556,7 @@ kb:file-537a55d8-6b4f-441b-a738-f2ee6a0e9136
 
 kb:file-5aad2637-ebad-46dc-8fdb-58a5078f760a
 	a prov:Entity ;
-	rdfs:comment "blk0_mmcblk0.bin" ;
+	rdfs:comment "blk0_mmcblk0.bin, as extracted from distribution tarball" ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
 		prov:agent orcid:0000-0002-3771-570X ;

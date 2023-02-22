@@ -1106,7 +1106,7 @@ kb:file-5aad2637-ebad-46dc-8fdb-58a5078f760a
 		prov:Entity ,
 		uco-observable:File
 		;
-	rdfs:comment "blk0_mmcblk0.bin" ;
+	rdfs:comment "blk0_mmcblk0.bin, as extracted from distribution tarball" ;
 	prov:qualifiedAttribution [
 		a prov:Attribution ;
 		prov:agent orcid:0000-0002-3771-570X ;
@@ -1133,7 +1133,7 @@ kb:file-5aad2637-ebad-46dc-8fdb-58a5078f760a
 		kb:provenance-record-721dc0d0-e5b7-4352-9d00-9ad33b5194ae
 		;
 	prov:wasGeneratedBy kb:investigative-action-194c4e23-243e-4deb-b8d5-3ce9dce19367 ;
-	uco-core:description "blk0_mmcblk0.bin" ;
+	uco-core:description "blk0_mmcblk0.bin, as extracted from distribution tarball" ;
 	uco-core:hasFacet
 		kb:content-data-facet-8b3fc9fa-a5d7-4fc9-b26d-66de8a1071e8 ,
 		kb:file-facet-2d6e02e7-6788-4626-918f-1fdbdb8f6241
