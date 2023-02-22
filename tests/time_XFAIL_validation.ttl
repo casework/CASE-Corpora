@@ -1,0 +1,42 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[]
+	a sh:ValidationReport ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/proper-interval-b8c09ec7-fd2c-4253-9707-5346d9e9ad36> ;
+			sh:resultMessage "Value of kb:proper-interval-b8c09ec7-fd2c-4253-9707-5346d9e9ad36->time:intervalEquals == kb:proper-interval-e8f4521c-1272-4eda-b2ae-122f8bd65e26" ;
+			sh:resultPath time:intervalIn ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DisjointConstraintComponent ;
+			sh:sourceShape [
+				a sh:PropertyShape ;
+				sh:disjoint time:intervalEquals ;
+				sh:path time:intervalIn ;
+			] ;
+			sh:value <http://example.org/kb/proper-interval-e8f4521c-1272-4eda-b2ae-122f8bd65e26> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/proper-interval-b8c09ec7-fd2c-4253-9707-5346d9e9ad36> ;
+			sh:resultMessage "Value of kb:proper-interval-b8c09ec7-fd2c-4253-9707-5346d9e9ad36->time:intervalIn == kb:proper-interval-e8f4521c-1272-4eda-b2ae-122f8bd65e26" ;
+			sh:resultPath time:intervalEquals ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DisjointConstraintComponent ;
+			sh:sourceShape [
+				a sh:PropertyShape ;
+				sh:disjoint time:intervalIn ;
+				sh:path time:intervalEquals ;
+			] ;
+			sh:value <http://example.org/kb/proper-interval-e8f4521c-1272-4eda-b2ae-122f8bd65e26> ;
+		]
+		;
+	.
+
