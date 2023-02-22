@@ -1,5 +1,4 @@
-# https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/sosa.ttl
-
+# imports: https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/sosa.ttl
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
