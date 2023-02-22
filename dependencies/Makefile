@@ -33,6 +33,8 @@ dependent_ontology_files := \
   dublin_core_type.ttl \
   foaf.ttl \
   skos.ttl \
+  sosa.ttl \
+  ssn.ttl \
   vcard.ttl
 
 rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar
@@ -197,6 +199,28 @@ skos.ttl:
 	  --target-format turtle \
 	  --target _$@
 	rm __$@
+	mv _$@ $@
+
+# TODO - This does not regenerate with Make while a correction for this issue is waiting to be published.
+# https://github.com/w3c/sdw/issues/1395
+sosa.ttl:
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source sdw/ssn/integrated/sosa.ttl \
+	  --target-format turtle \
+	  --target _$@
+	mv _$@ $@
+
+# TODO - This does not regenerate with Make while a correction for this issue is waiting to be published.
+# https://github.com/w3c/sdw/issues/1395
+ssn.ttl:
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source sdw/ssn/integrated/ssn.ttl \
+	  --target-format turtle \
+	  --target _$@
 	mv _$@ $@
 
 vcard.ttl:

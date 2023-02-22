@@ -1,12 +1,15 @@
 # imports: http://example.org/shapes/case-corpora
 
 @prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
+@prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sh-case-corpora-local: <http://example.org/shapes/case-corpora-local/> .
 @prefix sh-dcterms: <http://example.org/shapes/dcterms/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
@@ -17,6 +20,66 @@
 	a owl:Ontology ;
 	rdfs:comment "This file contains adjustments to upstream shapes graphs for CASE-Corpora.  This graph is not intended be re-used outside of CASE-Corpora.  Those interested in re-consuming CASE-Corpora shapes can generate and import the shapes.ttl file in this directory."@en ;
 	owl:imports <http://example.org/shapes/case-corpora> ;
+	.
+
+sh-case-corpora-local:Actuation-actsOnProperty-shape
+	a sh:NodeShape ;
+	sh:description "This shape defines and implements a CASE-Corpora requirement that an Actuation describe a linked Quality."@en ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:minCount "1"^^xsd:integer ;
+		sh:path sosa:actsOnProperty ;
+	] ;
+	sh:sparql [
+		sh:message "Actuation's hasFeatureOfInterest and actsOnProperty object are not associated."@en ;
+		sh:select """
+			SELECT $this
+			WHERE {
+				$this
+					sosa:hasFeatureOfInterest ?nThing ;
+					sosa:actsOnProperty ?nProperty ;
+					.
+				FILTER NOT EXISTS {
+					?nThing ssn:hasProperty ?nProperty .
+				}
+			}
+		""" ;
+	] ;
+	sh:targetClass sosa:Actuation ;
+	.
+
+sh-case-corpora-local:ContentDataFacet-mismatching-hash-shape
+	a sh:NodeShape ;
+	sh:description "In CASE-Corpora, Hashes must match between Facets and (SOSA) Observations, if recorded in both.  If an Observation conflicts, the Facet-housed Hash reference is to be removed."@en ;
+	sh:sparql [
+		a sh:SPARQLConstraint ;
+		sh:message "Conflict found between a Hash recorded in a Facet and as a result of an Observation on the same Observable Object.  Please remove the Hash reference that is this result's Value node from the Focus node."@en ;
+		sh:select """
+			SELECT $this ?value
+			WHERE {
+				?nObservableObject
+					uco-core:hasFacet $this ;
+					.
+				$this
+					uco-observable:hash ?value ;
+					.
+				?nObservation
+					sosa:hasFeatureOfInterest ?nObservableObject ;
+					sosa:hasResult ?nHashFromObservation ;
+					.
+				?value
+					uco-types:hashMethod ?lMethod ;
+					uco-types:hashValue ?lValueInFacet ;
+					.
+				?nHashFromObservation
+					uco-types:hashMethod ?lMethod ;
+					uco-types:hashValue ?lValueFromObservation ;
+					.
+				FILTER ( ?lValueInFacet != ?lValueFromObservation )
+			}
+		""" ;
+	] ;
+	sh:targetClass uco-observable:ContentDataFacet ;
 	.
 
 sh-case-corpora-local:Facet-inherence-shape
@@ -33,11 +96,18 @@ sh-case-corpora-local:Facet-inherence-shape
 
 sh-case-corpora-local:Hash-inherence-shape
 	a sh:NodeShape ;
-	sh:message "In CASE-Corpora, Hashes must be linked to at least one Facet."@en ;
+	sh:message "In CASE-Corpora, Hashes must be linked to at least one Facet or Observation."@en ;
 	sh:property [
 		sh:minCount "1"^^xsd:integer ;
 		sh:path [
-			sh:inversePath uco-observable:hash ;
+			sh:alternativePath (
+				[
+					sh:inversePath sosa:hasResult ;
+				]
+				[
+					sh:inversePath uco-observable:hash ;
+				]
+			) ;
 		] ;
 	] ;
 	sh:targetClass uco-types:Hash ;
@@ -130,6 +200,58 @@ sh-case-corpora-local:InvestigativeAction-shape
 		] ;
 	] ;
 	sh:targetClass case-investigation:InvestigativeAction ;
+	.
+
+sh-case-corpora-local:Observation-observedProperty-shape
+	a sh:NodeShape ;
+	sh:description "This shape defines and implements a CASE-Corpora requirement that an Observation describe a linked Quality."@en ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:minCount "1"^^xsd:integer ;
+		sh:path sosa:observedProperty ;
+	] ;
+	sh:sparql [
+		sh:message "Observation's hasFeatureOfInterest and observedProperty objects are not associated."@en ;
+		sh:select """
+			SELECT $this
+			WHERE {
+				$this
+					sosa:hasFeatureOfInterest ?nThing ;
+					sosa:observedProperty ?nProperty ;
+					.
+				FILTER NOT EXISTS {
+					?nThing ssn:hasProperty ?nProperty .
+				}
+			}
+		""" ;
+	] ;
+	sh:targetClass sosa:Observation ;
+	.
+
+sh-case-corpora-local:Quality-inherence-shape
+	a sh:NodeShape ;
+	sh:description "This shape defines and implements a CASE-Corpora requirement that a Quality must be attached to exactly one UcoObject."@en ;
+	sh:or (
+		[
+			a sh:NodeShape ;
+			sh:property [
+				a sh:PropertyShape ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:path [
+					sh:inversePath drafting:hasQuality ;
+				] ;
+			] ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:property [
+				a sh:PropertyShape ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:path drafting:isQualityOf ;
+			] ;
+		]
+	) ;
+	sh:targetClass drafting:Quality ;
 	.
 
 sh-case-corpora-local:rdf-Statement-shape
