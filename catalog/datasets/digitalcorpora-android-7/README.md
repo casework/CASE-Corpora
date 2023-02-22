@@ -16,6 +16,7 @@ The file named `blk0_mmcblk0.bin` has several hashes (focusing on SHA-256 for th
 | ?lSHA256   | ?nWitnessObject                              | ?lWitnessObjectDescription                               |
 |------------|----------------------------------------------|----------------------------------------------------------|
 | 50186bc... | kb:file-5aad2637-ebad-46dc-8fdb-58a5078f760a | blk0_mmcblk0.bin, as extracted from distribution tarball |
+| 5a13ae7... | kb:file-b0fd0b2d-2412-41f2-a624-b42b8e59ddfe | LG GSM_H790 Nexus 5X.ufd                                 |
 | 6fedd6c... | kb:file-2c16fd64-befe-441f-abe4-73a99b4cf154 | Android7-ImageCreationDocumentation.pdf                  |
 
 To understand where changes appear to have occurred in the provenance chain, the following figures illustrate the provenance, including observation and modification activities (typed as [SOSA Observations](https://www.w3.org/TR/vocab-ssn/#SOSAObservation) and [Actuations](https://www.w3.org/TR/vocab-ssn/#SOSAActuation), respectively).
