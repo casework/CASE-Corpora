@@ -31,50 +31,6 @@ all: \
   check-pytest \
   figures
 
-kb.ttl: \
-  $(top_srcdir)/dependencies/dependencies.ttl \
-  $(top_srcdir)/ontology/case-corpora.ttl \
-  $(top_srcdir)/shapes/local.ttl \
-  $(top_srcdir)/shapes/shapes.ttl \
-  $(top_srcdir)/taxonomy/devices/drafting.ttl \
-  dataset.ttl \
-  generated-ground-truth-prov.ttl \
-  generated-prov.ttl
-	rm -f _$@ __$@
-	source $(top_srcdir)/venv/bin/activate \
-	  && rdfpipe \
-	    --output-format turtle \
-	    $(top_srcdir)/catalog/catalog.ttl \
-	    $(top_srcdir)/catalog/shared.ttl \
-	    dataset.ttl \
-	    distribution.ttl \
-	    $(supplemental_graph) \
-	    $(maybe_ground_truth_graph) \
-	    generated-*.ttl \
-	    > __$@
-	# Skip per-dataset validation when this file is called in a GitHub action.
-	test ! -z "$${GITHUB_ACTIONS+x}" \
-	  || ( \
-	    source $(top_srcdir)/venv/bin/activate \
-	      && case_validate \
-	        --allow-infos \
-	        --inference rdfs \
-	        --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
-	        --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	        --ontology-graph $(top_srcdir)/shapes/local.ttl \
-	        --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
-	        --ontology-graph $(top_srcdir)/taxonomy/devices/drafting.ttl \
-	        __$@ \
-	    )
-	java -jar $(rdf_toolkit_jar) \
-	  --inline-blank-nodes \
-	  --source-format turtle \
-	  --source __$@ \
-	  --target-format turtle \
-	  --target _$@
-	rm __$@
-	mv _$@ $@
-
 # Review order is:
 # 1. Is the CASE graph conformat?  (Necessary for kb.ttl to build.)
 # 2. Does the overall PROV-O graph (hand-coded and generated) having any errors?
@@ -158,6 +114,50 @@ generated-prov.ttl: \
 	    $(top_srcdir)/catalog/shared.ttl \
 	    distribution.ttl \
 	    $(supplemental_graph)
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+kb.ttl: \
+  $(top_srcdir)/dependencies/dependencies.ttl \
+  $(top_srcdir)/ontology/case-corpora.ttl \
+  $(top_srcdir)/shapes/local.ttl \
+  $(top_srcdir)/shapes/shapes.ttl \
+  $(top_srcdir)/taxonomy/devices/drafting.ttl \
+  dataset.ttl \
+  generated-ground-truth-prov.ttl \
+  generated-prov.ttl
+	rm -f _$@ __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && rdfpipe \
+	    --output-format turtle \
+	    $(top_srcdir)/catalog/catalog.ttl \
+	    $(top_srcdir)/catalog/shared.ttl \
+	    dataset.ttl \
+	    distribution.ttl \
+	    $(supplemental_graph) \
+	    $(maybe_ground_truth_graph) \
+	    generated-*.ttl \
+	    > __$@
+	# Skip per-dataset validation when this file is called in a GitHub action.
+	test ! -z "$${GITHUB_ACTIONS+x}" \
+	  || ( \
+	    source $(top_srcdir)/venv/bin/activate \
+	      && case_validate \
+	        --allow-infos \
+	        --inference rdfs \
+	        --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
+	        --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	        --ontology-graph $(top_srcdir)/shapes/local.ttl \
+	        --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
+	        --ontology-graph $(top_srcdir)/taxonomy/devices/drafting.ttl \
+	        __$@ \
+	    )
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \
