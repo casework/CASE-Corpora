@@ -39,6 +39,7 @@ dependent_ontology_files := \
   skos.ttl \
   sosa.ttl \
   ssn.ttl \
+  time.ttl \
   vcard.ttl
 
 rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar
@@ -271,6 +272,19 @@ ssn.ttl:
 	  --source sdw/ssn/integrated/ssn.ttl \
 	  --target-format turtle \
 	  --target _$@
+	mv _$@ $@
+
+time.ttl:
+	wget \
+	  --output-document=__$@ \
+	  http://www.w3.org/2006/time
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
 	mv _$@ $@
 
 vcard.ttl:

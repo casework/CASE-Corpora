@@ -1,0 +1,136 @@
+# imports: http://example.org/shapes/skos
+# imports: http://www.w3.org/2006/time#2016
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-time: <http://example.org/shapes/time/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/shapes/time>
+	a owl:Ontology ;
+	owl:imports
+		<http://example.org/shapes/skos> ,
+		time:2016
+		;
+	.
+
+sh-time:inXSDDate-domain-shape
+	a sh:NodeShape ;
+	sh:class time:Instant ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetSubjectsOf time:inXSDDate ;
+	.
+
+sh-time:inXSDDate-range-shape
+	a sh:NodeShape ;
+	sh:datatype xsd:date ;
+	sh:nodeKind sh:Literal ;
+	sh:targetObjectsOf time:inXSDDate ;
+	.
+
+sh-time:inXSDDateTime-shape
+	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
+	sh:message "time:inXSDDateTime is deprecated."@en ;
+	sh:path time:inXSDDateTime ;
+	sh:severity sh:Warning ;
+	sh:targetSubjectsOf time:inXSDDateTime ;
+	.
+
+sh-time:inXSDDateTimeStamp-domain-shape
+	a sh:NodeShape ;
+	sh:class time:Instant ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetSubjectsOf time:inXSDDateTimeStamp ;
+	.
+
+sh-time:inXSDDateTimeStamp-range-shape
+	a sh:NodeShape ;
+	sh:datatype xsd:dateTimeStamp ;
+	sh:nodeKind sh:Literal ;
+	sh:targetObjectsOf time:inXSDDateTimeStamp ;
+	.
+
+sh-time:inside-domain-shape
+	a sh:NodeShape ;
+	sh:class time:Interval ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetSubjectsOf time:inside ;
+	.
+
+sh-time:inside-range-shape
+	a sh:NodeShape ;
+	sh:class time:Instant ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf time:inside ;
+	.
+
+sh-time:intervalContains-domain-shape
+	a sh:NodeShape ;
+	sh:class time:ProperInterval ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetSubjectsOf time:intervalContains ;
+	.
+
+sh-time:intervalContains-range-shape
+	a sh:NodeShape ;
+	sh:class time:ProperInterval ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf time:intervalContains ;
+	.
+
+sh-time:intervalDuring-domain-shape
+	a sh:NodeShape ;
+	sh:class time:ProperInterval ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetSubjectsOf time:intervalDuring ;
+	.
+
+sh-time:intervalDuring-range-shape
+	a sh:NodeShape ;
+	sh:class time:ProperInterval ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf time:intervalDuring ;
+	.
+
+sh-time:intervalEquals-domain-shape
+	a sh:NodeShape ;
+	sh:class time:ProperInterval ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:disjoint time:intervalIn ;
+		sh:path time:intervalEquals ;
+	] ;
+	sh:targetSubjectsOf time:intervalEquals ;
+	.
+
+sh-time:intervalEquals-range-shape
+	a sh:NodeShape ;
+	sh:class time:ProperInterval ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf time:intervalEquals ;
+	.
+
+sh-time:intervalIn-domain-shape
+	a sh:NodeShape ;
+	sh:class time:ProperInterval ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:disjoint time:intervalEquals ;
+		sh:path time:intervalIn ;
+	] ;
+	sh:targetSubjectsOf time:intervalIn ;
+	.
+
+sh-time:intervalIn-range-shape
+	a sh:NodeShape ;
+	sh:class time:ProperInterval ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf time:intervalIn ;
+	.
+

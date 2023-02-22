@@ -10,6 +10,7 @@
 @prefix sh-dcterms: <http://example.org/shapes/dcterms/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
@@ -292,6 +293,85 @@ sh-case-corpora-local:rdf-subject-shape
 	sh:message "rdf:Statements are believed not compatible with OWL 2 DL."@en ;
 	sh:path rdf:subject ;
 	sh:targetSubjectsOf rdf:subject ;
+	.
+
+sh-case-corpora-local:time-inXSDDate-domain-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:IRI ;
+	sh:targetSubjectsOf time:inXSDDate ;
+	.
+
+sh-case-corpora-local:time-inXSDDateTime-deprecation-shape
+	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
+	sh:path time:inXSDDateTime ;
+	sh:targetSubjectsOf time:inXSDDateTime ;
+	.
+
+sh-case-corpora-local:time-inXSDDateTimeStamp-domain-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:IRI ;
+	sh:targetSubjectsOf time:inXSDDateTimeStamp ;
+	.
+
+sh-case-corpora-local:time-inside-domain-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:IRI ;
+	sh:targetSubjectsOf time:inside ;
+	.
+
+sh-case-corpora-local:time-inside-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:IRI ;
+	sh:targetObjectsOf time:inside ;
+	.
+
+sh-case-corpora-local:time-intervalContains-domain-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:IRI ;
+	sh:targetSubjectsOf time:intervalContains ;
+	.
+
+sh-case-corpora-local:time-intervalContains-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:IRI ;
+	sh:targetObjectsOf time:intervalContains ;
+	.
+
+sh-case-corpora-local:time-intervalDuring-domain-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:IRI ;
+	sh:targetSubjectsOf time:intervalDuring ;
+	.
+
+sh-case-corpora-local:time-intervalDuring-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:IRI ;
+	sh:targetObjectsOf time:intervalDuring ;
+	.
+
+sh-case-corpora-local:time-intervalEquals-domain-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:IRI ;
+	sh:targetSubjectsOf time:intervalEquals ;
+	.
+
+sh-case-corpora-local:time-intervalEquals-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:IRI ;
+	sh:targetObjectsOf time:intervalEquals ;
+	.
+
+sh-case-corpora-local:time-intervalIn-domain-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:IRI ;
+	sh:targetSubjectsOf time:intervalIn ;
+	.
+
+sh-case-corpora-local:time-intervalIn-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:IRI ;
+	sh:targetObjectsOf time:intervalIn ;
 	.
 
 sh-dcterms:contributor-suggested-range-shape

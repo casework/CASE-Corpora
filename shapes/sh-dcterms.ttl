@@ -98,10 +98,22 @@ sh-dcterms:hasPart-suggested-range-shape
 	sh:targetObjectsOf dcterms:hasPart ;
 	.
 
+sh-dcterms:hasVersion-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dcterms:hasVersion ;
+	.
+
 sh-dcterms:identifier-range-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:Literal ;
 	sh:targetObjectsOf dcterms:identifier ;
+	.
+
+sh-dcterms:isVersionOf-shape
+	a sh:NodeShape ;
+	rdfs:comment "This property has a recommended practice, but has no implemented restrictions."@en ;
+	sh:targetSubjectsOf dcterms:hasVersion ;
 	.
 
 sh-dcterms:issued-range-shape

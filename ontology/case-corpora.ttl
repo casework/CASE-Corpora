@@ -1,4 +1,5 @@
 # imports: http://purl.org/spar/cito/2018-02-16
+# imports: http://www.w3.org/2006/time#2016
 # imports: http://www.w3.org/2006/vcard/ns
 # imports: http://www.w3.org/ns/dcat
 # imports: http://xmlns.com/foaf/0.1/
@@ -18,8 +19,10 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix uco-time: <https://ontology.unifiedcyberontology.org/uco/time/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -28,6 +31,7 @@
 	rdfs:comment "This ontology serves to join the versions of CASE and DCAT used to populate CASE-Corpora, bringing analogous properties and classes together."@en ;
 	owl:imports
 		cito:2018-02-16 ,
+		time:2016 ,
 		<http://www.w3.org/2006/vcard/ns> ,
 		<http://www.w3.org/ns/dcat> ,
 		<http://xmlns.com/foaf/0.1/> ,

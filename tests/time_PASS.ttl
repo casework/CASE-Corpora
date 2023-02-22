@@ -1,0 +1,28 @@
+# imports: http://example.org/shapes/time
+
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/kb>
+	a owl:Ontology ;
+	owl:imports <http://example.org/shapes/time> ;
+	.
+
+kb:proper-interval-67661131-1d77-4a5b-8ea7-9e0468c44987
+	a time:ProperInterval ;
+	time:intervalEquals kb:proper-interval-be0bc103-2078-4f7e-9a22-147ccb13644f ;
+	time:intervalIn kb:proper-interval-da6885f5-10ca-45a4-80fa-3b1ff0e74510 ;
+	.
+
+kb:proper-interval-be0bc103-2078-4f7e-9a22-147ccb13644f
+	a time:ProperInterval ;
+	.
+
+kb:proper-interval-da6885f5-10ca-45a4-80fa-3b1ff0e74510
+	a time:ProperInterval ;
+	.
+
