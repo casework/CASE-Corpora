@@ -27,6 +27,7 @@ all: \
   kb.ttl
 
 .PHONY: \
+  check-case_prov_check \
   check-pytest \
   figures
 
