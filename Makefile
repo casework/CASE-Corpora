@@ -28,6 +28,7 @@ all: \
   all-tests \
   check-catalog \
   check-dependencies \
+  check-mypy \
   check-ontology \
   check-reports \
   check-shapes \
@@ -133,6 +134,7 @@ all-tests: \
 
 check: \
   .venv-pre-commit/var/.pre-commit-built.log \
+  check-mypy \
   check-reports \
   check-tests
 
@@ -148,6 +150,14 @@ check-dependencies: \
 	$(MAKE) \
 	  --directory dependencies \
 	  check
+
+check-mypy: \
+  .venv.done.log
+	source venv/bin/activate \
+	  && mypy --strict \
+	    catalog \
+	    src \
+	    tests
 
 check-ontology: \
   check-dependencies

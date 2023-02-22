@@ -83,13 +83,17 @@ def main() -> None:
         (None, OWL.versionIRI, None),
     ]:
         for triple in rgraph.triples(triple_pattern):
+            # OWL permits the ontology IRI to be a blank node.
+            if not isinstance(triple[0], URIRef):
+                continue
+            # OWL might permit the object of this triple to be a blank node,
+            # but the assumption for now is that this is a data error.
+            assert isinstance(triple[2], URIRef)
             if triple[0] not in ontology_reference:
-                assert isinstance(triple[0], URIRef)
                 ontology_reference[triple[0]] = pydot.Node(
                     safe_str(str(triple[0])), label=safe_node_label(triple[0])
                 )
             if triple[2] not in ontology_reference:
-                assert isinstance(triple[2], URIRef)
                 ontology_reference[triple[2]] = pydot.Node(
                     safe_str(str(triple[2])), label=safe_node_label(triple[2])
                 )
