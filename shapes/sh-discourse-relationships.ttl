@@ -1,0 +1,29 @@
+# imports: http://example.org/shapes/dcterms
+# imports: https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/discourse-relationships.ttl
+
+@prefix discourse-relationships: <http://purl.org/swan/2.0/discourse-relationships/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-discourse-relationships: <http://example.org/shapes/discourse-relationships/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/shapes/discourse-relationships>
+	a owl:Ontology ;
+	owl:imports
+		<http://example.org/shapes/dcterms> ,
+		<https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/discourse-relationships.ttl>
+		;
+	.
+
+sh-discourse-relationships:refersTo-range-shape
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf discourse-relationships:refersTo ;
+	.
+
+sh-discourse-relationships:relatesTo-range-shape
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf discourse-relationships:relatesTo ;
+	.
+
