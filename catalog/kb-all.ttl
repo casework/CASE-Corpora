@@ -6,6 +6,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix kb: <http://example.org/kb/> .
+@prefix orcid: <https://orcid.org/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
@@ -57,6 +58,17 @@ kb:content-data-facet-5aa2c06d-a95d-4713-8e16-5463bad44705
 	uco-observable:hash
 		kb:hash-06903043-3b24-57e8-997d-6e5acd63ad8f ,
 		kb:hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
+		;
+	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
+	.
+
+kb:content-data-facet-ecd90088-8a21-4727-b9e1-b0080d4672b6
+	a uco-observable:ContentDataFacet ;
+	uco-observable:hash
+		kb:hash-06903043-3b24-57e8-997d-6e5acd63ad8f ,
+		kb:hash-42b66fdd-dd4e-5f4f-b630-71bd80fce4a1 ,
+		kb:hash-5a4427d2-5445-5bac-b56a-357b5b0ac0ff ,
+		kb:hash-8d31b2fc-c89b-542f-af7c-042ac395bfd5
 		;
 	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
 	.
@@ -279,7 +291,51 @@ kb:distribution-fe4d1373-7610-400f-a90e-1d3837f0ee93
 	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
 	.
 
+kb:file-726a2529-4ea6-413d-80c3-9d137116599f
+	a
+		prov:Entity ,
+		uco-observable:ArchiveFile
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent orcid:0000-0002-3771-570X ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566 ;
+			prov:hadActivity kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
+			prov:hadActivity kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877 ;
+	] ;
+	prov:wasAttributedTo orcid:0000-0002-3771-570X ;
+	prov:wasDerivedFrom
+		kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566 ,
+		<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
+		;
+	prov:wasGeneratedBy kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877 ;
+	uco-core:hasFacet
+		kb:content-data-facet-ecd90088-8a21-4727-b9e1-b0080d4672b6 ,
+		kb:file-facet-9656b1ad-71d0-48a2-af21-89c79142fce8
+		;
+	.
+
 kb:file-facet-2703a4c4-6157-4d95-887b-03055f664cb6
+	a uco-observable:FileFacet ;
+	uco-observable:fileName "android_7.tar.gz" ;
+	uco-observable:modifiedTime "2020-11-22T03:14:59+00:00"^^xsd:dateTime ;
+	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
+	.
+
+kb:file-facet-9656b1ad-71d0-48a2-af21-89c79142fce8
 	a uco-observable:FileFacet ;
 	uco-observable:fileName "android_7.tar.gz" ;
 	uco-observable:modifiedTime "2020-11-22T03:14:59+00:00"^^xsd:dateTime ;
@@ -292,10 +348,70 @@ kb:hash-06903043-3b24-57e8-997d-6e5acd63ad8f
 	uco-types:hashValue "563d71762b48f14ffd2663fcf85870f21c939441de614a1175a54b41c6373369"^^xsd:hexBinary ;
 	.
 
+kb:hash-42b66fdd-dd4e-5f4f-b630-71bd80fce4a1
+	a uco-types:Hash ;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "96043eccd065aa856eceaf6d8dfac032"^^xsd:hexBinary ;
+	.
+
+kb:hash-5a4427d2-5445-5bac-b56a-357b5b0ac0ff
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "7c0926d88eafeb68d87f7df62d6dc5bf46beb765"^^xsd:hexBinary ;
+	.
+
+kb:hash-8d31b2fc-c89b-542f-af7c-042ac395bfd5
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "02341328223d89e056c0453730230980972c07d7f1ce0e1d9d15946a76d13ffa9c3c9ba2f2641cbd5c33e7b27f8b78ac2d03add2f3b0f2efce3b4c64be053494"^^xsd:hexBinary ;
+	.
+
 kb:hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
 	a uco-types:Hash ;
 	uco-types:hashMethod "SHA3-256" ;
 	uco-types:hashValue "50a015b0c65c61feb81e77e0d2adcbf84d2f8352b2e1c46f27fb5f4816546751"^^xsd:hexBinary ;
+	.
+
+kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877
+	a
+		prov:Activity ,
+		case-investigation:InvestigativeAction
+		;
+	rdfs:comment "Download distribution" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent orcid:0000-0002-3771-570X ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
+		]
+		;
+	prov:used
+		kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566 ,
+		<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
+		;
+	prov:wasAssociatedWith orcid:0000-0002-3771-570X ;
+	prov:wasInformedBy kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
+	uco-action:object
+		kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566 ,
+		<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
+		;
+	uco-action:performer orcid:0000-0002-3771-570X ;
+	uco-action:result
+		kb:file-726a2529-4ea6-413d-80c3-9d137116599f ,
+		kb:provenance-record-721dc0d0-e5b7-4352-9d00-9ad33b5194ae
+		;
+	uco-core:description "Download distribution" ;
 	.
 
 kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f
@@ -364,6 +480,42 @@ kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566
 	prov:wasDerivedFrom prov:EmptyCollection ;
 	prov:wasGeneratedBy kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
 	uco-core:object <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
+	.
+
+kb:provenance-record-721dc0d0-e5b7-4352-9d00-9ad33b5194ae
+	a
+		prov:Collection ,
+		prov:Entity ,
+		case-investigation:ProvenanceRecord
+		;
+	prov:hadMember kb:file-726a2529-4ea6-413d-80c3-9d137116599f ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent orcid:0000-0002-3771-570X ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566 ;
+			prov:hadActivity kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
+			prov:hadActivity kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877 ;
+	] ;
+	prov:wasAttributedTo orcid:0000-0002-3771-570X ;
+	prov:wasDerivedFrom
+		kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566 ,
+		<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
+		;
+	prov:wasGeneratedBy kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877 ;
+	uco-core:object kb:file-726a2529-4ea6-413d-80c3-9d137116599f ;
 	.
 
 kb:samsung-device-2b5e3fe8-09a7-4c36-859a-5f669e7a1610
@@ -586,6 +738,13 @@ wd:Q95
 <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip>
 	a uco-observable:URL ;
 	uco-core:hasFacet kb:url-facet-9b9d4a1a-059e-47f8-aee0-d93edf61b5f2 ;
+	.
+
+orcid:0000-0002-3771-570X
+	a
+		prov:Agent ,
+		uco-identity:Person
+		;
 	.
 
 <https://project-open-data.cio.gov/v1.1/schema>
