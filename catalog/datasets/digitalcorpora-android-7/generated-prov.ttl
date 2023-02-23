@@ -13,12 +13,26 @@ kb:action-541265d6-2a57-476e-bff0-45f512f22bd5
 		a prov:Association ;
 		prov:agent kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:entity prov:EmptyCollection ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b ;
 	] ;
-	prov:used prov:EmptyCollection ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e ;
+		]
+		;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e
+		;
 	prov:wasAssociatedWith kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	prov:wasInformedBy kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b ;
 	.
 
 kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
@@ -40,12 +54,20 @@ kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
 		[
 			a prov:Communication ;
 			prov:activity kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a ;
+		] ,
+		[
+			a prov:Communication ;
+			prov:activity kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b ;
 		]
 		;
 	prov:qualifiedUsage
 		[
 			a prov:Usage ;
 			prov:entity kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
 		] ,
 		[
 			a prov:Usage ;
@@ -66,21 +88,28 @@ kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
 		[
 			a prov:Usage ;
 			prov:entity kb:provenance-record-9dbe529e-7c04-47e8-ace3-4f3fbbda80e9 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e ;
 		]
 		;
 	prov:used
 		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
 		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-37290c6d-3dc2-4519-a80f-136e73981d8b ,
 		kb:provenance-record-40677878-25d7-48de-b3bc-e8441c632e90 ,
-		kb:provenance-record-9dbe529e-7c04-47e8-ace3-4f3fbbda80e9
+		kb:provenance-record-9dbe529e-7c04-47e8-ace3-4f3fbbda80e9 ,
+		kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e
 		;
 	prov:wasAssociatedWith kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	prov:wasInformedBy
 		kb:observation-46c720c8-5346-4262-800e-5e3780517a92 ,
 		kb:observation-61f71e4d-fa2a-4e76-8c2b-bf2755aab72f ,
-		kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a
+		kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a ,
+		kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b
 		;
 	.
 
@@ -142,6 +171,68 @@ kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f
 	prov:wasInformedBy kb:observation-b1ea91ee-5e9a-4b75-979e-e41a56171b66 ;
 	.
 
+kb:application-0e554158-db6a-57cb-80c0-44ac1ca43b11
+	a prov:Entity ;
+	rdfs:comment "Application: AppLock" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f ;
+			prov:hadActivity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f
+		;
+	prov:wasGeneratedBy kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
+	.
+
+kb:application-13aeca4d-4692-59d5-b7de-e27348409784
+	a prov:Entity ;
+	rdfs:comment "Application: TikTok" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+		;
+	prov:wasGeneratedBy kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	.
+
 kb:application-1d14c394-cf39-5cf4-a5a8-361b339d1989
 	a prov:Entity ;
 	rdfs:comment "Application: Photos" ;
@@ -185,6 +276,37 @@ kb:application-1d14c394-cf39-5cf4-a5a8-361b339d1989
 	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
 	.
 
+kb:application-2d793320-3900-59b9-a157-f00a6e3f4555
+	a prov:Entity ;
+	rdfs:comment "Application: Line" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-27e643fc-6ffc-43bc-bcc7-228f0cdefbe6 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-c43afd74-d5a5-4096-b454-78d6f7a514bc ;
+			prov:hadActivity kb:seeding-action-27e643fc-6ffc-43bc-bcc7-228f0cdefbe6 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-27e643fc-6ffc-43bc-bcc7-228f0cdefbe6 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-c43afd74-d5a5-4096-b454-78d6f7a514bc
+		;
+	prov:wasGeneratedBy kb:seeding-action-27e643fc-6ffc-43bc-bcc7-228f0cdefbe6 ;
+	.
+
 kb:application-31fc3caa-6eb6-566a-be5b-d5004e67b882
 	a prov:Entity ;
 	rdfs:comment "Application: Maps" ;
@@ -226,6 +348,130 @@ kb:application-31fc3caa-6eb6-566a-be5b-d5004e67b882
 		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
 		;
 	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
+kb:application-33b42130-32fb-555c-89b5-2663cae7e6b4
+	a prov:Entity ;
+	rdfs:comment "Application: Viber" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-0114505c-89da-4fe8-afc8-5ec0b3c3ed62 ;
+			prov:hadActivity kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-0114505c-89da-4fe8-afc8-5ec0b3c3ed62
+		;
+	prov:wasGeneratedBy kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0 ;
+	.
+
+kb:application-3c8271a7-dd03-5de2-aa9c-cd3e75ddfebb
+	a prov:Entity ;
+	rdfs:comment "Application: imo" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd0d3800-4a37-4299-be75-cca098575d27 ;
+			prov:hadActivity kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-cd0d3800-4a37-4299-be75-cca098575d27
+		;
+	prov:wasGeneratedBy kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+	.
+
+kb:application-4b053bbc-cf68-56ba-8979-60e0c5d83425
+	a prov:Entity ;
+	rdfs:comment "Application: TextNow" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+		;
+	prov:wasGeneratedBy kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	.
+
+kb:application-552b6f92-c1d2-50f8-af4b-2abe799e54ac
+	a prov:Entity ;
+	rdfs:comment "Application: WhatsApp" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+		;
+	prov:wasGeneratedBy kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
 	.
 
 kb:application-592f4226-bcb4-55bb-8ebe-f576719e9258
@@ -314,6 +560,37 @@ kb:application-5ec17e6b-6180-556b-a611-ade7a8a9d836
 	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
 	.
 
+kb:application-5ef487a0-67c5-5652-9cb9-d56589bfde96
+	a prov:Entity ;
+	rdfs:comment "Application: Gallery Vault" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+			prov:hadActivity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		;
+	prov:wasGeneratedBy kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+	.
+
 kb:application-6207ec06-cfd1-5460-8a20-be21c37a429c
 	a prov:Entity ;
 	rdfs:comment "Application: Phone" ;
@@ -355,6 +632,68 @@ kb:application-6207ec06-cfd1-5460-8a20-be21c37a429c
 		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
 		;
 	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
+kb:application-6c62add4-ac0b-5c5e-b0ae-4b3fab5ff35d
+	a prov:Entity ;
+	rdfs:comment "Application: Signal" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-9ea065c5-bb95-4535-be3e-df2016e40694 ;
+			prov:hadActivity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-9ea065c5-bb95-4535-be3e-df2016e40694
+		;
+	prov:wasGeneratedBy kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+	.
+
+kb:application-79b3827b-9b6c-5b01-8523-2ebda10ca0d4
+	a prov:Entity ;
+	rdfs:comment "Application: SHAREIt" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-03bfd992-342b-4a3a-b90a-9b2967bc3548 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-f8541cbb-f45f-4760-9505-bda885700e4e ;
+			prov:hadActivity kb:seeding-action-03bfd992-342b-4a3a-b90a-9b2967bc3548 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-03bfd992-342b-4a3a-b90a-9b2967bc3548 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-f8541cbb-f45f-4760-9505-bda885700e4e
+		;
+	prov:wasGeneratedBy kb:seeding-action-03bfd992-342b-4a3a-b90a-9b2967bc3548 ;
 	.
 
 kb:application-84770b80-96cc-53a8-bd08-3648688ab6c1
@@ -400,6 +739,68 @@ kb:application-84770b80-96cc-53a8-bd08-3648688ab6c1
 	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
 	.
 
+kb:application-8a355712-008f-5a91-b207-1d393552eb19
+	a prov:Entity ;
+	rdfs:comment "Application: Telegram" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd0d3800-4a37-4299-be75-cca098575d27 ;
+			prov:hadActivity kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-cd0d3800-4a37-4299-be75-cca098575d27
+		;
+	prov:wasGeneratedBy kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+	.
+
+kb:application-9a8134ce-773c-524f-85b9-db4be0b9210e
+	a prov:Entity ;
+	rdfs:comment "Application: Skype" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-9ea065c5-bb95-4535-be3e-df2016e40694 ;
+			prov:hadActivity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-9ea065c5-bb95-4535-be3e-df2016e40694
+		;
+	prov:wasGeneratedBy kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+	.
+
 kb:application-a4710b25-60a5-54b1-872f-e5989bd37ae5
 	a prov:Entity ;
 	rdfs:comment "Application: Gmail" ;
@@ -441,6 +842,99 @@ kb:application-a4710b25-60a5-54b1-872f-e5989bd37ae5
 		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
 		;
 	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
+kb:application-a6345190-8513-54f7-beb6-0a5e816307ff
+	a prov:Entity ;
+	rdfs:comment "Application: Twitter" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+		;
+	prov:wasGeneratedBy kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	.
+
+kb:application-a70fbbe2-6352-5f07-8e38-3dc3f87bee69
+	a prov:Entity ;
+	rdfs:comment "Application: Facebook Messenger" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd0d3800-4a37-4299-be75-cca098575d27 ;
+			prov:hadActivity kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-cd0d3800-4a37-4299-be75-cca098575d27
+		;
+	prov:wasGeneratedBy kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+	.
+
+kb:application-aa600bc2-9996-5b5a-bfcb-dcbaccae420c
+	a prov:Entity ;
+	rdfs:comment "Application: Snapchat" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+		;
+	prov:wasGeneratedBy kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
 	.
 
 kb:application-c03097a2-2071-5164-b809-710b3ed35501
@@ -486,6 +980,68 @@ kb:application-c03097a2-2071-5164-b809-710b3ed35501
 	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
 	.
 
+kb:application-c1d369db-cfa6-5ff8-b5bd-789246c5c9eb
+	a prov:Entity ;
+	rdfs:comment "Application: Skout" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+		;
+	prov:wasGeneratedBy kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	.
+
+kb:application-c3898c83-7b68-5764-9903-e6c9bc066ba0
+	a prov:Entity ;
+	rdfs:comment "Application: kik" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+		;
+	prov:wasGeneratedBy kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	.
+
 kb:application-c3f4e260-599e-5025-92db-5dc15538dcce
 	a prov:Entity ;
 	rdfs:comment "Application: Docs" ;
@@ -527,6 +1083,68 @@ kb:application-c3f4e260-599e-5025-92db-5dc15538dcce
 		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
 		;
 	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
+kb:application-c6d6aa06-5c19-5586-aab8-5eb865e3864d
+	a prov:Entity ;
+	rdfs:comment "Application: Spotify" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-9ea065c5-bb95-4535-be3e-df2016e40694 ;
+			prov:hadActivity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-9ea065c5-bb95-4535-be3e-df2016e40694
+		;
+	prov:wasGeneratedBy kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+	.
+
+kb:application-d8c99a92-a0d2-5ef4-addc-0ca7a885006c
+	a prov:Entity ;
+	rdfs:comment "Application: WeChat" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-a464ab32-3ba5-494c-b509-042b387fad4b ;
+			prov:hadActivity kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-a464ab32-3ba5-494c-b509-042b387fad4b
+		;
+	prov:wasGeneratedBy kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b ;
 	.
 
 kb:application-e73ed7fd-5fa0-54b7-8984-043721252ca8
@@ -572,6 +1190,37 @@ kb:application-e73ed7fd-5fa0-54b7-8984-043721252ca8
 	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
 	.
 
+kb:application-e77308c5-4cbe-58e4-8286-83fcd515be5e
+	a prov:Entity ;
+	rdfs:comment "Application: Instagram" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+		;
+	prov:wasGeneratedBy kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	.
+
 kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8
 	a prov:Entity ;
 	rdfs:comment "procdata.zip" ;
@@ -579,17 +1228,27 @@ kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8
 		a prov:Attribution ;
 		prov:agent kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e ;
+			prov:hadActivity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
 	] ;
 	prov:wasAttributedTo kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e
+		;
 	prov:wasGeneratedBy kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
 	.
 
@@ -1323,6 +1982,11 @@ kb:file-736c63b5-5e15-4a48-b948-13757bae0aae
 		] ,
 		[
 			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ;
+		] ,
+		[
+			a prov:Derivation ;
 			prov:entity kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ;
 			prov:hadActivity kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ;
 		] ,
@@ -1345,6 +2009,11 @@ kb:file-736c63b5-5e15-4a48-b948-13757bae0aae
 			a prov:Derivation ;
 			prov:entity kb:provenance-record-9dbe529e-7c04-47e8-ace3-4f3fbbda80e9 ;
 			prov:hadActivity kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e ;
+			prov:hadActivity kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ;
 		]
 		;
 	prov:qualifiedGeneration [
@@ -1354,11 +2023,13 @@ kb:file-736c63b5-5e15-4a48-b948-13757bae0aae
 	prov:wasAttributedTo kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	prov:wasDerivedFrom
 		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
 		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-37290c6d-3dc2-4519-a80f-136e73981d8b ,
 		kb:provenance-record-40677878-25d7-48de-b3bc-e8441c632e90 ,
-		kb:provenance-record-9dbe529e-7c04-47e8-ace3-4f3fbbda80e9
+		kb:provenance-record-9dbe529e-7c04-47e8-ace3-4f3fbbda80e9 ,
+		kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e
 		;
 	prov:wasGeneratedBy kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ;
 	.
@@ -1655,17 +2326,27 @@ kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6
 		a prov:Attribution ;
 		prov:agent kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e ;
+			prov:hadActivity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
 	] ;
 	prov:wasAttributedTo kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e
+		;
 	prov:wasGeneratedBy kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
 	.
 
@@ -1676,17 +2357,27 @@ kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e
 		a prov:Attribution ;
 		prov:agent kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e ;
+			prov:hadActivity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
 	] ;
 	prov:wasAttributedTo kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e
+		;
 	prov:wasGeneratedBy kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
 	.
 
@@ -1864,14 +2555,29 @@ kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214
 		a prov:Association ;
 		prov:agent kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	] ;
-	prov:qualifiedUsage [
-		a prov:Usage ;
-		prov:atTime "2018-12-06T21:14:50-05:00"^^xsd:dateTime ;
-		prov:entity prov:EmptyCollection ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b ;
 	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:atTime "2018-12-06T21:14:50-05:00"^^xsd:dateTime ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:atTime "2018-12-06T21:14:50-05:00"^^xsd:dateTime ;
+			prov:entity kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e ;
+		]
+		;
 	prov:startedAtTime "2018-12-06T21:14:50-05:00"^^xsd:dateTime ;
-	prov:used prov:EmptyCollection ;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e
+		;
 	prov:wasAssociatedWith kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	prov:wasInformedBy kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b ;
 	.
 
 kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f
@@ -2705,6 +3411,43 @@ kb:person-eab92237-467b-4977-959f-db67afdddee5
 	rdfs:comment "Dataset producer" ;
 	.
 
+kb:provenance-record-0114505c-89da-4fe8-afc8-5ec0b3c3ed62
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:application-79b3827b-9b6c-5b01-8523-2ebda10ca0d4 ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-03bfd992-342b-4a3a-b90a-9b2967bc3548 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-f8541cbb-f45f-4760-9505-bda885700e4e ;
+			prov:hadActivity kb:seeding-action-03bfd992-342b-4a3a-b90a-9b2967bc3548 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-03bfd992-342b-4a3a-b90a-9b2967bc3548 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-f8541cbb-f45f-4760-9505-bda885700e4e
+		;
+	prov:wasGeneratedBy kb:seeding-action-03bfd992-342b-4a3a-b90a-9b2967bc3548 ;
+	.
+
 kb:provenance-record-1ccf172d-9902-47cf-8861-d4c6871bc566
 	a
 		prov:Collection ,
@@ -3034,6 +3777,45 @@ kb:provenance-record-37290c6d-3dc2-4519-a80f-136e73981d8b
 	prov:wasGeneratedBy kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a ;
 	.
 
+kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:application-6c62add4-ac0b-5c5e-b0ae-4b3fab5ff35d ,
+		kb:application-9a8134ce-773c-524f-85b9-db4be0b9210e ,
+		kb:application-c6d6aa06-5c19-5586-aab8-5eb865e3864d ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-9ea065c5-bb95-4535-be3e-df2016e40694 ;
+			prov:hadActivity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-9ea065c5-bb95-4535-be3e-df2016e40694
+		;
+	prov:wasGeneratedBy kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+	.
+
 kb:provenance-record-3ec2e8d4-8833-4257-97c2-ba17c6041287
 	a
 		prov:Collection ,
@@ -3291,6 +4073,43 @@ kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
 	prov:wasGeneratedBy kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e ;
 	.
 
+kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:application-0e554158-db6a-57cb-80c0-44ac1ca43b11 ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f ;
+			prov:hadActivity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f
+		;
+	prov:wasGeneratedBy kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
+	.
+
 kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97
 	a
 		prov:Collection ,
@@ -3339,6 +4158,11 @@ kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
 		] ,
 		[
 			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ;
+		] ,
+		[
+			a prov:Derivation ;
 			prov:entity kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ;
 			prov:hadActivity kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ;
 		] ,
@@ -3361,6 +4185,11 @@ kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
 			a prov:Derivation ;
 			prov:entity kb:provenance-record-9dbe529e-7c04-47e8-ace3-4f3fbbda80e9 ;
 			prov:hadActivity kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e ;
+			prov:hadActivity kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ;
 		]
 		;
 	prov:qualifiedGeneration [
@@ -3370,11 +4199,13 @@ kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
 	prov:wasAttributedTo kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	prov:wasDerivedFrom
 		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
 		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-37290c6d-3dc2-4519-a80f-136e73981d8b ,
 		kb:provenance-record-40677878-25d7-48de-b3bc-e8441c632e90 ,
-		kb:provenance-record-9dbe529e-7c04-47e8-ace3-4f3fbbda80e9
+		kb:provenance-record-9dbe529e-7c04-47e8-ace3-4f3fbbda80e9 ,
+		kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e
 		;
 	prov:wasGeneratedBy kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ;
 	.
@@ -3683,6 +4514,45 @@ kb:provenance-record-9dbe529e-7c04-47e8-ace3-4f3fbbda80e9
 	prov:wasGeneratedBy kb:observation-46c720c8-5346-4262-800e-5e3780517a92 ;
 	.
 
+kb:provenance-record-9ea065c5-bb95-4535-be3e-df2016e40694
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:application-3c8271a7-dd03-5de2-aa9c-cd3e75ddfebb ,
+		kb:application-8a355712-008f-5a91-b207-1d393552eb19 ,
+		kb:application-a70fbbe2-6352-5f07-8e38-3dc3f87bee69 ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd0d3800-4a37-4299-be75-cca098575d27 ;
+			prov:hadActivity kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-cd0d3800-4a37-4299-be75-cca098575d27
+		;
+	prov:wasGeneratedBy kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+	.
+
 kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30
 	a
 		prov:Collection ,
@@ -3705,6 +4575,43 @@ kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30
 	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	prov:wasDerivedFrom prov:EmptyCollection ;
 	prov:wasGeneratedBy kb:investigative-action-aa5026fa-a651-4cfd-9ff0-a6354aa70ec5 ;
+	.
+
+kb:provenance-record-a464ab32-3ba5-494c-b509-042b387fad4b
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:application-2d793320-3900-59b9-a157-f00a6e3f4555 ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-27e643fc-6ffc-43bc-bcc7-228f0cdefbe6 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-c43afd74-d5a5-4096-b454-78d6f7a514bc ;
+			prov:hadActivity kb:seeding-action-27e643fc-6ffc-43bc-bcc7-228f0cdefbe6 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-27e643fc-6ffc-43bc-bcc7-228f0cdefbe6 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-c43afd74-d5a5-4096-b454-78d6f7a514bc
+		;
+	prov:wasGeneratedBy kb:seeding-action-27e643fc-6ffc-43bc-bcc7-228f0cdefbe6 ;
 	.
 
 kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772
@@ -3766,6 +4673,124 @@ kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b
 	prov:wasGeneratedBy kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
 	.
 
+kb:provenance-record-c43afd74-d5a5-4096-b454-78d6f7a514bc
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:application-33b42130-32fb-555c-89b5-2663cae7e6b4 ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-0114505c-89da-4fe8-afc8-5ec0b3c3ed62 ;
+			prov:hadActivity kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-0114505c-89da-4fe8-afc8-5ec0b3c3ed62
+		;
+	prov:wasGeneratedBy kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0 ;
+	.
+
+kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:application-d8c99a92-a0d2-5ef4-addc-0ca7a885006c ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-a464ab32-3ba5-494c-b509-042b387fad4b ;
+			prov:hadActivity kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-a464ab32-3ba5-494c-b509-042b387fad4b
+		;
+	prov:wasGeneratedBy kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b ;
+	.
+
+kb:provenance-record-cd0d3800-4a37-4299-be75-cca098575d27
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:application-13aeca4d-4692-59d5-b7de-e27348409784 ,
+		kb:application-4b053bbc-cf68-56ba-8979-60e0c5d83425 ,
+		kb:application-552b6f92-c1d2-50f8-af4b-2abe799e54ac ,
+		kb:application-a6345190-8513-54f7-beb6-0a5e816307ff ,
+		kb:application-aa600bc2-9996-5b5a-bfcb-dcbaccae420c ,
+		kb:application-c1d369db-cfa6-5ff8-b5bd-789246c5c9eb ,
+		kb:application-c3898c83-7b68-5764-9903-e6c9bc066ba0 ,
+		kb:application-e77308c5-4cbe-58e4-8286-83fcd515be5e ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51 ;
+			prov:hadActivity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+		;
+	prov:wasGeneratedBy kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	.
+
 kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
 	a
 		prov:Collection ,
@@ -3816,17 +4841,27 @@ kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
 		a prov:Attribution ;
 		prov:agent kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	] ;
-	prov:qualifiedDerivation [
-		a prov:Derivation ;
-		prov:entity prov:EmptyCollection ;
-		prov:hadActivity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
-	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e ;
+			prov:hadActivity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
+		]
+		;
 	prov:qualifiedGeneration [
 		a prov:Generation ;
 		prov:activity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
 	] ;
 	prov:wasAttributedTo kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
-	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e
+		;
 	prov:wasGeneratedBy kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
 	.
 
@@ -3970,6 +5005,304 @@ kb:provenance-record-ed951e2b-fb93-4cc9-899c-f8d88ec80619
 		kb:provenance-record-721dc0d0-e5b7-4352-9d00-9ad33b5194ae
 		;
 	prov:wasGeneratedBy kb:investigative-action-194c4e23-243e-4deb-b8d5-3ce9dce19367 ;
+	.
+
+kb:provenance-record-f8541cbb-f45f-4760-9505-bda885700e4e
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:application-5ef487a0-67c5-5652-9cb9-d56589bfde96 ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+			prov:hadActivity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		;
+	prov:wasGeneratedBy kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+	.
+
+kb:seeding-action-03bfd992-342b-4a3a-b90a-9b2967bc3548
+	a prov:Activity ;
+	rdfs:comment "Install SHAREIt" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-f8541cbb-f45f-4760-9505-bda885700e4e ;
+		]
+		;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-f8541cbb-f45f-4760-9505-bda885700e4e
+		;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasInformedBy kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+	.
+
+kb:seeding-action-27e643fc-6ffc-43bc-bcc7-228f0cdefbe6
+	a prov:Activity ;
+	rdfs:comment "Install Line" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-c43afd74-d5a5-4096-b454-78d6f7a514bc ;
+		]
+		;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-c43afd74-d5a5-4096-b454-78d6f7a514bc
+		;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasInformedBy kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0 ;
+	.
+
+kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b
+	a prov:Activity ;
+	rdfs:comment "Install WeChat" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:seeding-action-27e643fc-6ffc-43bc-bcc7-228f0cdefbe6 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-a464ab32-3ba5-494c-b509-042b387fad4b ;
+		]
+		;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-a464ab32-3ba5-494c-b509-042b387fad4b
+		;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasInformedBy kb:seeding-action-27e643fc-6ffc-43bc-bcc7-228f0cdefbe6 ;
+	.
+
+kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0
+	a prov:Activity ;
+	rdfs:comment "Install Viber" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:seeding-action-03bfd992-342b-4a3a-b90a-9b2967bc3548 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-0114505c-89da-4fe8-afc8-5ec0b3c3ed62 ;
+		]
+		;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-0114505c-89da-4fe8-afc8-5ec0b3c3ed62
+		;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasInformedBy kb:seeding-action-03bfd992-342b-4a3a-b90a-9b2967bc3548 ;
+	.
+
+kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+	a prov:Activity ;
+	rdfs:comment "Install Gallery Vault" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+		]
+		;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasInformedBy kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
+	.
+
+kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428
+	a prov:Activity ;
+	rdfs:comment "Install apps" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51 ;
+		]
+		;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+		;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasInformedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
+kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864
+	a prov:Activity ;
+	rdfs:comment "Install apps" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-9ea065c5-bb95-4535-be3e-df2016e40694 ;
+		]
+		;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-9ea065c5-bb95-4535-be3e-df2016e40694
+		;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasInformedBy kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303 ;
+	.
+
+kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a
+	a prov:Activity ;
+	rdfs:comment "Install AppLock" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f ;
+		]
+		;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f
+		;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasInformedBy kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+	.
+
+kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303
+	a prov:Activity ;
+	rdfs:comment "Install apps" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-cd0d3800-4a37-4299-be75-cca098575d27 ;
+		]
+		;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-cd0d3800-4a37-4299-be75-cca098575d27
+		;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasInformedBy kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428 ;
 	.
 
 kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b
