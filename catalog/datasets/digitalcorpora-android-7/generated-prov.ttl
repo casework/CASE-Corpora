@@ -167,6 +167,26 @@ kb:contact-00000000-0000-0000-0000-000000000000
 	a prov:Agent ;
 	.
 
+kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	.
+
 kb:file-02163e68-0eb3-41b6-8cd7-8435d9ce7eee
 	a prov:Entity ;
 	rdfs:comment "portability.json" ;
@@ -753,6 +773,27 @@ kb:file-5aad2637-ebad-46dc-8fdb-58a5078f760a
 		kb:provenance-record-721dc0d0-e5b7-4352-9d00-9ad33b5194ae
 		;
 	prov:wasGeneratedBy kb:investigative-action-194c4e23-243e-4deb-b8d5-3ce9dce19367 ;
+	.
+
+kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b
+	a prov:Entity ;
+	rdfs:comment "Stock Android image from Google" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228 ;
 	.
 
 kb:file-6bdb403e-f524-48bb-9f5e-4f3d3aaf3f58
@@ -1432,6 +1473,35 @@ kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f
 	prov:wasInformedBy kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 	.
 
+kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25
+	a prov:Activity ;
+	rdfs:comment "Wipe device and restore phone to factory default" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b ;
+		]
+		;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b
+		;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasInformedBy kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	.
+
 kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d
 	a prov:Activity ;
 	rdfs:comment "Document dataset creation and file hashes" ;
@@ -1833,6 +1903,21 @@ kb:investigative-action-aa5026fa-a651-4cfd-9ff0-a6354aa70ec5
 	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	.
 
+kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429
+	a prov:Activity ;
+	rdfs:comment "Phone entered into chain of custody" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	.
+
 kb:investigative-action-b8273ac6-f091-40b0-8346-1544df69f093
 	a prov:Activity ;
 	rdfs:comment "Download Google Takeout data for Snapchat" ;
@@ -1851,6 +1936,21 @@ kb:investigative-action-b8273ac6-f091-40b0-8346-1544df69f093
 kb:investigative-action-d254e096-3f87-4a04-97e6-e1e6b52c6766
 	a prov:Activity ;
 	rdfs:comment "Download Google Takeout data for Twitter" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	.
+
+kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228
+	a prov:Activity ;
+	rdfs:comment "Retrieve Android image from Google" ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
@@ -2124,6 +2224,48 @@ kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a
 	prov:wasInformedBy kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
 	.
 
+kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4
+	a prov:Entity ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
 kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5
 	a prov:Agent ;
 	.
@@ -2259,6 +2401,30 @@ kb:provenance-record-27610dc7-3dc7-4d57-8143-629c72fb6be7
 		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
 		;
 	prov:wasGeneratedBy kb:observation-6c0553fe-84f9-4133-8be1-67d6e3c80d61 ;
+	.
+
+kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228 ;
 	.
 
 kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79
@@ -3146,6 +3312,65 @@ kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772
 	prov:wasGeneratedBy kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853 ;
 	.
 
+kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	.
+
+kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	rdfs:comment "Record of phone having been wiped and restored to factory default" ;
+	prov:hadMember kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b ;
+			prov:hadActivity kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b
+		;
+	prov:wasGeneratedBy kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25 ;
+	.
+
 kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
 	a
 		prov:Collection ,
@@ -3173,6 +3398,55 @@ kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
 	prov:wasAttributedTo kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	prov:wasDerivedFrom prov:EmptyCollection ;
 	prov:wasGeneratedBy kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
+	.
+
+kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
 	.
 
 kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8
@@ -3256,6 +3530,54 @@ kb:provenance-record-ed951e2b-fb93-4cc9-899c-f8d88ec80619
 		kb:provenance-record-721dc0d0-e5b7-4352-9d00-9ad33b5194ae
 		;
 	prov:wasGeneratedBy kb:investigative-action-194c4e23-243e-4deb-b8d5-3ce9dce19367 ;
+	.
+
+kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b
+	a prov:Activity ;
+	rdfs:comment "Install Android" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedCommunication
+		[
+			a prov:Communication ;
+			prov:activity kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25 ;
+		] ,
+		[
+			a prov:Communication ;
+			prov:activity kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228 ;
+		]
+		;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+		]
+		;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasInformedBy
+		kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25 ,
+		kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228
+		;
 	.
 
 kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879

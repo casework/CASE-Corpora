@@ -570,6 +570,30 @@ kb:device-8fe70491-26c5-4226-a735-ccda10e1a73a
 	uco-core:hasFacet kb:device-facet-f2390184-741a-4c0f-8187-0264ed056da0 ;
 	.
 
+kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+	a
+		drafting:device-class-8ccd9a51-6106-4afa-a127-24803ed58631 ,
+		prov:Entity
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	uco-core:hasFacet kb:device-facet-da4dcc36-e24c-487e-8b76-2026b3938320 ;
+	.
+
 kb:device-facet-1ee161fc-5b41-48e0-bbdc-69ffa8c03230
 	a uco-observable:DeviceFacet ;
 	uco-observable:manufacturer wd:Q20716 ;
@@ -593,6 +617,14 @@ kb:device-facet-cc2f6193-85cc-47f1-b5cb-f2f8338daf03
 	a uco-observable:DeviceFacet ;
 	uco-observable:deviceType "Smart things hub" ;
 	uco-observable:manufacturer wd:Q20716 ;
+	.
+
+kb:device-facet-da4dcc36-e24c-487e-8b76-2026b3938320
+	a uco-observable:DeviceFacet ;
+	uco-observable:deviceType "LG Nexus 5X" ;
+	uco-observable:manufacturer wd:Q162345 ;
+	uco-observable:model "LG-H790" ;
+	uco-observable:serialNumber "007289511f431f6d" ;
 	.
 
 kb:device-facet-f2390184-741a-4c0f-8187-0264ed056da0
@@ -1379,6 +1411,31 @@ kb:file-5aad2637-ebad-46dc-8fdb-58a5078f760a
 		kb:content-data-facet-8b3fc9fa-a5d7-4fc9-b26d-66de8a1071e8 ,
 		kb:file-facet-2d6e02e7-6788-4626-918f-1fdbdb8f6241
 		;
+	.
+
+kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b
+	a
+		prov:Entity ,
+		uco-observable:File
+		;
+	rdfs:comment "Stock Android image from Google" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228 ;
+	uco-core:description "Stock Android image from Google" ;
 	.
 
 kb:file-6bdb403e-f524-48bb-9f5e-4f3d3aaf3f58
@@ -2925,6 +2982,45 @@ kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f
 	uco-core:description "Upload to Digital Corpora" ;
 	.
 
+kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25
+	a
+		prov:Activity ,
+		case-investigation:InvestigativeAction
+		;
+	rdfs:comment "Wipe device and restore phone to factory default" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b ;
+		]
+		;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b
+		;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasInformedBy kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	uco-action:object
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b
+		;
+	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:result kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+	uco-core:description "Wipe device and restore phone to factory default" ;
+	.
+
 kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d
 	a
 		prov:Activity ,
@@ -3413,6 +3509,30 @@ kb:investigative-action-aa5026fa-a651-4cfd-9ff0-a6354aa70ec5
 	uco-core:description "Download Google Takeout data for Instagram" ;
 	.
 
+kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429
+	a
+		prov:Activity ,
+		case-investigation:InvestigativeAction
+		;
+	rdfs:comment "Phone entered into chain of custody" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:result
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b
+		;
+	uco-core:description "Phone entered into chain of custody" ;
+	.
+
 kb:investigative-action-b8273ac6-f091-40b0-8346-1544df69f093
 	a
 		prov:Activity ,
@@ -3459,6 +3579,30 @@ kb:investigative-action-d254e096-3f87-4a04-97e6-e1e6b52c6766
 		kb:provenance-record-3ec2e8d4-8833-4257-97c2-ba17c6041287
 		;
 	uco-core:description "Download Google Takeout data for Twitter" ;
+	.
+
+kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228
+	a
+		prov:Activity ,
+		case-investigation:InvestigativeAction
+		;
+	rdfs:comment "Retrieve Android image from Google" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedUsage [
+		a prov:Usage ;
+		prov:entity prov:EmptyCollection ;
+	] ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:result
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe
+		;
+	uco-core:description "Retrieve Android image from Google" ;
 	.
 
 kb:observable-relationship-e1fd52e1-517e-49ee-83c8-8cb007bf8931
@@ -3911,10 +4055,63 @@ kb:operating-system-12dd8ee9-c818-4232-ac8c-1bc7f45bd2ab
 	uco-core:name "Cellebrite UFED 4PC" ;
 	.
 
+kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4
+	a
+		prov:Entity ,
+		uco-observable:OperatingSystem
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	uco-core:hasFacet kb:operating-system-facet-d79d75c8-7740-4c29-b173-2b94d012637c ;
+	uco-core:name "Android Nougat" ;
+	.
+
 kb:operating-system-facet-78cb5086-9aea-4c6e-9571-03d98b2e06a5
 	a uco-observable:OperatingSystemFacet ;
 	uco-observable:manufacturer wd:Q5058279 ;
 	uco-observable:version "7.10.1.1080" ;
+	.
+
+kb:operating-system-facet-d79d75c8-7740-4c29-b173-2b94d012637c
+	a uco-observable:OperatingSystemFacet ;
+	uco-observable:manufacturer wd:Q95 ;
+	uco-observable:version "7.1.2" ;
 	.
 
 kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e
@@ -4080,6 +4277,32 @@ kb:provenance-record-27610dc7-3dc7-4d57-8143-629c72fb6be7
 	prov:wasGeneratedBy kb:observation-6c0553fe-84f9-4133-8be1-67d6e3c80d61 ;
 	uco-core:description "Record of procdata.zip being hashed" ;
 	uco-core:object kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ;
+	.
+
+kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe
+	a
+		prov:Collection ,
+		prov:Entity ,
+		case-investigation:ProvenanceRecord
+		;
+	prov:hadMember kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228 ;
+	uco-core:object kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
 	.
 
 kb:provenance-record-2dbd4ba1-76b1-4041-a460-8a5922940f79
@@ -5020,6 +5243,70 @@ kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772
 	uco-core:object kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	.
 
+kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b
+	a
+		prov:Collection ,
+		prov:Entity ,
+		case-investigation:ProvenanceRecord
+		;
+	prov:hadMember kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation [
+		a prov:Derivation ;
+		prov:entity prov:EmptyCollection ;
+		prov:hadActivity kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	] ;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429 ;
+	uco-core:object kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+	.
+
+kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+	a
+		prov:Collection ,
+		prov:Entity ,
+		case-investigation:ProvenanceRecord
+		;
+	rdfs:comment "Record of phone having been wiped and restored to factory default" ;
+	prov:hadMember kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b ;
+			prov:hadActivity kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25 ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-b6427e0e-6d72-4df4-8aa7-f5894c78202b
+		;
+	prov:wasGeneratedBy kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25 ;
+	uco-core:description "Record of phone having been wiped and restored to factory default" ;
+	uco-core:object kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+	.
+
 kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
 	a
 		prov:Collection ,
@@ -5053,6 +5340,60 @@ kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
 		kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ,
 		kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ,
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e
+		;
+	.
+
+kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+	a
+		prov:Collection ,
+		prov:Entity ,
+		case-investigation:ProvenanceRecord
+		;
+	prov:hadMember
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4
+		;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	uco-core:object
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4
 		;
 	.
 
@@ -5163,6 +5504,69 @@ kb:samsung-device-2b5e3fe8-09a7-4c36-859a-5f669e7a1610
 	uco-core:hasFacet kb:device-facet-1ee161fc-5b41-48e0-bbdc-69ffa8c03230 ;
 	.
 
+kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b
+	a
+		prov:Activity ,
+		case-investigation:InvestigativeAction
+		;
+	rdfs:comment "Install Android" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedCommunication
+		[
+			a prov:Communication ;
+			prov:activity kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25 ;
+		] ,
+		[
+			a prov:Communication ;
+			prov:activity kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228 ;
+		]
+		;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+		]
+		;
+	prov:used
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasInformedBy
+		kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25 ,
+		kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228
+		;
+	uco-action:object
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:result
+		kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4 ,
+		kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
+		;
+	uco-core:description "Install Android" ;
+	.
+
 kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879
 	a
 		prov:Agent ,
@@ -5268,10 +5672,21 @@ drafting:device-class-266d2faf-2e06-413f-92e9-d94fcc57619a
 	rdfs:label "Fairphone-4"@en ;
 	.
 
+drafting:device-class-8ccd9a51-6106-4afa-a127-24803ed58631
+	a owl:Class ;
+	rdfs:subClassOf uco-observable:AndroidPhone ;
+	rdfs:label "LG GSM H790 Nexus 5X"@en ;
+	.
+
 drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 	a owl:Class ;
 	rdfs:subClassOf uco-observable:AndroidPhone ;
 	rdfs:label "Samsung SM-G925F"@en ;
+	.
+
+wd:Q162345
+	a uco-identity:Organization ;
+	uco-core:name "LG Electronics" ;
 	.
 
 wd:Q20716
