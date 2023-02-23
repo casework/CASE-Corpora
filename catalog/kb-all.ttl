@@ -6070,8 +6070,8 @@ kb:samsung-device-2b5e3fe8-09a7-4c36-859a-5f669e7a1610
 
 kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b
 	a
-		prov:Activity ,
-		case-investigation:InvestigativeAction
+		case-corpora:SeedingAction ,
+		prov:Activity
 		;
 	rdfs:comment "Install Android" ;
 	prov:qualifiedAssociation [
