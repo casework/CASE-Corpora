@@ -145,6 +145,92 @@ kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
 	uco-core:description "Assemble phone imaging log" ;
 	.
 
+kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853
+	a
+		prov:Activity ,
+		sosa:Actuation ,
+		case-investigation:InvestigativeAction ,
+		uco-observable:ObservableAction
+		;
+	rdfs:comment "TODO - undocumented modification to contents of blk0_mmcblk0.bin" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:contact-00000000-0000-0000-0000-000000000000 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39 ;
+		]
+		;
+	prov:used
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
+		kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
+		;
+	prov:wasAssociatedWith kb:contact-00000000-0000-0000-0000-000000000000 ;
+	prov:wasInformedBy kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e ;
+	sosa:actsOnProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
+	sosa:hasFeatureOfInterest kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+	uco-action:object
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
+		kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
+		;
+	uco-action:performer kb:contact-00000000-0000-0000-0000-000000000000 ;
+	uco-action:result kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772 ;
+	uco-core:description "TODO - undocumented modification to contents of blk0_mmcblk0.bin" ;
+	.
+
+kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f
+	a
+		prov:Activity ,
+		sosa:Actuation ,
+		case-investigation:InvestigativeAction ,
+		uco-observable:ObservableAction
+		;
+	rdfs:comment "TODO - undocumented modification to contents of blk0_mmcblk0.bin" ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:contact-00000000-0000-0000-0000-000000000000 ;
+	] ;
+	prov:qualifiedCommunication [
+		a prov:Communication ;
+		prov:activity kb:observation-b1ea91ee-5e9a-4b75-979e-e41a56171b66 ;
+	] ;
+	prov:qualifiedUsage
+		[
+			a prov:Usage ;
+			prov:entity kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+		] ,
+		[
+			a prov:Usage ;
+			prov:entity kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8 ;
+		]
+		;
+	prov:used
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
+		kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8
+		;
+	prov:wasAssociatedWith kb:contact-00000000-0000-0000-0000-000000000000 ;
+	prov:wasInformedBy kb:observation-b1ea91ee-5e9a-4b75-979e-e41a56171b66 ;
+	sosa:actsOnProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
+	sosa:hasFeatureOfInterest kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+	uco-action:object
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
+		kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8
+		;
+	uco-action:performer kb:contact-00000000-0000-0000-0000-000000000000 ;
+	uco-action:result kb:provenance-record-949cf353-d9c9-4513-a4b8-6a1c95243688 ;
+	uco-core:description "TODO - undocumented modification to contents of blk0_mmcblk0.bin" ;
+	.
+
 kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8
 	a
 		prov:Entity ,
@@ -199,6 +285,10 @@ kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
 		;
 	dcat:landingPage <https://github.com/casework/CASE-Corpora/> ;
 	pod:accessLevel "public" ;
+	.
+
+kb:contact-00000000-0000-0000-0000-000000000000
+	a prov:Agent ;
 	.
 
 kb:content-data-facet-03f2058f-8178-4a6a-9a78-fdf1d2a116f0
@@ -842,7 +932,7 @@ kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ;
+			prov:entity kb:provenance-record-8cc02f8e-66be-4166-9055-9cc96635e5a8 ;
 			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 		] ,
 		[
@@ -884,7 +974,7 @@ kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8
 		kb:provenance-record-5bd7940a-0618-4f0e-b641-d24d683f704b ,
 		kb:provenance-record-6817102d-d01d-4e4f-899f-63c2590129f3 ,
 		kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97 ,
-		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ,
+		kb:provenance-record-8cc02f8e-66be-4166-9055-9cc96635e5a8 ,
 		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ,
 		kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30
 		;
@@ -3073,10 +3163,6 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 	prov:qualifiedCommunication
 		[
 			a prov:Communication ;
-			prov:activity kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ;
-		] ,
-		[
-			a prov:Communication ;
 			prov:activity kb:investigative-action-0254e206-045c-48aa-b7e3-41c71685400a ;
 		] ,
 		[
@@ -3106,6 +3192,10 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		[
 			a prov:Communication ;
 			prov:activity kb:investigative-action-d254e096-3f87-4a04-97e6-e1e6b52c6766 ;
+		] ,
+		[
+			a prov:Communication ;
+			prov:activity kb:observation-42f418fa-08d7-47e1-a009-cc1d2d43091a ;
 		] ,
 		[
 			a prov:Communication ;
@@ -3211,7 +3301,7 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		] ,
 		[
 			a prov:Usage ;
-			prov:entity kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ;
+			prov:entity kb:provenance-record-8cc02f8e-66be-4166-9055-9cc96635e5a8 ;
 		] ,
 		[
 			a prov:Usage ;
@@ -3245,13 +3335,12 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		kb:provenance-record-5bd7940a-0618-4f0e-b641-d24d683f704b ,
 		kb:provenance-record-6817102d-d01d-4e4f-899f-63c2590129f3 ,
 		kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97 ,
-		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ,
+		kb:provenance-record-8cc02f8e-66be-4166-9055-9cc96635e5a8 ,
 		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ,
 		kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30
 		;
 	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	prov:wasInformedBy
-		kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ,
 		kb:investigative-action-0254e206-045c-48aa-b7e3-41c71685400a ,
 		kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ,
 		kb:investigative-action-6417193e-68e9-4abb-800d-5957bf1126d4 ,
@@ -3260,6 +3349,7 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 		kb:investigative-action-aa5026fa-a651-4cfd-9ff0-a6354aa70ec5 ,
 		kb:investigative-action-b8273ac6-f091-40b0-8346-1544df69f093 ,
 		kb:investigative-action-d254e096-3f87-4a04-97e6-e1e6b52c6766 ,
+		kb:observation-42f418fa-08d7-47e1-a009-cc1d2d43091a ,
 		kb:observation-66e7f5a6-b29d-4ca9-9e3f-6d2413daf070 ,
 		kb:observation-6c0553fe-84f9-4133-8be1-67d6e3c80d61 ,
 		kb:observation-e5c108e4-c0a5-4658-95ed-99171828fcf1
@@ -3536,7 +3626,7 @@ kb:observation-66e7f5a6-b29d-4ca9-9e3f-6d2413daf070
 	] ;
 	prov:qualifiedCommunication [
 		a prov:Communication ;
-		prov:activity kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e ;
+		prov:activity kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853 ;
 	] ;
 	prov:qualifiedUsage
 		[
@@ -3545,15 +3635,15 @@ kb:observation-66e7f5a6-b29d-4ca9-9e3f-6d2413daf070
 		] ,
 		[
 			a prov:Usage ;
-			prov:entity kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39 ;
+			prov:entity kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772 ;
 		]
 		;
 	prov:used
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
-		kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
+		kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772
 		;
 	prov:wasAssociatedWith orcid:0000-0002-3771-570X ;
-	prov:wasInformedBy kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e ;
+	prov:wasInformedBy kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853 ;
 	sosa:hasFeatureOfInterest kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	sosa:hasResult
 		kb:hash-633e8066-4db8-555e-9bf0-bbbc490cc9e2 ,
@@ -3564,7 +3654,7 @@ kb:observation-66e7f5a6-b29d-4ca9-9e3f-6d2413daf070
 	sosa:observedProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
 	uco-action:object
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
-		kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
+		kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772
 		;
 	uco-action:performer orcid:0000-0002-3771-570X ;
 	uco-action:result kb:provenance-record-529f9bf1-c9ca-450c-8311-98c8a800fac5 ;
@@ -3635,7 +3725,7 @@ kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e
 	] ;
 	prov:qualifiedCommunication [
 		a prov:Communication ;
-		prov:activity kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ;
+		prov:activity kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f ;
 	] ;
 	prov:qualifiedUsage
 		[
@@ -3644,15 +3734,15 @@ kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e
 		] ,
 		[
 			a prov:Usage ;
-			prov:entity kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ;
+			prov:entity kb:provenance-record-949cf353-d9c9-4513-a4b8-6a1c95243688 ;
 		]
 		;
 	prov:used
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
-		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
+		kb:provenance-record-949cf353-d9c9-4513-a4b8-6a1c95243688
 		;
 	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
-	prov:wasInformedBy kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ;
+	prov:wasInformedBy kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f ;
 	sosa:hasFeatureOfInterest kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	sosa:hasResult
 		kb:hash-01a2ccb5-d773-5f0f-9f1e-355a8a6a4dab ,
@@ -3662,7 +3752,7 @@ kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e
 	sosa:observedProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
 	uco-action:object
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
-		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
+		kb:provenance-record-949cf353-d9c9-4513-a4b8-6a1c95243688
 		;
 	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	uco-action:result kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39 ;
@@ -4258,7 +4348,7 @@ kb:provenance-record-529f9bf1-c9ca-450c-8311-98c8a800fac5
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39 ;
+			prov:entity kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772 ;
 			prov:hadActivity kb:observation-66e7f5a6-b29d-4ca9-9e3f-6d2413daf070 ;
 		]
 		;
@@ -4269,7 +4359,7 @@ kb:provenance-record-529f9bf1-c9ca-450c-8311-98c8a800fac5
 	prov:wasAttributedTo orcid:0000-0002-3771-570X ;
 	prov:wasDerivedFrom
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
-		kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
+		kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772
 		;
 	prov:wasGeneratedBy kb:observation-66e7f5a6-b29d-4ca9-9e3f-6d2413daf070 ;
 	uco-core:description "Record of blk0_mmcblk0.bin being hashed before entry into tarball" ;
@@ -4430,7 +4520,7 @@ kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ;
+			prov:entity kb:provenance-record-949cf353-d9c9-4513-a4b8-6a1c95243688 ;
 			prov:hadActivity kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e ;
 		]
 		;
@@ -4441,7 +4531,7 @@ kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
 	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	prov:wasDerivedFrom
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
-		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
+		kb:provenance-record-949cf353-d9c9-4513-a4b8-6a1c95243688
 		;
 	prov:wasGeneratedBy kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e ;
 	uco-core:description "Record of blk0_mmcblk0.bin being hashed" ;
@@ -4616,6 +4706,44 @@ kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96
 		;
 	.
 
+kb:provenance-record-949cf353-d9c9-4513-a4b8-6a1c95243688
+	a
+		prov:Collection ,
+		prov:Entity ,
+		case-investigation:ProvenanceRecord
+		;
+	rdfs:comment "Record of undocumented modification to blk0_mmcblk0.bin" ;
+	prov:hadMember kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:contact-00000000-0000-0000-0000-000000000000 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+			prov:hadActivity kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8 ;
+			prov:hadActivity kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f ;
+	] ;
+	prov:wasAttributedTo kb:contact-00000000-0000-0000-0000-000000000000 ;
+	prov:wasDerivedFrom
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
+		kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8
+		;
+	prov:wasGeneratedBy kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f ;
+	uco-core:description "Record of undocumented modification to blk0_mmcblk0.bin" ;
+	uco-core:object kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+	.
+
 kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
 	a
 		prov:Collection ,
@@ -4740,7 +4868,7 @@ kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
 		] ,
 		[
 			a prov:Derivation ;
-			prov:entity kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ;
+			prov:entity kb:provenance-record-8cc02f8e-66be-4166-9055-9cc96635e5a8 ;
 			prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 		] ,
 		[
@@ -4782,7 +4910,7 @@ kb:provenance-record-94a44b64-a5ca-4ba8-b2aa-a80e97b733ea
 		kb:provenance-record-5bd7940a-0618-4f0e-b641-d24d683f704b ,
 		kb:provenance-record-6817102d-d01d-4e4f-899f-63c2590129f3 ,
 		kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97 ,
-		kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b ,
+		kb:provenance-record-8cc02f8e-66be-4166-9055-9cc96635e5a8 ,
 		kb:provenance-record-913a5531-c284-4848-87cf-f54ab6a47c96 ,
 		kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30
 		;
@@ -4852,6 +4980,44 @@ kb:provenance-record-a214391f-db58-4876-bdc8-cf73534eaf30
 	prov:wasDerivedFrom prov:EmptyCollection ;
 	prov:wasGeneratedBy kb:investigative-action-aa5026fa-a651-4cfd-9ff0-a6354aa70ec5 ;
 	uco-core:object kb:file-391f9cc2-5947-4598-a5dc-289fb8bdf170 ;
+	.
+
+kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772
+	a
+		prov:Collection ,
+		prov:Entity ,
+		case-investigation:ProvenanceRecord
+		;
+	rdfs:comment "Record of undocumented modification to blk0_mmcblk0.bin" ;
+	prov:hadMember kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:contact-00000000-0000-0000-0000-000000000000 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
+			prov:hadActivity kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853 ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39 ;
+			prov:hadActivity kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853 ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853 ;
+	] ;
+	prov:wasAttributedTo kb:contact-00000000-0000-0000-0000-000000000000 ;
+	prov:wasDerivedFrom
+		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
+		kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
+		;
+	prov:wasGeneratedBy kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853 ;
+	uco-core:description "Record of undocumented modification to blk0_mmcblk0.bin" ;
+	uco-core:object kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	.
 
 kb:provenance-record-d9cab210-2adc-41ba-a334-db654689e454
