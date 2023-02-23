@@ -26,10 +26,43 @@ rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-tool
 all: \
   kb.ttl
 
+%.png: \
+  %.dot
+	dot \
+	  -T png \
+	  -o _$@ \
+	  $<
+	mv _$@ $@
+
+%.svg: \
+  %.dot
+	dot \
+	  -T svg \
+	  -o _$@ \
+	  $<
+	mv _$@ $@
+
 .PHONY: \
   check-case_prov_check \
   check-pytest \
   figures
+
+# TODO - This supplementary file can be removed after adding an --inference flag to case_prov_rdf similar in function to the same flag on case_validate.
+base_rdfs_expansion.ttl: \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/ontology/case-corpora.ttl \
+  $(top_srcdir)/src/rdfs_expansion_ttl.py \
+  dataset.ttl \
+  distribution.ttl \
+  $(supplemental_graph)
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/rdfs_expansion_ttl.py \
+	    _$@ \
+	    $(top_srcdir)/ontology/case-corpora.ttl \
+	    dataset.ttl \
+	    distribution.ttl \
+	    $(supplemental_graph)
+	mv _$@ $@
 
 # Review order is:
 # 1. Is the CASE graph conformat?  (Necessary for kb.ttl to build.)
@@ -84,34 +117,18 @@ generated-prov.dot: \
 	    supplemental.ttl
 	mv _$@ $@
 
-generated-prov.png: \
-  generated-prov.dot
-	dot \
-	  -T png \
-	  -o _$@ \
-	  $<
-	mv _$@ $@
-
-generated-prov.svg: \
-  generated-prov.dot
-	dot \
-	  -T svg \
-	  -o _$@ \
-	  $<
-	mv _$@ $@
-
 generated-prov.ttl: \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/catalog/catalog.ttl \
   $(top_srcdir)/catalog/shared.ttl \
-  distribution.ttl \
-  $(supplemental_graph)
+  base_rdfs_expansion.ttl
 	rm -f _$@ __$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_prov_rdf \
 	    --allow-empty-results \
 	    __$@ \
 	    $(top_srcdir)/catalog/shared.ttl \
+	    base_rdfs_expansion.ttl \
 	    distribution.ttl \
 	    $(supplemental_graph)
 	java -jar $(rdf_toolkit_jar) \

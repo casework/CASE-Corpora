@@ -1,0 +1,55 @@
+PREFIX case-corpora: <http://example.org/ontology/case-corpora/>
+PREFIX case-investigation: <https://ontology.caseontology.org/case/investigation/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+PREFIX uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/>
+SELECT ?lAppName ?lAppVersion ?lOSName ?lOSVersion ?lDatasetDirectory
+WHERE {
+  ?nApplication
+    uco-core:name ?lAppName ;
+    uco-core:hasFacet ?nApplicationFacet ;
+    .
+
+  ?nApplicationFacet
+    a uco-observable:ApplicationFacet ;
+    uco-observable:version ?lAppVersion ;
+    .
+
+  ?nApplicationProvenanceRecord
+    a case-investigation:ProvenanceRecord ;
+    uco-core:object ?nApplication ;
+    .
+
+  ?nDistributionFile
+    prov:wasDerivedFrom* ?nApplicationProvenanceRecord ;
+    .
+
+  ?nDistribution
+    case-corpora:hasDownloadURL ?nDistributionFile ;
+    .
+
+  ?nDataset
+    case-corpora:hasDatasetDirectory ?lDatasetDirectory ;
+    case-corpora:hasDistribution ?nDistribution ;
+    .
+
+  OPTIONAL {
+    ?nApplicationFacet
+      uco-observable:operatingSystem ?nOperatingSystem ;
+      .
+    ?nOperatingSystem
+      a uco-observable:OperatingSystem ;
+      .
+    OPTIONAL {
+      ?nOperatingSystem
+        uco-core:name ?lOSName ;
+        .
+    }
+    OPTIONAL {
+      ?nOperatingSystem
+        uco-core:hasFacet / uco-observable:version ?lOSVersion ;
+        .
+    }
+  }
+}
+ORDER BY ?lAppName ?lAppVersion ?lOSName ?lOSVersion ?lDatasetDirectory

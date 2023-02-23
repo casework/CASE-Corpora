@@ -1,0 +1,145 @@
+# imports: http://example.org/shapes/sosa
+# imports: https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-ssn: <http://example.org/shapes/ssn/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/shapes/ssn>
+	a owl:Ontology ;
+	owl:imports
+		<http://example.org/shapes/sosa> ,
+		<https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl>
+		;
+	.
+
+sh-ssn:Property-shape
+	a sh:NodeShape ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:class sosa:FeatureOfInterest ;
+		sh:path ssn:isPropertyOf ;
+	] ;
+	sh:targetClass ssn:Property ;
+	.
+
+sh-ssn:isPropertyOf-domain-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetSubjectsOf ssn:isPropertyOf ;
+	.
+
+sh-ssn:isPropertyOf-functional-shape
+	a sh:PropertyShape ;
+	sh:maxCount "1"^^xsd:integer ;
+	sh:path ssn:isPropertyOf ;
+	sh:targetObjectsOf ssn:isPropertyOf ;
+	.
+
+sh-ssn:isPropertyOf-range-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf ssn:isPropertyOf ;
+	.
+
+sh-ssn:sosa-ActuatableProperty-shape
+	a sh:NodeShape ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:class sosa:Actuation ;
+		sh:path sosa:isActedOnBy ;
+	] ;
+	sh:targetClass sosa:ActuatableProperty ;
+	.
+
+sh-ssn:sosa-Actuation-shape
+	a sh:NodeShape ;
+	sh:property
+		[
+			a sh:PropertyShape ;
+			sh:class sosa:ActuatableProperty ;
+			sh:path sosa:actsOnProperty ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			sh:class sosa:FeatureOfInterest ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path sosa:hasFeatureOfInterest ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			sh:class sosa:Result ;
+			sh:path sosa:hasResult ;
+		]
+		;
+	sh:targetClass sosa:Actuation ;
+	.
+
+sh-ssn:sosa-FeatureOfInterest-shape
+	a sh:NodeShape ;
+	sh:property
+		[
+			a sh:PropertyShape ;
+			sh:class ssn:Property ;
+			sh:path ssn:hasProperty ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			sh:deactivated "true"^^xsd:boolean ;
+			sh:description "This shape coresponds with the minimum-cardinality OWL Restriction.  It is left here, deactivated, in acknowledgement of the OWL Open-World assumption."@en ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path ssn:hasProperty ;
+			sh:severity sh:Info ;
+		]
+		;
+	sh:targetClass sosa:FeatureOfInterest ;
+	.
+
+sh-ssn:sosa-ObservableProperty-shape
+	a sh:NodeShape ;
+	sh:property
+		[
+			a sh:PropertyShape ;
+			sh:class sosa:Observation ;
+			sh:path [
+				sh:inversePath sosa:observedProperty ;
+			] ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			sh:class sosa:Sensor ;
+			sh:path sosa:isObservedBy ;
+		]
+		;
+	sh:targetClass sosa:ObservableProperty ;
+	.
+
+sh-ssn:sosa-Observation-shape
+	a sh:NodeShape ;
+	sh:property
+		[
+			a sh:PropertyShape ;
+			sh:class sosa:FeatureOfInterest ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path sosa:hasFeatureOfInterest ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			sh:class sosa:ObservableProperty ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path sosa:observedProperty ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			sh:class sosa:Result ;
+			sh:path sosa:hasResult ;
+		]
+		;
+	sh:targetClass sosa:Observation ;
+	.
+

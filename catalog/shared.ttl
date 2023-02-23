@@ -1,5 +1,6 @@
 @prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix kb: <http://example.org/kb/> .
+@prefix orcid: <https://orcid.org/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -20,9 +21,19 @@ kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5
 	skos:prefLabel "Digital Corpora" ;
 	.
 
+wd:Q162345
+	a uco-identity:Organization ;
+	uco-core:name "LG Electronics" ;
+	.
+
 wd:Q20716
 	a uco-identity:Organization ;
 	uco-core:name "Samsung" ;
+	.
+
+wd:Q5058279
+	a uco-identity:Organization ;
+	uco-core:name "Cellebrite" ;
 	.
 
 wd:Q7295195
@@ -33,6 +44,16 @@ wd:Q7295195
 wd:Q95
 	a uco-identity:Organization ;
 	uco-core:name "Google LLC" ;
+	.
+
+orcid:0000-0002-3771-570X
+	a uco-identity:Person ;
+	.
+
+<https://www.iana.org/assignments/media-types/application/gzip>
+	a case-corpora:IANAMediaType ;
+	rdfs:label "gzip" ;
+	skos:prefLabel "application/gzip" ;
 	.
 
 <https://www.iana.org/assignments/media-types/application/octet-stream>

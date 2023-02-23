@@ -26,13 +26,20 @@ case_unstable_ttls := \
   $(wildcard CASE-unstable/dependencies/UCO/ontology/uco/*/*.ttl)
 
 dependent_ontology_files := \
+  cito.ttl \
+  cpannotationschema.ttl \
   dc.ttl \
   dcam.ttl \
   dcat.ttl \
   dcterms.ttl \
+  discourse-relationships.ttl \
   dublin_core_type.ttl \
   foaf.ttl \
+  situation.ttl \
   skos.ttl \
+  sosa.ttl \
+  ssn.ttl \
+  time.ttl \
   vcard.ttl
 
 rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar
@@ -68,11 +75,34 @@ CASE-unstable.ttl: \
 check: \
   dependencies.ttl
 
+cito.ttl: \
+  cito/docs/current/cito.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source $< \
+	  --target-format turtle \
+	  --target _$@
+	mv _$@ $@
+
 clean:
 	@rm -f \
 	  CASE-develop.ttl \
 	  CASE-unstable.ttl \
 	  dependencies.ttl
+
+cpannotationschema.ttl:
+	wget \
+	  --output-document=__$@ \
+	  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format rdf-xml \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
 
 # http://purl.org/dc/elements/1.1
 #   via https://www.dublincore.org/schemas/rdfs/
@@ -158,6 +188,16 @@ dependencies.ttl: \
 	rm __$@
 	mv _$@ $@
 
+# TODO - This does not regenerate with Make while a correction for a term issue is waiting to be published.
+discourse-relationships.ttl:
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format rdf-xml \
+	  --source swan-ontology/discourse-relationships.owl \
+	  --target-format turtle \
+	  --target _$@
+	mv _$@ $@
+
 # http://purl.org/dc/dcmitype/
 #   via https://www.dublincore.org/schemas/rdfs/
 dublin_core_type.ttl:
@@ -186,6 +226,19 @@ foaf.ttl:
 	rm __$@
 	mv _$@ $@
 
+situation.ttl:
+	wget \
+	  --output-document=__$@ \
+	  http://www.ontologydesignpatterns.org/cp/owl/situation.owl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format rdf-xml \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
 skos.ttl:
 	wget \
 	  --output-document=__$@ \
@@ -193,6 +246,41 @@ skos.ttl:
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format rdf-xml \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+# TODO - This does not regenerate with Make while a correction for this issue is waiting to be published.
+# https://github.com/w3c/sdw/issues/1395
+sosa.ttl:
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source sdw/ssn/integrated/sosa.ttl \
+	  --target-format turtle \
+	  --target _$@
+	mv _$@ $@
+
+# TODO - This does not regenerate with Make while a correction for this issue is waiting to be published.
+# https://github.com/w3c/sdw/issues/1395
+ssn.ttl:
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source sdw/ssn/integrated/ssn.ttl \
+	  --target-format turtle \
+	  --target _$@
+	mv _$@ $@
+
+time.ttl:
+	wget \
+	  --output-document=__$@ \
+	  http://www.w3.org/2006/time
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
 	  --source __$@ \
 	  --target-format turtle \
 	  --target _$@

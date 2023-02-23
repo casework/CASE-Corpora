@@ -1,9 +1,13 @@
 # imports: http://example.org/ontology/case-corpora
+# imports: http://example.org/shapes/cito
 # imports: http://example.org/shapes/dcat-us
 # imports: http://example.org/shapes/owl-abox
+# imports: http://example.org/shapes/ssn
+# imports: http://example.org/shapes/time
 
 @prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix mime: <https://www.iana.org/assignments/media-types/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
@@ -12,6 +16,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sh-case-corpora: <http://example.org/shapes/case-corpora/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
@@ -22,8 +27,11 @@
 	rdfs:comment "This ontology defines SHACL shapes to maintain data quality-control rules."@en ;
 	owl:imports
 		<http://example.org/ontology/case-corpora> ,
+		<http://example.org/shapes/cito> ,
 		<http://example.org/shapes/dcat-us> ,
-		<http://example.org/shapes/owl-abox>
+		<http://example.org/shapes/owl-abox> ,
+		<http://example.org/shapes/ssn> ,
+		<http://example.org/shapes/time>
 		;
 	.
 
@@ -128,6 +136,74 @@ case-corpora:Distribution
 	sh:targetClass case-corpora:Distribution ;
 	.
 
+drafting:FileHashQuality
+	a sh:NodeShape ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:class uco-observable:File ;
+		sh:path drafting:isQualityOf ;
+	] ;
+	sh:targetClass drafting:FileHashQuality ;
+	.
+
+drafting:hasQuality-domain-shape
+	a sh:NodeShape ;
+	sh:class uco-core:UcoObject ;
+	sh:nodeKind sh:IRI ;
+	sh:targetSubjectsOf drafting:hasQuality ;
+	.
+
+drafting:hasQuality-inverse-functional-shape
+	a sh:PropertyShape ;
+	sh:maxCount "1"^^xsd:integer ;
+	sh:path [
+		sh:inversePath drafting:isQualityOf ;
+	] ;
+	sh:targetObjectsOf drafting:hasQuality ;
+	.
+
+drafting:hasQuality-range-shape
+	a sh:NodeShape ;
+	sh:class drafting:Quality ;
+	sh:nodeKind sh:IRI ;
+	sh:targetObjectsOf drafting:hasQuality ;
+	.
+
+drafting:isAutomated-domain-shape
+	a sh:NodeShape ;
+	sh:class uco-action:Action ;
+	sh:nodeKind sh:IRI ;
+	sh:targetSubjectsOf drafting:isAutomated ;
+	.
+
+drafting:isAutomated-range-shape
+	a sh:NodeShape ;
+	sh:datatype xsd:boolean ;
+	sh:nodeKind sh:Literal ;
+	sh:targetObjectsOf drafting:isAutomated ;
+	.
+
+drafting:isQualityOf-domain-shape
+	a sh:NodeShape ;
+	sh:class drafting:Quality ;
+	sh:nodeKind sh:IRI ;
+	sh:targetSubjectsOf drafting:isQualityOf ;
+	.
+
+drafting:isQualityOf-functional-shape
+	a sh:PropertyShape ;
+	sh:maxCount "1"^^xsd:integer ;
+	sh:path drafting:isQualityOf ;
+	sh:targetSubjectsOf drafting:isQualityOf ;
+	.
+
+drafting:isQualityOf-range-shape
+	a sh:NodeShape ;
+	sh:class uco-core:UcoObject ;
+	sh:nodeKind sh:IRI ;
+	sh:targetObjectsOf drafting:isQualityOf ;
+	.
+
 sh-case-corpora:hasDatasetDirectory-domain-shape
 	a sh:NodeShape ;
 	sh:class dcat:Dataset ;
@@ -180,5 +256,25 @@ sh-case-corpora:hasDownloadURL-range-shape
 		] ;
 	] ;
 	sh:targetObjectsOf case-corpora:hasDownloadURL ;
+	.
+
+uco-action:Action
+	sh:property [
+		a sh:PropertyShape ;
+		sh:maxCount "1"^^xsd:integer ;
+		sh:path drafting:isAutomated ;
+	] ;
+	.
+
+uco-observable:File
+	sh:property [
+		a sh:PropertyShape ;
+		sh:path drafting:hasQuality ;
+		sh:qualifiedMaxCount "1"^^xsd:integer ;
+		sh:qualifiedValueShape [
+			a sh:NodeShape ;
+			sh:class drafting:FileHashQuality ;
+		] ;
+	] ;
 	.
 

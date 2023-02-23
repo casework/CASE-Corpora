@@ -17,6 +17,13 @@ The following device instances were found in indexed datasets.
 @DEVICES_MD@
 
 
+## Apps
+
+The following mobile apps were found in indexed datasets.
+
+@APPS_MD@
+
+
 ## Ontology import closure
 
 CASE-Corpora imports multiple ontologies and other RDF schemata developed outside of the Cyber Domain Ontology.  The following illustration (click to see navigable SVG) shows how the various ontologies (/schemata) are imported.

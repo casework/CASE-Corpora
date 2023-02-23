@@ -18,14 +18,44 @@ top_srcdir := $(shell cd .. ; pwd)
 rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar
 
 validation_files := \
+  case_corpora_PASS_validation.ttl \
   distribution_PASS_validation.ttl \
   distribution_XFAIL_validation.ttl \
   owl_abox_XFAIL_inferencing_none_validation.ttl \
   owl_abox_XFAIL_inferencing_owlrl_validation.ttl \
-  owl_abox_XFAIL_inferencing_rdfs_validation.ttl
+  owl_abox_XFAIL_inferencing_rdfs_validation.ttl \
+  time_PASS_validation.ttl \
+  time_XFAIL_validation.ttl
 
 all: \
   $(validation_files)
+
+case_corpora_PASS_validation.ttl: \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/dependencies/dependencies.ttl \
+  $(top_srcdir)/ontology/case-corpora.ttl \
+  $(top_srcdir)/shapes/local.ttl \
+  $(top_srcdir)/shapes/shapes.ttl \
+  case_corpora_PASS.ttl
+	rm -f __$@ _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    --format turtle \
+	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
+	    --output __$@ \
+	    case_corpora_PASS.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
 
 check: \
   $(validation_files)
@@ -152,6 +182,56 @@ owl_abox_XFAIL_inferencing_rdfs_validation.ttl: \
 	    --shacl $(top_srcdir)/shapes/sh-owl-abox.ttl \
 	    owl_abox_XFAIL.ttl \
 	    ; rc=$$? ; test 1 -eq $$rc
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+time_PASS_validation.ttl: \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/dependencies/time.ttl \
+  $(top_srcdir)/shapes/sh-time.ttl \
+  time_PASS.ttl
+	rm -f __$@ _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && pyshacl \
+	    --allow-infos \
+	    --format turtle \
+	    --metashacl \
+	    --ont-graph $(top_srcdir)/dependencies/time.ttl \
+	    --output __$@ \
+	    --shacl $(top_srcdir)/shapes/sh-time.ttl \
+	    time_PASS.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+time_XFAIL_validation.ttl: \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/dependencies/time.ttl \
+  $(top_srcdir)/shapes/sh-time.ttl \
+  time_XFAIL.ttl
+	rm -f __$@ _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && pyshacl \
+	    --allow-infos \
+	    --format turtle \
+	    --metashacl \
+	    --ont-graph $(top_srcdir)/dependencies/time.ttl \
+	    --output __$@ \
+	    --shacl $(top_srcdir)/shapes/sh-time.ttl \
+	    time_XFAIL.ttl \
+	    ; rc=$$? ; test 1 -eq $$rc
+	test -s __$@
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \

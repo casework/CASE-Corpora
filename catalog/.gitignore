@@ -1,4 +1,5 @@
 *validation*.ttl
+base_rdfs_expansion.ttl
 datasets.md
 devices.md
 kb-*.ttl

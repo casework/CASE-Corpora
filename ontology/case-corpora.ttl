@@ -1,19 +1,30 @@
+# imports: http://purl.org/spar/cito/2018-02-16
+# imports: http://www.w3.org/2006/time#2016
 # imports: http://www.w3.org/2006/vcard/ns
 # imports: http://www.w3.org/ns/dcat
 # imports: http://xmlns.com/foaf/0.1/
 # imports: https://ontology.caseontology.org/case/case/1.1.0
+# imports: https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl
 
 @prefix case-corpora: <http://example.org/ontology/case-corpora/> .
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
+@prefix cito: <http://purl.org/spar/cito/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh-dcat: <http://example.org/shapes/dcat/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix uco-time: <https://ontology.unifiedcyberontology.org/uco/time/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -21,10 +32,13 @@
 	a owl:Ontology ;
 	rdfs:comment "This ontology serves to join the versions of CASE and DCAT used to populate CASE-Corpora, bringing analogous properties and classes together."@en ;
 	owl:imports
+		cito:2018-02-16 ,
+		time:2016 ,
 		<http://www.w3.org/2006/vcard/ns> ,
 		<http://www.w3.org/ns/dcat> ,
 		<http://xmlns.com/foaf/0.1/> ,
-		<https://ontology.caseontology.org/case/case/1.1.0>
+		<https://ontology.caseontology.org/case/case/1.1.0> ,
+		<https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl>
 		;
 	.
 
@@ -61,6 +75,15 @@ case-corpora:IANAMediaType
 		dcterms:format ,
 		<https://github.com/ucoProject/UCO/issues/363>
 		;
+	.
+
+case-corpora:SeedingAction
+	a owl:Class ;
+	rdfs:subClassOf
+		case-investigation:InvestigativeAction ,
+		uco-observable:ObservableAction
+		;
+	rdfs:comment "A seeding action is an action taken during data set population with intention to create observable artifacts and record their derivation chain."@en ;
 	.
 
 case-corpora:WebPage
@@ -111,6 +134,71 @@ case-corpora:hasDownloadURL
 	rdfs:range uco-observable:URL ;
 	.
 
+drafting:FileHashQuality
+	a owl:Class ;
+	rdfs:subClassOf
+		drafting:Quality ,
+		sosa:ActuatableProperty ,
+		sosa:ObservableProperty ,
+		[
+			a owl:Restriction ;
+			owl:onProperty drafting:isQualityOf ;
+			owl:allValuesFrom uco-observable:File ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty drafting:isQualityOf ;
+			owl:someValuesFrom uco-observable:File ;
+		]
+		;
+	.
+
+drafting:Quality
+	a owl:Class ;
+	rdfs:subClassOf
+		ssn:Property ,
+		uco-core:UcoInherentCharacterizationThing ,
+		[
+			a owl:Restriction ;
+			owl:onProperty drafting:isQualityOf ;
+			owl:cardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:seeAlso
+		<http://purl.obolibrary.org/obo/BFO_0000019> ,
+		<http://purl.org/nemo/gufo#Quality>
+		;
+	.
+
+drafting:hasQuality
+	a
+		owl:ObjectProperty ,
+		owl:InverseFunctionalProperty
+		;
+	rdfs:subPropertyOf ssn:hasProperty ;
+	rdfs:domain uco-core:UcoObject ;
+	rdfs:range drafting:Quality ;
+	owl:inverseOf drafting:isQualityOf ;
+	.
+
+drafting:isAutomated
+	a owl:DatatypeProperty ;
+	rdfs:domain uco-action:Action ;
+	rdfs:range xsd:boolean ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/448> ;
+	.
+
+drafting:isQualityOf
+	a
+		owl:ObjectProperty ,
+		owl:FunctionalProperty
+		;
+	rdfs:subPropertyOf ssn:isPropertyOf ;
+	rdfs:domain drafting:Quality ;
+	rdfs:range uco-core:UcoObject ;
+	owl:inverseOf drafting:hasQuality ;
+	.
+
 <http://purl.org/dc/aboutdcmi#DCMI>
 	rdfs:comment "TODO - This is to work around a bug where pyshacl reviewed ontology content instead of data content.  Need to report a test case."@en ;
 	skos:prefLabel "" ;
@@ -119,6 +207,15 @@ case-corpora:hasDownloadURL
 dcat:Dataset
 	rdfs:comment "Within CASE-Corpora, the property hasDatasetDirectory is a unique identifier for a Dataset."@en ;
 	owl:hasKey case-corpora:hasDatasetDirectory ;
+	.
+
+uco-observable:File
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty drafting:hasQuality ;
+		owl:onClass drafting:FileHashQuality ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
 	.
 
 <mailto:null@example.org>

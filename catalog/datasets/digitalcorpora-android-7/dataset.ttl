@@ -1,0 +1,32 @@
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
+	dcat:dataset kb:dataset-f6cc5209-29d5-4b76-a531-b03cd3a9a6db ;
+	.
+
+kb:dataset-f6cc5209-29d5-4b76-a531-b03cd3a9a6db
+	a case-corpora:Dataset ;
+	case-corpora:hasDatasetDirectory "digitalcorpora-android-7" ;
+	dcterms:description '"Android 7 is the contents of a LG GSM H790 Nexus 5X phone. ..."' ;
+	dcterms:identifier "http://example.org/kb/dataset-f6cc5209-29d5-4b76-a531-b03cd3a9a6db" ;
+	dcterms:modified "2020-11-22"^^xsd:date ;
+	dcterms:publisher kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	dcterms:title "Android 7" ;
+	dcat:contactPoint case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+	dcat:keyword "android" ;
+	dcat:landingPage <https://digitalcorpora.org/corpora/cell-phones/android-7/> ;
+	pod:accessLevel "public" ;
+	.
+
+<https://digitalcorpora.org/corpora/cell-phones/android-7/>
+	a case-corpora:WebPage ;
+	.
+

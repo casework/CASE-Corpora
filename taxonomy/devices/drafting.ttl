@@ -17,6 +17,12 @@ drafting:device-class-266d2faf-2e06-413f-92e9-d94fcc57619a
 	rdfs:label "Fairphone-4"@en ;
 	.
 
+drafting:device-class-8ccd9a51-6106-4afa-a127-24803ed58631
+	a owl:Class ;
+	rdfs:subClassOf uco-observable:AndroidPhone ;
+	rdfs:label "LG GSM H790 Nexus 5X"@en ;
+	.
+
 drafting:device-class-bd30761f-8ae3-4eb2-abac-428c824fb59e
 	a owl:Class ;
 	rdfs:subClassOf uco-observable:AndroidPhone ;

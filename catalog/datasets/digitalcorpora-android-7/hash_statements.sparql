@@ -1,0 +1,34 @@
+SELECT ?lSHA256 ?nWitnessObject ?lWitnessObjectDescription
+WHERE {
+  ?nFile
+    uco-core:hasFacet / uco-observable:fileName "blk0_mmcblk0.bin" ;
+    .
+
+  ?nWitnessObject
+    cito:documents ?nObservation ;
+    .
+
+  ?nObservation
+    sosa:hasFeatureOfInterest ?nFile ;
+    uco-action:object ?nFile ;
+    sosa:hasResult ?nHash ;
+    .
+
+  ?nHash
+    uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+    uco-types:hashValue ?lHashValue ;
+    .
+  BIND(
+    CONCAT(
+      SUBSTR(STR(?lHashValue), 1, 7),
+      '...'
+    ) AS ?lSHA256
+  )
+
+  OPTIONAL {
+    ?nWitnessObject
+      uco-core:description ?lWitnessObjectDescription ;
+      .
+  }
+}
+ORDER BY ?lSHA256 ?nWitnessObject

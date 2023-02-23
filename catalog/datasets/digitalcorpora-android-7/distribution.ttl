@@ -1,0 +1,18 @@
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:dataset-f6cc5209-29d5-4b76-a531-b03cd3a9a6db
+	case-corpora:hasDistribution kb:distribution-17439dd8-19da-48b8-be5c-f2251023d3bd ;
+	.
+
+kb:distribution-17439dd8-19da-48b8-be5c-f2251023d3bd
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/gzip> ;
+	.
+
