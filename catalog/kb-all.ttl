@@ -231,6 +231,550 @@ kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f
 	uco-core:description "TODO - undocumented modification to contents of blk0_mmcblk0.bin" ;
 	.
 
+kb:application-1d14c394-cf39-5cf4-a5a8-361b339d1989
+	a
+		prov:Entity ,
+		uco-observable:Application
+		;
+	rdfs:comment "Application: Photos" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	uco-core:description "Application: Photos" ;
+	uco-core:hasFacet kb:application-facet-e83b7a91-954d-5b48-9379-f1e75c50bb78 ;
+	uco-core:name "Photos" ;
+	.
+
+kb:application-31fc3caa-6eb6-566a-be5b-d5004e67b882
+	a
+		prov:Entity ,
+		uco-observable:Application
+		;
+	rdfs:comment "Application: Maps" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	uco-core:description "Application: Maps" ;
+	uco-core:hasFacet kb:application-facet-42a8e212-28fc-55e8-9539-25f08483d94c ;
+	uco-core:name "Maps" ;
+	.
+
+kb:application-592f4226-bcb4-55bb-8ebe-f576719e9258
+	a
+		prov:Entity ,
+		uco-observable:Application
+		;
+	rdfs:comment "Application: Chrome" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	uco-core:description "Application: Chrome" ;
+	uco-core:hasFacet kb:application-facet-b4a57c64-20aa-5a75-a5ef-908eedbb1f1d ;
+	uco-core:name "Chrome" ;
+	.
+
+kb:application-5ec17e6b-6180-556b-a611-ade7a8a9d836
+	a
+		prov:Entity ,
+		uco-observable:Application
+		;
+	rdfs:comment "Application: Google" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	uco-core:description "Application: Google" ;
+	uco-core:hasFacet kb:application-facet-64f76ebb-4900-5fb6-baac-9968a3247ae0 ;
+	uco-core:name "Google" ;
+	.
+
+kb:application-6207ec06-cfd1-5460-8a20-be21c37a429c
+	a
+		prov:Entity ,
+		uco-observable:Application
+		;
+	rdfs:comment "Application: Phone" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	uco-core:description "Application: Phone" ;
+	uco-core:hasFacet kb:application-facet-ad0843ee-21c5-5083-a39f-0237283c348c ;
+	uco-core:name "Phone" ;
+	.
+
+kb:application-84770b80-96cc-53a8-bd08-3648688ab6c1
+	a
+		prov:Entity ,
+		uco-observable:Application
+		;
+	rdfs:comment "Application: Messages" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	uco-core:description "Application: Messages" ;
+	uco-core:hasFacet kb:application-facet-bda67b90-8c8a-5f9a-b0fe-57edab384285 ;
+	uco-core:name "Messages" ;
+	.
+
+kb:application-a4710b25-60a5-54b1-872f-e5989bd37ae5
+	a
+		prov:Entity ,
+		uco-observable:Application
+		;
+	rdfs:comment "Application: Gmail" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	uco-core:description "Application: Gmail" ;
+	uco-core:hasFacet kb:application-facet-0a5c6e23-143d-5643-87cb-61b43a7ab3a6 ;
+	uco-core:name "Gmail" ;
+	.
+
+kb:application-c03097a2-2071-5164-b809-710b3ed35501
+	a
+		prov:Entity ,
+		uco-observable:Application
+		;
+	rdfs:comment "Application: Drive" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	uco-core:description "Application: Drive" ;
+	uco-core:hasFacet kb:application-facet-654f1be2-a82b-5d95-8268-b64ea3b3a3d2 ;
+	uco-core:name "Drive" ;
+	.
+
+kb:application-c3f4e260-599e-5025-92db-5dc15538dcce
+	a
+		prov:Entity ,
+		uco-observable:Application
+		;
+	rdfs:comment "Application: Docs" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	uco-core:description "Application: Docs" ;
+	uco-core:hasFacet kb:application-facet-e0ea28bf-d32a-5c0e-aca2-cf14a7db1d1f ;
+	uco-core:name "Docs" ;
+	.
+
+kb:application-e73ed7fd-5fa0-54b7-8984-043721252ca8
+	a
+		prov:Entity ,
+		uco-observable:Application
+		;
+	rdfs:comment "Application: Camera" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	uco-core:description "Application: Camera" ;
+	uco-core:hasFacet kb:application-facet-de04bb63-473c-5626-b4b5-fcd6ce7a96e8 ;
+	uco-core:name "Camera" ;
+	.
+
+kb:application-facet-42a8e212-28fc-55e8-9539-25f08483d94c
+	a uco-observable:ApplicationFacet ;
+	uco-observable:operatingSystem kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4 ;
+	uco-observable:version "10.4.1" ;
+	.
+
+kb:application-facet-64f76ebb-4900-5fb6-baac-9968a3247ae0
+	a uco-observable:ApplicationFacet ;
+	uco-observable:operatingSystem kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4 ;
+	uco-observable:version "8.55.6.21" ;
+	.
+
+kb:application-facet-654f1be2-a82b-5d95-8268-b64ea3b3a3d2
+	a uco-observable:ApplicationFacet ;
+	uco-observable:operatingSystem kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4 ;
+	uco-observable:version "1.18.462" ;
+	.
+
+kb:application-facet-ad0843ee-21c5-5083-a39f-0237283c348c
+	a uco-observable:ApplicationFacet ;
+	uco-observable:operatingSystem kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4 ;
+	uco-observable:version "25.0.220310144" ;
+	.
+
+kb:application-facet-b4a57c64-20aa-5a75-a5ef-908eedbb1f1d
+	a uco-observable:ApplicationFacet ;
+	uco-observable:operatingSystem kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4 ;
+	uco-observable:version "70.0.3538" ;
+	.
+
+kb:application-facet-bda67b90-8c8a-5f9a-b0fe-57edab384285
+	a uco-observable:ApplicationFacet ;
+	uco-observable:operatingSystem kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4 ;
+	uco-observable:version "3.7.052" ;
+	.
+
+kb:application-facet-de04bb63-473c-5626-b4b5-fcd6ce7a96e8
+	a uco-observable:ApplicationFacet ;
+	uco-observable:operatingSystem kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4 ;
+	uco-observable:version "4.4.020" ;
+	.
+
+kb:application-facet-e0ea28bf-d32a-5c0e-aca2-cf14a7db1d1f
+	a uco-observable:ApplicationFacet ;
+	uco-observable:operatingSystem kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4 ;
+	uco-observable:version "1.18.462" ;
+	.
+
+kb:application-facet-e83b7a91-954d-5b48-9379-f1e75c50bb78
+	a uco-observable:ApplicationFacet ;
+	uco-observable:operatingSystem kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4 ;
+	uco-observable:version "4.5.0" ;
+	.
+
 kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8
 	a
 		prov:Entity ,
@@ -5350,6 +5894,16 @@ kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
 		case-investigation:ProvenanceRecord
 		;
 	prov:hadMember
+		kb:application-1d14c394-cf39-5cf4-a5a8-361b339d1989 ,
+		kb:application-31fc3caa-6eb6-566a-be5b-d5004e67b882 ,
+		kb:application-592f4226-bcb4-55bb-8ebe-f576719e9258 ,
+		kb:application-5ec17e6b-6180-556b-a611-ade7a8a9d836 ,
+		kb:application-6207ec06-cfd1-5460-8a20-be21c37a429c ,
+		kb:application-84770b80-96cc-53a8-bd08-3648688ab6c1 ,
+		kb:application-a4710b25-60a5-54b1-872f-e5989bd37ae5 ,
+		kb:application-c03097a2-2071-5164-b809-710b3ed35501 ,
+		kb:application-c3f4e260-599e-5025-92db-5dc15538dcce ,
+		kb:application-e73ed7fd-5fa0-54b7-8984-043721252ca8 ,
 		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
 		kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4
 		;
@@ -5392,6 +5946,16 @@ kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
 		;
 	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
 	uco-core:object
+		kb:application-1d14c394-cf39-5cf4-a5a8-361b339d1989 ,
+		kb:application-31fc3caa-6eb6-566a-be5b-d5004e67b882 ,
+		kb:application-592f4226-bcb4-55bb-8ebe-f576719e9258 ,
+		kb:application-5ec17e6b-6180-556b-a611-ade7a8a9d836 ,
+		kb:application-6207ec06-cfd1-5460-8a20-be21c37a429c ,
+		kb:application-84770b80-96cc-53a8-bd08-3648688ab6c1 ,
+		kb:application-a4710b25-60a5-54b1-872f-e5989bd37ae5 ,
+		kb:application-c03097a2-2071-5164-b809-710b3ed35501 ,
+		kb:application-c3f4e260-599e-5025-92db-5dc15538dcce ,
+		kb:application-e73ed7fd-5fa0-54b7-8984-043721252ca8 ,
 		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
 		kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4
 		;
@@ -5561,6 +6125,16 @@ kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b
 		;
 	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	uco-action:result
+		kb:application-1d14c394-cf39-5cf4-a5a8-361b339d1989 ,
+		kb:application-31fc3caa-6eb6-566a-be5b-d5004e67b882 ,
+		kb:application-592f4226-bcb4-55bb-8ebe-f576719e9258 ,
+		kb:application-5ec17e6b-6180-556b-a611-ade7a8a9d836 ,
+		kb:application-6207ec06-cfd1-5460-8a20-be21c37a429c ,
+		kb:application-84770b80-96cc-53a8-bd08-3648688ab6c1 ,
+		kb:application-a4710b25-60a5-54b1-872f-e5989bd37ae5 ,
+		kb:application-c03097a2-2071-5164-b809-710b3ed35501 ,
+		kb:application-c3f4e260-599e-5025-92db-5dc15538dcce ,
+		kb:application-e73ed7fd-5fa0-54b7-8984-043721252ca8 ,
 		kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4 ,
 		kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
 		;

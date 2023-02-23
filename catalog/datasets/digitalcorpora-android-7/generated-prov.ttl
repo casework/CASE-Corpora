@@ -142,6 +142,436 @@ kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f
 	prov:wasInformedBy kb:observation-b1ea91ee-5e9a-4b75-979e-e41a56171b66 ;
 	.
 
+kb:application-1d14c394-cf39-5cf4-a5a8-361b339d1989
+	a prov:Entity ;
+	rdfs:comment "Application: Photos" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
+kb:application-31fc3caa-6eb6-566a-be5b-d5004e67b882
+	a prov:Entity ;
+	rdfs:comment "Application: Maps" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
+kb:application-592f4226-bcb4-55bb-8ebe-f576719e9258
+	a prov:Entity ;
+	rdfs:comment "Application: Chrome" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
+kb:application-5ec17e6b-6180-556b-a611-ade7a8a9d836
+	a prov:Entity ;
+	rdfs:comment "Application: Google" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
+kb:application-6207ec06-cfd1-5460-8a20-be21c37a429c
+	a prov:Entity ;
+	rdfs:comment "Application: Phone" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
+kb:application-84770b80-96cc-53a8-bd08-3648688ab6c1
+	a prov:Entity ;
+	rdfs:comment "Application: Messages" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
+kb:application-a4710b25-60a5-54b1-872f-e5989bd37ae5
+	a prov:Entity ;
+	rdfs:comment "Application: Gmail" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
+kb:application-c03097a2-2071-5164-b809-710b3ed35501
+	a prov:Entity ;
+	rdfs:comment "Application: Drive" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
+kb:application-c3f4e260-599e-5025-92db-5dc15538dcce
+	a prov:Entity ;
+	rdfs:comment "Application: Docs" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
+kb:application-e73ed7fd-5fa0-54b7-8984-043721252ca8
+	a prov:Entity ;
+	rdfs:comment "Application: Camera" ;
+	prov:qualifiedAttribution [
+		a prov:Attribution ;
+		prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	] ;
+	prov:qualifiedDerivation
+		[
+			a prov:Derivation ;
+			prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		] ,
+		[
+			a prov:Derivation ;
+			prov:entity kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61 ;
+			prov:hadActivity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+		]
+		;
+	prov:qualifiedGeneration [
+		a prov:Generation ;
+		prov:activity kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	] ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ,
+		kb:provenance-record-2a3d0eee-7ad3-4f4a-835f-b1f7e723a4fe ,
+		kb:provenance-record-cd688fbf-5aff-4931-b56c-74ef21a04c61
+		;
+	prov:wasGeneratedBy kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b ;
+	.
+
 kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8
 	a prov:Entity ;
 	rdfs:comment "procdata.zip" ;
@@ -3406,6 +3836,16 @@ kb:provenance-record-ddb5c1d5-68de-49c7-9faf-4c64d6905a51
 		prov:Entity
 		;
 	prov:hadMember
+		kb:application-1d14c394-cf39-5cf4-a5a8-361b339d1989 ,
+		kb:application-31fc3caa-6eb6-566a-be5b-d5004e67b882 ,
+		kb:application-592f4226-bcb4-55bb-8ebe-f576719e9258 ,
+		kb:application-5ec17e6b-6180-556b-a611-ade7a8a9d836 ,
+		kb:application-6207ec06-cfd1-5460-8a20-be21c37a429c ,
+		kb:application-84770b80-96cc-53a8-bd08-3648688ab6c1 ,
+		kb:application-a4710b25-60a5-54b1-872f-e5989bd37ae5 ,
+		kb:application-c03097a2-2071-5164-b809-710b3ed35501 ,
+		kb:application-c3f4e260-599e-5025-92db-5dc15538dcce ,
+		kb:application-e73ed7fd-5fa0-54b7-8984-043721252ca8 ,
 		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
 		kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4
 		;
