@@ -35,6 +35,7 @@ dependent_ontology_files := \
   discourse-relationships.ttl \
   dublin_core_type.ttl \
   foaf.ttl \
+  prov-o.ttl \
   situation.ttl \
   skos.ttl \
   sosa.ttl \
