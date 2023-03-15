@@ -23,6 +23,7 @@ all: \
 
 .PHONY: \
   all-dependencies \
+  all-ontology \
   all-shapes \
   all-taxonomy \
   all-tests \
@@ -132,8 +133,13 @@ all-dependencies: \
 	$(MAKE) \
 	  --directory dependencies
 
-all-shapes: \
+all-ontology: \
   all-dependencies
+	$(MAKE) \
+	  --directory ontology
+
+all-shapes: \
+  all-ontology
 	$(MAKE) \
 	  --directory shapes
 

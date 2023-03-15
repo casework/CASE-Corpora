@@ -15,6 +15,11 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd .. ; pwd)
 
+# TODO - After release of CASE 1.2.0, have this reference a different submodule.
+case_srcdir := $(top_srcdir)/dependencies/CASE-unstable
+
+uco_srcdir := $(case_srcdir)/dependencies/UCO
+
 shapes_ttl_sources := $(wildcard sh-*.ttl)
 shape_files := \
   $(shapes_ttl_sources) \
@@ -23,6 +28,7 @@ check_shape_files := $(foreach shape_file,$(shape_files),.check-$(shape_file))
 check_shape_targets := $(foreach shape_file,$(shape_files),check-$(shape_file))
 
 all: \
+  catalog-v001.xml \
   shapes.ttl
 
 .PRECIOUS: \
@@ -36,6 +42,28 @@ all: \
 	  --source-format turtle \
 	  --target _$@ \
 	  --target-format turtle
+	mv _$@ $@
+
+catalog-v001.xml: \
+  $(case_srcdir)/ontology/master/catalog-v001.xml \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/etc/domain_directories.tsv \
+  $(top_srcdir)/etc/dependency_files.tsv \
+  $(top_srcdir)/ontology/catalog-v001.xml \
+  $(uco_srcdir)/src/create-catalog-v001.xml.py \
+  $(uco_srcdir)/ontology/uco/master/catalog-v001.xml \
+  shapes.ttl
+	rm -f _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(uco_srcdir)/src/create-catalog-v001.xml.py \
+	    --catalog-xml $(case_srcdir)/ontology/master/catalog-v001.xml \
+	    --catalog-xml $(top_srcdir)/ontology/catalog-v001.xml \
+	    --catalog-xml $(uco_srcdir)/ontology/uco/master/catalog-v001.xml \
+	    _$@ \
+	    $(top_srcdir)/etc/domain_directories.tsv \
+	    $(top_srcdir)/etc/dependency_files.tsv \
+	    "$(top_srcdir)" \
+	    shapes.ttl
 	mv _$@ $@
 
 check: \

@@ -15,11 +15,17 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd .. ; pwd)
 
+# TODO - After release of CASE 1.2.0, have this reference a different submodule.
+case_srcdir := $(top_srcdir)/dependencies/CASE-unstable
+
+uco_srcdir := $(case_srcdir)/dependencies/UCO
+
 ontology_files := case-corpora.ttl
 check_ontology_files := $(foreach ontology_file,$(ontology_files),.check-$(ontology_file))
 check_ontology_targets := $(foreach ontology_file,$(ontology_files),check-$(ontology_file))
 
-all:
+all: \
+  catalog-v001.xml
 
 .PRECIOUS: \
   .check-%.ttl
@@ -34,8 +40,29 @@ all:
 	  --target-format turtle
 	mv _$@ $@
 
+catalog-v001.xml: \
+  $(case_srcdir)/ontology/master/catalog-v001.xml \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/etc/domain_directories.tsv \
+  $(top_srcdir)/etc/dependency_files.tsv \
+  $(uco_srcdir)/src/create-catalog-v001.xml.py \
+  $(uco_srcdir)/ontology/uco/master/catalog-v001.xml \
+  $(ontology_files)
+	rm -f _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(uco_srcdir)/src/create-catalog-v001.xml.py \
+	    --catalog-xml $(case_srcdir)/ontology/master/catalog-v001.xml \
+	    --catalog-xml $(uco_srcdir)/ontology/uco/master/catalog-v001.xml \
+	    _$@ \
+	    $(top_srcdir)/etc/domain_directories.tsv \
+	    $(top_srcdir)/etc/dependency_files.tsv \
+	    "$(top_srcdir)" \
+	    $(ontology_files)
+	mv _$@ $@
+
 check: \
   $(check_ontology_targets) \
+  catalog-v001.xml \
   uco_owl_review.ttl
 
 check-%.ttl: \
@@ -47,6 +74,7 @@ check-%.ttl: \
 clean:
 	@rm -f \
 	  $(check_ontology_files) \
+	  catalog-v001.xml \
 	  uco_owl_review.ttl
 
 uco_owl_review.ttl: \
