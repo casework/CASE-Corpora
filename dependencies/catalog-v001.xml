@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+    <uri id="User Entered Import Resolution" uri="cito.ttl" name="http://purl.org/spar/cito"/>
+    <uri id="User Entered Import Resolution" uri="cpannotationschema.ttl" name="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl"/>
+    <uri id="User Entered Import Resolution" uri="dcat.ttl" name="http://www.w3.org/ns/dcat"/>
+    <uri id="User Entered Import Resolution" uri="dcterms.ttl" name="http://purl.org/dc/terms/"/>
+    <uri id="User Entered Import Resolution" uri="discourse-relationships.ttl" name="http://purl.org/swan/2.0/discourse-relationships/"/>
+    <uri id="User Entered Import Resolution" uri="foaf.ttl" name="http://xmlns.com/foaf/0.1/"/>
+    <uri id="User Entered Import Resolution" uri="prov-o.ttl" name="http://www.w3.org/ns/prov#"/>
+    <uri id="User Entered Import Resolution" uri="prov-o.ttl" name="http://www.w3.org/ns/prov-o#"/>
+    <uri id="User Entered Import Resolution" uri="situation.ttl" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
+    <uri id="User Entered Import Resolution" uri="skos.ttl" name="http://www.w3.org/2004/02/skos/core"/>
+    <uri id="User Entered Import Resolution" uri="sosa.ttl" name="http://www.w3.org/ns/sosa/"/>
+    <uri id="User Entered Import Resolution" uri="sosa.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/sosa.ttl"/>
+    <uri id="User Entered Import Resolution" uri="ssn.ttl" name="http://www.w3.org/ns/ssn/"/>
+    <uri id="User Entered Import Resolution" uri="time.ttl" name="http://www.w3.org/2006/time"/>
+    <uri id="User Entered Import Resolution" uri="vcard.ttl" name="http://www.w3.org/2006/vcard/ns"/>
+</catalog>
