@@ -4,6 +4,7 @@
 # imports: http://www.w3.org/ns/dcat
 # imports: http://xmlns.com/foaf/0.1/
 # imports: https://ontology.caseontology.org/case/case/1.1.0
+# imports: https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/prov-o.ttl
 # imports: https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl
 
 @prefix case-corpora: <http://example.org/ontology/case-corpora/> .
@@ -38,6 +39,7 @@
 		<http://www.w3.org/ns/dcat> ,
 		<http://xmlns.com/foaf/0.1/> ,
 		<https://ontology.caseontology.org/case/case/1.1.0> ,
+		<https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/prov-o.ttl> ,
 		<https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl>
 		;
 	.

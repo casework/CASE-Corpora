@@ -35,6 +35,7 @@ dependent_ontology_files := \
   discourse-relationships.ttl \
   dublin_core_type.ttl \
   foaf.ttl \
+  prov-o.ttl \
   situation.ttl \
   skos.ttl \
   sosa.ttl \
@@ -220,6 +221,19 @@ foaf.ttl:
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format rdf-xml \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+prov-o.ttl:
+	wget \
+	  --output-document=__$@ \
+	  http://www.w3.org/ns/prov-o
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
 	  --source __$@ \
 	  --target-format turtle \
 	  --target _$@
