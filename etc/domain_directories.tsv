@@ -1,0 +1,4 @@
+http://example.org/ontology/	${top_srcdir}/ontology/
+http://example.org/shapes/	${top_srcdir}/shapes/
+https://ontology.caseontology.org/	${top_srcdir}/dependencies/CASE-unstable/ontology/
+https://ontology.unifiedcyberontology.org/	${top_srcdir}/dependencies/CASE-unstable/dependencies/UCO/ontology/

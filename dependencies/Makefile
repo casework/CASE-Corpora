@@ -15,6 +15,11 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd .. ; pwd)
 
+# TODO - After release of CASE 1.2.0, have this reference a different submodule.
+case_srcdir := CASE-unstable
+
+uco_srcdir := $(case_srcdir)/dependencies/UCO
+
 case_develop_ttls := \
   $(wildcard CASE-develop/ontology/*/*.ttl) \
   $(wildcard UCO-develop/ontology/*/*.ttl) \
@@ -48,8 +53,8 @@ rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-tool
 all: \
   CASE-develop.ttl \
   CASE-unstable.ttl \
-  dcat-us.jsonld \
-  dependencies.ttl
+  catalog-v001.xml \
+  dcat-us.jsonld
 
 CASE-develop.ttl: \
   $(top_srcdir)/.venv.done.log \
@@ -72,9 +77,29 @@ CASE-unstable.ttl: \
 	    > _$@
 	mv _$@ $@
 
+catalog-v001.xml: \
+  $(case_srcdir)/ontology/master/catalog-v001.xml \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/etc/domain_directories.tsv \
+  $(top_srcdir)/etc/dependency_files.tsv \
+  $(uco_srcdir)/src/create-catalog-v001.xml.py \
+  $(uco_srcdir)/ontology/uco/master/catalog-v001.xml \
+  dependencies.ttl
+	rm -f _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(uco_srcdir)/src/create-catalog-v001.xml.py \
+	    --catalog-xml $(case_srcdir)/ontology/master/catalog-v001.xml \
+	    --catalog-xml $(uco_srcdir)/ontology/uco/master/catalog-v001.xml \
+	    _$@ \
+	    $(top_srcdir)/etc/domain_directories.tsv \
+	    $(top_srcdir)/etc/dependency_files.tsv \
+	    "$(top_srcdir)" \
+	    dependencies.ttl
+	mv _$@ $@
+
 # Construction of dependencies.ttl includes UCO OWL review.
 check: \
-  dependencies.ttl
+  catalog-v001.xml
 
 cito.ttl: \
   cito/docs/current/cito.ttl
@@ -90,6 +115,7 @@ clean:
 	@rm -f \
 	  CASE-develop.ttl \
 	  CASE-unstable.ttl \
+	  catalog-v001.xml \
 	  dependencies.ttl
 
 cpannotationschema.ttl:

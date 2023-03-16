@@ -1,0 +1,15 @@
+http://purl.org/dc/dcam/	${top_srcdir}/dependencies/dcam.ttl
+http://purl.org/dc/elements/1.1/	${top_srcdir}/dependencies/dc.ttl
+http://purl.org/dc/terms/	${top_srcdir}/dependencies/dcterms.ttl
+http://purl.org/spar/cito/2018-02-16	${top_srcdir}/dependencies/cito.ttl
+http://purl.org/swan/2.0/discourse-relationships/	${top_srcdir}/dependencies/discourse-relationships.ttl
+http://www.ontologydesignpatterns.org/cp/owl/situation.owl	${top_srcdir}/dependencies/situation.ttl
+http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl	${top_srcdir}/dependencies/cpannotationschema.ttl
+http://www.w3.org/2004/02/skos/core	${top_srcdir}/dependencies/skos.ttl
+http://www.w3.org/2006/time#2016	${top_srcdir}/dependencies/time.ttl
+http://www.w3.org/2006/vcard/ns	${top_srcdir}/dependencies/vcard.ttl
+http://www.w3.org/ns/dcat	${top_srcdir}/dependencies/dcat.ttl
+http://xmlns.com/foaf/0.1/	${top_srcdir}/dependencies/foaf.ttl
+https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/prov-o.ttl	${top_srcdir}/dependencies/prov-o.ttl
+https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/sosa.ttl	${top_srcdir}/dependencies/sosa.ttl
+https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl	${top_srcdir}/dependencies/ssn.ttl
