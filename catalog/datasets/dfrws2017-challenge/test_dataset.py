@@ -41,7 +41,7 @@ ASK {
         initBindings={"nSource": n_source, "nTarget": n_target},
     ):
         logging.debug(result)
-        computed = result
+        computed = bool(result)
 
     assert expected == computed
 
