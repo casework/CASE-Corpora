@@ -17,6 +17,7 @@ import warnings
 from typing import Set, Tuple
 
 from rdflib import PROV, Graph, Literal, URIRef
+from rdflib.query import ResultRow
 
 NS_PROV = PROV
 
@@ -59,11 +60,13 @@ kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8
 """
 
     for result_extracted in graph.query(query_extracted):
+        assert isinstance(result_extracted, ResultRow)
         assert isinstance(result_extracted[0], Literal)
         expected.add(str(result_extracted[0]))
     assert len(expected) > 0
 
     for result_packaged in graph.query(query_packaged):
+        assert isinstance(result_packaged, ResultRow)
         assert isinstance(result_packaged[0], Literal)
         computed.add(str(result_packaged[0]))
 
@@ -315,6 +318,8 @@ WHERE {
 }
 """
     for result in graph.query(query):
+        assert isinstance(result, ResultRow)
+        assert isinstance(result[3], Literal)
         computed.add(
             (
                 str(result[0]),
@@ -350,6 +355,7 @@ WHERE {
 }
 """
     for result in graph.query(query):
+        assert isinstance(result, ResultRow)
         assert isinstance(result[0], URIRef)
         hash_iri = str(result[0])
         if RX_UUID.search(hash_iri) is None:

@@ -40,6 +40,7 @@ ASK {
 """,
         initBindings={"nSource": n_source, "nTarget": n_target},
     ):
+        assert isinstance(result, bool)
         logging.debug(result)
         computed = result
 
