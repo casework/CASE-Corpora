@@ -78,6 +78,7 @@ CONSTRUCT {
 """
     n_found_nodes: Set[URIRef] = set()
     for result in in_graph.query(query, initBindings=initial_bindings):
+        assert isinstance(result, tuple)
         assert isinstance(result[0], URIRef)
         assert isinstance(result[1], URIRef)
         assert isinstance(result[2], URIRef)

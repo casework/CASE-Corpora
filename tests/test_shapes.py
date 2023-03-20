@@ -14,6 +14,7 @@
 from typing import Set, Tuple
 
 from rdflib import SH, TIME, Graph, URIRef
+from rdflib.query import ResultRow
 
 NS_SH = SH
 NS_TIME = TIME
@@ -39,6 +40,7 @@ WHERE {
 }
 """
     for result in graph.query(query):
+        assert isinstance(result, ResultRow)
         assert isinstance(result[0], URIRef)
         computed.add(result[0])
     assert expected == computed
@@ -118,6 +120,7 @@ WHERE {
 }
 """
     for result in graph.query(query):
+        assert isinstance(result, ResultRow)
         assert isinstance(result[0], URIRef)
         assert isinstance(result[1], URIRef)
         computed.add((result[0], result[1]))
