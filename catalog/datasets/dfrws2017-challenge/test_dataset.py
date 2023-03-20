@@ -42,7 +42,7 @@ ASK {
     ):
         assert isinstance(result, bool)
         logging.debug(result)
-        computed = result
+        computed = bool(result)
 
     assert expected == computed
 
