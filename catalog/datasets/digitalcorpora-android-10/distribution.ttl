@@ -1,0 +1,28 @@
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:dataset-0920f313-c81b-498c-bf08-722e02c72117
+	case-corpora:hasDistribution
+		kb:distribution-403a089d-3866-49d4-855f-fe068c83e2c4 ,
+		kb:distribution-87810a52-6a16-4a91-836e-5804a5523d88
+		;
+	.
+
+kb:distribution-403a089d-3866-49d4-855f-fe068c83e2c4
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.txt> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
+kb:distribution-87810a52-6a16-4a91-836e-5804a5523d88
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
+	.
+

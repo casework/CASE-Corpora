@@ -1,0 +1,37 @@
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
+	dcat:dataset kb:dataset-0920f313-c81b-498c-bf08-722e02c72117 ;
+	.
+
+kb:dataset-0920f313-c81b-498c-bf08-722e02c72117
+	a case-corpora:Dataset ;
+	case-corpora:hasDatasetDirectory "digitalcorpora-android-10" ;
+	dct:description '"A new set of Android 10 images and files have been contributed to the collection by Joshua Hickman."' ;
+	dct:identifier "http://example.org/kb/dataset-0920f313-c81b-498c-bf08-722e02c72117" ;
+	dct:modified "2020-05-11"^^xsd:date ;
+	dct:publisher kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	dct:title "Android 10" ;
+	skos:editorialNote "The dct:identifier property in this data element is NOT yet stable and may change in the future."@en ;
+	dcat:contactPoint case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+	dcat:keyword
+		"android" ,
+		"digital forensics"
+		;
+	dcat:landingPage <https://digitalcorpora.org/corpora/cell-phones/android-10/> ;
+	pod:accessLevel "public" ;
+	.
+
+<https://digitalcorpora.org/corpora/cell-phones/android-10/>
+	a case-corpora:WebPage ;
+	.
+
