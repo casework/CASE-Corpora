@@ -11,7 +11,7 @@
 	sh:conforms "true"^^xsd:boolean ;
 	sh:result [
 		a sh:ValidationResult ;
-		sh:focusNode <http://example.org/kb/hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9> ;
+		sh:focusNode <http://example.org/kb/Hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9> ;
 		sh:resultMessage "Value is outside the default vocabulary HashNameVocab." ;
 		sh:resultPath uco-types:hashMethod ;
 		sh:resultSeverity sh:Info ;
