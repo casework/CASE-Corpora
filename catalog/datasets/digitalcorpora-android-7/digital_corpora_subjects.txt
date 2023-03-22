@@ -1,0 +1,1 @@
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz

@@ -21,6 +21,429 @@
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kb:Hash-01a2ccb5-d773-5f0f-9f1e-355a8a6a4dab
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "b31f1630816535e769d9886719184a3d96decb27"^^xsd:hexBinary ;
+	.
+
+kb:Hash-01abf01d-8653-5b08-a09d-0256aaeacd6f
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "d24c21c9e7d8fedc072c367d0f6620909c2f91e6"^^xsd:hexBinary ;
+	.
+
+kb:Hash-03762732-e6d2-5087-91dc-fd4a8f1bfae7
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "d5c32aff637c7cf6a0e3132c7e16302b87c8905f"^^xsd:hexBinary ;
+	.
+
+kb:Hash-0f7f93b0-52c9-57d0-862a-a3da6d2cd31c
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "28679cfa58e1bba24b44b69ae5d10f67b8fd238a"^^xsd:hexBinary ;
+	.
+
+kb:Hash-10af6ae9-0a15-54be-a83e-21e40fbf009c
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "6c576f77616d3b8955b9af7fbcfee0f23d9a1298"^^xsd:hexBinary ;
+	.
+
+kb:Hash-1499c2f4-3939-5901-8364-956cea745880
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "5afcf00c737aa00a6d2a96a76faea513fd19fb7ef629588f481efc7aab04f48017745ec39d85ed31baff4cbd4bea0e2a1436df6ce542534ffb9607f2b1073a2f"^^xsd:hexBinary ;
+	.
+
+kb:Hash-1eb94129-6fc9-5222-8710-6b56b90af2bc
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "7d36aaa6d9aacea710ed1fad1a86350312f50cd1"^^xsd:hexBinary ;
+	.
+
+kb:Hash-2c393cce-64f7-56c6-b670-1b866496c346
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "072b9ff06df6fb3fd98f5d4b2972e77b8a343b3f"^^xsd:hexBinary ;
+	.
+
+kb:Hash-33481f77-95fe-52cb-8286-bef18adfafea
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "32522e75aa4bd865f7dfe7f9d8d1f94b5131c04bdb612cdce4be3a4be4cba7e1"^^xsd:hexBinary ;
+	.
+
+kb:Hash-3ba387c4-c88a-5989-a290-76475a426e1b
+	a uco-types:Hash ;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "c316b3b3e144b7039a1ef9e71ebf4d96"^^xsd:hexBinary ;
+	.
+
+kb:Hash-3c352e18-0105-5d69-8a84-c63ba265cc7f
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "6a6ac0cccb873e2f6e1a8d281329a23b70a138ecbeab9c6a1649e213cdbcdd7240dfb26a3ab162561fbe514bccb7464db4bab257a528b8217733d564ba829dda"^^xsd:hexBinary ;
+	.
+
+kb:Hash-41197c52-4a5b-5bf8-874a-aff38f3e96aa
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "8c0f641de7151c3ef3884cce1617e6dd34dd0a4b4e40650374e61195699abc90808b81aa3c07e720e821ee2beb6934af398809061745d032941097a57be4ba84"^^xsd:hexBinary ;
+	.
+
+kb:Hash-413b7533-23f2-53a4-803f-d018917b955c
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "adcb3f8ee9bfbadc48fdc98894edf6536e8f2fe3abc8c5cd84e7f979f850e50d"^^xsd:hexBinary ;
+	.
+
+kb:Hash-4213947f-ce26-53e1-b66c-5b961383cdc1
+	a uco-types:Hash ;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "7d94cdeffd34d994117700b08925a206"^^xsd:hexBinary ;
+	.
+
+kb:Hash-42b66fdd-dd4e-5f4f-b630-71bd80fce4a1
+	a uco-types:Hash ;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "96043eccd065aa856eceaf6d8dfac032"^^xsd:hexBinary ;
+	.
+
+kb:Hash-45950647-2b18-551a-bde2-c36503194abb
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "cd87b4155b7435bb1f542673ee323c6e3ad6593e"^^xsd:hexBinary ;
+	.
+
+kb:Hash-45e25b55-146a-5878-80ae-d58ab774d1ab
+	a uco-types:Hash ;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "db6d5e08a6aa769a6451b8c97e3e7cb2"^^xsd:hexBinary ;
+	.
+
+kb:Hash-4c81e96f-84b7-5550-b832-60258234c418
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "c4cb7407a31d14501f1ac765b79f3b8877318a9c"^^xsd:hexBinary ;
+	.
+
+kb:Hash-5a4427d2-5445-5bac-b56a-357b5b0ac0ff
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "7c0926d88eafeb68d87f7df62d6dc5bf46beb765"^^xsd:hexBinary ;
+	.
+
+kb:Hash-5e9648b1-57e8-5f64-be4c-901a69aaebce
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "f7cec4b97c2bc25e1a02c948369a9e845de85c68e5cbf5a353a563f6b7828eaa"^^xsd:hexBinary ;
+	.
+
+kb:Hash-5ea986e2-43a5-54de-9dc1-1f1c628be483
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "18974acaf179cad4dbf0b7c3f7570db4ce9a06426a33a4a3f840a820023c82596ed2d66d2d0f1f21f846edb5dacdeec1817599725b984ac65a7074aad516ad91"^^xsd:hexBinary ;
+	.
+
+kb:Hash-5ff19192-624f-5404-b514-b1131fe40eda
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "284ab2770f4c59a7a89cf7d42a3a49769949408a499186225afb45dc3190cd91"^^xsd:hexBinary ;
+	.
+
+kb:Hash-6259f211-75b2-55ec-bd0d-1038bedc8636
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "6ed61a9271271203c1dd2fea595776db7ea5a625aed3a389e2213f9369175d51"^^xsd:hexBinary ;
+	.
+
+kb:Hash-62d44521-9d6f-57e5-957d-ea2024039ffa
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "b948cfaa6f446d3c3d6d8a614308ca1a71f101d8"^^xsd:hexBinary ;
+	.
+
+kb:Hash-633e8066-4db8-555e-9bf0-bbbc490cc9e2
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "d83a2d90e2b17d8f0b74718d1e6ba8a0549576338d81e304caf8c79b9ea3cb734a56b1ad85594a1566703d258516a8fc427127fa30edcd62550430271a9e51f1"^^xsd:hexBinary ;
+	.
+
+kb:Hash-6423cd9a-0463-5400-8750-91e9d3e19b4c
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "c57e8e805e7c0d7c1fdae08d278cd61f31ee262c"^^xsd:hexBinary ;
+	.
+
+kb:Hash-71636327-4ae5-5d3b-88fe-8e5af3ed6f4c
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "a0106f2e79e65564d802e11be232ddeabf0aa77f266fd0de4f2f267e62af1147c88ecb55edd7005ce4276f9a2235036db47cdd0e5eb101360ca5878bb2ad132d"^^xsd:hexBinary ;
+	.
+
+kb:Hash-772aad07-b5d7-50e2-8853-0a6567ceb36f
+	a uco-types:Hash ;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "9d85c81d622b5ec68e3a26b2db1051dc"^^xsd:hexBinary ;
+	.
+
+kb:Hash-797cc9e0-2a38-55f5-b76e-b8bad814b64e
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "6fedd6cd7ca05efbf291ca5b12e1c563322f389b6e6e7a2817e817f01ace78d0"^^xsd:hexBinary ;
+	.
+
+kb:Hash-7dda9df9-8b7d-5bfe-bacb-49789baa4cfd
+	a uco-types:Hash ;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "e8bfc3223d19a4aad42026c28c263735"^^xsd:hexBinary ;
+	.
+
+kb:Hash-7fddc5b4-d1f7-5822-a371-1c290a2478cf
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "6c546e48e5112195bd16ed7f4bdda3052fb5fc474bc95060ba90bcc2995f930459b7502f9605aff8cb69e10164a21083a21c0bcfaa08336ee504f32cc2525697"^^xsd:hexBinary ;
+	.
+
+kb:Hash-8855b42b-f18f-5bd2-b015-af501f6d4f34
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "8c97497173e30c743dec1eddde78e8c84068bebd"^^xsd:hexBinary ;
+	.
+
+kb:Hash-8c2808b7-915a-50f4-ba0c-342b5261f771
+	a uco-types:Hash ;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "46f0274d91fd3d8d09c78465d9cc784b"^^xsd:hexBinary ;
+	.
+
+kb:Hash-8d31b2fc-c89b-542f-af7c-042ac395bfd5
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "02341328223d89e056c0453730230980972c07d7f1ce0e1d9d15946a76d13ffa9c3c9ba2f2641cbd5c33e7b27f8b78ac2d03add2f3b0f2efce3b4c64be053494"^^xsd:hexBinary ;
+	.
+
+kb:Hash-90231dce-fc49-5f30-b397-78c09e74350b
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "12a9399bc084d024de2c583031cf836a"^^xsd:hexBinary ;
+	.
+
+kb:Hash-916ee388-1f3f-53aa-808c-94a57e969714
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "0f3a327289dd4e9c5be2da92b4703ea7e33cd311ad5f900f97f618bdb606e0cf"^^xsd:hexBinary ;
+	.
+
+kb:Hash-98ef3afe-d295-5e30-9313-8b10af5d3871
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "5a13ae720925e7a8d1367d1cecec1cea5f5ad5753e291887b89e68ae83f49ec7"^^xsd:hexBinary ;
+	.
+
+kb:Hash-a42794fd-bd4a-5a8c-bde5-24d77153feeb
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "5dafc6668c2c0e6bb3a928f35676d3bd"^^xsd:hexBinary ;
+	.
+
+kb:Hash-a84323f6-c44b-5a27-8b6f-6318c4e891d7
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "69db4492c53e150c179c9d54bccb47bf25abc534"^^xsd:hexBinary ;
+	.
+
+kb:Hash-ab46ed6d-0681-5580-a15d-c374823290a4
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "dff0fa2013b80531b3b8985563769a05f8bcb485224e43dce47d1e24404fd58c"^^xsd:hexBinary ;
+	.
+
+kb:Hash-b39edda6-9e26-5936-8be9-f491a6c195cd
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "3f4725384891478d0e3c8dc34b838fe3335d8d8f29af8fea9f4ed2b6584b15c585f37c437f35676f8ab7760e53facb8bde5dca50df4ac240ad44d5dc9b7c3e78"^^xsd:hexBinary ;
+	.
+
+kb:Hash-b49e5b37-6d56-5358-b783-3b0cd1c08f32
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "7f19ff80cc7faa8643e85dbb6fb08715"^^xsd:hexBinary ;
+	.
+
+kb:Hash-b865c5cc-b848-5b43-adca-925a1b4f9162
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "8a4dec2f5c88b0297a68f8269aa7721ff84753df6690ffa923882493940c12dbd379c9ad02814335dc9d8da35758cb1369c2b0e7716738df4b0fd21a1e48459c"^^xsd:hexBinary ;
+	.
+
+kb:Hash-bdd157bf-389e-53d0-82cd-5b59710babd2
+	a uco-types:Hash ;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "3ee15e47fc9c2e822d5af35547d7ff16"^^xsd:hexBinary ;
+	.
+
+kb:Hash-bf470f1b-c322-57d3-980a-090a94243496
+	a uco-types:Hash ;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "847755fb7bce78e3ce848df71f69a973"^^xsd:hexBinary ;
+	.
+
+kb:Hash-d2a3eb04-ccbf-597a-b118-7adf77b452a1
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "632286b2d1c6792ea0c83f59e3e12593"^^xsd:hexBinary ;
+	.
+
+kb:Hash-d31f857e-ede7-58ae-add7-f8e2e99d22d9
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "9515abdf809f617c5b3254810952be04599a6a0957c2155887a9304aaefede2173dff11a9830664ab4d55ac3b2365d7595b21aefaf513734f3702b3c37e2922a"^^xsd:hexBinary ;
+	.
+
+kb:Hash-d7de48b8-dee4-5f91-8631-a84d81203778
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "421d6140cef068895ba7d182ab7154c2cdd2e7be34a348603816f39222306b3a"^^xsd:hexBinary ;
+	.
+
+kb:Hash-d8549efa-07bd-5562-aca5-2e1d1469f7f1
+	a uco-types:Hash ;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "ca6aeba50f0058fc2a77b87f46f2a791"^^xsd:hexBinary ;
+	.
+
+kb:Hash-dbe3caf5-15ec-5e5c-9465-9e506f0a4ffe
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "3f4d83fc6dfda9d084216f650693be60e2365cb70180f6368fce2a22aa72e7b1d08f05ecbe3389e0b35813878e7a62e72ff8641fcaca9fa57b4a471f2fe591ea"^^xsd:hexBinary ;
+	.
+
+kb:Hash-dc634510-42e3-5a0d-8619-3d29955d9830
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "ad6a8bc9550d00b7b21417c746c7dfda6cbc6a14c29f12729867ce411fa02f9441ad547dc9b44aacea1a3a403b518aa26363be66b9e084f6341974180252d753"^^xsd:hexBinary ;
+	.
+
+kb:Hash-e3bfcb1b-cf5d-5a5a-885d-491142d89673
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "7c04a7b16b7b8141301344589ff65dc6b522509c1adf2eac801e4002b0087fd9"^^xsd:hexBinary ;
+	.
+
+kb:Hash-e415c67c-8d3d-5881-9728-660a9cda44d8
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "a26f0b56848b1bdbb350f70141b58098"^^xsd:hexBinary ;
+	.
+
+kb:Hash-e4536c43-bea6-55e6-ae89-5c4216397633
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "27b7f7389bb2b99ab1b9be04e3bfbbc0"^^xsd:hexBinary ;
+	.
+
+kb:Hash-e920bd30-c487-5520-97bb-9924767cd60d
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "df7f3b7d9825f9911f9ba21e73424a04a058ed54"^^xsd:hexBinary ;
+	.
+
+kb:Hash-ec44c3f3-b6c2-545a-b49d-7e841379de05
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "b77b5ac1e87dae8050ac63614c22070ab608ac8732fc182f275501050db92ebf"^^xsd:hexBinary ;
+	.
+
+kb:Hash-ee59ab94-5862-5e29-bca5-20a36ee48bf9
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "9d3a582eedfbef8f1572f203d635e318734417f062adfe16fb4adef72ddd9b05"^^xsd:hexBinary ;
+	.
+
+kb:Hash-f3892dfd-2282-5253-a4ad-fecc13a0cdff
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "b04da29d5c8a816ec1ccbcbffe842d5ee869de601e2af9f388192e422383a704"^^xsd:hexBinary ;
+	.
+
+kb:Hash-fbabf211-8fc3-5096-a275-bbd4259aa603
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "50186bce5071ff82b3e4fed1328a4c200b55b6a49e1acce2e6c0aa79544991c4"^^xsd:hexBinary ;
+	.
+
+kb:Hash-fbefa004-63d1-5f51-b4aa-544f4688e6e9
+	a
+		sosa:Result ,
+		uco-types:Hash
+		;
+	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "a1412779fe63c84c3ae582976d5f052d7bde5928"^^xsd:hexBinary ;
+	.
+
+kb:Hash-ffbaee45-f413-558d-92ff-d6d51ecf0433
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "de6b07d9dd6a4a4c856e73a9ef0030e05641cf4e3a9c7062f38baf17a050a0949606a198e2bc3323b1ee9dcda5532a95b8f2697f7eb20ad1771cd112e915ee8e"^^xsd:hexBinary ;
+	.
+
 kb:action-541265d6-2a57-476e-bff0-45f512f22bd5
 	a
 		time:ProperInterval ,
@@ -618,10 +1041,10 @@ kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8
 kb:content-data-facet-03f2058f-8178-4a6a-9a78-fdf1d2a116f0
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-0f7f93b0-52c9-57d0-862a-a3da6d2cd31c ,
-		kb:hash-1499c2f4-3939-5901-8364-956cea745880 ,
-		kb:hash-6259f211-75b2-55ec-bd0d-1038bedc8636 ,
-		kb:hash-d2a3eb04-ccbf-597a-b118-7adf77b452a1
+		kb:Hash-0f7f93b0-52c9-57d0-862a-a3da6d2cd31c ,
+		kb:Hash-1499c2f4-3939-5901-8364-956cea745880 ,
+		kb:Hash-6259f211-75b2-55ec-bd0d-1038bedc8636 ,
+		kb:Hash-d2a3eb04-ccbf-597a-b118-7adf77b452a1
 		;
 	uco-observable:sizeInBytes "1077"^^xsd:integer ;
 	.
@@ -629,19 +1052,19 @@ kb:content-data-facet-03f2058f-8178-4a6a-9a78-fdf1d2a116f0
 kb:content-data-facet-052becfe-204a-4b9c-be16-c5542e4aed06
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-10af6ae9-0a15-54be-a83e-21e40fbf009c ,
-		kb:hash-b49e5b37-6d56-5358-b783-3b0cd1c08f32 ,
-		kb:hash-ee59ab94-5862-5e29-bca5-20a36ee48bf9
+		kb:Hash-10af6ae9-0a15-54be-a83e-21e40fbf009c ,
+		kb:Hash-b49e5b37-6d56-5358-b783-3b0cd1c08f32 ,
+		kb:Hash-ee59ab94-5862-5e29-bca5-20a36ee48bf9
 		;
 	.
 
 kb:content-data-facet-0f09e882-d74f-40d1-b511-2ced8cae421e
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-41197c52-4a5b-5bf8-874a-aff38f3e96aa ,
-		kb:hash-5ff19192-624f-5404-b514-b1131fe40eda ,
-		kb:hash-d8549efa-07bd-5562-aca5-2e1d1469f7f1 ,
-		kb:hash-e920bd30-c487-5520-97bb-9924767cd60d
+		kb:Hash-41197c52-4a5b-5bf8-874a-aff38f3e96aa ,
+		kb:Hash-5ff19192-624f-5404-b514-b1131fe40eda ,
+		kb:Hash-d8549efa-07bd-5562-aca5-2e1d1469f7f1 ,
+		kb:Hash-e920bd30-c487-5520-97bb-9924767cd60d
 		;
 	uco-observable:sizeInBytes "17076"^^xsd:integer ;
 	.
@@ -649,10 +1072,10 @@ kb:content-data-facet-0f09e882-d74f-40d1-b511-2ced8cae421e
 kb:content-data-facet-2a77c981-77b2-4490-8187-34dca949848b
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-2c393cce-64f7-56c6-b670-1b866496c346 ,
-		kb:hash-b39edda6-9e26-5936-8be9-f491a6c195cd ,
-		kb:hash-bdd157bf-389e-53d0-82cd-5b59710babd2 ,
-		kb:hash-d7de48b8-dee4-5f91-8631-a84d81203778
+		kb:Hash-2c393cce-64f7-56c6-b670-1b866496c346 ,
+		kb:Hash-b39edda6-9e26-5936-8be9-f491a6c195cd ,
+		kb:Hash-bdd157bf-389e-53d0-82cd-5b59710babd2 ,
+		kb:Hash-d7de48b8-dee4-5f91-8631-a84d81203778
 		;
 	uco-observable:sizeInBytes "17122745"^^xsd:integer ;
 	.
@@ -660,10 +1083,10 @@ kb:content-data-facet-2a77c981-77b2-4490-8187-34dca949848b
 kb:content-data-facet-34636d31-7af6-43c9-ad43-a4d995828c23
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-772aad07-b5d7-50e2-8853-0a6567ceb36f ,
-		kb:hash-7fddc5b4-d1f7-5822-a371-1c290a2478cf ,
-		kb:hash-8855b42b-f18f-5bd2-b015-af501f6d4f34 ,
-		kb:hash-916ee388-1f3f-53aa-808c-94a57e969714
+		kb:Hash-772aad07-b5d7-50e2-8853-0a6567ceb36f ,
+		kb:Hash-7fddc5b4-d1f7-5822-a371-1c290a2478cf ,
+		kb:Hash-8855b42b-f18f-5bd2-b015-af501f6d4f34 ,
+		kb:Hash-916ee388-1f3f-53aa-808c-94a57e969714
 		;
 	uco-observable:sizeInBytes "121022"^^xsd:integer ;
 	.
@@ -671,30 +1094,21 @@ kb:content-data-facet-34636d31-7af6-43c9-ad43-a4d995828c23
 kb:content-data-facet-3a5a9f3e-d643-4487-867c-2c2bf8f70862
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-1eb94129-6fc9-5222-8710-6b56b90af2bc ,
-		kb:hash-ab46ed6d-0681-5580-a15d-c374823290a4 ,
-		kb:hash-bf470f1b-c322-57d3-980a-090a94243496 ,
-		kb:hash-ffbaee45-f413-558d-92ff-d6d51ecf0433
+		kb:Hash-1eb94129-6fc9-5222-8710-6b56b90af2bc ,
+		kb:Hash-ab46ed6d-0681-5580-a15d-c374823290a4 ,
+		kb:Hash-bf470f1b-c322-57d3-980a-090a94243496 ,
+		kb:Hash-ffbaee45-f413-558d-92ff-d6d51ecf0433
 		;
 	uco-observable:sizeInBytes "426490"^^xsd:integer ;
-	.
-
-kb:content-data-facet-5aa2c06d-a95d-4713-8e16-5463bad44705
-	a uco-observable:ContentDataFacet ;
-	uco-observable:hash
-		kb:hash-06903043-3b24-57e8-997d-6e5acd63ad8f ,
-		kb:hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
-		;
-	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
 	.
 
 kb:content-data-facet-622893bf-0a02-470d-b621-4b61de641a53
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-3c352e18-0105-5d69-8a84-c63ba265cc7f ,
-		kb:hash-413b7533-23f2-53a4-803f-d018917b955c ,
-		kb:hash-45950647-2b18-551a-bde2-c36503194abb ,
-		kb:hash-8c2808b7-915a-50f4-ba0c-342b5261f771
+		kb:Hash-3c352e18-0105-5d69-8a84-c63ba265cc7f ,
+		kb:Hash-413b7533-23f2-53a4-803f-d018917b955c ,
+		kb:Hash-45950647-2b18-551a-bde2-c36503194abb ,
+		kb:Hash-8c2808b7-915a-50f4-ba0c-342b5261f771
 		;
 	uco-observable:sizeInBytes "1584"^^xsd:integer ;
 	.
@@ -702,10 +1116,10 @@ kb:content-data-facet-622893bf-0a02-470d-b621-4b61de641a53
 kb:content-data-facet-6d088fac-7772-4da9-b012-fe6b6d026083
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-45e25b55-146a-5878-80ae-d58ab774d1ab ,
-		kb:hash-4c81e96f-84b7-5550-b832-60258234c418 ,
-		kb:hash-71636327-4ae5-5d3b-88fe-8e5af3ed6f4c ,
-		kb:hash-f3892dfd-2282-5253-a4ad-fecc13a0cdff
+		kb:Hash-45e25b55-146a-5878-80ae-d58ab774d1ab ,
+		kb:Hash-4c81e96f-84b7-5550-b832-60258234c418 ,
+		kb:Hash-71636327-4ae5-5d3b-88fe-8e5af3ed6f4c ,
+		kb:Hash-f3892dfd-2282-5253-a4ad-fecc13a0cdff
 		;
 	uco-observable:sizeInBytes "399134"^^xsd:integer ;
 	.
@@ -713,10 +1127,10 @@ kb:content-data-facet-6d088fac-7772-4da9-b012-fe6b6d026083
 kb:content-data-facet-7382ee80-66a4-42d8-8b98-3d9f8556f63a
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-10af6ae9-0a15-54be-a83e-21e40fbf009c ,
-		kb:hash-b49e5b37-6d56-5358-b783-3b0cd1c08f32 ,
-		kb:hash-dc634510-42e3-5a0d-8619-3d29955d9830 ,
-		kb:hash-ee59ab94-5862-5e29-bca5-20a36ee48bf9
+		kb:Hash-10af6ae9-0a15-54be-a83e-21e40fbf009c ,
+		kb:Hash-b49e5b37-6d56-5358-b783-3b0cd1c08f32 ,
+		kb:Hash-dc634510-42e3-5a0d-8619-3d29955d9830 ,
+		kb:Hash-ee59ab94-5862-5e29-bca5-20a36ee48bf9
 		;
 	uco-observable:sizeInBytes "9021"^^xsd:integer ;
 	.
@@ -724,10 +1138,10 @@ kb:content-data-facet-7382ee80-66a4-42d8-8b98-3d9f8556f63a
 kb:content-data-facet-8b3fc9fa-a5d7-4fc9-b26d-66de8a1071e8
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-633e8066-4db8-555e-9bf0-bbbc490cc9e2 ,
-		kb:hash-a42794fd-bd4a-5a8c-bde5-24d77153feeb ,
-		kb:hash-fbabf211-8fc3-5096-a275-bbd4259aa603 ,
-		kb:hash-fbefa004-63d1-5f51-b4aa-544f4688e6e9
+		kb:Hash-633e8066-4db8-555e-9bf0-bbbc490cc9e2 ,
+		kb:Hash-a42794fd-bd4a-5a8c-bde5-24d77153feeb ,
+		kb:Hash-fbabf211-8fc3-5096-a275-bbd4259aa603 ,
+		kb:Hash-fbefa004-63d1-5f51-b4aa-544f4688e6e9
 		;
 	uco-observable:sizeInBytes "31268536320"^^xsd:integer ;
 	.
@@ -735,10 +1149,10 @@ kb:content-data-facet-8b3fc9fa-a5d7-4fc9-b26d-66de8a1071e8
 kb:content-data-facet-afd6a29c-4888-4b24-b023-91f5b3933b14
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-4213947f-ce26-53e1-b66c-5b961383cdc1 ,
-		kb:hash-6423cd9a-0463-5400-8750-91e9d3e19b4c ,
-		kb:hash-b865c5cc-b848-5b43-adca-925a1b4f9162 ,
-		kb:hash-e3bfcb1b-cf5d-5a5a-885d-491142d89673
+		kb:Hash-4213947f-ce26-53e1-b66c-5b961383cdc1 ,
+		kb:Hash-6423cd9a-0463-5400-8750-91e9d3e19b4c ,
+		kb:Hash-b865c5cc-b848-5b43-adca-925a1b4f9162 ,
+		kb:Hash-e3bfcb1b-cf5d-5a5a-885d-491142d89673
 		;
 	uco-observable:sizeInBytes "17580"^^xsd:integer ;
 	.
@@ -746,19 +1160,19 @@ kb:content-data-facet-afd6a29c-4888-4b24-b023-91f5b3933b14
 kb:content-data-facet-b27b8dc9-7adf-4e7c-b719-5722900445f0
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-01abf01d-8653-5b08-a09d-0256aaeacd6f ,
-		kb:hash-e415c67c-8d3d-5881-9728-660a9cda44d8 ,
-		kb:hash-ec44c3f3-b6c2-545a-b49d-7e841379de05
+		kb:Hash-01abf01d-8653-5b08-a09d-0256aaeacd6f ,
+		kb:Hash-e415c67c-8d3d-5881-9728-660a9cda44d8 ,
+		kb:Hash-ec44c3f3-b6c2-545a-b49d-7e841379de05
 		;
 	.
 
 kb:content-data-facet-bf01b13c-4e8f-411b-9286-3cee873e6a31
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-3ba387c4-c88a-5989-a290-76475a426e1b ,
-		kb:hash-5e9648b1-57e8-5f64-be4c-901a69aaebce ,
-		kb:hash-62d44521-9d6f-57e5-957d-ea2024039ffa ,
-		kb:hash-d31f857e-ede7-58ae-add7-f8e2e99d22d9
+		kb:Hash-3ba387c4-c88a-5989-a290-76475a426e1b ,
+		kb:Hash-5e9648b1-57e8-5f64-be4c-901a69aaebce ,
+		kb:Hash-62d44521-9d6f-57e5-957d-ea2024039ffa ,
+		kb:Hash-d31f857e-ede7-58ae-add7-f8e2e99d22d9
 		;
 	uco-observable:sizeInBytes "4027833"^^xsd:integer ;
 	.
@@ -766,10 +1180,10 @@ kb:content-data-facet-bf01b13c-4e8f-411b-9286-3cee873e6a31
 kb:content-data-facet-cf9bf525-aeae-489e-823a-5d5cf5db8721
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-01abf01d-8653-5b08-a09d-0256aaeacd6f ,
-		kb:hash-5ea986e2-43a5-54de-9dc1-1f1c628be483 ,
-		kb:hash-e415c67c-8d3d-5881-9728-660a9cda44d8 ,
-		kb:hash-ec44c3f3-b6c2-545a-b49d-7e841379de05
+		kb:Hash-01abf01d-8653-5b08-a09d-0256aaeacd6f ,
+		kb:Hash-5ea986e2-43a5-54de-9dc1-1f1c628be483 ,
+		kb:Hash-e415c67c-8d3d-5881-9728-660a9cda44d8 ,
+		kb:Hash-ec44c3f3-b6c2-545a-b49d-7e841379de05
 		;
 	uco-observable:sizeInBytes "4194304"^^xsd:integer ;
 	.
@@ -777,10 +1191,10 @@ kb:content-data-facet-cf9bf525-aeae-489e-823a-5d5cf5db8721
 kb:content-data-facet-e0e6ef51-b5e5-482e-9b79-2ac3496f33ba
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-33481f77-95fe-52cb-8286-bef18adfafea ,
-		kb:hash-7dda9df9-8b7d-5bfe-bacb-49789baa4cfd ,
-		kb:hash-a84323f6-c44b-5a27-8b6f-6318c4e891d7 ,
-		kb:hash-dbe3caf5-15ec-5e5c-9465-9e506f0a4ffe
+		kb:Hash-33481f77-95fe-52cb-8286-bef18adfafea ,
+		kb:Hash-7dda9df9-8b7d-5bfe-bacb-49789baa4cfd ,
+		kb:Hash-a84323f6-c44b-5a27-8b6f-6318c4e891d7 ,
+		kb:Hash-dbe3caf5-15ec-5e5c-9465-9e506f0a4ffe
 		;
 	uco-observable:sizeInBytes "244453"^^xsd:integer ;
 	.
@@ -793,10 +1207,10 @@ kb:content-data-facet-e20f23b5-9370-4863-9b07-5b5b157ba9a1
 kb:content-data-facet-ecd90088-8a21-4727-b9e1-b0080d4672b6
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-06903043-3b24-57e8-997d-6e5acd63ad8f ,
-		kb:hash-42b66fdd-dd4e-5f4f-b630-71bd80fce4a1 ,
-		kb:hash-5a4427d2-5445-5bac-b56a-357b5b0ac0ff ,
-		kb:hash-8d31b2fc-c89b-542f-af7c-042ac395bfd5
+		kb:Hash-06903043-3b24-57e8-997d-6e5acd63ad8f ,
+		kb:Hash-42b66fdd-dd4e-5f4f-b630-71bd80fce4a1 ,
+		kb:Hash-5a4427d2-5445-5bac-b56a-357b5b0ac0ff ,
+		kb:Hash-8d31b2fc-c89b-542f-af7c-042ac395bfd5
 		;
 	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
 	.
@@ -1052,13 +1466,6 @@ kb:file-facet-269f03d4-eb29-4b64-8490-4f59af3b2ec7
 	uco-observable:fileName "takeout-20181204T161119Z-001.zip" ;
 	uco-observable:modifiedTime "2019-01-09T17:30:12+00:00"^^xsd:dateTime ;
 	uco-observable:sizeInBytes "17122745"^^xsd:integer ;
-	.
-
-kb:file-facet-2703a4c4-6157-4d95-887b-03055f664cb6
-	a uco-observable:FileFacet ;
-	uco-observable:fileName "android_7.tar.gz" ;
-	uco-observable:modifiedTime "2020-11-22T03:14:59Z"^^xsd:dateTime ;
-	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
 	.
 
 kb:file-facet-2d6e02e7-6788-4626-918f-1fdbdb8f6241
@@ -1394,441 +1801,6 @@ kb:generation-f5e4a0a8-4bf8-59bf-8353-754322b7b62b
 	time:inXSDDate "2018-11-29"^^xsd:date ;
 	.
 
-kb:hash-01a2ccb5-d773-5f0f-9f1e-355a8a6a4dab
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "b31f1630816535e769d9886719184a3d96decb27"^^xsd:hexBinary ;
-	.
-
-kb:hash-01abf01d-8653-5b08-a09d-0256aaeacd6f
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "d24c21c9e7d8fedc072c367d0f6620909c2f91e6"^^xsd:hexBinary ;
-	.
-
-kb:hash-03762732-e6d2-5087-91dc-fd4a8f1bfae7
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "d5c32aff637c7cf6a0e3132c7e16302b87c8905f"^^xsd:hexBinary ;
-	.
-
-kb:hash-06903043-3b24-57e8-997d-6e5acd63ad8f
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "563d71762b48f14ffd2663fcf85870f21c939441de614a1175a54b41c6373369"^^xsd:hexBinary ;
-	.
-
-kb:hash-0f7f93b0-52c9-57d0-862a-a3da6d2cd31c
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "28679cfa58e1bba24b44b69ae5d10f67b8fd238a"^^xsd:hexBinary ;
-	.
-
-kb:hash-10af6ae9-0a15-54be-a83e-21e40fbf009c
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "6c576f77616d3b8955b9af7fbcfee0f23d9a1298"^^xsd:hexBinary ;
-	.
-
-kb:hash-1499c2f4-3939-5901-8364-956cea745880
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "5afcf00c737aa00a6d2a96a76faea513fd19fb7ef629588f481efc7aab04f48017745ec39d85ed31baff4cbd4bea0e2a1436df6ce542534ffb9607f2b1073a2f"^^xsd:hexBinary ;
-	.
-
-kb:hash-1eb94129-6fc9-5222-8710-6b56b90af2bc
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "7d36aaa6d9aacea710ed1fad1a86350312f50cd1"^^xsd:hexBinary ;
-	.
-
-kb:hash-2c393cce-64f7-56c6-b670-1b866496c346
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "072b9ff06df6fb3fd98f5d4b2972e77b8a343b3f"^^xsd:hexBinary ;
-	.
-
-kb:hash-33481f77-95fe-52cb-8286-bef18adfafea
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "32522e75aa4bd865f7dfe7f9d8d1f94b5131c04bdb612cdce4be3a4be4cba7e1"^^xsd:hexBinary ;
-	.
-
-kb:hash-3ba387c4-c88a-5989-a290-76475a426e1b
-	a uco-types:Hash ;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "c316b3b3e144b7039a1ef9e71ebf4d96"^^xsd:hexBinary ;
-	.
-
-kb:hash-3c352e18-0105-5d69-8a84-c63ba265cc7f
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "6a6ac0cccb873e2f6e1a8d281329a23b70a138ecbeab9c6a1649e213cdbcdd7240dfb26a3ab162561fbe514bccb7464db4bab257a528b8217733d564ba829dda"^^xsd:hexBinary ;
-	.
-
-kb:hash-41197c52-4a5b-5bf8-874a-aff38f3e96aa
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "8c0f641de7151c3ef3884cce1617e6dd34dd0a4b4e40650374e61195699abc90808b81aa3c07e720e821ee2beb6934af398809061745d032941097a57be4ba84"^^xsd:hexBinary ;
-	.
-
-kb:hash-413b7533-23f2-53a4-803f-d018917b955c
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "adcb3f8ee9bfbadc48fdc98894edf6536e8f2fe3abc8c5cd84e7f979f850e50d"^^xsd:hexBinary ;
-	.
-
-kb:hash-4213947f-ce26-53e1-b66c-5b961383cdc1
-	a uco-types:Hash ;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "7d94cdeffd34d994117700b08925a206"^^xsd:hexBinary ;
-	.
-
-kb:hash-42b66fdd-dd4e-5f4f-b630-71bd80fce4a1
-	a uco-types:Hash ;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "96043eccd065aa856eceaf6d8dfac032"^^xsd:hexBinary ;
-	.
-
-kb:hash-45950647-2b18-551a-bde2-c36503194abb
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "cd87b4155b7435bb1f542673ee323c6e3ad6593e"^^xsd:hexBinary ;
-	.
-
-kb:hash-45e25b55-146a-5878-80ae-d58ab774d1ab
-	a uco-types:Hash ;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "db6d5e08a6aa769a6451b8c97e3e7cb2"^^xsd:hexBinary ;
-	.
-
-kb:hash-4c81e96f-84b7-5550-b832-60258234c418
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "c4cb7407a31d14501f1ac765b79f3b8877318a9c"^^xsd:hexBinary ;
-	.
-
-kb:hash-5a4427d2-5445-5bac-b56a-357b5b0ac0ff
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "7c0926d88eafeb68d87f7df62d6dc5bf46beb765"^^xsd:hexBinary ;
-	.
-
-kb:hash-5e9648b1-57e8-5f64-be4c-901a69aaebce
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "f7cec4b97c2bc25e1a02c948369a9e845de85c68e5cbf5a353a563f6b7828eaa"^^xsd:hexBinary ;
-	.
-
-kb:hash-5ea986e2-43a5-54de-9dc1-1f1c628be483
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "18974acaf179cad4dbf0b7c3f7570db4ce9a06426a33a4a3f840a820023c82596ed2d66d2d0f1f21f846edb5dacdeec1817599725b984ac65a7074aad516ad91"^^xsd:hexBinary ;
-	.
-
-kb:hash-5ff19192-624f-5404-b514-b1131fe40eda
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "284ab2770f4c59a7a89cf7d42a3a49769949408a499186225afb45dc3190cd91"^^xsd:hexBinary ;
-	.
-
-kb:hash-6259f211-75b2-55ec-bd0d-1038bedc8636
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "6ed61a9271271203c1dd2fea595776db7ea5a625aed3a389e2213f9369175d51"^^xsd:hexBinary ;
-	.
-
-kb:hash-62d44521-9d6f-57e5-957d-ea2024039ffa
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "b948cfaa6f446d3c3d6d8a614308ca1a71f101d8"^^xsd:hexBinary ;
-	.
-
-kb:hash-633e8066-4db8-555e-9bf0-bbbc490cc9e2
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "d83a2d90e2b17d8f0b74718d1e6ba8a0549576338d81e304caf8c79b9ea3cb734a56b1ad85594a1566703d258516a8fc427127fa30edcd62550430271a9e51f1"^^xsd:hexBinary ;
-	.
-
-kb:hash-6423cd9a-0463-5400-8750-91e9d3e19b4c
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "c57e8e805e7c0d7c1fdae08d278cd61f31ee262c"^^xsd:hexBinary ;
-	.
-
-kb:hash-71636327-4ae5-5d3b-88fe-8e5af3ed6f4c
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "a0106f2e79e65564d802e11be232ddeabf0aa77f266fd0de4f2f267e62af1147c88ecb55edd7005ce4276f9a2235036db47cdd0e5eb101360ca5878bb2ad132d"^^xsd:hexBinary ;
-	.
-
-kb:hash-772aad07-b5d7-50e2-8853-0a6567ceb36f
-	a uco-types:Hash ;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "9d85c81d622b5ec68e3a26b2db1051dc"^^xsd:hexBinary ;
-	.
-
-kb:hash-797cc9e0-2a38-55f5-b76e-b8bad814b64e
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "6fedd6cd7ca05efbf291ca5b12e1c563322f389b6e6e7a2817e817f01ace78d0"^^xsd:hexBinary ;
-	.
-
-kb:hash-7dda9df9-8b7d-5bfe-bacb-49789baa4cfd
-	a uco-types:Hash ;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "e8bfc3223d19a4aad42026c28c263735"^^xsd:hexBinary ;
-	.
-
-kb:hash-7fddc5b4-d1f7-5822-a371-1c290a2478cf
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "6c546e48e5112195bd16ed7f4bdda3052fb5fc474bc95060ba90bcc2995f930459b7502f9605aff8cb69e10164a21083a21c0bcfaa08336ee504f32cc2525697"^^xsd:hexBinary ;
-	.
-
-kb:hash-8855b42b-f18f-5bd2-b015-af501f6d4f34
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "8c97497173e30c743dec1eddde78e8c84068bebd"^^xsd:hexBinary ;
-	.
-
-kb:hash-8c2808b7-915a-50f4-ba0c-342b5261f771
-	a uco-types:Hash ;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "46f0274d91fd3d8d09c78465d9cc784b"^^xsd:hexBinary ;
-	.
-
-kb:hash-8d31b2fc-c89b-542f-af7c-042ac395bfd5
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "02341328223d89e056c0453730230980972c07d7f1ce0e1d9d15946a76d13ffa9c3c9ba2f2641cbd5c33e7b27f8b78ac2d03add2f3b0f2efce3b4c64be053494"^^xsd:hexBinary ;
-	.
-
-kb:hash-90231dce-fc49-5f30-b397-78c09e74350b
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "12a9399bc084d024de2c583031cf836a"^^xsd:hexBinary ;
-	.
-
-kb:hash-916ee388-1f3f-53aa-808c-94a57e969714
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "0f3a327289dd4e9c5be2da92b4703ea7e33cd311ad5f900f97f618bdb606e0cf"^^xsd:hexBinary ;
-	.
-
-kb:hash-98ef3afe-d295-5e30-9313-8b10af5d3871
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "5a13ae720925e7a8d1367d1cecec1cea5f5ad5753e291887b89e68ae83f49ec7"^^xsd:hexBinary ;
-	.
-
-kb:hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
-	uco-types:hashValue "50a015b0c65c61feb81e77e0d2adcbf84d2f8352b2e1c46f27fb5f4816546751"^^xsd:hexBinary ;
-	.
-
-kb:hash-a42794fd-bd4a-5a8c-bde5-24d77153feeb
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "5dafc6668c2c0e6bb3a928f35676d3bd"^^xsd:hexBinary ;
-	.
-
-kb:hash-a84323f6-c44b-5a27-8b6f-6318c4e891d7
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "69db4492c53e150c179c9d54bccb47bf25abc534"^^xsd:hexBinary ;
-	.
-
-kb:hash-ab46ed6d-0681-5580-a15d-c374823290a4
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "dff0fa2013b80531b3b8985563769a05f8bcb485224e43dce47d1e24404fd58c"^^xsd:hexBinary ;
-	.
-
-kb:hash-b39edda6-9e26-5936-8be9-f491a6c195cd
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "3f4725384891478d0e3c8dc34b838fe3335d8d8f29af8fea9f4ed2b6584b15c585f37c437f35676f8ab7760e53facb8bde5dca50df4ac240ad44d5dc9b7c3e78"^^xsd:hexBinary ;
-	.
-
-kb:hash-b49e5b37-6d56-5358-b783-3b0cd1c08f32
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "7f19ff80cc7faa8643e85dbb6fb08715"^^xsd:hexBinary ;
-	.
-
-kb:hash-b865c5cc-b848-5b43-adca-925a1b4f9162
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "8a4dec2f5c88b0297a68f8269aa7721ff84753df6690ffa923882493940c12dbd379c9ad02814335dc9d8da35758cb1369c2b0e7716738df4b0fd21a1e48459c"^^xsd:hexBinary ;
-	.
-
-kb:hash-bdd157bf-389e-53d0-82cd-5b59710babd2
-	a uco-types:Hash ;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "3ee15e47fc9c2e822d5af35547d7ff16"^^xsd:hexBinary ;
-	.
-
-kb:hash-bf470f1b-c322-57d3-980a-090a94243496
-	a uco-types:Hash ;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "847755fb7bce78e3ce848df71f69a973"^^xsd:hexBinary ;
-	.
-
-kb:hash-d2a3eb04-ccbf-597a-b118-7adf77b452a1
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "632286b2d1c6792ea0c83f59e3e12593"^^xsd:hexBinary ;
-	.
-
-kb:hash-d31f857e-ede7-58ae-add7-f8e2e99d22d9
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "9515abdf809f617c5b3254810952be04599a6a0957c2155887a9304aaefede2173dff11a9830664ab4d55ac3b2365d7595b21aefaf513734f3702b3c37e2922a"^^xsd:hexBinary ;
-	.
-
-kb:hash-d7de48b8-dee4-5f91-8631-a84d81203778
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "421d6140cef068895ba7d182ab7154c2cdd2e7be34a348603816f39222306b3a"^^xsd:hexBinary ;
-	.
-
-kb:hash-d8549efa-07bd-5562-aca5-2e1d1469f7f1
-	a uco-types:Hash ;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "ca6aeba50f0058fc2a77b87f46f2a791"^^xsd:hexBinary ;
-	.
-
-kb:hash-dbe3caf5-15ec-5e5c-9465-9e506f0a4ffe
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "3f4d83fc6dfda9d084216f650693be60e2365cb70180f6368fce2a22aa72e7b1d08f05ecbe3389e0b35813878e7a62e72ff8641fcaca9fa57b4a471f2fe591ea"^^xsd:hexBinary ;
-	.
-
-kb:hash-dc634510-42e3-5a0d-8619-3d29955d9830
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "ad6a8bc9550d00b7b21417c746c7dfda6cbc6a14c29f12729867ce411fa02f9441ad547dc9b44aacea1a3a403b518aa26363be66b9e084f6341974180252d753"^^xsd:hexBinary ;
-	.
-
-kb:hash-e3bfcb1b-cf5d-5a5a-885d-491142d89673
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "7c04a7b16b7b8141301344589ff65dc6b522509c1adf2eac801e4002b0087fd9"^^xsd:hexBinary ;
-	.
-
-kb:hash-e415c67c-8d3d-5881-9728-660a9cda44d8
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "a26f0b56848b1bdbb350f70141b58098"^^xsd:hexBinary ;
-	.
-
-kb:hash-e4536c43-bea6-55e6-ae89-5c4216397633
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "27b7f7389bb2b99ab1b9be04e3bfbbc0"^^xsd:hexBinary ;
-	.
-
-kb:hash-e920bd30-c487-5520-97bb-9924767cd60d
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "df7f3b7d9825f9911f9ba21e73424a04a058ed54"^^xsd:hexBinary ;
-	.
-
-kb:hash-ec44c3f3-b6c2-545a-b49d-7e841379de05
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "b77b5ac1e87dae8050ac63614c22070ab608ac8732fc182f275501050db92ebf"^^xsd:hexBinary ;
-	.
-
-kb:hash-ee59ab94-5862-5e29-bca5-20a36ee48bf9
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "9d3a582eedfbef8f1572f203d635e318734417f062adfe16fb4adef72ddd9b05"^^xsd:hexBinary ;
-	.
-
-kb:hash-f3892dfd-2282-5253-a4ad-fecc13a0cdff
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "b04da29d5c8a816ec1ccbcbffe842d5ee869de601e2af9f388192e422383a704"^^xsd:hexBinary ;
-	.
-
-kb:hash-fbabf211-8fc3-5096-a275-bbd4259aa603
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "50186bce5071ff82b3e4fed1328a4c200b55b6a49e1acce2e6c0aa79544991c4"^^xsd:hexBinary ;
-	.
-
-kb:hash-fbefa004-63d1-5f51-b4aa-544f4688e6e9
-	a
-		sosa:Result ,
-		uco-types:Hash
-		;
-	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "a1412779fe63c84c3ae582976d5f052d7bde5928"^^xsd:hexBinary ;
-	.
-
-kb:hash-ffbaee45-f413-558d-92ff-d6d51ecf0433
-	a uco-types:Hash ;
-	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
-	uco-types:hashValue "de6b07d9dd6a4a4c856e73a9ef0030e05641cf4e3a9c7062f38baf17a050a0949606a198e2bc3323b1ee9dcda5532a95b8f2697f7eb20ad1771cd112e915ee8e"^^xsd:hexBinary ;
-	.
-
 kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6
 	a
 		sosa:FeatureOfInterest ,
@@ -2152,9 +2124,9 @@ kb:observation-42f418fa-08d7-47e1-a009-cc1d2d43091a
 		;
 	sosa:hasFeatureOfInterest kb:file-736c63b5-5e15-4a48-b948-13757bae0aae ;
 	sosa:hasResult
-		kb:hash-0f7f93b0-52c9-57d0-862a-a3da6d2cd31c ,
-		kb:hash-6259f211-75b2-55ec-bd0d-1038bedc8636 ,
-		kb:hash-d2a3eb04-ccbf-597a-b118-7adf77b452a1
+		kb:Hash-0f7f93b0-52c9-57d0-862a-a3da6d2cd31c ,
+		kb:Hash-6259f211-75b2-55ec-bd0d-1038bedc8636 ,
+		kb:Hash-d2a3eb04-ccbf-597a-b118-7adf77b452a1
 		;
 	sosa:observedProperty kb:file-hash-quality-3c9e77da-3dc0-41e8-a537-428f8a873a9b ;
 	uco-action:object
@@ -2176,7 +2148,7 @@ kb:observation-46c720c8-5346-4262-800e-5e3780517a92
 		;
 	drafting:isAutomated "true"^^xsd:boolean ;
 	sosa:hasFeatureOfInterest kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
-	sosa:hasResult kb:hash-98ef3afe-d295-5e30-9313-8b10af5d3871 ;
+	sosa:hasResult kb:Hash-98ef3afe-d295-5e30-9313-8b10af5d3871 ;
 	sosa:observedProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
 	uco-action:instrument kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	uco-action:object
@@ -2197,7 +2169,7 @@ kb:observation-61f71e4d-fa2a-4e76-8c2b-bf2755aab72f
 		;
 	drafting:isAutomated "true"^^xsd:boolean ;
 	sosa:hasFeatureOfInterest kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ;
-	sosa:hasResult kb:hash-ee59ab94-5862-5e29-bca5-20a36ee48bf9 ;
+	sosa:hasResult kb:Hash-ee59ab94-5862-5e29-bca5-20a36ee48bf9 ;
 	sosa:observedProperty kb:file-hash-quality-524af4fd-813c-4f8a-aeae-f312f3a13b1d ;
 	uco-action:instrument kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	uco-action:object
@@ -2217,10 +2189,10 @@ kb:observation-66e7f5a6-b29d-4ca9-9e3f-6d2413daf070
 		;
 	sosa:hasFeatureOfInterest kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	sosa:hasResult
-		kb:hash-633e8066-4db8-555e-9bf0-bbbc490cc9e2 ,
-		kb:hash-a42794fd-bd4a-5a8c-bde5-24d77153feeb ,
-		kb:hash-fbabf211-8fc3-5096-a275-bbd4259aa603 ,
-		kb:hash-fbefa004-63d1-5f51-b4aa-544f4688e6e9
+		kb:Hash-633e8066-4db8-555e-9bf0-bbbc490cc9e2 ,
+		kb:Hash-a42794fd-bd4a-5a8c-bde5-24d77153feeb ,
+		kb:Hash-fbabf211-8fc3-5096-a275-bbd4259aa603 ,
+		kb:Hash-fbefa004-63d1-5f51-b4aa-544f4688e6e9
 		;
 	sosa:observedProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
 	uco-action:object
@@ -2241,9 +2213,9 @@ kb:observation-6c0553fe-84f9-4133-8be1-67d6e3c80d61
 		;
 	sosa:hasFeatureOfInterest kb:archive-file-75287bdf-6045-4b02-bbfb-9a7bb2fabfd8 ;
 	sosa:hasResult
-		kb:hash-10af6ae9-0a15-54be-a83e-21e40fbf009c ,
-		kb:hash-b49e5b37-6d56-5358-b783-3b0cd1c08f32 ,
-		kb:hash-ee59ab94-5862-5e29-bca5-20a36ee48bf9
+		kb:Hash-10af6ae9-0a15-54be-a83e-21e40fbf009c ,
+		kb:Hash-b49e5b37-6d56-5358-b783-3b0cd1c08f32 ,
+		kb:Hash-ee59ab94-5862-5e29-bca5-20a36ee48bf9
 		;
 	sosa:observedProperty kb:file-hash-quality-524af4fd-813c-4f8a-aeae-f312f3a13b1d ;
 	uco-action:object
@@ -2264,9 +2236,9 @@ kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e
 		;
 	sosa:hasFeatureOfInterest kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	sosa:hasResult
-		kb:hash-01a2ccb5-d773-5f0f-9f1e-355a8a6a4dab ,
-		kb:hash-797cc9e0-2a38-55f5-b76e-b8bad814b64e ,
-		kb:hash-90231dce-fc49-5f30-b397-78c09e74350b
+		kb:Hash-01a2ccb5-d773-5f0f-9f1e-355a8a6a4dab ,
+		kb:Hash-797cc9e0-2a38-55f5-b76e-b8bad814b64e ,
+		kb:Hash-90231dce-fc49-5f30-b397-78c09e74350b
 		;
 	sosa:observedProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
 	uco-action:object
@@ -2287,9 +2259,9 @@ kb:observation-b1ea91ee-5e9a-4b75-979e-e41a56171b66
 		;
 	sosa:hasFeatureOfInterest kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	sosa:hasResult
-		kb:hash-03762732-e6d2-5087-91dc-fd4a8f1bfae7 ,
-		kb:hash-98ef3afe-d295-5e30-9313-8b10af5d3871 ,
-		kb:hash-e4536c43-bea6-55e6-ae89-5c4216397633
+		kb:Hash-03762732-e6d2-5087-91dc-fd4a8f1bfae7 ,
+		kb:Hash-98ef3afe-d295-5e30-9313-8b10af5d3871 ,
+		kb:Hash-e4536c43-bea6-55e6-ae89-5c4216397633
 		;
 	sosa:observedProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
 	uco-action:object
@@ -2310,9 +2282,9 @@ kb:observation-e5c108e4-c0a5-4658-95ed-99171828fcf1
 		;
 	sosa:hasFeatureOfInterest kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ;
 	sosa:hasResult
-		kb:hash-01abf01d-8653-5b08-a09d-0256aaeacd6f ,
-		kb:hash-e415c67c-8d3d-5881-9728-660a9cda44d8 ,
-		kb:hash-ec44c3f3-b6c2-545a-b49d-7e841379de05
+		kb:Hash-01abf01d-8653-5b08-a09d-0256aaeacd6f ,
+		kb:Hash-e415c67c-8d3d-5881-9728-660a9cda44d8 ,
+		kb:Hash-ec44c3f3-b6c2-545a-b49d-7e841379de05
 		;
 	sosa:observedProperty kb:file-hash-quality-7dd02ccc-19b8-442a-ae4b-daf56f0f2f7b ;
 	uco-action:object
@@ -2334,7 +2306,7 @@ kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a
 		;
 	drafting:isAutomated "true"^^xsd:boolean ;
 	sosa:hasFeatureOfInterest kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ;
-	sosa:hasResult kb:hash-ec44c3f3-b6c2-545a-b49d-7e841379de05 ;
+	sosa:hasResult kb:Hash-ec44c3f3-b6c2-545a-b49d-7e841379de05 ;
 	sosa:observedProperty kb:file-hash-quality-7dd02ccc-19b8-442a-ae4b-daf56f0f2f7b ;
 	uco-action:instrument kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
 	uco-action:object
@@ -2829,22 +2801,5 @@ kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879
 		;
 	uco-core:description "Cellebrite UFED 4PC" ;
 	uco-core:hasFacet kb:device-facet-7142ef6d-cf42-4b70-9798-2ea96414169d ;
-	.
-
-kb:url-facet-e0b73186-52e8-49d3-a079-3b48066bc3b9
-	a uco-observable:URLFacet ;
-	uco-observable:fullValue "https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz" ;
-	.
-
-<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
-	a
-		uco-observable:File ,
-		uco-observable:URL
-		;
-	uco-core:hasFacet
-		kb:content-data-facet-5aa2c06d-a95d-4713-8e16-5463bad44705 ,
-		kb:file-facet-2703a4c4-6157-4d95-887b-03055f664cb6 ,
-		kb:url-facet-e0b73186-52e8-49d3-a079-3b48066bc3b9
-		;
 	.
 

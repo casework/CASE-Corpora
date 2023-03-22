@@ -15,7 +15,8 @@ SHELL := /bin/bash
 
 all: \
   .venv-pre-commit/var/.pre-commit-built.log \
-  all-shapes
+  all-shapes \
+  all-var
 	$(MAKE) \
 	  --directory catalog
 	$(MAKE) \
@@ -27,6 +28,7 @@ all: \
   all-shapes \
   all-taxonomy \
   all-tests \
+  all-var \
   check-catalog \
   check-dependencies \
   check-mypy \
@@ -153,6 +155,45 @@ all-tests: \
 	$(MAKE) \
 	  --directory tests
 
+# This descent recipe balances resource local availability, resource
+# remote availability, and Git noise from resource regeneration.
+#
+# If the remote resource (Digital Corpora's index.tsv) becomes
+# unavailable or alters its format, GitHub CI will continue to work for
+# CASE-Corpora on runs unrelated to updating Digital Corpora references.
+# If a developer runs a local build, the TSV resoure will be refreshed
+# and can be reviewed and committed independently.
+# Record churn from Digital Corpora's scan updates (particularly record
+# mtimes) will not cause significant Git noise for CASE-Corpora, because
+# the 'var/' folder filters the Git-tracked records to those listed as
+# used under 'catalog/datasets/digitalcorpora-*'.
+#
+# An extra reset-retry step is added on the descending Make call to
+# handle the case where new Digital Corpora references are committed
+# under 'catalog/', but not committed to the Git-tracked TSV under
+# 'var/'.  Without this retry step, CI fails for a reason not relevant
+# to the maintainer's local development environment.  This case does
+# trigger a CI download from Digital Corpora, but the download will only
+# apply until the TSV update is committed.
+all-var:
+	test "x$${GITHUB_ACTIONS}" != "xyes" \
+	  || cp \
+	    -n \
+	    -v \
+	    var/digital_corpora_index.tsv \
+	    var/cached-digital_corpora_index.tsv \
+	    || test -r \
+	      var/cached-digital_corpora_index.tsv
+	$(MAKE) \
+	  --directory var \
+	  || ( \
+	    $(MAKE) \
+	      --directory var \
+	      clean \
+	      && $(MAKE) \
+	        --directory var \
+	  )
+
 check: \
   .venv-pre-commit/var/.pre-commit-built.log \
   check-mypy \
@@ -160,6 +201,7 @@ check: \
   check-tests
 
 check-catalog: \
+  all-var \
   check-shapes \
   check-taxonomy
 	$(MAKE) \
@@ -231,6 +273,9 @@ clean:
 	  clean
 	@$(MAKE) \
 	  --directory dependencies \
+	  clean
+	@$(MAKE) \
+	  --directory var \
 	  clean
 	@rm -f \
 	  .*.done.log

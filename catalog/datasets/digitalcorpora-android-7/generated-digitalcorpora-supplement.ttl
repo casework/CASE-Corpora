@@ -1,0 +1,56 @@
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix uco-types: <https://ontology.unifiedcyberontology.org/uco/types/> .
+@prefix uco-vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:ContentDataFacet-765376b1-a9a5-5b25-a0d9-cb462149ef2c
+	a uco-observable:ContentDataFacet ;
+	uco-observable:dataPayloadReferenceURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
+	uco-observable:hash
+		kb:Hash-06903043-3b24-57e8-997d-6e5acd63ad8f ,
+		kb:Hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
+		;
+	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
+	.
+
+kb:FileFacet-12f96fa7-efd9-5d3a-9fa7-d12e3147566e
+	a uco-observable:FileFacet ;
+	uco-observable:fileName "android_7.tar.gz" ;
+	uco-observable:modifiedTime "2020-11-22T03:14:59+00:00"^^xsd:dateTime ;
+	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
+	.
+
+kb:Hash-06903043-3b24-57e8-997d-6e5acd63ad8f
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "563d71762b48f14ffd2663fcf85870f21c939441de614a1175a54b41c6373369"^^xsd:hexBinary ;
+	.
+
+kb:Hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashValue "50a015b0c65c61feb81e77e0d2adcbf84d2f8352b2e1c46f27fb5f4816546751"^^xsd:hexBinary ;
+	.
+
+kb:URLFacet-ae160fad-6ae9-548b-9fcd-81e53dda8964
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz" ;
+	.
+
+<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
+	a case-corpora:DownloadableFile ;
+	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	uco-core:hasFacet
+		kb:ContentDataFacet-765376b1-a9a5-5b25-a0d9-cb462149ef2c ,
+		kb:FileFacet-12f96fa7-efd9-5d3a-9fa7-d12e3147566e ,
+		kb:URLFacet-ae160fad-6ae9-548b-9fcd-81e53dda8964
+		;
+	uco-core:modifiedTime "2022-09-27T16:58:05+00:00"^^xsd:dateTime ;
+	.
+
