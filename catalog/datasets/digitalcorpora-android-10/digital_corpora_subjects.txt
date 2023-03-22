@@ -1,0 +1,2 @@
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.txt
+https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip
