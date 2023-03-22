@@ -11,7 +11,12 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
+extra_supplement_graphs := \
+  generated-digitalcorpora-supplement.ttl
+
 include ../../../src/dataset.mk
+
+include ../../../src/digital_corpora_supplement.mk
 
 # Add additional 'all' targets.
 all: \

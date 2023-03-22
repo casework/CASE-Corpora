@@ -11,6 +11,15 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
+# Usage context:
+# This is expected to run in directories following this pattern:
+# $(top_srcdir)/catalog/datasets/$(dataset)/
+#
+# This file is assumed to be used with a Make 'include' directive.
+#
+# The Make variable extra_supplement_graphs, if to be used, should be
+# defined before the 'include' directive.
+
 SHELL := /bin/bash
 
 PYTHON3 ?= python3
@@ -54,6 +63,7 @@ base_rdfs_expansion.ttl: \
   $(top_srcdir)/src/rdfs_expansion_ttl.py \
   dataset.ttl \
   distribution.ttl \
+  $(extra_supplement_graphs) \
   $(supplemental_graph)
 	source $(top_srcdir)/venv/bin/activate \
 	  && python3 $(top_srcdir)/src/rdfs_expansion_ttl.py \
@@ -61,6 +71,7 @@ base_rdfs_expansion.ttl: \
 	    $(top_srcdir)/ontology/case-corpora.ttl \
 	    dataset.ttl \
 	    distribution.ttl \
+	    $(extra_supplement_graphs) \
 	    $(supplemental_graph)
 	mv _$@ $@
 
