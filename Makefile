@@ -223,6 +223,7 @@ check-mypy: \
 	    tests
 
 check-ontology: \
+  all-ontology \
   check-dependencies
 	$(MAKE) \
 	  --directory ontology \
