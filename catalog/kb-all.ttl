@@ -42,11 +42,45 @@ kb:ContentDataFacet-765376b1-a9a5-5b25-a0d9-cb462149ef2c
 	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
 	.
 
+kb:ContentDataFacet-e4062d00-0d77-5f6b-8822-07b519008dea
+	a uco-observable:ContentDataFacet ;
+	uco-observable:dataPayloadReferenceURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.txt> ;
+	uco-observable:hash
+		kb:Hash-7110c44e-0935-5655-9069-89d96b8069ae ,
+		kb:Hash-e23028d6-1cf6-520e-940c-0d42739dce7e
+		;
+	uco-observable:sizeInBytes "1900"^^xsd:integer ;
+	.
+
+kb:ContentDataFacet-fada9f8b-4c79-5d24-ae23-c3dc1c032b8e
+	a uco-observable:ContentDataFacet ;
+	uco-observable:dataPayloadReferenceURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip> ;
+	uco-observable:hash
+		kb:Hash-6d414599-445f-5c94-83d7-e7f23b6e101c ,
+		kb:Hash-c2b43e9d-c72f-5155-afbd-0220e23116a3
+		;
+	uco-observable:sizeInBytes "10476724716"^^xsd:integer ;
+	.
+
 kb:FileFacet-12f96fa7-efd9-5d3a-9fa7-d12e3147566e
 	a uco-observable:FileFacet ;
 	uco-observable:fileName "android_7.tar.gz" ;
 	uco-observable:modifiedTime "2020-11-22T03:14:59+00:00"^^xsd:dateTime ;
 	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
+	.
+
+kb:FileFacet-5bcdf44c-15d5-5a24-9e5b-56d5246f22c3
+	a uco-observable:FileFacet ;
+	uco-observable:fileName "Android_10.zip" ;
+	uco-observable:modifiedTime "2020-11-22T03:10:20+00:00"^^xsd:dateTime ;
+	uco-observable:sizeInBytes "10476724716"^^xsd:integer ;
+	.
+
+kb:FileFacet-9a4b0514-3466-5cc5-9018-d567fee85caa
+	a uco-observable:FileFacet ;
+	uco-observable:fileName "Android_10.txt" ;
+	uco-observable:modifiedTime "2020-11-22T03:10:19+00:00"^^xsd:dateTime ;
+	uco-observable:sizeInBytes "1900"^^xsd:integer ;
 	.
 
 kb:Hash-01a2ccb5-d773-5f0f-9f1e-355a8a6a4dab
@@ -232,6 +266,18 @@ kb:Hash-6423cd9a-0463-5400-8750-91e9d3e19b4c
 	uco-types:hashValue "c57e8e805e7c0d7c1fdae08d278cd61f31ee262c"^^xsd:hexBinary ;
 	.
 
+kb:Hash-6d414599-445f-5c94-83d7-e7f23b6e101c
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashValue "9a39319c1114a50bd46dfdd2ae7b5abe73db418d765c1ef0c29cb64e5d414558"^^xsd:hexBinary ;
+	.
+
+kb:Hash-7110c44e-0935-5655-9069-89d96b8069ae
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "613593d27739091f704f345191a13428b594f4c1bfc844f7e68aa65b6aabede3"^^xsd:hexBinary ;
+	.
+
 kb:Hash-71636327-4ae5-5d3b-88fe-8e5af3ed6f4c
 	a uco-types:Hash ;
 	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
@@ -367,6 +413,12 @@ kb:Hash-bf470f1b-c322-57d3-980a-090a94243496
 	uco-types:hashValue "847755fb7bce78e3ce848df71f69a973"^^xsd:hexBinary ;
 	.
 
+kb:Hash-c2b43e9d-c72f-5155-afbd-0220e23116a3
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "fc123698689dfeed275cfe86b4a1ea8ba9dca0256fe59388b8a59590a3eff5bb"^^xsd:hexBinary ;
+	.
+
 kb:Hash-d2a3eb04-ccbf-597a-b118-7adf77b452a1
 	a
 		sosa:Result ,
@@ -404,6 +456,12 @@ kb:Hash-dc634510-42e3-5a0d-8619-3d29955d9830
 	a uco-types:Hash ;
 	uco-types:hashMethod "SHA512"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "ad6a8bc9550d00b7b21417c746c7dfda6cbc6a14c29f12729867ce411fa02f9441ad547dc9b44aacea1a3a403b518aa26363be66b9e084f6341974180252d753"^^xsd:hexBinary ;
+	.
+
+kb:Hash-e23028d6-1cf6-520e-940c-0d42739dce7e
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashValue "727f67f34c30e476612b7ae185221591e17c2c3f84aa244a701f414f561fbf83"^^xsd:hexBinary ;
 	.
 
 kb:Hash-e3bfcb1b-cf5d-5a5a-885d-491142d89673
@@ -484,9 +542,19 @@ kb:Hash-ffbaee45-f413-558d-92ff-d6d51ecf0433
 	uco-types:hashValue "de6b07d9dd6a4a4c856e73a9ef0030e05641cf4e3a9c7062f38baf17a050a0949606a198e2bc3323b1ee9dcda5532a95b8f2697f7eb20ad1771cd112e915ee8e"^^xsd:hexBinary ;
 	.
 
+kb:URLFacet-4497eafe-66f0-56ea-9f82-29e9e631969e
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.txt" ;
+	.
+
 kb:URLFacet-ae160fad-6ae9-548b-9fcd-81e53dda8964
 	a uco-observable:URLFacet ;
 	uco-observable:fullValue "https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz" ;
+	.
+
+kb:URLFacet-c53afedc-eacd-5f8d-bbef-9637115f7a8f
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip" ;
 	.
 
 kb:action-541265d6-2a57-476e-bff0-45f512f22bd5
@@ -2248,6 +2316,7 @@ kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
 	skos:editorialNote "The dcterms:identifier property in this data element is NOT yet stable and may change in the future."@en ;
 	dcat:contactPoint case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
 	dcat:dataset
+		kb:dataset-0920f313-c81b-498c-bf08-722e02c72117 ,
 		kb:dataset-484508e3-9572-485b-864e-f1de8a5c460b ,
 		kb:dataset-61bf11a9-e564-48e4-a4f3-81a7d246a6ed ,
 		kb:dataset-9918b989-913c-42a8-ba9b-14bc73e318ac ,
@@ -2442,6 +2511,28 @@ kb:content-data-facet-ecd90088-8a21-4727-b9e1-b0080d4672b6
 	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
 	.
 
+kb:dataset-0920f313-c81b-498c-bf08-722e02c72117
+	a case-corpora:Dataset ;
+	case-corpora:hasDatasetDirectory "digitalcorpora-android-10" ;
+	case-corpora:hasDistribution
+		kb:distribution-403a089d-3866-49d4-855f-fe068c83e2c4 ,
+		kb:distribution-87810a52-6a16-4a91-836e-5804a5523d88
+		;
+	dcterms:description '"A new set of Android 10 images and files have been contributed to the collection by Joshua Hickman."' ;
+	dcterms:identifier "http://example.org/kb/dataset-0920f313-c81b-498c-bf08-722e02c72117" ;
+	dcterms:modified "2020-05-11"^^xsd:date ;
+	dcterms:publisher kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	dcterms:title "Android 10" ;
+	skos:editorialNote "The dct:identifier property in this data element is NOT yet stable and may change in the future."@en ;
+	dcat:contactPoint case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+	dcat:keyword
+		"android" ,
+		"digital forensics"
+		;
+	dcat:landingPage <https://digitalcorpora.org/corpora/cell-phones/android-10/> ;
+	pod:accessLevel "public" ;
+	.
+
 kb:dataset-484508e3-9572-485b-864e-f1de8a5c460b
 	a case-corpora:Dataset ;
 	case-corpora:hasDatasetDirectory "crossover" ;
@@ -2624,6 +2715,12 @@ kb:distribution-3ad744db-b926-40c1-8edf-2d5f46deb806
 	prov:wasDerivedFrom kb:device-8fe70491-26c5-4226-a735-ccda10e1a73a ;
 	.
 
+kb:distribution-403a089d-3866-49d4-855f-fe068c83e2c4
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.txt> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
 kb:distribution-4bf62d17-9188-498a-933b-37fa4ba0ac82
 	a case-corpora:Distribution ;
 	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.zip> ;
@@ -2634,6 +2731,12 @@ kb:distribution-5dafb339-fb41-4e8e-b5fc-1c9bc165363a
 	a case-corpora:Distribution ;
 	case-corpora:hasDownloadURL <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.md5> ;
 	dcat:mediaType <https://www.iana.org/assignments/media-types/text/plain> ;
+	.
+
+kb:distribution-87810a52-6a16-4a91-836e-5804a5523d88
+	a case-corpora:Distribution ;
+	case-corpora:hasDownloadURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip> ;
+	dcat:mediaType <https://www.iana.org/assignments/media-types/application/zip> ;
 	.
 
 kb:distribution-88c14fff-8304-4409-bfd5-db8217461e9b
@@ -8292,12 +8395,38 @@ wd:Q95
 	a case-corpora:WebPage ;
 	.
 
+<https://digitalcorpora.org/corpora/cell-phones/android-10/>
+	a case-corpora:WebPage ;
+	.
+
 <https://digitalcorpora.org/corpora/cell-phones/android-7/>
 	a case-corpora:WebPage ;
 	.
 
 <https://digitalcorpora.org/corpora/disk-images/real-data-corpus>
 	a case-corpora:WebPage ;
+	.
+
+<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.txt>
+	a case-corpora:DownloadableFile ;
+	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	uco-core:hasFacet
+		kb:ContentDataFacet-e4062d00-0d77-5f6b-8822-07b519008dea ,
+		kb:FileFacet-9a4b0514-3466-5cc5-9018-d567fee85caa ,
+		kb:URLFacet-4497eafe-66f0-56ea-9f82-29e9e631969e
+		;
+	uco-core:modifiedTime "2022-09-27T16:58:02+00:00"^^xsd:dateTime ;
+	.
+
+<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip>
+	a case-corpora:DownloadableFile ;
+	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	uco-core:hasFacet
+		kb:ContentDataFacet-fada9f8b-4c79-5d24-ae23-c3dc1c032b8e ,
+		kb:FileFacet-5bcdf44c-15d5-5a24-9e5b-56d5246f22c3 ,
+		kb:URLFacet-c53afedc-eacd-5f8d-bbef-9637115f7a8f
+		;
+	uco-core:modifiedTime "2022-09-27T16:58:02+00:00"^^xsd:dateTime ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>

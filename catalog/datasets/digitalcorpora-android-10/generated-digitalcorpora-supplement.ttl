@@ -1,0 +1,101 @@
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix uco-types: <https://ontology.unifiedcyberontology.org/uco/types/> .
+@prefix uco-vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:ContentDataFacet-e4062d00-0d77-5f6b-8822-07b519008dea
+	a uco-observable:ContentDataFacet ;
+	uco-observable:dataPayloadReferenceURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.txt> ;
+	uco-observable:hash
+		kb:Hash-7110c44e-0935-5655-9069-89d96b8069ae ,
+		kb:Hash-e23028d6-1cf6-520e-940c-0d42739dce7e
+		;
+	uco-observable:sizeInBytes "1900"^^xsd:integer ;
+	.
+
+kb:ContentDataFacet-fada9f8b-4c79-5d24-ae23-c3dc1c032b8e
+	a uco-observable:ContentDataFacet ;
+	uco-observable:dataPayloadReferenceURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip> ;
+	uco-observable:hash
+		kb:Hash-6d414599-445f-5c94-83d7-e7f23b6e101c ,
+		kb:Hash-c2b43e9d-c72f-5155-afbd-0220e23116a3
+		;
+	uco-observable:sizeInBytes "10476724716"^^xsd:integer ;
+	.
+
+kb:FileFacet-5bcdf44c-15d5-5a24-9e5b-56d5246f22c3
+	a uco-observable:FileFacet ;
+	uco-observable:fileName "Android_10.zip" ;
+	uco-observable:modifiedTime "2020-11-22T03:10:20+00:00"^^xsd:dateTime ;
+	uco-observable:sizeInBytes "10476724716"^^xsd:integer ;
+	.
+
+kb:FileFacet-9a4b0514-3466-5cc5-9018-d567fee85caa
+	a uco-observable:FileFacet ;
+	uco-observable:fileName "Android_10.txt" ;
+	uco-observable:modifiedTime "2020-11-22T03:10:19+00:00"^^xsd:dateTime ;
+	uco-observable:sizeInBytes "1900"^^xsd:integer ;
+	.
+
+kb:Hash-6d414599-445f-5c94-83d7-e7f23b6e101c
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashValue "9a39319c1114a50bd46dfdd2ae7b5abe73db418d765c1ef0c29cb64e5d414558"^^xsd:hexBinary ;
+	.
+
+kb:Hash-7110c44e-0935-5655-9069-89d96b8069ae
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "613593d27739091f704f345191a13428b594f4c1bfc844f7e68aa65b6aabede3"^^xsd:hexBinary ;
+	.
+
+kb:Hash-c2b43e9d-c72f-5155-afbd-0220e23116a3
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashValue "fc123698689dfeed275cfe86b4a1ea8ba9dca0256fe59388b8a59590a3eff5bb"^^xsd:hexBinary ;
+	.
+
+kb:Hash-e23028d6-1cf6-520e-940c-0d42739dce7e
+	a uco-types:Hash ;
+	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashValue "727f67f34c30e476612b7ae185221591e17c2c3f84aa244a701f414f561fbf83"^^xsd:hexBinary ;
+	.
+
+kb:URLFacet-4497eafe-66f0-56ea-9f82-29e9e631969e
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.txt" ;
+	.
+
+kb:URLFacet-c53afedc-eacd-5f8d-bbef-9637115f7a8f
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip" ;
+	.
+
+<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.txt>
+	a case-corpora:DownloadableFile ;
+	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	uco-core:hasFacet
+		kb:ContentDataFacet-e4062d00-0d77-5f6b-8822-07b519008dea ,
+		kb:FileFacet-9a4b0514-3466-5cc5-9018-d567fee85caa ,
+		kb:URLFacet-4497eafe-66f0-56ea-9f82-29e9e631969e
+		;
+	uco-core:modifiedTime "2022-09-27T16:58:02+00:00"^^xsd:dateTime ;
+	.
+
+<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip>
+	a case-corpora:DownloadableFile ;
+	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	uco-core:hasFacet
+		kb:ContentDataFacet-fada9f8b-4c79-5d24-ae23-c3dc1c032b8e ,
+		kb:FileFacet-5bcdf44c-15d5-5a24-9e5b-56d5246f22c3 ,
+		kb:URLFacet-c53afedc-eacd-5f8d-bbef-9637115f7a8f
+		;
+	uco-core:modifiedTime "2022-09-27T16:58:02+00:00"^^xsd:dateTime ;
+	.
+
