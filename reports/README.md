@@ -11,6 +11,8 @@ The following device MIME types were found in indexed datasets.
 |--------------------------|
 | application/gzip         |
 | application/octet-stream |
+| application/pdf          |
+| application/vnd.ms-excel |
 | application/zip          |
 | text/plain               |
 | text/turtle              |
