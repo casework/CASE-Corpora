@@ -32,6 +32,16 @@
 	owl:imports <http://example.org/shapes/case-corpora-local> ;
 	.
 
+kb:ArchiveFileFacet-020a38b1-f370-4117-86b8-3aed63114f91
+	a uco-observable:ArchiveFileFacet ;
+	uco-observable:archiveType "ZIP" ;
+	.
+
+kb:ArchiveFileFacet-54f6d4e1-58de-4888-888b-0992d881a20b
+	a uco-observable:ArchiveFileFacet ;
+	uco-observable:archiveType "ZIP" ;
+	.
+
 kb:ContentDataFacet-221706d8-55a6-58a4-b6dd-fb8c443e7283
 	a uco-observable:ContentDataFacet ;
 	uco-observable:dataPayloadReferenceURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z07> ;
@@ -74,10 +84,15 @@ kb:ContentDataFacet-5a14c022-985c-5a65-8667-39c8482929f5
 
 kb:ContentDataFacet-61c34042-2f3e-51ab-8e03-149b56a9e31b
 	a uco-observable:ContentDataFacet ;
+	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/OC-116> ;
 	uco-observable:dataPayloadReferenceURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/SMS-Messages.xlsx> ;
 	uco-observable:hash
 		kb:Hash-24afde4b-cb80-5e5f-83b6-ff9d27bd77e0 ,
 		kb:Hash-76fa3097-f92d-53b1-8639-b0074783f17e
+		;
+	uco-observable:mimeType
+		"application/vnd.ms-excel" ,
+		"application/zip"
 		;
 	uco-observable:sizeInBytes "16016"^^xsd:integer ;
 	.
@@ -89,6 +104,7 @@ kb:ContentDataFacet-647e0c0d-ea3c-5198-b35a-03b8b6b55ce9
 		kb:Hash-3a6f46c4-e8e6-529d-b724-853bc9a51365 ,
 		kb:Hash-a03ea9a4-7c5c-51f5-9236-68adf98f7a63
 		;
+	uco-observable:mimeType "text/plain" ;
 	uco-observable:sizeInBytes "211768"^^xsd:integer ;
 	.
 
@@ -109,6 +125,7 @@ kb:ContentDataFacet-7b1aad72-df7f-561b-a807-2e2f1cd896ef
 		kb:Hash-0b978804-b5a8-52e8-93dc-7129f139d1e5 ,
 		kb:Hash-5ceeb4eb-8f34-58ca-baa5-0f9ffcebee54
 		;
+	uco-observable:mimeType "application/pdf" ;
 	uco-observable:sizeInBytes "2479876"^^xsd:integer ;
 	.
 
@@ -149,6 +166,7 @@ kb:ContentDataFacet-cc26df85-d96b-5c0c-9aa3-10e3f9d45751
 		kb:Hash-ac944c47-84b2-5b8a-b838-351c46917744 ,
 		kb:Hash-f6136f31-3fe8-5d49-b756-cce50db0d7c3
 		;
+	uco-observable:mimeType "application/zip" ;
 	uco-observable:sizeInBytes "5247820897"^^xsd:integer ;
 	.
 
@@ -169,6 +187,7 @@ kb:ContentDataFacet-e4062d00-0d77-5f6b-8822-07b519008dea
 		kb:Hash-7110c44e-0935-5655-9069-89d96b8069ae ,
 		kb:Hash-e23028d6-1cf6-520e-940c-0d42739dce7e
 		;
+	uco-observable:mimeType "text/plain" ;
 	uco-observable:sizeInBytes "1900"^^xsd:integer ;
 	.
 
@@ -189,6 +208,7 @@ kb:ContentDataFacet-fada9f8b-4c79-5d24-ae23-c3dc1c032b8e
 		kb:Hash-6d414599-445f-5c94-83d7-e7f23b6e101c ,
 		kb:Hash-c2b43e9d-c72f-5155-afbd-0220e23116a3
 		;
+	uco-observable:mimeType "application/zip" ;
 	uco-observable:sizeInBytes "10476724716"^^xsd:integer ;
 	.
 
@@ -8850,7 +8870,10 @@ wd:Q95
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android10-ImageCreation.pdf>
-	a case-corpora:DownloadableFile ;
+	a
+		case-corpora:DownloadableFile ,
+		uco-observable:PDFFile
+		;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
 	uco-core:hasFacet
 		kb:ContentDataFacet-7b1aad72-df7f-561b-a807-2e2f1cd896ef ,
@@ -8872,9 +8895,13 @@ wd:Q95
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip>
-	a case-corpora:DownloadableFile ;
+	a
+		case-corpora:DownloadableFile ,
+		uco-observable:ArchiveFile
+		;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
 	uco-core:hasFacet
+		kb:ArchiveFileFacet-020a38b1-f370-4117-86b8-3aed63114f91 ,
 		kb:ContentDataFacet-fada9f8b-4c79-5d24-ae23-c3dc1c032b8e ,
 		kb:FileFacet-5bcdf44c-15d5-5a24-9e5b-56d5246f22c3 ,
 		kb:URLFacet-c53afedc-eacd-5f8d-bbef-9637115f7a8f
@@ -9004,9 +9031,13 @@ wd:Q95
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/SMS-Messages.xlsx>
-	a case-corpora:DownloadableFile ;
+	a
+		case-corpora:DownloadableFile ,
+		uco-observable:ArchiveFile
+		;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
 	uco-core:hasFacet
+		kb:ArchiveFileFacet-54f6d4e1-58de-4888-888b-0992d881a20b ,
 		kb:ContentDataFacet-61c34042-2f3e-51ab-8e03-149b56a9e31b ,
 		kb:FileFacet-608594dc-e1d4-58ed-b740-998414057226 ,
 		kb:URLFacet-4e5f693f-0817-5aa2-8529-205277541238
