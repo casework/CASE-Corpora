@@ -1,0 +1,60 @@
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:ArchiveFileFacet-020a38b1-f370-4117-86b8-3aed63114f91
+	a uco-observable:ArchiveFileFacet ;
+	uco-observable:archiveType "ZIP" ;
+	.
+
+kb:ArchiveFileFacet-54f6d4e1-58de-4888-888b-0992d881a20b
+	a uco-observable:ArchiveFileFacet ;
+	uco-observable:archiveType "ZIP" ;
+	.
+
+kb:ContentDataFacet-61c34042-2f3e-51ab-8e03-149b56a9e31b
+	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/OC-116> ;
+	uco-observable:mimeType
+		"application/vnd.ms-excel" ,
+		"application/zip"
+		;
+	.
+
+kb:ContentDataFacet-647e0c0d-ea3c-5198-b35a-03b8b6b55ce9
+	uco-observable:mimeType "text/plain" ;
+	.
+
+kb:ContentDataFacet-7b1aad72-df7f-561b-a807-2e2f1cd896ef
+	uco-observable:mimeType "application/pdf" ;
+	.
+
+kb:ContentDataFacet-cc26df85-d96b-5c0c-9aa3-10e3f9d45751
+	uco-observable:mimeType "application/zip" ;
+	.
+
+kb:ContentDataFacet-e4062d00-0d77-5f6b-8822-07b519008dea
+	uco-observable:mimeType "text/plain" ;
+	.
+
+kb:ContentDataFacet-fada9f8b-4c79-5d24-ae23-c3dc1c032b8e
+	uco-observable:mimeType "application/zip" ;
+	.
+
+<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android10-ImageCreation.pdf>
+	a uco-observable:PDFFile ;
+	.
+
+<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip>
+	a uco-observable:ArchiveFile ;
+	uco-core:hasFacet kb:ArchiveFileFacet-020a38b1-f370-4117-86b8-3aed63114f91 ;
+	.
+
+<https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/SMS-Messages.xlsx>
+	a uco-observable:ArchiveFile ;
+	uco-core:hasFacet kb:ArchiveFileFacet-54f6d4e1-58de-4888-888b-0992d881a20b ;
+	.
+
