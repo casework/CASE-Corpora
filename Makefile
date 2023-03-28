@@ -176,7 +176,7 @@ all-tests: \
 # trigger a CI download from Digital Corpora, but the download will only
 # apply until the TSV update is committed.
 all-var:
-	test "x$${GITHUB_ACTIONS}" != "xyes" \
+	test "x$${GITHUB_ACTIONS}" != "xtrue" \
 	  || cp \
 	    -n \
 	    -v \
