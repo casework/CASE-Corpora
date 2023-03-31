@@ -35,6 +35,8 @@ all: \
   check-ontology \
   check-reports \
   check-shapes \
+  check-supply-chain \
+  check-supply-chain-pre-commit \
   check-taxonomy \
   check-tests
 
@@ -241,6 +243,17 @@ check-shapes: \
 	$(MAKE) \
 	  --directory shapes \
 	  check
+
+check-supply-chain: \
+  check-supply-chain-pre-commit
+
+check-supply-chain-pre-commit: \
+  .venv-pre-commit/var/.pre-commit-built.log
+	source .venv-pre-commit/bin/activate \
+	  && pre-commit autoupdate
+	git diff \
+	  --exit-code \
+	  .pre-commit-config.yaml
 
 check-taxonomy: \
   all-taxonomy \
