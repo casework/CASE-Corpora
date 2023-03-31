@@ -15,15 +15,14 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd .. ; pwd)
 
-# TODO - After release of CASE 1.2.0, have this reference a different submodule.
-case_srcdir := CASE-unstable
+case_srcdir := CASE-develop
 
 uco_srcdir := $(case_srcdir)/dependencies/UCO
 
 case_develop_ttls := \
   $(wildcard CASE-develop/ontology/*/*.ttl) \
-  $(wildcard UCO-develop/ontology/*/*.ttl) \
-  $(wildcard UCO-develop/ontology/uco/*/*.ttl)
+  $(wildcard CASE-develop/dependencies/UCO/ontology/*/*.ttl) \
+  $(wildcard CASE-develop/dependencies/UCO/ontology/uco/*/*.ttl)
 
 case_unstable_ttls := \
   $(wildcard CASE-unstable/ontology/*/*.ttl) \

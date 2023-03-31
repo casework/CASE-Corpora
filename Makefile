@@ -52,6 +52,9 @@ all: \
 	  || git submodule update \
 	    --init \
 	    dependencies/CASE-develop
+	$(MAKE) \
+	  --directory dependencies/CASE-develop \
+	  .git_submodule_init.done.log
 	# CASE-unstable
 	test -r dependencies/CASE-unstable/README.md \
 	  || git submodule update \
@@ -60,11 +63,6 @@ all: \
 	$(MAKE) \
 	  --directory dependencies/CASE-unstable \
 	  .git_submodule_init.done.log
-	# UCO-develop
-	test -r dependencies/UCO-develop/README.md \
-	  || git submodule update \
-	    --init \
-	    dependencies/UCO-develop
 	# cito
 	test -r dependencies/cito/README.md \
 	  || git submodule update \
