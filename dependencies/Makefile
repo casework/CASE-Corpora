@@ -15,7 +15,7 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd .. ; pwd)
 
-case_srcdir := CASE-develop
+case_srcdir := CASE
 
 uco_srcdir := $(case_srcdir)/dependencies/UCO
 

@@ -15,8 +15,7 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd .. ; pwd)
 
-# TODO - After release of CASE 1.2.0, have this reference a different submodule.
-case_srcdir := $(top_srcdir)/dependencies/CASE-unstable
+case_srcdir := $(top_srcdir)/dependencies/CASE
 
 uco_srcdir := $(case_srcdir)/dependencies/UCO
 
