@@ -3,7 +3,7 @@
 # imports: http://www.w3.org/2006/vcard/ns
 # imports: http://www.w3.org/ns/dcat
 # imports: http://xmlns.com/foaf/0.1/
-# imports: https://ontology.caseontology.org/case/case/1.1.0
+# imports: https://ontology.caseontology.org/case/case/1.2.0
 # imports: https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/prov-o.ttl
 # imports: https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl
 
@@ -38,7 +38,7 @@
 		<http://www.w3.org/2006/vcard/ns> ,
 		<http://www.w3.org/ns/dcat> ,
 		<http://xmlns.com/foaf/0.1/> ,
-		<https://ontology.caseontology.org/case/case/1.1.0> ,
+		<https://ontology.caseontology.org/case/case/1.2.0> ,
 		<https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/prov-o.ttl> ,
 		<https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl>
 		;

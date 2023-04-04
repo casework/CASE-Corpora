@@ -86,7 +86,7 @@ all: \
 .venv.done.log: \
   dependencies/CASE/dependencies/UCO/dependencies/CASE-Utility-SHACL-Inheritance-Reviewer/case_shacl_inheritance_reviewer/__init__.py \
   dependencies/CASE/dependencies/UCO/dependencies/CASE-Utility-SHACL-Inheritance-Reviewer/setup.cfg \
-  dependencies/CASE/dependencies/UCO/tests/requirements.txt \
+  dependencies/CASE/dependencies/UCO/requirements.txt \
   requirements.txt
 	python3 -m venv \
 	  venv
@@ -104,7 +104,7 @@ all: \
 	    dependencies/CASE/dependencies/UCO/dependencies/CASE-Utility-SHACL-Inheritance-Reviewer
 	source venv/bin/activate \
 	  && pip install \
-	    --requirement dependencies/CASE/dependencies/UCO/tests/requirements.txt
+	    --requirement dependencies/CASE/dependencies/UCO/requirements.txt
 	touch $@
 
 # This virtual environment is meant to be built once and then persist, even through 'make clean'.
@@ -302,7 +302,7 @@ dependencies/CASE/dependencies/UCO/dependencies/CASE-Utility-SHACL-Inheritance-R
 	test -r $@
 	touch $@
 
-dependencies/CASE/dependencies/UCO/tests/requirements.txt: \
+dependencies/CASE/dependencies/UCO/requirements.txt: \
   .git_submodule_init.done.log
 	test -r $@
 	touch $@
