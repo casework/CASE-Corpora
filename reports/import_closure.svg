@@ -313,15 +313,15 @@
 <polygon fill="black" stroke="black" points="5285.49,-296.49 5295.32,-292.54 5285.17,-289.5 5285.49,-296.49"/>
 <text text-anchor="middle" x="3959.87" y="-318.8" font-family="Times,serif" font-size="14.00">imports</text>
 </g>
-<!-- https___ontology_caseontology_org_case_case_1_1_0 -->
+<!-- https___ontology_caseontology_org_case_case_1_2_0 -->
 <g id="node42" class="node">
-<title>https___ontology_caseontology_org_case_case_1_1_0</title>
+<title>https___ontology_caseontology_org_case_case_1_2_0</title>
 <ellipse fill="none" stroke="black" cx="340.37" cy="-279" rx="203.36" ry="18"/>
-<text text-anchor="middle" x="340.37" y="-275.3" font-family="Times,serif" font-size="14.00">IRI &#45; https://ontology.caseontology.org/case/case/1.1.0</text>
+<text text-anchor="middle" x="340.37" y="-275.3" font-family="Times,serif" font-size="14.00">IRI &#45; https://ontology.caseontology.org/case/case/1.2.0</text>
 </g>
-<!-- http___example_org_ontology_case_corpora&#45;&gt;https___ontology_caseontology_org_case_case_1_1_0 -->
+<!-- http___example_org_ontology_case_corpora&#45;&gt;https___ontology_caseontology_org_case_case_1_2_0 -->
 <g id="edge23" class="edge">
-<title>http___example_org_ontology_case_corpora&#45;&gt;https___ontology_caseontology_org_case_case_1_1_0</title>
+<title>http___example_org_ontology_case_corpora&#45;&gt;https___ontology_caseontology_org_case_case_1_2_0</title>
 <path fill="none" stroke="black" d="M866.69,-351.01C755.03,-335.95 577.61,-312.01 460.09,-296.15"/>
 <polygon fill="black" stroke="black" points="460.79,-292.72 450.41,-294.85 459.85,-299.65 460.79,-292.72"/>
 <text text-anchor="middle" x="714.87" y="-318.8" font-family="Times,serif" font-size="14.00">imports</text>
