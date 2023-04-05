@@ -34,7 +34,7 @@ kb:Hash-06903043-3b24-57e8-997d-6e5acd63ad8f
 
 kb:Hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "50a015b0c65c61feb81e77e0d2adcbf84d2f8352b2e1c46f27fb5f4816546751"^^xsd:hexBinary ;
 	.
 
