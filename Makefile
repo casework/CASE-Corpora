@@ -37,6 +37,7 @@ all: \
   check-shapes \
   check-supply-chain \
   check-supply-chain-pre-commit \
+  check-supply-chain-submodules \
   check-taxonomy \
   check-tests
 
@@ -243,7 +244,8 @@ check-shapes: \
 	  check
 
 check-supply-chain: \
-  check-supply-chain-pre-commit
+  check-supply-chain-pre-commit \
+  check-supply-chain-submodules
 
 check-supply-chain-pre-commit: \
   .venv-pre-commit/var/.pre-commit-built.log
@@ -252,6 +254,15 @@ check-supply-chain-pre-commit: \
 	git diff \
 	  --exit-code \
 	  .pre-commit-config.yaml
+
+check-supply-chain-submodules: \
+  .git_submodule_init.done.log
+	git submodule update \
+	  --remote
+	git diff \
+	  --exit-code \
+	  --ignore-submodules=dirty \
+	  dependencies
 
 check-taxonomy: \
   all-taxonomy \
