@@ -1,18 +1,24 @@
 [submodule "dependencies/CASE"]
 	path = dependencies/CASE
 	url = https://github.com/casework/CASE.git
+	branch = master
 [submodule "dependencies/CASE-develop"]
 	path = dependencies/CASE-develop
 	url = https://github.com/casework/CASE.git
+	branch = develop
 [submodule "dependencies/CASE-unstable"]
 	path = dependencies/CASE-unstable
 	url = https://github.com/casework/CASE-Archive.git
+	branch = unstable
 [submodule "dependencies/cito"]
 	path = dependencies/cito
 	url = https://github.com/SPAROntologies/cito.git
+	branch = master
 [submodule "dependencies/sdw"]
 	path = dependencies/sdw
 	url = https://github.com/w3c/sdw.git
+	branch = gh-pages
 [submodule "dependencies/swan-ontology"]
 	path = dependencies/swan-ontology
 	url = https://github.com/pav-ontology/swan-ontology.git
+	branch = master
