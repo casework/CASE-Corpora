@@ -284,25 +284,25 @@ kb:Hash-24afde4b-cb80-5e5f-83b6-ff9d27bd77e0
 
 kb:Hash-36216632-22f6-519f-9460-0a35dda73634
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "81477948ff24a5bd2681e02534a33371cff5dc067e8f2a96f0c7338c5d487dc4"^^xsd:hexBinary ;
 	.
 
 kb:Hash-3a6f46c4-e8e6-529d-b724-853bc9a51365
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "250df5e81a448f6395f9579aa0aba316e46eaf0e57d7e16ba78f94bd03f62f51"^^xsd:hexBinary ;
 	.
 
 kb:Hash-47209933-7865-5623-843a-dcde837091a4
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "4dbc003bb80aeb1c5ee61491bcb245c7f077a7f85fa4fa1325064556e173a4dd"^^xsd:hexBinary ;
 	.
 
 kb:Hash-5ceeb4eb-8f34-58ca-baa5-0f9ffcebee54
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "31814d3d0be43f935cfb0d0ce1a7bb1607f2bd787b54170255a150acffc17283"^^xsd:hexBinary ;
 	.
 
@@ -314,7 +314,7 @@ kb:Hash-5d3cdf60-5c3a-530b-9380-493617dea337
 
 kb:Hash-6d414599-445f-5c94-83d7-e7f23b6e101c
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "9a39319c1114a50bd46dfdd2ae7b5abe73db418d765c1ef0c29cb64e5d414558"^^xsd:hexBinary ;
 	.
 
@@ -326,7 +326,7 @@ kb:Hash-7110c44e-0935-5655-9069-89d96b8069ae
 
 kb:Hash-76fa3097-f92d-53b1-8639-b0074783f17e
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "73030c6e78655c588a591b771c2af92294f0f2629936ecc480965b967f69b6cd"^^xsd:hexBinary ;
 	.
 
@@ -338,13 +338,13 @@ kb:Hash-85cfcd32-2d51-5ca1-9d9a-8bfe4ac0d6d1
 
 kb:Hash-94aac18c-df0b-57d4-895f-7766e74bc09c
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "56623cbc8cb84a9113bd5be94d962eaf0b38a8a33a00ce16366c4b1fe62070ea"^^xsd:hexBinary ;
 	.
 
 kb:Hash-9dd8dcf4-5dbe-51e2-bd91-170b2796d600
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "86cb727207e6836d90dfd3cf4ec0be68e94644efa97ec1e5e91a298ec93646d6"^^xsd:hexBinary ;
 	.
 
@@ -362,7 +362,7 @@ kb:Hash-a03ea9a4-7c5c-51f5-9236-68adf98f7a63
 
 kb:Hash-ac944c47-84b2-5b8a-b838-351c46917744
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "c2fdf3bb26f97fd621e21a5e529353d8235deedc2a4100ee374b624b9f8e2528"^^xsd:hexBinary ;
 	.
 
@@ -374,7 +374,7 @@ kb:Hash-b699e9e0-d418-55de-94ff-bd81fa4bf94b
 
 kb:Hash-baa2b6b5-54e7-5074-88e1-57341adb6b39
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "7f888a19e6efe43981c5aa109f1255535bf481bcff8ff7a1a6665aa0981369db"^^xsd:hexBinary ;
 	.
 
@@ -386,13 +386,13 @@ kb:Hash-c2b43e9d-c72f-5155-afbd-0220e23116a3
 
 kb:Hash-c4315006-0bb7-5047-8891-efe43ab55531
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "ae8fd0c0dcd4e4d433104edf3a3976f0209acd8705bf8ddf6783f4b6992a7bd3"^^xsd:hexBinary ;
 	.
 
 kb:Hash-c9d83048-8d5e-5d22-abb5-7fa284fecdb7
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "d0a0dc7eeb5cad8c9f530b12d8be668397c7f76e033781c7342ffc936747d3b6"^^xsd:hexBinary ;
 	.
 
@@ -410,7 +410,7 @@ kb:Hash-dad3b99d-cafb-5dec-af6f-21b0f655727e
 
 kb:Hash-e23028d6-1cf6-520e-940c-0d42739dce7e
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "727f67f34c30e476612b7ae185221591e17c2c3f84aa244a701f414f561fbf83"^^xsd:hexBinary ;
 	.
 
@@ -434,13 +434,13 @@ kb:Hash-f6136f31-3fe8-5d49-b756-cce50db0d7c3
 
 kb:Hash-fa63feec-f608-5e7f-b13c-7471199d7eea
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "1e4446f1b16acd8ca7886efe3cb2520eea1fd149a525625062557c20b5ac1bf5"^^xsd:hexBinary ;
 	.
 
 kb:Hash-fc5547c3-364b-5c7c-ad55-6eb073e4e0a4
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256" ;
+	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "b32875e95a3376644816ec7983a63b5a6e2e0389878059a577686fcdea2dc2c6"^^xsd:hexBinary ;
 	.
 
