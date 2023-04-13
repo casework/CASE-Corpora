@@ -245,7 +245,8 @@ check-shapes: \
 
 check-supply-chain: \
   check-supply-chain-pre-commit \
-  check-supply-chain-submodules
+  check-supply-chain-submodules \
+  check-mypy
 
 check-supply-chain-pre-commit: \
   .venv-pre-commit/var/.pre-commit-built.log
