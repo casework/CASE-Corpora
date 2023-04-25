@@ -99,13 +99,13 @@ all: \
 	    wheel
 	source venv/bin/activate \
 	  && pip install \
-	    --requirement requirements.txt
-	source venv/bin/activate \
-	  && pip install \
 	    dependencies/CASE/dependencies/UCO/dependencies/CASE-Utility-SHACL-Inheritance-Reviewer
 	source venv/bin/activate \
 	  && pip install \
 	    --requirement dependencies/CASE/dependencies/UCO/requirements.txt
+	source venv/bin/activate \
+	  && pip install \
+	    --requirement requirements.txt
 	touch $@
 
 # This virtual environment is meant to be built once and then persist, even through 'make clean'.
