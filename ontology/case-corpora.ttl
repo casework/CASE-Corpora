@@ -99,6 +99,7 @@ case-corpora:WebPage
 
 case-corpora:contact-00000000-0000-0000-0000-000000000000
 	a
+		owl:NamedIndividual ,
 		vcard:Contact ,
 		vcard:Individual
 		;
