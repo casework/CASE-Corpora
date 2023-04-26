@@ -34,6 +34,8 @@ sh-case-corpora-local:Actuation-actsOnProperty-shape
 	sh:sparql [
 		sh:message "Actuation's hasFeatureOfInterest and actsOnProperty object are not associated."@en ;
 		sh:select """
+			PREFIX sosa: <http://www.w3.org/ns/sosa/>
+			PREFIX ssn: <http://www.w3.org/ns/ssn/>
 			SELECT $this
 			WHERE {
 				$this
@@ -56,6 +58,10 @@ sh-case-corpora-local:ContentDataFacet-mismatching-hash-shape
 		a sh:SPARQLConstraint ;
 		sh:message "Conflict found between a Hash recorded in a Facet and as a result of an Observation on the same Observable Object.  Please remove the Hash reference that is this result's Value node from the Focus node."@en ;
 		sh:select """
+			PREFIX sosa: <http://www.w3.org/ns/sosa/>
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			PREFIX uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/>
+			PREFIX uco-types: <https://ontology.unifiedcyberontology.org/uco/types/>
 			SELECT $this ?value
 			WHERE {
 				?nObservableObject
@@ -155,6 +161,8 @@ sh-case-corpora-local:InvestigativeAction-latest-ProvenanceRecord-usage-shape
 	sh:sparql [
 		sh:message "Focus node uses value node, but value node contributes no additional provenance information over provenance record {$nLatterProvenanceRecord}."@en ;
 		sh:select """
+			PREFIX case-investigation: <https://ontology.caseontology.org/case/investigation/>
+			PREFIX prov: <http://www.w3.org/ns/prov#>
 			SELECT $this ?value ?nLatterProvenanceRecord
 			WHERE {
 				$this
@@ -214,6 +222,8 @@ sh-case-corpora-local:Observation-observedProperty-shape
 	sh:sparql [
 		sh:message "Observation's hasFeatureOfInterest and observedProperty objects are not associated."@en ;
 		sh:select """
+			PREFIX sosa: <http://www.w3.org/ns/sosa/>
+			PREFIX ssn: <http://www.w3.org/ns/ssn/>
 			SELECT $this
 			WHERE {
 				$this
