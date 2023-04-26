@@ -103,7 +103,7 @@ case-corpora:contact-00000000-0000-0000-0000-000000000000
 		vcard:Contact ,
 		vcard:Individual
 		;
-	rdfs:comment "This named individual is provided as a stand-in to make explict that no point of contact is available, linked, or otherwise represented for a dataset."@en ;
+	rdfs:comment "This named individual is provided as a stand-in to make explicit that no point of contact is available, linked, or otherwise represented for a dataset."@en ;
 	rdfs:seeAlso
 		sh-dcat:contactPoint-range-shape ,
 		dcat:contactPoint ,
