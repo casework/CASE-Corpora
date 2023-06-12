@@ -12,16 +12,22 @@
 <!-- _1f04d829546c397900d5164d5f2d881a9d7141a66bfedb6c9fbc0aa88bbfc164 -->
 <g id="node1" class="node">
 <title>_1f04d829546c397900d5164d5f2d881a9d7141a66bfedb6c9fbc0aa88bbfc164</title>
+<g id="a_node1"><a xlink:title="ID &#45; http://example.org/kb/file&#45;2352f3d0&#45;d02f&#45;40ba&#45;85a4&#45;b00dd97050c8">
 <ellipse fill="#fff68f" stroke="#808080" cx="877" cy="-38.18" rx="219.41" ry="38.37"/>
 <text text-anchor="middle" x="877" y="-49.98" font-family="Times,serif" font-size="14.00">ID &#45; kb:file&#45;2352f3d0&#45;d02f&#45;40ba&#45;85a4&#45;b00dd97050c8</text>
 <text text-anchor="middle" x="877" y="-18.98" font-family="Times,serif" font-size="14.00">android_7.tar.gz</text>
+</a>
+</g>
 </g>
 <!-- _c1a739983405a7bfa4936ec3a1ea5fbf93592d8df15f9a6b45f2537d7c543d15 -->
 <g id="node2" class="node">
 <title>_c1a739983405a7bfa4936ec3a1ea5fbf93592d8df15f9a6b45f2537d7c543d15</title>
+<g id="a_node2"><a xlink:title="ID &#45; http://example.org/kb/file&#45;3af91026&#45;4c09&#45;4047&#45;a914&#45;15e75a711ff0">
 <ellipse fill="#fff68f" stroke="#808080" cx="1708" cy="-277.55" rx="216.25" ry="38.37"/>
 <text text-anchor="middle" x="1708" y="-289.35" font-family="Times,serif" font-size="14.00">ID &#45; kb:file&#45;3af91026&#45;4c09&#45;4047&#45;a914&#45;15e75a711ff0</text>
 <text text-anchor="middle" x="1708" y="-258.35" font-family="Times,serif" font-size="14.00">Android7&#45;ImageCreationDocumentation.pdf</text>
+</a>
+</g>
 </g>
 <!-- _1f04d829546c397900d5164d5f2d881a9d7141a66bfedb6c9fbc0aa88bbfc164&#45;&gt;_c1a739983405a7bfa4936ec3a1ea5fbf93592d8df15f9a6b45f2537d7c543d15 -->
 <g id="edge1" class="edge">
@@ -33,9 +39,12 @@
 <!-- _2a4fbbcb7bd477dfe0f7d0497df08f1814dc4799866304fbb2c1d587e028daee -->
 <g id="node3" class="node">
 <title>_2a4fbbcb7bd477dfe0f7d0497df08f1814dc4799866304fbb2c1d587e028daee</title>
+<g id="a_node3"><a xlink:title="ID &#45; http://example.org/kb/file&#45;736c63b5&#45;5e15&#45;4a48&#45;b948&#45;13757bae0aae">
 <ellipse fill="#fff68f" stroke="#808080" cx="530" cy="-842.29" rx="219.82" ry="38.37"/>
 <text text-anchor="middle" x="530" y="-854.09" font-family="Times,serif" font-size="14.00">ID &#45; kb:file&#45;736c63b5&#45;5e15&#45;4a48&#45;b948&#45;13757bae0aae</text>
 <text text-anchor="middle" x="530" y="-823.09" font-family="Times,serif" font-size="14.00">LG GSM_H790 Nexus 5X.ufd</text>
+</a>
+</g>
 </g>
 <!-- _1f04d829546c397900d5164d5f2d881a9d7141a66bfedb6c9fbc0aa88bbfc164&#45;&gt;_2a4fbbcb7bd477dfe0f7d0497df08f1814dc4799866304fbb2c1d587e028daee -->
 <g id="edge2" class="edge">
@@ -47,9 +56,12 @@
 <!-- _5fcc6a159804d07e43abe88b4f66d9c983ba2225ac3ef98b4b1685e6009042ca -->
 <g id="node4" class="node">
 <title>_5fcc6a159804d07e43abe88b4f66d9c983ba2225ac3ef98b4b1685e6009042ca</title>
+<g id="a_node4"><a xlink:title="ID &#45; http://example.org/kb/file&#45;cee5a02b&#45;56a7&#45;4ad6&#45;9e78&#45;d297e6b92517">
 <ellipse fill="#fff68f" stroke="#808080" cx="455" cy="-501.92" rx="219.82" ry="38.37"/>
 <text text-anchor="middle" x="455" y="-513.72" font-family="Times,serif" font-size="14.00">ID &#45; kb:file&#45;cee5a02b&#45;56a7&#45;4ad6&#45;9e78&#45;d297e6b92517</text>
 <text text-anchor="middle" x="455" y="-482.72" font-family="Times,serif" font-size="14.00">Android 7 Hashes.pdf</text>
+</a>
+</g>
 </g>
 <!-- _1f04d829546c397900d5164d5f2d881a9d7141a66bfedb6c9fbc0aa88bbfc164&#45;&gt;_5fcc6a159804d07e43abe88b4f66d9c983ba2225ac3ef98b4b1685e6009042ca -->
 <g id="edge3" class="edge">
@@ -61,9 +73,12 @@
 <!-- _457e8792d4af0b60ec728dc4a5ed79d03fe6e76d0730385fad463089f8a49c0e -->
 <g id="node5" class="node">
 <title>_457e8792d4af0b60ec728dc4a5ed79d03fe6e76d0730385fad463089f8a49c0e</title>
+<g id="a_node5"><a xlink:title="ID &#45; http://example.org/kb/image&#45;9c77c0e9&#45;fd0b&#45;4912&#45;afcf&#45;0d1b1b86f4d6">
 <ellipse fill="#fff68f" stroke="#808080" cx="1214" cy="-1066.65" rx="226.05" ry="38.37"/>
 <text text-anchor="middle" x="1214" y="-1078.45" font-family="Times,serif" font-size="14.00">ID &#45; kb:image&#45;9c77c0e9&#45;fd0b&#45;4912&#45;afcf&#45;0d1b1b86f4d6</text>
 <text text-anchor="middle" x="1214" y="-1047.45" font-family="Times,serif" font-size="14.00">blk32_mmcblk0rpmb.bin</text>
+</a>
+</g>
 </g>
 <!-- _1f04d829546c397900d5164d5f2d881a9d7141a66bfedb6c9fbc0aa88bbfc164&#45;&gt;_457e8792d4af0b60ec728dc4a5ed79d03fe6e76d0730385fad463089f8a49c0e -->
 <g id="edge4" class="edge">
@@ -75,9 +90,12 @@
 <!-- _ebc267bba83123d50851bec30bc40b11891becea7dea22c9a75002f38bd181f3 -->
 <g id="node6" class="node">
 <title>_ebc267bba83123d50851bec30bc40b11891becea7dea22c9a75002f38bd181f3</title>
+<g id="a_node6"><a xlink:title="ID &#45; http://example.org/kb/provenance&#45;record&#45;1fd441e5&#45;e7c6&#45;4610&#45;aeaa&#45;3530aa37873c">
 <polygon fill="#cdc673" stroke="#808080" points="1995,-641.1 1992,-645.1 1971,-645.1 1968,-641.1 1605,-641.1 1605,-587.1 1995,-587.1 1995,-641.1"/>
 <text text-anchor="middle" x="1800" y="-625.9" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance&#45;record&#45;1fd441e5&#45;e7c6&#45;4610&#45;aeaa&#45;3530aa37873c</text>
 <text text-anchor="middle" x="1800" y="-594.9" font-family="Times,serif" font-size="14.00">Record of blk32_mmcblk0rpmb.bin being hashed</text>
+</a>
+</g>
 </g>
 <!-- _1f04d829546c397900d5164d5f2d881a9d7141a66bfedb6c9fbc0aa88bbfc164&#45;&gt;_ebc267bba83123d50851bec30bc40b11891becea7dea22c9a75002f38bd181f3 -->
 <g id="edge5" class="edge">
@@ -89,9 +107,12 @@
 <!-- _1aa3504fd0f5004a0b62e45f40456297227f4299319f47b6ae52f20305601d7f -->
 <g id="node7" class="node">
 <title>_1aa3504fd0f5004a0b62e45f40456297227f4299319f47b6ae52f20305601d7f</title>
+<g id="a_node7"><a xlink:title="ID &#45; http://example.org/kb/provenance&#45;record&#45;27610dc7&#45;3dc7&#45;4d57&#45;8143&#45;629c72fb6be7">
 <polygon fill="#cdc673" stroke="#808080" points="1548.5,-641.1 1545.5,-645.1 1524.5,-645.1 1521.5,-641.1 1153.5,-641.1 1153.5,-587.1 1548.5,-587.1 1548.5,-641.1"/>
 <text text-anchor="middle" x="1351" y="-625.9" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance&#45;record&#45;27610dc7&#45;3dc7&#45;4d57&#45;8143&#45;629c72fb6be7</text>
 <text text-anchor="middle" x="1351" y="-594.9" font-family="Times,serif" font-size="14.00">Record of procdata.zip being hashed</text>
+</a>
+</g>
 </g>
 <!-- _1f04d829546c397900d5164d5f2d881a9d7141a66bfedb6c9fbc0aa88bbfc164&#45;&gt;_1aa3504fd0f5004a0b62e45f40456297227f4299319f47b6ae52f20305601d7f -->
 <g id="edge6" class="edge">
@@ -103,8 +124,11 @@
 <!-- _a02c2e16e16ca8e40604e0031a59adedf64d57096fdb251d9226c253b8a229a9 -->
 <g id="node8" class="node">
 <title>_a02c2e16e16ca8e40604e0031a59adedf64d57096fdb251d9226c253b8a229a9</title>
+<g id="a_node8"><a xlink:title="ID &#45; http://example.org/kb/provenance&#45;record&#45;2dbd4ba1&#45;76b1&#45;4041&#45;a460&#45;8a5922940f79">
 <polygon fill="#cdc673" stroke="#808080" points="1905.5,-175.87 1902.5,-179.87 1881.5,-179.87 1878.5,-175.87 1510.5,-175.87 1510.5,-139.87 1905.5,-139.87 1905.5,-175.87"/>
 <text text-anchor="middle" x="1708" y="-154.17" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance&#45;record&#45;2dbd4ba1&#45;76b1&#45;4041&#45;a460&#45;8a5922940f79</text>
+</a>
+</g>
 </g>
 <!-- _1f04d829546c397900d5164d5f2d881a9d7141a66bfedb6c9fbc0aa88bbfc164&#45;&gt;_a02c2e16e16ca8e40604e0031a59adedf64d57096fdb251d9226c253b8a229a9 -->
 <g id="edge7" class="edge">
@@ -116,10 +140,13 @@
 <!-- _b5ab4f9e376265609eda39155c81c1c21d11e2e36515c2a87670364c122d98c3 -->
 <g id="node10" class="node">
 <title>_b5ab4f9e376265609eda39155c81c1c21d11e2e36515c2a87670364c122d98c3</title>
+<g id="a_node10"><a xlink:title="ID &#45; http://example.org/kb/provenance&#45;record&#45;529f9bf1&#45;c9ca&#45;450c&#45;8311&#45;98c8a800fac5">
 <polygon fill="#cdc673" stroke="#808080" points="1159.5,-192.37 1156.5,-196.37 1135.5,-196.37 1132.5,-192.37 772.5,-192.37 772.5,-123.37 1159.5,-123.37 1159.5,-192.37"/>
 <text text-anchor="middle" x="966" y="-177.17" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance&#45;record&#45;529f9bf1&#45;c9ca&#45;450c&#45;8311&#45;98c8a800fac5</text>
 <text text-anchor="middle" x="966" y="-146.17" font-family="Times,serif" font-size="14.00">Record of blk0_mmcblk0.bin being hashed before entry into </text>
 <text text-anchor="middle" x="966" y="-131.17" font-family="Times,serif" font-size="14.00">tarball</text>
+</a>
+</g>
 </g>
 <!-- _1f04d829546c397900d5164d5f2d881a9d7141a66bfedb6c9fbc0aa88bbfc164&#45;&gt;_b5ab4f9e376265609eda39155c81c1c21d11e2e36515c2a87670364c122d98c3 -->
 <g id="edge8" class="edge">
@@ -131,8 +158,11 @@
 <!-- _6a1d9937c527b268c070285fc3407ad96b2d20f53ce7fc4a27809bff44fd0bf2 -->
 <g id="node11" class="node">
 <title>_6a1d9937c527b268c070285fc3407ad96b2d20f53ce7fc4a27809bff44fd0bf2</title>
+<g id="a_node11"><a xlink:title="ID &#45; http://example.org/kb/provenance&#45;record&#45;5bd7940a&#45;0618&#45;4f0e&#45;b641&#45;d24d683f704b">
 <polygon fill="#cdc673" stroke="#808080" points="924,-407.74 921,-411.74 900,-411.74 897,-407.74 530,-407.74 530,-371.74 924,-371.74 924,-407.74"/>
 <text text-anchor="middle" x="727" y="-386.04" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance&#45;record&#45;5bd7940a&#45;0618&#45;4f0e&#45;b641&#45;d24d683f704b</text>
+</a>
+</g>
 </g>
 <!-- _1f04d829546c397900d5164d5f2d881a9d7141a66bfedb6c9fbc0aa88bbfc164&#45;&gt;_6a1d9937c527b268c070285fc3407ad96b2d20f53ce7fc4a27809bff44fd0bf2 -->
 <g id="edge9" class="edge">
@@ -144,9 +174,12 @@
 <!-- _8e090a4846743715bfc8c54f6e4ebd12640da5ad993b80d4a32b0055adb56411 -->
 <g id="node14" class="node">
 <title>_8e090a4846743715bfc8c54f6e4ebd12640da5ad993b80d4a32b0055adb56411</title>
+<g id="a_node14"><a xlink:title="ID &#45; http://example.org/kb/provenance&#45;record&#45;8cc02f8e&#45;66be&#45;4166&#45;9055&#45;9cc96635e5a8">
 <polygon fill="#cdc673" stroke="#808080" points="725,-641.1 722,-645.1 701,-645.1 698,-641.1 333,-641.1 333,-587.1 725,-587.1 725,-641.1"/>
 <text text-anchor="middle" x="529" y="-625.9" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance&#45;record&#45;8cc02f8e&#45;66be&#45;4166&#45;9055&#45;9cc96635e5a8</text>
 <text text-anchor="middle" x="529" y="-594.9" font-family="Times,serif" font-size="14.00">Record of LG GSM_H790 Nexus 5X.ufd being hashed</text>
+</a>
+</g>
 </g>
 <!-- _1f04d829546c397900d5164d5f2d881a9d7141a66bfedb6c9fbc0aa88bbfc164&#45;&gt;_8e090a4846743715bfc8c54f6e4ebd12640da5ad993b80d4a32b0055adb56411 -->
 <g id="edge10" class="edge">
@@ -179,9 +212,12 @@
 <!-- _d39fd74adc51b4a1f5dbc40716bcb6c4f44db1c4f75fe9dece0d18b9c6a9370b -->
 <g id="node12" class="node">
 <title>_d39fd74adc51b4a1f5dbc40716bcb6c4f44db1c4f75fe9dece0d18b9c6a9370b</title>
+<g id="a_node12"><a xlink:title="ID &#45; http://example.org/kb/provenance&#45;record&#45;75fb2a26&#45;0b7e&#45;428b&#45;acba&#45;17d114caca39">
 <polygon fill="#cdc673" stroke="#808080" points="1396.5,-416.74 1393.5,-420.74 1372.5,-420.74 1369.5,-416.74 1005.5,-416.74 1005.5,-362.74 1396.5,-362.74 1396.5,-416.74"/>
 <text text-anchor="middle" x="1201" y="-401.54" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance&#45;record&#45;75fb2a26&#45;0b7e&#45;428b&#45;acba&#45;17d114caca39</text>
 <text text-anchor="middle" x="1201" y="-370.54" font-family="Times,serif" font-size="14.00">Record of blk0_mmcblk0.bin being hashed</text>
+</a>
+</g>
 </g>
 <!-- _c1a739983405a7bfa4936ec3a1ea5fbf93592d8df15f9a6b45f2537d7c543d15&#45;&gt;_d39fd74adc51b4a1f5dbc40716bcb6c4f44db1c4f75fe9dece0d18b9c6a9370b -->
 <g id="edge14" class="edge">
@@ -193,10 +229,13 @@
 <!-- _0a56478b124850e46a803da26039a994826dbcfde99c095ebc9693539de82b15 -->
 <g id="node13" class="node">
 <title>_0a56478b124850e46a803da26039a994826dbcfde99c095ebc9693539de82b15</title>
+<g id="a_node13"><a xlink:title="ID &#45; http://example.org/kb/provenance&#45;record&#45;8c357d9b&#45;13a4&#45;4333&#45;9e11&#45;2194bfdd534b">
 <polygon fill="#cdc673" stroke="#808080" points="1480.5,-757.1 1477.5,-761.1 1456.5,-761.1 1453.5,-757.1 1085.5,-757.1 1085.5,-688.1 1480.5,-688.1 1480.5,-757.1"/>
 <text text-anchor="middle" x="1283" y="-741.9" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance&#45;record&#45;8c357d9b&#45;13a4&#45;4333&#45;9e11&#45;2194bfdd534b</text>
 <text text-anchor="middle" x="1283" y="-710.9" font-family="Times,serif" font-size="14.00">Record of phone imaging process being completed, including </text>
 <text text-anchor="middle" x="1283" y="-695.9" font-family="Times,serif" font-size="14.00">log</text>
+</a>
+</g>
 </g>
 <!-- _c1a739983405a7bfa4936ec3a1ea5fbf93592d8df15f9a6b45f2537d7c543d15&#45;&gt;_0a56478b124850e46a803da26039a994826dbcfde99c095ebc9693539de82b15 -->
 <g id="edge15" class="edge">
@@ -215,9 +254,12 @@
 <!-- _e264b7293df474c115e21778029b26cd0c594a392b8edd2ecdc026d38239a600 -->
 <g id="node9" class="node">
 <title>_e264b7293df474c115e21778029b26cd0c594a392b8edd2ecdc026d38239a600</title>
+<g id="a_node9"><a xlink:title="ID &#45; http://example.org/kb/provenance&#45;record&#45;37290c6d&#45;3dc2&#45;4519&#45;a80f&#45;136e73981d8b">
 <polygon fill="#cdc673" stroke="#808080" points="1218.5,-981.47 1215.5,-985.47 1194.5,-985.47 1191.5,-981.47 823.5,-981.47 823.5,-927.47 1218.5,-927.47 1218.5,-981.47"/>
 <text text-anchor="middle" x="1021" y="-966.27" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance&#45;record&#45;37290c6d&#45;3dc2&#45;4519&#45;a80f&#45;136e73981d8b</text>
 <text text-anchor="middle" x="1021" y="-935.27" font-family="Times,serif" font-size="14.00">Record of blk32_mmcblk0rpmb.bin being hashed</text>
+</a>
+</g>
 </g>
 <!-- _2a4fbbcb7bd477dfe0f7d0497df08f1814dc4799866304fbb2c1d587e028daee&#45;&gt;_e264b7293df474c115e21778029b26cd0c594a392b8edd2ecdc026d38239a600 -->
 <g id="edge17" class="edge">
@@ -264,9 +306,12 @@
 <!-- _9cfd5565cbbaf8bd9699f51cd8349fa74ad2aee4a992853a18ad8e8e17ab633c -->
 <g id="node17" class="node">
 <title>_9cfd5565cbbaf8bd9699f51cd8349fa74ad2aee4a992853a18ad8e8e17ab633c</title>
+<g id="a_node17"><a xlink:title="ID &#45; http://example.org/kb/provenance&#45;record&#45;e0b96677&#45;b01f&#45;4d96&#45;bfa2&#45;847e099c70b8">
 <polygon fill="#cdc673" stroke="#808080" points="1135,-641.1 1132,-645.1 1111,-645.1 1108,-641.1 743,-641.1 743,-587.1 1135,-587.1 1135,-641.1"/>
 <text text-anchor="middle" x="939" y="-625.9" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance&#45;record&#45;e0b96677&#45;b01f&#45;4d96&#45;bfa2&#45;847e099c70b8</text>
 <text text-anchor="middle" x="939" y="-594.9" font-family="Times,serif" font-size="14.00">Record of blk0_mmcblk0.bin being hashed</text>
+</a>
+</g>
 </g>
 <!-- _5fcc6a159804d07e43abe88b4f66d9c983ba2225ac3ef98b4b1685e6009042ca&#45;&gt;_9cfd5565cbbaf8bd9699f51cd8349fa74ad2aee4a992853a18ad8e8e17ab633c -->
 <g id="edge23" class="edge">
@@ -362,9 +407,12 @@
 <!-- _df6ea78ba98f31cfb001c5fc835934ed0e37760b5b1bf082292646ac6467dea3 -->
 <g id="node16" class="node">
 <title>_df6ea78ba98f31cfb001c5fc835934ed0e37760b5b1bf082292646ac6467dea3</title>
+<g id="a_node16"><a xlink:title="ID &#45; http://example.org/kb/provenance&#45;record&#45;b130dc0e&#45;96a3&#45;4195&#45;ba75&#45;6edaf6c1c772">
 <polygon fill="#cdc673" stroke="#808080" points="1185,-304.55 1182,-308.55 1161,-308.55 1158,-304.55 793,-304.55 793,-250.55 1185,-250.55 1185,-304.55"/>
 <text text-anchor="middle" x="989" y="-289.35" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance&#45;record&#45;b130dc0e&#45;96a3&#45;4195&#45;ba75&#45;6edaf6c1c772</text>
 <text text-anchor="middle" x="989" y="-258.35" font-family="Times,serif" font-size="14.00">Record of undocumented modification to blk0_mmcblk0.bin</text>
+</a>
+</g>
 </g>
 <!-- _b5ab4f9e376265609eda39155c81c1c21d11e2e36515c2a87670364c122d98c3&#45;&gt;_df6ea78ba98f31cfb001c5fc835934ed0e37760b5b1bf082292646ac6467dea3 -->
 <g id="edge36" class="edge">
@@ -425,9 +473,12 @@
 <!-- _a363d46a6de0997be8374e4d7b986aaa09228caf03067ba8df9b8ca54cb40e18 -->
 <g id="node15" class="node">
 <title>_a363d46a6de0997be8374e4d7b986aaa09228caf03067ba8df9b8ca54cb40e18</title>
+<g id="a_node15"><a xlink:title="ID &#45; http://example.org/kb/provenance&#45;record&#45;949cf353&#45;d9c9&#45;4513&#45;a4b8&#45;6a1c95243688">
 <polygon fill="#cdc673" stroke="#808080" points="1405,-528.92 1402,-532.92 1381,-532.92 1378,-528.92 1011,-528.92 1011,-474.92 1405,-474.92 1405,-528.92"/>
 <text text-anchor="middle" x="1208" y="-513.72" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance&#45;record&#45;949cf353&#45;d9c9&#45;4513&#45;a4b8&#45;6a1c95243688</text>
 <text text-anchor="middle" x="1208" y="-482.72" font-family="Times,serif" font-size="14.00">Record of undocumented modification to blk0_mmcblk0.bin</text>
+</a>
+</g>
 </g>
 <!-- _d39fd74adc51b4a1f5dbc40716bcb6c4f44db1c4f75fe9dece0d18b9c6a9370b&#45;&gt;_a363d46a6de0997be8374e4d7b986aaa09228caf03067ba8df9b8ca54cb40e18 -->
 <g id="edge44" class="edge">
@@ -509,8 +560,11 @@
 <!-- _357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf -->
 <g id="node18" class="node">
 <title>_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf</title>
+<g id="a_node18"><a xlink:title="ID &#45; http://www.w3.org/ns/prov#EmptyCollection">
 <polygon fill="#cdc673" stroke="#808080" points="1278,-56.18 1275,-60.18 1254,-60.18 1251,-56.18 1114,-56.18 1114,-20.18 1278,-20.18 1278,-56.18"/>
 <text text-anchor="middle" x="1196" y="-34.48" font-family="Times,serif" font-size="14.00">ID &#45; prov:EmptyCollection</text>
+</a>
+</g>
 </g>
 </g>
 </svg>
