@@ -1,4 +1,4 @@
-@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
+@prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -9,7 +9,7 @@
 @prefix uco-vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kb:ContentDataFacet-765376b1-a9a5-5b25-a0d9-cb462149ef2c
+kb:ContentDataFacet-a84038b3-ab63-5d4b-9639-2a731a5f52b1
 	a uco-observable:ContentDataFacet ;
 	uco-observable:dataPayloadReferenceURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
 	uco-observable:hash
@@ -19,7 +19,7 @@ kb:ContentDataFacet-765376b1-a9a5-5b25-a0d9-cb462149ef2c
 	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
 	.
 
-kb:FileFacet-12f96fa7-efd9-5d3a-9fa7-d12e3147566e
+kb:FileFacet-89c72df8-e616-5017-94a0-8525168d81ba
 	a uco-observable:FileFacet ;
 	uco-observable:fileName "android_7.tar.gz" ;
 	uco-observable:modifiedTime "2020-11-22T03:14:59+00:00"^^xsd:dateTime ;
@@ -44,12 +44,17 @@ kb:URLFacet-ae160fad-6ae9-548b-9fcd-81e53dda8964
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
-	a case-corpora:DownloadableFile ;
+	a uco-observable:URL ;
+	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
+	uco-core:hasFacet kb:URLFacet-ae160fad-6ae9-548b-9fcd-81e53dda8964 ;
+	.
+
+<s3://digitalcorpora/corpora/mobile/android_7.tar.gz>
+	a drafting:S3Object ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
 	uco-core:hasFacet
-		kb:ContentDataFacet-765376b1-a9a5-5b25-a0d9-cb462149ef2c ,
-		kb:FileFacet-12f96fa7-efd9-5d3a-9fa7-d12e3147566e ,
-		kb:URLFacet-ae160fad-6ae9-548b-9fcd-81e53dda8964
+		kb:ContentDataFacet-a84038b3-ab63-5d4b-9639-2a731a5f52b1 ,
+		kb:FileFacet-89c72df8-e616-5017-94a0-8525168d81ba
 		;
 	uco-core:modifiedTime "2022-09-27T16:58:05+00:00"^^xsd:dateTime ;
 	.
