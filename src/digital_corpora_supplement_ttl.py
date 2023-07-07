@@ -37,6 +37,7 @@ from case_utils_extras import (
 from rdflib import Graph, Literal, Namespace, URIRef
 
 NS_CASE_CORPORA = Namespace("http://example.org/ontology/case-corpora/")
+NS_DRAFTING = Namespace("http://example.org/ontology/drafting/")
 
 RX_HEXBINARY = re.compile("^[0-9a-f]+$", re.IGNORECASE)
 
@@ -73,6 +74,7 @@ def main() -> None:
 
     graph = Graph()
     graph.bind("case-corpora", NS_CASE_CORPORA)
+    graph.bind("drafting", NS_DRAFTING)
     graph.bind("kb", NS_KB)
     graph.bind("uco-core", NS_UCO_CORE)
     graph.bind("uco-observable", NS_UCO_OBSERVABLE)
@@ -94,20 +96,27 @@ def main() -> None:
                 continue
             if row["s3key"].endswith("~"):
                 continue
-            n_downloadable_file = URIRef(
-                "https://digitalcorpora.s3.amazonaws.com/"
-                + urllib.parse.quote(row["s3key"])
+            s3key_quoted = urllib.parse.quote(row["s3key"])
+            n_s3_object = URIRef("s3://digitalcorpora/" + s3key_quoted)
+            n_download_url = URIRef(
+                "https://digitalcorpora.s3.amazonaws.com/" + s3key_quoted
             )
-            if n_downloadable_file not in n_subjects:
+            if n_download_url not in n_subjects:
                 continue
-            n_subjects.remove(n_downloadable_file)
+            n_subjects.remove(n_download_url)
 
+            graph.add((n_s3_object, NS_RDF.type, NS_DRAFTING.S3Object))
+            graph.add((n_download_url, NS_RDF.type, NS_UCO_OBSERVABLE.URL))
             graph.add(
-                (n_downloadable_file, NS_RDF.type, NS_CASE_CORPORA.DownloadableFile)
+                (
+                    n_s3_object,
+                    NS_UCO_CORE.createdBy,
+                    NS_KB["organization-72ec45c9-ea94-4503-9428-ad73300056f5"],
+                )
             )
             graph.add(
                 (
-                    n_downloadable_file,
+                    n_download_url,
                     NS_UCO_CORE.createdBy,
                     NS_KB["organization-72ec45c9-ea94-4503-9428-ad73300056f5"],
                 )
@@ -117,41 +126,39 @@ def main() -> None:
                 l_object_mtime = Literal(
                     row["modified"].replace(" ", "T") + "Z", datatype=NS_XSD.dateTime
                 )
-                graph.add(
-                    (n_downloadable_file, NS_UCO_CORE.modifiedTime, l_object_mtime)
-                )
+                graph.add((n_s3_object, NS_UCO_CORE.modifiedTime, l_object_mtime))
 
             n_content_data_facet = n_inherent_facet_for_node(
-                n_downloadable_file, NS_UCO_OBSERVABLE.ContentDataFacet, NS_KB
+                n_s3_object, NS_UCO_OBSERVABLE.ContentDataFacet, NS_KB
             )
             graph.add(
                 (n_content_data_facet, NS_RDF.type, NS_UCO_OBSERVABLE.ContentDataFacet)
             )
-            graph.add((n_downloadable_file, NS_UCO_CORE.hasFacet, n_content_data_facet))
+            graph.add((n_s3_object, NS_UCO_CORE.hasFacet, n_content_data_facet))
             graph.add(
                 (
                     n_content_data_facet,
                     NS_UCO_OBSERVABLE.dataPayloadReferenceURL,
-                    n_downloadable_file,
+                    n_download_url,
                 )
             )
 
             n_file_facet = n_inherent_facet_for_node(
-                n_downloadable_file, NS_UCO_OBSERVABLE.FileFacet, NS_KB
+                n_s3_object, NS_UCO_OBSERVABLE.FileFacet, NS_KB
             )
             graph.add((n_file_facet, NS_RDF.type, NS_UCO_OBSERVABLE.FileFacet))
-            graph.add((n_downloadable_file, NS_UCO_CORE.hasFacet, n_file_facet))
+            graph.add((n_s3_object, NS_UCO_CORE.hasFacet, n_file_facet))
 
             n_url_facet = n_inherent_facet_for_node(
-                n_downloadable_file, NS_UCO_OBSERVABLE.URLFacet, NS_KB
+                n_download_url, NS_UCO_OBSERVABLE.URLFacet, NS_KB
             )
             graph.add((n_url_facet, NS_RDF.type, NS_UCO_OBSERVABLE.URLFacet))
-            graph.add((n_downloadable_file, NS_UCO_CORE.hasFacet, n_url_facet))
+            graph.add((n_download_url, NS_UCO_CORE.hasFacet, n_url_facet))
             graph.add(
                 (
                     n_url_facet,
                     NS_UCO_OBSERVABLE.fullValue,
-                    Literal(str(n_downloadable_file)),
+                    Literal(str(n_download_url)),
                 )
             )
 

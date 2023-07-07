@@ -173,6 +173,12 @@ drafting:Quality
 		;
 	.
 
+drafting:S3Object
+	a owl:Class ;
+	rdfs:subClassOf uco-observable:ObservableObject ;
+	rdfs:seeAlso <https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#O> ;
+	.
+
 drafting:hasQuality
 	a
 		owl:ObjectProperty ,
