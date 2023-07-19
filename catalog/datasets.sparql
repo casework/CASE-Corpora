@@ -1,4 +1,4 @@
-SELECT ?lDatasetDirectory ?lDatasetTitle ?lAccessLevel ?nLandingPage
+SELECT ?lLinkedDatasetDirectory ?lDatasetTitle ?lAccessLevel ?nLandingPage
 WHERE {
   ?nDataset
     a/rdfs:subClassOf* dcat:Dataset ;
@@ -7,5 +7,15 @@ WHERE {
     dcterms:title ?lDatasetTitle ;
     pod:accessLevel ?lAccessLevel ;
     .
+  BIND(
+    CONCAT(
+      "[",
+      ?lDatasetDirectory,
+      "](datasets/",
+      ?lDatasetDirectory,
+      "/)"
+    )
+    AS ?lLinkedDatasetDirectory
+  )
 }
 ORDER BY ?lDatasetDirectory ?lDatasetTitle ?nLandingPage
