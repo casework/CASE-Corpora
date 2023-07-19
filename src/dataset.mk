@@ -120,12 +120,14 @@ generated-ground-truth-prov.ttl: \
 
 generated-prov.dot: \
   generated-prov.ttl
-	source $(top_srcdir)/venv/bin/activate \
-	  && case_prov_dot \
-	    --dash-unqualified \
-	    _$@ \
-	    generated-prov.ttl \
-	    supplemental.ttl
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --dash-unqualified \
+	      --use-deterministic-uuids \
+	      _$@ \
+	      generated-prov.ttl \
+	      supplemental.ttl
 	mv _$@ $@
 
 generated-prov.ttl: \
@@ -134,14 +136,16 @@ generated-prov.ttl: \
   $(top_srcdir)/catalog/shared.ttl \
   base_rdfs_expansion.ttl
 	rm -f _$@ __$@
-	source $(top_srcdir)/venv/bin/activate \
-	  && case_prov_rdf \
-	    --allow-empty-results \
-	    __$@ \
-	    $(top_srcdir)/catalog/shared.ttl \
-	    base_rdfs_expansion.ttl \
-	    distribution.ttl \
-	    $(supplemental_graph)
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_rdf \
+	      --allow-empty-results \
+	      --use-deterministic-uuids \
+	      __$@ \
+	      $(top_srcdir)/catalog/shared.ttl \
+	      base_rdfs_expansion.ttl \
+	      distribution.ttl \
+	      $(supplemental_graph)
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \
