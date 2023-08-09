@@ -17,12 +17,12 @@
 		;
 	.
 
-sh-discourse-relationships:refersTo-range-shape
+sh-discourse-relationships:refersTo-objects-shape
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf discourse-relationships:refersTo ;
 	.
 
-sh-discourse-relationships:relatesTo-range-shape
+sh-discourse-relationships:relatesTo-objects-shape
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf discourse-relationships:relatesTo ;
 	.

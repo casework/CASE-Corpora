@@ -28,12 +28,6 @@ sh-ssn:Property-shape
 	sh:targetClass ssn:Property ;
 	.
 
-sh-ssn:isPropertyOf-domain-shape
-	a sh:NodeShape ;
-	sh:nodeKind sh:BlankNodeOrIRI ;
-	sh:targetSubjectsOf ssn:isPropertyOf ;
-	.
-
 sh-ssn:isPropertyOf-functional-shape
 	a sh:PropertyShape ;
 	sh:maxCount "1"^^xsd:integer ;
@@ -41,10 +35,16 @@ sh-ssn:isPropertyOf-functional-shape
 	sh:targetObjectsOf ssn:isPropertyOf ;
 	.
 
-sh-ssn:isPropertyOf-range-shape
+sh-ssn:isPropertyOf-objects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf ssn:isPropertyOf ;
+	.
+
+sh-ssn:isPropertyOf-subjects-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetSubjectsOf ssn:isPropertyOf ;
 	.
 
 sh-ssn:sosa-ActuatableProperty-shape

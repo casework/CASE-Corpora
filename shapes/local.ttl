@@ -305,7 +305,7 @@ sh-case-corpora-local:rdf-subject-shape
 	sh:targetSubjectsOf rdf:subject ;
 	.
 
-sh-case-corpora-local:time-inXSDDate-domain-shape
+sh-case-corpora-local:time-inXSDDate-subjects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:IRI ;
 	sh:targetSubjectsOf time:inXSDDate ;
@@ -318,93 +318,93 @@ sh-case-corpora-local:time-inXSDDateTime-deprecation-shape
 	sh:targetSubjectsOf time:inXSDDateTime ;
 	.
 
-sh-case-corpora-local:time-inXSDDateTimeStamp-domain-shape
+sh-case-corpora-local:time-inXSDDateTimeStamp-subjects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:IRI ;
 	sh:targetSubjectsOf time:inXSDDateTimeStamp ;
 	.
 
-sh-case-corpora-local:time-inside-domain-shape
-	a sh:NodeShape ;
-	sh:nodeKind sh:IRI ;
-	sh:targetSubjectsOf time:inside ;
-	.
-
-sh-case-corpora-local:time-inside-range-shape
+sh-case-corpora-local:time-inside-objects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:IRI ;
 	sh:targetObjectsOf time:inside ;
 	.
 
-sh-case-corpora-local:time-intervalContains-domain-shape
+sh-case-corpora-local:time-inside-subjects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:IRI ;
-	sh:targetSubjectsOf time:intervalContains ;
+	sh:targetSubjectsOf time:inside ;
 	.
 
-sh-case-corpora-local:time-intervalContains-range-shape
+sh-case-corpora-local:time-intervalContains-objects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:IRI ;
 	sh:targetObjectsOf time:intervalContains ;
 	.
 
-sh-case-corpora-local:time-intervalDuring-domain-shape
+sh-case-corpora-local:time-intervalContains-subjects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:IRI ;
-	sh:targetSubjectsOf time:intervalDuring ;
+	sh:targetSubjectsOf time:intervalContains ;
 	.
 
-sh-case-corpora-local:time-intervalDuring-range-shape
+sh-case-corpora-local:time-intervalDuring-objects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:IRI ;
 	sh:targetObjectsOf time:intervalDuring ;
 	.
 
-sh-case-corpora-local:time-intervalEquals-domain-shape
+sh-case-corpora-local:time-intervalDuring-subjects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:IRI ;
-	sh:targetSubjectsOf time:intervalEquals ;
+	sh:targetSubjectsOf time:intervalDuring ;
 	.
 
-sh-case-corpora-local:time-intervalEquals-range-shape
+sh-case-corpora-local:time-intervalEquals-objects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:IRI ;
 	sh:targetObjectsOf time:intervalEquals ;
 	.
 
-sh-case-corpora-local:time-intervalIn-domain-shape
+sh-case-corpora-local:time-intervalEquals-subjects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:IRI ;
-	sh:targetSubjectsOf time:intervalIn ;
+	sh:targetSubjectsOf time:intervalEquals ;
 	.
 
-sh-case-corpora-local:time-intervalIn-range-shape
+sh-case-corpora-local:time-intervalIn-objects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:IRI ;
 	sh:targetObjectsOf time:intervalIn ;
 	.
 
-sh-dcterms:contributor-suggested-range-shape
+sh-case-corpora-local:time-intervalIn-subjects-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:IRI ;
+	sh:targetSubjectsOf time:intervalIn ;
+	.
+
+sh-dcterms:contributor-suggested-objects-shape
 	rdfs:comment "Deactivated due to requiring RDFS inferencing enabled to work with metadata attached to several upstream ontologies."@en ;
 	sh:deactivated "true"^^xsd:boolean ;
 	.
 
-sh-dcterms:creator-suggested-range-shape
+sh-dcterms:creator-suggested-objects-shape
 	rdfs:comment "Deactivated due to requiring RDFS inferencing enabled to work with metadata attached to several upstream ontologies."@en ;
 	sh:deactivated "true"^^xsd:boolean ;
 	.
 
-sh-dcterms:license-suggested-range-shape
+sh-dcterms:license-suggested-objects-shape
 	rdfs:comment "Deactivated due to usage pattern of property in upstream ontologies."@en ;
 	sh:deactivated "true"^^xsd:boolean ;
 	.
 
-sh-dcterms:publisher-suggested-range-shape
+sh-dcterms:publisher-suggested-objects-shape
 	rdfs:comment "Deactivated due to requiring RDFS inferencing enabled to work with metadata attached to several upstream ontologies."@en ;
 	sh:deactivated "true"^^xsd:boolean ;
 	.
 
-sh-dcterms:rights-suggested-range-shape
+sh-dcterms:rights-suggested-objects-shape
 	rdfs:comment "Deactivated due to usage pattern of property in upstream ontologies."@en ;
 	sh:deactivated "true"^^xsd:boolean ;
 	.

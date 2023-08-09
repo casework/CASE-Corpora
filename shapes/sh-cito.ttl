@@ -21,22 +21,22 @@
 		;
 	.
 
-sh-cito:cites-range-shape
+sh-cito:cites-objects-shape
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf cito:cites ;
 	.
 
-sh-cito:documents-range-shape
+sh-cito:documents-objects-shape
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf cito:documents ;
 	.
 
-sh-cito:isCitedBy-range-shape
+sh-cito:isCitedBy-objects-shape
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf cito:isCitedBy ;
 	.
 
-sh-cito:isDocumentedBy-range-shape
+sh-cito:isDocumentedBy-objects-shape
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf cito:isDocumentedBy ;
 	.

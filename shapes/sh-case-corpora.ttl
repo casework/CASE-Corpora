@@ -146,13 +146,6 @@ drafting:FileHashQuality
 	sh:targetClass drafting:FileHashQuality ;
 	.
 
-drafting:hasQuality-domain-shape
-	a sh:NodeShape ;
-	sh:class uco-core:UcoObject ;
-	sh:nodeKind sh:IRI ;
-	sh:targetSubjectsOf drafting:hasQuality ;
-	.
-
 drafting:hasQuality-inverse-functional-shape
 	a sh:PropertyShape ;
 	sh:maxCount "1"^^xsd:integer ;
@@ -162,32 +155,32 @@ drafting:hasQuality-inverse-functional-shape
 	sh:targetObjectsOf drafting:hasQuality ;
 	.
 
-drafting:hasQuality-range-shape
+drafting:hasQuality-objects-shape
 	a sh:NodeShape ;
 	sh:class drafting:Quality ;
 	sh:nodeKind sh:IRI ;
 	sh:targetObjectsOf drafting:hasQuality ;
 	.
 
-drafting:isAutomated-domain-shape
+drafting:hasQuality-subjects-shape
 	a sh:NodeShape ;
-	sh:class uco-action:Action ;
+	sh:class uco-core:UcoObject ;
 	sh:nodeKind sh:IRI ;
-	sh:targetSubjectsOf drafting:isAutomated ;
+	sh:targetSubjectsOf drafting:hasQuality ;
 	.
 
-drafting:isAutomated-range-shape
+drafting:isAutomated-objects-shape
 	a sh:NodeShape ;
 	sh:datatype xsd:boolean ;
 	sh:nodeKind sh:Literal ;
 	sh:targetObjectsOf drafting:isAutomated ;
 	.
 
-drafting:isQualityOf-domain-shape
+drafting:isAutomated-subjects-shape
 	a sh:NodeShape ;
-	sh:class drafting:Quality ;
+	sh:class uco-action:Action ;
 	sh:nodeKind sh:IRI ;
-	sh:targetSubjectsOf drafting:isQualityOf ;
+	sh:targetSubjectsOf drafting:isAutomated ;
 	.
 
 drafting:isQualityOf-functional-shape
@@ -197,20 +190,21 @@ drafting:isQualityOf-functional-shape
 	sh:targetSubjectsOf drafting:isQualityOf ;
 	.
 
-drafting:isQualityOf-range-shape
+drafting:isQualityOf-objects-shape
 	a sh:NodeShape ;
 	sh:class uco-core:UcoObject ;
 	sh:nodeKind sh:IRI ;
 	sh:targetObjectsOf drafting:isQualityOf ;
 	.
 
-sh-case-corpora:hasDatasetDirectory-domain-shape
+drafting:isQualityOf-subjects-shape
 	a sh:NodeShape ;
-	sh:class dcat:Dataset ;
-	sh:targetSubjectsOf case-corpora:hasDatasetDirectory ;
+	sh:class drafting:Quality ;
+	sh:nodeKind sh:IRI ;
+	sh:targetSubjectsOf drafting:isQualityOf ;
 	.
 
-sh-case-corpora:hasDatasetDirectory-range-shape
+sh-case-corpora:hasDatasetDirectory-objects-shape
 	a sh:NodeShape ;
 	sh:datatype xsd:string ;
 	sh:description "The pattern for dataset directory names is lowercase alphanumeric ASCII characters, and hyphens.  The name should not start or end with a hyphen."@en ;
@@ -219,25 +213,25 @@ sh-case-corpora:hasDatasetDirectory-range-shape
 	sh:targetObjectsOf case-corpora:hasDatasetDirectory ;
 	.
 
-sh-case-corpora:hasDistribution-domain-shape
+sh-case-corpora:hasDatasetDirectory-subjects-shape
 	a sh:NodeShape ;
-	sh:class case-corpora:Dataset ;
-	sh:targetSubjectsOf case-corpora:hasDistribution ;
+	sh:class dcat:Dataset ;
+	sh:targetSubjectsOf case-corpora:hasDatasetDirectory ;
 	.
 
-sh-case-corpora:hasDistribution-range-shape
+sh-case-corpora:hasDistribution-objects-shape
 	a sh:NodeShape ;
 	sh:class case-corpora:Distribution ;
 	sh:targetObjectsOf case-corpora:hasDistribution ;
 	.
 
-sh-case-corpora:hasDownloadURL-domain-shape
+sh-case-corpora:hasDistribution-subjects-shape
 	a sh:NodeShape ;
-	sh:class case-corpora:Distribution ;
-	sh:targetSubjectsOf case-corpora:hasDownloadURL ;
+	sh:class case-corpora:Dataset ;
+	sh:targetSubjectsOf case-corpora:hasDistribution ;
 	.
 
-sh-case-corpora:hasDownloadURL-range-shape
+sh-case-corpora:hasDownloadURL-objects-shape
 	a sh:NodeShape ;
 	sh:class uco-observable:URL ;
 	sh:property [
@@ -256,6 +250,12 @@ sh-case-corpora:hasDownloadURL-range-shape
 		] ;
 	] ;
 	sh:targetObjectsOf case-corpora:hasDownloadURL ;
+	.
+
+sh-case-corpora:hasDownloadURL-subjects-shape
+	a sh:NodeShape ;
+	sh:class case-corpora:Distribution ;
+	sh:targetSubjectsOf case-corpora:hasDownloadURL ;
 	.
 
 uco-action:Action

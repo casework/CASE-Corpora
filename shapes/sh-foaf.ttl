@@ -17,26 +17,26 @@
 		;
 	.
 
-sh-foaf:page-range-shape
+sh-foaf:page-objects-shape
 	a sh:NodeShape ;
 	sh:class foaf:Document ;
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf foaf:page ;
 	.
 
-sh-foaf:primaryTopic-domain-shape
-	a sh:NodeShape ;
-	sh:class foaf:Document ;
-	sh:targetSubjectsOf foaf:primaryTopic ;
-	.
-
-sh-foaf:primaryTopic-range-shape
+sh-foaf:primaryTopic-objects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf foaf:primaryTopic ;
 	.
 
-sh-foaf:topic-domain-shape
+sh-foaf:primaryTopic-subjects-shape
+	a sh:NodeShape ;
+	sh:class foaf:Document ;
+	sh:targetSubjectsOf foaf:primaryTopic ;
+	.
+
+sh-foaf:topic-subjects-shape
 	a sh:NodeShape ;
 	sh:class foaf:Document ;
 	sh:nodeKind sh:BlankNodeOrIRI ;

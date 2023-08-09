@@ -21,14 +21,14 @@
 		;
 	.
 
-sh-dcterms:accrualPeriodicity-domain-shape
+sh-dcterms:accrualPeriodicity-subjects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/accrualPeriodicity> ;
 	sh:class dctype:Collection ;
 	sh:targetSubjectsOf dcterms:accrualPeriodicity ;
 	.
 
-sh-dcterms:conformsTo-suggested-range-shape
+sh-dcterms:conformsTo-suggested-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
 	sh:class dcterms:Standard ;
@@ -36,7 +36,7 @@ sh-dcterms:conformsTo-suggested-range-shape
 	sh:targetObjectsOf dcterms:conformsTo ;
 	.
 
-sh-dcterms:contributor-suggested-range-shape
+sh-dcterms:contributor-suggested-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
 	sh:class dcterms:Agent ;
@@ -44,13 +44,13 @@ sh-dcterms:contributor-suggested-range-shape
 	sh:targetObjectsOf dcterms:contributor ;
 	.
 
-sh-dcterms:created-range-shape
+sh-dcterms:created-objects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:Literal ;
 	sh:targetObjectsOf dcterms:created ;
 	.
 
-sh-dcterms:creator-suggested-range-shape
+sh-dcterms:creator-suggested-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
 	sh:class dcterms:Agent ;
@@ -58,7 +58,7 @@ sh-dcterms:creator-suggested-range-shape
 	sh:targetObjectsOf dcterms:creator ;
 	.
 
-sh-dcterms:date-range-shape
+sh-dcterms:date-objects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:Literal ;
 	sh:targetObjectsOf dcterms:date ;
@@ -70,7 +70,7 @@ sh-dcterms:description-shape
 	sh:targetSubjectsOf dcterms:description ;
 	.
 
-sh-dcterms:format-suggested-range-shape
+sh-dcterms:format-suggested-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso
 		sh-dcam:rangeincludes-shape ,
@@ -90,7 +90,7 @@ sh-dcterms:format-suggested-range-shape
 	sh:targetObjectsOf dcterms:format ;
 	.
 
-sh-dcterms:hasPart-suggested-range-shape
+sh-dcterms:hasPart-suggested-objects-shape
 	a sh:NodeShape ;
 	rdfs:comment "This shape is drawn from the intended usage in the property's dcterms:description.  The property has no implemented rdfs:range restrictions."@en ;
 	sh:nodeKind sh:BlankNodeOrIRI ;
@@ -104,7 +104,7 @@ sh-dcterms:hasVersion-shape
 	sh:targetSubjectsOf dcterms:hasVersion ;
 	.
 
-sh-dcterms:identifier-range-shape
+sh-dcterms:identifier-objects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:Literal ;
 	sh:targetObjectsOf dcterms:identifier ;
@@ -116,13 +116,13 @@ sh-dcterms:isVersionOf-shape
 	sh:targetSubjectsOf dcterms:hasVersion ;
 	.
 
-sh-dcterms:issued-range-shape
+sh-dcterms:issued-objects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:Literal ;
 	sh:targetObjectsOf dcterms:issued ;
 	.
 
-sh-dcterms:language-suggested-range-shape
+sh-dcterms:language-suggested-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
 	sh:or (
@@ -139,7 +139,7 @@ sh-dcterms:language-suggested-range-shape
 	sh:targetObjectsOf dcterms:language ;
 	.
 
-sh-dcterms:license-suggested-range-shape
+sh-dcterms:license-suggested-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
 	sh:class dcterms:LicenseDocument ;
@@ -147,14 +147,14 @@ sh-dcterms:license-suggested-range-shape
 	sh:targetObjectsOf dcterms:license ;
 	.
 
-sh-dcterms:modified-range-shape
+sh-dcterms:modified-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified> ;
 	sh:nodeKind sh:Literal ;
 	sh:targetObjectsOf dcterms:modified ;
 	.
 
-sh-dcterms:publisher-suggested-range-shape
+sh-dcterms:publisher-suggested-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
 	sh:class dcterms:Agent ;
@@ -168,7 +168,7 @@ sh-dcterms:relation-shape
 	sh:targetSubjectsOf dcterms:relation ;
 	.
 
-sh-dcterms:rights-suggested-range-shape
+sh-dcterms:rights-suggested-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso sh-dcam:rangeincludes-shape ;
 	sh:class dcterms:RightsStatement ;
@@ -182,7 +182,7 @@ sh-dcterms:subject-shape
 	sh:targetSubjectsOf dcterms:subject ;
 	.
 
-sh-dcterms:title-range-shape
+sh-dcterms:title-objects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:Literal ;
 	sh:targetObjectsOf dcterms:title ;

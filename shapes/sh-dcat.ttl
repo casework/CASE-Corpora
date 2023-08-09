@@ -37,13 +37,7 @@ sh-dcat:CatalogRecord-shape
 	sh:targetClass dcat:CatalogRecord ;
 	.
 
-sh-dcat:compressFormat-domain-shape
-	a sh:NodeShape ;
-	sh:class dcat:Distribution ;
-	sh:targetSubjectsOf dcat:compressFormat ;
-	.
-
-sh-dcat:compressFormat-range-shape
+sh-dcat:compressFormat-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_compression_format> ;
 	sh:class dcterms:MediaType ;
@@ -51,40 +45,46 @@ sh-dcat:compressFormat-range-shape
 	sh:targetObjectsOf dcat:compressFormat ;
 	.
 
-sh-dcat:contactPoint-range-shape
+sh-dcat:compressFormat-subjects-shape
+	a sh:NodeShape ;
+	sh:class dcat:Distribution ;
+	sh:targetSubjectsOf dcat:compressFormat ;
+	.
+
+sh-dcat:contactPoint-objects-shape
 	a sh:NodeShape ;
 	sh:class vcard:Kind ;
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf dcat:contactPoint ;
 	.
 
-sh-dcat:dataset-domain-shape
-	a sh:NodeShape ;
-	sh:class dcat:Catalog ;
-	sh:targetSubjectsOf dcat:dataset ;
-	.
-
-sh-dcat:dataset-range-shape
+sh-dcat:dataset-objects-shape
 	a sh:NodeShape ;
 	sh:class dcat:Dataset ;
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf dcat:dataset ;
 	.
 
-sh-dcat:downloadURL-domain-shape
+sh-dcat:dataset-subjects-shape
 	a sh:NodeShape ;
-	sh:class dcat:Distribution ;
-	sh:targetSubjectsOf dcat:downloadURL ;
+	sh:class dcat:Catalog ;
+	sh:targetSubjectsOf dcat:dataset ;
 	.
 
-sh-dcat:downloadURL-range-shape
+sh-dcat:downloadURL-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url> ;
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf dcat:downloadURL ;
 	.
 
-sh-dcat:downloadURL-suggested-range-shape
+sh-dcat:downloadURL-subjects-shape
+	a sh:NodeShape ;
+	sh:class dcat:Distribution ;
+	sh:targetSubjectsOf dcat:downloadURL ;
+	.
+
+sh-dcat:downloadURL-suggested-objects-shape
 	a sh:NodeShape ;
 	sh:message "Per scope note on dcat:downloadURL: 'dcat:downloadURL SHOULD be used for the address at which this distribution is available directly, typically through a HTTP Get request.'"@en ;
 	sh:nodeKind sh:IRI ;
@@ -92,13 +92,13 @@ sh-dcat:downloadURL-suggested-range-shape
 	sh:targetObjectsOf dcat:downloadURL ;
 	.
 
-sh-dcat:keyword-range-shape
+sh-dcat:keyword-objects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:Literal ;
 	sh:targetObjectsOf dcat:keyword ;
 	.
 
-sh-dcat:landingPage-range-shape
+sh-dcat:landingPage-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page> ;
 	sh:class foaf:Document ;
@@ -106,26 +106,20 @@ sh-dcat:landingPage-range-shape
 	sh:targetObjectsOf dcat:landingPage ;
 	.
 
-sh-dcat:mediaType-domain-shape
-	a sh:NodeShape ;
-	sh:class dcat:Distribution ;
-	sh:targetSubjectsOf dcat:mediaType ;
-	.
-
-sh-dcat:mediaType-range-shape
+sh-dcat:mediaType-objects-shape
 	a sh:NodeShape ;
 	sh:class dcterms:MediaType ;
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf dcat:mediaType ;
 	.
 
-sh-dcat:packageFormat-domain-shape
+sh-dcat:mediaType-subjects-shape
 	a sh:NodeShape ;
 	sh:class dcat:Distribution ;
-	sh:targetSubjectsOf dcat:packageFormat ;
+	sh:targetSubjectsOf dcat:mediaType ;
 	.
 
-sh-dcat:packageFormat-range-shape
+sh-dcat:packageFormat-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format> ;
 	sh:class dcterms:MediaType ;
@@ -133,17 +127,23 @@ sh-dcat:packageFormat-range-shape
 	sh:targetObjectsOf dcat:packageFormat ;
 	.
 
-sh-dcat:record-domain-shape
+sh-dcat:packageFormat-subjects-shape
 	a sh:NodeShape ;
-	sh:class dcat:Catalog ;
-	sh:targetSubjectsOf dcat:record ;
+	sh:class dcat:Distribution ;
+	sh:targetSubjectsOf dcat:packageFormat ;
 	.
 
-sh-dcat:record-range-shape
+sh-dcat:record-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog_record> ;
 	sh:class dcat:CatalogRecord ;
 	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:targetObjectsOf dcat:record ;
+	.
+
+sh-dcat:record-subjects-shape
+	a sh:NodeShape ;
+	sh:class dcat:Catalog ;
+	sh:targetSubjectsOf dcat:record ;
 	.
 

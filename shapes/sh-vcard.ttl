@@ -27,14 +27,14 @@ sh-vcard:Kind-shape
 	sh:targetClass vcard:Kind ;
 	.
 
-sh-vcard:fn-range-shape
+sh-vcard:fn-objects-shape
 	a sh:NodeShape ;
 	sh:datatype xsd:string ;
 	sh:nodeKind sh:Literal ;
 	sh:targetObjectsOf vcard:fn ;
 	.
 
-sh-vcard:hasEmail-range-shape
+sh-vcard:hasEmail-objects-shape
 	a sh:NodeShape ;
 	sh:class vcard:Email ;
 	sh:nodeKind sh:IRI ;

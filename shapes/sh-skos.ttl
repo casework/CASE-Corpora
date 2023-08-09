@@ -17,7 +17,7 @@
 		;
 	.
 
-sh-skos:prefLabel-range-shape
+sh-skos:prefLabel-objects-shape
 	a sh:NodeShape ;
 	sh:nodeKind sh:Literal ;
 	sh:targetObjectsOf skos:prefLabel ;

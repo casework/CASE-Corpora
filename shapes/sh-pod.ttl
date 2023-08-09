@@ -11,7 +11,7 @@
 	rdfs:comment "No OWL ontology or RDFS Schema file was found for input into these shapes."@en ;
 	.
 
-sh-pod:accessLevel-range-shape
+sh-pod:accessLevel-objects-shape
 	a sh:NodeShape ;
 	rdfs:seeAlso <https://resources.data.gov/resources/dcat-us/#accessLevel> ;
 	sh:nodeKind sh:Literal ;
