@@ -31,6 +31,7 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/dcterms.ttl" name="http://purl.org/dc/terms/"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/discourse-relationships.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/discourse-relationships.ttl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/foaf.ttl" name="http://xmlns.com/foaf/0.1/"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/org.ttl" name="http://www.w3.org/ns/org#"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/prov-o.ttl" name="http://www.w3.org/ns/prov-o#"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/prov-o.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/prov-o.ttl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/situation.ttl" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
@@ -48,6 +49,7 @@
     <uri id="User Entered Import Resolution" uri="sh-dcat-us.ttl" name="http://example.org/shapes/dcat-us"/>
     <uri id="User Entered Import Resolution" uri="sh-dcat.ttl" name="http://example.org/shapes/dcat"/>
     <uri id="User Entered Import Resolution" uri="sh-dcterms.ttl" name="http://example.org/shapes/dcterms"/>
+    <uri id="User Entered Import Resolution" uri="sh-org.ttl" name="http://example.org/shapes/org"/>
     <uri id="User Entered Import Resolution" uri="sh-situation.ttl" name="http://example.org/shapes/situation"/>
     <uri id="User Entered Import Resolution" uri="sh-sosa.ttl" name="http://example.org/shapes/sosa"/>
     <uri id="User Entered Import Resolution" uri="sh-ssn.ttl" name="http://example.org/shapes/ssn"/>
