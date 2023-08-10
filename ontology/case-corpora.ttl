@@ -2,6 +2,7 @@
 # imports: http://www.w3.org/2006/time#2016
 # imports: http://www.w3.org/2006/vcard/ns
 # imports: http://www.w3.org/ns/dcat
+# imports: http://www.w3.org/ns/org#
 # imports: http://xmlns.com/foaf/0.1/
 # imports: https://ontology.caseontology.org/case/case/1.2.0
 # imports: https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/prov-o.ttl
@@ -14,6 +15,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -38,6 +40,7 @@
 		time:2016 ,
 		<http://www.w3.org/2006/vcard/ns> ,
 		<http://www.w3.org/ns/dcat> ,
+		<http://www.w3.org/ns/org#> ,
 		<http://xmlns.com/foaf/0.1/> ,
 		<https://ontology.caseontology.org/case/case/1.2.0> ,
 		<https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/prov-o.ttl> ,
@@ -77,6 +80,15 @@ case-corpora:IANAMediaType
 	rdfs:seeAlso
 		dcterms:format ,
 		<https://github.com/ucoProject/UCO/issues/363>
+		;
+	.
+
+case-corpora:Organization
+	a owl:Class ;
+	rdfs:subClassOf
+		org:Organization ,
+		foaf:Organization ,
+		uco-identity:Organization
 		;
 	.
 

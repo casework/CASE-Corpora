@@ -46,7 +46,7 @@ kb:distribution-adc5fd35-e9fa-4d1b-8598-f5ce3bba3e9c
 	.
 
 kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e
-	a org:Organization ;
+	a case-corpora:Organization ;
 	skos:prefLabel "The CASE Community" ;
 	.
 

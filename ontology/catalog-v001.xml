@@ -28,6 +28,7 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/dcat.ttl" name="http://www.w3.org/ns/dcat"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/dcterms.ttl" name="http://purl.org/dc/terms/"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/foaf.ttl" name="http://xmlns.com/foaf/0.1/"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/org.ttl" name="http://www.w3.org/ns/org#"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/prov-o.ttl" name="http://www.w3.org/ns/prov-o#"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/prov-o.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/prov-o.ttl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/situation.ttl" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>

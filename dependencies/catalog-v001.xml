@@ -6,6 +6,7 @@
     <uri id="User Entered Import Resolution" uri="dcterms.ttl" name="http://purl.org/dc/terms/"/>
     <uri id="User Entered Import Resolution" uri="discourse-relationships.ttl" name="http://purl.org/swan/2.0/discourse-relationships/"/>
     <uri id="User Entered Import Resolution" uri="foaf.ttl" name="http://xmlns.com/foaf/0.1/"/>
+    <uri id="User Entered Import Resolution" uri="org.ttl" name="http://www.w3.org/ns/org#"/>
     <uri id="User Entered Import Resolution" uri="prov-o.ttl" name="http://www.w3.org/ns/prov#"/>
     <uri id="User Entered Import Resolution" uri="prov-o.ttl" name="http://www.w3.org/ns/prov-o#"/>
     <uri id="User Entered Import Resolution" uri="situation.ttl" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>

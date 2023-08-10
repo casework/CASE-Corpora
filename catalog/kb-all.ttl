@@ -8,7 +8,6 @@
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix orcid: <https://orcid.org/> .
-@prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pod: <https://project-open-data.cio.gov/v1.1/schema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -9970,18 +9969,18 @@ kb:operating-system-facet-d79d75c8-7740-4c29-b173-2b94d012637c
 	.
 
 kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e
-	a org:Organization ;
+	a case-corpora:Organization ;
 	skos:prefLabel "The CASE Community" ;
 	.
 
 kb:organization-6ee3224c-c27c-4a8c-8a64-27bcff396e53
-	a org:Organization ;
+	a case-corpora:Organization ;
 	skos:prefLabel "DFRWS" ;
 	.
 
 kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5
 	a
-		org:Organization ,
+		case-corpora:Organization ,
 		prov:Agent
 		;
 	skos:prefLabel "Digital Corpora" ;
