@@ -24,6 +24,7 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix uco-time: <https://ontology.unifiedcyberontology.org/uco/time/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
@@ -101,7 +102,8 @@ case-corpora:contact-00000000-0000-0000-0000-000000000000
 	a
 		owl:NamedIndividual ,
 		vcard:Contact ,
-		vcard:Individual
+		vcard:Individual ,
+		uco-identity:Identity
 		;
 	rdfs:comment "This named individual is provided as a stand-in to make explicit that no point of contact is available, linked, or otherwise represented for a dataset."@en ;
 	rdfs:seeAlso
