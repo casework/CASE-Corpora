@@ -503,7 +503,7 @@ kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
 		;
-	uco-action:performer kb:contact-00000000-0000-0000-0000-000000000000 ;
+	uco-action:performer case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
 	uco-action:result kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772 ;
 	uco-core:description "TODO - undocumented modification to contents of blk0_mmcblk0.bin" ;
 	.
@@ -520,7 +520,7 @@ kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8
 		;
-	uco-action:performer kb:contact-00000000-0000-0000-0000-000000000000 ;
+	uco-action:performer case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
 	uco-action:result kb:provenance-record-949cf353-d9c9-4513-a4b8-6a1c95243688 ;
 	uco-core:description "TODO - undocumented modification to contents of blk0_mmcblk0.bin" ;
 	.
