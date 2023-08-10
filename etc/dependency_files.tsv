@@ -9,6 +9,7 @@ http://www.w3.org/2004/02/skos/core	${top_srcdir}/dependencies/skos.ttl
 http://www.w3.org/2006/time#2016	${top_srcdir}/dependencies/time.ttl
 http://www.w3.org/2006/vcard/ns	${top_srcdir}/dependencies/vcard.ttl
 http://www.w3.org/ns/dcat	${top_srcdir}/dependencies/dcat.ttl
+http://www.w3.org/ns/org#	${top_srcdir}/dependencies/org.ttl
 http://xmlns.com/foaf/0.1/	${top_srcdir}/dependencies/foaf.ttl
 https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/prov-o.ttl	${top_srcdir}/dependencies/prov-o.ttl
 https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/sosa.ttl	${top_srcdir}/dependencies/sosa.ttl

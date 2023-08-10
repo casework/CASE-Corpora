@@ -1,0 +1,67 @@
+# imports: http://example.org/shapes/foaf
+# imports: http://www.w3.org/ns/org#
+
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-org: <http://example.org/shapes/org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/shapes/org>
+	a owl:Ontology ;
+	owl:imports
+		<http://example.org/shapes/foaf> ,
+		<http://www.w3.org/ns/org#>
+		;
+	.
+
+sh-org:ChangeEvent-disjointWith-Organization-shape
+	a sh:NodeShape ;
+	sh:message "org:ChangeEvent and org:Organization are disjoint classes."@en ;
+	sh:not [
+		a sh:NodeShape ;
+		sh:class org:Organization ;
+	] ;
+	sh:targetClass org:ChangeEvent ;
+	.
+
+sh-org:Membership-disjointWith-Organization-shape
+	a sh:NodeShape ;
+	sh:message "org:Membership and org:Organization are disjoint classes."@en ;
+	sh:not [
+		a sh:NodeShape ;
+		sh:class org:Organization ;
+	] ;
+	sh:targetClass org:Membership ;
+	.
+
+sh-org:Organization-disjointWith-Role-shape
+	a sh:NodeShape ;
+	sh:message "org:Organization and org:Role are disjoint classes."@en ;
+	sh:not [
+		a sh:NodeShape ;
+		sh:class org:Role ;
+	] ;
+	sh:targetClass org:Organization ;
+	.
+
+sh-org:Organization-disjointWith-Site-shape
+	a sh:NodeShape ;
+	sh:message "org:Organization and org:Site are disjoint classes."@en ;
+	sh:not [
+		a sh:NodeShape ;
+		sh:class org:Site ;
+	] ;
+	sh:targetClass org:Organization ;
+	.
+
+sh-org:Organization-shape
+	a sh:NodeShape ;
+	rdfs:comment "org:Organization declares itself an equivalent class with foaf:Organization."@en ;
+	sh:class foaf:Organization ;
+	sh:targetClass org:Organization ;
+	.
+
