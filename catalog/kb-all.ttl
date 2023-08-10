@@ -67,11 +67,6 @@ kb:Association-2703588e-2374-5b1d-8e5a-22019d98f525
 	prov:agent orcid:0000-0002-3771-570X ;
 	.
 
-kb:Association-29ba35ea-c274-507f-aea4-66a2430625f9
-	a prov:Association ;
-	prov:agent kb:contact-00000000-0000-0000-0000-000000000000 ;
-	.
-
 kb:Association-2d1bc687-87a6-5d31-b528-27ccfb10baf7
 	a prov:Association ;
 	prov:agent kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
@@ -122,11 +117,6 @@ kb:Association-4791bfd7-d1cb-5e08-a6ae-692343987942
 	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	.
 
-kb:Association-491ed50c-16c2-5c30-91a7-0d3fcf3da44a
-	a prov:Association ;
-	prov:agent kb:contact-00000000-0000-0000-0000-000000000000 ;
-	.
-
 kb:Association-4beca24c-3a18-59d9-a78c-277df4d9d82f
 	a prov:Association ;
 	prov:agent kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
@@ -150,6 +140,16 @@ kb:Association-4f6303c0-e168-5bc1-9b49-4a4bcf303a5c
 kb:Association-59689f3e-9d40-5d41-8a4a-07a36011a5aa
 	a prov:Association ;
 	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	.
+
+kb:Association-7c368888-0883-5ec4-bbb6-44ccf404802e
+	a prov:Association ;
+	prov:agent case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+	.
+
+kb:Association-893b3ecf-a097-5bd9-b075-65b97a1052b5
+	a prov:Association ;
+	prov:agent case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
 	.
 
 kb:Association-8f9a3198-5b07-5e38-b3e3-ce9506bf40aa
@@ -327,6 +327,11 @@ kb:Attribution-1f86e70c-a30c-5628-a6ac-92bb35dab2b1
 	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	.
 
+kb:Attribution-235d094c-7503-5d8b-8641-1d9edd37f633
+	a prov:Attribution ;
+	prov:agent case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
+	.
+
 kb:Attribution-24f6a1cf-248e-5bdb-a999-6252ad848cb2
 	a prov:Attribution ;
 	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
@@ -365,6 +370,11 @@ kb:Attribution-31769168-fa12-5c1c-8dfc-e377cee4cc0a
 kb:Attribution-374155d5-3ea9-5c03-91cd-c0eaf33adb81
 	a prov:Attribution ;
 	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	.
+
+kb:Attribution-3e363690-9a4a-5d7c-845a-892d7a625db3
+	a prov:Attribution ;
+	prov:agent case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
 	.
 
 kb:Attribution-49be9b20-1356-5c85-a0c6-250a0555e7b9
@@ -470,11 +480,6 @@ kb:Attribution-7288e2ea-66f5-5a87-ac96-a5b60bbb8ee8
 kb:Attribution-73f444b7-6101-5585-8c15-d64b0ac78d9a
 	a prov:Attribution ;
 	prov:agent kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	.
-
-kb:Attribution-74448367-471b-50c5-a154-bc4675377b86
-	a prov:Attribution ;
-	prov:agent kb:contact-00000000-0000-0000-0000-000000000000 ;
 	.
 
 kb:Attribution-748ceb5b-cc4f-58f0-b153-63b44549204a
@@ -610,11 +615,6 @@ kb:Attribution-c6162383-06a4-549b-a6ff-bdf31a805d70
 kb:Attribution-c6fadc47-9a16-5ae2-ad25-a4f3b3ce0511
 	a prov:Attribution ;
 	prov:agent kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
-	.
-
-kb:Attribution-ca599c81-8d95-58c4-80c4-c1f3b63bed9e
-	a prov:Attribution ;
-	prov:agent kb:contact-00000000-0000-0000-0000-000000000000 ;
 	.
 
 kb:Attribution-caf88561-6773-5a06-af74-c02d9861a38f
@@ -6203,7 +6203,7 @@ kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853
 		kb:Usage-4f37cfc0-9be0-59ec-8f50-9e96915f6c3c ,
 		kb:Usage-7e06f356-22b0-5614-95fb-d80dc867f306
 		;
-	prov:qualifiedAssociation kb:Association-29ba35ea-c274-507f-aea4-66a2430625f9 ;
+	prov:qualifiedAssociation kb:Association-893b3ecf-a097-5bd9-b075-65b97a1052b5 ;
 	prov:qualifiedCommunication kb:Communication-f288eb93-27e7-513a-a45f-839ac6b655f2 ;
 	prov:qualifiedStart kb:Start-11d53688-d584-5809-bf45-730f8e98762b ;
 	prov:qualifiedUsage
@@ -6214,7 +6214,7 @@ kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
 		;
-	prov:wasAssociatedWith kb:contact-00000000-0000-0000-0000-000000000000 ;
+	prov:wasAssociatedWith case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
 	prov:wasInformedBy kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e ;
 	sosa:actsOnProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
 	sosa:hasFeatureOfInterest kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
@@ -6222,7 +6222,7 @@ kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
 		;
-	uco-action:performer kb:contact-00000000-0000-0000-0000-000000000000 ;
+	uco-action:performer case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
 	uco-action:result kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772 ;
 	uco-core:description "TODO - undocumented modification to contents of blk0_mmcblk0.bin" ;
 	.
@@ -6241,7 +6241,7 @@ kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f
 		kb:Usage-380da3af-62d5-59ed-8c1f-8f48e879704b ,
 		kb:Usage-481613e7-cc40-5d5a-a20d-d665655639b5
 		;
-	prov:qualifiedAssociation kb:Association-491ed50c-16c2-5c30-91a7-0d3fcf3da44a ;
+	prov:qualifiedAssociation kb:Association-7c368888-0883-5ec4-bbb6-44ccf404802e ;
 	prov:qualifiedCommunication kb:Communication-d816b35e-10ce-5529-aded-c76a2d186fe5 ;
 	prov:qualifiedStart kb:Start-c540873c-ccf7-5a2d-be01-f233854c3ba0 ;
 	prov:qualifiedUsage
@@ -6252,7 +6252,7 @@ kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8
 		;
-	prov:wasAssociatedWith kb:contact-00000000-0000-0000-0000-000000000000 ;
+	prov:wasAssociatedWith case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
 	prov:wasInformedBy kb:observation-b1ea91ee-5e9a-4b75-979e-e41a56171b66 ;
 	sosa:actsOnProperty kb:file-hash-quality-c1cd7a4e-ee6c-40df-bfea-18bce3cfaa55 ;
 	sosa:hasFeatureOfInterest kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
@@ -6260,7 +6260,7 @@ kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8
 		;
-	uco-action:performer kb:contact-00000000-0000-0000-0000-000000000000 ;
+	uco-action:performer case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
 	uco-action:result kb:provenance-record-949cf353-d9c9-4513-a4b8-6a1c95243688 ;
 	uco-core:description "TODO - undocumented modification to contents of blk0_mmcblk0.bin" ;
 	.
@@ -7195,10 +7195,6 @@ kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
 		;
 	dcat:landingPage <https://github.com/casework/CASE-Corpora/> ;
 	pod:accessLevel "public" ;
-	.
-
-kb:contact-00000000-0000-0000-0000-000000000000
-	a prov:Agent ;
 	.
 
 kb:content-data-facet-03f2058f-8178-4a6a-9a78-fdf1d2a116f0
@@ -10538,13 +10534,13 @@ kb:provenance-record-949cf353-d9c9-4513-a4b8-6a1c95243688
 		case-investigation:ProvenanceRecord
 		;
 	prov:hadMember kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
-	prov:qualifiedAttribution kb:Attribution-74448367-471b-50c5-a154-bc4675377b86 ;
+	prov:qualifiedAttribution kb:Attribution-235d094c-7503-5d8b-8641-1d9edd37f633 ;
 	prov:qualifiedDerivation
 		kb:Derivation-ed26bd7b-2718-5eb1-b53a-15bebb69d918 ,
 		kb:Derivation-ff379abb-3019-5a08-8a63-ef130a7ce7f2
 		;
 	prov:qualifiedGeneration kb:Generation-e0e2da82-5191-57de-ae56-287b289a0bba ;
-	prov:wasAttributedTo kb:contact-00000000-0000-0000-0000-000000000000 ;
+	prov:wasAttributedTo case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
 	prov:wasDerivedFrom
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8
@@ -10728,13 +10724,13 @@ kb:provenance-record-b130dc0e-96a3-4195-ba75-6edaf6c1c772
 		case-investigation:ProvenanceRecord
 		;
 	prov:hadMember kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
-	prov:qualifiedAttribution kb:Attribution-ca599c81-8d95-58c4-80c4-c1f3b63bed9e ;
+	prov:qualifiedAttribution kb:Attribution-3e363690-9a4a-5d7c-845a-892d7a625db3 ;
 	prov:qualifiedDerivation
 		kb:Derivation-05d39036-c839-55ea-b88d-c51827270fed ,
 		kb:Derivation-a23229af-60e6-54e0-9fa6-d6c1ab7f5120
 		;
 	prov:qualifiedGeneration kb:Generation-d08c623e-e63b-56c4-80fe-cd4973740550 ;
-	prov:wasAttributedTo kb:contact-00000000-0000-0000-0000-000000000000 ;
+	prov:wasAttributedTo case-corpora:contact-00000000-0000-0000-0000-000000000000 ;
 	prov:wasDerivedFrom
 		kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ,
 		kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
@@ -11570,6 +11566,10 @@ kb:url-facet-bc8514bd-3852-4c91-a45f-5e587b0062e9
 kb:url-facet-d9e4bbae-4b47-4d8c-b547-9e524d3a4ca0
 	a uco-observable:URLFacet ;
 	uco-observable:fullValue "https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0" ;
+	.
+
+case-corpora:contact-00000000-0000-0000-0000-000000000000
+	a prov:Agent ;
 	.
 
 drafting:CellPhone
