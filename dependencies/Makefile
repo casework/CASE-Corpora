@@ -46,7 +46,8 @@ dependent_ontology_files := \
   sosa.ttl \
   ssn.ttl \
   time.ttl \
-  vcard.ttl
+  vcard.ttl \
+  wgs84_pos.ttl
 
 rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar
 
@@ -347,6 +348,19 @@ vcard.ttl:
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+wgs84_pos.ttl:
+	wget \
+	  --output-document=__$@ \
+	  https://www.w3.org/2003/01/geo/wgs84_pos
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format rdf-xml \
 	  --source __$@ \
 	  --target-format turtle \
 	  --target _$@
