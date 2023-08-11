@@ -1,4 +1,5 @@
 # imports: http://example.org/shapes/dcterms
+# imports: http://example.org/shapes/wgs84_pos
 # imports: http://xmlns.com/foaf/0.1/
 
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -7,14 +8,30 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sh-foaf: <http://example.org/shapes/foaf/> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/shapes/foaf>
 	a owl:Ontology ;
+	rdfs:comment "Shapes for FOAF and wgs84_pos form a circular import due to wgs84_pos declaring a subproperty of a FOAF property, and FOAF declaring a subclass of a wgs84_pos class."@en ;
 	owl:imports
 		<http://example.org/shapes/dcterms> ,
+		<http://example.org/shapes/wgs84_pos> ,
 		<http://xmlns.com/foaf/0.1/>
 		;
+	.
+
+sh-foaf:based_near-objects-shape
+	a sh:NodeShape ;
+	sh:class wgs84_pos:SpatialThing ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
+	sh:targetObjectsOf foaf:based_near ;
+	.
+
+sh-foaf:based_near-subjects-shape
+	a sh:NodeShape ;
+	sh:class wgs84_pos:SpatialThing ;
+	sh:targetSubjectsOf foaf:based_near ;
 	.
 
 sh-foaf:page-objects-shape
