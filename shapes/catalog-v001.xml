@@ -40,6 +40,7 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/ssn.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/time.ttl" name="http://www.w3.org/2006/time#2016"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/vcard.ttl" name="http://www.w3.org/2006/vcard/ns"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/wgs84_pos.ttl" name="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
     <uri id="User Entered Import Resolution" uri="../ontology/case-corpora.ttl" name="http://example.org/ontology/case-corpora"/>
     <uri id="User Entered Import Resolution" uri="sh-case-corpora.ttl" name="http://example.org/shapes/case-corpora"/>
     <uri id="User Entered Import Resolution" uri="sh-cito.ttl" name="http://example.org/shapes/cito"/>
@@ -54,6 +55,7 @@
     <uri id="User Entered Import Resolution" uri="sh-sosa.ttl" name="http://example.org/shapes/sosa"/>
     <uri id="User Entered Import Resolution" uri="sh-ssn.ttl" name="http://example.org/shapes/ssn"/>
     <uri id="User Entered Import Resolution" uri="sh-vcard.ttl" name="http://example.org/shapes/vcard"/>
+    <uri id="User Entered Import Resolution" uri="sh-wgs84_pos.ttl" name="http://example.org/shapes/wgs84_pos"/>
     <uri id="User Entered Import Resolution" uri="shapes.ttl" name="http://example.org/shapes/discourse-relationships"/>
     <uri id="User Entered Import Resolution" uri="shapes.ttl" name="http://example.org/shapes/foaf"/>
     <uri id="User Entered Import Resolution" uri="shapes.ttl" name="http://example.org/shapes/owl-abox"/>
