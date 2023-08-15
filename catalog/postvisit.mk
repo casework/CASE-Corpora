@@ -37,7 +37,9 @@ kb_all_dependencies := \
 all: \
   README.md \
   kb-all_validation-develop.ttl \
-  kb-all_validation-unstable.ttl
+  kb-all_validation-develop-2.0.0.ttl \
+  kb-all_validation-unstable.ttl \
+  kb-all_validation-unstable-2.0.0.ttl
 
 README.md: \
   README.md.in \
@@ -135,6 +137,32 @@ kb-all_validation-develop.ttl: \
 	rm __$@
 	mv _$@ $@
 
+kb-all_validation-develop-2.0.0.ttl: \
+  $(top_srcdir)/dependencies/CASE-develop-2.0.0.ttl \
+  kb-all.ttl
+	rm -f __$@ _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    --built-version none \
+	    --format turtle \
+	    --inference rdfs \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-develop-2.0.0.ttl \
+	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
+	    --output __$@ \
+	    kb-all.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
 kb-all_validation-unstable.ttl: \
   $(top_srcdir)/dependencies/CASE-unstable.ttl \
   kb-all.ttl
@@ -146,6 +174,32 @@ kb-all_validation-unstable.ttl: \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-unstable.ttl \
+	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
+	    --output __$@ \
+	    kb-all.ttl
+	java -jar $(rdf_toolkit_jar) \
+	  --inline-blank-nodes \
+	  --source-format turtle \
+	  --source __$@ \
+	  --target-format turtle \
+	  --target _$@
+	rm __$@
+	mv _$@ $@
+
+kb-all_validation-unstable-2.0.0.ttl: \
+  $(top_srcdir)/dependencies/CASE-unstable-2.0.0.ttl \
+  kb-all.ttl
+	rm -f __$@ _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    --built-version none \
+	    --format turtle \
+	    --inference rdfs \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-unstable-2.0.0.ttl \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \

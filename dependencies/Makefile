@@ -24,10 +24,20 @@ case_develop_ttls := \
   $(wildcard CASE-develop/dependencies/UCO/ontology/*/*.ttl) \
   $(wildcard CASE-develop/dependencies/UCO/ontology/uco/*/*.ttl)
 
+case_develop_2_0_0_ttls := \
+  $(wildcard CASE-develop-2.0.0/ontology/*/*.ttl) \
+  $(wildcard CASE-develop-2.0.0/dependencies/UCO/ontology/*/*.ttl) \
+  $(wildcard CASE-develop-2.0.0/dependencies/UCO/ontology/uco/*/*.ttl)
+
 case_unstable_ttls := \
   $(wildcard CASE-unstable/ontology/*/*.ttl) \
   $(wildcard CASE-unstable/dependencies/UCO/ontology/*/*.ttl) \
   $(wildcard CASE-unstable/dependencies/UCO/ontology/uco/*/*.ttl)
+
+case_unstable_2_0_0_ttls := \
+  $(wildcard CASE-unstable-2.0.0/ontology/*/*.ttl) \
+  $(wildcard CASE-unstable-2.0.0/dependencies/UCO/ontology/*/*.ttl) \
+  $(wildcard CASE-unstable-2.0.0/dependencies/UCO/ontology/uco/*/*.ttl)
 
 dependent_ontology_files := \
   cito.ttl \
@@ -53,7 +63,9 @@ rdf_toolkit_jar := $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-tool
 
 all: \
   CASE-develop.ttl \
+  CASE-develop-2.0.0.ttl \
   CASE-unstable.ttl \
+  CASE-unstable-2.0.0.ttl \
   catalog-v001.xml \
   dcat-us.jsonld
 
@@ -68,13 +80,36 @@ CASE-develop.ttl: \
 	    > _$@
 	mv _$@ $@
 
+CASE-develop-2.0.0.ttl: \
+  $(top_srcdir)/.venv.done.log \
+  $(case_develop_2_0_0_ttls)
+	rm -f _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && rdfpipe \
+	    --output-format turtle \
+	    $(case_develop_2_0_0_ttls) \
+	    > _$@
+	mv _$@ $@
+
 CASE-unstable.ttl: \
   $(top_srcdir)/.venv.done.log \
   $(case_unstable_ttls)
 	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && rdfpipe \
+	    --output-format turtle \
 	    $(case_unstable_ttls) \
+	    > _$@
+	mv _$@ $@
+
+CASE-unstable-2.0.0.ttl: \
+  $(top_srcdir)/.venv.done.log \
+  $(case_unstable_2_0_0_ttls)
+	rm -f _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && rdfpipe \
+	    --output-format turtle \
+	    $(case_unstable_2_0_0_ttls) \
 	    > _$@
 	mv _$@ $@
 
