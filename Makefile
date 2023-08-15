@@ -56,6 +56,14 @@ all: \
 	$(MAKE) \
 	  --directory dependencies/CASE-develop \
 	  .git_submodule_init.done.log
+	# CASE-develop-2.0.0
+	test -r dependencies/CASE-develop-2.0.0/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/CASE-develop-2.0.0
+	$(MAKE) \
+	  --directory dependencies/CASE-develop-2.0.0 \
+	  .git_submodule_init.done.log
 	# CASE-unstable
 	test -r dependencies/CASE-unstable/README.md \
 	  || git submodule update \
@@ -63,6 +71,14 @@ all: \
 	    dependencies/CASE-unstable
 	$(MAKE) \
 	  --directory dependencies/CASE-unstable \
+	  .git_submodule_init.done.log
+	# CASE-unstable-2.0.0
+	test -r dependencies/CASE-unstable-2.0.0/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/CASE-unstable-2.0.0
+	$(MAKE) \
+	  --directory dependencies/CASE-unstable-2.0.0 \
 	  .git_submodule_init.done.log
 	# cito
 	test -r dependencies/cito/README.md \
