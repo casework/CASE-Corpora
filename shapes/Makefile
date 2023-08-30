@@ -115,6 +115,7 @@ uco_owl_review.ttl: \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
 	    --ontology-graph local.ttl \
 	    --ontology-graph shapes.ttl \
+	    --review-tbox \
 	    $(top_srcdir)/dependencies/CASE/dependencies/UCO/tests/thing.ttl \
 	    > _$@
 	mv _$@ $@
