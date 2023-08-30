@@ -87,6 +87,7 @@ uco_owl_review.ttl: \
 	    --metashacl \
 	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph case-corpora.ttl \
+	    --review-tbox \
 	    $(top_srcdir)/dependencies/CASE/dependencies/UCO/tests/thing.ttl \
 	    > _$@
 	mv _$@ $@
