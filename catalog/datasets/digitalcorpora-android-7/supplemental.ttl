@@ -1939,6 +1939,7 @@ kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214
 		kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e
 		;
 	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	uco-action:result kb:provenance-record-7f8080e7-b3c8-43ea-adf1-8a54e187003b ;
 	uco-action:startTime "2018-12-06T21:14:50-05:00"^^xsd:dateTime ;
 	uco-action:subaction
 		kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ,
@@ -2452,6 +2453,12 @@ kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
 kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97
 	a case-investigation:ProvenanceRecord ;
 	uco-core:object kb:file-b4e89da8-dac1-4b4a-b147-63ccf6ee0359 ;
+	.
+
+kb:provenance-record-7f8080e7-b3c8-43ea-adf1-8a54e187003b
+	a case-investigation:ProvenanceRecord ;
+	uco-core:description "Record of having imaged the phone" ;
+	uco-core:object kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
 	.
 
 kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
