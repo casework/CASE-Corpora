@@ -469,6 +469,11 @@ kb:Attribution-7f3a74ff-9c62-5def-95c5-7799b92e93c4
 	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	.
 
+kb:Attribution-8663b1ed-ab22-5133-8901-672ab416326b
+	a prov:Attribution ;
+	prov:agent kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	.
+
 kb:Attribution-8a017779-fdff-591a-8b24-b634a3f9bf78
 	a prov:Attribution ;
 	prov:agent orcid:0000-0002-3771-570X ;
@@ -1428,6 +1433,12 @@ kb:Derivation-423eab3b-5b58-58d9-83e3-f7f2d4a3818a
 	a prov:Derivation ;
 	prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
 	prov:hadActivity kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b ;
+	.
+
+kb:Derivation-43049734-e4d4-56f7-bea8-08b7d67c013c
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e ;
+	prov:hadActivity kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
 	.
 
 kb:Derivation-43f50e38-33d8-54e1-8912-47cc028ac5a9
@@ -2888,6 +2899,12 @@ kb:Derivation-ff912a38-0e6f-51cd-bac9-10db7df4f4a8
 	prov:hadActivity kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832 ;
 	.
 
+kb:Derivation-ffc05f46-e171-5a7f-bf4c-082cc89ea533
+	a prov:Derivation ;
+	prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+	prov:hadActivity kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	.
+
 kb:End-144bb4b0-af79-5699-921a-5691c8bb51fd
 	a
 		time:Instant ,
@@ -3255,6 +3272,14 @@ kb:Generation-852b3a03-13f3-5afd-918b-445a7a8e522d
 		kb:Usage-c8188068-ace8-5bc9-849e-c95306a7ad2a
 		;
 	prov:activity kb:observation-6c0553fe-84f9-4133-8be1-67d6e3c80d61 ;
+	.
+
+kb:Generation-885fece5-9385-580b-8b6c-7b8029b9c758
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	prov:activity kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
 	.
 
 kb:Generation-89b8ec02-576d-544b-b793-40e45d0616de
@@ -6535,6 +6560,7 @@ kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214
 	time:hasBeginning kb:Start-fbdf11ea-60cc-5c45-98f2-5e19515e70f5 ;
 	time:hasEnd kb:End-1faceaf1-e4d9-5d2c-86cf-1f6ea10a3d5e ;
 	time:inside
+		kb:Generation-885fece5-9385-580b-8b6c-7b8029b9c758 ,
 		kb:Usage-16cb0997-4550-5269-874d-8cb9111f0d67 ,
 		kb:Usage-aaf2e787-e2e3-5557-b32d-998de2f24b04
 		;
@@ -7638,6 +7664,27 @@ kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97
 	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	prov:wasDerivedFrom prov:EmptyCollection ;
 	prov:wasGeneratedBy kb:investigative-action-b8273ac6-f091-40b0-8346-1544df69f093 ;
+	.
+
+kb:provenance-record-7f8080e7-b3c8-43ea-adf1-8a54e187003b
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+	prov:qualifiedAttribution kb:Attribution-8663b1ed-ab22-5133-8901-672ab416326b ;
+	prov:qualifiedDerivation
+		kb:Derivation-43049734-e4d4-56f7-bea8-08b7d67c013c ,
+		kb:Derivation-ffc05f46-e171-5a7f-bf4c-082cc89ea533
+		;
+	prov:qualifiedGeneration kb:Generation-885fece5-9385-580b-8b6c-7b8029b9c758 ;
+	prov:wasAttributedTo kb:tool-b4a1e39e-6f13-483a-9929-6bdf606ef879 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-ca7825bd-e803-48d7-8c91-f57b8018265e
+		;
+	prov:wasGeneratedBy kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214 ;
+	uco-core:description "Record of having imaged the phone" ;
 	.
 
 kb:provenance-record-8c357d9b-13a4-4333-9e11-2194bfdd534b
