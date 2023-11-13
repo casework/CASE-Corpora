@@ -13,6 +13,8 @@
 
 SHELL := /bin/bash
 
+PYTHON3 ?= python3
+
 all: \
   .venv-pre-commit/var/.pre-commit-built.log \
   all-shapes \
@@ -105,7 +107,8 @@ all: \
   dependencies/CASE/dependencies/UCO/dependencies/CASE-Utility-SHACL-Inheritance-Reviewer/setup.cfg \
   dependencies/CASE/dependencies/UCO/requirements.txt \
   requirements.txt
-	python3 -m venv \
+	rm -rf venv
+	$(PYTHON3) -m venv \
 	  venv
 	source venv/bin/activate \
 	  && pip install \
@@ -130,7 +133,7 @@ all: \
 	rm -rf .venv-pre-commit
 	test -r .pre-commit-config.yaml \
 	  || (echo "ERROR:Makefile:pre-commit is expected to install for this repository, but .pre-commit-config.yaml does not seem to exist." >&2 ; exit 1)
-	python3 -m venv \
+	$(PYTHON3) -m venv \
 	  .venv-pre-commit
 	source .venv-pre-commit/bin/activate \
 	  && pip install \
