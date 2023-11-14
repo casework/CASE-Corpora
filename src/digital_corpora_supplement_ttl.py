@@ -29,11 +29,11 @@ from case_utils.namespace import (
     NS_UCO_VOCABULARY,
     NS_XSD,
 )
-from case_utils_extras import (
+from case_utils.inherent_uuid import (
     L_SHA256,
     L_SHA3_256,
-    method_value_to_node,
 )
+from case_utils_extras import method_value_to_node
 from rdflib import Graph, Literal, Namespace, URIRef
 
 NS_CASE_CORPORA = Namespace("http://example.org/ontology/case-corpora/")
