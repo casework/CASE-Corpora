@@ -9,7 +9,7 @@
 @prefix uco-vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kb:ContentDataFacet-a84038b3-ab63-5d4b-9639-2a731a5f52b1
+kb:ContentDataFacet-8cfc1117-f405-5b60-b581-8d8c41eaf4fa
 	a uco-observable:ContentDataFacet ;
 	uco-observable:dataPayloadReferenceURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
 	uco-observable:hash
@@ -19,7 +19,7 @@ kb:ContentDataFacet-a84038b3-ab63-5d4b-9639-2a731a5f52b1
 	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
 	.
 
-kb:FileFacet-89c72df8-e616-5017-94a0-8525168d81ba
+kb:FileFacet-6e60d990-873f-5c0d-9859-b33c4f175f61
 	a uco-observable:FileFacet ;
 	uco-observable:fileName "android_7.tar.gz" ;
 	uco-observable:modifiedTime "2020-11-22T03:14:59+00:00"^^xsd:dateTime ;
@@ -38,7 +38,7 @@ kb:Hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
 	uco-types:hashValue "50a015b0c65c61feb81e77e0d2adcbf84d2f8352b2e1c46f27fb5f4816546751"^^xsd:hexBinary ;
 	.
 
-kb:URLFacet-ae160fad-6ae9-548b-9fcd-81e53dda8964
+kb:URLFacet-04855a2a-0546-53ab-81b7-e167c9fd9734
 	a uco-observable:URLFacet ;
 	uco-observable:fullValue "https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz" ;
 	.
@@ -46,15 +46,15 @@ kb:URLFacet-ae160fad-6ae9-548b-9fcd-81e53dda8964
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
 	a uco-observable:URL ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-ae160fad-6ae9-548b-9fcd-81e53dda8964 ;
+	uco-core:hasFacet kb:URLFacet-04855a2a-0546-53ab-81b7-e167c9fd9734 ;
 	.
 
 <s3://digitalcorpora/corpora/mobile/android_7.tar.gz>
 	a drafting:S3Object ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
 	uco-core:hasFacet
-		kb:ContentDataFacet-a84038b3-ab63-5d4b-9639-2a731a5f52b1 ,
-		kb:FileFacet-89c72df8-e616-5017-94a0-8525168d81ba
+		kb:ContentDataFacet-8cfc1117-f405-5b60-b581-8d8c41eaf4fa ,
+		kb:FileFacet-6e60d990-873f-5c0d-9859-b33c4f175f61
 		;
 	uco-core:modifiedTime "2022-09-27T16:58:05+00:00"^^xsd:dateTime ;
 	.
