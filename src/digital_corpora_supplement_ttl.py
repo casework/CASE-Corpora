@@ -16,7 +16,6 @@ import json
 import logging
 import os
 import re
-import uuid
 from csv import DictReader
 from typing import Any, Dict, List, Set
 import urllib.parse
@@ -32,6 +31,7 @@ from case_utils.namespace import (
 from case_utils.inherent_uuid import (
     L_SHA256,
     L_SHA3_256,
+    get_facet_uriref,
 )
 from case_utils_extras import method_value_to_node
 from rdflib import Graph, Literal, Namespace, URIRef
@@ -40,19 +40,6 @@ NS_CASE_CORPORA = Namespace("http://example.org/ontology/case-corpora/")
 NS_DRAFTING = Namespace("http://example.org/ontology/drafting/")
 
 RX_HEXBINARY = re.compile("^[0-9a-f]+$", re.IGNORECASE)
-
-
-def n_inherent_facet_for_node(
-    n_uco_object: URIRef, n_facet_class: URIRef, ns_kb: Namespace
-) -> URIRef:
-    uco_object_uuid: uuid.UUID = uuid.uuid5(uuid.NAMESPACE_URL, str(n_uco_object))
-    local_has_facet_uuid: uuid.UUID = uuid.uuid5(
-        uco_object_uuid, str(NS_UCO_CORE.hasFacet)
-    )
-    facet_uuid: uuid.UUID = uuid.uuid5(local_has_facet_uuid, str(n_facet_class))
-
-    facet_local_part = str(n_facet_class).split("/")[-1]
-    return ns_kb[facet_local_part + "-" + str(facet_uuid)]
 
 
 def main() -> None:
@@ -128,8 +115,8 @@ def main() -> None:
                 )
                 graph.add((n_s3_object, NS_UCO_CORE.modifiedTime, l_object_mtime))
 
-            n_content_data_facet = n_inherent_facet_for_node(
-                n_s3_object, NS_UCO_OBSERVABLE.ContentDataFacet, NS_KB
+            n_content_data_facet = get_facet_uriref(
+                n_s3_object, NS_UCO_OBSERVABLE.ContentDataFacet, namespace=NS_KB
             )
             graph.add(
                 (n_content_data_facet, NS_RDF.type, NS_UCO_OBSERVABLE.ContentDataFacet)
@@ -143,14 +130,14 @@ def main() -> None:
                 )
             )
 
-            n_file_facet = n_inherent_facet_for_node(
-                n_s3_object, NS_UCO_OBSERVABLE.FileFacet, NS_KB
+            n_file_facet = get_facet_uriref(
+                n_s3_object, NS_UCO_OBSERVABLE.FileFacet, namespace=NS_KB
             )
             graph.add((n_file_facet, NS_RDF.type, NS_UCO_OBSERVABLE.FileFacet))
             graph.add((n_s3_object, NS_UCO_CORE.hasFacet, n_file_facet))
 
-            n_url_facet = n_inherent_facet_for_node(
-                n_download_url, NS_UCO_OBSERVABLE.URLFacet, NS_KB
+            n_url_facet = get_facet_uriref(
+                n_download_url, NS_UCO_OBSERVABLE.URLFacet, namespace=NS_KB
             )
             graph.add((n_url_facet, NS_RDF.type, NS_UCO_OBSERVABLE.URLFacet))
             graph.add((n_download_url, NS_UCO_CORE.hasFacet, n_url_facet))
