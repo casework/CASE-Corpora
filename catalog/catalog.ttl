@@ -50,6 +50,11 @@ kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e
 	skos:prefLabel "The CASE Community" ;
 	.
 
+kb:url-facet-9b081add-c597-4bf4-80d6-2a391eba3a50
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl" ;
+	.
+
 <https://github.com/casework/CASE-Corpora/>
 	a case-corpora:WebPage ;
 	.
@@ -61,10 +66,5 @@ kb:organization-4ac712c2-4c6e-4670-b1d5-bcfe9d82ae3e
 <https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl>
 	a uco-observable:URL ;
 	uco-core:hasFacet kb:url-facet-9b081add-c597-4bf4-80d6-2a391eba3a50 ;
-	.
-
-kb:url-facet-9b081add-c597-4bf4-80d6-2a391eba3a50
-	a uco-observable:URLFacet ;
-	uco-observable:fullValue "https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl" ;
 	.
 
