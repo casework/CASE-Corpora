@@ -136,6 +136,78 @@ case-corpora:Distribution
 	sh:targetClass case-corpora:Distribution ;
 	.
 
+case-corpora:DownloadableObject
+	a sh:NodeShape ;
+	sh:not [
+		a sh:NodeShape ;
+		sh:or (
+			[
+				a sh:NodeShape ;
+				sh:class uco-observable:ObservableRelationship ;
+			]
+			[
+				a sh:NodeShape ;
+				sh:class uco-observable:URL ;
+			]
+		) ;
+	] ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:message "CASE-Corpora requires a DownloadableObject have a stated tie to a DownloadableRelation."@en ;
+		sh:path [
+			sh:inversePath uco-core:source ;
+		] ;
+		sh:qualifiedMinCount "1"^^xsd:integer ;
+		sh:qualifiedValueShape [
+			a sh:NodeShape ;
+			sh:class case-corpora:DownloadableRelation ;
+		] ;
+	] ;
+	sh:targetClass case-corpora:DownloadableObject ;
+	.
+
+case-corpora:DownloadableRelation
+	a sh:NodeShape ;
+	sh:property
+		[
+			a sh:PropertyShape ;
+			sh:class case-corpora:DownloadableObject ;
+			sh:path uco-core:source ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			sh:class uco-observable:URL ;
+			sh:message "CASE-Corpora requires a URL tied to a DownloadableRelation have its full value stored in the fullValue of a URLFacet."@en ;
+			sh:path uco-core:target ;
+			sh:property [
+				a sh:PropertyShape ;
+				sh:path uco-core:hasFacet ;
+				sh:qualifiedMinCount "1"^^xsd:integer ;
+				sh:qualifiedValueShape [
+					a sh:NodeShape ;
+					sh:class uco-observable:URLFacet ;
+					sh:property [
+						a sh:PropertyShape ;
+						sh:minCount "1"^^xsd:integer ;
+						sh:path uco-observable:fullValue ;
+					] ;
+				] ;
+			] ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			sh:hasValue "Downloadable_From" ;
+			sh:path uco-core:kindOfRelationship ;
+		] ,
+		[
+			a sh:PropertyShape ;
+			sh:hasValue "true"^^xsd:boolean ;
+			sh:path uco-core:isDirectional ;
+		]
+		;
+	sh:targetClass case-corpora:DownloadableRelation ;
+	.
+
 drafting:FileHashQuality
 	a sh:NodeShape ;
 	sh:property [
@@ -233,22 +305,7 @@ sh-case-corpora:hasDistribution-subjects-shape
 
 sh-case-corpora:hasDownloadURL-objects-shape
 	a sh:NodeShape ;
-	sh:class uco-observable:URL ;
-	sh:property [
-		a sh:PropertyShape ;
-		sh:message "CASE-Corpora requires any referenced Distribution have a downloadable URL, stored in the fullValue of a URLFacet."@en ;
-		sh:path uco-core:hasFacet ;
-		sh:qualifiedMinCount "1"^^xsd:integer ;
-		sh:qualifiedValueShape [
-			a sh:NodeShape ;
-			sh:class uco-observable:URLFacet ;
-			sh:property [
-				a sh:PropertyShape ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:path uco-observable:fullValue ;
-			] ;
-		] ;
-	] ;
+	sh:class case-corpora:DownloadableObject ;
 	sh:targetObjectsOf case-corpora:hasDownloadURL ;
 	.
 

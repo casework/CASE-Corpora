@@ -1,3 +1,4 @@
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,8 +11,13 @@
 	rdfs:comment "This file contains adjustments to make solely for validating kb-datasets.ttl."@en ;
 	.
 
+case-corpora:DownloadableObject
+	sh:deactivated "true"^^xsd:boolean ;
+	sh:description "This shape is deactivated for kb-datasets.ttl, so each distribution.ttl can make references to download URLs without needing to specify DownloadRelations." ;
+	.
+
 sh-case-corpora:hasDownloadURL-range-shape
 	sh:deactivated "true"^^xsd:boolean ;
-	sh:description "This shape is deactivated for kb-datasets.ttl, so each distribution.ttl can make references to download URLs without needing to fully specify the URLs." ;
+	sh:description "This shape is deactivated for kb-datasets.ttl, so each distribution.ttl can make references to download URLs without needing to fully specify the \"download URL's\" class." ;
 	.
 

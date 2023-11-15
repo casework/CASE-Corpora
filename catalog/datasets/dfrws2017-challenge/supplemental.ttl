@@ -1,3 +1,4 @@
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -7,6 +8,58 @@
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:DownloadableRelation-03131d31-e559-49d5-a3a6-e75d2fbf0ee3
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0> ;
+	uco-core:target kb:URL-d7608b02-86e1-4973-ad57-0e7b3e16256a ;
+	.
+
+kb:DownloadableRelation-45729df9-dbb6-402f-a946-121b78af234f
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip> ;
+	uco-core:target kb:URL-f21d9735-65ea-41a3-a032-ce7afae23455 ;
+	.
+
+kb:DownloadableRelation-aca66eb5-d2d0-4c4a-a96e-1153008fd05a
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report> ;
+	uco-core:target kb:URL-69e88242-f05e-43fb-b94d-74a03023e372 ;
+	.
+
+kb:DownloadableRelation-f3f089bb-ac1c-4250-b006-da46e89cd230
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip> ;
+	uco-core:target kb:URL-7023cbc0-a453-4972-84ce-58f8c1636407 ;
+	.
+
+kb:URL-69e88242-f05e-43fb-b94d-74a03023e372
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-2f2958a3-7e9d-4d14-b31f-4148d35ab52c ;
+	.
+
+kb:URL-7023cbc0-a453-4972-84ce-58f8c1636407
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-9b9d4a1a-059e-47f8-aee0-d93edf61b5f2 ;
+	.
+
+kb:URL-d7608b02-86e1-4973-ad57-0e7b3e16256a
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-d9e4bbae-4b47-4d8c-b547-9e524d3a4ca0 ;
+	.
+
+kb:URL-f21d9735-65ea-41a3-a032-ce7afae23455
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-785c662e-8261-4a17-8031-114f86f99af1 ;
+	.
 
 kb:device-650599c6-701f-4f2e-becb-74398b366ba3
 	a uco-observable:Device ;
@@ -85,22 +138,18 @@ kb:url-facet-d9e4bbae-4b47-4d8c-b547-9e524d3a4ca0
 	.
 
 <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report>
-	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-2f2958a3-7e9d-4d14-b31f-4148d35ab52c ;
+	a case-corpora:DownloadableFile ;
 	.
 
 <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip>
-	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-785c662e-8261-4a17-8031-114f86f99af1 ;
+	a case-corpora:DownloadableFile ;
 	.
 
 <https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip>
-	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-9b9d4a1a-059e-47f8-aee0-d93edf61b5f2 ;
+	a case-corpora:DownloadableFile ;
 	.
 
 <https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0>
-	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-d9e4bbae-4b47-4d8c-b547-9e524d3a4ca0 ;
+	a case-corpora:DownloadableFile ;
 	.
 

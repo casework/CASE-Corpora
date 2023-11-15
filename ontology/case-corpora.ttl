@@ -73,6 +73,78 @@ case-corpora:Distribution
 		;
 	.
 
+case-corpora:DownloadableContentData
+	a owl:Class ;
+	rdfs:subClassOf
+		case-corpora:DownloadableObject ,
+		uco-observable:ContentData
+		;
+	.
+
+case-corpora:DownloadableFile
+	a owl:Class ;
+	rdfs:subClassOf
+		case-corpora:DownloadableObject ,
+		uco-observable:File
+		;
+	.
+
+case-corpora:DownloadableObject
+	a owl:Class ;
+	rdfs:comment "An ObservableObject that can be downloaded via some URL.  DownloadableObject is defined to specifically exclude some classes that participate in a download action in different ways, especially URL and DownloadableRelation."@en ;
+	owl:equivalentClass [
+		a owl:Class ;
+		owl:intersectionOf (
+			uco-observable:ObservableObject
+			[
+				a owl:Class ;
+				owl:complementOf uco-observable:ObservableRelationship ;
+			]
+			[
+				a owl:Class ;
+				owl:complementOf uco-observable:URL ;
+			]
+			[
+				a owl:Restriction ;
+				owl:onProperty [
+					owl:inverseOf uco-core:source ;
+				] ;
+				owl:someValuesFrom case-corpora:DownloadableRelation ;
+			]
+		) ;
+	] ;
+	skos:editorialNote "Members of this class are added through extrinsic relationships, namely by being part of a DownloadableRelation."@en ;
+	.
+
+case-corpora:DownloadableRelation
+	a owl:Class ;
+	rdfs:subClassOf
+		uco-observable:ObservableRelationship ,
+		[
+			a owl:Restriction ;
+			owl:onProperty uco-core:source ;
+			owl:allValuesFrom case-corpora:DownloadableObject ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty uco-core:target ;
+			owl:allValuesFrom uco-observable:URL ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty uco-core:kindOfRelationship ;
+			owl:hasValue "Downloadable_From" ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty uco-core:isDirectional ;
+			owl:hasValue "true"^^xsd:boolean ;
+		]
+		;
+	rdfs:comment "A Relationship that ties a File or ContentData to a URL from which the File (or ContentData) can be downloaded."@en ;
+	skos:editorialNote "This class name pattern is drawn from PathRelationFacet."@en ;
+	.
+
 case-corpora:IANAMediaType
 	a owl:Class ;
 	rdfs:subClassOf dcterms:MediaType ;
@@ -148,7 +220,7 @@ case-corpora:hasDownloadURL
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf dcat:downloadURL ;
 	rdfs:domain case-corpora:Distribution ;
-	rdfs:range uco-observable:URL ;
+	rdfs:range case-corpora:DownloadableObject ;
 	.
 
 drafting:FileHashQuality

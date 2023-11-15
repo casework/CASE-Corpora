@@ -16,8 +16,9 @@ import json
 import logging
 import os
 import re
+import uuid
 from csv import DictReader
-from typing import Any, Dict, List, Set
+from typing import Any, Dict, List, Optional, Set
 import urllib.parse
 
 from case_utils.namespace import (
@@ -32,6 +33,7 @@ from case_utils.inherent_uuid import (
     L_SHA256,
     L_SHA3_256,
     get_facet_uriref,
+    inherence_uuid,
 )
 from case_utils_extras import method_value_to_node
 from rdflib import Graph, Literal, Namespace, URIRef
@@ -40,6 +42,72 @@ NS_CASE_CORPORA = Namespace("http://example.org/ontology/case-corpora/")
 NS_DRAFTING = Namespace("http://example.org/ontology/drafting/")
 
 RX_HEXBINARY = re.compile("^[0-9a-f]+$", re.IGNORECASE)
+
+
+def characterize_url(graph: Graph, n_thing: URIRef, ns_kb: Namespace) -> URIRef:
+    """
+    Guarantee URLFacet is present.  Populate, if not found already defined.
+
+    :returns: Returns generated observable:URL IRI.
+    """
+    url_uuid = uuid.uuid5(uuid.NAMESPACE_URL, str(n_thing))
+    n_url = ns_kb["URL-" + str(url_uuid)]
+    n_url_facet: Optional[URIRef] = None
+    for n_object in graph.objects(n_url, NS_UCO_CORE.hasFacet):
+        assert isinstance(n_object, URIRef)
+        for triple in graph.triples(
+            (n_object, NS_RDF.type, NS_UCO_OBSERVABLE.URLFacet)
+        ):
+            n_url_facet = n_object
+    if n_url_facet is None:
+        n_url_facet = get_facet_uriref(
+            n_url, NS_UCO_OBSERVABLE.URLFacet, namespace=ns_kb
+        )
+        graph.add((n_url, NS_UCO_CORE.hasFacet, n_url_facet))
+        graph.add((n_url_facet, NS_RDF.type, NS_UCO_OBSERVABLE.URLFacet))
+        graph.add((n_url_facet, NS_UCO_OBSERVABLE.fullValue, Literal(str(n_thing))))
+    return n_url
+
+
+def get_digital_corpora_sends_relation(
+    graph: Graph,
+    n_downloadable_object: URIRef,
+    n_s3_object: URIRef,
+    namespace: Namespace,
+) -> URIRef:
+    """
+    :returns: Returns a deterministic IRI for an S3Object's mapping to an HTTPS URL.
+    """
+    uuid0 = inherence_uuid(n_downloadable_object)
+    uuid1 = uuid.uuid5(uuid0, str(n_s3_object))
+    uuid2 = uuid.uuid5(uuid1, "Sends")
+    n_relationship = namespace["ObservableRelationship-" + str(uuid2)]
+    graph.add((n_relationship, NS_RDF.type, NS_UCO_OBSERVABLE.ObservableRelationship))
+    graph.add((n_relationship, NS_UCO_CORE.isDirectional, Literal(True)))
+    graph.add((n_relationship, NS_UCO_CORE.kindOfRelationship, Literal("Sends")))
+    graph.add((n_relationship, NS_UCO_CORE.source, n_downloadable_object))
+    graph.add((n_relationship, NS_UCO_CORE.target, n_s3_object))
+    return n_relationship
+
+
+def get_digital_corpora_downloadable_relation(
+    graph: Graph, n_downloadable_object: URIRef, n_url: URIRef, namespace: Namespace
+) -> URIRef:
+    """
+    :returns: Returns a deterministic IRI for an S3Object downloadable by Digital Corpora's directory presentation protocol.
+    """
+    uuid0 = inherence_uuid(n_downloadable_object)
+    uuid1 = uuid.uuid5(uuid0, str(n_url))
+    uuid2 = uuid.uuid5(uuid1, "Downloadable_From")
+    n_relationship = namespace["DownloadableRelation-" + str(uuid2)]
+    graph.add((n_relationship, NS_RDF.type, NS_CASE_CORPORA.DownloadableRelation))
+    graph.add((n_relationship, NS_UCO_CORE.isDirectional, Literal(True)))
+    graph.add(
+        (n_relationship, NS_UCO_CORE.kindOfRelationship, Literal("Downloadable_From"))
+    )
+    graph.add((n_relationship, NS_UCO_CORE.source, n_downloadable_object))
+    graph.add((n_relationship, NS_UCO_CORE.target, n_url))
+    return n_relationship
 
 
 def main() -> None:
@@ -85,15 +153,19 @@ def main() -> None:
                 continue
             s3key_quoted = urllib.parse.quote(row["s3key"])
             n_s3_object = URIRef("s3://digitalcorpora/" + s3key_quoted)
-            n_download_url = URIRef(
+            n_downloadable_object = URIRef(
                 "https://digitalcorpora.s3.amazonaws.com/" + s3key_quoted
             )
-            if n_download_url not in n_subjects:
+            if n_downloadable_object not in n_subjects:
                 continue
-            n_subjects.remove(n_download_url)
+            n_subjects.remove(n_downloadable_object)
 
             graph.add((n_s3_object, NS_RDF.type, NS_DRAFTING.S3Object))
-            graph.add((n_download_url, NS_RDF.type, NS_UCO_OBSERVABLE.URL))
+            graph.add(
+                (n_downloadable_object, NS_RDF.type, NS_CASE_CORPORA.DownloadableObject)
+            )
+            n_url = characterize_url(graph, n_downloadable_object, NS_KB)
+            graph.add((n_url, NS_RDF.type, NS_UCO_OBSERVABLE.URL))
             graph.add(
                 (
                     n_s3_object,
@@ -103,7 +175,7 @@ def main() -> None:
             )
             graph.add(
                 (
-                    n_download_url,
+                    n_downloadable_object,
                     NS_UCO_CORE.createdBy,
                     NS_KB["organization-72ec45c9-ea94-4503-9428-ad73300056f5"],
                 )
@@ -122,12 +194,22 @@ def main() -> None:
                 (n_content_data_facet, NS_RDF.type, NS_UCO_OBSERVABLE.ContentDataFacet)
             )
             graph.add((n_s3_object, NS_UCO_CORE.hasFacet, n_content_data_facet))
+
+            # Tie S3 Object to URL, two ways.
+            # First, uco-observable:dataPayloadReferenceURL.
+            # Second, DownloadableRelation.
             graph.add(
                 (
                     n_content_data_facet,
                     NS_UCO_OBSERVABLE.dataPayloadReferenceURL,
-                    n_download_url,
+                    n_downloadable_object,
                 )
+            )
+            _ = get_digital_corpora_downloadable_relation(
+                graph, n_downloadable_object, n_url, NS_KB
+            )
+            _ = get_digital_corpora_sends_relation(
+                graph, n_downloadable_object, n_s3_object, NS_KB
             )
 
             n_file_facet = get_facet_uriref(
@@ -135,19 +217,6 @@ def main() -> None:
             )
             graph.add((n_file_facet, NS_RDF.type, NS_UCO_OBSERVABLE.FileFacet))
             graph.add((n_s3_object, NS_UCO_CORE.hasFacet, n_file_facet))
-
-            n_url_facet = get_facet_uriref(
-                n_download_url, NS_UCO_OBSERVABLE.URLFacet, namespace=NS_KB
-            )
-            graph.add((n_url_facet, NS_RDF.type, NS_UCO_OBSERVABLE.URLFacet))
-            graph.add((n_download_url, NS_UCO_CORE.hasFacet, n_url_facet))
-            graph.add(
-                (
-                    n_url_facet,
-                    NS_UCO_OBSERVABLE.fullValue,
-                    Literal(str(n_download_url)),
-                )
-            )
 
             graph.add(
                 (

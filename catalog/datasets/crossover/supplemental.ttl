@@ -1,3 +1,4 @@
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -7,6 +8,123 @@
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:DownloadableRelation-0d749b77-bb7a-4fd7-adbd-ebafae6ae9ee
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.md5> ;
+	uco-core:target kb:URL-55a8eeff-4609-451e-b29b-3f4528d09054 ;
+	.
+
+kb:DownloadableRelation-2aa6c5fe-ea85-4e5f-a398-5a743222ec94
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.sha256> ;
+	uco-core:target kb:URL-28ebac3b-bd82-47a9-98fa-c5eade040705 ;
+	.
+
+kb:DownloadableRelation-374af858-bfe4-4419-a1c9-02dc68fc01b5
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.sha256> ;
+	uco-core:target kb:URL-650ec343-ae9f-4889-9dfd-0f45606f526b ;
+	.
+
+kb:DownloadableRelation-3b1752c2-7806-4cb5-926a-f58067fb68c7
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.sha256> ;
+	uco-core:target kb:URL-3585f3b1-8279-4f8c-8e1e-3b18010cafcd ;
+	.
+
+kb:DownloadableRelation-3ed4592e-e33a-4e6c-893f-6ac7973156c4
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.zip> ;
+	uco-core:target kb:URL-11ebee68-c7bc-4130-be73-1298181575a1 ;
+	.
+
+kb:DownloadableRelation-44907477-cfa5-4e37-a407-379a58627ccb
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.zip> ;
+	uco-core:target kb:URL-f1cec27b-b243-4a98-8d57-719376b059d1 ;
+	.
+
+kb:DownloadableRelation-73e77820-e08f-4196-a1f0-5bfb95fb07a6
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.md5> ;
+	uco-core:target kb:URL-05e18d67-0d0d-4522-8c73-c4fc73a37585 ;
+	.
+
+kb:DownloadableRelation-a1696319-ae91-4741-895b-19e23e6bc387
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.md5> ;
+	uco-core:target kb:URL-0ceb353f-d908-478d-8f8d-07d75589046c ;
+	.
+
+kb:DownloadableRelation-e73e5990-d2e6-45fa-b801-dbdf1b96838e
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.zip> ;
+	uco-core:target kb:URL-44c35322-f850-4338-969e-45d9fb5e511e ;
+	.
+
+kb:URL-05e18d67-0d0d-4522-8c73-c4fc73a37585
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-88fc82c0-3994-434c-8ec7-8e2261060d71 ;
+	.
+
+kb:URL-0ceb353f-d908-478d-8f8d-07d75589046c
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-a1647374-f59d-48c1-b763-b93b37d32536 ;
+	.
+
+kb:URL-11ebee68-c7bc-4130-be73-1298181575a1
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-bc8514bd-3852-4c91-a45f-5e587b0062e9 ;
+	.
+
+kb:URL-28ebac3b-bd82-47a9-98fa-c5eade040705
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-2645d00d-1b22-44c6-bd39-82550044a50f ;
+	.
+
+kb:URL-3585f3b1-8279-4f8c-8e1e-3b18010cafcd
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-92bc17e0-745c-48bb-acc0-ea634746711a ;
+	.
+
+kb:URL-44c35322-f850-4338-969e-45d9fb5e511e
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-74e92a95-d670-454f-b606-4ad7135dbb73 ;
+	.
+
+kb:URL-55a8eeff-4609-451e-b29b-3f4528d09054
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-0fa77d25-7669-4486-bc57-02b9f2fe5a6f ;
+	.
+
+kb:URL-650ec343-ae9f-4889-9dfd-0f45606f526b
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-abc1e0e4-c4b3-42f6-b83d-e0f6567c2903 ;
+	.
+
+kb:URL-f1cec27b-b243-4a98-8d57-719376b059d1
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-9aa3ffbf-0251-4d56-b22e-dbe6f9cbda2d ;
+	.
 
 kb:device-facet-1ee161fc-5b41-48e0-bbdc-69ffa8c03230
 	a uco-observable:DeviceFacet ;
@@ -66,47 +184,38 @@ kb:url-facet-bc8514bd-3852-4c91-a45f-5e587b0062e9
 	.
 
 <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.md5>
-	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-0fa77d25-7669-4486-bc57-02b9f2fe5a6f ;
+	a case-corpora:DownloadableFile ;
 	.
 
 <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.sha256>
-	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-2645d00d-1b22-44c6-bd39-82550044a50f ;
+	a case-corpora:DownloadableFile ;
 	.
 
 <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part1_Computer-USB.zip>
-	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-74e92a95-d670-454f-b606-4ad7135dbb73 ;
+	a case-corpora:DownloadableFile ;
 	.
 
 <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.md5>
-	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-88fc82c0-3994-434c-8ec7-8e2261060d71 ;
+	a case-corpora:DownloadableFile ;
 	.
 
 <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.sha256>
-	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-92bc17e0-745c-48bb-acc0-ea634746711a ;
+	a case-corpora:DownloadableFile ;
 	.
 
 <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung.zip>
-	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-9aa3ffbf-0251-4d56-b22e-dbe6f9cbda2d ;
+	a case-corpora:DownloadableFile ;
 	.
 
 <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.md5>
-	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-a1647374-f59d-48c1-b763-b93b37d32536 ;
+	a case-corpora:DownloadableFile ;
 	.
 
 <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.sha256>
-	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-abc1e0e4-c4b3-42f6-b83d-e0f6567c2903 ;
+	a case-corpora:DownloadableFile ;
 	.
 
 <https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq/download?path=%2Ffiles=Part2_Samsung_UFDR.zip>
-	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-bc8514bd-3852-4c91-a45f-5e587b0062e9 ;
+	a case-corpora:DownloadableFile ;
 	.
 

@@ -20,6 +20,19 @@
 	owl:imports <http://example.org/shapes/case-corpora-local> ;
 	.
 
+kb:DownloadableRelation-db9bbe6f-8a71-41b4-bab2-122d7a048ca0
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl> ;
+	uco-core:target kb:URL-1816262c-bd39-458a-b7a9-face4a0a35bb ;
+	.
+
+kb:URL-1816262c-bd39-458a-b7a9-face4a0a35bb
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-9b081add-c597-4bf4-80d6-2a391eba3a50 ;
+	.
+
 kb:catalog-f4ffe9dd-9f19-4756-ad7f-24356e5e9752
 	a case-corpora:Catalog ;
 	case-corpora:hasDistribution kb:distribution-adc5fd35-e9fa-4d1b-8598-f5ce3bba3e9c ;
@@ -64,7 +77,6 @@ kb:url-facet-9b081add-c597-4bf4-80d6-2a391eba3a50
 	.
 
 <https://raw.githubusercontent.com/casework/CASE-Corpora/main/catalog/kb-all.ttl>
-	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-9b081add-c597-4bf4-80d6-2a391eba3a50 ;
+	a case-corpora:DownloadableObject ;
 	.
 

@@ -26,20 +26,29 @@ kb:file-facet-446a4dcc-5eb8-4df7-941a-d0552c2c354c
 	uco-observable:fileName "dataset.dat"
 	.
 
+kb:downloadable-relation-75ad1d7a-8c10-4890-8f86-68c79528cc43
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional true ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <http://example.org/dataset.dat> ;
+	uco-core:target kb:url-ce3d16e9-85d7-48e2-b898-a88994375677 ;
+	.
+
+kb:url-ce3d16e9-85d7-48e2-b898-a88994375677
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-6e2f1463-d1c2-4281-ab6f-b31256f71715 ;
+	.
+
 kb:url-facet-6e2f1463-d1c2-4281-ab6f-b31256f71715
 	a uco-observable:URLFacet ;
 	uco-observable:fullValue "http://example.org/dataset.dat" ;
 	.
 
 <http://example.org/dataset.dat>
-	a
-		uco-observable:File ,
-		uco-observable:URL
-		;
+	a case-corpora:DownloadableFile ;
 	uco-core:hasFacet
 		kb:content-data-facet-2d69d86e-fb28-44bc-9615-f8dbb9f8a6de ,
-		kb:file-facet-446a4dcc-5eb8-4df7-941a-d0552c2c354c ,
-		kb:url-facet-6e2f1463-d1c2-4281-ab6f-b31256f71715
+		kb:file-facet-446a4dcc-5eb8-4df7-941a-d0552c2c354c
 		;
 	.
 

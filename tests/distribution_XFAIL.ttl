@@ -23,7 +23,7 @@ kb:content-data-facet-ccd3fac6-e2ad-4966-9614-80b1e72f2da9
 
 kb:distribution-9e4bd389-eaba-4d18-90e6-6f0a171fe9fe
 	a case-corpora:Distribution ;
-	rdfs:comment "This will trigger an error from the download URL not having a URL Facet."@en ;
+	rdfs:comment "This will trigger an error from the download URL not tying (indirectly) to a URL Facet."@en ;
 	case-corpora:hasDownloadURL <http://example.org/dataset-1.dat> ;
 	dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream> ;
 	.
@@ -33,11 +33,20 @@ kb:file-facet-d5526f1f-ce26-4248-9322-a54a4887fe90
 	uco-observable:fileName "dataset-1.dat"
 	.
 
+kb:url-dd3e2489-37f0-478c-92bb-c45831337dd4
+	a uco-observable:URL ;
+	.
+
+kb:downloadable-relation-2f7b00ba-6574-4645-9ace-0f59a50c6bf8
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional true ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <http://example.org/dataset-1.dat> ;
+	uco-core:target kb:url-dd3e2489-37f0-478c-92bb-c45831337dd4 ;
+	.
+
 <http://example.org/dataset-1.dat>
-	a
-		uco-observable:File ,
-		uco-observable:URL
-		;
+	a case-corpora:DownloadableFile ;
 	uco-core:hasFacet
 		kb:content-data-facet-ccd3fac6-e2ad-4966-9614-80b1e72f2da9 ,
 		kb:file-facet-d5526f1f-ce26-4248-9322-a54a4887fe90
@@ -53,7 +62,7 @@ kb:content-data-facet-c39833a3-13f2-4131-8415-7c16296e907b
 
 kb:distribution-868aafbd-f783-4b9c-849e-c3436f806810
 	a case-corpora:Distribution ;
-	rdfs:comment "This will trigger an error from the download URL referencing a Facet that could be a URL Facet, but lacks an explicit type."@en ;
+	rdfs:comment "This will trigger an error from the associated download URL referencing a Facet that could be a URL Facet, but lacks an explicit type."@en ;
 	case-corpora:hasDownloadURL <http://example.org/dataset-2.dat> ;
 	dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream> ;
 	.
@@ -63,19 +72,28 @@ kb:file-facet-facd7584-bcb2-41c7-a26a-fe3972a87fc0
 	uco-observable:fileName "dataset-2.dat"
 	.
 
+kb:url-34d751fd-9039-45fc-87c5-b1cdbfc7ef10
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-fcfb2373-24f7-457b-9dd0-b9b909cadb86 ;
+	.
+
 kb:url-facet-fcfb2373-24f7-457b-9dd0-b9b909cadb86
 	uco-observable:fullValue "http://example.org/dataset-2.dat" ;
 	.
 
+kb:downloadable-relation-0477d45f-1112-4df6-aa6d-8f61b91deb59
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional true ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <http://example.org/dataset-2.dat> ;
+	uco-core:target kb:url-34d751fd-9039-45fc-87c5-b1cdbfc7ef10 ;
+	.
+
 <http://example.org/dataset-2.dat>
-	a
-		uco-observable:File ,
-		uco-observable:URL
-		;
+	a case-corpora:DownloadableFile ;
 	uco-core:hasFacet
 		kb:content-data-facet-c39833a3-13f2-4131-8415-7c16296e907b ,
-		kb:file-facet-facd7584-bcb2-41c7-a26a-fe3972a87fc0 ,
-		kb:url-facet-fcfb2373-24f7-457b-9dd0-b9b909cadb86
+		kb:file-facet-facd7584-bcb2-41c7-a26a-fe3972a87fc0
 		;
 	.
 
@@ -89,7 +107,7 @@ kb:content-data-facet-84af03ab-efce-401f-8fc7-84ffc680eb3b
 
 kb:distribution-79b6e1c6-2823-470e-b603-e136b31ecdce
 	a case-corpora:Distribution ;
-	rdfs:comment "This will trigger an error from the download URL having a URL Facet without a fullValue."@en ;
+	rdfs:comment "This will trigger an error from the associated download URL having a URL Facet without a fullValue."@en ;
 	case-corpora:hasDownloadURL <http://example.org/dataset-3.dat> ;
 	dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream> ;
 	.
@@ -99,19 +117,28 @@ kb:file-facet-81d9b1f4-a3aa-4b33-b23e-e9532d8bf526
 	uco-observable:fileName "dataset-3.dat"
 	.
 
+kb:url-b51dfe9c-48bf-41a8-97fd-cf139845fa8c
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-4bcc4d8f-d201-477e-9bdf-dd3bf4b243cc ;
+	.
+
 kb:url-facet-4bcc4d8f-d201-477e-9bdf-dd3bf4b243cc
 	a uco-observable:URLFacet ;
 	.
 
+kb:downloadable-relation-0b234d00-dfbf-495c-8306-3f8927f5bb57
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional true ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <http://example.org/dataset-3.dat> ;
+	uco-core:target kb:url-b51dfe9c-48bf-41a8-97fd-cf139845fa8c ;
+	.
+
 <http://example.org/dataset-3.dat>
-	a
-		uco-observable:File ,
-		uco-observable:URL
-		;
+	a case-corpora:DownloadableFile ;
 	uco-core:hasFacet
 		kb:content-data-facet-84af03ab-efce-401f-8fc7-84ffc680eb3b ,
-		kb:file-facet-81d9b1f4-a3aa-4b33-b23e-e9532d8bf526 ,
-		kb:url-facet-4bcc4d8f-d201-477e-9bdf-dd3bf4b243cc
+		kb:file-facet-81d9b1f4-a3aa-4b33-b23e-e9532d8bf526
 		;
 	.
 
