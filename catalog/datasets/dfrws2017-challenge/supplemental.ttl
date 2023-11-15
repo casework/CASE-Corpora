@@ -64,3 +64,43 @@ kb:distribution-dd871377-7b49-46d7-90ae-564dae8398f7
 	prov:wasDerivedFrom kb:device-6e718fd4-d876-4f81-8d58-10c21a741a70 ;
 	.
 
+kb:url-facet-2f2958a3-7e9d-4d14-b31f-4148d35ab52c
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report" ;
+	.
+
+kb:url-facet-785c662e-8261-4a17-8031-114f86f99af1
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip" ;
+	.
+
+kb:url-facet-9b9d4a1a-059e-47f8-aee0-d93edf61b5f2
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip" ;
+	.
+
+kb:url-facet-d9e4bbae-4b47-4d8c-b547-9e524d3a4ca0
+	a uco-observable:URLFacet ;
+	uco-observable:fullValue "https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0" ;
+	.
+
+<https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/004-Onhub-diagnostic-report>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-2f2958a3-7e9d-4d14-b31f-4148d35ab52c ;
+	.
+
+<https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/005-Amazon-Echo-Alexa-Web-Scrape.zip>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-785c662e-8261-4a17-8031-114f86f99af1 ;
+	.
+
+<https://github.com/dfrws/dfrws2017-challenge/blob/master/materials/IoT_Net_Traffic.zip>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-9b9d4a1a-059e-47f8-aee0-d93edf61b5f2 ;
+	.
+
+<https://www.dropbox.com/s/vvkza954gn9sx89/001-SmartTV-RaspberryPi.zip?dl=0>
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:url-facet-d9e4bbae-4b47-4d8c-b547-9e524d3a4ca0 ;
+	.
+
