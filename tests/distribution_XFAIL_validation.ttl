@@ -12,14 +12,13 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/dataset-1.dat> ;
-			sh:resultMessage "CASE-Corpora requires any referenced Distribution have a downloadable URL, stored in the fullValue of a URLFacet."@en ;
+			sh:focusNode <http://example.org/kb/url-34d751fd-9039-45fc-87c5-b1cdbfc7ef10> ;
+			sh:resultMessage 'Focus node does not conform to shape MinCount 1: [ rdf:type sh:NodeShape ; sh:class uco-observable:URLFacet ; sh:property [ rdf:type sh:PropertyShape ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path uco-observable:fullValue ] ]' ;
 			sh:resultPath uco-core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
 			sh:sourceShape [
 				a sh:PropertyShape ;
-				sh:message "CASE-Corpora requires any referenced Distribution have a downloadable URL, stored in the fullValue of a URLFacet."@en ;
 				sh:path uco-core:hasFacet ;
 				sh:qualifiedMinCount "1"^^xsd:integer ;
 				sh:qualifiedValueShape [
@@ -35,37 +34,13 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/dataset-2.dat> ;
-			sh:resultMessage "CASE-Corpora requires any referenced Distribution have a downloadable URL, stored in the fullValue of a URLFacet."@en ;
+			sh:focusNode <http://example.org/kb/url-b51dfe9c-48bf-41a8-97fd-cf139845fa8c> ;
+			sh:resultMessage 'Focus node does not conform to shape MinCount 1: [ rdf:type sh:NodeShape ; sh:class uco-observable:URLFacet ; sh:property [ rdf:type sh:PropertyShape ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path uco-observable:fullValue ] ]' ;
 			sh:resultPath uco-core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
 			sh:sourceShape [
 				a sh:PropertyShape ;
-				sh:message "CASE-Corpora requires any referenced Distribution have a downloadable URL, stored in the fullValue of a URLFacet."@en ;
-				sh:path uco-core:hasFacet ;
-				sh:qualifiedMinCount "1"^^xsd:integer ;
-				sh:qualifiedValueShape [
-					a sh:NodeShape ;
-					sh:class uco-observable:URLFacet ;
-					sh:property [
-						a sh:PropertyShape ;
-						sh:minCount "1"^^xsd:integer ;
-						sh:path uco-observable:fullValue ;
-					] ;
-				] ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/dataset-3.dat> ;
-			sh:resultMessage "CASE-Corpora requires any referenced Distribution have a downloadable URL, stored in the fullValue of a URLFacet."@en ;
-			sh:resultPath uco-core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
-			sh:sourceShape [
-				a sh:PropertyShape ;
-				sh:message "CASE-Corpora requires any referenced Distribution have a downloadable URL, stored in the fullValue of a URLFacet."@en ;
 				sh:path uco-core:hasFacet ;
 				sh:qualifiedMinCount "1"^^xsd:integer ;
 				sh:qualifiedValueShape [

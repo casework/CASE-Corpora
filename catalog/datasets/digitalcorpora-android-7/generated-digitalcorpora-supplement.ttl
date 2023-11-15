@@ -1,3 +1,4 @@
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -19,6 +20,14 @@ kb:ContentDataFacet-8cfc1117-f405-5b60-b581-8d8c41eaf4fa
 	uco-observable:sizeInBytes "6511478336"^^xsd:integer ;
 	.
 
+kb:DownloadableRelation-2caa7604-7716-59d3-bbd5-be68fa6c1d80
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
+	uco-core:target kb:URL-5fe7f53d-b0e7-5aee-8fd8-756ccb62f680 ;
+	.
+
 kb:FileFacet-6e60d990-873f-5c0d-9859-b33c4f175f61
 	a uco-observable:FileFacet ;
 	uco-observable:fileName "android_7.tar.gz" ;
@@ -38,15 +47,27 @@ kb:Hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
 	uco-types:hashValue "50a015b0c65c61feb81e77e0d2adcbf84d2f8352b2e1c46f27fb5f4816546751"^^xsd:hexBinary ;
 	.
 
+kb:ObservableRelationship-38ceab9a-0ae0-5f10-9427-f0010203e0ce
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_7.tar.gz> ;
+	.
+
+kb:URL-5fe7f53d-b0e7-5aee-8fd8-756ccb62f680
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-04855a2a-0546-53ab-81b7-e167c9fd9734 ;
+	.
+
 kb:URLFacet-04855a2a-0546-53ab-81b7-e167c9fd9734
 	a uco-observable:URLFacet ;
 	uco-observable:fullValue "https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz" ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_7.tar.gz>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-04855a2a-0546-53ab-81b7-e167c9fd9734 ;
 	.
 
 <s3://digitalcorpora/corpora/mobile/android_7.tar.gz>

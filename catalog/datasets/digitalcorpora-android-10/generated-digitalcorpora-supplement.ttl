@@ -1,3 +1,4 @@
+@prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -157,6 +158,126 @@ kb:ContentDataFacet-e7da8c9f-a9ed-5c99-8406-f4bc100a2dcf
 		kb:Hash-fa63feec-f608-5e7f-b13c-7471199d7eea
 		;
 	uco-observable:sizeInBytes "1073741824"^^xsd:integer ;
+	.
+
+kb:DownloadableRelation-28260e0a-3c99-5840-985a-083505c8928d
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android10-ImageCreation.pdf> ;
+	uco-core:target kb:URL-44352ff3-e1f8-5ae3-9435-762a3262a885 ;
+	.
+
+kb:DownloadableRelation-34fa7848-70e2-5b66-9a6d-44c529e1d8c6
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z02> ;
+	uco-core:target kb:URL-64a2f87d-ade7-5ebb-a732-dffd07b9c068 ;
+	.
+
+kb:DownloadableRelation-3b1aabb9-572f-589b-ba6a-330a3ef7aa51
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Non-Cellebrite%20Extraction/Pixel%203.zip> ;
+	uco-core:target kb:URL-77d57bd9-c71d-5a12-ad76-78e909b518f1 ;
+	.
+
+kb:DownloadableRelation-7c86df65-8cdd-5cae-8707-4ab2cde862eb
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z03> ;
+	uco-core:target kb:URL-1b67da73-d5c9-5e39-9e21-454313c0eb00 ;
+	.
+
+kb:DownloadableRelation-80fac5b3-a0ab-5d9d-8a02-372c3f92d17f
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z04> ;
+	uco-core:target kb:URL-6ba4bb37-febe-535d-b005-b884d66bd7f9 ;
+	.
+
+kb:DownloadableRelation-9d164221-f2bf-5d6d-86d7-caf5999d9464
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip> ;
+	uco-core:target kb:URL-e2ba0198-2058-5ff8-a532-b0017971a588 ;
+	.
+
+kb:DownloadableRelation-a6240b6d-a322-581a-b36b-8d4af8437123
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/SMS-Messages.xlsx> ;
+	uco-core:target kb:URL-219def6d-dcd2-51cd-8981-23568e82c146 ;
+	.
+
+kb:DownloadableRelation-b65c1de7-f690-5d53-9815-2ca75d01643c
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.zip> ;
+	uco-core:target kb:URL-74ca407e-6713-539e-a2f9-8e03791f1191 ;
+	.
+
+kb:DownloadableRelation-baf213ae-52b3-522e-b2ca-072259540a5f
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z07> ;
+	uco-core:target kb:URL-de7f451c-f1fd-53c8-be5f-89c95db52639 ;
+	.
+
+kb:DownloadableRelation-c9bb4bb3-d52e-56e3-bcbb-7910f917aec3
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z08> ;
+	uco-core:target kb:URL-818a404a-ea7a-535f-a1bf-558548b4d3ec ;
+	.
+
+kb:DownloadableRelation-e1a08e98-385a-500c-8ab6-1c270b6ea0b3
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z01> ;
+	uco-core:target kb:URL-78679a83-a2a2-5c97-9f97-86b240e1b77f ;
+	.
+
+kb:DownloadableRelation-e6203f1c-04bb-5b73-829b-9972fbeab821
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.txt> ;
+	uco-core:target kb:URL-66294849-10a8-595f-aaf0-bd76edcbb85b ;
+	.
+
+kb:DownloadableRelation-ed831e79-47f5-5b6d-92c1-eef5ffd1a495
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z05> ;
+	uco-core:target kb:URL-9ad1b6c1-cc12-5002-8728-ffa745189789 ;
+	.
+
+kb:DownloadableRelation-f3945f77-fc6b-5d25-91f5-d45f199459b2
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.ufd> ;
+	uco-core:target kb:URL-acdf32e6-c4df-5180-a351-ff14af2930e9 ;
+	.
+
+kb:DownloadableRelation-fb4c2902-b07c-5a43-9564-59f4a5f3fdbf
+	a case-corpora:DownloadableRelation ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Downloadable_From" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z06> ;
+	uco-core:target kb:URL-247371b0-30f9-5b66-9b6c-9148bc64c8a1 ;
 	.
 
 kb:FileFacet-12098bfd-bc6d-56eb-970d-0efe3e8df805
@@ -444,6 +565,201 @@ kb:Hash-fc5547c3-364b-5c7c-ad55-6eb073e4e0a4
 	uco-types:hashValue "b32875e95a3376644816ec7983a63b5a6e2e0389878059a577686fcdea2dc2c6"^^xsd:hexBinary ;
 	.
 
+kb:ObservableRelationship-1d7f6241-3bf1-54fb-bad3-4d348fd11d2c
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z02> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z02> ;
+	.
+
+kb:ObservableRelationship-3b42acaa-7155-51a6-96c0-fa8ce709612d
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z05> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z05> ;
+	.
+
+kb:ObservableRelationship-46fe3b50-913c-506d-9155-a9bcba12471e
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.zip> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.zip> ;
+	.
+
+kb:ObservableRelationship-51872648-d3cc-5925-9f3c-55cf32760a1e
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z08> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z08> ;
+	.
+
+kb:ObservableRelationship-5afaed82-d998-5e99-8ecd-f157a5b50728
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.txt> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Android_10.txt> ;
+	.
+
+kb:ObservableRelationship-65f93c94-f47f-50fa-97a0-3c7a97e77128
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android10-ImageCreation.pdf> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Android10-ImageCreation.pdf> ;
+	.
+
+kb:ObservableRelationship-8bdf9b99-b1b4-59bf-ac86-1baf0c4b3f52
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Android_10.zip> ;
+	.
+
+kb:ObservableRelationship-961891f4-181c-5f1a-bb00-12b635783b52
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z04> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z04> ;
+	.
+
+kb:ObservableRelationship-a2600582-8791-552b-aaab-92009488cf71
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.ufd> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.ufd> ;
+	.
+
+kb:ObservableRelationship-b2ae286c-5b52-58b0-9bb6-98ddbaf646b3
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z07> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z07> ;
+	.
+
+kb:ObservableRelationship-b48aae14-bb83-5c13-ae5a-80e40e0eb1e9
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/SMS-Messages.xlsx> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/SMS-Messages.xlsx> ;
+	.
+
+kb:ObservableRelationship-bdecf556-15f8-53da-b9a3-6a5b977cf502
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z06> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z06> ;
+	.
+
+kb:ObservableRelationship-cbd7fe3d-8371-54ff-97f9-62a9573680d9
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z01> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z01> ;
+	.
+
+kb:ObservableRelationship-ecf96642-84dc-56c6-b40d-3e21ca125b5f
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z03> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z03> ;
+	.
+
+kb:ObservableRelationship-f416968a-cd3d-57b6-aea3-9a4bc7862a95
+	a uco-observable:ObservableRelationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Sends" ;
+	uco-core:source <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Non-Cellebrite%20Extraction/Pixel%203.zip> ;
+	uco-core:target <s3://digitalcorpora/corpora/mobile/android_10/Non-Cellebrite%20Extraction/Pixel%203.zip> ;
+	.
+
+kb:URL-1b67da73-d5c9-5e39-9e21-454313c0eb00
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-f3eaccd1-cfc9-501d-9d0d-c8e6650df007 ;
+	.
+
+kb:URL-219def6d-dcd2-51cd-8981-23568e82c146
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-47bd8564-51c3-5add-8e13-3fd01064717a ;
+	.
+
+kb:URL-247371b0-30f9-5b66-9b6c-9148bc64c8a1
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-cc9edd7e-1cc9-5d39-b127-76145f966c2b ;
+	.
+
+kb:URL-44352ff3-e1f8-5ae3-9435-762a3262a885
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-da258fd0-50a6-55a8-8868-e9acb55a61ba ;
+	.
+
+kb:URL-64a2f87d-ade7-5ebb-a732-dffd07b9c068
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-e96d086f-9cca-5054-bd92-aee27c58d94c ;
+	.
+
+kb:URL-66294849-10a8-595f-aaf0-bd76edcbb85b
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-f2adb91f-aac1-5951-adcc-cf4ca8bc648e ;
+	.
+
+kb:URL-6ba4bb37-febe-535d-b005-b884d66bd7f9
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-57ff9d83-147d-57ae-b4e5-5058f259400e ;
+	.
+
+kb:URL-74ca407e-6713-539e-a2f9-8e03791f1191
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-ffa0ef89-82df-5109-9f85-ce07ccdcd9e5 ;
+	.
+
+kb:URL-77d57bd9-c71d-5a12-ad76-78e909b518f1
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-6f8c50e5-ce7f-5d79-92c5-1bee672ef5b9 ;
+	.
+
+kb:URL-78679a83-a2a2-5c97-9f97-86b240e1b77f
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-1af92a02-abc3-5c63-8cec-6575f50d346a ;
+	.
+
+kb:URL-818a404a-ea7a-535f-a1bf-558548b4d3ec
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-97ebb704-14b6-5a94-903f-dafc3a0590a8 ;
+	.
+
+kb:URL-9ad1b6c1-cc12-5002-8728-ffa745189789
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-b18bc14c-2660-53d7-ac58-8d78ded4ec4a ;
+	.
+
+kb:URL-acdf32e6-c4df-5180-a351-ff14af2930e9
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-46d340ad-ed95-5ed1-b98a-82b66e5f5a83 ;
+	.
+
+kb:URL-de7f451c-f1fd-53c8-be5f-89c95db52639
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-4d722610-3d49-5dde-bf8f-9cbea9339cb5 ;
+	.
+
+kb:URL-e2ba0198-2058-5ff8-a532-b0017971a588
+	a uco-observable:URL ;
+	uco-core:hasFacet kb:URLFacet-2d976e27-0bbc-59c9-9e14-ddc6d5619796 ;
+	.
+
 kb:URLFacet-1af92a02-abc3-5c63-8cec-6575f50d346a
 	a uco-observable:URLFacet ;
 	uco-observable:fullValue "https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z01" ;
@@ -520,93 +836,78 @@ kb:URLFacet-ffa0ef89-82df-5109-9f85-ce07ccdcd9e5
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android10-ImageCreation.pdf>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-da258fd0-50a6-55a8-8868-e9acb55a61ba ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.txt>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-f2adb91f-aac1-5951-adcc-cf4ca8bc648e ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-2d976e27-0bbc-59c9-9e14-ddc6d5619796 ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.ufd>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-46d340ad-ed95-5ed1-b98a-82b66e5f5a83 ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z01>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-1af92a02-abc3-5c63-8cec-6575f50d346a ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z02>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-e96d086f-9cca-5054-bd92-aee27c58d94c ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z03>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-f3eaccd1-cfc9-501d-9d0d-c8e6650df007 ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z04>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-57ff9d83-147d-57ae-b4e5-5058f259400e ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z05>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-b18bc14c-2660-53d7-ac58-8d78ded4ec4a ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z06>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-cc9edd7e-1cc9-5d39-b127-76145f966c2b ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z07>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-4d722610-3d49-5dde-bf8f-9cbea9339cb5 ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.z08>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-97ebb704-14b6-5a94-903f-dafc3a0590a8 ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Cellebrite%20Extraction/Google_G013A%20Pixel%203.zip>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-ffa0ef89-82df-5109-9f85-ce07ccdcd9e5 ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Non-Cellebrite%20Extraction/Pixel%203.zip>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-6f8c50e5-ce7f-5d79-92c5-1bee672ef5b9 ;
 	.
 
 <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/SMS-Messages.xlsx>
-	a uco-observable:URL ;
+	a case-corpora:DownloadableObject ;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
-	uco-core:hasFacet kb:URLFacet-47bd8564-51c3-5add-8e13-3fd01064717a ;
 	.
 
 <s3://digitalcorpora/corpora/mobile/android_10/Android10-ImageCreation.pdf>
