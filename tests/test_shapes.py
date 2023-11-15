@@ -21,11 +21,10 @@ NS_TIME = TIME
 
 
 def test_qualified_url_shape() -> None:
-    # TODO: This IRI requires pySHACL >= 0.24.0 to appear in the results.
-    # URIRef("http://example.org/kb/url-dd3e2489-37f0-478c-92bb-c45831337dd4")
     expected: Set[URIRef] = {
         URIRef("http://example.org/kb/url-34d751fd-9039-45fc-87c5-b1cdbfc7ef10"),
         URIRef("http://example.org/kb/url-b51dfe9c-48bf-41a8-97fd-cf139845fa8c"),
+        URIRef("http://example.org/kb/url-dd3e2489-37f0-478c-92bb-c45831337dd4"),
     }
     computed: Set[URIRef] = set()
 
