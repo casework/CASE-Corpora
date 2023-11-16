@@ -91,6 +91,7 @@ case-corpora:DownloadableFile
 
 case-corpora:DownloadableObject
 	a owl:Class ;
+	rdfs:subClassOf uco-observable:ObservableObject ;
 	rdfs:comment "An ObservableObject that can be downloaded via some URL.  DownloadableObject is defined to specifically exclude some classes that participate in a download action in different ways, especially URL and DownloadableRelation."@en ;
 	owl:equivalentClass [
 		a owl:Class ;
