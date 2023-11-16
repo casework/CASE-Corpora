@@ -1073,10 +1073,15 @@ kb:ContentDataFacet-358ea653-7b32-5acf-b58e-6460a4ffbdfa
 
 kb:ContentDataFacet-35ae7a7a-762a-5aa4-bf64-aec339c69159
 	a uco-observable:ContentDataFacet ;
+	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/OC-116> ;
 	uco-observable:dataPayloadReferenceURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/SMS-Messages.xlsx> ;
 	uco-observable:hash
 		kb:Hash-24afde4b-cb80-5e5f-83b6-ff9d27bd77e0 ,
 		kb:Hash-76fa3097-f92d-53b1-8639-b0074783f17e
+		;
+	uco-observable:mimeType
+		"application/vnd.ms-excel" ,
+		"application/zip"
 		;
 	uco-observable:sizeInBytes "16016"^^xsd:integer ;
 	.
@@ -1111,10 +1116,6 @@ kb:ContentDataFacet-54dbe820-9ee0-5133-b0ab-cca1e1832420
 	uco-observable:sizeInBytes "1900"^^xsd:integer ;
 	.
 
-kb:ContentDataFacet-5cb9a74f-b21d-5cd7-8c09-80b1ee9f9089
-	uco-observable:mimeType "application/pdf" ;
-	.
-
 kb:ContentDataFacet-7b10de0f-b0c1-569a-9dac-dd95a40657fa
 	a uco-observable:ContentDataFacet ;
 	uco-observable:dataPayloadReferenceURL <https://digitalcorpora.s3.amazonaws.com/corpora/mobile/android_10/Android_10.zip> ;
@@ -1122,15 +1123,8 @@ kb:ContentDataFacet-7b10de0f-b0c1-569a-9dac-dd95a40657fa
 		kb:Hash-6d414599-445f-5c94-83d7-e7f23b6e101c ,
 		kb:Hash-c2b43e9d-c72f-5155-afbd-0220e23116a3
 		;
+	uco-observable:mimeType "application/zip" ;
 	uco-observable:sizeInBytes "10476724716"^^xsd:integer ;
-	.
-
-kb:ContentDataFacet-7e5b597a-dac8-5cdf-9737-84068812c4da
-	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/OC-116> ;
-	uco-observable:mimeType
-		"application/vnd.ms-excel" ,
-		"application/zip"
-		;
 	.
 
 kb:ContentDataFacet-8cfc1117-f405-5b60-b581-8d8c41eaf4fa
@@ -1150,6 +1144,7 @@ kb:ContentDataFacet-9d3d9c4d-569c-5845-bee9-00cf0350ba8b
 		kb:Hash-0b978804-b5a8-52e8-93dc-7129f139d1e5 ,
 		kb:Hash-5ceeb4eb-8f34-58ca-baa5-0f9ffcebee54
 		;
+	uco-observable:mimeType "application/pdf" ;
 	uco-observable:sizeInBytes "2479876"^^xsd:integer ;
 	.
 
@@ -12430,7 +12425,6 @@ orcid:0000-0002-3771-570X
 		;
 	uco-core:createdBy kb:organization-72ec45c9-ea94-4503-9428-ad73300056f5 ;
 	uco-core:hasFacet
-		kb:ContentDataFacet-5cb9a74f-b21d-5cd7-8c09-80b1ee9f9089 ,
 		kb:ContentDataFacet-9d3d9c4d-569c-5845-bee9-00cf0350ba8b ,
 		kb:FileFacet-549fdf39-4a7e-50d2-8206-3501093444df
 		;
@@ -12580,7 +12574,6 @@ orcid:0000-0002-3771-570X
 	uco-core:hasFacet
 		kb:ArchiveFileFacet-54f6d4e1-58de-4888-888b-0992d881a20b ,
 		kb:ContentDataFacet-35ae7a7a-762a-5aa4-bf64-aec339c69159 ,
-		kb:ContentDataFacet-7e5b597a-dac8-5cdf-9737-84068812c4da ,
 		kb:FileFacet-e8260820-359e-5803-af99-92326d4a4af5
 		;
 	uco-core:modifiedTime "2022-09-27T16:58:04+00:00"^^xsd:dateTime ;
