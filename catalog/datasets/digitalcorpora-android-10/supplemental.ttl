@@ -17,16 +17,20 @@ kb:ArchiveFileFacet-54f6d4e1-58de-4888-888b-0992d881a20b
 	uco-observable:archiveType "ZIP" ;
 	.
 
-kb:ContentDataFacet-5cb9a74f-b21d-5cd7-8c09-80b1ee9f9089
-	uco-observable:mimeType "application/pdf" ;
-	.
-
-kb:ContentDataFacet-7e5b597a-dac8-5cdf-9737-84068812c4da
+kb:ContentDataFacet-35ae7a7a-762a-5aa4-bf64-aec339c69159
 	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/OC-116> ;
 	uco-observable:mimeType
 		"application/vnd.ms-excel" ,
 		"application/zip"
 		;
+	.
+
+kb:ContentDataFacet-7b10de0f-b0c1-569a-9dac-dd95a40657fa
+	uco-observable:mimeType "application/zip" ;
+	.
+
+kb:ContentDataFacet-9d3d9c4d-569c-5845-bee9-00cf0350ba8b
+	uco-observable:mimeType "application/pdf" ;
 	.
 
 kb:Relationship-4dda53b3-102d-4427-887d-0e7a49ba0cb1
@@ -54,28 +58,22 @@ kb:Relationship-daf100bc-16b3-422f-9796-272edf7424cf
 	.
 
 <s3://digitalcorpora/corpora/mobile/android_10/Android10-ImageCreation.pdf>
-	a
-		drafting:S3Object ,
-		uco-observable:PDFFile
-		;
-	uco-core:hasFacet kb:ContentDataFacet-5cb9a74f-b21d-5cd7-8c09-80b1ee9f9089 ;
+	a uco-observable:PDFFile ;
+	uco-core:hasFacet kb:ContentDataFacet-9d3d9c4d-569c-5845-bee9-00cf0350ba8b ;
 	.
 
 <s3://digitalcorpora/corpora/mobile/android_10/Android_10.zip>
-	a
-		drafting:S3Object ,
-		uco-observable:ArchiveFile
+	a uco-observable:ArchiveFile ;
+	uco-core:hasFacet
+		kb:ArchiveFileFacet-020a38b1-f370-4117-86b8-3aed63114f91 ,
+		kb:ContentDataFacet-7b10de0f-b0c1-569a-9dac-dd95a40657fa
 		;
-	uco-core:hasFacet kb:ArchiveFileFacet-020a38b1-f370-4117-86b8-3aed63114f91 ;
 	.
 
 <s3://digitalcorpora/corpora/mobile/android_10/SMS-Messages.xlsx>
-	a
-		drafting:S3Object ,
-		uco-observable:ArchiveFile
-		;
+	a uco-observable:ArchiveFile ;
 	uco-core:hasFacet
 		kb:ArchiveFileFacet-54f6d4e1-58de-4888-888b-0992d881a20b ,
-		kb:ContentDataFacet-7e5b597a-dac8-5cdf-9737-84068812c4da
+		kb:ContentDataFacet-35ae7a7a-762a-5aa4-bf64-aec339c69159
 		;
 	.
