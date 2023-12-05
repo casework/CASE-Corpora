@@ -302,7 +302,9 @@ drafting:isQualityOf
 
 dcat:Dataset
 	rdfs:comment "Within CASE-Corpora, the property hasDatasetDirectory is a unique identifier for a Dataset."@en ;
-	owl:hasKey case-corpora:hasDatasetDirectory ;
+	owl:hasKey (
+		case-corpora:hasDatasetDirectory
+	) ;
 	.
 
 uco-observable:File
