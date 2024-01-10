@@ -120,7 +120,7 @@ generated-ground-truth-prov.ttl: \
 
 generated-prov.dot: \
   generated-prov.ttl
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --dash-unqualified \
@@ -136,7 +136,7 @@ generated-prov.ttl: \
   $(top_srcdir)/catalog/shared.ttl \
   base_rdfs_expansion.ttl
 	rm -f _$@ __$@
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_rdf \
 	      --allow-empty-results \
