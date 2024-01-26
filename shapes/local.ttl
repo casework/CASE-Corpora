@@ -198,7 +198,8 @@ sh-case-corpora-local:InvestigativeAction-latest-ProvenanceRecord-usage-shape
 
 sh-case-corpora-local:InvestigativeAction-shape
 	a sh:NodeShape ;
-	sh:description "This shape defines and implements a CASE-Corpora requirement that any InvestigativeAction must generate a ProvenanceRecord."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE/issues/146> ;
+	sh:description "This shape defines and implements a CASE-Corpora requirement that any InvestigativeAction must generate a ProvenanceRecord.  This can be removed if CASE Issue 146 is accepted."@en ;
 	sh:property [
 		a sh:PropertyShape ;
 		sh:path uco-action:result ;
