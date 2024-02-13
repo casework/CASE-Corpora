@@ -91,7 +91,7 @@ sh-ssn:sosa-FeatureOfInterest-shape
 		[
 			a sh:PropertyShape ;
 			sh:deactivated "true"^^xsd:boolean ;
-			sh:description "This shape coresponds with the minimum-cardinality OWL Restriction.  It is left here, deactivated, in acknowledgement of the OWL Open-World assumption."@en ;
+			sh:description "This shape corresponds with the minimum-cardinality OWL Restriction.  It is left here, deactivated, in acknowledgement of the OWL Open-World assumption."@en ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:path ssn:hasProperty ;
 			sh:severity sh:Info ;
