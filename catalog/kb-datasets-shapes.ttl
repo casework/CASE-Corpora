@@ -16,7 +16,7 @@ case-corpora:DownloadableObject
 	sh:description "This shape is deactivated for kb-datasets.ttl, so each distribution.ttl can make references to download URLs without needing to specify DownloadRelations." ;
 	.
 
-sh-case-corpora:hasDownloadURL-range-shape
+sh-case-corpora:hasDownloadURL-objects-shape
 	sh:deactivated "true"^^xsd:boolean ;
 	sh:description "This shape is deactivated for kb-datasets.ttl, so each distribution.ttl can make references to download URLs without needing to fully specify the \"download URL's\" class." ;
 	.
