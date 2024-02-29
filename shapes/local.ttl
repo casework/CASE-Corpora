@@ -14,6 +14,7 @@
 @prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix uco-owl: <https://ontology.unifiedcyberontology.org/owl/> .
 @prefix uco-types: <https://ontology.unifiedcyberontology.org/uco/types/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -407,6 +408,15 @@ sh-dcterms:publisher-suggested-objects-shape
 
 sh-dcterms:rights-suggested-objects-shape
 	rdfs:comment "Deactivated due to usage pattern of property in upstream ontologies."@en ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+uco-owl:Restriction-shape
+	rdfs:comment "TODO" ;
+	rdfs:seeAlso
+		<https://github.com/casework/CASE-Corpora/issues/63> ,
+		<https://github.com/ucoProject/UCO/issues/591>
+		;
 	sh:deactivated "true"^^xsd:boolean ;
 	.
 
