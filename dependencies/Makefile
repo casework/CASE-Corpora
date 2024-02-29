@@ -363,17 +363,14 @@ ssn.ttl:
 	  --target _$@
 	mv _$@ $@
 
-time.ttl:
-	wget \
-	  --output-document=__$@ \
-	  http://www.w3.org/2006/time
+time.ttl: \
+  sdw/time/rdf/time.ttl
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \
-	  --source __$@ \
+	  --source $< \
 	  --target-format turtle \
 	  --target _$@
-	rm __$@
 	mv _$@ $@
 
 vcard.ttl:
