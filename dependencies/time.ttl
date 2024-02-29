@@ -24,8 +24,8 @@
 		;
 	dct:isVersionOf <http://www.w3.org/TR/owl-time> ;
 	dct:license <https://creativecommons.org/licenses/by/4.0/> ;
-	dct:modified "2017-04-06"^^xsd:date ;
-	dct:rights "Copyright © 2006-2017 W3C, OGC. W3C and OGC liability, trademark and document use rules apply."@en ;
+	dct:modified "2024-02-29"^^xsd:date ;
+	dct:rights "Copyright © 2006-2021 W3C, OGC. W3C and OGC liability, trademark and document use rules apply."@en ;
 	rdfs:seeAlso
 		<http://dx.doi.org/10.3233/SW-150187> ,
 		<http://www.semantic-web-journal.net/content/time-ontology-extended-non-gregorian-calendar-applications> ,
@@ -38,7 +38,9 @@
 		"2016-12-20 - adjust range of time:timeZone to time:TimeZone, moved up from the tzont ontology.  " ,
 		'2016-12-20 - restore time:Year and time:January which were present in the 2006 version of the ontology, but now marked "deprecated". ' ,
 		"2017-02 - intervalIn, intervalDisjoint, monthOfYear added; TemporalUnit subclass of TemporalDuration" ,
-		"2017-04-06 - hasTime, hasXSDDuration added; Number removed; all duration elements changed to xsd:decimal"
+		"2017-04-06 - hasTime, hasXSDDuration added; Number removed; all duration elements changed to xsd:decimal" ,
+		"2021-01-27 - clarified definition and label for time:after and time:before" ,
+		"2024-02-29 - Fixed datatype on all cardinality restrictions"
 		;
 	skos:historyNote """Update of OWL-Time ontology, extended to support general temporal reference systems. 
 
@@ -870,37 +872,37 @@ Detailed guidance about working with time zones is given in http://www.w3.org/TR
 		[
 			a owl:Restriction ;
 			owl:onProperty :days ;
-			owl:cardinality "0"^^xsd:integer ;
+			owl:cardinality "0"^^xsd:nonNegativeInteger ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty :hours ;
-			owl:cardinality "0"^^xsd:integer ;
+			owl:cardinality "0"^^xsd:nonNegativeInteger ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty :minutes ;
-			owl:cardinality "0"^^xsd:integer ;
+			owl:cardinality "0"^^xsd:nonNegativeInteger ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty :months ;
-			owl:cardinality "0"^^xsd:integer ;
+			owl:cardinality "0"^^xsd:nonNegativeInteger ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty :seconds ;
-			owl:cardinality "0"^^xsd:integer ;
+			owl:cardinality "0"^^xsd:nonNegativeInteger ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty :weeks ;
-			owl:cardinality "0"^^xsd:integer ;
+			owl:cardinality "0"^^xsd:nonNegativeInteger ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty :years ;
-			owl:cardinality "1"^^xsd:integer ;
+			owl:cardinality "1"^^xsd:nonNegativeInteger ;
 		]
 		;
 	rdfs:label "Year"@en ;
@@ -929,12 +931,12 @@ It is deprecated in this edition of OWL-Time. """ ;
 :after
 	a owl:ObjectProperty ;
 	rdfs:label
-		"after"@en ,
-		"después"@es
+		"después"@es ,
+		"is after"@en
 		;
 	rdfs:comment
 		"Asume una dirección en el tiempo. Si una entidad temporal T1 está después de otra entidad temporal T2, entonces el principio de T1 está después del final de T2."@es ,
-		"Gives directionality to time. If a temporal entity T1 is after another temporal entity T2, then the beginning of T1 is after the end of T2."@en
+		"The subject is a temporal entity that occurs after the object. If a temporal entity T1 is after another temporal entity T2, then the beginning of T1 is after the end of T2."@en
 		;
 	rdfs:domain :TemporalEntity ;
 	rdfs:range :TemporalEntity ;
@@ -952,11 +954,11 @@ It is deprecated in this edition of OWL-Time. """ ;
 		;
 	rdfs:label
 		"antes"@es ,
-		"before"@en
+		"is before"@en
 		;
 	rdfs:comment
 		'Asume una dirección en el tiempo. Si una entidad temporal T1 está antes que otra entidad temporal T2, entonces el final de T1 está antes que el principio de T2. Así, "antes" se puede considerar básica para instantes y derivada para intervalos.'@es ,
-		'Gives directionality to time. If a temporal entity T1 is before another temporal entity T2, then the end of T1 is before the beginning of T2. Thus, "before" can be considered to be basic to instants and derived for intervals.'@en
+		'The subject is a temporal entity that occurs before the object. If a temporal entity T1 is before another temporal entity T2, then the end of T1 is before the beginning of T2. Thus, "before" can be considered to be basic to instants and derived for intervals.'@en
 		;
 	rdfs:domain :TemporalEntity ;
 	rdfs:range :TemporalEntity ;
@@ -2019,6 +2021,33 @@ DBPedia provides a set of resources corresponding to the IANA timezones, with a 
 		;
 	.
 
+:unitCentury
+	a :TemporalUnit ;
+	rdfs:label "Century (unit of temporal duration)"@en ;
+	skos:prefLabel
+		"Jahrhundert"@de ,
+		"century"@en ,
+		"eeuw"@nl ,
+		"secolo"@it ,
+		"siglo"@es ,
+		"siècle"@fr ,
+		"stulecie"@pl ,
+		"século"@pt ,
+		"век"@ru ,
+		"قرن واحد"@ar ,
+		"一世紀"@ja ,
+		"一个世纪"@zh ,
+		"한 세기"@kr
+		;
+	:days "0"^^xsd:decimal ;
+	:hours "0"^^xsd:decimal ;
+	:minutes "0"^^xsd:decimal ;
+	:months "0"^^xsd:decimal ;
+	:seconds "0"^^xsd:decimal ;
+	:weeks "0"^^xsd:decimal ;
+	:years "100"^^xsd:decimal ;
+	.
+
 :unitDay
 	a :TemporalUnit ;
 	rdfs:label "Day (unit of temporal duration)"@en ;
@@ -2032,7 +2061,7 @@ DBPedia provides a set of resources corresponding to the IANA timezones, with a 
 		"giorno"@it ,
 		"jour"@fr ,
 		"يوماً ما"@ar ,
-		"ある日"@jp ,
+		"ある日"@ja ,
 		"一天"@zh ,
 		"언젠가"@kr
 		;
@@ -2043,6 +2072,33 @@ DBPedia provides a set of resources corresponding to the IANA timezones, with a 
 	:seconds "0"^^xsd:decimal ;
 	:weeks "0"^^xsd:decimal ;
 	:years "0"^^xsd:decimal ;
+	.
+
+:unitDecade
+	a :TemporalUnit ;
+	rdfs:label "Decade (unit of temporal duration)"@en ;
+	skos:prefLabel
+		"1 열개의"@kr ,
+		"10年"@ja ,
+		"Dekade"@de ,
+		"decade"@en ,
+		"decennio"@it ,
+		"decennium"@nl ,
+		"dekada"@pl ,
+		"década"@pt ,
+		"décennie"@fr ,
+		"una década"@es ,
+		"одно десятилетие"@ru ,
+		"عقد واحد"@ar ,
+		"十年"@zh
+		;
+	:days "0"^^xsd:decimal ;
+	:hours "0"^^xsd:decimal ;
+	:minutes "0"^^xsd:decimal ;
+	:months "0"^^xsd:decimal ;
+	:seconds "0"^^xsd:decimal ;
+	:weeks "0"^^xsd:decimal ;
+	:years "10"^^xsd:decimal ;
 	.
 
 :unitHour
@@ -2057,10 +2113,10 @@ DBPedia provides a set of resources corresponding to the IANA timezones, with a 
 		"hour"@en ,
 		"ora"@it ,
 		"uur"@nl ,
-		'один час"@ru' ,
+		"один час"@ru ,
 		"ساعة واحدة"@ar ,
 		"一小時"@zh ,
-		"一時間"@jp ,
+		"一時間"@ja ,
 		"한 시간"@kr
 		;
 	:days "0"^^xsd:decimal ;
@@ -2070,6 +2126,33 @@ DBPedia provides a set of resources corresponding to the IANA timezones, with a 
 	:seconds "0"^^xsd:decimal ;
 	:weeks "0"^^xsd:decimal ;
 	:years "0"^^xsd:decimal ;
+	.
+
+:unitMillenium
+	a :TemporalUnit ;
+	rdfs:label "Century (unit of temporal duration)"@en ;
+	skos:prefLabel
+		"Jahrtausend"@de ,
+		"milenio"@es ,
+		"millenium"@en ,
+		"millennio"@it ,
+		"millennium"@nl ,
+		"millénaire"@fr ,
+		"milênio"@pt ,
+		"tysiąclecie"@pl ,
+		"тысячелетие"@ru ,
+		"الألفية"@ar ,
+		"ミレニアム"@ja ,
+		"千年"@zh ,
+		"밀레니엄"@kr
+		;
+	:days "0"^^xsd:decimal ;
+	:hours "0"^^xsd:decimal ;
+	:minutes "0"^^xsd:decimal ;
+	:months "0"^^xsd:decimal ;
+	:seconds "0"^^xsd:decimal ;
+	:weeks "0"^^xsd:decimal ;
+	:years "1000"^^xsd:decimal ;
 	.
 
 :unitMinute
@@ -2086,7 +2169,7 @@ DBPedia provides a set of resources corresponding to the IANA timezones, with a 
 		"minuut"@nl ,
 		"одна минута"@ru ,
 		"دقيقة واحدة"@ar ,
-		"一分"@jp ,
+		"一分"@ja ,
 		"等一下"@zh ,
 		"분"@kr
 		;
@@ -2112,7 +2195,7 @@ DBPedia provides a set of resources corresponding to the IANA timezones, with a 
 		"month"@en ,
 		"один месяц"@ru ,
 		"شهر واحد"@ar ,
-		"一か月"@jp ,
+		"一か月"@ja ,
 		"一個月"@zh ,
 		"한달"@kr
 		;
@@ -2130,15 +2213,15 @@ DBPedia provides a set of resources corresponding to the IANA timezones, with a 
 	rdfs:label "Second (unit of temporal duration)"@en ;
 	skos:prefLabel
 		"Sekunde"@de ,
-		"Sekundę"@pl ,
 		"second"@en ,
 		"seconde"@fr ,
 		"seconde"@nl ,
 		"secondo"@it ,
 		"segundo"@es ,
 		"segundo"@pt ,
+		"sekundę"@pl ,
 		"ثانية واحدة"@ar ,
-		"一秒"@jp ,
+		"一秒"@ja ,
 		"一秒"@zh ,
 		"일초"@kr
 		;
@@ -2186,7 +2269,7 @@ DBPedia provides a set of resources corresponding to the IANA timezones, with a 
 		"одна неделя"@ru ,
 		"سبوع واحد"@ar ,
 		"一周"@zh ,
-		"一週間"@jp ,
+		"一週間"@ja ,
 		"일주일"@kr
 		;
 	:days "0"^^xsd:decimal ;
@@ -2203,7 +2286,6 @@ DBPedia provides a set of resources corresponding to the IANA timezones, with a 
 	rdfs:label "Year (unit of temporal duration)"@en ;
 	skos:prefLabel
 		"1 년"@kr ,
-		"1年"@jp ,
 		"Jahr"@de ,
 		"an"@fr ,
 		"anno"@it ,
@@ -2214,6 +2296,7 @@ DBPedia provides a set of resources corresponding to the IANA timezones, with a 
 		"year"@en ,
 		"один год"@ru ,
 		"سنة واحدة"@ar ,
+		"一年"@ja ,
 		"一年"@zh
 		;
 	:days "0"^^xsd:decimal ;
