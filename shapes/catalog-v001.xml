@@ -51,6 +51,7 @@
     <uri id="User Entered Import Resolution" uri="sh-dcat.ttl" name="http://example.org/shapes/dcat"/>
     <uri id="User Entered Import Resolution" uri="sh-dcterms.ttl" name="http://example.org/shapes/dcterms"/>
     <uri id="User Entered Import Resolution" uri="sh-org.ttl" name="http://example.org/shapes/org"/>
+    <uri id="User Entered Import Resolution" uri="sh-prov-o.ttl" name="http://example.org/shapes/prov-o"/>
     <uri id="User Entered Import Resolution" uri="sh-situation.ttl" name="http://example.org/shapes/situation"/>
     <uri id="User Entered Import Resolution" uri="sh-sosa.ttl" name="http://example.org/shapes/sosa"/>
     <uri id="User Entered Import Resolution" uri="sh-ssn.ttl" name="http://example.org/shapes/ssn"/>
