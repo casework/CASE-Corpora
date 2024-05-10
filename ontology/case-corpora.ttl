@@ -307,6 +307,12 @@ dcat:Dataset
 	) ;
 	.
 
+uco-observable:Application
+	rdfs:subClassOf uco-observable:Software ;
+	rdfs:comment "TODO - The additional subclassing of Application under Software will be redundant in UCO 2.0.0."@en ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/596> ;
+	.
+
 uco-observable:File
 	rdfs:subClassOf [
 		a owl:Restriction ;
@@ -314,6 +320,12 @@ uco-observable:File
 		owl:onClass drafting:FileHashQuality ;
 		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	] ;
+	.
+
+uco-observable:OperatingSystem
+	rdfs:subClassOf uco-observable:Software ;
+	rdfs:comment "TODO - The additional subclassing of Application under Software will be redundant in UCO 2.0.0."@en ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/596> ;
 	.
 
 <mailto:null@example.org>
