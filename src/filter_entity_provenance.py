@@ -12,7 +12,7 @@
 # We would appreciate acknowledgement if the software is used.
 
 """
-This script takes as input the IRI of a prov:Entity, the IRI of a second prov:Entity, and a graph containing provenance that links the two.  The graph is filtered to the history starting at the first Entity and ending at the second.  A graph containinly only the linking PROV-O triples is returned as output.  The graph resulting from this script is able to present a more focused illustration of the two entities' provenantial link.
+This script takes as input the IRI of a prov:Entity, the IRI of a second prov:Entity, and a graph containing provenance that links the two.  The graph is filtered to the history starting at the first Entity and ending at the second.  A graph containining only the linking PROV-O triples is returned as output.  The graph resulting from this script is able to present a more focused illustration of the two entities' provenantial link.
 
 This script was written for a CASE-Corpora workflow, assuming a CASE graph would have a PROV-O graph derived from it using case_prov_rdf, and at least both of those graphs would be used as inputs to this script.
 """
