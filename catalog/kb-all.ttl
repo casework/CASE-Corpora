@@ -351,11 +351,6 @@ kb:Attribution-29b1fb51-c4b1-5d8d-aca4-b48bb5a8d6ca
 	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	.
 
-kb:Attribution-2d5414e0-7025-54d3-a878-b640e926b535
-	a prov:Attribution ;
-	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
-	.
-
 kb:Attribution-2f922193-1710-5a81-993c-3c4f33aa77d7
 	a prov:Attribution ;
 	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
@@ -692,6 +687,11 @@ kb:Attribution-e5a84ade-ebb7-5f21-9a6c-1b7d547eceea
 	.
 
 kb:Attribution-e9861743-893c-5c57-a2eb-95660390befe
+	a prov:Attribution ;
+	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	.
+
+kb:Attribution-e9abcc16-7f42-5e96-9543-f12d0c67ced4
 	a prov:Attribution ;
 	prov:agent kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	.
@@ -1274,6 +1274,12 @@ kb:Derivation-08a59437-829c-5270-92d0-cefaaeef111b
 	prov:hadActivity kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d ;
 	.
 
+kb:Derivation-0c128fe8-8c91-5143-9824-2962cee99c5e
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c ;
+	prov:hadActivity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+	.
+
 kb:Derivation-0cb1d9ba-da49-5ba0-aee6-a889915d9262
 	a prov:Derivation ;
 	prov:entity kb:provenance-record-f8541cbb-f45f-4760-9505-bda885700e4e ;
@@ -1531,22 +1537,10 @@ kb:Derivation-31d6a379-342f-5910-825b-7c645796fa65
 	prov:hadActivity kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9 ;
 	.
 
-kb:Derivation-31e9795e-f437-55fd-9284-6ce049969442
-	a prov:Derivation ;
-	prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
-	prov:hadActivity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
-	.
-
 kb:Derivation-3204ba15-e25b-50ad-9b40-afdcd0013ccf
 	a prov:Derivation ;
 	prov:entity kb:file-2352f3d0-d02f-40ba-85a4-b00dd97050c8 ;
 	prov:hadActivity kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f ;
-	.
-
-kb:Derivation-369fbb6c-7bae-512c-9603-ef31ec2ec0c9
-	a prov:Derivation ;
-	prov:entity kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
-	prov:hadActivity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
 	.
 
 kb:Derivation-37e22719-7b3f-54f8-a07f-a65c566fd54d
@@ -1624,12 +1618,6 @@ kb:Derivation-40b3b2c4-efe3-5093-80f4-d9339b3eab86
 kb:Derivation-40d1e1d0-46b1-52a5-8560-714f5718ffbd
 	a prov:Derivation ;
 	prov:entity kb:device-8fe70491-26c5-4226-a735-ccda10e1a73a ;
-	.
-
-kb:Derivation-40d92215-7a9b-5f3f-a40a-5b6ce38d57dc
-	a prov:Derivation ;
-	prov:entity kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
-	prov:hadActivity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
 	.
 
 kb:Derivation-42106ff4-0c3a-54e6-b91d-118e1d46b93d
@@ -2165,6 +2153,12 @@ kb:Derivation-7fdb1704-f489-5a70-a337-a49f89eea6a8
 	prov:hadActivity kb:observation-6c0553fe-84f9-4133-8be1-67d6e3c80d61 ;
 	.
 
+kb:Derivation-80fbd5d4-af8d-5546-84a0-61c3e60bef28
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c ;
+	prov:hadActivity kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
+	.
+
 kb:Derivation-821f87ac-3d3a-5e23-b6b7-d38480a14c74
 	a prov:Derivation ;
 	prov:entity kb:provenance-record-27610dc7-3dc7-4d57-8143-629c72fb6be7 ;
@@ -2567,12 +2561,6 @@ kb:Derivation-b4f2ee10-7dfb-5fb9-920e-c75fc0894528
 	prov:hadActivity kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde ;
 	.
 
-kb:Derivation-b6b5b325-9f40-543e-8a22-8e1348a64d3c
-	a prov:Derivation ;
-	prov:entity kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f ;
-	prov:hadActivity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
-	.
-
 kb:Derivation-b6b8580c-11f7-5f67-ab08-a152bdaafba6
 	a prov:Derivation ;
 	prov:entity kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
@@ -2601,6 +2589,12 @@ kb:Derivation-badacccd-69c4-563d-9aea-d8dea69416a1
 	a prov:Derivation ;
 	prov:entity kb:provenance-record-9ea065c5-bb95-4535-be3e-df2016e40694 ;
 	prov:hadActivity kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864 ;
+	.
+
+kb:Derivation-bb9837b2-6c36-5aa2-bc8d-004e0094554a
+	a prov:Derivation ;
+	prov:entity kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ;
+	prov:hadActivity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
 	.
 
 kb:Derivation-bc11c0e4-6065-5441-85e2-8434ee94be15
@@ -3015,6 +3009,12 @@ kb:Derivation-f2f3b2c1-28ef-5600-96b4-636dbb7cf355
 	a prov:Derivation ;
 	prov:entity kb:provenance-record-0114505c-89da-4fe8-afc8-5ec0b3c3ed62 ;
 	prov:hadActivity kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0 ;
+	.
+
+kb:Derivation-f3ad014d-da23-5d71-8b12-48f5f3dcacce
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f ;
+	prov:hadActivity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
 	.
 
 kb:Derivation-f4e7c19a-35d0-55dd-a899-2116f8a62696
@@ -3900,15 +3900,6 @@ kb:Generation-9b3f04af-8a07-50ca-9b3d-014f661c803b
 	prov:activity kb:action-541265d6-2a57-476e-bff0-45f512f22bd5 ;
 	.
 
-kb:Generation-9b8bea6f-65a2-5435-8132-12d50a405e76
-	a
-		time:Instant ,
-		prov:Generation
-		;
-	time:before kb:Usage-a6328120-bb3d-5610-b3ed-c26a7c8d69f9 ;
-	prov:activity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
-	.
-
 kb:Generation-9c7ebcf0-197d-5f83-ac40-a00c3c877838
 	a
 		time:Instant ,
@@ -4246,6 +4237,15 @@ kb:Generation-e0e2da82-5191-57de-ae56-287b289a0bba
 		;
 	time:before kb:Usage-e96d62ee-6f47-5433-9c27-bc68b1b2d9e7 ;
 	prov:activity kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f ;
+	.
+
+kb:Generation-e1ad0e9c-d7c5-5738-ba6f-bfdf577dc9f4
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	time:before kb:Usage-ce4b4a6f-4f19-5a3e-abb6-bc8a9128e85d ;
+	prov:activity kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
 	.
 
 kb:Generation-e2cd5988-ec83-5775-9606-718977a90ae5
@@ -6252,14 +6252,6 @@ kb:Usage-a54a9f32-a941-5950-aacb-89cd88daa3b2
 	prov:entity kb:image-9c77c0e9-fd0b-4912-afcf-0d1b1b86f4d6 ;
 	.
 
-kb:Usage-a6328120-bb3d-5610-b3ed-c26a7c8d69f9
-	a
-		time:Instant ,
-		prov:Usage
-		;
-	prov:entity kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
-	.
-
 kb:Usage-a9e33170-f1d0-569e-b8f5-41b8c257d1e3
 	a
 		time:Instant ,
@@ -6418,6 +6410,14 @@ kb:Usage-ce2ad85e-40aa-52cf-90dc-dc5f1f61b995
 		prov:Usage
 		;
 	prov:entity kb:file-5f97ec81-66d4-436a-8a34-f7f299b4ec2b ;
+	.
+
+kb:Usage-ce4b4a6f-4f19-5a3e-abb6-bc8a9128e85d
+	a
+		time:Instant ,
+		prov:Usage
+		;
+	prov:entity kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c ;
 	.
 
 kb:Usage-d5e8f211-2caa-5d85-9c41-a5a19bedddde
@@ -7073,14 +7073,14 @@ kb:application-5ef487a0-67c5-5652-9cb9-d56589bfde96
 		;
 	prov:qualifiedAttribution kb:Attribution-8c3f7357-7321-5618-9517-4bd932c5479b ;
 	prov:qualifiedDerivation
-		kb:Derivation-369fbb6c-7bae-512c-9603-ef31ec2ec0c9 ,
+		kb:Derivation-0c128fe8-8c91-5143-9824-2962cee99c5e ,
 		kb:Derivation-586f74b5-b5e6-5ae7-968e-e619fb599b13
 		;
 	prov:qualifiedGeneration kb:generation-746402ba-4814-57c4-b2d4-07bc36e61a64 ;
 	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	prov:wasDerivedFrom
 		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
-		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
 		;
 	prov:wasGeneratedBy kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
 	uco-core:description "Application: Gallery Vault" ;
@@ -10938,34 +10938,6 @@ kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
 	uco-core:object kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	.
 
-kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
-	a
-		prov:Collection ,
-		prov:Entity ,
-		case-investigation:ProvenanceRecord
-		;
-	prov:hadMember
-		kb:application-0e554158-db6a-57cb-80c0-44ac1ca43b11 ,
-		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
-		;
-	prov:qualifiedAttribution kb:Attribution-2d5414e0-7025-54d3-a878-b640e926b535 ;
-	prov:qualifiedDerivation
-		kb:Derivation-31e9795e-f437-55fd-9284-6ce049969442 ,
-		kb:Derivation-b6b5b325-9f40-543e-8a22-8e1348a64d3c
-		;
-	prov:qualifiedGeneration kb:Generation-9b8bea6f-65a2-5435-8132-12d50a405e76 ;
-	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
-	prov:wasDerivedFrom
-		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
-		kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f
-		;
-	prov:wasGeneratedBy kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
-	uco-core:object
-		kb:application-0e554158-db6a-57cb-80c0-44ac1ca43b11 ,
-		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
-		;
-	.
-
 kb:provenance-record-77997f72-643b-4090-8b6c-1b578d696a97
 	a
 		prov:Collection ,
@@ -11551,6 +11523,34 @@ kb:provenance-record-e0b96677-b01f-4d96-bfa2-847e099c70b8
 	uco-core:object kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	.
 
+kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
+	a
+		prov:Collection ,
+		prov:Entity ,
+		case-investigation:ProvenanceRecord
+		;
+	prov:hadMember
+		kb:application-0e554158-db6a-57cb-80c0-44ac1ca43b11 ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+		;
+	prov:qualifiedAttribution kb:Attribution-e9abcc16-7f42-5e96-9543-f12d0c67ced4 ;
+	prov:qualifiedDerivation
+		kb:Derivation-bb9837b2-6c36-5aa2-bc8d-004e0094554a ,
+		kb:Derivation-f3ad014d-da23-5d71-8b12-48f5f3dcacce
+		;
+	prov:qualifiedGeneration kb:Generation-e1ad0e9c-d7c5-5738-ba6f-bfdf577dc9f4 ;
+	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
+	prov:wasDerivedFrom
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
+		kb:provenance-record-3e6c2939-e2c4-41d5-abb1-584381d93e8f
+		;
+	prov:wasGeneratedBy kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
+	uco-core:object
+		kb:application-0e554158-db6a-57cb-80c0-44ac1ca43b11 ,
+		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46
+		;
+	.
+
 kb:provenance-record-ed951e2b-fb93-4cc9-899c-f8d88ec80619
 	a
 		prov:Collection ,
@@ -11613,14 +11613,14 @@ kb:provenance-record-f8541cbb-f45f-4760-9505-bda885700e4e
 		;
 	prov:qualifiedAttribution kb:Attribution-53f00db0-ffe5-5abf-9832-5b88faf5ceb6 ;
 	prov:qualifiedDerivation
-		kb:Derivation-40d92215-7a9b-5f3f-a40a-5b6ce38d57dc ,
-		kb:Derivation-6b668b76-aa92-56c2-be6b-35ffe962b836
+		kb:Derivation-6b668b76-aa92-56c2-be6b-35ffe962b836 ,
+		kb:Derivation-80fbd5d4-af8d-5546-84a0-61c3e60bef28
 		;
 	prov:qualifiedGeneration kb:Generation-b2172b30-d23e-56fe-a871-c5e3ac980b54 ;
 	prov:wasAttributedTo kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	prov:wasDerivedFrom
 		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
-		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
 		;
 	prov:wasGeneratedBy kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43 ;
 	uco-core:object
@@ -11792,24 +11792,24 @@ kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43
 	time:inside
 		kb:Generation-b2172b30-d23e-56fe-a871-c5e3ac980b54 ,
 		kb:Usage-55d912db-0988-5739-a6ac-5510f6b5dab4 ,
-		kb:Usage-a6328120-bb3d-5610-b3ed-c26a7c8d69f9
+		kb:Usage-ce4b4a6f-4f19-5a3e-abb6-bc8a9128e85d
 		;
 	prov:qualifiedAssociation kb:Association-f691f032-b09d-56d0-b1cc-fee4796e389d ;
 	prov:qualifiedCommunication kb:Communication-b50dd878-b308-50d7-98bb-871df6c70018 ;
 	prov:qualifiedStart kb:Start-2bd2eb08-da2f-5dc2-abff-50a321d7e13a ;
 	prov:qualifiedUsage
 		kb:Usage-55d912db-0988-5739-a6ac-5510f6b5dab4 ,
-		kb:Usage-a6328120-bb3d-5610-b3ed-c26a7c8d69f9
+		kb:Usage-ce4b4a6f-4f19-5a3e-abb6-bc8a9128e85d
 		;
 	prov:used
 		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
-		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
 		;
 	prov:wasAssociatedWith kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	prov:wasInformedBy kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a ;
 	uco-action:object
 		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
-		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
 		;
 	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	uco-action:result
@@ -11912,7 +11912,7 @@ kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a
 		;
 	time:hasBeginning kb:Start-2a6dc76e-7d28-57bc-b587-2ace1cbacf7e ;
 	time:inside
-		kb:Generation-9b8bea6f-65a2-5435-8132-12d50a405e76 ,
+		kb:Generation-e1ad0e9c-d7c5-5738-ba6f-bfdf577dc9f4 ,
 		kb:Usage-52866e82-4020-5224-b4cb-7e15f018761c ,
 		kb:Usage-c99a900f-7fcb-5f2f-965f-587bff3aa308
 		;
@@ -11936,7 +11936,7 @@ kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a
 	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	uco-action:result
 		kb:application-0e554158-db6a-57cb-80c0-44ac1ca43b11 ,
-		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
 		;
 	uco-core:description "Install AppLock" ;
 	.
