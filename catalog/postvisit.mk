@@ -41,6 +41,9 @@ all: \
   kb-all_validation-unstable.ttl \
   kb-all_validation-unstable-2.0.0.ttl
 
+.PHONY: \
+  check-pytest
+
 README.md: \
   README.md.in \
   README.md.sed \
@@ -52,7 +55,17 @@ README.md: \
 	mv _$@ $@
 
 check: \
-  kb-all_validation.ttl
+  kb-all_validation.ttl \
+  check-pytest
+
+check-pytest: \
+  kb-all.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && pytest \
+	    --ignore datasets \
+	    --log-level=DEBUG \
+	    --verbose \
+	    --verbose
 
 datasets.md: \
   $(top_srcdir)/ontology/case-corpora.ttl \
