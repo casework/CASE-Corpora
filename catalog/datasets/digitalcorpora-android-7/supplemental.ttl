@@ -2442,7 +2442,7 @@ kb:provenance-record-75fb2a26-0b7e-428b-acba-17d114caca39
 	uco-core:object kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e ;
 	.
 
-kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
 	a case-investigation:ProvenanceRecord ;
 	uco-core:object
 		kb:application-0e554158-db6a-57cb-80c0-44ac1ca43b11 ,
@@ -2695,7 +2695,7 @@ kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43
 	a case-corpora:SeedingAction ;
 	uco-action:object
 		kb:device-ea732801-7d0e-46ac-a028-69b782c97a46 ,
-		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
 		;
 	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	uco-action:result
@@ -2753,7 +2753,7 @@ kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a
 	uco-action:performer kb:person-eab92237-467b-4977-959f-db67afdddee5 ;
 	uco-action:result
 		kb:application-0e554158-db6a-57cb-80c0-44ac1ca43b11 ,
-		kb:provenance-record-76fc70c1-844f-4ba3-9a65-df3fe1654e43
+		kb:provenance-record-e41298e4-6229-451a-8641-1b77909f9d1c
 		;
 	uco-core:description "Install AppLock" ;
 	.
