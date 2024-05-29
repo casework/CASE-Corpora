@@ -24,7 +24,6 @@ from uuid import UUID
 from rdflib import Graph, URIRef
 
 srcdir = Path(__file__).parent
-top_srcdir = srcdir.parent.parent.parent
 
 
 def test_uuid_unique_usage_case_corpora_catalog() -> None:
