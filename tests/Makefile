@@ -193,8 +193,8 @@ owl_abox_XFAIL_inferencing_rdfs_validation.ttl: \
 
 time_PASS_validation.ttl: \
   $(top_srcdir)/.venv.done.log \
-  $(top_srcdir)/dependencies/time.ttl \
-  $(top_srcdir)/shapes/sh-time.ttl \
+  $(top_srcdir)/dependencies/CDO-Shapes-Time/dependencies/time.ttl \
+  $(top_srcdir)/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl \
   time_PASS.ttl
 	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
@@ -202,9 +202,9 @@ time_PASS_validation.ttl: \
 	    --allow-infos \
 	    --format turtle \
 	    --metashacl \
-	    --ont-graph $(top_srcdir)/dependencies/time.ttl \
+	    --ont-graph $(top_srcdir)/dependencies/CDO-Shapes-Time/dependencies/time.ttl \
 	    --output __$@ \
-	    --shacl $(top_srcdir)/shapes/sh-time.ttl \
+	    --shacl $(top_srcdir)/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl \
 	    time_PASS.ttl
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
@@ -217,8 +217,8 @@ time_PASS_validation.ttl: \
 
 time_XFAIL_validation.ttl: \
   $(top_srcdir)/.venv.done.log \
-  $(top_srcdir)/dependencies/time.ttl \
-  $(top_srcdir)/shapes/sh-time.ttl \
+  $(top_srcdir)/dependencies/CDO-Shapes-Time/dependencies/time.ttl \
+  $(top_srcdir)/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl \
   time_XFAIL.ttl
 	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
@@ -226,9 +226,9 @@ time_XFAIL_validation.ttl: \
 	    --allow-infos \
 	    --format turtle \
 	    --metashacl \
-	    --ont-graph $(top_srcdir)/dependencies/time.ttl \
+	    --ont-graph $(top_srcdir)/dependencies/CDO-Shapes-Time/dependencies/time.ttl \
 	    --output __$@ \
-	    --shacl $(top_srcdir)/shapes/sh-time.ttl \
+	    --shacl $(top_srcdir)/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl \
 	    time_XFAIL.ttl \
 	    ; rc=$$? ; test 1 -eq $$rc
 	test -s __$@

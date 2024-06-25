@@ -40,6 +40,7 @@ case_unstable_2_0_0_ttls := \
   $(wildcard CASE-unstable-2.0.0/dependencies/UCO/ontology/uco/*/*.ttl)
 
 dependent_ontology_files := \
+  CDO-Shapes-Time/dependencies/time.ttl \
   cito.ttl \
   cpannotationschema.ttl \
   dc.ttl \
@@ -55,7 +56,6 @@ dependent_ontology_files := \
   skos.ttl \
   sosa.ttl \
   ssn.ttl \
-  time.ttl \
   vcard.ttl \
   wgs84_pos.ttl
 
@@ -359,16 +359,6 @@ ssn.ttl:
 	  --inline-blank-nodes \
 	  --source-format turtle \
 	  --source sdw/ssn/integrated/ssn.ttl \
-	  --target-format turtle \
-	  --target _$@
-	mv _$@ $@
-
-time.ttl: \
-  sdw/time/rdf/time.ttl
-	java -jar $(rdf_toolkit_jar) \
-	  --inline-blank-nodes \
-	  --source-format turtle \
-	  --source $< \
 	  --target-format turtle \
 	  --target _$@
 	mv _$@ $@

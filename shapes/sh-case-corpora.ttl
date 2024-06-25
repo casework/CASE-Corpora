@@ -3,8 +3,8 @@
 # imports: http://example.org/shapes/dcat-us
 # imports: http://example.org/shapes/owl-abox
 # imports: http://example.org/shapes/prov-o
+# imports: http://example.org/shapes/sh-time
 # imports: http://example.org/shapes/ssn
-# imports: http://example.org/shapes/time
 
 @prefix case-corpora: <http://example.org/ontology/case-corpora/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -32,8 +32,8 @@
 		<http://example.org/shapes/dcat-us> ,
 		<http://example.org/shapes/owl-abox> ,
 		<http://example.org/shapes/prov-o> ,
-		<http://example.org/shapes/ssn> ,
-		<http://example.org/shapes/time>
+		<http://example.org/shapes/sh-time> ,
+		<http://example.org/shapes/ssn>
 		;
 	.
 

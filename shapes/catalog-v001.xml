@@ -23,6 +23,8 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/ontology/investigation/investigation.ttl" name="https://ontology.caseontology.org/case/investigation/1.3.0"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/ontology/master/case.ttl" name="https://ontology.caseontology.org/case/case/1.3.0"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/ontology/vocabulary/vocabulary.ttl" name="https://ontology.caseontology.org/case/vocabulary/1.3.0"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/dependencies/time.ttl" name="http://www.w3.org/2006/time#2016"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/shapes/sh-time.ttl" name="http://example.org/shapes/sh-time"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/cito.ttl" name="http://purl.org/spar/cito/2018-02-16"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/cpannotationschema.ttl" name="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/dc.ttl" name="http://purl.org/dc/elements/1.1/"/>
@@ -38,7 +40,6 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/skos.ttl" name="http://www.w3.org/2004/02/skos/core"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/sosa.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/sosa.ttl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/ssn.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/time.ttl" name="http://www.w3.org/2006/time#2016"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/vcard.ttl" name="http://www.w3.org/2006/vcard/ns"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/wgs84_pos.ttl" name="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
     <uri id="User Entered Import Resolution" uri="../ontology/case-corpora.ttl" name="http://example.org/ontology/case-corpora"/>
@@ -62,5 +63,4 @@
     <uri id="User Entered Import Resolution" uri="shapes.ttl" name="http://example.org/shapes/owl-abox"/>
     <uri id="User Entered Import Resolution" uri="shapes.ttl" name="http://example.org/shapes/pod"/>
     <uri id="User Entered Import Resolution" uri="shapes.ttl" name="http://example.org/shapes/skos"/>
-    <uri id="User Entered Import Resolution" uri="shapes.ttl" name="http://example.org/shapes/time"/>
 </catalog>
