@@ -2321,26 +2321,26 @@ kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a
 
 kb:operating-system-12dd8ee9-c818-4232-ac8c-1bc7f45bd2ab
 	a uco-observable:OperatingSystem ;
-	uco-core:hasFacet kb:operating-system-facet-78cb5086-9aea-4c6e-9571-03d98b2e06a5 ;
+	uco-core:hasFacet kb:software-facet-afd9bd2d-652d-4b43-bc07-cd8912d95290 ;
 	uco-core:name "Cellebrite UFED 4PC" ;
 	.
 
 kb:operating-system-f40a533d-9b1e-49ad-ae21-a4c69a4c49f4
 	a uco-observable:OperatingSystem ;
-	uco-core:hasFacet kb:operating-system-facet-d79d75c8-7740-4c29-b173-2b94d012637c ;
+	uco-core:hasFacet kb:software-facet-397cfb4d-9caa-472c-824f-ccffa3bd2d46 ;
 	uco-core:name "Android Nougat" ;
 	.
 
-kb:operating-system-facet-78cb5086-9aea-4c6e-9571-03d98b2e06a5
-	a uco-observable:OperatingSystemFacet ;
-	uco-observable:manufacturer wd:Q5058279 ;
-	uco-observable:version "7.10.1.1080" ;
-	.
-
-kb:operating-system-facet-d79d75c8-7740-4c29-b173-2b94d012637c
-	a uco-observable:OperatingSystemFacet ;
+kb:software-facet-397cfb4d-9caa-472c-824f-ccffa3bd2d46
+	a uco-observable:SoftwareFacet ;
 	uco-observable:manufacturer wd:Q95 ;
 	uco-observable:version "7.1.2" ;
+	.
+
+kb:software-facet-afd9bd2d-652d-4b43-bc07-cd8912d95290
+	a uco-observable:SoftwareFacet ;
+	uco-observable:manufacturer wd:Q5058279 ;
+	uco-observable:version "7.10.1.1080" ;
 	.
 
 kb:person-eab92237-467b-4977-959f-db67afdddee5
