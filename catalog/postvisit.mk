@@ -127,13 +127,14 @@ kb-all_validation.ttl: \
 	rm __$@
 	mv _$@ $@
 
+# TODO - After release of CASE 1.4.0, use --allow-infos instead of --allow-warnings.
 kb-all_validation-develop.ttl: \
   $(top_srcdir)/dependencies/CASE-develop.ttl \
   kb-all.ttl
 	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
-	    --allow-infos \
+	    --allow-warnings \
 	    --built-version none \
 	    --format turtle \
 	    --inference rdfs \
