@@ -20,14 +20,14 @@ This script takes an OWL ontology graph file as input, and emits a Dot
 and noted import-incompatibilities.
 """
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 import argparse
 import logging
 import os
 from typing import Dict, List
 
-import pydot  # type: ignore
+import pydot
 import rdflib
 from rdflib import OWL, RDF, URIRef
 
