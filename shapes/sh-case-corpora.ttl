@@ -2,7 +2,7 @@
 # imports: http://example.org/shapes/cito
 # imports: http://example.org/shapes/dcat-us
 # imports: http://example.org/shapes/owl-abox
-# imports: http://example.org/shapes/prov-o
+# imports: http://example.org/shapes/sh-prov-o
 # imports: http://example.org/shapes/sh-time
 # imports: http://example.org/shapes/ssn
 
@@ -31,7 +31,7 @@
 		<http://example.org/shapes/cito> ,
 		<http://example.org/shapes/dcat-us> ,
 		<http://example.org/shapes/owl-abox> ,
-		<http://example.org/shapes/prov-o> ,
+		<http://example.org/shapes/sh-prov-o> ,
 		<http://example.org/shapes/sh-time> ,
 		<http://example.org/shapes/ssn>
 		;

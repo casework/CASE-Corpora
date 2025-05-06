@@ -43,6 +43,7 @@ case_unstable_2_0_0_ttls := \
   $(wildcard CASE-unstable-2.0.0/dependencies/UCO/ontology/uco/*/*.ttl)
 
 dependent_ontology_files := \
+  CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl \
   CDO-Shapes-Time/dependencies/time.ttl \
   cito.ttl \
   cpannotationschema.ttl \
@@ -54,7 +55,6 @@ dependent_ontology_files := \
   dublin_core_type.ttl \
   foaf.ttl \
   org.ttl \
-  prov-o.ttl \
   situation.ttl \
   skos.ttl \
   sosa.ttl \
@@ -296,19 +296,6 @@ org.ttl:
 	wget \
 	  --output-document=__$@ \
 	  http://www.w3.org/ns/org
-	java -jar $(rdf_toolkit_jar) \
-	  --inline-blank-nodes \
-	  --source-format turtle \
-	  --source __$@ \
-	  --target-format turtle \
-	  --target _$@
-	rm __$@
-	mv _$@ $@
-
-prov-o.ttl:
-	wget \
-	  --output-document=__$@ \
-	  http://www.w3.org/ns/prov-o
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \
