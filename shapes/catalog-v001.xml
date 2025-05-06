@@ -23,6 +23,9 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/ontology/investigation/investigation.ttl" name="https://ontology.caseontology.org/case/investigation/1.3.0"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/ontology/master/case.ttl" name="https://ontology.caseontology.org/case/case/1.3.0"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/ontology/vocabulary/vocabulary.ttl" name="https://ontology.caseontology.org/case/vocabulary/1.3.0"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl" name="http://www.w3.org/ns/prov-o#"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl" name="https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/main/dependencies/prov-o-dl.ttl"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl" name="http://example.org/shapes/sh-prov-o"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/dependencies/time.ttl" name="http://www.w3.org/2006/time#2016"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/shapes/sh-time.ttl" name="http://example.org/shapes/sh-time"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/cito.ttl" name="http://purl.org/spar/cito/2018-02-16"/>
@@ -34,8 +37,6 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/discourse-relationships.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/discourse-relationships.ttl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/foaf.ttl" name="http://xmlns.com/foaf/0.1/"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/org.ttl" name="http://www.w3.org/ns/org#"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/prov-o.ttl" name="http://www.w3.org/ns/prov-o#"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/prov-o.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/prov-o.ttl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/situation.ttl" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/skos.ttl" name="http://www.w3.org/2004/02/skos/core"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/sosa.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/sosa.ttl"/>
@@ -52,7 +53,6 @@
     <uri id="User Entered Import Resolution" uri="sh-dcat.ttl" name="http://example.org/shapes/dcat"/>
     <uri id="User Entered Import Resolution" uri="sh-dcterms.ttl" name="http://example.org/shapes/dcterms"/>
     <uri id="User Entered Import Resolution" uri="sh-org.ttl" name="http://example.org/shapes/org"/>
-    <uri id="User Entered Import Resolution" uri="sh-prov-o.ttl" name="http://example.org/shapes/prov-o"/>
     <uri id="User Entered Import Resolution" uri="sh-situation.ttl" name="http://example.org/shapes/situation"/>
     <uri id="User Entered Import Resolution" uri="sh-sosa.ttl" name="http://example.org/shapes/sosa"/>
     <uri id="User Entered Import Resolution" uri="sh-ssn.ttl" name="http://example.org/shapes/ssn"/>
