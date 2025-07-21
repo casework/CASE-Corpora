@@ -7,7 +7,6 @@
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix uco-types: <https://ontology.unifiedcyberontology.org/uco/types/> .
-@prefix uco-vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 kb:ContentDataFacet-8cfc1117-f405-5b60-b581-8d8c41eaf4fa
@@ -37,13 +36,13 @@ kb:FileFacet-6e60d990-873f-5c0d-9859-b33c4f175f61
 
 kb:Hash-06903043-3b24-57e8-997d-6e5acd63ad8f
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashMethod "SHA256" ;
 	uco-types:hashValue "563d71762b48f14ffd2663fcf85870f21c939441de614a1175a54b41c6373369"^^xsd:hexBinary ;
 	.
 
 kb:Hash-9be87651-1d15-5fd7-b7e6-ef77eaf199c9
 	a uco-types:Hash ;
-	uco-types:hashMethod "SHA3-256"^^uco-vocabulary:HashNameVocab ;
+	uco-types:hashMethod "SHA3-256" ;
 	uco-types:hashValue "50a015b0c65c61feb81e77e0d2adcbf84d2f8352b2e1c46f27fb5f4816546751"^^xsd:hexBinary ;
 	.
 
