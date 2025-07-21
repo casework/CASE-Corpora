@@ -127,14 +127,13 @@ kb-all_validation.ttl: \
 	rm __$@
 	mv _$@ $@
 
-# TODO - After release of CASE 1.4.0, use --allow-infos instead of --allow-warnings.
 kb-all_validation-develop.ttl: \
   $(top_srcdir)/dependencies/CASE-develop.ttl \
   kb-all.ttl
 	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
-	    --allow-warnings \
+	    --allow-infos \
 	    --built-version none \
 	    --format turtle \
 	    --inference rdfs \
@@ -154,14 +153,13 @@ kb-all_validation-develop.ttl: \
 	rm __$@
 	mv _$@ $@
 
-# TODO - After release of CASE 1.4.0, use --allow-infos instead of --allow-warnings.
 kb-all_validation-develop-2.0.0.ttl: \
   $(top_srcdir)/dependencies/CASE-develop-2.0.0.ttl \
   kb-all.ttl
 	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
-	    --allow-warnings \
+	    --allow-infos \
 	    --built-version none \
 	    --format turtle \
 	    --inference rdfs \
@@ -181,14 +179,13 @@ kb-all_validation-develop-2.0.0.ttl: \
 	rm __$@
 	mv _$@ $@
 
-# TODO - After release of CASE 1.4.0, use --allow-infos instead of --allow-warnings.
 kb-all_validation-unstable.ttl: \
   $(top_srcdir)/dependencies/CASE-unstable.ttl \
   kb-all.ttl
 	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
-	    --allow-warnings \
+	    --allow-infos \
 	    --built-version none \
 	    --format turtle \
 	    --inference rdfs \
@@ -208,13 +205,13 @@ kb-all_validation-unstable.ttl: \
 	rm __$@
 	mv _$@ $@
 
-# TODO - After release of CASE 1.4.0, require --allow-infos.  Unstable-2.0.0 review will XFAIL until then.
 kb-all_validation-unstable-2.0.0.ttl: \
   $(top_srcdir)/dependencies/CASE-unstable-2.0.0.ttl \
   kb-all.ttl
 	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
+	    --allow-infos \
 	    --built-version none \
 	    --format turtle \
 	    --inference rdfs \
@@ -224,8 +221,7 @@ kb-all_validation-unstable-2.0.0.ttl: \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
-	    kb-all.ttl \
-	    ; rc=$$? ; test 1 -eq $$rc
+	    kb-all.ttl
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \

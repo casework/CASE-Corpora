@@ -15,7 +15,7 @@ WHERE {
     .
 
   ?nHash
-    uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+    uco-types:hashMethod "SHA256" ;
     uco-types:hashValue ?lHashValue ;
     .
   BIND(

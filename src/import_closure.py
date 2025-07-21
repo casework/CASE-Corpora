@@ -27,7 +27,7 @@ import logging
 import os
 from typing import Dict, List
 
-import pydot  # type: ignore
+import pydot
 import rdflib
 from rdflib import OWL, RDF, URIRef
 

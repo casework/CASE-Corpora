@@ -5043,7 +5043,7 @@ kb:Usage-ff17a5b0-fe8b-5375-a00a-496ae6eae779
 
 kb:action-541265d6-2a57-476e-bff0-45f512f22bd5
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-55218777-9671-5ab7-af68-825d84cf7d4a ;
@@ -5078,7 +5078,7 @@ kb:action-541265d6-2a57-476e-bff0-45f512f22bd5
 
 kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-c6b501c0-48d8-57aa-afff-4d146b4be2c7 ;
@@ -5136,7 +5136,7 @@ kb:action-5a3fc7cd-e27c-4561-8acf-53aad900a832
 
 kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-11d53688-d584-5809-bf45-730f8e98762b ;
@@ -5163,7 +5163,7 @@ kb:actuation-300cc221-674c-4d2c-892b-6bb9a11a1853
 
 kb:actuation-d19e2f10-00e0-44cd-a37d-7c497dff450f
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-c540873c-ccf7-5a2d-be01-f233854c3ba0 ;
@@ -6390,7 +6390,7 @@ kb:image-a3c3e13d-98ef-4901-b984-81c10142d90e
 
 kb:investigative-action-0254e206-045c-48aa-b7e3-41c71685400a
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-028e0492-daaa-5d70-8f78-1d85cd1e089f ;
@@ -6447,7 +6447,7 @@ kb:investigative-action-0254e206-045c-48aa-b7e3-41c71685400a
 
 kb:investigative-action-194c4e23-243e-4deb-b8d5-3ce9dce19367
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-54bc6eac-24ec-544e-890b-22e71a3a29a2 ;
@@ -6487,7 +6487,7 @@ kb:investigative-action-194c4e23-243e-4deb-b8d5-3ce9dce19367
 
 kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-13626e80-b2ae-5fd9-9ed0-d319a5cf4baf ;
@@ -6507,7 +6507,7 @@ kb:investigative-action-1daddba1-be8d-496b-952f-e0feaf438bde
 
 kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-3521d979-6566-5e4d-bfa4-08c880e5d8e5 ;
@@ -6535,7 +6535,7 @@ kb:investigative-action-2d98ca30-0ce3-4bcb-8411-1a2374501877
 
 kb:investigative-action-6417193e-68e9-4abb-800d-5957bf1126d4
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-b12237a3-fe85-5f14-bef7-925822280ea5 ;
@@ -6554,7 +6554,7 @@ kb:investigative-action-6417193e-68e9-4abb-800d-5957bf1126d4
 
 kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-fbdf11ea-60cc-5c45-98f2-5e19515e70f5 ;
@@ -6588,7 +6588,7 @@ kb:investigative-action-6ea701f0-411a-4e9c-aaa7-801f40416214
 
 kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-ce68dca0-aa74-5cb8-92e6-818feec806d1 ;
@@ -6616,7 +6616,7 @@ kb:investigative-action-787d829a-8489-4771-ab6f-78d0808ebf9f
 
 kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-e6f58421-4233-5205-bd17-d6166021953d ;
@@ -6643,7 +6643,7 @@ kb:investigative-action-82f02a44-47eb-43bb-aea6-1bc5e222ef25
 
 kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-5614eea5-1d6c-5c0c-95cb-762340e4b3d8 ;
@@ -6748,7 +6748,7 @@ kb:investigative-action-8ed7908a-994f-4c69-86d4-1b4b6762890d
 
 kb:investigative-action-960da72e-127f-4596-addf-b3c5bc92ecc7
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-722a4cfd-8dbc-5df9-934f-8d0c8f547a75 ;
@@ -6767,7 +6767,7 @@ kb:investigative-action-960da72e-127f-4596-addf-b3c5bc92ecc7
 
 kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-be8d3a06-8d32-5e9e-8661-58e43f5208d7 ;
@@ -6890,7 +6890,7 @@ kb:investigative-action-a12c4001-82dc-445d-be3f-ccce026d55d9
 
 kb:investigative-action-aa5026fa-a651-4cfd-9ff0-a6354aa70ec5
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-7d52fa1f-d65c-5f49-8a06-015205555d7a ;
@@ -6909,7 +6909,7 @@ kb:investigative-action-aa5026fa-a651-4cfd-9ff0-a6354aa70ec5
 
 kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-9deafd5e-6e27-5574-a074-2b2a4f5ba5e6 ;
@@ -6928,7 +6928,7 @@ kb:investigative-action-b5f235f2-2f89-4f76-956f-d955ca705429
 
 kb:investigative-action-b8273ac6-f091-40b0-8346-1544df69f093
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-f30aae4e-20d2-5c52-953b-6893d8740740 ;
@@ -6947,7 +6947,7 @@ kb:investigative-action-b8273ac6-f091-40b0-8346-1544df69f093
 
 kb:investigative-action-d254e096-3f87-4a04-97e6-e1e6b52c6766
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-92f34d67-11eb-50c1-8291-8ea5799f4c3d ;
@@ -6966,7 +6966,7 @@ kb:investigative-action-d254e096-3f87-4a04-97e6-e1e6b52c6766
 
 kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-e9938c50-a115-5ef9-bb82-9e3582126f06 ;
@@ -6985,7 +6985,7 @@ kb:investigative-action-ed216df1-590c-4a3a-ada2-77f9ce4af228
 
 kb:observation-42f418fa-08d7-47e1-a009-cc1d2d43091a
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-49f8b976-d4d0-5bd8-985a-378a59257867 ;
@@ -7013,7 +7013,7 @@ kb:observation-42f418fa-08d7-47e1-a009-cc1d2d43091a
 
 kb:observation-46c720c8-5346-4262-800e-5e3780517a92
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-a1b8b28e-ef1d-506f-b481-1f62b41b08e0 ;
@@ -7043,7 +7043,7 @@ kb:observation-46c720c8-5346-4262-800e-5e3780517a92
 
 kb:observation-61f71e4d-fa2a-4e76-8c2b-bf2755aab72f
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-3ac74578-8a75-5c76-b475-ac18e110656d ;
@@ -7073,7 +7073,7 @@ kb:observation-61f71e4d-fa2a-4e76-8c2b-bf2755aab72f
 
 kb:observation-66e7f5a6-b29d-4ca9-9e3f-6d2413daf070
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-89316b67-59e6-5b17-b94d-ac1d0424b075 ;
@@ -7101,7 +7101,7 @@ kb:observation-66e7f5a6-b29d-4ca9-9e3f-6d2413daf070
 
 kb:observation-6c0553fe-84f9-4133-8be1-67d6e3c80d61
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-09e8d918-c625-51e1-bbd8-0629f4cb92d5 ;
@@ -7129,7 +7129,7 @@ kb:observation-6c0553fe-84f9-4133-8be1-67d6e3c80d61
 
 kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-832b11d3-9eb9-539e-941d-9ec10895be7e ;
@@ -7157,7 +7157,7 @@ kb:observation-905dc678-a096-4933-98f8-1e84813d8f8e
 
 kb:observation-b1ea91ee-5e9a-4b75-979e-e41a56171b66
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-7fd5dac4-85d2-5dda-8efa-07cc590e4756 ;
@@ -7185,7 +7185,7 @@ kb:observation-b1ea91ee-5e9a-4b75-979e-e41a56171b66
 
 kb:observation-e5c108e4-c0a5-4658-95ed-99171828fcf1
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-2832cb30-aa80-52c3-ba12-a7b939135227 ;
@@ -7213,7 +7213,7 @@ kb:observation-e5c108e4-c0a5-4658-95ed-99171828fcf1
 
 kb:observation-e7a8722f-dfdc-4f07-b1dd-6a27a38c047a
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-5d48947e-74f2-5166-9389-72dff5e95cf3 ;
@@ -8207,7 +8207,7 @@ kb:provenance-record-f8541cbb-f45f-4760-9505-bda885700e4e
 
 kb:seeding-action-03bfd992-342b-4a3a-b90a-9b2967bc3548
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-1ecf93e8-7fed-5b97-b8ea-efbb924bdb19 ;
@@ -8234,7 +8234,7 @@ kb:seeding-action-03bfd992-342b-4a3a-b90a-9b2967bc3548
 
 kb:seeding-action-27e643fc-6ffc-43bc-bcc7-228f0cdefbe6
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-309a8a77-6bd3-5560-9447-393d1370150c ;
@@ -8261,7 +8261,7 @@ kb:seeding-action-27e643fc-6ffc-43bc-bcc7-228f0cdefbe6
 
 kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-bfd8435b-cc7f-5c82-9cd6-f4130c83bd3b ;
@@ -8288,7 +8288,7 @@ kb:seeding-action-3ff969d7-f1b9-4f1b-9ace-5d6adaa0fe6b
 
 kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-7c8e8600-441f-59a8-a870-de96648122fa ;
@@ -8315,7 +8315,7 @@ kb:seeding-action-42082800-4def-4189-9ee7-425bf53f66d0
 
 kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-2bd2eb08-da2f-5dc2-abff-50a321d7e13a ;
@@ -8342,7 +8342,7 @@ kb:seeding-action-76fc70c1-844f-4ba3-9a65-df3fe1654e43
 
 kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-797ec630-0636-5284-962c-a9971e97257d ;
@@ -8369,7 +8369,7 @@ kb:seeding-action-8fee6015-fd79-4ab5-bc2a-bb99030ec428
 
 kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-ff4a0ff5-f983-599b-b21b-779a7a2c86c0 ;
@@ -8396,7 +8396,7 @@ kb:seeding-action-cc06a04e-b5c7-4d11-857d-ba320a573864
 
 kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-2a6dc76e-7d28-57bc-b587-2ace1cbacf7e ;
@@ -8423,7 +8423,7 @@ kb:seeding-action-e0f4d86c-619f-46ac-aaac-61b53a4eab2a
 
 kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-c811386c-c0e4-5d58-8e98-4048ae71dd41 ;
@@ -8450,7 +8450,7 @@ kb:seeding-action-e56b6061-bee2-4691-ae84-234c0c761303
 
 kb:seeding-action-f146250c-7531-45e9-8918-93a60024658b
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-b330077f-afeb-5b4e-ae0e-3044ff899b9a ;
