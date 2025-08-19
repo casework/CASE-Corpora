@@ -57,18 +57,20 @@ figures: \
 
 filtered-blk0_mmcblk0.bin.activities-entities.dot: \
   filtered-blk0_mmcblk0.bin.activities-entities.ttl
-	source $(top_srcdir)/venv/bin/activate \
-	  && case_prov_dot \
-	    _$@ \
-	    $<
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      _$@ \
+	      $<
 	mv _$@ $@
 
 filtered-blk0_mmcblk0.bin.entities.dot: \
   filtered-blk0_mmcblk0.bin.entities.ttl
-	source $(top_srcdir)/venv/bin/activate \
-	  && case_prov_dot \
-	    _$@ \
-	    $<
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      _$@ \
+	      $<
 	mv _$@ $@
 
 filtered-blk0_mmcblk0.bin.activities-entities.ttl: \
@@ -101,18 +103,20 @@ filtered-blk0_mmcblk0.bin.entities.ttl: \
 
 filtered-blk32_mmcblk0rpmb.bin.activities-entities.dot: \
   filtered-blk32_mmcblk0rpmb.bin.activities-entities.ttl
-	source $(top_srcdir)/venv/bin/activate \
-	  && case_prov_dot \
-	    _$@ \
-	    $<
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      _$@ \
+	      $<
 	mv _$@ $@
 
 filtered-blk32_mmcblk0rpmb.bin.entities.dot: \
   filtered-blk32_mmcblk0rpmb.bin.entities.ttl
-	source $(top_srcdir)/venv/bin/activate \
-	  && case_prov_dot \
-	    _$@ \
-	    $<
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      _$@ \
+	      $<
 	mv _$@ $@
 
 filtered-blk32_mmcblk0rpmb.bin.activities-entities.ttl: \
