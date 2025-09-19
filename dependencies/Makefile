@@ -42,22 +42,31 @@ case_unstable_2_0_0_ttls := \
   $(wildcard CASE-unstable-2.0.0/dependencies/UCO/ontology/*/*.ttl) \
   $(wildcard CASE-unstable-2.0.0/dependencies/UCO/ontology/uco/*/*.ttl)
 
-dependent_ontology_files := \
+# List of files that house objects of owl:imports triples.  Supports
+# local-file resolution by tools that use catalog-v001.xml opening any
+# .ttl file within this directory.
+dependencies_of_imports_ttl_sources := \
   CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl \
+  cpannotationschema.ttl \
+  dcterms.ttl \
+  situation.ttl \
+  skos.ttl \
+  sosa.ttl
+
+# List of all files that house concepts eventually reached by the
+# CASE-Corpora transitive imports closure, or closure of any shapes
+# files.  Used for confirming presence via Make builds.
+dependent_ontology_files := \
+  $(dependencies_of_imports_ttl_sources) \
   CDO-Shapes-Time/dependencies/time.ttl \
   cito.ttl \
-  cpannotationschema.ttl \
   dc.ttl \
   dcam.ttl \
   dcat.ttl \
-  dcterms.ttl \
   discourse-relationships.ttl \
   dublin_core_type.ttl \
   foaf.ttl \
   org.ttl \
-  situation.ttl \
-  skos.ttl \
-  sosa.ttl \
   ssn.ttl \
   vcard.ttl \
   wgs84_pos.ttl
@@ -69,6 +78,7 @@ all: \
   CASE-develop-2.0.0.ttl \
   CASE-unstable.ttl \
   CASE-unstable-2.0.0.ttl \
+  $(dependent_ontology_files) \
   catalog-v001.xml \
   dcat-us.jsonld
 
@@ -116,6 +126,11 @@ CASE-unstable-2.0.0.ttl: \
 	    > _$@
 	mv _$@ $@
 
+# The `catalog-v001.xml` file in this directory sets up local-file IRI
+# resolutions just for files with owl:imports directives.  The full set
+# of ontology (/"tbox") local-file resolutions are in
+# `/ontology/catalog-v001.xml`, and the full set of shape local-file
+# resolutions are in `/shapes/catalog-v001.xml`.
 catalog-v001.xml: \
   $(case_srcdir)/ontology/master/catalog-v001.xml \
   $(top_srcdir)/.venv.done.log \
@@ -123,7 +138,7 @@ catalog-v001.xml: \
   $(top_srcdir)/etc/dependency_files.tsv \
   $(uco_srcdir)/src/create-catalog-v001.xml.py \
   $(uco_srcdir)/ontology/uco/master/catalog-v001.xml \
-  dependencies.ttl
+  dependencies_of_imports.ttl
 	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && python3 $(uco_srcdir)/src/create-catalog-v001.xml.py \
@@ -133,11 +148,12 @@ catalog-v001.xml: \
 	    $(top_srcdir)/etc/domain_directories.tsv \
 	    $(top_srcdir)/etc/dependency_files.tsv \
 	    "$(top_srcdir)" \
-	    dependencies.ttl
+	    dependencies_of_imports.ttl
 	mv _$@ $@
 
 # Construction of dependencies.ttl includes UCO OWL review.
 check: \
+  $(dependent_ontology_files) \
   catalog-v001.xml
 
 cito.ttl: \
@@ -233,18 +249,14 @@ dcterms.ttl:
 	rm __$@
 	mv _$@ $@
 
-dependencies.ttl: \
+dependencies_of_imports.ttl: \
   $(top_srcdir)/.venv.done.log \
-  $(dependent_ontology_files)
+  $(dependencies_of_imports_ttl_sources)
 	source $(top_srcdir)/venv/bin/activate \
 	  && rdfpipe \
 	    --output-format turtle \
-	    $(dependent_ontology_files) \
+	    $(dependencies_of_imports_ttl_sources) \
 	    > __$@
-	source $(top_srcdir)/venv/bin/activate \
-	  && pyshacl \
-	    --shacl CASE/dependencies/UCO/ontology/owl/owl.ttl \
-	    __$@
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \

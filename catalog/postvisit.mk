@@ -111,8 +111,9 @@ kb-all_validation.ttl: \
 	    --allow-infos \
 	    --format turtle \
 	    --inference rdfs \
-	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
@@ -138,8 +139,9 @@ kb-all_validation-develop.ttl: \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-develop.ttl \
-	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
@@ -164,8 +166,9 @@ kb-all_validation-develop-2.0.0.ttl: \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-develop-2.0.0.ttl \
-	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
@@ -190,8 +193,9 @@ kb-all_validation-unstable.ttl: \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-unstable.ttl \
-	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
@@ -216,8 +220,9 @@ kb-all_validation-unstable-2.0.0.ttl: \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-unstable-2.0.0.ttl \
-	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
@@ -234,10 +239,6 @@ kb-all_validation-unstable-2.0.0.ttl: \
 kb-datasets.ttl: \
   $(kb_datasets_dependencies) \
   $(rdf_toolkit_jar) \
-  $(top_srcdir)/dependencies/dependencies.ttl \
-  $(top_srcdir)/ontology/case-corpora.ttl \
-  $(top_srcdir)/shapes/local.ttl \
-  $(top_srcdir)/shapes/shapes.ttl \
   $(top_srcdir)/.venv.done.log
 	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
@@ -255,6 +256,11 @@ kb-datasets.ttl: \
 	mv _$@ $@
 
 kb-datasets_validation.ttl: \
+  $(top_srcdir)/ontology/case-corpora.ttl \
+  $(top_srcdir)/ontology/dependencies.ttl \
+  $(top_srcdir)/shapes/dependencies.ttl \
+  $(top_srcdir)/shapes/local.ttl \
+  $(top_srcdir)/shapes/shapes.ttl \
   catalog_validation.ttl \
   kb-datasets.ttl \
   kb-datasets-shapes.ttl
@@ -264,8 +270,9 @@ kb-datasets_validation.ttl: \
 	    --allow-infos \
 	    --format turtle \
 	    --inference rdfs \
-	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --ontology-graph kb-datasets-shapes.ttl \

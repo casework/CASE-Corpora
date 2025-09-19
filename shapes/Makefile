@@ -22,7 +22,11 @@ case_srcdir := $(top_srcdir)/dependencies/CASE
 
 uco_srcdir := $(case_srcdir)/dependencies/UCO
 
-shapes_ttl_sources := $(wildcard sh-*.ttl)
+dependencies_ttl_sources := \
+  $(top_srcdir)/dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl \
+  $(top_srcdir)/dependencies/CDO-Shapes-Time/shapes/sh-time-editors-draft.ttl \
+  $(top_srcdir)/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl
+shapes_ttl_sources := $(wildcard sh-*.ttl) 
 shape_files := \
   $(shapes_ttl_sources) \
   local.ttl
@@ -54,6 +58,7 @@ catalog-v001.xml: \
   $(top_srcdir)/ontology/catalog-v001.xml \
   $(uco_srcdir)/src/create-catalog-v001.xml.py \
   $(uco_srcdir)/ontology/uco/master/catalog-v001.xml \
+  dependencies.ttl \
   shapes.ttl
 	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
@@ -65,6 +70,7 @@ catalog-v001.xml: \
 	    $(top_srcdir)/etc/domain_directories.tsv \
 	    $(top_srcdir)/etc/dependency_files.tsv \
 	    "$(top_srcdir)" \
+	    dependencies.ttl \
 	    shapes.ttl
 	mv _$@ $@
 
@@ -82,10 +88,34 @@ check-%.ttl: \
 clean:
 	@rm -f \
 	  $(check_shape_files) \
+	  catalog-v001.xml \
+	  dependencies.ttl \
 	  shapes.ttl \
 	  uco_owl_review.ttl \
 	  validate_inheritance.ttl
 
+# This file is the concatenation of shape files drawn in from sources
+# outside of CASE-Corpora, e.g. CDO-Shapes-* repositories tracked as
+# submodules.
+dependencies.ttl: \
+  $(dependencies_ttl_sources) \
+  $(top_srcdir)/.venv.done.log
+	source $(top_srcdir)/venv/bin/activate \
+	  && rdfpipe \
+	    --output-format turtle \
+	    $(dependencies_ttl_sources) \
+	    > __$@
+	java -jar $(top_srcdir)/dependencies/CASE/dependencies/UCO/lib/rdf-toolkit.jar \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
+# This file is the concatenation of shape files locally written in
+# CASE-Corpora.
 shapes.ttl: \
   $(top_srcdir)/.venv.done.log \
   $(shapes_ttl_sources)
@@ -104,9 +134,10 @@ shapes.ttl: \
 	mv _$@ $@
 
 uco_owl_review.ttl: \
-  $(top_srcdir)/dependencies/dependencies.ttl \
   $(top_srcdir)/ontology/case-corpora.ttl \
+  $(top_srcdir)/ontology/dependencies.ttl \
   $(top_srcdir)/.venv.done.log \
+  dependencies.ttl \
   local.ttl \
   shapes.ttl
 	source $(top_srcdir)/venv/bin/activate \
@@ -114,8 +145,9 @@ uco_owl_review.ttl: \
 	    --allow-infos \
 	    --format turtle \
 	    --metashacl \
-	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
+	    --ontology-graph dependencies.ttl \
 	    --ontology-graph local.ttl \
 	    --ontology-graph shapes.ttl \
 	    --review-tbox \
@@ -124,9 +156,10 @@ uco_owl_review.ttl: \
 	mv _$@ $@
 
 validate_inheritance.ttl: \
-  $(top_srcdir)/dependencies/dependencies.ttl \
   $(top_srcdir)/ontology/case-corpora.ttl \
+  $(top_srcdir)/ontology/dependencies.ttl \
   $(top_srcdir)/.venv.done.log \
+  dependencies.ttl \
   local.ttl \
   shapes.ttl
 	rm -f _$@
@@ -134,8 +167,9 @@ validate_inheritance.ttl: \
 	  && case_shacl_inheritance_reviewer \
 	    --debug \
 	    _$@ \
-	    $(top_srcdir)/dependencies/dependencies.ttl \
 	    $(top_srcdir)/ontology/case-corpora.ttl \
+	    $(top_srcdir)/ontology/dependencies.ttl \
+	    dependencies.ttl \
 	    local.ttl \
 	    shapes.ttl
 	mv _$@ $@

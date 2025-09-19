@@ -2,3 +2,4 @@ CASE-develop.ttl
 CASE-develop-2.0.0.ttl
 CASE-unstable.ttl
 CASE-unstable-2.0.0.ttl
+dependencies_of_imports.ttl

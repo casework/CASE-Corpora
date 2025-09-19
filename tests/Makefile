@@ -35,8 +35,9 @@ all: \
 
 case_corpora_PASS_validation.ttl: \
   $(top_srcdir)/.venv.done.log \
-  $(top_srcdir)/dependencies/dependencies.ttl \
   $(top_srcdir)/ontology/case-corpora.ttl \
+  $(top_srcdir)/ontology/dependencies.ttl \
+  $(top_srcdir)/shapes/dependencies.ttl \
   $(top_srcdir)/shapes/local.ttl \
   $(top_srcdir)/shapes/shapes.ttl \
   case_corpora_PASS.ttl
@@ -45,8 +46,9 @@ case_corpora_PASS_validation.ttl: \
 	  && case_validate \
 	    --allow-infos \
 	    --format turtle \
-	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
@@ -71,8 +73,9 @@ clean:
 
 distribution_PASS_validation.ttl: \
   $(top_srcdir)/.venv.done.log \
-  $(top_srcdir)/dependencies/dependencies.ttl \
   $(top_srcdir)/ontology/case-corpora.ttl \
+  $(top_srcdir)/ontology/dependencies.ttl \
+  $(top_srcdir)/shapes/dependencies.ttl \
   $(top_srcdir)/shapes/local.ttl \
   $(top_srcdir)/shapes/shapes.ttl \
   distribution_PASS.ttl
@@ -82,8 +85,9 @@ distribution_PASS_validation.ttl: \
 	    --allow-infos \
 	    --format turtle \
 	    --inference rdfs \
-	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
@@ -99,8 +103,9 @@ distribution_PASS_validation.ttl: \
 
 distribution_XFAIL_validation.ttl: \
   $(top_srcdir)/.venv.done.log \
-  $(top_srcdir)/dependencies/dependencies.ttl \
   $(top_srcdir)/ontology/case-corpora.ttl \
+  $(top_srcdir)/ontology/dependencies.ttl \
+  $(top_srcdir)/shapes/dependencies.ttl \
   $(top_srcdir)/shapes/local.ttl \
   $(top_srcdir)/shapes/shapes.ttl \
   distribution_XFAIL.ttl
@@ -110,8 +115,9 @@ distribution_XFAIL_validation.ttl: \
 	    --allow-infos \
 	    --format turtle \
 	    --inference rdfs \
-	    --ontology-graph $(top_srcdir)/dependencies/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
