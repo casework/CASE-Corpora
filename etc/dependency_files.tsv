@@ -1,5 +1,6 @@
 http://example.org/shapes/sh-prov-o	${top_srcdir}/dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl
 http://example.org/shapes/sh-time/	${top_srcdir}/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl
+http://example.org/shapes/sh-time-editors-draft/	${top_srcdir}/dependencies/CDO-Shapes-Time/shapes/sh-time-editors-draft.ttl
 http://purl.org/dc/dcam/	${top_srcdir}/dependencies/dcam.ttl
 http://purl.org/dc/elements/1.1/	${top_srcdir}/dependencies/dc.ttl
 http://purl.org/dc/terms/	${top_srcdir}/dependencies/dcterms.ttl
