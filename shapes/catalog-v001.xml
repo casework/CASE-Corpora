@@ -27,6 +27,7 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl" name="https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/main/dependencies/prov-o-dl.ttl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl" name="http://example.org/shapes/sh-prov-o"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/dependencies/time.ttl" name="http://www.w3.org/2006/time#2016"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/shapes/sh-time-editors-draft.ttl" name="http://example.org/shapes/sh-time-editors-draft"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/shapes/sh-time.ttl" name="http://example.org/shapes/sh-time"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/cito.ttl" name="http://purl.org/spar/cito/2018-02-16"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/cpannotationschema.ttl" name="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl"/>
