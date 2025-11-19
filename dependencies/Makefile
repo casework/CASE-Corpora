@@ -151,7 +151,6 @@ catalog-v001.xml: \
 	    dependencies_of_imports.ttl
 	mv _$@ $@
 
-# Construction of dependencies.ttl includes UCO OWL review.
 check: \
   $(dependent_ontology_files) \
   catalog-v001.xml
