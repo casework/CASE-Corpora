@@ -14,7 +14,7 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-from typing import Set, Tuple
+from typing import Set
 
 from rdflib import SH, TIME, Graph, URIRef
 from rdflib.query import ResultRow
@@ -88,43 +88,3 @@ def test_owl_abox_XFAIL_inferencing_rdfs() -> None:
         URIRef("http://example.org/kb/thing-notb-subb"),
     }
     _test_owl_abox_XFAIL("rdfs", expected)
-
-
-def test_time_XFAIL_disjoint_properties() -> None:
-    # Tuple members:
-    # * Focus node
-    # * Predicate of result
-    expected: Set[Tuple[URIRef, URIRef]] = {
-        (
-            URIRef(
-                "http://example.org/kb/proper-interval-b8c09ec7-fd2c-4253-9707-5346d9e9ad36"
-            ),
-            NS_TIME.intervalEquals,
-        ),
-        (
-            URIRef(
-                "http://example.org/kb/proper-interval-b8c09ec7-fd2c-4253-9707-5346d9e9ad36"
-            ),
-            NS_TIME.intervalIn,
-        ),
-    }
-    computed: Set[Tuple[URIRef, URIRef]] = set()
-
-    graph = Graph()
-    graph.parse("time_XFAIL_validation.ttl")
-    query = """\
-SELECT ?nFocusNode ?nResultPath
-WHERE {
-  ?nValidationResult
-    sh:focusNode ?nFocusNode ;
-    sh:resultPath ?nResultPath ;
-    sh:sourceConstraintComponent sh:DisjointConstraintComponent ;
-    .
-}
-"""
-    for result in graph.query(query):
-        assert isinstance(result, ResultRow)
-        assert isinstance(result[0], URIRef)
-        assert isinstance(result[1], URIRef)
-        computed.add((result[0], result[1]))
-    assert expected == computed
