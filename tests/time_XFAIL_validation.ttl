@@ -2,6 +2,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sh-time: <http://example.org/shapes/sh-time/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -16,11 +17,7 @@
 			sh:resultPath time:intervalIn ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:DisjointConstraintComponent ;
-			sh:sourceShape [
-				a sh:PropertyShape ;
-				sh:disjoint time:intervalEquals ;
-				sh:path time:intervalIn ;
-			] ;
+			sh:sourceShape sh-time:intervalIn-subjects-intervalIn-shape ;
 			sh:value <http://example.org/kb/proper-interval-e8f4521c-1272-4eda-b2ae-122f8bd65e26> ;
 		] ,
 		[
@@ -30,11 +27,7 @@
 			sh:resultPath time:intervalEquals ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:DisjointConstraintComponent ;
-			sh:sourceShape [
-				a sh:PropertyShape ;
-				sh:disjoint time:intervalIn ;
-				sh:path time:intervalEquals ;
-			] ;
+			sh:sourceShape sh-time:intervalEquals-subjects-intervalEquals-shape ;
 			sh:value <http://example.org/kb/proper-interval-e8f4521c-1272-4eda-b2ae-122f8bd65e26> ;
 		]
 		;
