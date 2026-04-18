@@ -2,7 +2,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.w3.org/2006/vcard/ns>
@@ -104,6 +103,11 @@
 			]
 		) ;
 	] ;
+	.
+
+:AddressBook
+	rdfs:comment "This term is not part of vCard as defined by the IETF"@en ;
+	rdfs:isDefinedBy <https://raw.githack.com/solid/contacts/refs/heads/main/vcard-extension-addressbook.ttl> ;
 	.
 
 :Agent
@@ -664,6 +668,11 @@
 	rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
 	.
 
+:WebID
+	rdfs:comment "This term is not part of vCard as defined by the IETF"@en ;
+	rdfs:isDefinedBy <https://raw.githack.com/solid/contacts/refs/heads/main/vcard-extension-addressbook.ttl> ;
+	.
+
 :Work
 	a owl:Class ;
 	rdfs:subClassOf :Type ;
@@ -804,6 +813,11 @@
 	rdfs:comment "The given name associated with the object"@en ;
 	rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
 	rdfs:range xsd:string ;
+	.
+
+:groupIndex
+	rdfs:comment "This term is not part of vCard as defined by the IETF"@en ;
+	rdfs:isDefinedBy <https://raw.githack.com/solid/contacts/refs/heads/main/vcard-extension-addressbook.ttl> ;
 	.
 
 :hasAdditionalName
@@ -1108,6 +1122,16 @@
 	rdfs:range xsd:string ;
 	.
 
+:inAddressBook
+	rdfs:comment "This term is not part of vCard as defined by the IETF"@en ;
+	rdfs:isDefinedBy <https://raw.githack.com/solid/contacts/refs/heads/main/vcard-extension-addressbook.ttl> ;
+	.
+
+:includesGroup
+	rdfs:comment "This term is not part of vCard as defined by the IETF"@en ;
+	rdfs:isDefinedBy <https://raw.githack.com/solid/contacts/refs/heads/main/vcard-extension-addressbook.ttl> ;
+	.
+
 :key
 	a owl:ObjectProperty ;
 	rdfs:label "key"@en ;
@@ -1177,6 +1201,11 @@
 	rdfs:comment "This object property has been mapped"@en ;
 	rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
 	owl:equivalentProperty :hasName ;
+	.
+
+:nameEmailIndex
+	rdfs:comment "This term is not part of vCard as defined by the IETF"@en ;
+	rdfs:isDefinedBy <https://raw.githack.com/solid/contacts/refs/heads/main/vcard-extension-addressbook.ttl> ;
 	.
 
 :nickname

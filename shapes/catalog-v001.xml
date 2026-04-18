@@ -30,21 +30,21 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/dependencies/formatted-time.ttl" name="http://www.w3.org/2006/time#2016"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/shapes/sh-time-editors-draft.ttl" name="http://example.org/shapes/sh-time-editors-draft"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/shapes/sh-time.ttl" name="http://example.org/shapes/sh-time"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/cito.ttl" name="http://purl.org/spar/cito/2018-02-16"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/cpannotationschema.ttl" name="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/dc.ttl" name="http://purl.org/dc/elements/1.1/"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/dcam.ttl" name="http://purl.org/dc/dcam/"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/dcat.ttl" name="http://www.w3.org/ns/dcat"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/dcterms.ttl" name="http://purl.org/dc/terms/"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/discourse-relationships.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/discourse-relationships.ttl"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/foaf.ttl" name="http://xmlns.com/foaf/0.1/"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/org.ttl" name="http://www.w3.org/ns/org#"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/situation.ttl" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/skos.ttl" name="http://www.w3.org/2004/02/skos/core"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-cito.ttl" name="http://purl.org/spar/cito/2018-02-16"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-cpannotationschema.ttl" name="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-dc.ttl" name="http://purl.org/dc/elements/1.1/"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-dcam.ttl" name="http://purl.org/dc/dcam/"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-dcat.ttl" name="http://www.w3.org/ns/dcat"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-dcterms.ttl" name="http://purl.org/dc/terms/"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-foaf.ttl" name="http://xmlns.com/foaf/0.1/"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-org.ttl" name="http://www.w3.org/ns/org#"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-situation.ttl" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-skos.ttl" name="http://www.w3.org/2004/02/skos/core"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-vcard.ttl" name="http://www.w3.org/2006/vcard/ns"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-wgs84_pos.ttl" name="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/sosa.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/sosa.ttl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/ssn.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/vcard.ttl" name="http://www.w3.org/2006/vcard/ns"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/wgs84_pos.ttl" name="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
     <uri id="User Entered Import Resolution" uri="../ontology/case-corpora.ttl" name="http://example.org/ontology/case-corpora"/>
     <uri id="User Entered Import Resolution" uri="sh-case-corpora.ttl" name="http://example.org/shapes/case-corpora"/>
     <uri id="User Entered Import Resolution" uri="sh-cito.ttl" name="http://example.org/shapes/cito"/>

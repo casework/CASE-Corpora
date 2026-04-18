@@ -58,10 +58,16 @@ sh-org:Organization-disjointWith-Site-shape
 	sh:targetClass org:Organization ;
 	.
 
-sh-org:Organization-shape
+sh-org:Organization-equivalentClass-shape
 	a sh:NodeShape ;
 	rdfs:comment "org:Organization declares itself an equivalent class with foaf:Organization."@en ;
+	rdfs:comment "Shape deactivated to account for some ontology authorship metadata spelling patterns requiring OWL or RDFS inferencing to satisfy this shape."@en ;
 	sh:class foaf:Organization ;
+	sh:deactivated true ;
 	sh:targetClass org:Organization ;
 	.
 
+sh-org:Organization-shape
+	a sh:NodeShape ;
+	sh:targetClass org:Organization ;
+	.

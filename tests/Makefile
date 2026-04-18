@@ -34,10 +34,10 @@ all: \
 case_corpora_PASS_validation.ttl: \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/ontology/case-corpora.ttl \
-  $(top_srcdir)/ontology/dependencies.ttl \
-  $(top_srcdir)/shapes/dependencies.ttl \
+  $(top_srcdir)/ontology/generated-dependencies.ttl \
+  $(top_srcdir)/shapes/generated-dependencies.ttl \
+  $(top_srcdir)/shapes/generated-shapes.ttl \
   $(top_srcdir)/shapes/local.ttl \
-  $(top_srcdir)/shapes/shapes.ttl \
   case_corpora_PASS.ttl
 	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
@@ -45,10 +45,10 @@ case_corpora_PASS_validation.ttl: \
 	    --allow-infos \
 	    --format turtle \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-shapes.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
 	    case_corpora_PASS.ttl
 	java -jar $(rdf_toolkit_jar) \
@@ -72,10 +72,10 @@ clean:
 distribution_PASS_validation.ttl: \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/ontology/case-corpora.ttl \
-  $(top_srcdir)/ontology/dependencies.ttl \
-  $(top_srcdir)/shapes/dependencies.ttl \
+  $(top_srcdir)/ontology/generated-dependencies.ttl \
+  $(top_srcdir)/shapes/generated-dependencies.ttl \
+  $(top_srcdir)/shapes/generated-shapes.ttl \
   $(top_srcdir)/shapes/local.ttl \
-  $(top_srcdir)/shapes/shapes.ttl \
   distribution_PASS.ttl
 	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
@@ -84,10 +84,10 @@ distribution_PASS_validation.ttl: \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-shapes.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
 	    distribution_PASS.ttl
 	java -jar $(rdf_toolkit_jar) \
@@ -102,10 +102,10 @@ distribution_PASS_validation.ttl: \
 distribution_XFAIL_validation.ttl: \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/ontology/case-corpora.ttl \
-  $(top_srcdir)/ontology/dependencies.ttl \
-  $(top_srcdir)/shapes/dependencies.ttl \
+  $(top_srcdir)/ontology/generated-dependencies.ttl \
+  $(top_srcdir)/shapes/generated-dependencies.ttl \
+  $(top_srcdir)/shapes/generated-shapes.ttl \
   $(top_srcdir)/shapes/local.ttl \
-  $(top_srcdir)/shapes/shapes.ttl \
   distribution_XFAIL.ttl
 	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
@@ -114,10 +114,10 @@ distribution_XFAIL_validation.ttl: \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-shapes.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
 	    distribution_XFAIL.ttl \
 	    ; rc=$$? ; test 1 -eq $$rc
