@@ -27,16 +27,16 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl" name="https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/main/dependencies/prov-o-dl.ttl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl" name="http://example.org/ontology/cdo-prov-o"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/dependencies/formatted-time.ttl" name="http://www.w3.org/2006/time#2016"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/cito.ttl" name="http://purl.org/spar/cito/2018-02-16"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/cpannotationschema.ttl" name="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/dcat.ttl" name="http://www.w3.org/ns/dcat"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/dcterms.ttl" name="http://purl.org/dc/terms/"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/foaf.ttl" name="http://xmlns.com/foaf/0.1/"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/org.ttl" name="http://www.w3.org/ns/org#"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/situation.ttl" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/skos.ttl" name="http://www.w3.org/2004/02/skos/core"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-cito.ttl" name="http://purl.org/spar/cito/2018-02-16"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-cpannotationschema.ttl" name="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-dcat.ttl" name="http://www.w3.org/ns/dcat"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-dcterms.ttl" name="http://purl.org/dc/terms/"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-foaf.ttl" name="http://xmlns.com/foaf/0.1/"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-org.ttl" name="http://www.w3.org/ns/org#"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-situation.ttl" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-skos.ttl" name="http://www.w3.org/2004/02/skos/core"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-vcard.ttl" name="http://www.w3.org/2006/vcard/ns"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/sosa.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/sosa.ttl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/ssn.ttl" name="https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/vcard.ttl" name="http://www.w3.org/2006/vcard/ns"/>
     <uri id="User Entered Import Resolution" uri="case-corpora.ttl" name="http://example.org/ontology/case-corpora"/>
 </catalog>
