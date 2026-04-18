@@ -25,8 +25,9 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/ontology/vocabulary/vocabulary.ttl" name="https://ontology.caseontology.org/case/vocabulary/1.4.0"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl" name="http://www.w3.org/ns/prov-o#"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl" name="https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/main/dependencies/prov-o-dl.ttl"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl" name="http://example.org/ontology/cdo-prov-o"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl" name="http://example.org/shapes/sh-prov-o"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/dependencies/time.ttl" name="http://www.w3.org/2006/time#2016"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/dependencies/formatted-time.ttl" name="http://www.w3.org/2006/time#2016"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/shapes/sh-time-editors-draft.ttl" name="http://example.org/shapes/sh-time-editors-draft"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/shapes/sh-time.ttl" name="http://example.org/shapes/sh-time"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/cito.ttl" name="http://purl.org/spar/cito/2018-02-16"/>
