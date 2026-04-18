@@ -8,6 +8,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sh-case-corpora-local: <http://example.org/shapes/case-corpora-local/> .
 @prefix sh-dcterms: <http://example.org/shapes/dcterms/> .
+@prefix sh-owl: <https://shapes.cyberdomainontology.org/sh-owl/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix time: <http://www.w3.org/2006/time#> .
@@ -423,5 +424,113 @@ uco-owl:Restriction-shape
 uco-core:UcoThing-identifier-regex-shape
 	sh:deactivated "true"^^xsd:boolean ;
 	sh:description "This shape is deactivated for CASE-Corpora due to a data management decision to extend external IRIs as UCO concepts." ;
+	.
+
+sh-owl:DataOneOf-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:DatatypeProperty-shacl-constraints-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:Disjointedness-AP-DP-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:Disjointedness-AP-OP-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:Disjointedness-C-DT-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:Disjointedness-DP-OP-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:ObjectProperty-shacl-constraints-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:Sequence-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:disjointUnionOf-subjects-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:hasKey-subjects-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:intersectionOf-subjects-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:onProperties-subjects-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:oneOf-subjects-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:ontologyIRI-versionIRI-prerequisite-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:propertyChainAxiom-subjects-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:unionOf-subjects-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:versionIRI-nodeKind-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-owl:withRestrictions-subjects-shape
+	rdfs:comment "This shape is deactivated for CASE-Corpora for parity with case_validate behavior on non-TBox review."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE-Utilities-Python/pull/72> ;
+	sh:deactivated "true"^^xsd:boolean ;
 	.
 
