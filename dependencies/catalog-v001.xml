@@ -2,8 +2,6 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
     <uri id="User Entered Import Resolution" uri="CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl" name="http://www.w3.org/ns/prov#"/>
     <uri id="User Entered Import Resolution" uri="CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl" name="http://www.w3.org/ns/prov-o#"/>
-    <uri id="User Entered Import Resolution" uri="CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl" name="https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/main/dependencies/prov-o-dl.ttl"/>
-    <uri id="User Entered Import Resolution" uri="CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl" name="http://example.org/ontology/cdo-prov-o"/>
     <uri id="User Entered Import Resolution" uri="CDO-Shapes-Time/dependencies/formatted-time.ttl" name="http://www.w3.org/2006/time"/>
     <uri id="User Entered Import Resolution" uri="cpannotationschema.ttl" name="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl"/>
     <uri id="User Entered Import Resolution" uri="situation.ttl" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
