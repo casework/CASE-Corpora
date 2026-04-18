@@ -1,3 +1,4 @@
+http://example.org/ontology/cdo-prov-o	${top_srcdir}/dependencies/CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl
 http://example.org/shapes/sh-prov-o	${top_srcdir}/dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl
 http://example.org/shapes/sh-time/	${top_srcdir}/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl
 http://example.org/shapes/sh-time-editors-draft/	${top_srcdir}/dependencies/CDO-Shapes-Time/shapes/sh-time-editors-draft.ttl
@@ -10,7 +11,7 @@ http://www.ontologydesignpatterns.org/cp/owl/situation.owl	${top_srcdir}/depende
 http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl	${top_srcdir}/dependencies/cpannotationschema.ttl
 http://www.w3.org/2003/01/geo/wgs84_pos#	${top_srcdir}/dependencies/wgs84_pos.ttl
 http://www.w3.org/2004/02/skos/core	${top_srcdir}/dependencies/skos.ttl
-http://www.w3.org/2006/time#2016	${top_srcdir}/dependencies/CDO-Shapes-Time/dependencies/time.ttl
+http://www.w3.org/2006/time#2016	${top_srcdir}/dependencies/CDO-Shapes-Time/dependencies/formatted-time.ttl
 http://www.w3.org/2006/vcard/ns	${top_srcdir}/dependencies/vcard.ttl
 http://www.w3.org/ns/dcat	${top_srcdir}/dependencies/dcat.ttl
 http://www.w3.org/ns/org#	${top_srcdir}/dependencies/org.ttl

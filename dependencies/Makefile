@@ -47,7 +47,7 @@ case_unstable_2_0_0_ttls := \
 # .ttl file within this directory.
 dependencies_of_imports_ttl_sources := \
   CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl \
-  CDO-Shapes-Time/dependencies/time.ttl \
+  CDO-Shapes-Time/dependencies/formatted-time.ttl \
   cpannotationschema.ttl \
   dcterms.ttl \
   situation.ttl \
@@ -59,6 +59,7 @@ dependencies_of_imports_ttl_sources := \
 # files.  Used for confirming presence via Make builds.
 dependent_ontology_files := \
   $(dependencies_of_imports_ttl_sources) \
+  CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl \
   cito.ttl \
   dc.ttl \
   dcam.ttl \

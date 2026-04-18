@@ -24,7 +24,8 @@ uco_srcdir := $(case_srcdir)/dependencies/UCO
 
 dependencies_ttl_sources := \
   $(top_srcdir)/dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl \
-  $(top_srcdir)/dependencies/CDO-Shapes-Time/dependencies/time.ttl \
+  $(top_srcdir)/dependencies/CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl \
+  $(top_srcdir)/dependencies/CDO-Shapes-Time/dependencies/formatted-time.ttl \
   $(top_srcdir)/dependencies/cito.ttl \
   $(top_srcdir)/dependencies/cpannotationschema.ttl \
   $(top_srcdir)/dependencies/dc.ttl \
