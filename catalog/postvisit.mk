@@ -112,10 +112,10 @@ kb-all_validation.ttl: \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-shapes.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
 	    kb-all.ttl \
 	    || (cat __$@ ; exit 1)
@@ -140,10 +140,10 @@ kb-all_validation-develop.ttl: \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-develop.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-shapes.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
 	    kb-all.ttl
 	java -jar $(rdf_toolkit_jar) \
@@ -167,10 +167,10 @@ kb-all_validation-develop-2.0.0.ttl: \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-develop-2.0.0.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-shapes.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
 	    kb-all.ttl
 	java -jar $(rdf_toolkit_jar) \
@@ -194,10 +194,10 @@ kb-all_validation-unstable.ttl: \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-unstable.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-shapes.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
 	    kb-all.ttl
 	java -jar $(rdf_toolkit_jar) \
@@ -221,10 +221,10 @@ kb-all_validation-unstable-2.0.0.ttl: \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-unstable-2.0.0.ttl \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-shapes.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --output __$@ \
 	    kb-all.ttl
 	java -jar $(rdf_toolkit_jar) \
@@ -257,10 +257,10 @@ kb-datasets.ttl: \
 
 kb-datasets_validation.ttl: \
   $(top_srcdir)/ontology/case-corpora.ttl \
-  $(top_srcdir)/ontology/dependencies.ttl \
-  $(top_srcdir)/shapes/dependencies.ttl \
+  $(top_srcdir)/ontology/generated-dependencies.ttl \
+  $(top_srcdir)/shapes/generated-dependencies.ttl \
+  $(top_srcdir)/shapes/generated-shapes.ttl \
   $(top_srcdir)/shapes/local.ttl \
-  $(top_srcdir)/shapes/shapes.ttl \
   catalog_validation.ttl \
   kb-datasets.ttl \
   kb-datasets-shapes.ttl
@@ -271,10 +271,10 @@ kb-datasets_validation.ttl: \
 	    --format turtle \
 	    --inference rdfs \
 	    --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	    --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/ontology/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-dependencies.ttl \
+	    --ontology-graph $(top_srcdir)/shapes/generated-shapes.ttl \
 	    --ontology-graph $(top_srcdir)/shapes/local.ttl \
-	    --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	    --ontology-graph kb-datasets-shapes.ttl \
 	    --output __$@ \
 	    kb-datasets.ttl \

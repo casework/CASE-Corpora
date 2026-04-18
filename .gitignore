@@ -5,10 +5,7 @@
 .check-*
 .venv-pre-commit
 __pycache__
-dependencies.ttl
-generated-prov.dot
-generated-prov.png
-generated-prov.svg
+generated-*
 kb.ttl
 uco_owl_review.ttl
 venv

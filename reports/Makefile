@@ -71,19 +71,19 @@ import_closure.dot: \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/catalog/catalog.ttl \
   $(top_srcdir)/ontology/case-corpora.ttl \
-  $(top_srcdir)/ontology/dependencies.ttl \
-  $(top_srcdir)/shapes/dependencies.ttl \
+  $(top_srcdir)/ontology/generated-dependencies.ttl \
+  $(top_srcdir)/shapes/generated-dependencies.ttl \
+  $(top_srcdir)/shapes/generated-shapes.ttl \
   $(top_srcdir)/shapes/local.ttl \
-  $(top_srcdir)/shapes/shapes.ttl \
   $(top_srcdir)/src/import_closure.py
 	source $(top_srcdir)/venv/bin/activate \
 	  && python3 $(top_srcdir)/src/import_closure.py \
 	    $(top_srcdir)/catalog/catalog.ttl \
 	    $(top_srcdir)/ontology/case-corpora.ttl \
-	    $(top_srcdir)/ontology/dependencies.ttl \
-	    $(top_srcdir)/shapes/dependencies.ttl \
+	    $(top_srcdir)/ontology/generated-dependencies.ttl \
+	    $(top_srcdir)/shapes/generated-dependencies.ttl \
+	    $(top_srcdir)/shapes/generated-shapes.ttl \
 	    $(top_srcdir)/shapes/local.ttl \
-	    $(top_srcdir)/shapes/shapes.ttl \
 	    > _$@
 	mv _$@ $@
 

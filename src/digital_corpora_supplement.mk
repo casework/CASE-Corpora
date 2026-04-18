@@ -23,11 +23,11 @@
 
 generated-digitalcorpora-supplement.ttl:  \
   $(top_srcdir)/.venv.done.log \
-  $(top_srcdir)/ontology/dependencies.ttl \
   $(top_srcdir)/ontology/case-corpora.ttl \
-  $(top_srcdir)/shapes/dependencies.ttl \
+  $(top_srcdir)/ontology/generated-dependencies.ttl \
+  $(top_srcdir)/shapes/generated-dependencies.ttl \
+  $(top_srcdir)/shapes/generated-shapes.ttl \
   $(top_srcdir)/shapes/local.ttl \
-  $(top_srcdir)/shapes/shapes.ttl \
   $(top_srcdir)/src/case_utils_extras.py \
   $(top_srcdir)/src/digital_corpora_supplement_ttl.py \
   $(top_srcdir)/var/digital_corpora_index.tsv \
@@ -46,11 +46,11 @@ generated-digitalcorpora-supplement.ttl:  \
 	      && case_validate \
 	        --allow-infos \
 	        --inference rdfs \
-	        --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
 	        --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	        --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
+	        --ontology-graph $(top_srcdir)/ontology/generated-dependencies.ttl \
+	        --ontology-graph $(top_srcdir)/shapes/generated-dependencies.ttl \
+	        --ontology-graph $(top_srcdir)/shapes/generated-shapes.ttl \
 	        --ontology-graph $(top_srcdir)/shapes/local.ttl \
-	        --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	        __$@ \
 	    )
 	java -jar $(rdf_toolkit_jar) \

@@ -160,10 +160,10 @@ generated-prov.ttl: \
 
 kb.ttl: \
   $(top_srcdir)/ontology/case-corpora.ttl \
-  $(top_srcdir)/ontology/dependencies.ttl \
-  $(top_srcdir)/shapes/dependencies.ttl \
+  $(top_srcdir)/ontology/generated-dependencies.ttl \
+  $(top_srcdir)/shapes/generated-dependencies.ttl \
+  $(top_srcdir)/shapes/generated-shapes.ttl \
   $(top_srcdir)/shapes/local.ttl \
-  $(top_srcdir)/shapes/shapes.ttl \
   $(top_srcdir)/taxonomy/devices/drafting.ttl \
   dataset.ttl \
   generated-ground-truth-prov.ttl \
@@ -188,10 +188,10 @@ kb.ttl: \
 	        --allow-infos \
 	        --inference rdfs \
 	        --ontology-graph $(top_srcdir)/ontology/case-corpora.ttl \
-	        --ontology-graph $(top_srcdir)/ontology/dependencies.ttl \
-	        --ontology-graph $(top_srcdir)/shapes/dependencies.ttl \
+	        --ontology-graph $(top_srcdir)/ontology/generated-dependencies.ttl \
+	        --ontology-graph $(top_srcdir)/shapes/generated-dependencies.ttl \
+	        --ontology-graph $(top_srcdir)/shapes/generated-shapes.ttl \
 	        --ontology-graph $(top_srcdir)/shapes/local.ttl \
-	        --ontology-graph $(top_srcdir)/shapes/shapes.ttl \
 	        --ontology-graph $(top_srcdir)/taxonomy/devices/drafting.ttl \
 	        __$@ \
 	    )
