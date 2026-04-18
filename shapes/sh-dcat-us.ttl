@@ -1,6 +1,6 @@
 # imports: http://example.org/shapes/dcat
-# imports: http://example.org/shapes/org
 # imports: http://example.org/shapes/pod
+# imports: http://example.org/shapes/sh-org
 # imports: http://example.org/shapes/skos
 
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -21,8 +21,8 @@
 	a owl:Ontology ;
 	owl:imports
 		<http://example.org/shapes/dcat> ,
-		<http://example.org/shapes/org> ,
 		<http://example.org/shapes/pod> ,
+		<http://example.org/shapes/sh-org> ,
 		<http://example.org/shapes/skos>
 		;
 	.

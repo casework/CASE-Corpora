@@ -1,6 +1,6 @@
 # imports: http://example.org/shapes/dcterms
+# imports: http://example.org/shapes/sh-foaf
 # imports: http://example.org/shapes/wgs84_pos
-# imports: http://xmlns.com/foaf/0.1/
 
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -16,8 +16,8 @@
 	rdfs:comment "Shapes for FOAF and wgs84_pos form a circular import due to wgs84_pos declaring a subproperty of a FOAF property, and FOAF declaring a subclass of a wgs84_pos class."@en ;
 	owl:imports
 		<http://example.org/shapes/dcterms> ,
-		<http://example.org/shapes/wgs84_pos> ,
-		<http://xmlns.com/foaf/0.1/>
+		<http://example.org/shapes/sh-foaf> ,
+		<http://example.org/shapes/wgs84_pos>
 		;
 	.
 

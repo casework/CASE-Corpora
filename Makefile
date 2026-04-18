@@ -85,6 +85,14 @@ all: \
 	$(MAKE) \
 	  --directory dependencies/CASE-unstable-2.0.0 \
 	  .git_submodule_init.done.log
+	# CDO-Shapes-ORG
+	test -r dependencies/CDO-Shapes-ORG/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/CDO-Shapes-ORG
+	$(MAKE) \
+	  --directory dependencies/CDO-Shapes-ORG \
+	  .git_submodule_init.done.log
 	# CDO-Shapes-PROV-O
 	test -r dependencies/CDO-Shapes-PROV-O/README.md \
 	  || git submodule update \
