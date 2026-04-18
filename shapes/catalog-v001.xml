@@ -54,15 +54,15 @@
     <uri id="User Entered Import Resolution" uri="sh-dcat-us.ttl" name="http://example.org/shapes/dcat-us"/>
     <uri id="User Entered Import Resolution" uri="sh-dcat.ttl" name="http://example.org/shapes/dcat"/>
     <uri id="User Entered Import Resolution" uri="sh-dcterms.ttl" name="http://example.org/shapes/dcterms"/>
+    <uri id="User Entered Import Resolution" uri="sh-discourse-relationships.ttl" name="http://example.org/shapes/discourse-relationships"/>
+    <uri id="User Entered Import Resolution" uri="sh-foaf.ttl" name="http://example.org/shapes/foaf"/>
     <uri id="User Entered Import Resolution" uri="sh-org.ttl" name="http://example.org/shapes/org"/>
+    <uri id="User Entered Import Resolution" uri="sh-owl-abox.ttl" name="http://example.org/shapes/owl-abox"/>
+    <uri id="User Entered Import Resolution" uri="sh-pod.ttl" name="http://example.org/shapes/pod"/>
     <uri id="User Entered Import Resolution" uri="sh-situation.ttl" name="http://example.org/shapes/situation"/>
+    <uri id="User Entered Import Resolution" uri="sh-skos.ttl" name="http://example.org/shapes/skos"/>
     <uri id="User Entered Import Resolution" uri="sh-sosa.ttl" name="http://example.org/shapes/sosa"/>
     <uri id="User Entered Import Resolution" uri="sh-ssn.ttl" name="http://example.org/shapes/ssn"/>
     <uri id="User Entered Import Resolution" uri="sh-vcard.ttl" name="http://example.org/shapes/vcard"/>
     <uri id="User Entered Import Resolution" uri="sh-wgs84_pos.ttl" name="http://example.org/shapes/wgs84_pos"/>
-    <uri id="User Entered Import Resolution" uri="shapes.ttl" name="http://example.org/shapes/discourse-relationships"/>
-    <uri id="User Entered Import Resolution" uri="shapes.ttl" name="http://example.org/shapes/foaf"/>
-    <uri id="User Entered Import Resolution" uri="shapes.ttl" name="http://example.org/shapes/owl-abox"/>
-    <uri id="User Entered Import Resolution" uri="shapes.ttl" name="http://example.org/shapes/pod"/>
-    <uri id="User Entered Import Resolution" uri="shapes.ttl" name="http://example.org/shapes/skos"/>
 </catalog>
