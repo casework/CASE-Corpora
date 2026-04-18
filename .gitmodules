@@ -18,6 +18,10 @@
 	path = dependencies/CASE-unstable-2.0.0
 	url = https://github.com/casework/CASE-Archive.git
 	branch = unstable-2.0.0
+[submodule "dependencies/CDO-Shapes-ORG"]
+	path = dependencies/CDO-Shapes-ORG
+	url = https://github.com/Cyber-Domain-Ontology/CDO-Shapes-ORG.git
+	branch = main
 [submodule "dependencies/CDO-Shapes-PROV-O"]
 	path = dependencies/CDO-Shapes-PROV-O
 	url = https://github.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O.git

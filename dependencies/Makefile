@@ -59,6 +59,8 @@ dependencies_of_imports_ttl_sources := \
 # files.  Used for confirming presence via Make builds.
 dependent_ontology_files := \
   $(dependencies_of_imports_ttl_sources) \
+  CDO-Shapes-ORG/dependencies/CDO-Shapes-FOAF/dependencies/formatted-foaf.ttl \
+  CDO-Shapes-ORG/dependencies/formatted-org.ttl \
   CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl \
   discourse-relationships.ttl \
   formatted-cito.ttl \
@@ -66,8 +68,6 @@ dependent_ontology_files := \
   formatted-dcam.ttl \
   formatted-dcat.ttl \
   formatted-dublin_core_type.ttl \
-  formatted-foaf.ttl \
-  formatted-org.ttl \
   formatted-vcard.ttl \
   formatted-wgs84_pos.ttl \
   ssn.ttl
@@ -265,32 +265,6 @@ formatted-dublin_core_type.ttl:
 	wget \
 	  --output-document=__$@ \
 	  https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_type.ttl
-	java -jar $(rdf_toolkit_jar) \
-	  --inline-blank-nodes \
-	  --source-format turtle \
-	  --source __$@ \
-	  --target-format turtle \
-	  --target _$@
-	rm __$@
-	mv _$@ $@
-
-formatted-foaf.ttl:
-	wget \
-	  --output-document=__$@ \
-	  https://web.archive.org/web/20220614105937if_/http://xmlns.com/foaf/spec/20140114.rdf
-	java -jar $(rdf_toolkit_jar) \
-	  --inline-blank-nodes \
-	  --source-format rdf-xml \
-	  --source __$@ \
-	  --target-format turtle \
-	  --target _$@
-	rm __$@
-	mv _$@ $@
-
-formatted-org.ttl:
-	wget \
-	  --output-document=__$@ \
-	  http://www.w3.org/ns/org
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \

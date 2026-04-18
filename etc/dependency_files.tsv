@@ -8,6 +8,8 @@ http://example.org/shapes/discourse-relationships	${top_srcdir}/shapes/sh-discou
 http://example.org/shapes/foaf	${top_srcdir}/shapes/sh-foaf.ttl
 http://example.org/shapes/owl-abox	${top_srcdir}/shapes/sh-owl-abox.ttl
 http://example.org/shapes/pod	${top_srcdir}/shapes/sh-pod.ttl
+http://example.org/shapes/sh-foaf	${top_srcdir}/dependencies/CDO-Shapes-ORG/dependencies/CDO-Shapes-FOAF/shapes/sh-foaf.ttl
+http://example.org/shapes/sh-org	${top_srcdir}/dependencies/CDO-Shapes-ORG/shapes/sh-org.ttl
 http://example.org/shapes/sh-prov-o	${top_srcdir}/dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl
 http://example.org/shapes/sh-time/	${top_srcdir}/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl
 http://example.org/shapes/sh-time-editors-draft/	${top_srcdir}/dependencies/CDO-Shapes-Time/shapes/sh-time-editors-draft.ttl
@@ -27,9 +29,10 @@ http://www.w3.org/2004/02/skos/core	${top_srcdir}/dependencies/formatted-skos.tt
 http://www.w3.org/2006/time#2016	${top_srcdir}/dependencies/CDO-Shapes-Time/dependencies/formatted-time.ttl
 http://www.w3.org/2006/vcard/ns	${top_srcdir}/dependencies/formatted-vcard.ttl
 http://www.w3.org/ns/dcat	${top_srcdir}/dependencies/formatted-dcat.ttl
-http://www.w3.org/ns/org#	${top_srcdir}/dependencies/formatted-org.ttl
-http://xmlns.com/foaf/0.1/	${top_srcdir}/dependencies/formatted-foaf.ttl
+http://www.w3.org/ns/org#	${top_srcdir}/dependencies/CDO-Shapes-ORG/dependencies/formatted-org.ttl
+http://xmlns.com/foaf/0.1/	${top_srcdir}/dependencies/CDO-Shapes-ORG/dependencies/CDO-Shapes-FOAF/dependencies/formatted-foaf.ttl
 https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/main/dependencies/prov-o-dl.ttl	${top_srcdir}/dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl
 https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/discourse-relationships.ttl	${top_srcdir}/dependencies/discourse-relationships.ttl
 https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/sosa.ttl	${top_srcdir}/dependencies/sosa.ttl
 https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl	${top_srcdir}/dependencies/ssn.ttl
+https://shapes.cyberdomainontology.org/sh-owl/1.4.0	${top_srcdir}/dependencies/CDO-Shapes-ORG/dependencies/CDO-Shapes-FOAF/dependencies/CDO-Shapes-OWL/shapes/sh-owl.ttl

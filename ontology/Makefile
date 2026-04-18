@@ -23,6 +23,8 @@ case_srcdir := $(top_srcdir)/dependencies/CASE
 uco_srcdir := $(case_srcdir)/dependencies/UCO
 
 generated_dependencies_ttl_sources := \
+  $(top_srcdir)/dependencies/CDO-Shapes-ORG/dependencies/CDO-Shapes-FOAF/dependencies/formatted-foaf.ttl \
+  $(top_srcdir)/dependencies/CDO-Shapes-ORG/dependencies/formatted-org.ttl \
   $(top_srcdir)/dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl \
   $(top_srcdir)/dependencies/CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl \
   $(top_srcdir)/dependencies/CDO-Shapes-Time/dependencies/formatted-time.ttl \
@@ -34,8 +36,6 @@ generated_dependencies_ttl_sources := \
   $(top_srcdir)/dependencies/formatted-dcat.ttl \
   $(top_srcdir)/dependencies/formatted-dcterms.ttl \
   $(top_srcdir)/dependencies/formatted-dublin_core_type.ttl \
-  $(top_srcdir)/dependencies/formatted-foaf.ttl \
-  $(top_srcdir)/dependencies/formatted-org.ttl \
   $(top_srcdir)/dependencies/formatted-situation.ttl \
   $(top_srcdir)/dependencies/formatted-skos.ttl \
   $(top_srcdir)/dependencies/formatted-vcard.ttl \

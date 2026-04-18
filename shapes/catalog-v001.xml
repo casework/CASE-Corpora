@@ -23,6 +23,12 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/ontology/investigation/investigation.ttl" name="https://ontology.caseontology.org/case/investigation/1.4.0"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/ontology/master/case.ttl" name="https://ontology.caseontology.org/case/case/1.4.0"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/ontology/vocabulary/vocabulary.ttl" name="https://ontology.caseontology.org/case/vocabulary/1.4.0"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-ORG/dependencies/CDO-Shapes-FOAF/dependencies/CDO-Shapes-OWL/shapes/sh-owl.ttl" name="https://shapes.cyberdomainontology.org/sh-owl"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-ORG/dependencies/CDO-Shapes-FOAF/dependencies/CDO-Shapes-OWL/shapes/sh-owl.ttl" name="https://shapes.cyberdomainontology.org/sh-owl/1.4.0"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-ORG/dependencies/CDO-Shapes-FOAF/dependencies/formatted-foaf.ttl" name="http://xmlns.com/foaf/0.1/"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-ORG/dependencies/CDO-Shapes-FOAF/shapes/sh-foaf.ttl" name="http://example.org/shapes/sh-foaf"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-ORG/dependencies/formatted-org.ttl" name="http://www.w3.org/ns/org#"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-ORG/shapes/sh-org.ttl" name="http://example.org/shapes/sh-org"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl" name="http://www.w3.org/ns/prov-o#"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl" name="https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/main/dependencies/prov-o-dl.ttl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl" name="http://example.org/ontology/cdo-prov-o"/>
@@ -37,8 +43,6 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/formatted-dcam.ttl" name="http://purl.org/dc/dcam/"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/formatted-dcat.ttl" name="http://www.w3.org/ns/dcat"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/formatted-dcterms.ttl" name="http://purl.org/dc/terms/"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-foaf.ttl" name="http://xmlns.com/foaf/0.1/"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-org.ttl" name="http://www.w3.org/ns/org#"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/formatted-situation.ttl" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/formatted-skos.ttl" name="http://www.w3.org/2004/02/skos/core"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/formatted-vcard.ttl" name="http://www.w3.org/2006/vcard/ns"/>
@@ -56,7 +60,6 @@
     <uri id="User Entered Import Resolution" uri="sh-dcterms.ttl" name="http://example.org/shapes/dcterms"/>
     <uri id="User Entered Import Resolution" uri="sh-discourse-relationships.ttl" name="http://example.org/shapes/discourse-relationships"/>
     <uri id="User Entered Import Resolution" uri="sh-foaf.ttl" name="http://example.org/shapes/foaf"/>
-    <uri id="User Entered Import Resolution" uri="sh-org.ttl" name="http://example.org/shapes/org"/>
     <uri id="User Entered Import Resolution" uri="sh-owl-abox.ttl" name="http://example.org/shapes/owl-abox"/>
     <uri id="User Entered Import Resolution" uri="sh-pod.ttl" name="http://example.org/shapes/pod"/>
     <uri id="User Entered Import Resolution" uri="sh-situation.ttl" name="http://example.org/shapes/situation"/>
