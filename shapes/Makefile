@@ -34,8 +34,7 @@ check_shape_files := $(foreach shape_file,$(shape_files),.check-$(shape_file))
 check_shape_targets := $(foreach shape_file,$(shape_files),check-$(shape_file))
 
 all: \
-  catalog-v001.xml \
-  shapes.ttl
+  catalog-v001.xml
 
 .PRECIOUS: \
   .check-%.ttl
