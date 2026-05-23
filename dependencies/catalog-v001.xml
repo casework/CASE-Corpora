@@ -2,9 +2,9 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
     <uri id="User Entered Import Resolution" uri="CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl" name="http://www.w3.org/ns/prov#"/>
     <uri id="User Entered Import Resolution" uri="CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl" name="http://www.w3.org/ns/prov-o#"/>
+    <uri id="User Entered Import Resolution" uri="CDO-Shapes-SKOS/dependencies/formatted-skos.ttl" name="http://www.w3.org/2004/02/skos/core"/>
     <uri id="User Entered Import Resolution" uri="CDO-Shapes-Time/dependencies/formatted-time.ttl" name="http://www.w3.org/2006/time"/>
     <uri id="User Entered Import Resolution" uri="formatted-cpannotationschema.ttl" name="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl"/>
     <uri id="User Entered Import Resolution" uri="formatted-situation.ttl" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
-    <uri id="User Entered Import Resolution" uri="formatted-skos.ttl" name="http://www.w3.org/2004/02/skos/core"/>
     <uri id="User Entered Import Resolution" uri="sosa.ttl" name="http://www.w3.org/ns/sosa/"/>
 </catalog>
