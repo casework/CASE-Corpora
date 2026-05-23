@@ -31,7 +31,7 @@ generated_dependencies_ttl_sources := \
   $(top_srcdir)/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl
 generated_shapes_ttl_sources := $(wildcard sh-*.ttl)
 shape_files := \
-  $(shapes_ttl_sources) \
+  $(generated_shapes_ttl_sources) \
   local.ttl
 check_shape_files := $(foreach shape_file,$(shape_files),.check-$(shape_file))
 check_shape_targets := $(foreach shape_file,$(shape_files),check-$(shape_file))
