@@ -1,7 +1,7 @@
 # imports: http://example.org/shapes/dcat
 # imports: http://example.org/shapes/pod
 # imports: http://example.org/shapes/sh-org
-# imports: http://example.org/shapes/skos
+# imports: http://example.org/shapes/sh-skos
 
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -23,7 +23,7 @@
 		<http://example.org/shapes/dcat> ,
 		<http://example.org/shapes/pod> ,
 		<http://example.org/shapes/sh-org> ,
-		<http://example.org/shapes/skos>
+		<http://example.org/shapes/sh-skos>
 		;
 	.
 

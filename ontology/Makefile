@@ -27,6 +27,7 @@ generated_dependencies_ttl_sources := \
   $(top_srcdir)/dependencies/CDO-Shapes-ORG/dependencies/formatted-org.ttl \
   $(top_srcdir)/dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl \
   $(top_srcdir)/dependencies/CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl \
+  $(top_srcdir)/dependencies/CDO-Shapes-SKOS/dependencies/formatted-skos.ttl \
   $(top_srcdir)/dependencies/CDO-Shapes-Time/dependencies/formatted-time.ttl \
   $(top_srcdir)/dependencies/discourse-relationships.ttl \
   $(top_srcdir)/dependencies/formatted-cito.ttl \
@@ -37,7 +38,6 @@ generated_dependencies_ttl_sources := \
   $(top_srcdir)/dependencies/formatted-dcterms.ttl \
   $(top_srcdir)/dependencies/formatted-dublin_core_type.ttl \
   $(top_srcdir)/dependencies/formatted-situation.ttl \
-  $(top_srcdir)/dependencies/formatted-skos.ttl \
   $(top_srcdir)/dependencies/formatted-vcard.ttl \
   $(top_srcdir)/dependencies/formatted-wgs84_pos.ttl \
   $(top_srcdir)/dependencies/sosa.ttl \

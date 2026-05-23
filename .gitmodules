@@ -26,6 +26,10 @@
 	path = dependencies/CDO-Shapes-PROV-O
 	url = https://github.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O.git
 	branch = main
+[submodule "dependencies/CDO-Shapes-SKOS"]
+	path = dependencies/CDO-Shapes-SKOS
+	url = https://github.com/Cyber-Domain-Ontology/CDO-Shapes-SKOS.git
+	branch = main
 [submodule "dependencies/CDO-Shapes-Time"]
 	path = dependencies/CDO-Shapes-Time
 	url = https://github.com/Cyber-Domain-Ontology/CDO-Shapes-Time.git

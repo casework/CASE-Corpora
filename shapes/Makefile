@@ -27,6 +27,8 @@ generated_dependencies_ttl_sources := \
   $(top_srcdir)/dependencies/CDO-Shapes-ORG/dependencies/CDO-Shapes-FOAF/shapes/sh-foaf.ttl \
   $(top_srcdir)/dependencies/CDO-Shapes-ORG/shapes/sh-org.ttl \
   $(top_srcdir)/dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl \
+  $(top_srcdir)/dependencies/CDO-Shapes-SKOS/shapes/sh-skos.ttl \
+  $(top_srcdir)/dependencies/CDO-Shapes-SKOS/shapes/sh-skos-conventional.ttl \
   $(top_srcdir)/dependencies/CDO-Shapes-Time/shapes/sh-time-editors-draft.ttl \
   $(top_srcdir)/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl
 generated_shapes_ttl_sources := $(wildcard sh-*.ttl)

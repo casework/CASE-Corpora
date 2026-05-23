@@ -47,11 +47,11 @@ case_unstable_2_0_0_ttls := \
 # .ttl file within this directory.
 dependencies_of_imports_ttl_sources := \
   CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl \
+  CDO-Shapes-SKOS/dependencies/formatted-skos.ttl \
   CDO-Shapes-Time/dependencies/formatted-time.ttl \
   formatted-cpannotationschema.ttl \
   formatted-dcterms.ttl \
   formatted-situation.ttl \
-  formatted-skos.ttl \
   sosa.ttl
 
 # List of all files that house concepts eventually reached by the
@@ -278,19 +278,6 @@ formatted-situation.ttl:
 	wget \
 	  --output-document=__$@ \
 	  http://www.ontologydesignpatterns.org/cp/owl/situation.owl
-	java -jar $(rdf_toolkit_jar) \
-	  --inline-blank-nodes \
-	  --source-format rdf-xml \
-	  --source __$@ \
-	  --target-format turtle \
-	  --target _$@
-	rm __$@
-	mv _$@ $@
-
-formatted-skos.ttl:
-	wget \
-	  --output-document=__$@ \
-	  http://www.w3.org/2004/02/skos/core
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format rdf-xml \

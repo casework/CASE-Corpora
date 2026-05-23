@@ -5,6 +5,6 @@
 
 <http://example.org/shapes/sh-time>
 	rdfs:comment "TODO - The shapes graph exported to CDO-Shapes-Time should import SKOS shapes."@en ;
-	owl:imports <http://example.org/shapes/skos> ;
+	owl:imports <http://example.org/shapes/sh-skos> ;
 	.
 

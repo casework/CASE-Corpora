@@ -101,6 +101,14 @@ all: \
 	$(MAKE) \
 	  --directory dependencies/CDO-Shapes-PROV-O \
 	  .git_submodule_init.done.log
+	# CDO-Shapes-SKOS
+	test -r dependencies/CDO-Shapes-SKOS/README.md \
+	  || git submodule update \
+	    --init \
+	    dependencies/CDO-Shapes-SKOS
+	$(MAKE) \
+	  --directory dependencies/CDO-Shapes-SKOS \
+	  .git_submodule_init.done.log
 	# CDO-Shapes-Time
 	test -r dependencies/CDO-Shapes-Time/README.md \
 	  || git submodule update \
