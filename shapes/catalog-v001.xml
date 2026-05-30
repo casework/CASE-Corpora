@@ -45,6 +45,7 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/formatted-dc.ttl" name="http://purl.org/dc/elements/1.1/"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/formatted-dcam.ttl" name="http://purl.org/dc/dcam/"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/formatted-dcat.ttl" name="http://www.w3.org/ns/dcat"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/formatted-dcat.ttl" name="http://www.w3.org/ns/dcat3"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/formatted-dcterms.ttl" name="http://purl.org/dc/terms/"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/formatted-situation.ttl" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/formatted-vcard.ttl" name="http://www.w3.org/2006/vcard/ns"/>
