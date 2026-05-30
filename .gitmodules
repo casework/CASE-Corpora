@@ -38,6 +38,10 @@
 	path = dependencies/cito
 	url = https://github.com/SPAROntologies/cito.git
 	branch = master
+[submodule "dependencies/dxwg"]
+	path = dependencies/dxwg
+	url = https://github.com/w3c/dxwg.git
+	branch = gh-pages
 [submodule "dependencies/sdw"]
 	path = dependencies/sdw
 	url = https://github.com/w3c/sdw.git

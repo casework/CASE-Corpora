@@ -1,7 +1,7 @@
 # imports: http://example.org/shapes/dcterms
 # imports: http://example.org/shapes/foaf
 # imports: http://example.org/shapes/vcard
-# imports: http://www.w3.org/ns/dcat
+# imports: http://www.w3.org/ns/dcat3
 
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -20,7 +20,7 @@
 		<http://example.org/shapes/dcterms> ,
 		<http://example.org/shapes/foaf> ,
 		<http://example.org/shapes/vcard> ,
-		<http://www.w3.org/ns/dcat>
+		<http://www.w3.org/ns/dcat3>
 		;
 	.
 

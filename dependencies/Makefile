@@ -232,17 +232,14 @@ formatted-dcam.ttl:
 	rm __$@
 	mv _$@ $@
 
-formatted-dcat.ttl:
-	wget \
-	  --output-document=__$@ \
-	  https://www.w3.org/ns/dcat.ttl
+formatted-dcat.ttl: \
+  dxwg/dcat/rdf/dcat3.ttl
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \
-	  --source __$@ \
+	  --source $< \
 	  --target-format turtle \
 	  --target _$@
-	rm __$@
 	mv _$@ $@
 
 formatted-dcterms.ttl:
