@@ -36,8 +36,8 @@
 	branch = main
 [submodule "dependencies/cito"]
 	path = dependencies/cito
-	url = https://github.com/SPAROntologies/cito.git
-	branch = master
+	url = https://github.com/ajnelson-nist/cito.git
+	branch = retype_foaf_logo
 [submodule "dependencies/dxwg"]
 	path = dependencies/dxwg
 	url = https://github.com/w3c/dxwg.git

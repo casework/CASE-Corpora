@@ -29,7 +29,6 @@ generated_dependencies_ttl_sources := \
   $(top_srcdir)/dependencies/CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl \
   $(top_srcdir)/dependencies/CDO-Shapes-SKOS/dependencies/formatted-skos.ttl \
   $(top_srcdir)/dependencies/CDO-Shapes-Time/dependencies/formatted-time.ttl \
-  $(top_srcdir)/dependencies/discourse-relationships.ttl \
   $(top_srcdir)/dependencies/formatted-cito.ttl \
   $(top_srcdir)/dependencies/formatted-cpannotationschema.ttl \
   $(top_srcdir)/dependencies/formatted-dc.ttl \

@@ -1,7 +1,6 @@
 # imports: http://example.org/shapes/dc
-# imports: http://example.org/shapes/discourse-relationships
 # imports: http://example.org/shapes/situation
-# imports: http://purl.org/spar/cito/2018-02-16
+# imports: http://purl.org/spar/cito/2026-09-03
 
 @prefix cito: <http://purl.org/spar/cito/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -15,9 +14,8 @@
 	a owl:Ontology ;
 	owl:imports
 		<http://example.org/shapes/dc> ,
-		<http://example.org/shapes/discourse-relationships> ,
 		<http://example.org/shapes/situation> ,
-		cito:2018-02-16
+		cito:2026-09-03
 		;
 	.
 

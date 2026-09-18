@@ -62,7 +62,6 @@ dependent_ontology_files := \
   CDO-Shapes-ORG/dependencies/CDO-Shapes-FOAF/dependencies/formatted-foaf.ttl \
   CDO-Shapes-ORG/dependencies/formatted-org.ttl \
   CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl \
-  discourse-relationships.ttl \
   formatted-cito.ttl \
   formatted-dc.ttl \
   formatted-dcam.ttl \
@@ -168,16 +167,6 @@ dcat-us.jsonld:
 	wget \
 	  --output-document=_$@ \
 	  https://project-open-data.cio.gov/v1.1/schema/catalog.jsonld
-	mv _$@ $@
-
-# TODO - This does not regenerate with Make while a correction for a term issue is waiting to be published.
-discourse-relationships.ttl:
-	java -jar $(rdf_toolkit_jar) \
-	  --inline-blank-nodes \
-	  --source-format rdf-xml \
-	  --source swan-ontology/discourse-relationships.owl \
-	  --target-format turtle \
-	  --target _$@
 	mv _$@ $@
 
 formatted-cito.ttl: \

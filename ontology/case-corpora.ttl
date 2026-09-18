@@ -1,5 +1,5 @@
 # imports: http://example.org/ontology/cdo-prov-o
-# imports: http://purl.org/spar/cito/2018-02-16
+# imports: http://purl.org/spar/cito/2026-09-03
 # imports: http://www.w3.org/2006/time#2016
 # imports: http://www.w3.org/2006/vcard/ns
 # imports: http://www.w3.org/ns/dcat
@@ -37,7 +37,7 @@
 	rdfs:comment "This ontology serves to join the versions of CASE and DCAT used to populate CASE-Corpora, bringing analogous properties and classes together."@en ;
 	owl:imports
 		<http://example.org/ontology/cdo-prov-o> ,
-		cito:2018-02-16 ,
+		cito:2026-09-03 ,
 		time:2016 ,
 		<http://www.w3.org/2006/vcard/ns> ,
 		<http://www.w3.org/ns/dcat> ,
