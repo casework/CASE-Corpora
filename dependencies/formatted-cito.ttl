@@ -2068,6 +2068,6 @@ skos:note
 	.
 
 foaf:logo
-	a owl:AnnotationProperty ;
+	a owl:ObjectProperty ;
 	.
 
