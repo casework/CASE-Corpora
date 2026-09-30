@@ -10,8 +10,6 @@ http://example.org/shapes/pod	${top_srcdir}/shapes/sh-pod.ttl
 http://example.org/shapes/sh-foaf	${top_srcdir}/dependencies/CDO-Shapes-ORG/dependencies/CDO-Shapes-FOAF/shapes/sh-foaf.ttl
 http://example.org/shapes/sh-org	${top_srcdir}/dependencies/CDO-Shapes-ORG/shapes/sh-org.ttl
 http://example.org/shapes/sh-prov-o	${top_srcdir}/dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl
-http://example.org/shapes/sh-skos	${top_srcdir}/dependencies/CDO-Shapes-SKOS/shapes/sh-skos.ttl
-http://example.org/shapes/sh-skos-conventional	${top_srcdir}/dependencies/CDO-Shapes-SKOS/shapes/sh-skos-conventional.ttl
 http://example.org/shapes/sh-time/	${top_srcdir}/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl
 http://example.org/shapes/sh-time-editors-draft/	${top_srcdir}/dependencies/CDO-Shapes-Time/shapes/sh-time-editors-draft.ttl
 http://example.org/shapes/sosa	${top_srcdir}/shapes/sh-sosa.ttl
@@ -34,3 +32,7 @@ https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/main/d
 https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/sosa.ttl	${top_srcdir}/dependencies/sosa.ttl
 https://raw.githubusercontent.com/casework/CASE-Corpora/main/dependencies/ssn.ttl	${top_srcdir}/dependencies/ssn.ttl
 https://shapes.cyberdomainontology.org/sh-owl/1.4.0	${top_srcdir}/dependencies/CDO-Shapes-ORG/dependencies/CDO-Shapes-FOAF/dependencies/CDO-Shapes-OWL/shapes/sh-owl.ttl
+https://shapes.cyberdomainontology.org/shapes/sh-skos	${top_srcdir}/dependencies/CDO-Shapes-SKOS/shapes/sh-skos.ttl
+https://shapes.cyberdomainontology.org/shapes/sh-skos-conventional	${top_srcdir}/dependencies/CDO-Shapes-SKOS/shapes/sh-skos-conventional.ttl
+https://shapes.cyberdomainontology.org/shapes/sh-skos-conventional/0.1.0	${top_srcdir}/dependencies/CDO-Shapes-SKOS/shapes/sh-skos-conventional.ttl
+https://shapes.cyberdomainontology.org/shapes/sh-skos/0.1.0	${top_srcdir}/dependencies/CDO-Shapes-SKOS/shapes/sh-skos.ttl
