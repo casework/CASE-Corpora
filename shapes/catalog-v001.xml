@@ -3,7 +3,6 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/dependencies/UCO/dependencies/collections-ontology/collections.owl" name="http://purl.org/co"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/dependencies/UCO/dependencies/error/docs/current/error.ttl" name="http://purl.org/spar/error"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/dependencies/UCO/ontology/co/co.ttl" name="https://ontology.unifiedcyberontology.org/co/1.5.0"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/CASE/dependencies/UCO/ontology/owl/owl.ttl" name="https://ontology.unifiedcyberontology.org/owl/1.4.0"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/dependencies/UCO/ontology/owl/owl.ttl" name="https://ontology.unifiedcyberontology.org/owl/1.5.0"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/dependencies/UCO/ontology/uco/action/action.ttl" name="https://ontology.unifiedcyberontology.org/uco/action/1.5.0"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CASE/dependencies/UCO/ontology/uco/analysis/analysis.ttl" name="https://ontology.unifiedcyberontology.org/uco/analysis/1.5.0"/>
