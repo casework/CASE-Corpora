@@ -41,7 +41,7 @@
 <g id="node18" class="node">
 <title>_457e8792d4af0b60ec728dc4a5ed79d03fe6e76d0730385fad463089f8a49c0e</title>
 <g id="a_node18"><a xlink:title="ID &#45; http://example.org/kb/image&#45;9c77c0e9&#45;fd0b&#45;4912&#45;afcf&#45;0d1b1b86f4d6">
-<ellipse fill="#fff68f" stroke="#808080" cx="1473" cy="-1106" rx="225.57" ry="40.31"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="1473" cy="-1106" rx="225.57" ry="40.31"/>
 <text xml:space="preserve" text-anchor="middle" x="1473" y="-1117.2" font-family="Times,serif" font-size="14.00">ID &#45; kb:image&#45;9c77c0e9&#45;fd0b&#45;4912&#45;afcf&#45;0d1b1b86f4d6</text>
 <text xml:space="preserve" text-anchor="middle" x="1473" y="-1084.7" font-family="Times,serif" font-size="14.00">blk32_mmcblk0rpmb.bin</text>
 </a>
@@ -161,7 +161,7 @@
 <g id="node15" class="node">
 <title>_c1a739983405a7bfa4936ec3a1ea5fbf93592d8df15f9a6b45f2537d7c543d15</title>
 <g id="a_node15"><a xlink:title="ID &#45; http://example.org/kb/file&#45;3af91026&#45;4c09&#45;4047&#45;a914&#45;15e75a711ff0">
-<ellipse fill="#fff68f" stroke="#808080" cx="2029" cy="-288.92" rx="216.02" ry="40.31"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="2029" cy="-288.92" rx="216.02" ry="40.31"/>
 <text xml:space="preserve" text-anchor="middle" x="2029" y="-300.12" font-family="Times,serif" font-size="14.00">ID &#45; kb:file&#45;3af91026&#45;4c09&#45;4047&#45;a914&#45;15e75a711ff0</text>
 <text xml:space="preserve" text-anchor="middle" x="2029" y="-267.62" font-family="Times,serif" font-size="14.00">Android7&#45;ImageCreationDocumentation.pdf</text>
 </a>
@@ -342,7 +342,7 @@
 <g id="node16" class="node">
 <title>_2a4fbbcb7bd477dfe0f7d0497df08f1814dc4799866304fbb2c1d587e028daee</title>
 <g id="a_node16"><a xlink:title="ID &#45; http://example.org/kb/file&#45;736c63b5&#45;5e15&#45;4a48&#45;b948&#45;13757bae0aae">
-<ellipse fill="#fff68f" stroke="#808080" cx="658" cy="-873.89" rx="219.2" ry="40.31"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="658" cy="-873.89" rx="219.2" ry="40.31"/>
 <text xml:space="preserve" text-anchor="middle" x="658" y="-885.09" font-family="Times,serif" font-size="14.00">ID &#45; kb:file&#45;736c63b5&#45;5e15&#45;4a48&#45;b948&#45;13757bae0aae</text>
 <text xml:space="preserve" text-anchor="middle" x="658" y="-852.59" font-family="Times,serif" font-size="14.00">LG GSM_H790 Nexus 5X.ufd</text>
 </a>
@@ -359,7 +359,7 @@
 <g id="node17" class="node">
 <title>_5fcc6a159804d07e43abe88b4f66d9c983ba2225ac3ef98b4b1685e6009042ca</title>
 <g id="a_node17"><a xlink:title="ID &#45; http://example.org/kb/file&#45;cee5a02b&#45;56a7&#45;4ad6&#45;9e78&#45;d297e6b92517">
-<ellipse fill="#fff68f" stroke="#808080" cx="935" cy="-521.03" rx="219.2" ry="40.31"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="935" cy="-521.03" rx="219.2" ry="40.31"/>
 <text xml:space="preserve" text-anchor="middle" x="935" y="-532.23" font-family="Times,serif" font-size="14.00">ID &#45; kb:file&#45;cee5a02b&#45;56a7&#45;4ad6&#45;9e78&#45;d297e6b92517</text>
 <text xml:space="preserve" text-anchor="middle" x="935" y="-499.73" font-family="Times,serif" font-size="14.00">Android 7 Hashes.pdf</text>
 </a>
@@ -591,7 +591,7 @@
 <g id="node14" class="node">
 <title>_1f04d829546c397900d5164d5f2d881a9d7141a66bfedb6c9fbc0aa88bbfc164</title>
 <g id="a_node14"><a xlink:title="ID &#45; http://example.org/kb/file&#45;2352f3d0&#45;d02f&#45;40ba&#45;85a4&#45;b00dd97050c8">
-<ellipse fill="#fff68f" stroke="#808080" cx="1551" cy="-40.31" rx="218.67" ry="40.31"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="1551" cy="-40.31" rx="218.67" ry="40.31"/>
 <text xml:space="preserve" text-anchor="middle" x="1551" y="-51.51" font-family="Times,serif" font-size="14.00">ID &#45; kb:file&#45;2352f3d0&#45;d02f&#45;40ba&#45;85a4&#45;b00dd97050c8</text>
 <text xml:space="preserve" text-anchor="middle" x="1551" y="-19.01" font-family="Times,serif" font-size="14.00">android_7.tar.gz</text>
 </a>
