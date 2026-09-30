@@ -186,6 +186,7 @@
 		"Esta es una copia del vocabulario DCAT 3 disponible en https://www.w3.org/ns/dcat.ttl"@es ,
 		"Questa è una copia aggiornata del vocabolario DCAT 3 disponibile in https://www.w3.org/ns/dcat.ttl"@it ,
 		"This is an updated copy of the DCAT 3 vocabulary, taken from https://www.w3.org/ns/dcat.ttl"@en ,
+		"Toto je aktualizovaná kopie slovníku DCAT 3 z https://www.w3.org/ns/dcat.ttl"@cs ,
 		"Toto je aktualizovaná kopie slovníku DCAT 3, převzatá z https://www.w3.org/ns/dcat.ttl"@cs
 		;
 	dcat:hasCurrentVersion <http://www.w3.org/ns/dcat3> ;
@@ -439,10 +440,12 @@ dcat:DatasetSeries
 	rdfs:label
 		"Dataset series"@en ,
 		"Serie de conjuntos de datos"@es ,
-		"Serie di dataset"@it
+		"Serie di dataset"@it ,
+		"Série datových sad"@cs
 		;
 	rdfs:comment
 		"A collection of datasets that are published separately, but share some characteristics that group them."@en ,
+		"Kolekce datových sad, které jsou publikovány samostatně, ale sdílí nějaké společné vlastnosti, které je sdružují."@cs ,
 		"Una colección de conjuntos de datos publicados por separado, pero que comparten características que los agrupan."@es ,
 		"Una collezione di dataset che sono pubblicati separatamente, ma che condividono caratteristiche che li rendono parte di uno stesso gruppo."@it
 		;
@@ -456,6 +459,7 @@ dcat:DatasetSeries
 		;
 	skos:definition
 		"A collection of datasets that are published separately, but share some common characteristics that groups them."@en ,
+		"Kolekce datových sad, které jsou publikovány samostatně, ale sdílí nějaké společné vlastnosti, které je sdružují."@cs ,
 		"Una colección de conjuntos de datos publicados por separado, pero que comparten características comunes que los agrupan."@es ,
 		"Una collezione di dataset che sono pubblicati separatamente, ma che condividono caratteristiche che li rendono parte di uno stesso gruppo."@it
 		;
@@ -466,6 +470,7 @@ dcat:DatasetSeries
 		"Dataset series can be also soft-typed via property dcterms:type as in the approach used in [GeoDCAT-AP], and adopted in [DCAT-AP-IT] and [GeoDCAT-AP-IT])."@en ,
 		"Le serie di dati possono anche essere denotate come tali usando la proprietà dcterms:type, secondo l'approccio usato in [GeoDCAT-AP], e adottato in [DCAT-AP-IT] e [GeoDCAT-AP-IT])."@it ,
 		"Scenari tipici per l'uso di serie di dataset: serie temporali costituite di dataset pubblicati regolarmente; serie di mappe costituite da elementi dello stesso tipo o tematica ma relative a differenti aree geografiche."@it ,
+		"Série datových sad může být také lehkce typovaná pomocí vlastnosti dcterms:type, jak je použito v [GeoDCAT-AP], a začleněno v [DCAT-AP-IT] a [GeoDCAT-AP-IT])."@cs ,
 		"También puede asignarse un tipo a las series de datos usando la propiedad dcterms:type como se hace en [GeoDCAT-AP], y adoptado en [DCAT-AP-IT] y [GeoDCAT-AP-IT])."@es
 		;
 	.
@@ -1350,11 +1355,13 @@ dcat:first
 	rdfs:label
 		"first"@en ,
 		"primero"@es ,
-		"primo"@it
+		"primo"@it ,
+		"první"@cs
 		;
 	rdfs:comment
 		"El primer recurso en una colección ordenada o serie de recursos, al que el recurso pertenece."@es ,
 		"La prima risorsa in una collezione ordinata o in una serie di risorse, di cui la risorsa fa parte."@it ,
+		"První zdroj v uspořádané kolekci nebo sérii zdrojů, do které tento zdroj patří."@cs ,
 		"The first resource in an ordered collection or series of resources, to which the current resource belongs."@en
 		;
 	rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dcat-3/> ;
@@ -1368,12 +1375,14 @@ dcat:first
 	skos:definition
 		"El primer recurso en una colección ordenada o serie de recursos, al que el recurso pertenece."@es ,
 		"La prima risorsa in una collezione ordinata o in una serie di risorse, di cui la risorsa fa parte."@it ,
+		"První zdroj v uspořádané kolekci nebo sérii zdrojů, do které tento zdroj patří."@cs ,
 		"The first resource in an ordered collection or series of resources, to which the current resource belongs."@en
 		;
 	skos:scopeNote
 		"En DCAT esta propiedad se usa para recursos que pertenecen a una dcat:DatasetSeries."@es ,
 		"In DCAT questa proprietà è usata per risorse che fanno parte di una dcat:DatasetSeries."@it ,
-		"In DCAT this property is used for resources belonging to a dcat:DatasetSeries."@en
+		"In DCAT this property is used for resources belonging to a dcat:DatasetSeries."@en ,
+		"V DCATu je tato vlastnost použita pro zdroje patřící do dcat:DatasetSeries."@cs
 		;
 	.
 
@@ -1447,11 +1456,13 @@ dcat:hasCurrentVersion
 	rdfs:label
 		"ha versione attuale"@it ,
 		"has current version"@en ,
+		"má současnou verzi"@cs ,
 		"tiene versión actual"@es
 		;
 	rdfs:comment
 		"Este recurso es más específico y versionado con contenido equivalente [PAV]."@es ,
 		"Per questa risorsa esiste una risorsa più specifica e versionata, ma con lo stesso contenuto."@it ,
+		"Tento zdroj má specifičtější, verzovaný zdroj s ekvivalentním obsahem [PAV]."@cs ,
 		"This resource has a more specific, versioned resource with equivalent content [PAV]."@en
 		;
 	rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dcat-3/> ;
@@ -1466,6 +1477,7 @@ dcat:hasCurrentVersion
 	skos:definition
 		"Este recurso es más específico y versionado con contenido equivalente [PAV]."@es ,
 		"Per questa risorsa esiste una risorsa più specifica e versionata, ma con lo stesso contenuto."@it ,
+		"Tento zdroj má specifičtější, verzovaný zdroj s ekvivalentním obsahem [PAV]."@cs ,
 		"This resource has a more specific, versioned resource with equivalent content [PAV]."@en
 		;
 	skos:scopeNote
@@ -1473,6 +1485,7 @@ dcat:hasCurrentVersion
 		"La noción de versión que se usa en esta propiedad está limitada a las versiones que resultan de revisiones de un recurso como parte de su ciclo de vida."@es ,
 		"La nozione di versione usata da questa proprietà è limitata a versioni risultanti da revisioni a cui una risorsa è soggetta nel suo ciclo di vita."@it ,
 		"Questa proprietà è usata per correlare una risorsa non versionata o astratta a un suo specifico snapshot che può essere usato come permalink per indicare la versione attuale del suo contenuto."@it ,
+		"Tato vlastnost je určena pro přiřazení neverzovaného či abstraktního zdroje ke konkrétnímu snapshotu, který může být použit jako perzistentní odkaz indikující aktuální verzi obsahu [PAV]."@cs ,
 		"The notion of version used by this property is limited to versions resulting from revisions occurring to a resource as part of its life-cycle."@en ,
 		"This property is intended for relating a non-versioned or abstract resource to a single snapshot that can be used as a permalink to indicate the current version of the content [PAV]."@en
 		;
@@ -1490,11 +1503,13 @@ dcat:hasVersion
 	rdfs:label
 		"ha versione"@it ,
 		"has version"@en ,
+		"má verzi"@cs ,
 		"tiene versión"@es
 		;
 	rdfs:comment
 		"Este recurso tiene una versión específica."@es ,
 		"Per questa risorsa esiste una risorsa più specifica e versionata."@it ,
+		"Tento zdroj má specifickou verzi [PAV]."@en ,
 		"This resource has a more specific, versioned resource [PAV]."@en
 		;
 	rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dcat-3/> ;
@@ -1509,6 +1524,7 @@ dcat:hasVersion
 	skos:definition
 		"Este recurso tiene una versión específica."@es ,
 		"Per questa risorsa esiste una risorsa più specifica e versionata."@it ,
+		"Tento zdroj má specifickou verzi [PAV]."@cs ,
 		"This resource has a more specific, versioned resource [PAV]."@en
 		;
 	skos:scopeNote
@@ -1516,6 +1532,7 @@ dcat:hasVersion
 		"La noción de versión que se usa en esta propiedad está limitada a las versiones que resultan de revisiones de un recurso como parte de su ciclo de vida. Por lo tanto, su semántica es más específica que su super-propiedad dcterns:hasVersion, la cuál hace uso de la noción más amplia de versión, incluyendo ediciones y adaptaciones."@es ,
 		"La nozione di versione usata da questa proprietà è limitata a versioni risultanti da revisioni a cui una risorsa è soggetta nel suo ciclo di vita. Quindi la sua semantica è più specifica di quella della sua super-proprietà dcterms:hasVersion, che utilizza una nozione di versione più ampia, e include, ad es., edizioni e adattamenti."@it ,
 		"Questa proprietà è usata per correlare una risorsa non versionata o astratta a differenti risorse versionate, ad es., i relativi snapshot."@it ,
+		"Tato vlastnost je určena pro přiřazení neverzovaného či abstraktního zdroje k několika verzovaným zdrojům, např. snapshotům [PAV]."@cs ,
 		"The notion of version used by this property is limited to versions resulting from revisions occurring to a resource as part of its life-cycle. Therefore, its semantics is more specific than its super-property dcterms:hasVersion, which makes use of a broader notion of version, including editions and adaptations."@en ,
 		"This property is intended for relating a non-versioned or abstract resource to several versioned resources, e.g., snapshots [PAV]."@en
 		;
@@ -1533,6 +1550,7 @@ dcat:inCatalog
 	skos:scopeNote
 		"Esta propiedad inversa PUEDE usarse sólo en combinación con su inversa, y NO PUEDE utilizarse en su reemplazo."@es ,
 		"Questa proprietà PUÒ essere usata solo insieme alla sua inversa, e NON DEVE essere usata per sostituirla."@it ,
+		"Tato vlastnost MŮŽE být použita pouze jako doplněk ke své inverzní vlastnosti. NEMŮŽE být použita místo ní."@cs ,
 		"This property MAY be used only in addition to its inverse, and it MUST NOT be used to replace it."@en
 		;
 	.
@@ -1546,10 +1564,12 @@ dcat:inSeries
 	rdfs:label
 		"en serie"@es ,
 		"in serie"@it ,
-		"in series"@en
+		"in series"@en ,
+		"v sérii"@cs
 		;
 	rdfs:comment
 		"A dataset series of which the dataset is part."@en ,
+		"Série datových sad, kterou je tato datová sada součástí."@cs ,
 		"Una serie de conjuntos de datos del cuál un conjunto de datos es parte."@es ,
 		"Una serie di dataset di cui questo dataset fa parte."@it
 		;
@@ -1563,6 +1583,7 @@ dcat:inSeries
 		;
 	skos:definition
 		"A dataset series of which the dataset is part."@en ,
+		"Série datových sad, kterou je tato datová sada součástí."@cs ,
 		"Una serie de conjuntos de datos del cuál un conjunto de datos es parte."@es ,
 		"Una serie di dataset di cui questo dataset fa parte."@it
 		;
@@ -1580,6 +1601,7 @@ dcat:isDistributionOf
 	skos:scopeNote
 		"Esta propiedad inversa PUEDE usarse sólo en combinación con su inversa, y NO PUEDE utilizarse en su reemplazo."@es ,
 		"Questa proprietà PUÒ essere usata solo insieme alla sua inversa, e NON DEVE essere usata per sostituirla."@it ,
+		"Tato vlastnost MŮŽE být použita pouze jako doplněk ke své inverzní vlastnosti. NEMŮŽE být použita místo ní."@cs ,
 		"This property MAY be used only in addition to its inverse, and it MUST NOT be used to replace it."@en
 		;
 	.
@@ -1596,6 +1618,7 @@ dcat:isVersionOf
 	skos:scopeNote
 		"Esta propiedad inversa PUEDE usarse sólo en combinación con su inversa, y NO PUEDE utilizarse en su reemplazo."@es ,
 		"Questa proprietà PUÒ essere usata solo insieme alla sua inversa, e NON DEVE essere usata per sostituirla."@it ,
+		"Tato vlastnost MŮŽE být použita pouze jako doplněk ke své inverzní vlastnosti. NEMŮŽE být použita místo ní."@cs ,
 		"This property MAY be used only in addition to its inverse, and it MUST NOT be used to replace it."@en
 		;
 	.
@@ -1703,12 +1726,14 @@ dcat:last
 	rdfs:subPropertyOf xhv:last ;
 	rdfs:label
 		"last"@en ,
+		"poslední"@cs ,
 		"ultimo"@it ,
 		"último"@es
 		;
 	rdfs:comment
 		"El último recurso en una colección ordenada o serie de recursos, al que el recurso pertenece."@es ,
 		"L'ultima risorsa in una collezione ordinata o in una serie di risorse, di cui la risorsa fa parte."@it ,
+		"Poslední zdroj v uspořádané kolekci nebo sérii zdrojů, do které tento zdroj patří."@cs ,
 		"The last resource in an ordered collection or series of resources, to which the current resource belongs."@en
 		;
 	rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dcat-3/> ;
@@ -1722,12 +1747,14 @@ dcat:last
 	skos:definition
 		"El último recurso en una colección ordenada o serie de recursos, al que el recurso pertenece."@es ,
 		"L'ultima risorsa in una collezione ordinata o in una serie di risorse, di cui la risorsa fa parte."@it ,
+		"Poslední zdroj v uspořádané kolekci nebo sérii zdrojů, do které tento zdroj patří."@cs ,
 		"The last resource in an ordered collection or series of resources, to which the current resource belongs."@en
 		;
 	skos:scopeNote
 		"En DCAT esta propiedad se usa para recursos que pertenecen a una dcat:DatasetSeries."@es ,
 		"In DCAT questa proprietà è usata per risorse che fanno parte di una dcat:DatasetSeries."@it ,
-		"In DCAT this property is used for resources belonging to a dcat:DatasetSeries."@en
+		"In DCAT this property is used for resources belonging to a dcat:DatasetSeries."@en ,
+		"V DCATu je tato vlastnost použita pro zdroje patřící do dcat:DatasetSeries."@cs
 		;
 	.
 
