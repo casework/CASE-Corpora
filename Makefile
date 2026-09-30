@@ -122,11 +122,11 @@ all: \
 	  || git submodule update \
 	    --init \
 	    dependencies/cito
-	# dxwg
-	test -r dependencies/dxwg/README.md \
+	# dx-dcat
+	test -r dependencies/dx-dcat/README.md \
 	  || git submodule update \
 	    --init \
-	    dependencies/dxwg
+	    dependencies/dx-dcat
 	# sdw
 	test -r dependencies/sdw/README.md \
 	  || git submodule update \

@@ -222,7 +222,7 @@ formatted-dcam.ttl:
 	mv _$@ $@
 
 formatted-dcat.ttl: \
-  dxwg/dcat/rdf/dcat3.ttl
+  dx-dcat/TR/rdf/dcat3.ttl
 	java -jar $(rdf_toolkit_jar) \
 	  --inline-blank-nodes \
 	  --source-format turtle \
