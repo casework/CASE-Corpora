@@ -1,3 +1,2 @@
-case-prov >= 0.14.0, < 0.15.0
+case-prov >= 0.15.0, < 0.16.0
 mypy
-prov[graph]
