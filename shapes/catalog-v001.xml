@@ -35,8 +35,10 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl" name="http://example.org/ontology/cdo-prov-o"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-PROV-O/shapes/sh-prov-o.ttl" name="http://example.org/shapes/sh-prov-o"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-SKOS/dependencies/formatted-skos.ttl" name="http://www.w3.org/2004/02/skos/core"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-SKOS/shapes/sh-skos-conventional.ttl" name="http://example.org/shapes/sh-skos-conventional"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-SKOS/shapes/sh-skos.ttl" name="http://example.org/shapes/sh-skos"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-SKOS/shapes/sh-skos-conventional.ttl" name="https://shapes.cyberdomainontology.org/shapes/sh-skos-conventional"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-SKOS/shapes/sh-skos-conventional.ttl" name="https://shapes.cyberdomainontology.org/shapes/sh-skos-conventional/0.1.0"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-SKOS/shapes/sh-skos.ttl" name="https://shapes.cyberdomainontology.org/shapes/sh-skos"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-SKOS/shapes/sh-skos.ttl" name="https://shapes.cyberdomainontology.org/shapes/sh-skos/0.1.0"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/dependencies/formatted-time.ttl" name="http://www.w3.org/2006/time#2016"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/shapes/sh-time-editors-draft.ttl" name="http://example.org/shapes/sh-time-editors-draft"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-Time/shapes/sh-time.ttl" name="http://example.org/shapes/sh-time"/>
