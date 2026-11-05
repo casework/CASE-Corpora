@@ -8,6 +8,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sh-case-corpora-local: <http://example.org/shapes/case-corpora-local/> .
 @prefix sh-dcterms: <http://example.org/shapes/dcterms/> .
+@prefix sh-org: <http://example.org/shapes/org/> .
 @prefix sh-owl: <https://shapes.cyberdomainontology.org/sh-owl/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
@@ -409,6 +410,11 @@ sh-dcterms:publisher-suggested-objects-shape
 
 sh-dcterms:rights-suggested-objects-shape
 	rdfs:comment "Deactivated due to usage pattern of property in upstream ontologies."@en ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+sh-org:memberOf-subjects-memberOf-shape
+	rdfs:comment "Deactivated pending determining entailment logistics."@en ;
 	sh:deactivated "true"^^xsd:boolean ;
 	.
 
